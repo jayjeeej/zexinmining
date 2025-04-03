@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -16,7 +16,8 @@ interface SearchResult {
   url: string;
 }
 
-export default function SearchPage() {
+// 搜索内容组件
+function SearchContent() {
   const searchParams = useSearchParams();
   const { isZh } = useLanguage();
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -248,7 +249,7 @@ export default function SearchPage() {
       setResults([]);
       setIsLoading(false);
     }
-  }, [query, isZh]);
+  }, [query]);
 
   // 搜索分类数据
   const searchCategories = [
@@ -413,5 +414,13 @@ export default function SearchPage() {
         </div>
       </nav>
     </div>
+  );
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<div className="container mx-auto px-4 py-8">正在加载搜索结果...</div>}>
+      <SearchContent />
+    </Suspense>
   );
 } 
