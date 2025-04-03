@@ -208,34 +208,13 @@ export default function Header() {
         
         {/* 搜索弹窗 - 使用固定定位和动画 */}
         {isSearchOpen && (
-          <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-labelledby="search-heading" style={{
-            position: 'fixed',
-            top: 0,
-            right: 0,
-            bottom: 0,
-            left: 0,
-            zIndex: 50,
-            WebkitOverflowScrolling: 'touch' // 优化iOS滚动
-          }}>
+          <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-labelledby="search-heading">
             <div 
               className="absolute inset-0 backdrop-blur-sm bg-white/95 transition-opacity duration-300"
               onClick={toggleSearch}
-              style={{
-                position: 'absolute',
-                top: 0,
-                right: 0,
-                bottom: 0,
-                left: 0,
-                backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                WebkitBackdropFilter: 'blur(4px)', // 兼容Safari
-                backdropFilter: 'blur(4px)',
-              }}
             />
             
-            <div className={`relative w-full bg-white shadow-md ${searchAnimation}`} style={{
-              WebkitBoxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
-            }}>
+            <div className={`relative w-full bg-white shadow-md ${searchAnimation}`}>
               <div className="container mx-auto h-24">
                 <div className="flex items-center h-full px-4" onClick={(e) => e.stopPropagation()}>
                   {/* 保持Logo在搜索框中的显示 */}
@@ -265,10 +244,6 @@ export default function Header() {
                         className="w-full h-12 pl-10 pr-4 border-2 border-gray-300 rounded focus:outline-none focus:border-black"
                         placeholder={isZh ? "搜索..." : "Search..."}
                         autoFocus
-                        style={{
-                          WebkitAppearance: 'none', // 移除iOS默认样式
-                          appearance: 'none'
-                        }}
                       />
                     </div>
                     
@@ -295,13 +270,7 @@ export default function Header() {
 
         {/* 移动菜单 */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-300" style={{
-            position: 'absolute',
-            width: '100%',
-            zIndex: 100,
-            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-            WebkitOverflowScrolling: 'touch' // 添加此属性以优化iOS上的滚动
-          }}>
+          <div className="md:hidden bg-white border-t border-gray-300">
             <nav className="p-4 space-y-3">
               {navLinks.map((link) => (
                 <Link
@@ -312,9 +281,6 @@ export default function Header() {
                       ? "text-[#1441F5] font-medium" 
                       : "text-gray-700 hover:text-[#1441F5]"
                   }`}
-                  style={{
-                    WebkitTapHighlightColor: 'rgba(0,0,0,0)', // 移除iOS点击时的高亮
-                  }}
                 >
                   {isZh ? link.labelZh : link.labelEn}
                 </Link>
@@ -326,18 +292,12 @@ export default function Header() {
                     <button 
                       onClick={toggleLanguage} 
                       className={`font-medium ${isZh ? "text-[#1441F5]" : "text-gray-700 hover:text-[#1441F5]"}`}
-                      style={{
-                        WebkitTapHighlightColor: 'rgba(0,0,0,0)', // 移除iOS点击时的高亮
-                      }}
                     >
                       中文
                     </button>
                     <button 
                       onClick={toggleLanguage} 
                       className={`font-medium ${!isZh ? "text-[#1441F5]" : "text-gray-700 hover:text-[#1441F5]"}`}
-                      style={{
-                        WebkitTapHighlightColor: 'rgba(0,0,0,0)', // 移除iOS点击时的高亮
-                      }}
                     >
                       English
                     </button>

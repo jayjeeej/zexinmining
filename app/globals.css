@@ -10,49 +10,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* 确保所有设备的正确显示 */
-html {
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  box-sizing: border-box;
-  line-height: 1.15;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-/* 老旧浏览器兼容设置 */
-article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
-  display: block;
-}
-
-/* 修复旧设备上行高计算问题 */
-body {
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-primary);
-}
-
-/* 旧版浏览器的图片处理 */
-img {
-  max-width: 100%;
-  height: auto;
-  border-style: none;
-  -ms-interpolation-mode: bicubic; /* 针对IE的优化 */
-}
-
-svg:not(:root) {
-  overflow: hidden; /* 修复旧浏览器SVG溢出问题 */
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -60,9 +17,10 @@ svg:not(:root) {
   }
 }
 
-/* 触摸设备优化 */
-a, button, input, select, textarea {
-  touch-action: manipulation;
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-primary);
 }
 
 /* 中文标题样式 */
@@ -83,8 +41,6 @@ a, button, input, select, textarea {
 /* 标题覆盖样式 - 应用于所有h1-h6标题 */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sandvik-sans), sans-serif;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
 }
 
 /* 标题覆盖样式 - 应用于所有h1-h6标题，不包括首屏 */
@@ -141,33 +97,6 @@ h6:not(.hero h6) {
   animation: slideUp 0.3s ease-out forwards;
 }
 
-/* 兼容旧版浏览器的动画前缀 */
-@-webkit-keyframes slideDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes slideUp {
-  from {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
-  }
-}
-
 /* 自定义类 - 解决方案页面特殊布局 */
 @media (min-width: 768px) {
   .md\:contain {
@@ -183,15 +112,6 @@ h6:not(.hero h6) {
     width: 100% !important;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
-  }
-}
-
-/* 响应式基础设置 */
-@media (max-width: 480px) {
-  html, body {
-    overflow-x: hidden;
-    position: relative;
-    width: 100%;
   }
 }
 
@@ -226,41 +146,12 @@ h6:not(.hero h6) {
   }
 }
 
-/* 兼容旧版浏览器的动画前缀 */
-@-webkit-keyframes headerAppear {
-  from {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes headerDisappear {
-  from {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-}
-
 .header-appear {
   animation: headerAppear 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-  -webkit-animation: headerAppear 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
 .header-disappear {
   animation: headerDisappear 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-  -webkit-animation: headerDisappear 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
 /* 避免页面内容在导航栏固定时跳动 */
