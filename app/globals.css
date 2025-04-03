@@ -10,6 +10,13 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* 确保所有设备的正确显示 */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -21,6 +28,14 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 确保图片在旧设备上正确显示 */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* 中文标题样式 */

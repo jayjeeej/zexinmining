@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Noto_Sans_SC } from "next/font/google";
 import localFont from 'next/font/local';
 import "./globals.css";
@@ -28,6 +28,14 @@ const sandvikSans = localFont({
   display: 'swap',
   variable: '--font-sandvik-sans',
 });
+
+// 添加viewport配置
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
 
 // 多语言元数据
 export const metadata: Metadata = {
