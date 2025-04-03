@@ -68,9 +68,38 @@ export default function RootLayout({
               if (/Android/.test(navigator.userAgent) && !(/Chrome/.test(navigator.userAgent))) {
                 document.documentElement.classList.add('legacy-android');
               }
-              // 检测并修复华为设备特殊问题
-              if (/HUAWEI|BLA-L09/.test(navigator.userAgent) && /Chrome\/[5-8][0-9]/.test(navigator.userAgent)) {
+              
+              // 检测并修复华为设备特殊问题 - 增强检测逻辑
+              if (/HUAWEI|HONOR|BLA-L09|EMUI/i.test(navigator.userAgent)) {
                 document.documentElement.classList.add('huawei-fix');
+                
+                // 运行时修复特定问题
+                window.addEventListener('DOMContentLoaded', function() {
+                  // 修复WhatsApp图标
+                  var whatsappLinks = document.querySelectorAll('a[href*="whatsapp"]');
+                  if (whatsappLinks.length > 0) {
+                    for (var i = 0; i < whatsappLinks.length; i++) {
+                      whatsappLinks[i].style.cssText = 'position: fixed !important; bottom: 20px !important; right: 20px !important; z-index: 999999 !important; display: block !important; width: 50px !important; height: 50px !important;';
+                      
+                      var whatsappImages = whatsappLinks[i].querySelectorAll('img');
+                      if (whatsappImages.length > 0) {
+                        for (var j = 0; j < whatsappImages.length; j++) {
+                          whatsappImages[j].style.cssText = 'width: 50px !important; height: 50px !important; max-width: 50px !important; max-height: 50px !important;';
+                        }
+                      }
+                    }
+                  }
+                  
+                  // 防止布局移位
+                  var allImages = document.querySelectorAll('img');
+                  if (allImages.length > 0) {
+                    for (var i = 0; i < allImages.length; i++) {
+                      if (!allImages[i].complete) {
+                        allImages[i].style.cssText = 'max-width: 100% !important; height: auto !important;';
+                      }
+                    }
+                  }
+                });
               }
             }
           `

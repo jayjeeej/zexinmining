@@ -237,6 +237,27 @@ img, svg, video, canvas, audio, iframe, embed, object {
   -webkit-transform: translateZ(0);
 }
 
+/* 专门修复WhatsApp浮动图标 */
+.huawei-fix a[href*="whatsapp"] img,
+.huawei-fix a[href*="whatsapp"],
+.huawei-fix .whatsapp-icon,
+.huawei-fix a[href*="whatsapp"] > *,
+.huawei-fix [class*="whatsapp"] {
+  width: 50px !important;
+  height: 50px !important;
+  max-width: 50px !important;
+  max-height: 50px !important;
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 999999 !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  border-radius: 50% !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+}
+
 /* 针对老旧设备的降级布局 */
 @media screen and (max-width: 480px) {
   /* 简化复杂布局 */
