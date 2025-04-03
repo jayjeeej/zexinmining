@@ -216,3 +216,73 @@ h6:not(.hero h6) {
     z-index: auto;
   }
 }
+
+/* 针对老旧设备和浏览器的额外修复 */
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  /* 针对旧版iOS和不支持新CSS特性的浏览器 */
+  body {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* 确保字体回退正常 */
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  /* 修复旧版Chrome中的布局问题 */
+  div, section, article, nav, footer, header {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  /* 修复旧版浏览器中的Flexbox问题 */
+  .flex {
+    display: block; /* 在很老的设备上回退到块布局 */
+  }
+  
+  /* 强制取消转换和特效 */
+  * {
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  /* 强制可见性 */
+  button, a, input, select {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  /* 修复华为设备特定问题 */
+  @media screen and (max-width: 480px) {
+    html {
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
+    }
+    
+    body {
+      overflow-x: hidden;
+      position: relative;
+      width: 100vw;
+    }
+    
+    /* 强制视口宽度 */
+    meta[name="viewport"] {
+      content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no";
+    }
+    
+    /* 修复某些华为设备上可能出现的WhatsApp图标问题 */
+    img[alt*="WhatsApp"], 
+    a[href*="whatsapp"] img,
+    .social-icon {
+      width: 40px !important;
+      height: 40px !important;
+      max-width: 40px !important;
+      max-height: 40px !important;
+      display: inline-block !important;
+      position: static !important;
+    }
+  }
+}
