@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { Inter, Noto_Sans_SC } from "next/font/google";
 import localFont from 'next/font/local';
 import "./globals.css";
@@ -29,16 +29,6 @@ const sandvikSans = localFont({
   variable: '--font-sandvik-sans',
 });
 
-// 添加viewport配置
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 5,
-  minimumScale: 1,
-  userScalable: true,
-  viewportFit: "cover",
-};
-
 // 多语言元数据
 export const metadata: Metadata = {
   // 使用语言无关的元数据，以防止构建时出现问题
@@ -55,6 +45,11 @@ export const metadata: Metadata = {
   // 根据实际网站地址修改基本 URL
   metadataBase: new URL("https://www.zexinmine.com"), 
   robots: { index: true, follow: true },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5
+  },
 };
 
 export default function RootLayout({
@@ -64,14 +59,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh">
-      <head>
-        {/* 添加兼容性meta标签 */}
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-      </head>
       <body className={`${inter.className} ${notoSansSC.variable} ${sandvikSans.variable} antialiased`}>
         <LanguageProvider>
           <DynamicTitle />
