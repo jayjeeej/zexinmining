@@ -113,6 +113,114 @@ h6:not(.hero h6) {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
+  
+  /* 移动设备通用优化 */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* 修复社交媒体图标问题 */
+  footer a[aria-label="WhatsApp"] .w-6,
+  footer a[aria-label="WhatsApp"] .h-6,
+  footer a[aria-label] .w-6,
+  footer a[aria-label] .h-6 {
+    width: 24px !important;
+    height: 24px !important;
+    position: relative !important;
+    z-index: 1 !important;
+  }
+  
+  /* 联系页面WhatsApp图标修复 */
+  section a[href*="wa.me"],
+  section a[href*="whatsapp"] {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* 确保文本在移动设备上可读 */
+  h1 {
+    font-size: 2.25rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  h2 {
+    font-size: 1.75rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* 优化移动端导航 */
+  header nav {
+    width: 100%;
+  }
+  
+  /* 确保图片不会溢出容器 */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* 极小屏幕设备优化 (小于480px) */
+@media (max-width: 480px) {
+  /* 进一步减小字体大小 */
+  h1 {
+    font-size: 1.875rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  /* 确保按钮和链接有足够的点击区域 */
+  a, button {
+    padding: 0.5rem;
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* 修复Footer在小屏幕上的布局 */
+  footer .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* 确保社交媒体图标正确展示 */
+  footer a[aria-label] {
+    margin-right: 1rem !important;
+  }
+}
+
+/* 修复WhatsApp浮动图标问题 */
+a[href*="wa.me"],
+a[href*="whatsapp"] {
+  position: relative;
+  z-index: 5;
+}
+
+a[href*="wa.me"] img,
+a[href*="whatsapp"] img {
+  max-width: 100%;
+  height: auto;
+  position: relative !important;
+}
+
+/* 确保所有图标在任何设备上都正确显示 */
+.icon-container {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  z-index: 1;
+}
+
+.icon-container img {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
 }
 
 .rounded-xs {
