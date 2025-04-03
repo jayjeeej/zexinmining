@@ -34,7 +34,9 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
+  minimumScale: 1,
   userScalable: true,
+  viewportFit: "cover",
 };
 
 // 多语言元数据
@@ -62,6 +64,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh">
+      <head>
+        {/* 添加兼容性meta标签 */}
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+      </head>
       <body className={`${inter.className} ${notoSansSC.variable} ${sandvikSans.variable} antialiased`}>
         <LanguageProvider>
           <DynamicTitle />
