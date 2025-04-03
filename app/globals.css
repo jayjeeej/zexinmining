@@ -164,6 +164,123 @@ h6:not(.hero h6) {
   display: block;
 }
 
+/* 跨设备通用兼容性修复 - 基于Sandvik网站最佳实践 */
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  max-width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 修复老旧设备上的flexbox */
+.flex, [class*="flex-"] {
+  display: flex;
+}
+
+/* 兼容老旧设备的备用方案 */
+.legacy-android .flex,
+.legacy-android [class*="flex-"] {
+  display: block;
+}
+
+.legacy-android .grid,
+.legacy-android [class*="grid-"] {
+  display: block;
+}
+
+/* 解决华为特定设备上的问题 */
+.huawei-fix {
+  /* 防止滚动问题 */
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.huawei-fix img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.huawei-fix body {
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: none;
+  touch-action: manipulation;
+}
+
+.huawei-fix button, 
+.huawei-fix a, 
+.huawei-fix input, 
+.huawei-fix .social-icon {
+  display: inline-block !important;
+  position: relative !important;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* 针对老旧设备的降级布局 */
+@media screen and (max-width: 480px) {
+  /* 简化复杂布局 */
+  .grid, [class*="grid-"], 
+  .flex, [class*="flex-"] {
+    display: block;
+    width: 100%;
+  }
+  
+  /* 确保内容可见性 */
+  .container, .wrapper, main, section, article {
+    width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    overflow: hidden;
+  }
+  
+  /* 修复WhatsApp图标和社交图标 */
+  img[alt*="WhatsApp"], 
+  a[href*="whatsapp"] img,
+  .social-icon {
+    width: 40px !important;
+    height: 40px !important;
+    max-width: 40px !important;
+    max-height: 40px !important;
+    display: inline-block !important;
+    position: static !important;
+    vertical-align: middle;
+  }
+  
+  /* 改进触摸目标尺寸 */
+  button, a, input[type="button"], input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* 优化字体大小 */
+  h1 { font-size: 1.75rem !important; }
+  h2 { font-size: 1.5rem !important; }
+  h3 { font-size: 1.25rem !important; }
+  h4, h5, h6 { font-size: 1rem !important; }
+  p, li { font-size: 0.9rem !important; }
+}
+
 /* 移动设备优化 - 解决在某些移动端显示问题 */
 @media (max-width: 640px) {
   /* 提高小屏幕上的基本可读性 */
@@ -270,7 +387,7 @@ h6:not(.hero h6) {
     
     /* 强制视口宽度 */
     meta[name="viewport"] {
-      content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no";
+      content: "width=device-width, initial-scale=1.0";
     }
     
     /* 修复某些华为设备上可能出现的WhatsApp图标问题 */

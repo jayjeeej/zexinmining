@@ -57,9 +57,24 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="renderer" content="webkit" />
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            document.documentElement.classList.add('js');
+            if (typeof window !== 'undefined') {
+              // 修复特定老旧Android设备上的兼容性问题
+              if (/Android/.test(navigator.userAgent) && !(/Chrome/.test(navigator.userAgent))) {
+                document.documentElement.classList.add('legacy-android');
+              }
+              // 检测并修复华为设备特殊问题
+              if (/HUAWEI|BLA-L09/.test(navigator.userAgent) && /Chrome\/[5-8][0-9]/.test(navigator.userAgent)) {
+                document.documentElement.classList.add('huawei-fix');
+              }
+            }
+          `
+        }}></script>
       </head>
       <body className={`${inter.className} ${notoSansSC.variable} ${sandvikSans.variable} antialiased`}>
         <LanguageProvider>
