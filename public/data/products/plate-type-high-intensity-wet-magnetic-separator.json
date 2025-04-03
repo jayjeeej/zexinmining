@@ -1,0 +1,170 @@
+{
+  "id": "plate-type-high-intensity-wet-magnetic-separator",
+  "category": "beneficiation",
+  "subcategory": "magnetic-separation",
+  "model": "HYQC系列",
+  "series": {
+    "zh": "平板式高强磁湿选磁选机",
+    "en": "Plate-type High-intensity Wet Magnetic Separator"
+  },
+  "image": "/images/products/magnetic-separation/plate-type-high-intensity-wet-magnetic-separator.jpg",
+  "capacity": {
+    "zh": "4-40 t/h",
+    "en": "4-40 t/h"
+  },
+  "feedSize": {
+    "zh": "< 2 mm",
+    "en": "< 2 mm"
+  },
+  "motorPower": {
+    "zh": "1.1-5.5 kW",
+    "en": "1.1-5.5 kW"
+  },
+  "pulpConcentration": {
+    "zh": "10%-30%",
+    "en": "10%-30%"
+  },
+  "magneticSeparationSize": {
+    "zh": "500×1500 - 2500×3000 mm",
+    "en": "500×1500 - 2500×3000 mm"
+  },
+  "dimensions": {
+    "zh": "2600×1000×1200 - 5000×3000×2000 mm",
+    "en": "2600×1000×1200 - 5000×3000×2000 mm"
+  },
+  "overview": {
+    "zh": "平板式高强磁湿选磁选机是一种专为处理弱磁性矿物设计的高效选矿设备。该设备采用平板式磁选结构，能产生强大且均匀的磁场，特别适用于细粒级赤铁矿、褐铁矿、钛铁矿、钒钛磁铁矿、锰矿、锆英砂等弱磁性矿物的选别。湿法工艺使其能有效处理细粒物料，提高回收率。设备磁场强度高，分选效率好，结构设计合理，操作维护简便，已广泛应用于冶金、矿山、稀土等行业。",
+    "en": "The Plate-type High-intensity Wet Magnetic Separator is an efficient mineral processing equipment specifically designed for weakly magnetic minerals. Using a plate-type magnetic separation structure, it generates a powerful and uniform magnetic field, particularly suitable for separating fine-grained weakly magnetic minerals such as hematite, limonite, titanium magnetite, vanadium-titanium magnetite, manganese ore, and zircon sand. The wet process enables effective processing of fine-grained materials, improving recovery rates. With high magnetic field strength, good separation efficiency, rational structural design, and easy operation and maintenance, it has been widely applied in metallurgy, mining, rare earth, and other industries."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Parameters"
+    },
+    "tableHeaders": [
+      {
+        "zh": "型号",
+        "en": "Model",
+        "unit": ""
+      },
+      {
+        "zh": "磁选区尺寸",
+        "en": "Magnetic Separation Area",
+        "unit": "mm"
+      },
+      {
+        "zh": "处理量",
+        "en": "Processing Capacity",
+        "unit": "t/h"
+      },
+      {
+        "zh": "矿浆浓度",
+        "en": "Pulp Concentration",
+        "unit": "%"
+      },
+      {
+        "zh": "功率",
+        "en": "Power",
+        "unit": "kW"
+      },
+      {
+        "zh": "外形尺寸",
+        "en": "Dimensions",
+        "unit": "mm"
+      }
+    ],
+    "tableData": [
+      ["HYQC515", "500×1500", "4-8", "10-30", "1.1", "2600×1000×1200"],
+      ["HYQC520", "500×2000", "5-8", "10-30", "1.1", "3100×1000×1200"],
+      ["HYQC815", "800×1500", "8-10", "10-30", "1.5", "2900×1200×1450"],
+      ["HYQC820", "800×2000", "8-12", "10-30", "1.5", "3400×1200×1450"],
+      ["HYQC1020", "1000×2000", "12-15", "10-30", "2.2", "3400×1400×1450"],
+      ["HYQC1520", "1500×2000", "20-25", "10-30", "3", "4000×1960×1600"],
+      ["HYQC1820", "1800×2000", "25-30", "10-30", "3", "4000×2300×1600"],
+      ["HYQC2025", "2000×2500", "30-35", "10-30", "4", "4500×2500×1700"],
+      ["HYQC2030", "2000×3000", "32-35", "10-30", "4", "5000×2500×2000"],
+      ["HYQC2530", "2500×3000", "38-40", "10-30", "5.5", "5000×3000×2000"]
+    ],
+    "note": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    }
+  },
+  "features": {
+    "zh": [
+      "平板式磁选结构，磁场强度高，分选效率好",
+      "湿法工艺，适用于细粒物料的分选，回收率高",
+      "多种型号可选，满足不同规模的生产需求",
+      "设备结构紧凑，占地面积小，安装维护方便",
+      "能耗低，操作简单，运行稳定可靠",
+      "适用于多种弱磁性矿物的选别，应用范围广"
+    ],
+    "en": [
+      "Plate-type magnetic structure with high magnetic field strength and good separation efficiency",
+      "Wet process suitable for fine-grained material separation with high recovery rate",
+      "Multiple models available to meet production needs of different scales",
+      "Compact equipment structure, small footprint, easy installation and maintenance",
+      "Low energy consumption, simple operation, stable and reliable running",
+      "Applicable to various weakly magnetic minerals, wide application range"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Applications"
+    },
+    "items": [
+      {
+        "icon": "mineral",
+        "title": {
+          "zh": "黑色金属矿",
+          "en": "Ferrous Metal Ores"
+        },
+        "description": {
+          "zh": "用于赤铁矿、褐铁矿、钛铁矿等弱磁性铁矿的选别",
+          "en": "Separation of weakly magnetic iron ores such as hematite, limonite, and titanium magnetite"
+        }
+      },
+      {
+        "icon": "mineral",
+        "title": {
+          "zh": "锰矿选别",
+          "en": "Manganese Ore Separation"
+        },
+        "description": {
+          "zh": "用于各种类型锰矿的分选和提纯",
+          "en": "Separation and purification of various types of manganese ores"
+        }
+      },
+      {
+        "icon": "mineral",
+        "title": {
+          "zh": "非金属矿物",
+          "en": "Non-metallic Minerals"
+        },
+        "description": {
+          "zh": "用于石英、长石等非金属矿物中铁质杂质的去除",
+          "en": "Removal of iron impurities from non-metallic minerals such as quartz and feldspar"
+        }
+      },
+      {
+        "icon": "recycle",
+        "title": {
+          "zh": "工业废水处理",
+          "en": "Industrial Wastewater Treatment"
+        },
+        "description": {
+          "zh": "用于冶金、矿山等行业废水中磁性物质的回收",
+          "en": "Recovery of magnetic substances from wastewater in metallurgy, mining and other industries"
+        }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "three-disc-belt-magnetic-separator",
+    "permanent-magnetic-drum-separator",
+    "double-roller-permanent-magnetic-zircon-separator",
+    "roller-type-high-intensity-wet-magnetic-separator",
+    "four-roller-variable-frequency-electrostatic-separator"
+  ]
+} 

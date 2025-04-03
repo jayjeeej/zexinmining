@@ -1,0 +1,166 @@
+{
+  "id": "permanent-magnetic-drum-separator",
+  "category": "beneficiation",
+  "subcategory": "magnetic-separation",
+  "model": "CT-1200",
+  "series": {
+    "zh": "永磁筒式磁选机",
+    "en": "Permanent Magnetic Drum Separator"
+  },
+  "image": "/images/products/magnetic-separation/permanent-magnetic-drum-separator.jpg",
+  "capacity": {
+    "zh": "10-280 t/h",
+    "en": "10-280 t/h"
+  },
+  "feedSize": {
+    "zh": "0-3 mm",
+    "en": "0-3 mm"
+  },
+  "motorPower": {
+    "zh": "1.5-11 kW",
+    "en": "1.5-11 kW"
+  },
+  "overview": {
+    "zh": "永磁筒式磁选机是一种高效磁选设备，使用永久磁铁产生强磁场，用于处理粒度在3mm以下的弱磁性物料。该设备主要由永磁转筒、进料装置、出料装置、驱动机构、槽体和支架等部件组成。设备结构紧凑，操作简单，磁场强度高且不需要电磁供电，能耗低，被广泛应用于选矿、煤炭、建材等行业，用于铁矿石、铁砂、煤炭等物料的磁选处理。",
+    "en": "The Permanent Magnetic Drum Separator is a high-efficiency magnetic separation equipment that uses permanent magnets to generate a strong magnetic field for processing weakly magnetic materials with a particle size below 3mm. The device mainly consists of a permanent magnetic drum, feeding device, discharge device, drive mechanism, tank, and support frame. With a compact structure, simple operation, high magnetic field strength without electromagnetic power supply, and low energy consumption, it is widely used in mineral processing, coal, building materials, and other industries for the magnetic separation of iron ore, iron sand, coal, and other materials."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Parameters"
+    },
+    "tableHeaders": [
+      {
+        "zh": "型号",
+        "en": "Model",
+        "unit": ""
+      },
+      {
+        "zh": "筒径",
+        "en": "Drum Diameter",
+        "unit": "mm"
+      },
+      {
+        "zh": "筒长",
+        "en": "Drum Length",
+        "unit": "mm"
+      },
+      {
+        "zh": "圆筒转速",
+        "en": "Rotation Speed",
+        "unit": "r/min"
+      },
+      {
+        "zh": "给料粒度",
+        "en": "Feed Size",
+        "unit": "mm"
+      },
+      {
+        "zh": "处理量",
+        "en": "Processing Capacity",
+        "unit": "t/h"
+      },
+      {
+        "zh": "功率",
+        "en": "Power",
+        "unit": "kW"
+      }
+    ],
+    "tableData": [
+      ["CTB6012", "600", "1200", "<35", "2-0", "10-20", "1.5"],
+      ["CTB6018", "600", "1800", "<35", "2-0", "15-30", "2.2"],
+      ["CTB7518", "750", "1800", "<35", "2-0", "20-45", "2.2"],
+      ["CTB9018", "900", "1800", "<35", "3-0", "40-60", "3"],
+      ["CTB9021", "900", "2100", "<35", "3-0", "45-60", "3"],
+      ["CTB9024", "900", "2400", "<28", "3-0", "45-70", "4"],
+      ["CTB1018", "1050", "1800", "<20", "3-0", "50-75", "5.5"],
+      ["CTB1021", "1050", "2100", "<20", "3-0", "50-100", "5.5"],
+      ["CTB1024", "1050", "2400", "<20", "3-0", "60-120", "5.5"],
+      ["CTB1218", "1200", "1800", "<18", "3-0", "80-140", "5.5"],
+      ["CTB1224", "1200", "2400", "<18", "3-0", "85-180", "7.5"],
+      ["CTB1230", "1200", "3000", "<18", "3-0", "100-180", "7.5"],
+      ["CTB1530", "1500", "3000", "<14", "3-0", "170-280", "11"]
+    ],
+    "note": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    }
+  },
+  "features": {
+    "zh": [
+      "采用高性能钕铁硼永磁材料，磁场强度高",
+      "永磁结构，无需电磁供电，能耗低",
+      "磁场深度大，选别效率高",
+      "筒体采用不锈钢材质，耐腐蚀，使用寿命长",
+      "结构简单紧凑，操作维护方便",
+      "适用范围广，可处理多种弱磁性物料"
+    ],
+    "en": [
+      "High magnetic field strength with high-performance neodymium-iron-boron permanent magnet material",
+      "Permanent magnetic structure, no electromagnetic power supply needed, low energy consumption",
+      "Large magnetic field depth, high separation efficiency",
+      "Stainless steel drum body, corrosion-resistant with long service life",
+      "Simple and compact structure, easy operation and maintenance",
+      "Wide range of applications, can process various weakly magnetic materials"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Applications"
+    },
+    "items": [
+      {
+        "icon": "iron-ore",
+        "title": {
+          "zh": "铁矿石加工",
+          "en": "Iron Ore Processing"
+        },
+        "description": {
+          "zh": "用于铁矿石、赤铁矿、褐铁矿等铁矿物的选别与提纯",
+          "en": "For the separation and purification of iron ore, hematite, limonite and other iron minerals"
+        }
+      },
+      {
+        "icon": "coal",
+        "title": {
+          "zh": "煤炭洗选",
+          "en": "Coal Washing"
+        },
+        "description": {
+          "zh": "从煤炭中回收含铁矿物，提高煤炭品质",
+          "en": "Recovery of iron-bearing minerals from coal to improve coal quality"
+        }
+      },
+      {
+        "icon": "ceramic",
+        "title": {
+          "zh": "建材陶瓷",
+          "en": "Building Materials and Ceramics"
+        },
+        "description": {
+          "zh": "用于石英砂、长石、高岭土等非金属矿物中铁杂质的去除",
+          "en": "Removal of iron impurities from non-metallic minerals such as quartz sand, feldspar, kaolin, etc."
+        }
+      },
+      {
+        "icon": "recycling",
+        "title": {
+          "zh": "资源回收",
+          "en": "Resource Recovery"
+        },
+        "description": {
+          "zh": "用于废料处理和资源再利用过程中磁性物质的回收",
+          "en": "Recovery of magnetic substances in waste treatment and resource recycling processes"
+        }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "double-roller-permanent-magnetic-zircon-separator",
+    "four-roller-variable-frequency-electrostatic-separator",
+    "plate-type-high-intensity-wet-magnetic-separator",
+    "roller-type-high-intensity-wet-magnetic-separator",
+    "three-disc-belt-magnetic-separator"
+  ]
+} 

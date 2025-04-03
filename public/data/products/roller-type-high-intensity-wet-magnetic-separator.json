@@ -1,0 +1,184 @@
+{
+  "id": "roller-type-high-intensity-wet-magnetic-separator",
+  "category": "beneficiation",
+  "subcategory": "magnetic-separation",
+  "model": "HYG系列",
+  "series": {
+    "zh": "辊式强磁湿式磁选机",
+    "en": "Roller-type High-intensity Wet Magnetic Separator"
+  },
+  "image": "/images/products/magnetic-separation/roller-type-high-intensity-wet-magnetic-separator.jpg",
+  "capacity": {
+    "zh": "0.5-13 t/h",
+    "en": "0.5-13 t/h"
+  },
+  "feedSize": {
+    "zh": "0.5-3 mm",
+    "en": "0.5-3 mm"
+  },
+  "motorPower": {
+    "zh": "1.1-1.5 kW",
+    "en": "1.1-1.5 kW"
+  },
+  "magneticFieldStrength": {
+    "zh": "11000-13500 Gs",
+    "en": "11000-13500 Gs"
+  },
+  "rollerSize": {
+    "zh": "Φ160×600 - Φ260×1200 mm",
+    "en": "Φ160×600 - Φ260×1200 mm"
+  },
+  "rollerSpeed": {
+    "zh": "60-70 r/min",
+    "en": "60-70 r/min"
+  },
+  "weight": {
+    "zh": "0.25-1.3 t",
+    "en": "0.25-1.3 t"
+  },
+  "overview": {
+    "zh": "辊式强磁湿式磁选机是一种高效的湿式磁选设备，专为处理细粒级弱磁性矿物设计。该设备采用磁辊结构，产生11000-13500高斯的强磁场，适用于赤铁矿、褐铁矿、镜铁矿、钒钛磁铁矿、钨锰矿、锆英砂等弱磁性和中等磁性矿物的选别。湿式工艺使其处理细粒物料的效果更佳，提高了回收率和精矿品位。设备结构紧凑，操作维护简单，适用于中小型选矿厂的各类弱磁性矿物的选别作业。",
+    "en": "The Roller-type High-intensity Wet Magnetic Separator is an efficient wet magnetic separation equipment specifically designed for fine-grained weakly magnetic minerals. The equipment adopts a magnetic roller structure, generating a strong magnetic field of 11000-13500 Gauss, suitable for the separation of weakly and medium magnetic minerals such as hematite, limonite, specularite, vanadium-titanium magnetite, wolframite, manganese ore, zircon sand, etc. The wet process makes it more effective in processing fine-grained materials, improving recovery rates and concentrate grade. With a compact structure and simple operation and maintenance, it is suitable for various weakly magnetic mineral separation operations in small and medium-sized mineral processing plants."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Parameters"
+    },
+    "tableHeaders": [
+      {
+        "zh": "型号",
+        "en": "Model",
+        "unit": ""
+      },
+      {
+        "zh": "磁辊规格",
+        "en": "Roller Size",
+        "unit": "mm"
+      },
+      {
+        "zh": "磁场强度",
+        "en": "Magnetic Field Strength",
+        "unit": "Gs"
+      },
+      {
+        "zh": "磁辊转速",
+        "en": "Roller Speed",
+        "unit": "r/min"
+      },
+      {
+        "zh": "入料粒度",
+        "en": "Feed Size",
+        "unit": "mm"
+      },
+      {
+        "zh": "处理量",
+        "en": "Processing Capacity",
+        "unit": "t/h"
+      },
+      {
+        "zh": "电机功率",
+        "en": "Motor Power",
+        "unit": "kW"
+      },
+      {
+        "zh": "重量",
+        "en": "Weight",
+        "unit": "t"
+      }
+    ],
+    "tableData": [
+      ["HYG1606", "Φ160×600", "11000", "70", "0.5-3", "0.5-1", "1.1", "0.25"],
+      ["HYG1608", "Φ160×800", "11000", "70", "0.5-3", "0.6-1.2", "1.1", "0.3"],
+      ["HYG1610", "Φ160×1000", "11000", "70", "0.5-3", "0.8-1.5", "1.1", "0.45"],
+      ["HYG1612", "Φ160×1200", "11000", "70", "0.5-3", "1-2", "1.5", "0.6"],
+      ["HYG2210", "Φ220×1000", "12000", "60", "0.5-3", "1-2", "1.5", "0.6"],
+      ["HYG2212", "Φ220×1200", "12000", "60", "0.5-3", "2-3", "1.5", "0.8"],
+      ["HYG2215", "Φ220×1500", "12000", "60", "0.5-3", "5-7", "1.5", "1.1"],
+      ["HYG2218", "Φ220×1800", "12000", "60", "0.5-3", "8-13", "1.5", "1.3"],
+      ["HYG2610", "Φ260×1000", "13500", "60", "0.5-3", "3-5", "1.5", "1"],
+      ["HYG2612", "Φ260×1200", "13500", "60", "0.5-3", "5-7", "1.5", "1.1"]
+    ],
+    "note": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    }
+  },
+  "features": {
+    "zh": [
+      "磁辊结构设计，磁场强度高达11000-13500高斯",
+      "湿式工艺处理，适用于细粒弱磁性矿物的分选",
+      "多种规格型号可选，适应不同生产规模需求",
+      "分选精度高，回收率好，精矿品位高",
+      "结构紧凑，占地面积小，安装维护简便",
+      "能耗低，操作简单，运行稳定可靠"
+    ],
+    "en": [
+      "Magnetic roller design with high magnetic field strength up to 11000-13500 Gauss",
+      "Wet processing, suitable for fine-grained weakly magnetic mineral separation",
+      "Multiple specifications and models available to meet different production scale requirements",
+      "High separation precision, good recovery rate, high concentrate grade",
+      "Compact structure, small footprint, easy installation and maintenance",
+      "Low energy consumption, simple operation, stable and reliable running"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Applications"
+    },
+    "items": [
+      {
+        "icon": "mineral",
+        "title": {
+          "zh": "铁矿选别",
+          "en": "Iron Ore Separation"
+        },
+        "description": {
+          "zh": "用于赤铁矿、褐铁矿、镜铁矿等弱磁性铁矿的选别",
+          "en": "Separation of weakly magnetic iron ores such as hematite, limonite, specularite, etc."
+        }
+      },
+      {
+        "icon": "mineral",
+        "title": {
+          "zh": "有色金属矿",
+          "en": "Non-ferrous Metal Ores"
+        },
+        "description": {
+          "zh": "用于钨矿、锡矿、钼矿等有色金属矿的分选",
+          "en": "Separation of non-ferrous metal ores such as tungsten, tin, molybdenum, etc."
+        }
+      },
+      {
+        "icon": "mineral",
+        "title": {
+          "zh": "稀有金属矿",
+          "en": "Rare Metal Ores"
+        },
+        "description": {
+          "zh": "用于钽铌矿、锆英砂等稀有金属矿的分选",
+          "en": "Separation of rare metal ores such as tantalum-niobium ore, zircon sand, etc."
+        }
+      },
+      {
+        "icon": "mineral",
+        "title": {
+          "zh": "非金属矿物",
+          "en": "Non-metallic Minerals"
+        },
+        "description": {
+          "zh": "用于石英、长石等非金属矿物中铁质杂质的去除",
+          "en": "Removal of iron impurities from non-metallic minerals such as quartz, feldspar, etc."
+        }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "plate-type-high-intensity-wet-magnetic-separator",
+    "permanent-magnetic-drum-separator",
+    "three-disc-belt-magnetic-separator",
+    "double-roller-permanent-magnetic-zircon-separator",
+    "four-roller-variable-frequency-electrostatic-separator"
+  ]
+} 

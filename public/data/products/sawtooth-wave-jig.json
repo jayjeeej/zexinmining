@@ -1,0 +1,170 @@
+{
+  "id": "sawtooth-wave-jig",
+  "category": "beneficiation",
+  "subcategory": "gravity-separation",
+  "model": "STWJ-5",
+  "series": {
+    "zh": "锯齿波跳汰机",
+    "en": "Sawtooth Wave Jig"
+  },
+  "image": "/images/products/gravity-separation/sawtooth-wave-jig.jpg",
+  "capacity": {
+    "zh": "10-30 t/h",
+    "en": "10-30 t/h"
+  },
+  "feedSize": {
+    "zh": "0-60 mm",
+    "en": "0-60 mm"
+  },
+  "motorPower": {
+    "zh": "11 kW",
+    "en": "11 kW"
+  },
+  "overview": {
+    "zh": "锯齿波跳汰机是一种采用独特锯齿波形运动方式的重力选矿设备，特别适合处理细粒和密度差异较小的矿物。其锯齿波运动形式提供了更精确的分选效果，对金、钨、锡等贵重金属和重矿物的回收率高，是小型精细选矿的理想设备。",
+    "en": "The Sawtooth Wave Jig is a gravity separation equipment that adopts a unique sawtooth waveform motion, particularly suitable for processing fine particles and minerals with small density differences. Its sawtooth wave motion provides more precise separation effects, with high recovery rates for precious metals and heavy minerals such as gold, tungsten, and tin, making it an ideal equipment for small-scale fine mineral processing."
+  },
+  "specifications": {
+    "title": {
+      "zh": "锯齿波跳汰机技术参数",
+      "en": "Sawtooth Wave Jig Specifications"
+    },
+    "note": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    },
+    "tableHeaders": [
+      {
+        "zh": "型号",
+        "en": "Model"
+      },
+      {
+        "zh": "冲程 / 调整范围",
+        "en": "Stroke / Adjustment Range",
+        "unit": "mm"
+      },
+      {
+        "zh": "跳汰室数",
+        "en": "Jigging Chamber Number"
+      },
+      {
+        "zh": "截面型式",
+        "en": "Section Type"
+      },
+      {
+        "zh": "跳汰室面积",
+        "en": "Jigging Chamber Area",
+        "unit": "m²"
+      },
+      {
+        "zh": "冲次范围",
+        "en": "Frequency Range",
+        "unit": "cycles/min"
+      },
+      {
+        "zh": "进料尺寸",
+        "en": "Feed Size",
+        "unit": "mm"
+      },
+      {
+        "zh": "处理能力",
+        "en": "Processing Capacity",
+        "unit": "t/h"
+      },
+      {
+        "zh": "电机功率",
+        "en": "Motor Power",
+        "unit": "kW"
+      },
+      {
+        "zh": "耗水量",
+        "en": "Water Consumption",
+        "unit": "m³/h"
+      },
+      {
+        "zh": "重量",
+        "en": "Weight",
+        "unit": "t"
+      }
+    ],
+    "tableData": [
+      ["STWJ-5", "15-47", "1", {"zh": "锯齿形", "en": "Sawtooth"}, "5", "60-156", "0-60", "10-30", "11", "100-150", "2.5"]
+    ]
+  },
+  "features": {
+    "zh": [
+      "独特的锯齿波运动形式，提供更精准的分选效果",
+      "特别适合细粒矿物和密度差异小的矿物分选",
+      "能耗低，分选效率高",
+      "结构简单，维护方便",
+      "适用于小规模精细选矿作业"
+    ],
+    "en": [
+      "Unique sawtooth wave motion providing more precise separation effects",
+      "Particularly suitable for fine particles and minerals with small density differences",
+      "Low energy consumption with high separation efficiency",
+      "Simple structure with easy maintenance",
+      "Suitable for small-scale fine mineral processing operations"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Application Areas"
+    },
+    "items": [
+      {
+        "icon": "💎",
+        "title": {
+          "zh": "贵重矿物",
+          "en": "Precious Minerals"
+        },
+        "description": {
+          "zh": "适用于金、钨、锡、铁、锰、重晶石等贵重矿物的分选和回收。",
+          "en": "Suitable for separation and recovery of precious minerals such as gold, tungsten, tin, iron, manganese, barite, etc."
+        }
+      },
+      {
+        "icon": "🥇",
+        "title": {
+          "zh": "金矿选矿",
+          "en": "Gold Mining"
+        },
+        "description": {
+          "zh": "高效回收细粒金和微细粒金，提高回收率。",
+          "en": "Efficiently recovers fine and ultra-fine gold particles, improving recovery rates."
+        }
+      },
+      {
+        "icon": "🧪",
+        "title": {
+          "zh": "稀有金属",
+          "en": "Rare Metals"
+        },
+        "description": {
+          "zh": "适用于钨、锡、钽等稀有金属的精细分选。",
+          "en": "Suitable for fine separation of tungsten, tin, tantalum and other rare metals."
+        }
+      },
+      {
+        "icon": "🔬",
+        "title": {
+          "zh": "实验室应用",
+          "en": "Laboratory Applications"
+        },
+        "description": {
+          "zh": "用于小批量矿样分析和工艺优化研究。",
+          "en": "Used for small batch ore sample analysis and process optimization research."
+        }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "synchronous-counter-directional-jig", 
+    "synchronous-counter-directional-jig-small", 
+    "shaking-table",
+    "carpet-hooking-machine",
+    "spiral-chute",
+    "centrifugal-separator"
+  ]
+} 

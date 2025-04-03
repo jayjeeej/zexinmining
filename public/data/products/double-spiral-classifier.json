@@ -1,0 +1,173 @@
+{
+  "id": "double-spiral-classifier",
+  "nameEn": "Submerged Spiral Classifier",
+  "nameZh": "沉没式螺旋分级机",
+  "model": "FLC系列",
+  "sandReturnCapacity": { "min": 160, "max": 11650, "unit": "t/d" },
+  "overflowCapacity": { "min": 50, "max": 705, "unit": "t/d" },
+  "motorPower": { "min": 2.2, "max": 30, "unit": "kW" },
+  "rotationSpeed": { "min": 2.5, "max": 7.7, "unit": "r/min" },
+  "spiralDiameter": { "min": 1000, "max": 3000, "unit": "mm" },
+  "spiralLength": { "min": 8397, "max": 14300, "unit": "mm" },
+  "overview": {
+    "zh": "沉没式螺旋分级机（FLC系列）是一种高效的矿物分级设备，螺旋叶片部分沉没于水槽中，适用于金属和非金属矿山的选矿流程。该设备能够有效地将细粒物料与粗粒物料分离，特别适合处理细粒级物料。设备由螺旋装置、槽体、传动装置、提升机构和溢流装置组成，结构简单，操作可靠。",
+    "en": "Submerged Spiral Classifier (FLC Series) is a high-efficiency mineral classification equipment with spiral blades partially submerged in the water tank, suitable for beneficiation processes in metallic and non-metallic mines. The device effectively separates fine particles from coarse materials, particularly suitable for processing fine-grained materials. The equipment consists of spiral mechanism, tank, transmission, lifting mechanism and overflow device, featuring simple structure and reliable operation."
+  },
+  "specifications": [
+    {
+      "model": "FLC-1000",
+      "rotationSpeed": "2.5,3.5,5,7.4",
+      "sandReturnCapacity": "160-700",
+      "overflowCapacity": "50-260",
+      "spiralDiameter": "1000",
+      "spiralLength": "8397",
+      "motorModel": "Y132M2-6",
+      "motorPower": "5.5"
+    },
+    {
+      "model": "FLC-1200",
+      "rotationSpeed": "5,6,7",
+      "sandReturnCapacity": "1150-1640",
+      "overflowCapacity": "265",
+      "spiralDiameter": "1200",
+      "spiralLength": "8400",
+      "motorModel": "Y160M-6",
+      "motorPower": "7.5"
+    },
+    {
+      "model": "FLC-1500",
+      "rotationSpeed": "2.5,4,6",
+      "sandReturnCapacity": "1140-2740",
+      "overflowCapacity": "185",
+      "spiralDiameter": "1500",
+      "spiralLength": "10500",
+      "motorModel": "Y160L-6",
+      "motorPower": "7.5"
+    },
+    {
+      "model": "FLC-2000",
+      "rotationSpeed": "3.6,5.5",
+      "sandReturnCapacity": "3240-5940",
+      "overflowCapacity": "400",
+      "spiralDiameter": "2000",
+      "spiralLength": "13000",
+      "motorModel": "Y160M-6",
+      "motorPower": "11"
+    },
+    {
+      "model": "FLC-2000",
+      "rotationSpeed": "3.6,5.5",
+      "sandReturnCapacity": "3240-5940",
+      "overflowCapacity": "400",
+      "spiralDiameter": "2000",
+      "spiralLength": "13000",
+      "motorModel": "Y160L-4",
+      "motorPower": "15"
+    },
+    {
+      "model": "FLC-2400",
+      "rotationSpeed": "3.6",
+      "sandReturnCapacity": "6800",
+      "overflowCapacity": "490",
+      "spiralDiameter": "2400",
+      "spiralLength": "14130",
+      "motorModel": "Y200L1-6",
+      "motorPower": "18.5"
+    },
+    {
+      "model": "FLC-3000",
+      "rotationSpeed": "3.2",
+      "sandReturnCapacity": "11650",
+      "overflowCapacity": "705",
+      "spiralDiameter": "3000",
+      "spiralLength": "14300",
+      "motorModel": "Y200L-4",
+      "motorPower": "30"
+    },
+    {
+      "model": "2FLC-1200",
+      "rotationSpeed": "3.8,6",
+      "sandReturnCapacity": "1770-2800",
+      "overflowCapacity": "240",
+      "spiralDiameter": "1200",
+      "spiralLength": "8400",
+      "motorModel": "Y160M-6",
+      "motorPower": "7.5×2"
+    },
+    {
+      "model": "2FLC-1500",
+      "rotationSpeed": "2.5,4,6",
+      "sandReturnCapacity": "2240-5360",
+      "overflowCapacity": "370",
+      "spiralDiameter": "1500",
+      "spiralLength": "10500",
+      "motorModel": "Y160M-6",
+      "motorPower": "7.5×2"
+    },
+    {
+      "model": "2FLC-2000",
+      "rotationSpeed": "3.6,5.5",
+      "sandReturnCapacity": "7780-11880",
+      "overflowCapacity": "640",
+      "spiralDiameter": "2000",
+      "spiralLength": "12900",
+      "motorModel": "Y100L1-4",
+      "motorPower": "2.2×2"
+    },
+    {
+      "model": "2FLC-2000",
+      "rotationSpeed": "3.6,5.5",
+      "sandReturnCapacity": "7780-11880",
+      "overflowCapacity": "640",
+      "spiralDiameter": "2000",
+      "spiralLength": "12900",
+      "motorModel": "Y100L2-4",
+      "motorPower": "3.0×2"
+    },
+    {
+      "model": "2FLC-2400",
+      "rotationSpeed": "3.67",
+      "sandReturnCapacity": "13700",
+      "overflowCapacity": "910",
+      "spiralDiameter": "2400",
+      "spiralLength": "14130",
+      "motorModel": "Y112M-4",
+      "motorPower": "4.0×2"
+    }
+  ],
+  "features": {
+    "zh": [
+      "沉没式设计：螺旋叶片部分沉没于水中，提高细粒物分离效率",
+      "双螺旋结构：增大处理能力，适合大型选矿厂应用",
+      "可调节溢流口高度：根据工艺要求灵活调整分级粒度",
+      "优化螺旋角度：确保最佳物料输送和分离效果",
+      "耐磨衬板：延长设备使用寿命，降低维护成本",
+      "变速驱动系统：可根据物料特性调整螺旋转速，优化分级效果"
+    ],
+    "en": [
+      "Submerged Design: Spiral blades partially submerged in water, improving fine particle separation efficiency",
+      "Double Spiral Structure: Increases processing capacity, suitable for large-scale mineral processing plants",
+      "Adjustable Overflow Height: Flexible adjustment of classification particle size according to process requirements",
+      "Optimized Spiral Angle: Ensures optimal material transport and separation effect",
+      "Wear-resistant Liners: Extends equipment service life, reduces maintenance costs",
+      "Variable Speed Drive System: Allows adjustment of spiral rotation speed based on material characteristics, optimizing classification results"
+    ]
+  },
+  "applications": {
+    "zh": [
+      "黑色金属选矿：铁矿、锰矿分级",
+      "有色金属选矿：铜、铅、锌矿石分级",
+      "贵金属选矿：金、银矿石分级",
+      "非金属矿加工：石英砂、磷矿选矿",
+      "建材行业：砂石生产线分级系统"
+    ],
+    "en": [
+      "Ferrous Metal Processing: Iron and manganese ore classification",
+      "Non-ferrous Metal Processing: Copper, lead, and zinc ore classification",
+      "Precious Metal Processing: Gold and silver ore classification",
+      "Non-metallic Mineral Processing: Quartz sand and phosphate ore beneficiation",
+      "Construction Materials: Classification systems in sand and gravel production lines"
+    ]
+  },
+  "relatedProducts": ["high-weir-spiral-classifier"]
+} 

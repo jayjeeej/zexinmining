@@ -1,0 +1,163 @@
+{
+  "id": "bar-flotation-machine",
+  "category": "beneficiation",
+  "subcategory": "flotation",
+  "model": "BF系列",
+  "series": {
+    "zh": "棒型浮选机",
+    "en": "Bar Flotation Machine"
+  },
+  "image": "/images/products/flotation/bar-flotation-machine.jpg",
+  "effectiveVolume": {
+    "zh": "4-32 m³",
+    "en": "4-32 m³"
+  },
+  "capacity": {
+    "zh": "0.7-25 m³/min",
+    "en": "0.7-25 m³/min"
+  },
+  "motorPower": {
+    "zh": "7.5-55 kW",
+    "en": "7.5-55 kW"
+  },
+  "overview": {
+    "zh": "棒型浮选机是一种新型高效的矿物浮选设备，采用特殊设计的棒状搅拌器，结合优化的气泡生成系统，实现了矿浆与空气的充分混合。该设备适用于各类金属矿物和非金属矿物的浮选分离，具有矿化率高、泡沫稳定、选择性好等特点，在提高精矿品位和回收率方面表现出色。",
+    "en": "The Bar Flotation Machine is a new type of efficient mineral flotation equipment, adopting specially designed bar-shaped stirrers combined with an optimized bubble generation system to achieve thorough mixing of slurry and air. This equipment is suitable for flotation separation of various metallic and non-metallic minerals, featuring high mineralization rate, stable froth, and good selectivity. It performs excellently in improving concentrate grade and recovery rate."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Parameters"
+    },
+    "note": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    },
+    "tableHeaders": [
+      {
+        "zh": "型号",
+        "en": "Model",
+        "unit": ""
+      },
+      {
+        "zh": "有效容积",
+        "en": "Effective Volume",
+        "unit": "m³"
+      },
+      {
+        "zh": "处理能力",
+        "en": "Processing Capacity",
+        "unit": "m³/min"
+      },
+      {
+        "zh": "槽体尺寸",
+        "en": "Tank Dimensions",
+        "unit": "mm"
+      },
+      {
+        "zh": "搅拌器转速",
+        "en": "Stirrer Speed",
+        "unit": "r/min"
+      },
+      {
+        "zh": "充气量",
+        "en": "Air Volume",
+        "unit": "m³/m².min"
+      },
+      {
+        "zh": "电机功率",
+        "en": "Motor Power",
+        "unit": "kW"
+      },
+      {
+        "zh": "重量",
+        "en": "Weight",
+        "unit": "kg"
+      }
+    ],
+    "tableData": [
+      ["BF-4", "4", "0.7-3.5", "1500×1500×2000", "280", "1.8-2.2", "7.5", "2300"],
+      ["BF-8", "8", "2.0-7.0", "2000×2000×2200", "260", "1.8-2.5", "15", "3600"],
+      ["BF-16", "16", "5.0-12", "2800×2800×2400", "230", "1.9-2.8", "30", "5800"],
+      ["BF-24", "24", "8.0-18", "3200×3200×2600", "210", "2.0-3.0", "45", "7500"],
+      ["BF-32", "32", "12-25", "3600×3600×2800", "195", "2.2-3.2", "55", "9200"]
+    ]
+  },
+  "features": {
+    "zh": [
+      "独特的棒状搅拌器设计，提高了矿浆与空气的混合效率",
+      "改进的充气系统，产生更均匀的气泡分布",
+      "特殊的流体动力学设计，减少湍流干扰，提高浮选稳定性",
+      "可调节的搅拌速度和充气量，适应不同矿物特性",
+      "结构坚固耐用，维护简便，使用寿命长",
+      "能耗低，处理量大，经济效益显著"
+    ],
+    "en": [
+      "Unique bar-shaped stirrer design improves the mixing efficiency of slurry and air",
+      "Improved aeration system produces more uniform bubble distribution",
+      "Special fluid dynamics design reduces turbulence interference and improves flotation stability",
+      "Adjustable stirring speed and air volume to adapt to different mineral characteristics",
+      "Sturdy and durable structure, easy maintenance, long service life",
+      "Low energy consumption, large processing capacity, significant economic benefits"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Applications"
+    },
+    "items": [
+      {
+        "icon": "🔴",
+        "title": {
+          "zh": "有色金属选矿",
+          "en": "Non-ferrous Metal Processing"
+        },
+        "description": {
+          "zh": "适用于铜、铅、锌、金、银等贵重金属和有色金属的浮选",
+          "en": "Suitable for flotation of copper, lead, zinc, gold, silver and other precious and non-ferrous metals"
+        }
+      },
+      {
+        "icon": "⚫",
+        "title": {
+          "zh": "黑色金属选矿",
+          "en": "Ferrous Metal Processing"
+        },
+        "description": {
+          "zh": "可用于铁、锰等黑色金属矿物的反浮选工艺",
+          "en": "Can be used for reverse flotation processes of ferrous metal minerals such as iron and manganese"
+        }
+      },
+      {
+        "icon": "🪨",
+        "title": {
+          "zh": "非金属矿物加工",
+          "en": "Non-metallic Mineral Processing"
+        },
+        "description": {
+          "zh": "适合石墨、萤石、长石、石英等非金属矿物的浮选提纯",
+          "en": "Suitable for flotation purification of non-metallic minerals such as graphite, fluorite, feldspar, and quartz"
+        }
+      },
+      {
+        "icon": "🌊",
+        "title": {
+          "zh": "细粒矿物处理",
+          "en": "Fine Particle Processing"
+        },
+        "description": {
+          "zh": "特别适合细粒和超细粒矿物的浮选，提高回收率",
+          "en": "Especially suitable for flotation of fine and ultrafine particles, improving recovery rate"
+        }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "aeration-flotation-machine",
+    "self-priming-flotation-machine",
+    "xcf-flotation-machine",
+    "flotation-cell",
+    "coarse-particle-flotation-machine"
+  ]
+} 

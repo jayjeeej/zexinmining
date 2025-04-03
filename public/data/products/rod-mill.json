@@ -1,0 +1,94 @@
+{
+  "id": "rod-mill",
+  "nameEn": "Rod Mill",
+  "nameZh": "棒磨机",
+  "model": "MBS0918-MBS3245",
+  "capacity": { "min": 0.62, "max": 180, "unit": "t/h" },
+  "motorPower": { "min": 18.5, "max": 800, "unit": "kW" },
+  "feedSize": { "min": 25, "max": 50, "unit": "mm" },
+  "dischargeSize": { "min": 0.833, "max": 0.147, "unit": "mm" },
+  "overview": {
+    "zh": "棒磨机是一种高效的棒状介质研磨设备，广泛应用于选矿流程的粗磨和中磨阶段。棒磨机采用钢棒作为研磨介质，能够提供优良的研磨效果和粒度分布，尤其适合处理粒度要求较均匀的物料。筒体内装满一定数量的钢棒，通过筒体的旋转使钢棒提升后下落，对物料进行冲击和研磨作用，达到粉碎的目的。",
+    "en": "Rod mill is a high-efficiency grinding equipment using rod-shaped media, widely used in the coarse and medium grinding stages of mineral processing. With steel rods as grinding media, rod mills provide excellent grinding effects and particle size distribution, particularly suitable for materials requiring uniform particle size. The cylinder is filled with a certain number of steel rods, and as the cylinder rotates, the rods are lifted and then fall, impacting and grinding the materials to achieve crushing."
+  },
+  "specifications": [
+    { "model": "MBS0918", "cylinderDiameter": "900", "cylinderLength": "1800", "rotationSpeed": "36-38", "feedSize": "≤25", "dischargeSize": "0.833-0.147", "capacity": "0.62-3.2", "motorPower": "18.5", "weight": "4600" },
+    { "model": "MBS0924", "cylinderDiameter": "900", "cylinderLength": "2400", "rotationSpeed": "36", "feedSize": "≤25", "dischargeSize": "0.833-0.147", "capacity": "0.81-4.3", "motorPower": "22", "weight": "5100" },
+    { "model": "MBS1224", "cylinderDiameter": "1200", "cylinderLength": "2400", "rotationSpeed": "36", "feedSize": "≤25", "dischargeSize": "0.833-0.147", "capacity": "1.1-4.9", "motorPower": "30", "weight": "12000" },
+    { "model": "MBS1530", "cylinderDiameter": "1500", "cylinderLength": "3000", "rotationSpeed": "29.7", "feedSize": "≤25", "dischargeSize": "0.833-0.147", "capacity": "2.4-7.5", "motorPower": "75", "weight": "15600" },
+    { "model": "MBS1830", "cylinderDiameter": "1830", "cylinderLength": "3000", "rotationSpeed": "25.4", "feedSize": "≤25", "dischargeSize": "0.833-0.147", "capacity": "4.8-11.6", "motorPower": "130", "weight": "28000" },
+    { "model": "MBS2130", "cylinderDiameter": "2100", "cylinderLength": "3000", "rotationSpeed": "23.7", "feedSize": "≤25", "dischargeSize": "0.833-0.147", "capacity": "14-35", "motorPower": "155", "weight": "34000" },
+    { "model": "MBS2136", "cylinderDiameter": "2100", "cylinderLength": "3600", "rotationSpeed": "23.7", "feedSize": "≤25", "dischargeSize": "0.833-0.147", "capacity": "19-43", "motorPower": "180", "weight": "37000" },
+    { "model": "MBS2430", "cylinderDiameter": "2400", "cylinderLength": "3000", "rotationSpeed": "21", "feedSize": "≤50", "dischargeSize": "0.833-0.147", "capacity": "25-65", "motorPower": "245", "weight": "54000" },
+    { "model": "MBS2736", "cylinderDiameter": "2700", "cylinderLength": "3600", "rotationSpeed": "20.7", "feedSize": "≤50", "dischargeSize": "0.833-0.147", "capacity": "32-86", "motorPower": "400", "weight": "86000" },
+    { "model": "MBS2740", "cylinderDiameter": "2700", "cylinderLength": "4000", "rotationSpeed": "20.7", "feedSize": "≤50", "dischargeSize": "0.833-0.147", "capacity": "32-92", "motorPower": "400", "weight": "94000" },
+    { "model": "MBS3245", "cylinderDiameter": "3200", "cylinderLength": "4500", "rotationSpeed": "18", "feedSize": "≤50", "dischargeSize": "0.833-0.147", "capacity": "64-180", "motorPower": "800", "weight": "137000" }
+  ],
+  "features": [
+    {
+      "zh": "产品粒度分布均匀，过粉碎现象少",
+      "en": "Uniform particle size distribution with minimal over-grinding"
+    },
+    {
+      "zh": "适用于粗磨和中磨作业，可有效处理粒度较大的给料",
+      "en": "Suitable for coarse and medium grinding operations, effectively processing larger feed sizes"
+    },
+    {
+      "zh": "钢棒因自重作用产生较大压力，研磨效率高",
+      "en": "Steel rods generate greater pressure due to their weight, resulting in high grinding efficiency"
+    },
+    {
+      "zh": "筒体内钢棒排列有序，物料通过顺畅",
+      "en": "Orderly arrangement of steel rods inside the cylinder ensures smooth material passage"
+    },
+    {
+      "zh": "磨矿介质消耗率低，运行成本经济",
+      "en": "Low grinding media consumption rate, economical operating costs"
+    }
+  ],
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Application Areas"
+    },
+    "items": [
+      {
+        "icon": "⛏️",
+        "title": { "zh": "黑色金属矿选矿", "en": "Ferrous Metal Ore Processing" },
+        "description": { "zh": "铁矿石、锰矿石等黑色金属矿石的粗磨和中磨作业", "en": "Coarse and medium grinding of ferrous metal ores such as iron ore and manganese ore" }
+      },
+      {
+        "icon": "🪙",
+        "title": { "zh": "有色金属矿选矿", "en": "Non-ferrous Metal Ore Processing" },
+        "description": { "zh": "铜矿、铅锌矿、铝矾土等有色金属矿石的均匀研磨", "en": "Uniform grinding of non-ferrous metal ores such as copper, lead-zinc, and bauxite" }
+      },
+      {
+        "icon": "🧱",
+        "title": { "zh": "建材工业", "en": "Building Materials Industry" },
+        "description": { "zh": "水泥生产中的原料粉磨和熟料粉磨", "en": "Raw material grinding and clinker grinding in cement production" }
+      },
+      {
+        "icon": "⚗️",
+        "title": { "zh": "化工行业", "en": "Chemical Industry" },
+        "description": { "zh": "化工原料的均匀粉磨，比表面积控制精确", "en": "Uniform grinding of chemical raw materials with precise control of specific surface area" }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "wet-grid-ball-mill",
+    "dry-grid-ball-mill",
+    "overflow-ball-mill"
+  ],
+  "notes": {
+    "zh": [
+      "数据为参考值，实际参数可能因物料特性而异",
+      "可根据客户需求定制不同规格设备",
+      "建议与工程师联系获取详细技术参数"
+    ],
+    "en": [
+      "Data are reference values, actual parameters may vary depending on material characteristics",
+      "Different specifications can be customized according to customer requirements",
+      "It is recommended to contact engineers for detailed technical parameters"
+    ]
+  }
+} 

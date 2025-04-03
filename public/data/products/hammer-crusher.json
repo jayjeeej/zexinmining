@@ -1,0 +1,140 @@
+{
+  "id": "hammer-crusher",
+  "category": "preprocessing",
+  "subcategory": "crushers",
+  "model": "PCA-800*800",
+  "series": {
+    "zh": "锤式破碎机",
+    "en": "Hammer Crusher"
+  },
+  "image": "/images/products/crushers/hammer-crusher/main.jpg",
+  "capacity": {
+    "zh": "30-180 t/h",
+    "en": "30-180 t/h"
+  },
+  "feedSize": {
+    "zh": "350-500 mm",
+    "en": "350-500 mm"
+  },
+  "motorPower": {
+    "zh": "37-132 kW",
+    "en": "37-132 kW"
+  },
+  "overview": {
+    "zh": "锤式破碎机是集高效、节能于一体的现代破碎设备，专为中低硬度脆性物料设计。采用高速旋转锤头技术，提供一次成型的优质破碎效果，同时确保低能耗和稳定运行，是众多工业领域的理想破碎解决方案。",
+    "en": "The Hammer Crusher combines efficiency and energy saving in a modern crushing solution, specifically engineered for brittle materials of low to medium hardness. Utilizing high-speed rotating hammer technology, it delivers premium one-step crushing while ensuring low energy consumption and stable operation, making it an ideal crushing solution across multiple industries."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Specifications"
+    },
+    "note": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    },
+    "tableHeaders": [
+      {
+        "zh": "型号",
+        "en": "Model"
+      },
+      {
+        "zh": "最大进料尺寸",
+        "en": "Max. Feed Size",
+        "unit": "mm"
+      },
+      {
+        "zh": "闭边设置范围",
+        "en": "CSS Range",
+        "unit": "mm"
+      },
+      {
+        "zh": "处理能力",
+        "en": "Capacity Range",
+        "unit": "t/h"
+      },
+      {
+        "zh": "电动功率",
+        "en": "Motor Power",
+        "unit": "kW"
+      }
+    ],
+    "tableData": [
+      ["PCA-800*800", "350", "20-60", "30-60", "37"],
+      ["PCA-1000*1000", "400", "20-80", "50-80", "55"],
+      ["PCA-1250*1250", "450", "20-100", "80-130", "90"],
+      ["PCA-1400*1400", "500", "20-120", "120-180", "132"]
+    ]
+  },
+  "features": {
+    "zh": [
+      "超高破碎比，实现物料一次精确成型",
+      "特种合金锤头，极强耐磨性与使用寿命",
+      "简化模块化设计，快速维护与更换",
+      "创新多点破碎技术，效率提升30%",
+      "智能调节系统，适应多种物料需求",
+      "节能设计，较传统设备能耗降低25%"
+    ],
+    "en": [
+      "Ultra-high crushing ratio for one-step precise material forming",
+      "Special alloy hammer heads with exceptional wear resistance and service life",
+      "Simplified modular design for quick maintenance and replacement",
+      "Innovative multi-point crushing technology increasing efficiency by 30%",
+      "Intelligent adjustment system adapting to various material requirements",
+      "Energy-efficient design reducing consumption by 25% compared to traditional equipment"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Application Areas"
+    },
+    "items": [
+      {
+        "icon": "🏭",
+        "title": {
+          "zh": "矿山破碎",
+          "en": "Mining Crushing"
+        },
+        "description": {
+          "zh": "专为矿石高效破碎设计，特别适合中小型矿山的精细加工，提供高品质、均匀粒度的破碎产品。",
+          "en": "Designed for efficient ore crushing, particularly suitable for refined processing in small to medium mines, delivering high-quality crushed products with uniform particle size."
+        }
+      },
+      {
+        "icon": "🧱",
+        "title": {
+          "zh": "建材工业",
+          "en": "Building Materials Industry"
+        },
+        "description": {
+          "zh": "为水泥厂、砖厂提供精准破碎解决方案，改善物料性能，提高成品率，降低生产成本。",
+          "en": "Provides precise crushing solutions for cement plants and brick factories, improving material properties, increasing finished product rates, and reducing production costs."
+        }
+      },
+      {
+        "icon": "⚡",
+        "title": {
+          "zh": "电力工业",
+          "en": "Power Industry"
+        },
+        "description": {
+          "zh": "优化煤炭破碎工艺，提供一致的粒度分布，显著提高燃烧效率和发电性能。",
+          "en": "Optimizes coal crushing process, providing consistent particle size distribution that significantly improves combustion efficiency and power generation performance."
+        }
+      },
+      {
+        "icon": "♻️",
+        "title": {
+          "zh": "环保回收",
+          "en": "Environmental Recycling"
+        },
+        "description": {
+          "zh": "高效处理各类固体废弃物，为资源循环利用提供可靠技术支持，实现绿色环保生产。",
+          "en": "Efficiently processes various solid wastes, providing reliable technical support for resource recycling and enabling green production practices."
+        }
+      }
+    ]
+  },
+  "relatedProducts": ["jaw-crusher", "impact-crusher", "heavy-duty-double-roller-crusher", "double-roller-crusher", "cone-crusher"]
+} 

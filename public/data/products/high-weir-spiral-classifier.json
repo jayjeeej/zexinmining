@@ -1,0 +1,143 @@
+{
+  "id": "high-weir-spiral-classifier",
+  "nameEn": "High Weir Spiral Classifier",
+  "nameZh": "高堰式单螺旋分级机",
+  "model": "FLG系列",
+  "sandReturnCapacity": { "min": 30, "max": 11625, "unit": "t/d" },
+  "overflowCapacity": { "min": 10, "max": 890, "unit": "t/d" },
+  "motorPower": { "min": 2.2, "max": 30, "unit": "kW" },
+  "rotationSpeed": { "min": 2.5, "max": 8, "unit": "r/min" },
+  "spiralDiameter": { "min": 300, "max": 3000, "unit": "mm" },
+  "spiralLength": { "min": 3900, "max": 12500, "unit": "mm" },
+  "overview": {
+    "zh": "高堰式单螺旋分级机是一种高效矿物分级设备，适用于金属和非金属矿山的选矿流程。该设备由螺旋装置、槽体、传动装置、提升机构和溢流装置组成。高堰式结构设计保证了更高的池容量，提高了分级效率，特别适合处理细粒物料。",
+    "en": "High Weir Spiral Classifier is an efficient mineral classification equipment suitable for beneficiation processes in metallic and non-metallic mines. The device consists of spiral mechanism, tank, transmission, lifting mechanism and overflow device. The high weir design ensures greater pool capacity, enhancing classification efficiency, particularly suitable for fine particle materials."
+  },
+  "specifications": [
+    {
+      "model": "FLG-300",
+      "rotationSpeed": "7.7",
+      "sandReturnCapacity": "30~80",
+      "overflowCapacity": "10~30",
+      "spiralDiameter": "φ300",
+      "spiralLength": "3900",
+      "motorModel": "Y100L1-4",
+      "motorPower": "2.2"
+    },
+    {
+      "model": "FLG-500",
+      "rotationSpeed": "8",
+      "sandReturnCapacity": "145~260",
+      "overflowCapacity": "21~75",
+      "spiralDiameter": "φ500",
+      "spiralLength": "4390",
+      "motorModel": "Y112M-6",
+      "motorPower": "2.2"
+    },
+    {
+      "model": "FLG-750",
+      "rotationSpeed": "7.8",
+      "sandReturnCapacity": "100~445",
+      "overflowCapacity": "31~165",
+      "spiralDiameter": "φ750",
+      "spiralLength": "5500",
+      "motorModel": "Y132S-6",
+      "motorPower": "3"
+    },
+    {
+      "model": "FLG-1000",
+      "rotationSpeed": "6.7",
+      "sandReturnCapacity": "473~1026",
+      "overflowCapacity": "85",
+      "spiralDiameter": "φ1000",
+      "spiralLength": "6556",
+      "motorModel": "Y132M2-6",
+      "motorPower": "5.5"
+    },
+    {
+      "model": "FLG-1200",
+      "rotationSpeed": "5,6,7",
+      "sandReturnCapacity": "1145~1600",
+      "overflowCapacity": "150",
+      "spiralDiameter": "φ1200",
+      "spiralLength": "6500",
+      "motorModel": "Y132M2-6",
+      "motorPower": "5.5"
+    },
+    {
+      "model": "FLG-1500",
+      "rotationSpeed": "2.5,4,6",
+      "sandReturnCapacity": "1140~2730",
+      "overflowCapacity": "235",
+      "spiralDiameter": "φ1500",
+      "spiralLength": "8265",
+      "motorModel": "Y160M-6",
+      "motorPower": "7.5"
+    },
+    {
+      "model": "FLG-2000",
+      "rotationSpeed": "3.6,5.5",
+      "sandReturnCapacity": "3240~5940",
+      "overflowCapacity": "400",
+      "spiralDiameter": "φ2000",
+      "spiralLength": "8700",
+      "motorModel": "Y160L-6/4",
+      "motorPower": "11,15"
+    },
+    {
+      "model": "FLG-2400",
+      "rotationSpeed": "3.6",
+      "sandReturnCapacity": "6800",
+      "overflowCapacity": "580",
+      "spiralDiameter": "φ2400",
+      "spiralLength": "9130",
+      "motorModel": "Y200L2-6",
+      "motorPower": "22"
+    },
+    {
+      "model": "FLG-3000",
+      "rotationSpeed": "3.2",
+      "sandReturnCapacity": "11625",
+      "overflowCapacity": "890",
+      "spiralDiameter": "φ3000",
+      "spiralLength": "12500",
+      "motorModel": "Y200L-4",
+      "motorPower": "30"
+    }
+  ],
+  "features": {
+    "zh": [
+      "高堰式结构：增大池容量，提高分级精度和细粒回收率",
+      "螺旋轴承设计：采用高强度轴承，确保长时间运行稳定性",
+      "可调节溢流高度：根据物料特性灵活调整分级粒度",
+      "低速运转机制：减少设备磨损，延长使用寿命",
+      "防腐蚀材质：关键部件采用耐磨材料，适应各种矿物环境",
+      "自动化控制系统：实现生产参数的精确调节和远程监控"
+    ],
+    "en": [
+      "High Weir Structure: Increases pool capacity, improves classification precision and fine particle recovery rate",
+      "Spiral Bearing Design: Uses high-strength bearings to ensure operational stability over extended periods",
+      "Adjustable Overflow Height: Flexible adjustment of classification particle size based on material characteristics",
+      "Low-Speed Operation Mechanism: Reduces equipment wear and extends service life",
+      "Anti-corrosion Materials: Key components made of wear-resistant materials, suitable for various mineral environments",
+      "Automated Control System: Enables precise adjustment of production parameters and remote monitoring"
+    ]
+  },
+  "applications": {
+    "zh": [
+      "黑色金属矿：铁矿、锰矿、铬矿选矿",
+      "有色金属矿：铜矿、铅锌矿、金矿选矿",
+      "非金属矿：磷矿、石英砂加工",
+      "建材工业：砂石料生产线",
+      "环保工程：尾矿回收处理"
+    ],
+    "en": [
+      "Ferrous Metal Ores: Iron, manganese, and chromium ore beneficiation",
+      "Non-ferrous Metal Ores: Copper, lead-zinc, and gold ore beneficiation",
+      "Non-metallic Minerals: Phosphate ore and quartz sand processing",
+      "Building Materials Industry: Sand and gravel production lines",
+      "Environmental Engineering: Tailings recovery and treatment"
+    ]
+  },
+  "relatedProducts": ["double-spiral-classifier"]
+} 

@@ -1,0 +1,170 @@
+{
+  "id": "synchronous-counter-directional-jig",
+  "category": "beneficiation",
+  "subcategory": "gravity-separation",
+  "model": "SCDJM-4",
+  "series": {
+    "zh": "4室复合双动跳汰机",
+    "en": "4-Chamber Composite Double-Motion Jig"
+  },
+  "image": "/images/products/gravity-separation/synchronous-counter-directional-jig.jpg",
+  "capacity": {
+    "zh": "40-80 t/h",
+    "en": "40-80 t/h"
+  },
+  "feedSize": {
+    "zh": "0-50 mm",
+    "en": "0-50 mm"
+  },
+  "motorPower": {
+    "zh": "30 kW",
+    "en": "30 kW"
+  },
+  "overview": {
+    "zh": "4室复合双动跳汰机是一种高效的重力选矿设备，采用先进的复合运动技术，能够实现矿物颗粒的高效分选。设备具有分选效率高、处理能力大、操作简便等特点，适用于多种矿物的重力选别。",
+    "en": "The 4-Chamber Composite Double-Motion Jig is a high-efficiency gravity separation equipment that utilizes advanced composite motion technology to achieve efficient separation of mineral particles. The equipment features high separation efficiency, large processing capacity, and simple operation, suitable for gravity separation of various minerals."
+  },
+  "specifications": {
+    "title": {
+      "zh": "4室复合双动跳汰机技术参数",
+      "en": "4-Chamber Composite Double-Motion Jig Specifications"
+    },
+    "note": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    },
+    "tableHeaders": [
+      {
+        "zh": "型号",
+        "en": "Model"
+      },
+      {
+        "zh": "冲程 / 调整范围",
+        "en": "Stroke / Adjustment Range",
+        "unit": "mm"
+      },
+      {
+        "zh": "跳汰室数",
+        "en": "Jigging Chamber Number"
+      },
+      {
+        "zh": "截面型式",
+        "en": "Section Type"
+      },
+      {
+        "zh": "跳汰室面积",
+        "en": "Jigging Chamber Area",
+        "unit": "m²"
+      },
+      {
+        "zh": "冲次范围",
+        "en": "Frequency Range",
+        "unit": "cycles/min"
+      },
+      {
+        "zh": "进料尺寸",
+        "en": "Feed Size",
+        "unit": "mm"
+      },
+      {
+        "zh": "处理能力",
+        "en": "Processing Capacity",
+        "unit": "t/h"
+      },
+      {
+        "zh": "电机功率",
+        "en": "Motor Power",
+        "unit": "kW"
+      },
+      {
+        "zh": "耗水量",
+        "en": "Water Consumption",
+        "unit": "m³/h"
+      },
+      {
+        "zh": "重量",
+        "en": "Weight",
+        "unit": "t"
+      }
+    ],
+    "tableData": [
+      ["SCDJM-4", "0-150", "4", {"zh": "矩形", "en": "Rectangular"}, "8", "60-150", "0-50", "40-80", "30", "200-500", "8.5"]
+    ]
+  },
+  "features": {
+    "zh": [
+      "复合运动机构设计，提供多种运动模式满足不同矿物分选需求",
+      "高精度跳汰分选，实现高效分离不同密度的矿物",
+      "智能调整系统，可灵活调整冲程和冲次",
+      "坚固耐用的结构设计，确保长期稳定运行",
+      "低能耗高效率，节约选矿成本"
+    ],
+    "en": [
+      "Composite motion mechanism design, providing multiple motion modes to meet different mineral separation requirements",
+      "High-precision jigging separation for efficient separation of minerals with different densities",
+      "Intelligent adjustment system for flexible stroke and frequency control",
+      "Robust and durable structure design ensuring long-term stable operation",
+      "Low energy consumption and high efficiency, saving mineral processing costs"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Application Areas"
+    },
+    "items": [
+      {
+        "icon": "⛏️",
+        "title": {
+          "zh": "煤炭工业",
+          "en": "Coal Industry"
+        },
+        "description": {
+          "zh": "高效分选煤矸石，提高煤炭品质，减少环境污染。",
+          "en": "Efficiently separates coal from gangue, improves coal quality, and reduces environmental pollution."
+        }
+      },
+      {
+        "icon": "🔨",
+        "title": {
+          "zh": "有色金属",
+          "en": "Non-ferrous Metals"
+        },
+        "description": {
+          "zh": "分选铜、铅、锌等有色金属矿物，提高选矿回收率和精矿品位。",
+          "en": "Separates copper, lead, zinc and other non-ferrous metal minerals, improving ore recovery rate and concentrate grade."
+        }
+      },
+      {
+        "icon": "💎",
+        "title": {
+          "zh": "贵金属选矿",
+          "en": "Precious Metals"
+        },
+        "description": {
+          "zh": "高精度分选金、银等贵金属矿物，提高回收率和经济效益。",
+          "en": "High-precision separation of gold, silver and other precious metal minerals, improving recovery rate and economic benefits."
+        }
+      },
+      {
+        "icon": "🧱",
+        "title": {
+          "zh": "非金属矿物",
+          "en": "Non-metallic Minerals"
+        },
+        "description": {
+          "zh": "处理各类非金属矿物，如石英、长石等，提高产品纯度。",
+          "en": "Processes various non-metallic minerals such as quartz and feldspar, improving product purity."
+        }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "synchronous-counter-directional-jig-small", 
+    "sawtooth-wave-jig", 
+    "carpet-hooking-machine",
+    "shaking-table",
+    "spiral-chute",
+    "centrifugal-separator"
+  ]
+} 

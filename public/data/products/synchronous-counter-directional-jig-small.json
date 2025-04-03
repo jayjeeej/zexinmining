@@ -1,0 +1,159 @@
+{
+  "id": "synchronous-counter-directional-jig-small",
+  "category": "beneficiation",
+  "subcategory": "gravity-separation",
+  "model": "SCDJM-2",
+  "series": {
+    "zh": "2室复合双动跳汰机",
+    "en": "2-Chamber Composite Double-Motion Jig"
+  },
+  "image": "/images/products/gravity-separation/synchronous-counter-directional-jig-small.jpg",
+  "capacity": {
+    "zh": "15-45 t/h",
+    "en": "15-45 t/h"
+  },
+  "feedSize": {
+    "zh": "0-50 mm",
+    "en": "0-50 mm"
+  },
+  "motorPower": {
+    "zh": "22 kW",
+    "en": "22 kW"
+  },
+  "overview": {
+    "zh": "2室复合双动跳汰机适合中小规模选矿作业，采用与大型设备相同的复合运动技术，但尺寸更紧凑，电耗更低。该设备特别适合小型矿山和实验室应用，具有安装简便、操作灵活、维护成本低等优势。",
+    "en": "The 2-Chamber Composite Double-Motion Jig is suitable for medium and small-scale mineral processing operations, using the same composite motion technology as larger equipment but with a more compact size and lower power consumption. This equipment is particularly suitable for small mines and laboratory applications, featuring easy installation, flexible operation, and low maintenance costs."
+  },
+  "specifications": {
+    "title": {
+      "zh": "2室复合双动跳汰机技术参数",
+      "en": "2-Chamber Composite Double-Motion Jig Specifications"
+    },
+    "note": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    },
+    "tableHeaders": [
+      {
+        "zh": "型号",
+        "en": "Model"
+      },
+      {
+        "zh": "冲程 / 调整范围",
+        "en": "Stroke / Adjustment Range",
+        "unit": "mm"
+      },
+      {
+        "zh": "跳汰室数",
+        "en": "Jigging Chamber Number"
+      },
+      {
+        "zh": "截面型式",
+        "en": "Section Type"
+      },
+      {
+        "zh": "跳汰室面积",
+        "en": "Jigging Chamber Area",
+        "unit": "m²"
+      },
+      {
+        "zh": "冲次范围",
+        "en": "Frequency Range",
+        "unit": "cycles/min"
+      },
+      {
+        "zh": "进料尺寸",
+        "en": "Feed Size",
+        "unit": "mm"
+      },
+      {
+        "zh": "处理能力",
+        "en": "Processing Capacity",
+        "unit": "t/h"
+      },
+      {
+        "zh": "电机功率",
+        "en": "Motor Power",
+        "unit": "kW"
+      },
+      {
+        "zh": "耗水量",
+        "en": "Water Consumption",
+        "unit": "m³/h"
+      },
+      {
+        "zh": "重量",
+        "en": "Weight",
+        "unit": "t"
+      }
+    ],
+    "tableData": [
+      ["SCDJM-2", "0-150", "2", {"zh": "矩形", "en": "Rectangular"}, "4", "60-150", "0-50", "15-45", "22", "150-300", "4.5"]
+    ]
+  },
+  "features": {
+    "zh": [
+      "紧凑型设计，适用于空间有限的中小型选矿厂",
+      "低能耗运行，节约生产成本",
+      "相比大型设备，保持相同的分选效率",
+      "安装维护简便，操作灵活",
+      "特别适用于小批量精细选矿"
+    ],
+    "en": [
+      "Compact design suitable for space-limited small and medium-sized mineral processing plants",
+      "Low energy consumption operation, saving production costs",
+      "Maintains the same separation efficiency as larger equipment",
+      "Easy installation and maintenance, flexible operation",
+      "Especially suitable for small-batch fine mineral processing"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Application Areas"
+    },
+    "items": [
+      {
+        "icon": "⛏️",
+        "title": {
+          "zh": "小型煤矿",
+          "en": "Small Coal Mines"
+        },
+        "description": {
+          "zh": "适用于小型煤矿的煤炭洗选，有效去除矸石和杂质。",
+          "en": "Suitable for coal washing in small coal mines, effectively removing gangue and impurities."
+        }
+      },
+      {
+        "icon": "🔬",
+        "title": {
+          "zh": "实验室应用",
+          "en": "Laboratory Applications"
+        },
+        "description": {
+          "zh": "提供矿物分选的实验室规模解决方案，用于科研和工艺优化。",
+          "en": "Provides laboratory-scale solutions for mineral separation, used for scientific research and process optimization."
+        }
+      },
+      {
+        "icon": "💎",
+        "title": {
+          "zh": "贵金属回收",
+          "en": "Precious Metal Recovery"
+        },
+        "description": {
+          "zh": "适用于小规模金、锡等贵金属的重选回收，提高资源利用率。",
+          "en": "Suitable for small-scale gravity recovery of gold, tin and other precious metals, improving resource utilization."
+        }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "synchronous-counter-directional-jig", 
+    "sawtooth-wave-jig", 
+    "shaking-table",
+    "carpet-hooking-machine",
+    "spiral-chute",
+    "centrifugal-separator"
+  ]
+} 

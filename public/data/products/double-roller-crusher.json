@@ -1,0 +1,204 @@
+{
+  "id": "double-roller-crusher",
+  "category": "preprocessing",
+  "subcategory": "crushers",
+  "model": "2PGY2012",
+  "series": {
+    "zh": "双辊破碎机",
+    "en": "Double Roller Crusher"
+  },
+  "imagePath": "/images/products/crushers/double-roller-crusher/main.jpg",
+  "capacity": {
+    "min": 5,
+    "max": 600,
+    "unit": "t/h"
+  },
+  "maxFeedSize": {
+    "min": 25,
+    "max": 120,
+    "unit": "mm"
+  },
+  "motorPower": {
+    "min": 11,
+    "max": 630,
+    "unit": "kW"
+  },
+  "overview": {
+    "zh": "双辊破碎机是一种中细碎设备，适用于中低硬度物料的破碎。采用双辊挤压设计，结构简单，操作方便，生产效率高。产品具有排料粒度均匀、过粉碎率低的特点，广泛应用于多种工业领域。",
+    "en": "Double Roller Crusher is a medium and fine crushing equipment suitable for materials of medium-low hardness. Using dual roller compression design with simple structure, easy operation and high production efficiency. Features uniform discharge size and low over-crushing rate, widely used across various industrial sectors."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Specifications"
+    },
+    "columns": [
+      { "key": "model", "title": { "zh": "型号", "en": "Model" }, "width": "15%" },
+      { "key": "rollerDiameter", "title": { "zh": "辊直径", "en": "Roller Diameter" }, "unit": "mm", "width": "15%" },
+      { "key": "rollerLength", "title": { "zh": "辊长", "en": "Roller Length" }, "unit": "mm", "width": "15%" },
+      { "key": "maxFeedSize", "title": { "zh": "最大进料尺寸", "en": "Max Feed Size" }, "unit": "mm", "width": "15%" },
+      { "key": "capacity", "title": { "zh": "处理能力", "en": "Capacity" }, "unit": "t/h", "width": "20%" },
+      { "key": "power", "title": { "zh": "电机功率", "en": "Motor Power" }, "unit": "kW", "width": "10%" },
+      { "key": "weight", "title": { "zh": "重量", "en": "Weight" }, "unit": "t", "width": "10%" }
+    ],
+    "data": [
+      {
+        "model": "2PGY0425", 
+        "rollerDiameter": "400",
+        "rollerLength": "250",
+        "maxFeedSize": 25,
+        "capacity": "5-10",
+        "power": "11",
+        "weight": "0.8"
+      },
+      {
+        "model": "2PGY0735", 
+        "rollerDiameter": "700",
+        "rollerLength": "350",
+        "maxFeedSize": 40,
+        "capacity": "20-30",
+        "power": "30",
+        "weight": "1.6"
+      },
+      {
+        "model": "2PGY0850", 
+        "rollerDiameter": "800",
+        "rollerLength": "500",
+        "maxFeedSize": 60,
+        "capacity": "30-45",
+        "power": "55",
+        "weight": "3.5"
+      },
+      {
+        "model": "2PGY1000", 
+        "rollerDiameter": "1000",
+        "rollerLength": "600",
+        "maxFeedSize": 80,
+        "capacity": "40-70",
+        "power": "75",
+        "weight": "5.8"
+      },
+      {
+        "model": "2PGY1200", 
+        "rollerDiameter": "1200",
+        "rollerLength": "750",
+        "maxFeedSize": 100,
+        "capacity": "60-120",
+        "power": "160",
+        "weight": "8.5"
+      },
+      {
+        "model": "2PGY1500", 
+        "rollerDiameter": "1500",
+        "rollerLength": "1000",
+        "maxFeedSize": 120,
+        "capacity": "120-250",
+        "power": "315",
+        "weight": "15"
+      },
+      {
+        "model": "2PGY2012", 
+        "rollerDiameter": "2000",
+        "rollerLength": "1200",
+        "maxFeedSize": 120,
+        "capacity": "170-600",
+        "power": "630",
+        "weight": "35"
+      }
+    ],
+    "notes": [
+      {
+        "content": {
+          "zh": "可按照客户需求进行定制",
+          "en": "Can be customized according to customer requirements"
+        }
+      }
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Application Areas"
+    },
+    "items": [
+      {
+        "icon": "🏗️",
+        "title": {
+          "zh": "建筑材料",
+          "en": "Construction Materials"
+        },
+        "description": {
+          "zh": "砂石生产线中的中细碎环节，加工石灰石、河卵石等物料。",
+          "en": "Medium and fine crushing in sand production lines for limestone and river pebbles."
+        }
+      },
+      {
+        "icon": "⛏️",
+        "title": {
+          "zh": "矿山行业",
+          "en": "Mining Industry"
+        },
+        "description": {
+          "zh": "处理中硬度以下矿石，产出粒度均匀的成品。",
+          "en": "Processing medium-hardness ores with uniform output size."
+        }
+      },
+      {
+        "icon": "🏭",
+        "title": {
+          "zh": "冶金工业",
+          "en": "Metallurgical Industry"
+        },
+        "description": {
+          "zh": "破碎煤炭、干黏土等片状结构物料。",
+          "en": "Crushing coal, dry clay and other lamellar materials."
+        }
+      },
+      {
+        "icon": "🧱",
+        "title": {
+          "zh": "耐火材料",
+          "en": "Refractory Materials"
+        },
+        "description": {
+          "zh": "耐火材料和陶瓷原料的细碎加工。",
+          "en": "Fine crushing of refractory and ceramic raw materials."
+        }
+      }
+    ]
+  },
+  "features": {
+    "zh": [
+      "采用耐磨材料制造，使用寿命长",
+      "液压调节系统，方便调整出料粒度",
+      "自动过载保护装置，确保安全运行",
+      "良好的密封设计，减少粉尘污染",
+      "双电机驱动，运行稳定可靠"
+    ],
+    "en": [
+      "Made of wear-resistant materials for long service life",
+      "Hydraulic adjustment system for easy control of discharge size",
+      "Automatic overload protection for safe operation",
+      "Good sealing design to reduce dust pollution",
+      "Dual motor drive for stable and reliable operation"
+    ]
+  },
+  "seo": {
+    "title": {
+      "zh": "双辊破碎机 2PGY系列 - 泽鑫矿山设备 | 高效中细碎设备",
+      "en": "Double Roller Crusher 2PGY Series - Zexin Mining Equipment | Efficient Medium and Fine Crushing Equipment"
+    },
+    "description": {
+      "zh": "2PGY系列双辊破碎机是一种高效节能的中细碎设备，具有结构简单、破碎比大、产品粒度均匀、能耗低等特点，广泛应用于矿山、冶金、建材等行业。",
+      "en": "The 2PGY series double roller crusher is an efficient and energy-saving medium and fine crushing equipment with simple structure, large crushing ratio, uniform product size, low energy consumption and other characteristics, widely used in mining, metallurgy, building materials and other industries."
+    },
+    "keywords": {
+      "zh": "双辊破碎机,2PGY系列,中细碎,矿山设备,破碎机,泽鑫矿山,中碎细碎设备",
+      "en": "double roller crusher,2PGY series,medium and fine crushing,mining equipment,crusher,Zexin Mining,medium and fine crushing equipment"
+    }
+  },
+  "warranty": {
+    "zh": "泽鑫矿山设备为所有双辊破碎机提供12个月的标准保修期，并提供延长保修服务选项。我们的全球售后团队确保及时响应和解决设备问题。",
+    "en": "Zexin Mining Equipment offers a standard 12-month warranty for all double roller crushers, with extended warranty options available. Our global after-sales team ensures timely response and resolution of equipment issues."
+  }
+} 

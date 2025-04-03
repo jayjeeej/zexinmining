@@ -1,0 +1,183 @@
+{
+  "id": "four-roller-variable-frequency-electrostatic-separator",
+  "category": "beneficiation",
+  "subcategory": "electrostatic-separation",
+  "model": "DXJ",
+  "series": {
+    "zh": "四辊变频高压电选机",
+    "en": "Four-Roller Variable Frequency High-Voltage Electrostatic Separator"
+  },
+  "image": "/images/products/electrostatic-separation/four-roller-variable-frequency-electrostatic-separator.jpg",
+  "capacity": {
+    "zh": "5-8 t/h",
+    "en": "5-8 t/h"
+  },
+  "feedSize": {
+    "zh": "0.1-3 mm",
+    "en": "0.1-3 mm"
+  },
+  "motorPower": {
+    "zh": "1.1 kW",
+    "en": "1.1 kW"
+  },
+  "rollerNumber": {
+    "zh": "4个",
+    "en": "4 rollers"
+  },
+  "rollerDiameter": {
+    "zh": "180 mm",
+    "en": "180 mm"
+  },
+  "rollerLength": {
+    "zh": "2000 mm",
+    "en": "2000 mm"
+  },
+  "rotationSpeed": {
+    "zh": "0-1450 r/min",
+    "en": "0-1450 r/min"
+  },
+  "dimensions": {
+    "zh": "3010×1480×3730 mm",
+    "en": "3010×1480×3730 mm"
+  },
+  "weight": {
+    "zh": "625 kg",
+    "en": "625 kg"
+  },
+  "overview": {
+    "zh": "四辊变频高压电选机是一种利用物料导电性差异进行分选的高效设备。该设备采用四辊设计，配备变频调速系统，可精确控制滚筒转速，适应不同物料的分选需求。主要用于分离导电性差异明显的非金属矿物，如石英砂、长石、锆英砂、金红石、钽铌矿等。设备采用高压电场原理，当物料进入电场后，导电性好的矿物迅速放电并被吸附在滚筒上，而导电性差的矿物则直接抛落，从而实现高效分选。设备结构紧凑，操作简便，分选效率高，是非金属矿物分选的理想设备。",
+    "en": "The Four-Roller Variable Frequency High-Voltage Electrostatic Separator is an efficient device that utilizes the difference in conductivity of materials for separation. The equipment features a four-roller design with a variable frequency speed control system, allowing precise control of roller rotation speed to adapt to different material separation requirements. It is mainly used to separate non-metallic minerals with significant conductivity differences, such as quartz sand, feldspar, zircon sand, rutile, tantalum-niobium ore, etc. The device works on the high-voltage electric field principle; when materials enter the electric field, good conductive minerals quickly discharge and adhere to the roller, while poorly conductive minerals fall directly, achieving efficient separation. With a compact structure, easy operation, and high separation efficiency, it is an ideal equipment for non-metallic mineral separation."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Parameters"
+    },
+    "tableHeaders": [
+      {
+        "zh": "参数",
+        "en": "Parameter",
+        "unit": ""
+      },
+      {
+        "zh": "滚筒数",
+        "en": "No. of Roller",
+        "unit": ""
+      },
+      {
+        "zh": "滚筒直径",
+        "en": "Diameter of Roller",
+        "unit": "mm"
+      },
+      {
+        "zh": "滚筒工作长度",
+        "en": "Length of Roller",
+        "unit": "mm"
+      },
+      {
+        "zh": "电机功率",
+        "en": "Motor Power",
+        "unit": "kW"
+      },
+      {
+        "zh": "处理量",
+        "en": "Working Capacity",
+        "unit": "t/h"
+      },
+      {
+        "zh": "主机重量",
+        "en": "Weight",
+        "unit": "t"
+      },
+      {
+        "zh": "外型尺寸",
+        "en": "Dimensions(L×W×H)",
+        "unit": "mm"
+      }
+    ],
+    "tableData": [
+      [{"zh": "4个", "en": "4"}, "180mm", "2000mm", "1.1", "5-8", "2.6", "3010×1480×3730"]
+    ],
+    "note": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    }
+  },
+  "features": {
+    "zh": [
+      "四辊设计，处理能力大，分选精度高",
+      "变频调速系统，可根据物料性质精确调节滚筒转速",
+      "高压电场强度可调，适应不同物料的分选需求",
+      "自动除尘系统，保证分选效果稳定",
+      "设备结构紧凑，占地面积小，安装维护方便",
+      "分选效率高，产品纯度好，回收率高"
+    ],
+    "en": [
+      "Four-roller design with high processing capacity and separation precision",
+      "Variable frequency speed control system for precise roller speed adjustment according to material properties",
+      "Adjustable high-voltage electric field strength to adapt to different material separation requirements",
+      "Automatic dust removal system ensuring stable separation effect",
+      "Compact equipment structure, small footprint, easy installation and maintenance",
+      "High separation efficiency, good product purity, and high recovery rate"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Applications"
+    },
+    "items": [
+      {
+        "icon": "mineral",
+        "title": {
+          "zh": "石英砂提纯",
+          "en": "Quartz Sand Purification"
+        },
+        "description": {
+          "zh": "用于高纯度石英砂的生产，去除铁、钛等杂质",
+          "en": "Used in the production of high-purity quartz sand, removing impurities such as iron and titanium"
+        }
+      },
+      {
+        "icon": "mineral",
+        "title": {
+          "zh": "长石选别",
+          "en": "Feldspar Separation"
+        },
+        "description": {
+          "zh": "用于长石与石英的分离，提高长石品位",
+          "en": "Used for the separation of feldspar from quartz, improving feldspar grade"
+        }
+      },
+      {
+        "icon": "mineral",
+        "title": {
+          "zh": "稀有金属矿",
+          "en": "Rare Metal Ores"
+        },
+        "description": {
+          "zh": "用于钽铌矿、锆英砂、金红石等稀有金属矿的选别",
+          "en": "Used for the separation of rare metal ores such as tantalum-niobium ore, zircon sand, rutile, etc."
+        }
+      },
+      {
+        "icon": "recycle",
+        "title": {
+          "zh": "废料回收",
+          "en": "Waste Recycling"
+        },
+        "description": {
+          "zh": "用于电子废料、废塑料等的分选回收",
+          "en": "Used for sorting and recycling electronic waste, waste plastics, etc."
+        }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "plate-type-high-intensity-wet-magnetic-separator",
+    "roller-type-high-intensity-wet-magnetic-separator",
+    "permanent-magnetic-drum-separator",
+    "double-roller-permanent-magnetic-zircon-separator",
+    "three-disc-belt-magnetic-separator"
+  ]
+} 

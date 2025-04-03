@@ -1,0 +1,150 @@
+{
+  "id": "impact-crusher",
+  "category": "preprocessing",
+  "subcategory": "crushers",
+  "model": "PF-1010-1",
+  "series": {
+    "zh": "反式破碎机",
+    "en": "Impact Crusher"
+  },
+  "image": "/images/products/crushers/impact-crusher/main.jpg",
+  "capacity": {
+    "zh": "30-180 t/h",
+    "en": "30-180 t/h"
+  },
+  "feedSize": {
+    "zh": "250-400 mm",
+    "en": "250-400 mm"
+  },
+  "motorPower": {
+    "zh": "75-160 kW",
+    "en": "75-160 kW"
+  },
+  "overview": {
+    "zh": "反式破碎机是中细碎行业的性能先锋，专为处理中硬度矿石而设计。采用独特的反击破碎技术，实现优异的破碎比和粒形控制，使其成为矿山、水泥和建材工业中不可或缺的高效破碎设备。",
+    "en": "The Impact Crusher is a performance pioneer in medium and fine crushing, specifically designed for processing medium-hard ores. With its unique impact crushing technology, it achieves exceptional crushing ratios and particle shape control, making it an indispensable high-efficiency crushing equipment in mining, cement and building materials industries."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Specifications"
+    },
+    "note": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    },
+    "tableHeaders": [
+      {
+        "zh": "型号",
+        "en": "Model"
+      },
+      {
+        "zh": "转子直径",
+        "en": "Rotor Diameter",
+        "unit": "mm"
+      },
+      {
+        "zh": "转子长度",
+        "en": "Rotor Length",
+        "unit": "mm"
+      },
+      {
+        "zh": "最大进料粒度",
+        "en": "Max. Feed Size",
+        "unit": "mm"
+      },
+      {
+        "zh": "生产量",
+        "en": "Production Capacity",
+        "unit": "t/h"
+      },
+      {
+        "zh": "电动功率",
+        "en": "Electric Power",
+        "unit": "kW"
+      },
+      {
+        "zh": "重量",
+        "en": "Weight",
+        "unit": "ton"
+      }
+    ],
+    "tableData": [
+      ["PF-1010-1", "Φ1000", "1000", "250", "30-80", "75", "11.6"],
+      ["PF-1210", "Φ1200", "1000", "300", "40-90", "90-132", "14.5"],
+      ["PF-1214", "Φ1200", "1400", "300", "60-130", "132", "17.5"],
+      ["PF-1315", "Φ1300", "1500", "400", "110-180", "160", "21.5"]
+    ]
+  },
+  "features": {
+    "zh": [
+      "特硬耐磨材料，使用寿命延长50%",
+      "优化紧凑结构设计，占地减少30%",
+      "专利反击板技术，产品立方度提升40%",
+      "快速维护系统，停机时间缩短60%",
+      "智能物料适应系统，处理范围扩大50%",
+      "精确转子平衡技术，能效提高35%"
+    ],
+    "en": [
+      "Extra-hard wear-resistant materials extending service life by 50%",
+      "Optimized compact design reducing footprint by 30%",
+      "Patented impact plate technology improving product cubicity by 40%",
+      "Quick maintenance system reducing downtime by 60%",
+      "Intelligent material adaptation system expanding processing range by 50%",
+      "Precise rotor balancing technology improving energy efficiency by 35%"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Application Areas"
+    },
+    "items": [
+      {
+        "icon": "🏗️",
+        "title": {
+          "zh": "矿山行业",
+          "en": "Mining Industry"
+        },
+        "description": {
+          "zh": "为各类硬质矿石提供精准破碎解决方案，优化粒度分布，满足后续选矿和精加工需求。",
+          "en": "Provides precise crushing solutions for various hard ores, optimizing particle size distribution to meet subsequent mineral processing and refinement requirements."
+        }
+      },
+      {
+        "icon": "🧱",
+        "title": {
+          "zh": "建材行业",
+          "en": "Building Materials"
+        },
+        "description": {
+          "zh": "生产高品质建筑骨料，立方体成型率高，满足高等级道路、桥梁和建筑工程标准。",
+          "en": "Produces high-quality construction aggregates with high cubic formation rate, meeting standards for high-grade roads, bridges and building engineering."
+        }
+      },
+      {
+        "icon": "🏭",
+        "title": {
+          "zh": "冶金行业",
+          "en": "Metallurgical Industry"
+        },
+        "description": {
+          "zh": "增强冶金矿石的破碎效率和品质控制，为冶炼工艺提供优质均匀的原料支持。",
+          "en": "Enhances the crushing efficiency and quality control of metallurgical ores, providing high-quality uniform raw material support for smelting processes."
+        }
+      },
+      {
+        "icon": "🧪",
+        "title": {
+          "zh": "化工行业",
+          "en": "Chemical Industry"
+        },
+        "description": {
+          "zh": "精确控制化工原料的粒度和形状，提升后续化学反应效率和产品质量。",
+          "en": "Precisely controls the particle size and shape of chemical raw materials, improving subsequent chemical reaction efficiency and product quality."
+        }
+      }
+    ]
+  },
+  "relatedProducts": ["jaw-crusher", "heavy-duty-double-roller-crusher", "double-roller-crusher", "cone-crusher", "hammer-crusher"]
+} 

@@ -1,0 +1,147 @@
+{
+  "id": "spiral-chute",
+  "category": "beneficiation",
+  "subcategory": "gravity-separation",
+  "model": "5LL-1500",
+  "series": {
+    "zh": "玻璃钢螺旋溜槽",
+    "en": "Glass Fiber Spiral Chute"
+  },
+  "image": "/images/products/gravity-separation/spiral-chute.jpg",
+  "capacity": {
+    "zh": "1.5-10 t/h",
+    "en": "1.5-10 t/h"
+  },
+  "feedSize": {
+    "zh": "0.02-2.0 mm",
+    "en": "0.02-2.0 mm"
+  },
+  "motorPower": {
+    "zh": "无动力",
+    "en": "No Power"
+  },
+  "overview": {
+    "zh": "玻璃钢螺旋溜槽是一种高效、无动力的重力选矿设备，利用离心力、重力和水流的共同作用实现矿物分选。设备由玻璃钢材料制成，具有耐腐蚀、重量轻、使用寿命长等优点，广泛应用于黑色、有色和稀有金属的选矿以及煤炭的洗选过程。",
+    "en": "The Glass Fiber Spiral Chute is an efficient, non-powered gravity separation equipment that utilizes the combined effects of centrifugal force, gravity, and water flow to achieve mineral separation. Made of fiberglass material, it offers advantages such as corrosion resistance, light weight, and long service life, widely used in the beneficiation of ferrous, non-ferrous and rare metals, as well as coal washing processes."
+  },
+  "specifications": {
+    "title": {
+      "zh": "玻璃钢螺旋溜槽主要技术参数表",
+      "en": "Technical Parameters of Glass Fiber Spiral Chute"
+    },
+    "tableHeaders": [
+      {
+        "zh": "型号",
+        "en": "Model",
+        "unit": ""
+      },
+      {
+        "zh": "外径",
+        "en": "Outer Diameter",
+        "unit": "mm"
+      },
+      {
+        "zh": "高度",
+        "en": "Height",
+        "unit": "mm"
+      },
+      {
+        "zh": "螺旋圈数",
+        "en": "Spiral Turns",
+        "unit": ""
+      },
+      {
+        "zh": "进料尺寸",
+        "en": "Feed Size",
+        "unit": "mm"
+      },
+      {
+        "zh": "处理能力",
+        "en": "Processing Capacity",
+        "unit": "t/h"
+      },
+      {
+        "zh": "给料浓度",
+        "en": "Feed Concentration",
+        "unit": "%"
+      }
+    ],
+    "tableData": [
+      ["5LL-600", "600", "2200", "5", "0.3-0.02", "1.5-2", "25-35"],
+      ["5LL-900", "900", "2800", "5", "0.3-0.045", "3-5", "25-35"],
+      ["5LL-1200", "1200", "3500", "5", "0.3-1.2", "3-8", "25-35"],
+      ["5LL-1500", "1500", "4200", "5", "0.3-2.0", "4-10", "25-35"]
+    ],
+    "note": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    }
+  },
+  "features": {
+    "zh": [
+      "无动力，运行成本低",
+      "处理量大，结构紧凑",
+      "分选精度高，回收率优异",
+      "防腐蚀，使用寿命长",
+      "维护简单，操作方便",
+      "环保节能，无污染"
+    ],
+    "en": [
+      "No power required, low operating cost",
+      "High capacity with compact structure",
+      "High separation precision and excellent recovery rate",
+      "Corrosion resistant with long service life",
+      "Simple maintenance and easy operation",
+      "Eco-friendly and energy-saving, no pollution"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Applications"
+    },
+    "items": [
+      {
+        "icon": "metal-ore",
+        "title": {
+          "zh": "金属矿物",
+          "en": "Metal Minerals"
+        },
+        "description": {
+          "zh": "选别黑钨矿、锡石、金矿、铁矿、钛铁矿、铬铁矿等",
+          "en": "Separation of wolframite, cassiterite, gold ore, iron ore, ilmenite, chromite, etc."
+        }
+      },
+      {
+        "icon": "non-metal",
+        "title": {
+          "zh": "非金属矿物",
+          "en": "Non-metal Minerals"
+        },
+        "description": {
+          "zh": "石英、长石、云母、煤炭等非金属矿物的选别",
+          "en": "Separation of quartz, feldspar, mica, coal and other non-metallic minerals"
+        }
+      },
+      {
+        "icon": "mining",
+        "title": {
+          "zh": "岩金回收",
+          "en": "Placer Gold Recovery"
+        },
+        "description": {
+          "zh": "适用于岩金矿及砂金矿的重选回收",
+          "en": "Suitable for gravity recovery of rock gold and placer gold"
+        }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "shaking-table",
+    "carpet-hooking-machine",
+    "centrifugal-separator",
+    "synchronous-counter-directional-jig",
+    "synchronous-counter-directional-jig-small",
+    "sawtooth-wave-jig"
+  ]
+} 

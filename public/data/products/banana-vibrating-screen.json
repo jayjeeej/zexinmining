@@ -1,0 +1,155 @@
+{
+  "id": "banana-vibrating-screen",
+  "model": "BXS2460",
+  "series": {
+    "zh": "香蕉振动筛",
+    "en": "Banana Vibrating Screen"
+  },
+  "imagePath": "/images/products/screens/banana-vibrating-screen.jpg",
+  "capacity": {
+    "min": 60,
+    "max": 600,
+    "unit": "m³/h"
+  },
+  "motorPower": {
+    "min": 11,
+    "max": 45,
+    "unit": "kW"
+  },
+  "aperture": {
+    "min": 5,
+    "max": 80,
+    "unit": "mm"
+  },
+  "overview": {
+    "zh": "香蕉振动筛采用多段式弧形筛面，入料端倾角30-45°，出料端0-5°。处理能力60-600m³/h，筛面面积1.8-3.6m²，适用于5-80mm物料。差动式激振器确保高含泥量湿物料顺畅筛分，适用于高难度选矿作业。",
+    "en": "Banana Vibrating Screen features multi-section arc design with 30-45° feed end and 0-5° discharge end inclination. Capacity 60-600m³/h, screen area 1.8-3.6m², for 5-80mm particles. Differential exciter ensures smooth screening of wet materials with high clay content, ideal for challenging mineral processing."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Specifications"
+    },
+    "columns": [
+      {
+        "key": "model",
+        "zh": "型号",
+        "en": "Model"
+      },
+      {
+        "key": "screenSize",
+        "zh": "筛面尺寸 (m×m)",
+        "en": "Screen Size (m×m)"
+      },
+      {
+        "key": "layers",
+        "zh": "层数",
+        "en": "Layers"
+      },
+      {
+        "key": "aperture",
+        "zh": "筛孔尺寸 (mm)",
+        "en": "Aperture Size (mm)"
+      },
+      {
+        "key": "capacity",
+        "zh": "处理能力 (t/h)",
+        "en": "Capacity (t/h)"
+      },
+      {
+        "key": "power",
+        "zh": "电机功率 (kW)",
+        "en": "Motor Power (kW)"
+      },
+      {
+        "key": "weight",
+        "zh": "设备重量 (t)",
+        "en": "Weight (t)"
+      }
+    ],
+    "data": [
+      {
+        "model": "BXS1836",
+        "screenSize": "1.8×3.6",
+        "layers": "2-3",
+        "aperture": "5-80",
+        "capacity": "60-180",
+        "power": "11",
+        "weight": "5.2"
+      },
+      {
+        "model": "BXS2048",
+        "screenSize": "2.0×4.8",
+        "layers": "2-3",
+        "aperture": "5-80",
+        "capacity": "80-240",
+        "power": "15",
+        "weight": "7.5"
+      },
+      {
+        "model": "BXS2460",
+        "screenSize": "2.4×6.0",
+        "layers": "2-3",
+        "aperture": "5-80",
+        "capacity": "100-300",
+        "power": "22",
+        "weight": "9.8"
+      },
+      {
+        "model": "BXS3060",
+        "screenSize": "3.0×6.0",
+        "layers": "2-3",
+        "aperture": "5-80",
+        "capacity": "150-450",
+        "power": "30",
+        "weight": "12.5"
+      },
+      {
+        "model": "BXS3672",
+        "screenSize": "3.6×7.2",
+        "layers": "2-3",
+        "aperture": "5-80",
+        "capacity": "200-600",
+        "power": "45",
+        "weight": "18.0"
+      }
+    ],
+    "notes": {
+      "zh": "以上参数仅供参考，实际处理能力与筛孔尺寸、物料特性密切相关。",
+      "en": "The above parameters are for reference only, and the actual processing capacity is closely related to the aperture size and material characteristics."
+    }
+  },
+  "features": {
+    "zh": [
+      "多段变化坡度：加速物料分层",
+      "差动式激振机构：适应高负荷",
+      "大通量筛分：高效处理湿物料",
+      "抗堵塞设计：防止物料黏附",
+      "高耐磨材质：延长使用寿命"
+    ],
+    "en": [
+      "Multi-Section Variable Slope: Accelerates material stratification",
+      "Differential Excitation Mechanism: Handles heavy loads",
+      "High-Throughput Screening: Efficient wet material processing",
+      "Anti-Clogging Design: Prevents material adhesion",
+      "High Wear-Resistant Material: Extended service life"
+    ]
+  },
+  "applications": {
+    "zh": [
+      "采矿：大型矿山预筛分",
+      "煤炭：洗选厂筛分系统",
+      "建材：砂石骨料脱水筛分",
+      "冶金：物料分级",
+      "矿石加工：大型破碎筛分"
+    ],
+    "en": [
+      "Mining: Large-scale pre-screening",
+      "Coal: Washing plant screening",
+      "Building Materials: Aggregate dewatering",
+      "Metallurgy: Material grading",
+      "Mineral Processing: Large crushing systems"
+    ]
+  },
+  "relatedProducts": ["ya-circular-vibrating-screen", "linear-vibrating-screen", "zkr-linear-vibrating-screen", "bar-vibrating-screen", "drum-screen", "vibrating-screen"]
+} 

@@ -1,0 +1,155 @@
+{
+  "id": "linear-vibrating-screen",
+  "model": "ZK1030",
+  "series": {
+    "zh": "直线振动筛",
+    "en": "Linear Vibrating Screen"
+  },
+  "imagePath": "/images/products/screens/linear-vibrating-screen.jpg",
+  "capacity": {
+    "min": 20,
+    "max": 280,
+    "unit": "m³/h"
+  },
+  "motorPower": {
+    "min": 2.2,
+    "max": 7.5,
+    "unit": "kW"
+  },
+  "aperture": {
+    "min": 2,
+    "max": 50,
+    "unit": "mm"
+  },
+  "overview": {
+    "zh": "直线振动筛采用双轴偏心激振器，物料做直线往复运动。筛面面积1.0-2.0m²，处理能力20-280m³/h，适用于2-50mm物料。振幅可调节(2-8mm)，筛分精度高，可配置1-3层筛网，适合精细分级作业。",
+    "en": "Linear Vibrating Screen with dual-shaft eccentric exciter creating linear motion. Screen area 1.0-2.0m², capacity 20-280m³/h for 2-50mm particles. Features adjustable amplitude (2-8mm) and high accuracy. Available with 1-3 deck layers for precision grading operations."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Specifications"
+    },
+    "columns": [
+      {
+        "key": "model",
+        "zh": "型号",
+        "en": "Model"
+      },
+      {
+        "key": "screenSize",
+        "zh": "筛面尺寸 (m×m)",
+        "en": "Screen Size (m×m)"
+      },
+      {
+        "key": "layers",
+        "zh": "层数",
+        "en": "Layers"
+      },
+      {
+        "key": "aperture",
+        "zh": "筛孔尺寸 (mm)",
+        "en": "Aperture Size (mm)"
+      },
+      {
+        "key": "capacity",
+        "zh": "处理能力 (t/h)",
+        "en": "Capacity (t/h)"
+      },
+      {
+        "key": "power",
+        "zh": "电机功率 (kW)",
+        "en": "Motor Power (kW)"
+      },
+      {
+        "key": "weight",
+        "zh": "设备重量 (t)",
+        "en": "Weight (t)"
+      }
+    ],
+    "data": [
+      {
+        "model": "ZK1030",
+        "screenSize": "1.0×3.0",
+        "layers": "1-2",
+        "aperture": "2-50",
+        "capacity": "20-80",
+        "power": "2.2",
+        "weight": "1.8"
+      },
+      {
+        "model": "ZK1530",
+        "screenSize": "1.5×3.0",
+        "layers": "1-2",
+        "aperture": "2-50",
+        "capacity": "30-120",
+        "power": "3",
+        "weight": "2.4"
+      },
+      {
+        "model": "ZK1545",
+        "screenSize": "1.5×4.5",
+        "layers": "1-3",
+        "aperture": "2-50",
+        "capacity": "40-160",
+        "power": "4",
+        "weight": "3.2"
+      },
+      {
+        "model": "ZK1845",
+        "screenSize": "1.8×4.5",
+        "layers": "1-3",
+        "aperture": "2-50",
+        "capacity": "50-200",
+        "power": "5.5",
+        "weight": "4.0"
+      },
+      {
+        "model": "ZK2060",
+        "screenSize": "2.0×6.0",
+        "layers": "1-3",
+        "aperture": "2-50",
+        "capacity": "70-280",
+        "power": "7.5",
+        "weight": "5.5"
+      }
+    ],
+    "notes": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    }
+  },
+  "features": {
+    "zh": [
+      "直线运动轨迹：延长物料停留时间",
+      "精确振动控制：适应多种物料",
+      "多层分级系统：同步多级分选",
+      "高强度结构：延长使用寿命",
+      "低能耗设计：节约运行成本"
+    ],
+    "en": [
+      "Linear Motion Trajectory: Extended material retention time",
+      "Precise Vibration Control: Adapts to various materials",
+      "Multi-Level Grading System: Simultaneous multi-grade sorting",
+      "High-Strength Structure: Longer service life",
+      "Low Energy Consumption: Reduced operating costs"
+    ]
+  },
+  "applications": {
+    "zh": [
+      "采矿：矿石分级筛选",
+      "建材：砂石骨料分选",
+      "煤炭：煤炭筛分",
+      "化工：原料分级",
+      "环保：固废处理"
+    ],
+    "en": [
+      "Mining: Ore grading and screening",
+      "Building Materials: Aggregate selection",
+      "Coal: Coal screening",
+      "Chemical: Raw material grading",
+      "Environmental: Waste treatment"
+    ]
+  },
+  "relatedProducts": ["ya-circular-vibrating-screen", "zkr-linear-vibrating-screen", "banana-vibrating-screen", "bar-vibrating-screen", "drum-screen", "vibrating-screen"]
+} 

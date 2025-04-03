@@ -1,0 +1,155 @@
+{
+  "id": "bar-vibrating-screen",
+  "model": "BZS1848",
+  "series": {
+    "zh": "棒条振动筛",
+    "en": "Bar Vibrating Screen"
+  },
+  "imagePath": "/images/products/screens/bar-vibrating-screen.jpg",
+  "capacity": {
+    "min": 50,
+    "max": 350,
+    "unit": "m³/h"
+  },
+  "motorPower": {
+    "min": 11,
+    "max": 37,
+    "unit": "kW"
+  },
+  "aperture": {
+    "min": 10,
+    "max": 150,
+    "unit": "mm"
+  },
+  "overview": {
+    "zh": "棒条振动筛用平行金属棒条代替传统筛网，专为高含水率物料设计。棒条间距可调(10-150mm)，筛面面积4.3-14.4m²，处理能力70-300m³/h。自清洁设计防止堵塞，特别适用于含泥量大的矿山物料筛分。",
+    "en": "Bar Vibrating Screen uses parallel metal bars instead of mesh, designed for high moisture materials. Adjustable bar spacing (10-150mm), screen area 4.3-14.4m², capacity 70-300m³/h. Self-cleaning design prevents clogging, perfect for mining materials with high clay content."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Specifications"
+    },
+    "columns": [
+      {
+        "key": "model",
+        "zh": "型号",
+        "en": "Model"
+      },
+      {
+        "key": "screenSize",
+        "zh": "筛面尺寸 (m²)",
+        "en": "Screen Size (m²)"
+      },
+      {
+        "key": "barSpacing",
+        "zh": "棒条间距 (mm)",
+        "en": "Bar Spacing (mm)"
+      },
+      {
+        "key": "aperture",
+        "zh": "筛孔尺寸 (mm)",
+        "en": "Aperture Size (mm)"
+      },
+      {
+        "key": "capacity",
+        "zh": "处理能力 (m³/h)",
+        "en": "Capacity (m³/h)"
+      },
+      {
+        "key": "power",
+        "zh": "电机功率 (kW)",
+        "en": "Motor Power (kW)"
+      },
+      {
+        "key": "weight",
+        "zh": "设备重量 (t)",
+        "en": "Weight (t)"
+      }
+    ],
+    "data": [
+      {
+        "model": "BZS1236",
+        "screenSize": "4.3",
+        "barSpacing": "10-150",
+        "aperture": "10-150",
+        "capacity": "70-120",
+        "power": "2×5.5",
+        "weight": "3.8"
+      },
+      {
+        "model": "BZS1545",
+        "screenSize": "6.7",
+        "barSpacing": "10-150",
+        "aperture": "10-150",
+        "capacity": "100-150",
+        "power": "2×7.5",
+        "weight": "5.2"
+      },
+      {
+        "model": "BZS1848",
+        "screenSize": "7.2",
+        "barSpacing": "10-150",
+        "aperture": "10-150",
+        "capacity": "120-180",
+        "power": "2×11",
+        "weight": "6.5"
+      },
+      {
+        "model": "BZS2160",
+        "screenSize": "12.6",
+        "barSpacing": "10-150",
+        "aperture": "10-150",
+        "capacity": "180-250",
+        "power": "2×15",
+        "weight": "10.4"
+      },
+      {
+        "model": "BZS2460",
+        "screenSize": "14.4",
+        "barSpacing": "10-150",
+        "aperture": "10-150",
+        "capacity": "200-300",
+        "power": "2×18.5",
+        "weight": "12.5"
+      }
+    ],
+    "notes": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    }
+  },
+  "features": {
+    "zh": [
+      "特殊棒条结构：间距可调，防堵塞",
+      "自清洁技术：适合高含水率物料",
+      "高耐磨合金：延长使用寿命",
+      "模块化棒条系统：快速更换单根棒条",
+      "强力激振器：高效处理粘性物料"
+    ],
+    "en": [
+      "Special Bar Structure: Adjustable spacing, anti-clogging",
+      "Self-Cleaning Technology: Suitable for high moisture materials",
+      "High Wear-Resistant Alloy: Extended service life",
+      "Modular Bar System: Quick individual bar replacement",
+      "Powerful Exciter: Efficient viscous material processing"
+    ]
+  },
+  "applications": {
+    "zh": [
+      "采矿：高含水矿石筛分",
+      "煤炭：湿煤筛选",
+      "建材：建筑垃圾分选",
+      "环保：城市固废分选",
+      "建材：砂石料粗料分选"
+    ],
+    "en": [
+      "Mining: High moisture ore screening",
+      "Coal: Wet coal screening",
+      "Building Materials: Construction waste sorting",
+      "Environmental: Municipal waste sorting",
+      "Building Materials: Coarse aggregate screening"
+    ]
+  },
+  "relatedProducts": ["ya-circular-vibrating-screen", "linear-vibrating-screen", "zkr-linear-vibrating-screen", "banana-vibrating-screen", "drum-screen", "vibrating-screen"]
+} 

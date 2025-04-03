@@ -1,0 +1,125 @@
+{
+  "id": "ya-circular-vibrating-screen",
+  "model": "YA3875",
+  "series": {
+    "zh": "YA圆振动筛",
+    "en": "YA Circular Vibrating Screen"
+  },
+  "imagePath": "/images/products/screens/ya-circular-vibrating-screen.jpg",
+  "capacity": {
+    "min": 60,
+    "max": 350,
+    "unit": "m³/h"
+  },
+  "motorPower": {
+    "min": 11,
+    "max": 37,
+    "unit": "kW"
+  },
+  "aperture": {
+    "min": 5,
+    "max": 100,
+    "unit": "mm"
+  },
+  "overview": {
+    "zh": "圆振动筛采用偏心轴驱动，筛体做圆形运动轨迹，筛分效率高。筛面面积4.2-14.4m²，处理能力60-350m³/h，适用于5-100mm物料。多层设计可一次完成多级分级，广泛应用于矿山、建材和冶金行业。",
+    "en": "Circular Vibrating Screen with eccentric shaft drive, circular motion trajectory and high efficiency. Screen area 4.2-14.4m², capacity 60-350m³/h for 5-100mm materials. Multi-layer design enables one-pass classification, widely used in mining, construction and metallurgical industries."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Specifications"
+    },
+    "columns": [
+      { "key": "model", "title": { "zh": "型号", "en": "Model" }, "width": "15%" },
+      { "key": "screenSize", "title": { "zh": "筛面尺寸", "en": "Screen Size" }, "unit": "m²", "width": "15%" },
+      { "key": "layers", "title": { "zh": "层数", "en": "Layers" }, "width": "10%" },
+      { "key": "aperture", "title": { "zh": "筛孔尺寸", "en": "Aperture Size" }, "unit": "mm", "width": "15%" },
+      { "key": "capacity", "title": { "zh": "处理能力", "en": "Capacity" }, "unit": "m³/h", "width": "15%" },
+      { "key": "power", "title": { "zh": "电机功率", "en": "Motor Power" }, "unit": "kW", "width": "15%" },
+      { "key": "weight", "title": { "zh": "重量", "en": "Weight" }, "unit": "t", "width": "15%" }
+    ],
+    "data": [
+      {
+        "model": "YA1236",
+        "screenSize": "4.2",
+        "layers": "1-3",
+        "aperture": "5-100",
+        "capacity": "60-120",
+        "power": "11",
+        "weight": "3.5"
+      },
+      {
+        "model": "YA1545",
+        "screenSize": "6.8",
+        "layers": "1-3",
+        "aperture": "5-100",
+        "capacity": "80-150",
+        "power": "15",
+        "weight": "4.8"
+      },
+      {
+        "model": "YA1848",
+        "screenSize": "7.5",
+        "layers": "1-3",
+        "aperture": "5-100",
+        "capacity": "100-180",
+        "power": "18.5",
+        "weight": "5.6"
+      },
+      {
+        "model": "YA2160",
+        "screenSize": "12.6",
+        "layers": "1-3",
+        "aperture": "5-100",
+        "capacity": "150-300",
+        "power": "30",
+        "weight": "9.8"
+      },
+      {
+        "model": "YA2460",
+        "screenSize": "14.4",
+        "layers": "1-3",
+        "aperture": "5-100",
+        "capacity": "200-350",
+        "power": "37",
+        "weight": "11.2"
+      }
+    ],
+    "notes": {
+      "zh": "以上参数仅供参考，实际处理能力视物料特性而定。",
+      "en": "The above parameters are for reference only, and the actual processing capacity depends on the material characteristics."
+    }
+  },
+  "features": {
+    "zh": [
+      "偏心轴驱动：产生稳定振幅",
+      "圆形运动轨迹：提高筛分效率",
+      "多层筛网系统：一次完成多级分选",
+      "密封防尘设计：改善工作环境",
+      "简易维护结构：快速更换部件"
+    ],
+    "en": [
+      "Eccentric Shaft Drive: Stable amplitude",
+      "Circular Motion Trajectory: Higher screening efficiency",
+      "Multi-Layer Screen System: One-pass multi-grade sorting",
+      "Sealed Dust-Proof Design: Better working environment",
+      "Easy Maintenance Structure: Quick component replacement"
+    ]
+  },
+  "applications": {
+    "zh": [
+      "采矿：各种矿石筛分",
+      "建材：砂石骨料筛分",
+      "煤炭：分级筛选",
+      "化工/建材：物料分级"
+    ],
+    "en": [
+      "Mining: Various ore screening",
+      "Building Materials: Sand and gravel screening",
+      "Coal: Grading and screening",
+      "Chemical/Building Materials: Material classification"
+    ]
+  },
+  "relatedProducts": ["linear-vibrating-screen", "zkr-linear-vibrating-screen", "banana-vibrating-screen", "bar-vibrating-screen", "drum-screen", "vibrating-screen"]
+} 
