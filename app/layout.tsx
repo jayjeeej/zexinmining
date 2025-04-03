@@ -75,28 +75,23 @@ export default function RootLayout({
                 
                 // 运行时修复特定问题
                 window.addEventListener('DOMContentLoaded', function() {
-                  // 修复WhatsApp图标
-                  var whatsappLinks = document.querySelectorAll('a[href*="whatsapp"]');
-                  if (whatsappLinks.length > 0) {
-                    for (var i = 0; i < whatsappLinks.length; i++) {
-                      whatsappLinks[i].style.cssText = 'position: fixed !important; bottom: 20px !important; right: 20px !important; z-index: 999999 !important; display: block !important; width: 50px !important; height: 50px !important;';
-                      
-                      var whatsappImages = whatsappLinks[i].querySelectorAll('img');
-                      if (whatsappImages.length > 0) {
-                        for (var j = 0; j < whatsappImages.length; j++) {
-                          whatsappImages[j].style.cssText = 'width: 50px !important; height: 50px !important; max-width: 50px !important; max-height: 50px !important;';
-                        }
-                      }
-                    }
-                  }
-                  
-                  // 防止布局移位
+                  // 修复图像和布局问题
                   var allImages = document.querySelectorAll('img');
                   if (allImages.length > 0) {
                     for (var i = 0; i < allImages.length; i++) {
-                      if (!allImages[i].complete) {
-                        allImages[i].style.cssText = 'max-width: 100% !important; height: auto !important;';
-                      }
+                      allImages[i].style.maxWidth = '100%';
+                      allImages[i].style.height = 'auto';
+                    }
+                  }
+                  
+                  // 修复社交图标 - 保持它们在页脚中的原始位置
+                  var socialIcons = document.querySelectorAll('.social-icon, a[href*="whatsapp"] img');
+                  if (socialIcons.length > 0) {
+                    for (var i = 0; i < socialIcons.length; i++) {
+                      socialIcons[i].style.width = '24px';
+                      socialIcons[i].style.height = '24px';
+                      socialIcons[i].style.display = 'inline-block';
+                      socialIcons[i].style.verticalAlign = 'middle';
                     }
                   }
                 });
