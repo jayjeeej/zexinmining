@@ -1,0 +1,171 @@
+{
+  "id": "overflow-ball-mill",
+  "model": "Φ900×1800-Φ1830×4500",
+  "series": {
+    "zh": "溢流式球磨机",
+    "en": "Overflow Ball Mill"
+  },
+  "capacity": {
+    "min": 0.65,
+    "max": 12,
+    "unit": "t/h"
+  },
+  "motorPower": {
+    "min": 18.5,
+    "max": 155,
+    "unit": "kW"
+  },
+  "feedSize": {
+    "min": 20,
+    "max": 25,
+    "unit": "mm"
+  },
+  "dischargeSize": {
+    "min": 0.074,
+    "max": 0.89,
+    "unit": "mm"
+  },
+  "isGrindingProduct": true,
+  "overview": {
+    "zh": "溢流式球磨机是一种高效磨矿设备，适用于各种矿石和其他可磨性物料的细磨。它采用溢流排矿方式，能够获得更细的粒度产品，广泛应用于选矿、建材和化工等行业的湿式研磨作业中。该设备具有研磨效率高、处理量大、能耗低等特点。",
+    "en": "The overflow ball mill is a high-efficiency grinding equipment suitable for fine grinding of various ores and other grindable materials. It adopts overflow discharge method to obtain finer particle size products, widely used in wet grinding operations in mineral processing, building materials, chemical industry and other fields. The equipment features high grinding efficiency, large processing capacity and low energy consumption."
+  },
+  "features": [
+    {
+      "zh": "采用溢流排矿方式，能有效获得较细的产品粒度",
+      "en": "Uses overflow discharge method to effectively obtain finer product particle size"
+    },
+    {
+      "zh": "内衬板可根据不同物料特性定制，提高研磨效率",
+      "en": "Liner plates can be customized according to different material characteristics to improve grinding efficiency"
+    },
+    {
+      "zh": "大型轴承设计，运行平稳可靠，使用寿命长",
+      "en": "Large bearing design ensures stable and reliable operation with long service life"
+    },
+    {
+      "zh": "调整研磨体装载量，可灵活控制产品粒度",
+      "en": "Adjustable grinding media loading for flexible control of product particle size"
+    }
+  ],
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Application Areas"
+    },
+    "items": [
+      {
+        "icon": "⛏️",
+        "title": { "zh": "选矿工业", "en": "Mineral Processing" },
+        "description": { "zh": "用于金属矿石和非金属矿石的细磨，提高后续选别回收率。", "en": "Used for fine grinding of metallic and non-metallic ores to improve recovery in subsequent separation processes." }
+      },
+      {
+        "icon": "🏗️",
+        "title": { "zh": "建材工业", "en": "Building Materials" },
+        "description": { "zh": "水泥、陶瓷等建材原料的粉磨，获得符合粒度要求的产品。", "en": "Grinding of cement, ceramic and other building material raw materials to obtain products meeting particle size requirements." }
+      },
+      {
+        "icon": "🧪",
+        "title": { "zh": "化工行业", "en": "Chemical Industry" },
+        "description": { "zh": "化工原料的细磨处理，提高后续化学反应效率。", "en": "Fine grinding of chemical raw materials to improve efficiency of subsequent chemical reactions." }
+      },
+      {
+        "icon": "🔋",
+        "title": { "zh": "新能源材料", "en": "New Energy Materials" },
+        "description": { "zh": "锂电池材料等新能源材料的研磨加工。", "en": "Grinding and processing of new energy materials such as lithium battery materials." }
+      }
+    ]
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Specifications"
+    },
+    "columns": [
+      {
+        "key": "model",
+        "title": {
+          "zh": "规格型号",
+          "en": "Model"
+        }
+      },
+      {
+        "key": "rotationSpeed",
+        "title": {
+          "zh": "筒体转速",
+          "en": "Cylinder Rotation Speed"
+        },
+        "unit": "r/min"
+      },
+      {
+        "key": "ballLoad",
+        "title": {
+          "zh": "装球量",
+          "en": "Ball Load"
+        },
+        "unit": "t"
+      },
+      {
+        "key": "feedSize",
+        "title": {
+          "zh": "进料粒度",
+          "en": "Feed Size"
+        },
+        "unit": "mm"
+      },
+      {
+        "key": "dischargeSize",
+        "title": {
+          "zh": "出料粒度",
+          "en": "Discharge Size"
+        },
+        "unit": "mm"
+      },
+      {
+        "key": "capacity",
+        "title": {
+          "zh": "产量",
+          "en": "Capacity"
+        },
+        "unit": "t/h"
+      },
+      {
+        "key": "motorPower",
+        "title": {
+          "zh": "电机功率",
+          "en": "Motor Power"
+        },
+        "unit": "kW"
+      },
+      {
+        "key": "weight",
+        "title": {
+          "zh": "总重量",
+          "en": "Total Weight"
+        },
+        "unit": "t"
+      }
+    ],
+    "data": [
+      { "model": "Φ900×1800", "rotationSpeed": "36-38", "ballLoad": "1.5", "feedSize": "<20", "dischargeSize": "0.075-0.89", "capacity": "0.65-2", "motorPower": "18.5", "weight": "5.85" },
+      { "model": "Φ900×3000", "rotationSpeed": "36", "ballLoad": "2.7", "feedSize": "<20", "dischargeSize": "0.075-0.89", "capacity": "1.1-3.5", "motorPower": "22", "weight": "6.98" },
+      { "model": "Φ1200×2400", "rotationSpeed": "36", "ballLoad": "3", "feedSize": "<25", "dischargeSize": "0.075-0.6", "capacity": "1.5-4.8", "motorPower": "30", "weight": "13.6" },
+      { "model": "Φ1200×3000", "rotationSpeed": "36", "ballLoad": "3.5", "feedSize": "<25", "dischargeSize": "0.074-0.4", "capacity": "1.6-5", "motorPower": "37", "weight": "14.3" },
+      { "model": "Φ1200×4500", "rotationSpeed": "32.4", "ballLoad": "5", "feedSize": "<25", "dischargeSize": "0.074-0.4", "capacity": "1.6-5.8", "motorPower": "55", "weight": "15.6" },
+      { "model": "Φ1500×3000", "rotationSpeed": "29.7", "ballLoad": "7.5", "feedSize": "<25", "dischargeSize": "0.074-0.4", "capacity": "2-5", "motorPower": "75", "weight": "19.5" },
+      { "model": "Φ1500×4500", "rotationSpeed": "27", "ballLoad": "11", "feedSize": "<25", "dischargeSize": "0.074-0.4", "capacity": "3-6", "motorPower": "110", "weight": "22" },
+      { "model": "Φ1500×5700", "rotationSpeed": "28", "ballLoad": "12", "feedSize": "<25", "dischargeSize": "0.074-0.4", "capacity": "3.5-6", "motorPower": "130", "weight": "25.8" },
+      { "model": "Φ1830×3000", "rotationSpeed": "25.4", "ballLoad": "11", "feedSize": "<25", "dischargeSize": "0.074-0.4", "capacity": "4-10", "motorPower": "130", "weight": "34.5" },
+      { "model": "Φ1830×4500", "rotationSpeed": "25.4", "ballLoad": "15", "feedSize": "<25", "dischargeSize": "0.074-0.4", "capacity": "4.5-12", "motorPower": "155", "weight": "38" }
+    ],
+    "notes": [
+      {
+        "content": {
+          "zh": "可按照客户需求进行定制",
+          "en": "Can be customized according to customer requirements"
+        }
+      }
+    ]
+  },
+  "relatedProducts": ["wet-grid-ball-mill", "dry-grid-ball-mill", "rod-mill"]
+} 

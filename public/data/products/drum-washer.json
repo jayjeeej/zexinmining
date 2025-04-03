@@ -1,0 +1,114 @@
+{
+  "id": "drum-washer",
+  "nameEn": "Drum Washer",
+  "nameZh": "滚筒洗矿机",
+  "model": "GT系列",
+  "capacity": { "min": 30, "max": 200, "unit": "t/h" },
+  "motorPower": { "min": 7.5, "max": 45, "unit": "kW" },
+  "overview": {
+    "zh": "滚筒洗矿机（GT系列）是一种高效的矿石洗选设备，适用于处理各种含泥量高的矿石。该设备主要由电机、减速机、滚筒、支撑轮、喷水装置和排料装置组成。物料通过进料口进入旋转的滚筒中，在滚筒旋转过程中，物料不断翻滚并与水充分接触，实现泥土与矿石的分离。该设备处理量大、洗矿效率高、结构简单、操作方便。",
+    "en": "The Drum Washer (GT Series) is a high-efficiency ore washing equipment suitable for processing various ores with high mud content. The equipment mainly consists of motor, reducer, drum, support wheels, water spraying device and discharge device. Materials enter the rotating drum through the feed inlet. As the drum rotates, the material continuously tumbles and contacts with water fully, achieving separation of mud and ore. This equipment features large processing capacity, high washing efficiency, simple structure, and easy operation."
+  },
+  "specifications": [
+    {
+      "model": "GT-1530",
+      "capacity": "30-50",
+      "motorPower": "7.5",
+      "drumDiameter": "1500",
+      "drumLength": "3000",
+      "rotationSpeed": "8-12",
+      "weight": "5800"
+    },
+    {
+      "model": "GT-1840",
+      "capacity": "50-80",
+      "motorPower": "11",
+      "drumDiameter": "1800",
+      "drumLength": "4000",
+      "rotationSpeed": "8-12",
+      "weight": "7600"
+    },
+    {
+      "model": "GT-2050",
+      "capacity": "80-120",
+      "motorPower": "15",
+      "drumDiameter": "2000",
+      "drumLength": "5000",
+      "rotationSpeed": "6-10",
+      "weight": "9500"
+    },
+    {
+      "model": "GT-2460",
+      "capacity": "120-160",
+      "motorPower": "22",
+      "drumDiameter": "2400",
+      "drumLength": "6000",
+      "rotationSpeed": "6-10",
+      "weight": "12800"
+    },
+    {
+      "model": "GT-3060",
+      "capacity": "160-200",
+      "motorPower": "30",
+      "drumDiameter": "3000",
+      "drumLength": "6000",
+      "rotationSpeed": "4-8",
+      "weight": "16500"
+    }
+  ],
+  "features": [
+    {
+      "zh": "滚筒内设螺旋叶片和提升条，增强物料翻动效果",
+      "en": "Spiral blades and lifting bars inside the drum enhance material tumbling effect"
+    },
+    {
+      "zh": "滚筒倾角可调，便于适应不同物料的洗选要求",
+      "en": "Adjustable drum inclination to adapt to washing requirements of different materials"
+    },
+    {
+      "zh": "内衬采用耐磨橡胶或耐磨钢材，延长使用寿命",
+      "en": "Lining made of wear-resistant rubber or steel to extend service life"
+    },
+    {
+      "zh": "配备高压喷水装置，增强洗矿效果",
+      "en": "Equipped with high-pressure water spray device to enhance washing effect"
+    },
+    {
+      "zh": "驱动系统采用优质减速机，运行稳定可靠",
+      "en": "Drive system uses high-quality reducer for stable and reliable operation"
+    },
+    {
+      "zh": "可根据工艺需求定制筛网孔径和筛分效果",
+      "en": "Screen aperture and screening effect can be customized according to process requirements"
+    }
+  ],
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Application Areas"
+    },
+    "items": [
+      {
+        "icon": "⛏️",
+        "title": { "zh": "金属矿洗选", "en": "Metal Ore Washing" },
+        "description": { "zh": "适用于铁矿、铜矿、锰矿等金属矿石的洗选，特别是含泥量高的矿石", "en": "Suitable for washing iron ore, copper ore, manganese ore and other metal ores, especially ores with high mud content" }
+      },
+      {
+        "icon": "🏗️",
+        "title": { "zh": "砂石料加工", "en": "Sand and Gravel Processing" },
+        "description": { "zh": "在砂石骨料生产线中用于清洗建筑用砂石料，提高产品质量", "en": "Used in sand and gravel aggregate production lines to clean construction sand and gravel materials to improve product quality" }
+      },
+      {
+        "icon": "🧪",
+        "title": { "zh": "煤炭洗选", "en": "Coal Washing" },
+        "description": { "zh": "适用于各类煤炭的洗选加工，去除煤炭中的杂质和泥土", "en": "Suitable for washing and processing various types of coal, removing impurities and soil from coal" }
+      },
+      {
+        "icon": "♻️",
+        "title": { "zh": "建筑垃圾处理", "en": "Construction Waste Treatment" },
+        "description": { "zh": "可用于建筑垃圾资源化处理过程中的物料洗选", "en": "Can be used for material washing in the resource utilization process of construction waste" }
+      }
+    ]
+  },
+  "relatedProducts": ["spiral-washer", "double-spiral-washer"]
+} 

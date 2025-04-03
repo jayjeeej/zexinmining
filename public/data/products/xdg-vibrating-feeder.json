@@ -1,0 +1,120 @@
+{
+  "id": "xdg-vibrating-feeder",
+  "nameZh": "XDG振动给料机",
+  "nameEn": "XDG Vibrating Feeder",
+  "descriptionZh": "大型振动给料设备，处理能力120-800 m³/h。双偏心轴设计产生强震力，高强度钢板结构可承受大块矿石冲击。设备宽度1100-1800mm，适用于矿山、冶金等大型生产线。",
+  "descriptionEn": "Heavy-duty vibrating feeding equipment with 120-800 m³/h capacity. Dual eccentric shaft design generates powerful vibration, high-strength steel structure withstands large ore impact. Width range 1100-1800mm, ideal for mining, metallurgy and other large production lines.",
+  "mainImagePath": "/images/preprocessing/feeder-gz5.jpg",
+  "category": "preprocessing",
+  "subcategory": "feeders",
+  "featured": true,
+  "capacity": {
+    "min": 120,
+    "max": 800,
+    "unit": "m³/h"
+  },
+  "motorPower": {
+    "min": 15,
+    "max": 30,
+    "unit": "kW"
+  },
+  "specifications": [
+    {
+      "nameZh": "型号",
+      "nameEn": "Model",
+      "valueZh": "ZSW-490×110",
+      "valueEn": "ZSW-490×110"
+    },
+    {
+      "nameZh": "处理能力",
+      "nameEn": "Processing Capacity",
+      "valueZh": "120-800 m³/h",
+      "valueEn": "120-800 m³/h"
+    },
+    {
+      "nameZh": "电机功率",
+      "nameEn": "Motor Power",
+      "valueZh": "15-30 kW",
+      "valueEn": "15-30 kW"
+    }
+  ],
+  "overview": {
+    "zh": "XDG系列振动给料机是物料均匀连续输送设备，利用双偏心轴激振器产生定向振动。适用于向破碎机、磨机等设备均匀供料，可处理粒度≤500mm的各类物料，给料能力30-600t/h。结构紧凑，性能可靠，广泛应用于矿山、冶金和建材行业。",
+    "en": "XDG Series Vibrating Feeder is a uniform continuous material conveying equipment utilizing dual eccentric shaft vibrators to produce directional vibration. It evenly feeds crushers, mills and other equipment, handling materials with particle size ≤500mm and feeding capacity of 30-600t/h. With compact structure and reliable performance, it's widely used in mining, metallurgy and construction materials industries."
+  },
+  "features": {
+    "zh": [
+      "双偏心轴激振系统：产生强劲定向振动，确保物料均匀输送",
+      "可调节振幅：通过调整偏心块相位角，精确控制给料量",
+      "耐磨料斗衬板：采用高硬度耐磨材料，延长使用寿命",
+      "密封防尘设计：保护关键部件，适应恶劣工作环境",
+      "变频控制系统：实现给料量的无级调节，满足不同工艺需求",
+      "低噪音减振结构：减少设备振动传递，降低工作噪音"
+    ],
+    "en": [
+      "Dual Eccentric Shaft Vibration System: Produces powerful directional vibration, ensuring uniform material feeding",
+      "Adjustable Amplitude: Precise control of feed rate by adjusting eccentric block phase angle",
+      "Wear-resistant Hopper Liner: Made of high-hardness wear-resistant materials, extending service life",
+      "Sealed Dust-proof Design: Protects key components, adapts to harsh working environments",
+      "Frequency Control System: Enables stepless adjustment of feeding amount to meet various process requirements",
+      "Low-noise Vibration Reduction Structure: Minimizes equipment vibration transfer, reduces operating noise"
+    ]
+  },
+  "applications": {
+    "zh": [
+      "采矿行业：矿石初级破碎给料",
+      "冶金工业：原料均匀供给",
+      "建材领域：砂石生产线",
+      "电力工业：煤炭输送系统",
+      "化工行业：物料均匀供给"
+    ],
+    "en": [
+      "Mining Industry: Primary crushing ore feeding",
+      "Metallurgical Industry: Uniform raw material supply",
+      "Construction Materials: Sand and gravel production lines",
+      "Power Industry: Coal transportation systems",
+      "Chemical Industry: Uniform material supply"
+    ]
+  },
+  "technicalParameters": [
+    {
+      "model": "ZSW-490×110",
+      "width": "1100",
+      "length": "4900",
+      "maxFeedSize": "500",
+      "capacity": "120-280",
+      "motorModel": "JZO-15-6",
+      "power": "15",
+      "dimensions": "4900×1850×1130",
+      "weight": "6500"
+    },
+    {
+      "model": "ZSW-600×130",
+      "width": "1300",
+      "length": "6000",
+      "maxFeedSize": "600",
+      "capacity": "200-450",
+      "motorModel": "JZO-22-6",
+      "power": "22",
+      "dimensions": "6000×2050×1280",
+      "weight": "9800"
+    },
+    {
+      "model": "ZSW-750×180",
+      "width": "1800",
+      "length": "7500",
+      "maxFeedSize": "750",
+      "capacity": "400-800",
+      "motorModel": "JZO-30-6",
+      "power": "30",
+      "dimensions": "7500×2550×1580",
+      "weight": "15200"
+    }
+  ],
+  "relatedProducts": [
+    "plate-feeder",
+    "belt-feeder",
+    "electromagnetic-vibrating-feeder",
+    "disc-feeder"
+  ]
+} 

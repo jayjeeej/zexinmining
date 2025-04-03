@@ -1,0 +1,195 @@
+{
+  "id": "coarse-particle-flotation-machine",
+  "category": "beneficiation",
+  "subcategory": "flotation",
+  "model": "CLF系列",
+  "series": {
+    "zh": "CLF型粗重颗粒浮选机",
+    "en": "CLF Coarse Particle Flotation Machine"
+  },
+  "image": "/images/products/flotation/coarse-particle-flotation-machine.jpg",
+  "effectiveVolume": {
+    "zh": "2-40 m³",
+    "en": "2-40 m³"
+  },
+  "capacity": {
+    "zh": "0.5-38 m³/min",
+    "en": "0.5-38 m³/min"
+  },
+  "motorPower": {
+    "zh": "5.5-75 kW",
+    "en": "5.5-75 kW"
+  },
+  "overview": {
+    "zh": "CLF型粗重颗粒浮选机是一种专为处理粗重矿物颗粒设计的高效浮选设备，采用双槽体结构（吸入槽和直流槽），能够有效处理粒度较大、比重较高的矿物颗粒。其特殊设计的叶轮结构产生强大搅拌力和合理的流场分布，提高了粗粒矿物的浮选效率。广泛应用于有色金属、黑色金属和贵重金属等矿物的浮选分离过程。",
+    "en": "The CLF Coarse Particle Flotation Machine is a high-efficiency flotation equipment specially designed for processing coarse and heavy mineral particles. It adopts a dual-tank structure (suction tank and direct flow tank) to effectively process mineral particles with larger size and higher specific gravity. Its specially designed impeller structure generates powerful stirring force and reasonable flow field distribution, improving the flotation efficiency of coarse-grained minerals. It is widely used in the flotation separation process of non-ferrous metals, ferrous metals, and precious metals."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Parameters"
+    },
+    "note": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    },
+    "tableHeaders": [
+      {
+        "zh": "型号",
+        "en": "Model",
+        "unit": ""
+      },
+      {
+        "zh": "有效容积",
+        "en": "Effective Volume",
+        "unit": "m³"
+      },
+      {
+        "zh": "槽体尺寸",
+        "en": "Tank Dimensions",
+        "unit": "mm"
+      },
+      {
+        "zh": "生产能力",
+        "en": "Production Capacity",
+        "unit": "m³/min"
+      },
+      {
+        "zh": "吸气量",
+        "en": "Air Intake",
+        "unit": "m³/(m².min)"
+      },
+      {
+        "zh": "槽类型",
+        "en": "Tank Type",
+        "unit": ""
+      },
+      {
+        "zh": "主轴电机功率",
+        "en": "Main Motor Power",
+        "unit": "kW"
+      },
+      {
+        "zh": "主轴转速",
+        "en": "Main Shaft Speed",
+        "unit": "r/min"
+      },
+      {
+        "zh": "叶轮直径",
+        "en": "Impeller Diameter",
+        "unit": "mm"
+      },
+      {
+        "zh": "刮板电机型号",
+        "en": "Scraper Motor Model",
+        "unit": ""
+      },
+      {
+        "zh": "刮板电机功率",
+        "en": "Scraper Motor Power",
+        "unit": "kW"
+      },
+      {
+        "zh": "刮板转速",
+        "en": "Scraper Speed",
+        "unit": "r/min"
+      },
+      {
+        "zh": "设备重量",
+        "en": "Equipment Weight",
+        "unit": "kg"
+      }
+    ],
+    "tableData": [
+      ["CLF-2", "2", "1200×1600×1250", "0.5-2", "1.5", {"zh": "吸入槽", "en": "Suction Tank"}, "7.5", "790", "460", "Y100L-6", "1.5", "16", "1591"],
+      ["CLF-2", "2", "1200×1600×1250", "0.5-2", "1.5", {"zh": "直流槽", "en": "Direct Flow Tank"}, "5.5", "790", "410", "Y100L-6", "1.5", "16", "1481"],
+      ["CLF-4", "4", "1600×2100×1500", "1-4", "1.5", {"zh": "吸入槽", "en": "Suction Tank"}, "15", "730", "620", "Y100L-6", "1.5", "16", "3002"],
+      ["CLF-4", "4", "1600×2100×1500", "1-4", "1.5", {"zh": "直流槽", "en": "Direct Flow Tank"}, "11", "730", "580", "Y100L-6", "1.5", "16", "2702"],
+      ["CLF-8", "6", "1900×2500×1950", "1-6", "1.5", {"zh": "吸入槽", "en": "Suction Tank"}, "22", "790", "750", "Y100L-6", "1.5", "16", "5168"],
+      ["CLF-8", "6", "1900×2500×1950", "1-6", "1.5", {"zh": "直流槽", "en": "Direct Flow Tank"}, "15", "730", "645", "Y100L-6", "1.5", "16", "4654"],
+      ["CLF-16", "16", "2500×3200×2400", "4-16", "1.5", {"zh": "吸入槽", "en": "Suction Tank"}, "45", "730", "790", "Y100L-6", "1.5", "16", "9230"],
+      ["CLF-16", "16", "2500×3200×2400", "4-16", "1.5", {"zh": "直流槽", "en": "Direct Flow Tank"}, "37", "730", "750", "Y100L-6", "1.5", "16", "8970"],
+      ["CLF-30", "30", "3300×4000×3000", "7-30", "1.5", {"zh": "吸入槽", "en": "Suction Tank"}, "75", "740", "1110", "Y100L-6", "1.5", "16", "17010"],
+      ["CLF-30", "30", "3300×4000×3000", "7-30", "1.5", {"zh": "直流槽", "en": "Direct Flow Tank"}, "55", "740", "880", "Y100L-6", "1.5", "16", "15950"],
+      ["CLF-40", "40", "φ4200×3900", "8-38", "1.5", {"zh": "吸入槽", "en": "Suction Tank"}, "75", "740", "1090", "Y100L-6", "1.5", "16", "23690"],
+      ["CLF-40", "40", "φ4200×3900", "8-38", "1.5", {"zh": "直流槽", "en": "Direct Flow Tank"}, "75", "740", "1090", "Y100L-6", "1.5", "16", "23690"]
+    ]
+  },
+  "features": {
+    "zh": [
+      "专为处理粗重矿物颗粒设计，对大粒径矿物有较高的回收率",
+      "双槽体结构设计，提供更佳的流场分布和搅拌效果",
+      "可调节的叶轮结构，适应不同矿物特性和粒度分布",
+      "强力搅拌系统，防止粗重矿物沉积，保持悬浮状态",
+      "能耗优化设计，处理单位矿浆的能耗比传统浮选机低",
+      "结构合理，操作维护简便，使用寿命长"
+    ],
+    "en": [
+      "Specially designed for processing coarse and heavy mineral particles, with higher recovery rate for large-sized minerals",
+      "Dual-tank structure design providing better flow field distribution and stirring effect",
+      "Adjustable impeller structure to adapt to different mineral characteristics and particle size distributions",
+      "Powerful stirring system to prevent coarse and heavy mineral sedimentation and maintain suspension state",
+      "Energy consumption optimization design, with lower energy consumption per unit slurry than traditional flotation machines",
+      "Reasonable structure, easy operation and maintenance, long service life"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Applications"
+    },
+    "items": [
+      {
+        "icon": "🔴",
+        "title": {
+          "zh": "有色金属选矿",
+          "en": "Non-ferrous Metal Processing"
+        },
+        "description": {
+          "zh": "适用于铜、铅、锌等有色金属的粗粒矿物浮选分离",
+          "en": "Suitable for flotation separation of coarse-grained minerals of non-ferrous metals such as copper, lead, and zinc"
+        }
+      },
+      {
+        "icon": "⚫",
+        "title": {
+          "zh": "黑色金属选矿",
+          "en": "Ferrous Metal Processing"
+        },
+        "description": {
+          "zh": "用于铁、锰等黑色金属粗粒矿物的浮选工艺",
+          "en": "Used for flotation processes of coarse-grained ferrous metal minerals such as iron and manganese"
+        }
+      },
+      {
+        "icon": "✨",
+        "title": {
+          "zh": "贵金属矿物处理",
+          "en": "Precious Metal Processing"
+        },
+        "description": {
+          "zh": "适用于金、银等贵金属较粗粒级别矿物的浮选提纯",
+          "en": "Suitable for flotation purification of coarse-grained precious metal minerals such as gold and silver"
+        }
+      },
+      {
+        "icon": "💯",
+        "title": {
+          "zh": "粗粒级矿物加工",
+          "en": "Coarse-Grained Mineral Processing"
+        },
+        "description": {
+          "zh": "特别适合需要处理粒度较大、比重较高矿物的选矿工艺",
+          "en": "Particularly suitable for mineral processing technologies that need to process minerals with larger particle size and higher specific gravity"
+        }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "aeration-flotation-machine",
+    "self-priming-flotation-machine",
+    "flotation-cell",
+    "xcf-flotation-machine",
+    "bar-flotation-machine"
+  ]
+} 

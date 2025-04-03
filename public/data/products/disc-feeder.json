@@ -1,0 +1,193 @@
+{
+  "id": "disc-feeder",
+  "nameZh": "圆盘给料机",
+  "nameEn": "Disc Feeder",
+  "descriptionZh": "粉粒物料连续定量供给设备，处理能力13.6-198.9 m³/h。采用变频调速圆盘结构，确保物料精确计量输送。圆盘直径2000-3000mm，适用于化工、建材、食品等行业干燥粉状物料。",
+  "descriptionEn": "Continuous quantitative powder material feeding equipment with 13.6-198.9 m³/h capacity. Features frequency-controlled adjustable disc structure for precise material metering. Disc diameter 2000-3000mm, suitable for dry powders in chemical, building materials, and food industries.",
+  "mainImagePath": "/images/preprocessing/feeder-gz4.jpg",
+  "category": "preprocessing",
+  "subcategory": "feeders",
+  "featured": true,
+  "capacity": {
+    "min": 13.6,
+    "max": 198.9,
+    "unit": "m³/h"
+  },
+  "motorPower": {
+    "min": 5.5,
+    "max": 11,
+    "unit": "kW"
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Specifications"
+    },
+    "columns": [
+      { "key": "model", "title": { "zh": "型号", "en": "Model" } },
+      { "key": "discDiameter", "title": { "zh": "圆盘直径", "en": "Disc Diameter" }, "unit": "mm" },
+      { "key": "discSpeed", "title": { "zh": "圆盘转速", "en": "Disc Speed" }, "unit": "r/min" },
+      { "key": "capacity", "title": { "zh": "处理能力", "en": "Capacity" }, "unit": "m³/h" },
+      { "key": "motorModel", "title": { "zh": "电机型号", "en": "Motor Model" } },
+      { "key": "power", "title": { "zh": "电机功率", "en": "Motor Power" }, "unit": "kW" },
+      { "key": "dimensions", "title": { "zh": "外形尺寸", "en": "Dimensions" }, "unit": "mm" },
+      { "key": "weight", "title": { "zh": "重量", "en": "Weight" }, "unit": "kg" }
+    ],
+    "data": [
+      {
+        "model": "DK2000",
+        "discDiameter": "2000",
+        "discSpeed": "0.7-4.5",
+        "capacity": "13.6-88.4",
+        "motorModel": "Y132M-4",
+        "power": "5.5",
+        "dimensions": "2650×2450×2100",
+        "weight": "2570"
+      },
+      {
+        "model": "DK2500",
+        "discDiameter": "2500",
+        "discSpeed": "0.6-4.0",
+        "capacity": "21.3-138.1",
+        "motorModel": "Y160M-4",
+        "power": "7.5",
+        "dimensions": "3150×2950×2350",
+        "weight": "3420"
+      },
+      {
+        "model": "DK3000",
+        "discDiameter": "3000",
+        "discSpeed": "0.5-3.5",
+        "capacity": "30.7-198.9",
+        "motorModel": "Y180M-4",
+        "power": "11",
+        "dimensions": "3650×3450×2600",
+        "weight": "4850"
+      }
+    ],
+    "notes": [
+      {
+        "content": {
+          "zh": "可按照客户需求进行定制",
+          "en": "Can be customized according to customer requirements"
+        }
+      }
+    ]
+  },
+  "features": [
+    {
+      "titleZh": "精准控制",
+      "titleEn": "Precise Control",
+      "descriptionZh": "变频控制系统调速范围0.5-4.5 r/min，给料精度±2%",
+      "descriptionEn": "Frequency conversion control system with 0.5-4.5 r/min speed range, feeding accuracy of ±2%"
+    },
+    {
+      "titleZh": "可靠性高",
+      "titleEn": "High Reliability",
+      "descriptionZh": "关键传动部件采用耐磨合金，MTBF超过5000小时",
+      "descriptionEn": "Key transmission components made of wear-resistant alloy, MTBF exceeding 5000 hours"
+    },
+    {
+      "titleZh": "结构简单",
+      "titleEn": "Simple Structure",
+      "descriptionZh": "主要零部件少于20个，维护点少，操作直观简便",
+      "descriptionEn": "Less than 20 main components, few maintenance points, intuitive and simple operation"
+    },
+    {
+      "titleZh": "抗堵塞能力强",
+      "titleEn": "Strong Anti-clogging Ability",
+      "descriptionZh": "专利圆盘设计防止物料架桥，确保细粉物料流畅输送",
+      "descriptionEn": "Patented disc design prevents material bridging, ensuring smooth fine powder transportation"
+    },
+    {
+      "titleZh": "适应性广",
+      "titleEn": "Wide Adaptability",
+      "descriptionZh": "适合0-10mm细粉物料，处理温度范围-10℃至80℃",
+      "descriptionEn": "Suitable for 0-10mm fine materials with processing temperature range from -10°C to 80°C"
+    }
+  ],
+  "applications": [
+    {
+      "title": {
+        "zh": "化工行业",
+        "en": "Chemical Industry"
+      },
+      "description": {
+        "zh": "精确添加催化剂、染料、颜料等化工原料。变频调速系统实现0.5-4.5 r/min无级调速，确保配方精度，满足GMP生产标准。",
+        "en": "Precisely adds catalysts, dyes, pigments and other chemical raw materials. Variable frequency drive achieves 0.5-4.5 r/min stepless speed regulation, ensuring formula accuracy and meeting GMP production standards."
+      },
+      "icon": "🧪"
+    },
+    {
+      "title": {
+        "zh": "建材制造",
+        "en": "Building Materials Manufacturing"
+      },
+      "description": {
+        "zh": "用于水泥、石膏等建材生产的原料添加。耐磨圆盘设计使用寿命长，封闭结构减少粉尘扩散，最大直径3000mm适合大产能需求。",
+        "en": "Used for raw material addition in cement and gypsum production. Wear-resistant disc design offers long service life, sealed structure reduces dust diffusion, maximum diameter of 3000mm suitable for high capacity requirements."
+      },
+      "icon": "🏗️"
+    },
+    {
+      "title": {
+        "zh": "食品加工",
+        "en": "Food Processing"
+      },
+      "description": {
+        "zh": "输送谷物、豆类、调味料等食品原料。304不锈钢材质符合食品级要求，表面抛光处理Ra≤0.8μm，快拆结构便于清洁消毒。",
+        "en": "Conveys grains, beans, seasonings and other food ingredients. 304 stainless steel meets food-grade requirements with surface polishing treatment Ra≤0.8μm, quick-disassembly structure facilitates cleaning and disinfection."
+      },
+      "icon": "🍚"
+    },
+    {
+      "title": {
+        "zh": "环保工程",
+        "en": "Environmental Protection Engineering"
+      },
+      "description": {
+        "zh": "添加污水处理和废气净化用助凝剂、活性炭等。调速精度高达±2%，确保处理剂用量精确控制，降低处理成本，提高环保效率。",
+        "en": "Adds flocculants, activated carbon for wastewater and exhaust gas treatment. Speed regulation accuracy up to ±2% ensures precise control of treatment agent dosage, reducing treatment costs and improving environmental efficiency."
+      },
+      "icon": "♻️"
+    }
+  ],
+  "technicalParameters": [
+    {
+      "model": "DK2000",
+      "discDiameter": "2000",
+      "discSpeed": "0.7-4.5",
+      "capacity": "13.6-88.4",
+      "motorModel": "Y132M-4",
+      "power": "5.5",
+      "dimensions": "2650×2450×2100",
+      "weight": "2570"
+    },
+    {
+      "model": "DK2500",
+      "discDiameter": "2500",
+      "discSpeed": "0.6-4.0",
+      "capacity": "21.3-138.1",
+      "motorModel": "Y160M-4",
+      "power": "7.5",
+      "dimensions": "3150×2950×2350",
+      "weight": "3420"
+    },
+    {
+      "model": "DK3000",
+      "discDiameter": "3000",
+      "discSpeed": "0.5-3.5",
+      "capacity": "30.7-198.9",
+      "motorModel": "Y180M-4",
+      "power": "11",
+      "dimensions": "3650×3450×2600",
+      "weight": "4850"
+    }
+  ],
+  "relatedProducts": [
+    "plate-feeder",
+    "belt-feeder",
+    "electromagnetic-vibrating-feeder",
+    "xdg-vibrating-feeder"
+  ]
+} 

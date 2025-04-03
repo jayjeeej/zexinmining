@@ -1,0 +1,193 @@
+{
+  "id": "plate-feeder",
+  "nameZh": "板式给料机",
+  "nameEn": "Plate Feeder",
+  "descriptionZh": "矿石加工生产线首道工序设备，处理能力15-217 m³/h。采用高强度板式结构，可靠输送大块矿石，保证均匀给料，提高生产效率。适用于矿山、砂石、水泥等行业。",
+  "descriptionEn": "Primary equipment in ore processing lines with 15-217 m³/h capacity. Features high-strength plate structure for reliable transport of large materials, ensuring uniform feeding and improved production efficiency. Ideal for mining, aggregate, and cement industries.",
+  "mainImagePath": "/images/preprocessing/feeder-gz1.jpg",
+  "category": "preprocessing",
+  "subcategory": "feeders",
+  "featured": true,
+  "capacity": {
+    "min": 15,
+    "max": 217,
+    "unit": "m³/h"
+  },
+  "motorPower": {
+    "min": 7.5,
+    "max": 7.5,
+    "unit": "kW"
+  },
+  "specifications": [
+    {
+      "nameZh": "型号",
+      "nameEn": "Model",
+      "valueZh": "GBH80-2.2",
+      "valueEn": "GBH80-2.2"
+    },
+    {
+      "nameZh": "处理能力",
+      "nameEn": "Processing Capacity",
+      "valueZh": "15-217 m³/h",
+      "valueEn": "15-217 m³/h"
+    },
+    {
+      "nameZh": "电机功率",
+      "nameEn": "Motor Power",
+      "valueZh": "7.5 kW",
+      "valueEn": "7.5 kW"
+    }
+  ],
+  "features": [
+    {
+      "titleZh": "高可靠性设计",
+      "titleEn": "High Reliability Design",
+      "descriptionZh": "高强钢板结构，耐冲击耐磨损，在恶劣工况下稳定运行",
+      "descriptionEn": "High-strength steel plate structure, impact and wear resistant, stable operation in harsh conditions"
+    },
+    {
+      "titleZh": "均匀给料",
+      "titleEn": "Uniform Feeding",
+      "descriptionZh": "0.025-1.5 m/s可调速度，保证物料输送均匀稳定",
+      "descriptionEn": "Adjustable speed (0.025-1.5 m/s) ensures uniform and stable material transfer"
+    },
+    {
+      "titleZh": "简便维护",
+      "titleEn": "Easy Maintenance",
+      "descriptionZh": "模块化设计，关键部件易拆装，减少停机时间",
+      "descriptionEn": "Modular design with easily replaceable key components, minimizing downtime"
+    },
+    {
+      "titleZh": "节能环保",
+      "titleEn": "Energy Efficiency",
+      "descriptionZh": "7.5kW高效电机，优化传动系统降低能耗",
+      "descriptionEn": "7.5kW efficient motor with optimized transmission system for lower energy consumption"
+    },
+    {
+      "titleZh": "适应性强",
+      "titleEn": "Strong Adaptability",
+      "descriptionZh": "多规格选择(宽度800-1200mm)，适应各种物料特性",
+      "descriptionEn": "Multiple specifications (width 800-1200mm) to accommodate various material characteristics"
+    }
+  ],
+  "applications": [
+    {
+      "title": {
+        "zh": "矿山开采",
+        "en": "Mining Operations"
+      },
+      "description": {
+        "zh": "为铁矿、铜矿等破碎站提供均匀给料，特别适合大块高硬度矿石，防止堵塞，提高生产稳定性。处理能力最高可达217 m³/h，板式结构可承受大块矿石冲击。",
+        "en": "Provides uniform feeding for crushing stations in iron and copper mines. Ideal for large, high-hardness ores, preventing blockages and enhancing production stability. Maximum capacity reaches 217 m³/h with plate structure designed to withstand impact of large ores."
+      },
+      "icon": "🏭"
+    },
+    {
+      "title": {
+        "zh": "砂石骨料生产",
+        "en": "Aggregate Production"
+      },
+      "description": {
+        "zh": "作为砂石生产线初级给料设备，将料仓物料均匀给入破碎机。适应湿润黏性物料，减少给料波动，最低处理量15 m³/h，确保生产线连续稳定运行。",
+        "en": "Serves as primary feeding equipment in aggregate production, transferring materials from hoppers to crushers. Handles wet and sticky materials with minimal feeding fluctuations. Minimum capacity of 15 m³/h ensures continuous stable operation of production lines."
+      },
+      "icon": "🪨"
+    },
+    {
+      "title": {
+        "zh": "水泥制造",
+        "en": "Cement Manufacturing"
+      },
+      "description": {
+        "zh": "为水泥生产提供石灰石、黏土等原料的稳定给料。耐磨板式设计支持连续作业，宽度选择800-1200mm满足不同产量需求，适合长时间无间断运行。",
+        "en": "Delivers stable feeding of limestone and clay for cement production. Wear-resistant plate design supports continuous operation with width options of 800-1200mm for various output requirements, suitable for long-term uninterrupted operation."
+      },
+      "icon": "🏗️"
+    },
+    {
+      "title": {
+        "zh": "冶金工业",
+        "en": "Metallurgical Industry"
+      },
+      "description": {
+        "zh": "为钢铁、有色金属冶炼提供均匀给料。特殊板式结构耐高温，确保持续稳定供料，设备重量3500-5000kg保证重载工况下的稳定性和可靠性。",
+        "en": "Provides uniform feeding for steel and non-ferrous metal smelting. Special plate structure withstands high temperatures, ensuring continuous stable material supply. Equipment weight of 3500-5000kg guarantees stability and reliability under heavy-duty conditions."
+      },
+      "icon": "⚙️"
+    }
+  ],
+  "technicalParameters": [
+    {
+      "model": "GBH80-2.2",
+      "width": "800",
+      "sprocketCenterDistance": "2200",
+      "speed": "0.025-1.5",
+      "capacity": "15-91",
+      "motorModel": "Y132M-4",
+      "power": "7.5",
+      "dimensions": "3840×2853×1185",
+      "weight": "3722"
+    },
+    {
+      "model": "GBH80-4",
+      "width": "800",
+      "sprocketCenterDistance": "4000",
+      "speed": "0.025-1.5",
+      "capacity": "15-91",
+      "motorModel": "Y132M-4",
+      "power": "7.5",
+      "dimensions": "5640×2826×1185",
+      "weight": "4903"
+    },
+    {
+      "model": "GBH100-1.6",
+      "width": "1000",
+      "sprocketCenterDistance": "1600",
+      "speed": "0.025-1.5",
+      "capacity": "22-131",
+      "motorModel": "Y132M-4",
+      "power": "7.5",
+      "dimensions": "3240×3026×1235",
+      "weight": "3561"
+    },
+    {
+      "model": "GBH100-3",
+      "width": "1000",
+      "sprocketCenterDistance": "3000",
+      "speed": "0.025-1.5",
+      "capacity": "22-131",
+      "motorModel": "Y132M-4",
+      "power": "7.5",
+      "dimensions": "4640×3114×1235",
+      "weight": "4548"
+    },
+    {
+      "model": "GBH120-1.8",
+      "width": "1200",
+      "sprocketCenterDistance": "1800",
+      "speed": "0.025-1.5",
+      "capacity": "35-217",
+      "motorModel": "Y160M-6",
+      "power": "7.5",
+      "dimensions": "3440×3314×1235",
+      "weight": "3965"
+    },
+    {
+      "model": "GBH120-2.2",
+      "width": "1200",
+      "sprocketCenterDistance": "2200",
+      "speed": "0.025-1.5",
+      "capacity": "35-217",
+      "motorModel": "Y160M-6",
+      "power": "7.5",
+      "dimensions": "3840×3314×1285",
+      "weight": "4238"
+    }
+  ],
+  "relatedProducts": [
+    "belt-feeder",
+    "electromagnetic-vibrating-feeder",
+    "disc-feeder",
+    "xdg-vibrating-feeder"
+  ]
+} 

@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-primary: var(--font-sandvik-sans), var(--font-noto-sans), 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-primary);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-primary);
+}
+
+/* 中文标题样式 */
+/* 首屏粗标题 */
+.heading-chinese-black {
+  font-family: var(--font-sandvik-sans), sans-serif;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+
+/* 非首屏细标题 */
+.heading-chinese-thin {
+  font-family: var(--font-sandvik-sans), sans-serif;
+  letter-spacing: -0.025em;
+  font-weight: 400;
+}
+
+/* 标题覆盖样式 - 应用于所有h1-h6标题 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sandvik-sans), sans-serif;
+}
+
+/* 标题覆盖样式 - 应用于所有h1-h6标题，不包括首屏 */
+h1:not(.hero h1), 
+h2:not(.hero h2), 
+h3:not(.hero h3), 
+h4:not(.hero h4), 
+h5:not(.hero h5), 
+h6:not(.hero h6) {
+  font-weight: 400 !important;
+  font-family: var(--font-sandvik-sans), sans-serif !important;
+}
+
+.font-chinese-black {
+  font-family: var(--font-primary);
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+.button-chinese-black {
+  font-family: var(--font-primary);
+  letter-spacing: 0.025em;
+  font-weight: 500;
+}
+
+/* 搜索框动画样式 */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.3s ease-out forwards;
+}
+
+/* 自定义类 - 解决方案页面特殊布局 */
+@media (min-width: 768px) {
+  .md\:contain {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .max-md\:contain {
+    width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+.rounded-xs {
+  border-radius: 0.25rem !important;
+}
+
+.theme-wolfram\:text-base {
+  font-size: 1rem !important;
+}
+
+/* 导航栏平滑滚动过渡 */
+@keyframes headerAppear {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes headerDisappear {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.header-appear {
+  animation: headerAppear 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.header-disappear {
+  animation: headerDisappear 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* 避免页面内容在导航栏固定时跳动 */
+.header-spacer {
+  height: 6rem; /* 与导航栏高度相同 */
+  display: none;
+}
+
+.header-spacer.active {
+  display: block;
+}

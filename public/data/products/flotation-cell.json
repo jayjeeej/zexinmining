@@ -1,0 +1,164 @@
+{
+  "id": "flotation-cell",
+  "category": "beneficiation",
+  "subcategory": "flotation",
+  "model": "KYF系列",
+  "series": {
+    "zh": "浮选槽",
+    "en": "Flotation Cell"
+  },
+  "image": "/images/products/flotation/flotation-cell.jpg",
+  "effectiveVolume": {
+    "zh": "1-24 m³",
+    "en": "1-24 m³"
+  },
+  "capacity": {
+    "zh": "0.8-28 m³/min",
+    "en": "0.8-28 m³/min"
+  },
+  "motorPower": {
+    "zh": "3.0-55 kW",
+    "en": "3.0-55 kW"
+  },
+  "overview": {
+    "zh": "浮选槽是一种经典的矿物浮选设备，采用机械搅拌与气泡浮选相结合的原理，用于各类金属和非金属矿物的分选。该设备结构合理，制造工艺成熟，稳定性高，是目前选矿厂最常用的浮选设备之一。浮选槽可以根据工艺需求灵活组合，形成粗选、精选、扫选等多道工序的浮选流程，满足不同矿物的选别要求，广泛应用于有色金属、黑色金属和非金属矿物的选矿过程。",
+    "en": "The Flotation Cell is a classic mineral flotation equipment that combines mechanical agitation with bubble flotation principles for the separation of various metallic and non-metallic minerals. This equipment has a reasonable structure, mature manufacturing technology, and high stability, making it one of the most commonly used flotation equipment in mineral processing plants. Flotation cells can be flexibly combined according to process requirements to form flotation processes with multiple procedures such as rough selection, fine selection, and scanning selection, meeting the separation requirements of different minerals. It is widely used in the mineral processing of non-ferrous metals, ferrous metals, and non-metallic minerals."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Parameters"
+    },
+    "note": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    },
+    "tableHeaders": [
+      {
+        "zh": "型号",
+        "en": "Model",
+        "unit": ""
+      },
+      {
+        "zh": "有效容积",
+        "en": "Effective Volume",
+        "unit": "m³"
+      },
+      {
+        "zh": "处理能力",
+        "en": "Processing Capacity",
+        "unit": "m³/min"
+      },
+      {
+        "zh": "槽体尺寸",
+        "en": "Tank Dimensions",
+        "unit": "mm"
+      },
+      {
+        "zh": "叶轮转速",
+        "en": "Impeller Speed",
+        "unit": "r/min"
+      },
+      {
+        "zh": "充气量",
+        "en": "Air Volume",
+        "unit": "m³/min"
+      },
+      {
+        "zh": "电机功率",
+        "en": "Motor Power",
+        "unit": "kW"
+      },
+      {
+        "zh": "重量",
+        "en": "Weight",
+        "unit": "kg"
+      }
+    ],
+    "tableData": [
+      ["KYF-1", "1", "0.8-2.0", "1200×1200×1500", "320", "0.2-0.5", "3.0", "1000"],
+      ["KYF-2", "2", "1.5-3.5", "1500×1500×1600", "290", "0.4-0.8", "5.5", "1600"],
+      ["KYF-4", "4", "3.0-7.0", "1800×1800×1800", "270", "0.6-1.2", "11", "2400"],
+      ["KYF-8", "8", "6.0-12", "2200×2200×2000", "245", "1.0-2.0", "18.5", "3800"],
+      ["KYF-16", "16", "10-20", "2800×2800×2300", "225", "1.8-3.0", "30", "5600"],
+      ["KYF-24", "24", "15-28", "3200×3200×2500", "210", "2.5-4.0", "55", "7500"]
+    ]
+  },
+  "features": {
+    "zh": [
+      "经典可靠的设计，运行稳定性高，适应性强",
+      "叶轮和定子结构优化，气泡分布均匀，矿化率高",
+      "可调节的充气量和搅拌强度，适应不同矿物特性",
+      "槽体采用耐磨材料，使用寿命长",
+      "维护简便，操作容易，运行成本低",
+      "多槽串联使用灵活，满足复杂工艺流程需求"
+    ],
+    "en": [
+      "Classic reliable design with high operational stability and strong adaptability",
+      "Optimized impeller and stator structure for uniform bubble distribution and high mineralization rate",
+      "Adjustable air volume and agitation intensity to adapt to different mineral characteristics",
+      "Tank made of wear-resistant materials for long service life",
+      "Easy maintenance, simple operation, low operating costs",
+      "Flexible use of multiple tanks in series to meet complex process flow requirements"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Applications"
+    },
+    "items": [
+      {
+        "icon": "🔴",
+        "title": {
+          "zh": "有色金属选矿",
+          "en": "Non-ferrous Metal Processing"
+        },
+        "description": {
+          "zh": "广泛应用于铜、铅、锌、镍等有色金属矿物的浮选分离",
+          "en": "Widely used in flotation separation of non-ferrous metal minerals such as copper, lead, zinc, and nickel"
+        }
+      },
+      {
+        "icon": "⚫",
+        "title": {
+          "zh": "黑色金属选矿",
+          "en": "Ferrous Metal Processing"
+        },
+        "description": {
+          "zh": "适用于铁、锰等黑色金属矿物的浮选工艺",
+          "en": "Suitable for flotation processes of ferrous metal minerals such as iron and manganese"
+        }
+      },
+      {
+        "icon": "🪨",
+        "title": {
+          "zh": "非金属矿物加工",
+          "en": "Non-metallic Mineral Processing"
+        },
+        "description": {
+          "zh": "适合萤石、长石、石墨等非金属矿物的浮选提纯",
+          "en": "Suitable for flotation purification of non-metallic minerals such as fluorite, feldspar, and graphite"
+        }
+      },
+      {
+        "icon": "⚙️",
+        "title": {
+          "zh": "复杂矿石处理",
+          "en": "Complex Ore Processing"
+        },
+        "description": {
+          "zh": "适用于多金属复杂矿石的选别，可实现多种矿物的分离回收",
+          "en": "Suitable for separation of complex polymetallic ores, enabling separation and recovery of multiple minerals"
+        }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "aeration-flotation-machine",
+    "self-priming-flotation-machine",
+    "bar-flotation-machine",
+    "xcf-flotation-machine",
+    "coarse-particle-flotation-machine"
+  ]
+} 

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "high-weir-spiral-classifier",
+    "nameEn": "High Weir Spiral Classifier",
+    "nameZh": "高堰式单螺旋分级机",
+    "model": "FLG系列",
+    "sandReturnCapacity": { "min": 30, "max": 11625, "unit": "t/d" },
+    "overflowCapacity": { "min": 10, "max": 890, "unit": "t/d" },
+    "motorPower": { "min": 2.2, "max": 30, "unit": "kW" }
+  },
+  {
+    "id": "double-spiral-classifier",
+    "nameEn": "Submerged Spiral Classifier",
+    "nameZh": "沉没式螺旋分级机",
+    "model": "FLC系列",
+    "sandReturnCapacity": { "min": 160, "max": 11650, "unit": "t/d" },
+    "overflowCapacity": { "min": 50, "max": 705, "unit": "t/d" },
+    "motorPower": { "min": 2.2, "max": 30, "unit": "kW" }
+  }
+] 

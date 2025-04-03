@@ -1,0 +1,237 @@
+{
+  "id": "jaw-crusher",
+  "category": "preprocessing",
+  "subcategory": "crushers",
+  "model": "PE100150",
+  "series": {
+    "zh": "颚式破碎机",
+    "en": "Jaw Crusher"
+  },
+  "imagePath": "/images/products/crushers/jaw-crusher/main.jpg",
+  "capacity": {
+    "min": 1,
+    "max": 300,
+    "unit": "t/h"
+  },
+  "maxFeedSize": {
+    "min": 80,
+    "max": 750,
+    "unit": "mm"
+  },
+  "motorPower": {
+    "min": 5.5,
+    "max": 110,
+    "unit": "kW"
+  },
+  "overview": {
+    "zh": "颚式破碎机是一种高效率的初级破碎设备，主要用于矿山、冶金、建材、公路、铁路、水利和化工等行业的物料破碎。该设备破碎比大，产品粒度均匀，结构简单，工作可靠，维修方便，运营费用低。",
+    "en": "The Jaw Crusher is a high-efficiency primary crushing device mainly used for material crushing in mining, metallurgy, building materials, road, railway, water conservancy, and chemical industries. This equipment has a large crushing ratio, uniform product size, simple structure, reliable operation, easy maintenance, and low operating costs."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Specifications"
+    },
+    "columns": [
+      { "key": "model", "title": { "zh": "型号", "en": "Model" }, "width": "15%" },
+      { "key": "feedOpening", "title": { "zh": "给料口尺寸", "en": "Feed Opening" }, "unit": "mm", "width": "15%" },
+      { "key": "maxFeedSize", "title": { "zh": "最大进料尺寸", "en": "Max Feed Size" }, "unit": "mm", "width": "15%" },
+      { "key": "dischargeRange", "title": { "zh": "排料口调整范围", "en": "Discharge Range" }, "unit": "mm", "width": "15%" },
+      { "key": "capacity", "title": { "zh": "处理能力", "en": "Capacity" }, "unit": "t/h", "width": "20%" },
+      { "key": "power", "title": { "zh": "电机功率", "en": "Motor Power" }, "unit": "kW", "width": "10%" },
+      { "key": "weight", "title": { "zh": "重量", "en": "Weight" }, "unit": "t", "width": "10%" }
+    ],
+    "data": [
+      {
+        "model": "PE100×150", 
+        "feedOpening": "100×150",
+        "maxFeedSize": 80,
+        "dischargeRange": "10-30",
+        "capacity": "1-3",
+        "power": "5.5",
+        "weight": "0.8"
+      },
+      {
+        "model": "PE150×250", 
+        "feedOpening": "150×250",
+        "maxFeedSize": 120,
+        "dischargeRange": "10-40",
+        "capacity": "5-12",
+        "power": "15",
+        "weight": "1.5"
+      },
+      {
+        "model": "PE250×400", 
+        "feedOpening": "250×400",
+        "maxFeedSize": 210,
+        "dischargeRange": "20-60",
+        "capacity": "10-35",
+        "power": "22",
+        "weight": "2.8"
+      },
+      {
+        "model": "PE250×750", 
+        "feedOpening": "250×750",
+        "maxFeedSize": 210,
+        "dischargeRange": "20-70",
+        "capacity": "15-50",
+        "power": "30",
+        "weight": "5.8"
+      },
+      {
+        "model": "PE250×1200", 
+        "feedOpening": "250×1200",
+        "maxFeedSize": 210,
+        "dischargeRange": "20-80",
+        "capacity": "20-80",
+        "power": "45",
+        "weight": "7.5"
+      },
+      {
+        "model": "PE400×600", 
+        "feedOpening": "400×600",
+        "maxFeedSize": 340,
+        "dischargeRange": "40-100",
+        "capacity": "20-60",
+        "power": "30",
+        "weight": "6.5"
+      },
+      {
+        "model": "PE500×750", 
+        "feedOpening": "500×750",
+        "maxFeedSize": 425,
+        "dischargeRange": "50-100",
+        "capacity": "45-100",
+        "power": "55",
+        "weight": "10.3"
+      },
+      {
+        "model": "PE600×900", 
+        "feedOpening": "600×900",
+        "maxFeedSize": 500,
+        "dischargeRange": "65-160",
+        "capacity": "60-130",
+        "power": "75",
+        "weight": "16.5"
+      },
+      {
+        "model": "PE750×1060", 
+        "feedOpening": "750×1060",
+        "maxFeedSize": 630,
+        "dischargeRange": "80-180",
+        "capacity": "110-240",
+        "power": "90",
+        "weight": "28"
+      },
+      {
+        "model": "PE900×1200", 
+        "feedOpening": "900×1200",
+        "maxFeedSize": 750,
+        "dischargeRange": "95-225",
+        "capacity": "140-300",
+        "power": "110",
+        "weight": "52"
+      }
+    ],
+    "notes": [
+      {
+        "content": {
+          "zh": "可按照客户需求进行定制",
+          "en": "Can be customized according to customer requirements"
+        }
+      }
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Application Areas"
+    },
+    "items": [
+      {
+        "icon": "🏗️",
+        "title": {
+          "zh": "建筑材料",
+          "en": "Construction Materials"
+        },
+        "description": {
+          "zh": "广泛应用于建筑石料的初级破碎。",
+          "en": "Widely used for primary crushing of construction aggregates."
+        }
+      },
+      {
+        "icon": "⛏️",
+        "title": {
+          "zh": "采矿业",
+          "en": "Mining Industry"
+        },
+        "description": {
+          "zh": "适用于各类矿石的粗碎和中碎作业。",
+          "en": "Suitable for coarse and medium crushing of various ores."
+        }
+      },
+      {
+        "icon": "🚧",
+        "title": {
+          "zh": "公路建设",
+          "en": "Highway Construction"
+        },
+        "description": {
+          "zh": "用于道路基础材料的制备和加工。",
+          "en": "Used for preparation and processing of road base materials."
+        }
+      },
+      {
+        "icon": "♻️",
+        "title": {
+          "zh": "废料回收",
+          "en": "Waste Recycling"
+        },
+        "description": {
+          "zh": "可用于建筑废料和混凝土废料的破碎和回收。",
+          "en": "Can be used for crushing and recycling of construction waste and concrete waste."
+        }
+      }
+    ]
+  },
+  "features": [
+    {
+      "zh": "采用高强度铸钢材料，抗冲击性能强",
+      "en": "Made of high-strength cast steel material with strong impact resistance"
+    },
+    {
+      "zh": "深腔破碎，处理能力大",
+      "en": "Deep cavity crushing design, large processing capacity"
+    },
+    {
+      "zh": "易损件材质优良，使用寿命长",
+      "en": "Excellent material for wear parts, long service life"
+    },
+    {
+      "zh": "结构简单紧凑，运行稳定可靠",
+      "en": "Simple and compact structure, stable and reliable operation"
+    },
+    {
+      "zh": "维护保养方便，运营成本低",
+      "en": "Easy maintenance and low operating costs"
+    }
+  ],
+  "seo": {
+    "title": {
+      "zh": "颚式破碎机 - 泽鑫矿山设备 | 高效初级破碎设备",
+      "en": "Jaw Crusher - Zexin Mining Equipment | High-Efficiency Primary Crushing"
+    },
+    "description": {
+      "zh": "颚式破碎机是一种高效的初级破碎设备，具有破碎比大、产品粒度均匀、结构简单、操作方便等特点，广泛应用于矿山、冶金、建筑等行业。",
+      "en": "The Jaw Crusher is a high-efficiency primary crushing equipment with features like large crushing ratio, uniform product size, simple structure, and easy operation, widely used in mining, metallurgy, construction and other industries."
+    },
+    "keywords": {
+      "zh": "颚式破碎机,初级破碎,矿山设备,破碎机,泽鑫矿山,矿石破碎,建筑材料破碎",
+      "en": "jaw crusher,primary crushing,mining equipment,crusher,Zexin Mining,ore crushing,construction material crushing"
+    }
+  },
+  "warranty": {
+    "zh": "泽鑫矿山设备为所有颚式破碎机提供12个月的标准保修期，并提供延长保修服务选项。我们的全球售后团队确保及时响应和解决设备问题。",
+    "en": "Zexin Mining Equipment offers a standard 12-month warranty for all jaw crushers, with extended warranty options available. Our global after-sales team ensures timely response and resolution of equipment issues."
+  }
+} 

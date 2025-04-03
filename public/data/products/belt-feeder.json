@@ -1,0 +1,160 @@
+{
+  "id": "belt-feeder",
+  "nameZh": "皮带给料机",
+  "nameEn": "Belt Feeder",
+  "descriptionZh": "连续均匀输送散装物料设备，处理能力10-350 m³/h。采用高质量皮带结构，精确控制给料速度，低能耗高效率。适用于矿山、电力、水泥等多领域物料输送。",
+  "descriptionEn": "Continuous bulk material transportation equipment with 10-350 m³/h capacity. Features high-quality belt structure, precise feeding speed control, and low energy consumption. Suitable for material handling in mining, power, cement, and other industries.",
+  "mainImagePath": "/images/preprocessing/feeder-gz2.jpg",
+  "category": "preprocessing",
+  "subcategory": "feeders",
+  "featured": true,
+  "capacity": {
+    "min": 10,
+    "max": 350,
+    "unit": "m³/h"
+  },
+  "motorPower": {
+    "min": 0.75,
+    "max": 3,
+    "unit": "kW"
+  },
+  "specifications": [
+    {
+      "nameZh": "型号",
+      "nameEn": "Model",
+      "valueZh": "500×1000",
+      "valueEn": "500×1000"
+    },
+    {
+      "nameZh": "处理能力",
+      "nameEn": "Processing Capacity",
+      "valueZh": "10-350 m³/h",
+      "valueEn": "10-350 m³/h"
+    },
+    {
+      "nameZh": "电机功率",
+      "nameEn": "Motor Power",
+      "valueZh": "0.75-3 kW",
+      "valueEn": "0.75-3 kW"
+    }
+  ],
+  "features": [
+    {
+      "titleZh": "精确控制",
+      "titleEn": "Precise Control",
+      "descriptionZh": "0.1-1.5 m/s无级调速系统，实现精确给料量控制",
+      "descriptionEn": "Infinitely variable speed control (0.1-1.5 m/s) enables precise material feeding rate"
+    },
+    {
+      "titleZh": "低能耗",
+      "titleEn": "Low Energy Consumption",
+      "descriptionZh": "0.75-3 kW高效电机，传动系统优化降低50%能耗",
+      "descriptionEn": "0.75-3 kW efficient motors with optimized drive system reducing energy consumption by 50%"
+    },
+    {
+      "titleZh": "耐磨耐用",
+      "titleEn": "Wear-resistant and Durable",
+      "descriptionZh": "特种橡胶皮带设计，使用寿命延长30%，适应恶劣环境",
+      "descriptionEn": "Special rubber belt design extends service life by 30%, suitable for harsh environments"
+    },
+    {
+      "titleZh": "维护简便",
+      "titleEn": "Easy Maintenance",
+      "descriptionZh": "模块化结构设计，零部件更换快速，降低维护成本",
+      "descriptionEn": "Modular structure for quick component replacement, reducing maintenance costs"
+    },
+    {
+      "titleZh": "适应性广",
+      "titleEn": "Wide Adaptability",
+      "descriptionZh": "多宽度选择(500-800mm)，适应不同物料特性与处理要求",
+      "descriptionEn": "Multiple width options (500-800mm) to accommodate various material properties and processing requirements"
+    }
+  ],
+  "applications": [
+    {
+      "title": {
+        "zh": "矿山开采",
+        "en": "Mining Operations"
+      },
+      "description": {
+        "zh": "用于地下和露天矿山，将爆破矿石从料仓均匀给入破碎设备。变速设计可根据下游设备调节给料速度，处理能力可达350 t/h。",
+        "en": "Used in underground and open-pit mines to evenly feed blasted ore from silos to crushers. Variable speed design adjusts feeding rate based on downstream equipment requirements, with capacity up to 350 t/h."
+      },
+      "icon": "⛏️"
+    },
+    {
+      "title": {
+        "zh": "电力工业",
+        "en": "Power Industry"
+      },
+      "description": {
+        "zh": "火电厂煤炭输送系统关键设备，为锅炉提供均匀给煤。精确调速(0.1-1.5 m/s)确保燃料供应稳定，满足负荷变化需求。",
+        "en": "Key equipment in thermal power plant coal transport systems. Precise speed regulation (0.1-1.5 m/s) ensures stable fuel supply to boilers and accommodates load variations."
+      },
+      "icon": "⚡"
+    },
+    {
+      "title": {
+        "zh": "水泥生产",
+        "en": "Cement Production"
+      },
+      "description": {
+        "zh": "为水泥生产线提供原料定量给料及熟料输送。设备可在高粉尘环境长期稳定运行，专用防护设计减少维护需求。",
+        "en": "Provides quantitative feeding of raw materials and clinker transport in cement production lines. Equipment operates stably in high-dust environments with special protective designs minimizing maintenance."
+      },
+      "icon": "🏭"
+    },
+    {
+      "title": {
+        "zh": "港口物料处理",
+        "en": "Port Material Handling"
+      },
+      "description": {
+        "zh": "港口散货系统中用于均匀给料船舶装载。宽带设计(最宽800mm)提供大处理能力，可处理煤炭、矿石等多种散装物料。",
+        "en": "Used in port bulk cargo systems for uniform ship loading. Wide belt design (up to 800mm) provides large handling capacity for various bulk materials including coal and ore."
+      },
+      "icon": "🚢"
+    }
+  ],
+  "technicalParameters": [
+    {
+      "model": "500×1000",
+      "width": "500",
+      "length": "1000",
+      "speed": "0.1-1.5",
+      "capacity": "10-100",
+      "motorModel": "Y80M1-4",
+      "power": "0.75",
+      "dimensions": "2850×850×1100",
+      "weight": "480"
+    },
+    {
+      "model": "650×1200",
+      "width": "650",
+      "length": "1200",
+      "speed": "0.1-1.5",
+      "capacity": "20-180",
+      "motorModel": "Y90L-4",
+      "power": "1.5",
+      "dimensions": "3100×980×1200",
+      "weight": "640"
+    },
+    {
+      "model": "800×1500",
+      "width": "800",
+      "length": "1500",
+      "speed": "0.1-1.5",
+      "capacity": "45-350",
+      "motorModel": "Y100L-4",
+      "power": "3",
+      "dimensions": "3500×1150×1350",
+      "weight": "850"
+    }
+  ],
+  "relatedProducts": [
+    "plate-feeder",
+    "electromagnetic-vibrating-feeder",
+    "disc-feeder",
+    "xdg-vibrating-feeder"
+  ]
+} 

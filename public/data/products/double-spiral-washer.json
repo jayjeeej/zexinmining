@@ -1,0 +1,101 @@
+{
+  "id": "double-spiral-washer",
+  "nameEn": "Double Spiral Washer",
+  "nameZh": "双螺旋洗矿机",
+  "model": "2FG系列",
+  "capacity": { "min": 15, "max": 100, "unit": "t/h" },
+  "motorPower": { "min": 5.5, "max": 22, "unit": "kW" },
+  "overview": {
+    "zh": "双螺旋洗矿机（2FG系列）是一种高效的矿物洗选设备，采用双螺旋结构设计，具有更大的处理能力和更高的洗选效率。该设备通过两组并列的螺旋叶片同时工作，对物料进行充分的搅拌和洗选，特别适用于大型矿山的洗矿作业。与单螺旋洗矿机相比，双螺旋洗矿机具有处理量大、能耗低、分级效果好等优点。",
+    "en": "The Double Spiral Washer (2FG Series) is a high-efficiency mineral washing equipment with a double spiral structure design, offering larger processing capacity and higher washing efficiency. The equipment works through two sets of parallel spiral blades that simultaneously mix and wash materials, particularly suitable for large-scale mining operations. Compared to single spiral washers, double spiral washers feature higher processing capacity, lower energy consumption, and better classification effects."
+  },
+  "specifications": [
+    {
+      "model": "2FG-1530",
+      "capacity": "15-25",
+      "motorPower": "5.5",
+      "spiralDiameter": "1000",
+      "tankLength": "4000",
+      "tankWidth": "1600",
+      "totalWeight": "3200"
+    },
+    {
+      "model": "2FG-1840",
+      "capacity": "25-50",
+      "motorPower": "11",
+      "spiralDiameter": "1500",
+      "tankLength": "5000",
+      "tankWidth": "2000",
+      "totalWeight": "4500"
+    },
+    {
+      "model": "2FG-2050",
+      "capacity": "50-80",
+      "motorPower": "15",
+      "spiralDiameter": "1800",
+      "tankLength": "6000",
+      "tankWidth": "2500",
+      "totalWeight": "6200"
+    },
+    {
+      "model": "2FG-2460",
+      "capacity": "80-100",
+      "motorPower": "22",
+      "spiralDiameter": "2000",
+      "tankLength": "7000",
+      "tankWidth": "3000",
+      "totalWeight": "8800"
+    }
+  ],
+  "features": [
+    {
+      "zh": "双螺旋设计，处理能力大幅提升",
+      "en": "Double spiral design significantly increases processing capacity"
+    },
+    {
+      "zh": "两组螺旋叶片同步运行，洗选效果更均匀",
+      "en": "Synchronized operation of two spiral blades for more uniform washing effect"
+    },
+    {
+      "zh": "坚固的传动系统，确保高负荷运行的稳定性",
+      "en": "Robust drive system ensures stability during high-load operation"
+    },
+    {
+      "zh": "高耐磨材料制造，延长设备使用寿命",
+      "en": "Made of highly wear-resistant materials to extend equipment service life"
+    },
+    {
+      "zh": "操作简便，维护成本低",
+      "en": "Easy operation and low maintenance cost"
+    }
+  ],
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Application Areas"
+    },
+    "items": [
+      {
+        "icon": "⛏️",
+        "title": { "zh": "大型矿山洗选", "en": "Large-scale Mining Washing" },
+        "description": { "zh": "特别适用于大型矿山的铁矿、铜矿等矿石的高产量洗选作业", "en": "Particularly suitable for high-capacity washing operations of iron ore, copper ore, etc. in large-scale mines" }
+      },
+      {
+        "icon": "💎",
+        "title": { "zh": "重矿物洗选", "en": "Heavy Mineral Washing" },
+        "description": { "zh": "适用于比重较大的矿物的洗选和分级", "en": "Suitable for washing and classification of minerals with higher specific gravity" }
+      },
+      {
+        "icon": "⚒️",
+        "title": { "zh": "大型煤矿洗选", "en": "Large Coal Mine Washing" },
+        "description": { "zh": "用于大型煤矿的煤炭洗选和脱泥，处理量大", "en": "Used for large-capacity coal washing and de-mudding in large coal mines" }
+      },
+      {
+        "icon": "🏗️",
+        "title": { "zh": "砂石骨料生产", "en": "Sand and Gravel Aggregate Production" },
+        "description": { "zh": "在大型砂石骨料生产线中用于高产量的物料洗选", "en": "Used for high-capacity material washing in large sand and gravel aggregate production lines" }
+      }
+    ]
+  },
+  "relatedProducts": ["drum-washer", "spiral-washer"]
+} 

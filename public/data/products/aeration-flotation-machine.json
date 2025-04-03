@@ -1,0 +1,175 @@
+{
+  "id": "aeration-flotation-machine",
+  "category": "beneficiation",
+  "subcategory": "flotation",
+  "model": "BS系列",
+  "series": {
+    "zh": "充气式浮选机",
+    "en": "Aeration Flotation Machine"
+  },
+  "image": "/images/products/flotation/aeration-flotation-machine.jpg",
+  "effectiveVolume": {
+    "zh": "2.2-38 m³",
+    "en": "2.2-38 m³"
+  },
+  "capacity": {
+    "zh": "0.5-30 m³/min",
+    "en": "0.5-30 m³/min"
+  },
+  "motorPower": {
+    "zh": "5.5-45 kW",
+    "en": "5.5-45 kW"
+  },
+  "overview": {
+    "zh": "充气式浮选机是一种高效的矿物分选设备，通过向矿浆中充入压缩空气形成大量气泡，使矿物颗粒附着于气泡表面浮选分离。该设备结构合理，充气均匀，浮选效率高，适用于有色金属、黑色金属和非金属矿物的浮选作业。",
+    "en": "The Aeration Flotation Machine is an efficient mineral separation equipment that forms numerous bubbles by injecting compressed air into the slurry, allowing mineral particles to attach to the bubble surfaces for flotation separation. This equipment features a reasonable structure, uniform aeration, high flotation efficiency, and is suitable for flotation operations of non-ferrous metals, ferrous metals, and non-metallic minerals."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Parameters"
+    },
+    "note": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    },
+    "tableHeaders": [
+      {
+        "zh": "型号",
+        "en": "Model",
+        "unit": ""
+      },
+      {
+        "zh": "有效容积",
+        "en": "Effective Volume",
+        "unit": "m³"
+      },
+      {
+        "zh": "处理能力",
+        "en": "Processing Capacity",
+        "unit": "m³"
+      },
+      {
+        "zh": "叶轮直径",
+        "en": "Impeller Diameter",
+        "unit": "mm"
+      },
+      {
+        "zh": "叶轮转数",
+        "en": "Impeller Speed",
+        "unit": "r.p.m"
+      },
+      {
+        "zh": "鼓风机风压",
+        "en": "Blower Pressure",
+        "unit": "Kpa"
+      },
+      {
+        "zh": "最大充气量",
+        "en": "Max Air Volume",
+        "unit": "m³/m².min"
+      },
+      {
+        "zh": "搅拌电机功率",
+        "en": "Stirring Motor Power",
+        "unit": "Kw"
+      },
+      {
+        "zh": "刮板电机功率",
+        "en": "Scraper Motor Power",
+        "unit": "Kw"
+      },
+      {
+        "zh": "单槽重量",
+        "en": "Unit Weight",
+        "unit": "kg"
+      }
+    ],
+    "tableData": [
+      ["BS-K2.2", "2.2", "0.5-3", "420", "260", "≥15", "2～3", "5.5", "0.75", "1750"],
+      ["BS-K4", "4", "0.5-4", "500", "220,230", "≥17", "3～6", "7.5", "0.75", "2568"],
+      ["BS-K6", "6", "1.0-6", "650", "197", "≥27", "4～10", "15", "1.1", "3570"],
+      ["BS-K8", "8", "1.0-8", "650", "180,190", "≥21", "4～10", "15", "1.1", "4539"],
+      ["BS-K16", "16", "2.0-15", "750", "160,170", "≥27", "6～15", "30", "1.1", "8131"],
+      ["BS-K24", "24", "7.0-20", "830", "154,159", "≥29", "8～18", "37", "1.1", "9546"],
+      ["BS-K38", "38", "10.0-30", "910", "141", "≥34", "10～20", "45", "1.1", "11107"]
+    ]
+  },
+  "features": {
+    "zh": [
+      "采用特殊设计的叶轮和定子，生成大量均匀细微气泡，提高浮选效率",
+      "气泡分布均匀，矿化率高，回收率好",
+      "充气量可调，适应不同类型矿物的浮选需求",
+      "机械结构设计合理，运行稳定，维护简便",
+      "能耗低，处理量大，经济效益显著",
+      "可多槽串联使用，实现粗选、精选、扫选等多道工序"
+    ],
+    "en": [
+      "Special design of impeller and stator generates numerous uniform fine bubbles, improving flotation efficiency",
+      "Uniform bubble distribution, high mineralization rate, good recovery rate",
+      "Adjustable air volume to adapt to flotation requirements of different mineral types",
+      "Reasonable mechanical structure design, stable operation, easy maintenance",
+      "Low energy consumption, large processing capacity, significant economic benefits",
+      "Multiple tanks can be used in series to achieve multiple processes such as rough selection, fine selection, and scanning"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Applications"
+    },
+    "items": [
+      {
+        "icon": "🔴",
+        "title": {
+          "zh": "有色金属选矿",
+          "en": "Non-ferrous Metal Processing"
+        },
+        "description": {
+          "zh": "广泛应用于铜、铅、锌、镍等有色金属矿物的浮选分离",
+          "en": "Widely used in flotation separation of non-ferrous metal minerals such as copper, lead, zinc, and nickel"
+        }
+      },
+      {
+        "icon": "⚫",
+        "title": {
+          "zh": "黑色金属选矿",
+          "en": "Ferrous Metal Processing"
+        },
+        "description": {
+          "zh": "适用于铁、锰等黑色金属矿物的浮选工艺",
+          "en": "Suitable for flotation processes of ferrous metal minerals such as iron and manganese"
+        }
+      },
+      {
+        "icon": "🪨",
+        "title": {
+          "zh": "非金属矿物加工",
+          "en": "Non-metallic Mineral Processing"
+        },
+        "description": {
+          "zh": "可用于石墨、萤石、长石等非金属矿物的浮选提纯",
+          "en": "Can be used for flotation purification of non-metallic minerals such as graphite, fluorite, and feldspar"
+        }
+      },
+      {
+        "icon": "♻️",
+        "title": {
+          "zh": "废水处理",
+          "en": "Wastewater Treatment"
+        },
+        "description": {
+          "zh": "在某些工业废水处理过程中用于分离悬浮物",
+          "en": "Used to separate suspended solids in certain industrial wastewater treatment processes"
+        }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "self-priming-flotation-machine",
+    "flotation-cell",
+    "xcf-flotation-machine",
+    "rod-type-flotation-machine",
+    "coarse-particle-flotation-machine"
+  ]
+} 

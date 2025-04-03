@@ -1,0 +1,155 @@
+{
+  "id": "drum-screen",
+  "model": "GT2460",
+  "series": {
+    "zh": "无轴滚筒筛",
+    "en": "Shaftless Drum Screen"
+  },
+  "imagePath": "/images/products/screens/drum-screen.jpg",
+  "capacity": {
+    "min": 30,
+    "max": 240,
+    "unit": "m³/h"
+  },
+  "motorPower": {
+    "min": 3,
+    "max": 11,
+    "unit": "kW"
+  },
+  "aperture": {
+    "min": 10,
+    "max": 100,
+    "unit": "mm"
+  },
+  "overview": {
+    "zh": "圆鼓筛采用旋转筒体结构(3-6rpm)，内置螺旋提升装置。筒体直径1.2-2.0m，长度3.0-6.0m，筛孔尺寸10-100mm。处理能力30-240m³/h，可承受高含水率物料。耐磨设计使用寿命长，适用于城市固废和建筑垃圾分选。",
+    "en": "Drum Screen with slow-rotating cylinder (3-6rpm) and integrated spiral lifting device. Drum diameter 1.2-2.0m, length 3.0-6.0m, aperture 10-100mm. Capacity 30-240m³/h, handles high moisture materials. Wear-resistant design for extended life, ideal for municipal waste and construction debris sorting."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Specifications"
+    },
+    "columns": [
+      {
+        "key": "model",
+        "zh": "型号",
+        "en": "Model"
+      },
+      {
+        "key": "diameter",
+        "zh": "筒体直径 (m)",
+        "en": "Drum Diameter (m)"
+      },
+      {
+        "key": "length",
+        "zh": "筒体长度 (m)",
+        "en": "Drum Length (m)"
+      },
+      {
+        "key": "aperture",
+        "zh": "筛孔尺寸 (mm)",
+        "en": "Aperture Size (mm)"
+      },
+      {
+        "key": "capacity",
+        "zh": "处理能力 (m³/h)",
+        "en": "Capacity (m³/h)"
+      },
+      {
+        "key": "power",
+        "zh": "电机功率 (kW)",
+        "en": "Motor Power (kW)"
+      },
+      {
+        "key": "weight",
+        "zh": "设备重量 (t)",
+        "en": "Weight (t)"
+      }
+    ],
+    "data": [
+      {
+        "model": "GT1230",
+        "diameter": "1.2",
+        "length": "3.0",
+        "aperture": "10-100",
+        "capacity": "30-60",
+        "power": "3",
+        "weight": "2.6"
+      },
+      {
+        "model": "GT1540",
+        "diameter": "1.5",
+        "length": "4.0",
+        "aperture": "10-100",
+        "capacity": "50-100",
+        "power": "4",
+        "weight": "3.8"
+      },
+      {
+        "model": "GT1550",
+        "diameter": "1.5",
+        "length": "5.0",
+        "aperture": "10-100",
+        "capacity": "60-120",
+        "power": "5.5",
+        "weight": "4.5"
+      },
+      {
+        "model": "GT1860",
+        "diameter": "1.8",
+        "length": "6.0",
+        "aperture": "10-100",
+        "capacity": "90-180",
+        "power": "7.5",
+        "weight": "7.2"
+      },
+      {
+        "model": "GT2060",
+        "diameter": "2.0",
+        "length": "6.0",
+        "aperture": "10-100",
+        "capacity": "120-240",
+        "power": "11",
+        "weight": "9.5"
+      }
+    ],
+    "notes": {
+      "zh": "以上参数仅供参考，实际处理能力与筛孔尺寸、物料特性密切相关。",
+      "en": "The above parameters are for reference only, and the actual processing capacity is closely related to the aperture size and material characteristics."
+    }
+  },
+  "features": {
+    "zh": [
+      "旋转筒体设计：实现翻滚筛分",
+      "螺旋提升系统：延长物料停留时间",
+      "耐磨衬板技术：增强抗冲击性能",
+      "低速高扭矩传动：降低能耗",
+      "防堵塞筛板：处理高含水率物料"
+    ],
+    "en": [
+      "Rotating Drum Design: Tumbling screening action",
+      "Spiral Lifting System: Extended material retention time",
+      "Wear-Resistant Liner: Enhanced impact resistance",
+      "Low-Speed High-Torque Drive: Reduced energy consumption",
+      "Anti-Clogging Screen Plate: Processes high moisture materials"
+    ]
+  },
+  "applications": {
+    "zh": [
+      "环保：市政垃圾分选",
+      "煤炭：煤炭分级筛选",
+      "采矿：矿石预筛分",
+      "建材：建筑垃圾再生利用",
+      "建材：砂石生产线粗筛分"
+    ],
+    "en": [
+      "Environmental: Municipal waste sorting",
+      "Coal: Coal grading and screening",
+      "Mining: Ore pre-screening",
+      "Building Materials: Construction waste recycling",
+      "Building Materials: Coarse aggregate screening"
+    ]
+  },
+  "relatedProducts": ["ya-circular-vibrating-screen", "linear-vibrating-screen", "zkr-linear-vibrating-screen", "banana-vibrating-screen", "bar-vibrating-screen", "vibrating-screen"]
+} 

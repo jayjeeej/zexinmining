@@ -1,0 +1,362 @@
+{
+  "id": "zkr-linear-vibrating-screen",
+  "model": "ZKR1645",
+  "series": {
+    "zh": "ZKR直线振动筛",
+    "en": "ZKR Linear Vibrating Screen"
+  },
+  "imagePath": "/images/products/screens/zkr-linear-vibrating-screen.jpg",
+  "capacity": {
+    "min": 30,
+    "max": 540,
+    "unit": "m³/h"
+  },
+  "motorPower": {
+    "min": 11,
+    "max": 44,
+    "unit": "kW"
+  },
+  "aperture": {
+    "min": 0.25,
+    "max": 50,
+    "unit": "mm"
+  },
+  "overview": {
+    "zh": "ZKR直线振动筛是高效筛分设备，采用双振动电机驱动，筛面积3.6-14.4m²，处理能力5-540m³/h。适用于0.25-50mm物料筛分，振动频率16r/min，广泛应用于矿山、建材和冶金行业。",
+    "en": "ZKR Linear Vibrating Screen is a high-efficiency screening equipment featuring dual vibration motors, 3.6-14.4m² screening area, and 5-540m³/h processing capacity. Suitable for 0.25-50mm material screening with 16r/min vibration frequency, widely used in mining, construction materials, and metallurgical industries."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Specifications"
+    },
+    "columns": [
+      {
+        "key": "model",
+        "zh": "型号",
+        "en": "Model"
+      },
+      {
+        "key": "layers",
+        "zh": "筛网层数",
+        "en": "Screen Layers"
+      },
+      {
+        "key": "aperture",
+        "zh": "筛孔尺寸 (mm)",
+        "en": "Aperture Size (mm)"
+      },
+      {
+        "key": "screenArea",
+        "zh": "筛网面积 (m²)",
+        "en": "Screen Area (m²)"
+      },
+      {
+        "key": "maxFeedSize",
+        "zh": "最大给料粒度",
+        "en": "Max Feed Size"
+      },
+      {
+        "key": "frequency",
+        "zh": "振动频率(r/min)",
+        "en": "Vibration Frequency(r/min)"
+      },
+      {
+        "key": "amplitude",
+        "zh": "双振幅(mm)",
+        "en": "Double Amplitude(mm)"
+      },
+      {
+        "key": "capacity",
+        "zh": "处理能力(m³/h)",
+        "en": "Capacity (m³/h)"
+      },
+      {
+        "key": "power",
+        "zh": "电机功率 (kW)",
+        "en": "Motor Power (kW)"
+      }
+    ],
+    "data": [
+      {
+        "model": "ZKR1230",
+        "layers": "1",
+        "aperture": "0.25-13",
+        "screenArea": "3.6",
+        "maxFeedSize": "150",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "5-40",
+        "power": "2×5.5"
+      },
+      {
+        "model": "ZKR1230",
+        "layers": "2",
+        "aperture": "0.25-13",
+        "screenArea": "3.6×2",
+        "maxFeedSize": "150",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "5-40",
+        "power": "2×5.5"
+      },
+      {
+        "model": "ZKR1445",
+        "layers": "1",
+        "aperture": "0.25-50",
+        "screenArea": "6.3",
+        "maxFeedSize": "300",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "10-210",
+        "power": "2×7.5"
+      },
+      {
+        "model": "ZKR1445",
+        "layers": "2",
+        "aperture": "0.25-50",
+        "screenArea": "6.3×2",
+        "maxFeedSize": "300",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "10-210",
+        "power": "2×11"
+      },
+      {
+        "model": "ZKR1645",
+        "layers": "1",
+        "aperture": "0.25-50",
+        "screenArea": "7.2",
+        "maxFeedSize": "300",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "14-250",
+        "power": "2×11"
+      },
+      {
+        "model": "ZKR1645",
+        "layers": "2",
+        "aperture": "0.25-50",
+        "screenArea": "7.2×2",
+        "maxFeedSize": "300",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "14-250",
+        "power": "2×15"
+      },
+      {
+        "model": "ZKR1652",
+        "layers": "1",
+        "aperture": "0.25-50",
+        "screenArea": "8.4",
+        "maxFeedSize": "250",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "90-270",
+        "power": "2×11"
+      },
+      {
+        "model": "ZKR1652",
+        "layers": "2",
+        "aperture": "0.25-50",
+        "screenArea": "8.4×2",
+        "maxFeedSize": "250",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "90-270",
+        "power": "2×15"
+      },
+      {
+        "model": "ZKR1852",
+        "layers": "2",
+        "aperture": "0.25-50",
+        "screenArea": "9.45",
+        "maxFeedSize": "250",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "18.9-378",
+        "power": "2×11"
+      },
+      {
+        "model": "ZKR1852",
+        "layers": "1",
+        "aperture": "0.25-50",
+        "screenArea": "9.45",
+        "maxFeedSize": "250",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "18.9-378",
+        "power": "2×11"
+      },
+      {
+        "model": "ZKR1845",
+        "layers": "1",
+        "aperture": "0.25-50",
+        "screenArea": "8.1",
+        "maxFeedSize": "300",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "18-324",
+        "power": "2×15"
+      },
+      {
+        "model": "ZKR1845",
+        "layers": "2",
+        "aperture": "0.25-50",
+        "screenArea": "8.1×2",
+        "maxFeedSize": "300",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "18-324",
+        "power": "2×18.5"
+      },
+      {
+        "model": "ZKR2045",
+        "layers": "1",
+        "aperture": "0.25-50",
+        "screenArea": "9",
+        "maxFeedSize": "300",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "21-360",
+        "power": "2×18.5"
+      },
+      {
+        "model": "ZKR2045",
+        "layers": "2",
+        "aperture": "0.25-50",
+        "screenArea": "9×2",
+        "maxFeedSize": "300",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "21-360",
+        "power": "2×22"
+      },
+      {
+        "model": "ZKR2060",
+        "layers": "1",
+        "aperture": "0.25-50",
+        "screenArea": "12",
+        "maxFeedSize": "300",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "24-480",
+        "power": "2×18.5"
+      },
+      {
+        "model": "ZKR2060",
+        "layers": "2",
+        "aperture": "0.25-50",
+        "screenArea": "12×2",
+        "maxFeedSize": "300",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "24-480",
+        "power": "2×22"
+      },
+      {
+        "model": "ZKR2445",
+        "layers": "1",
+        "aperture": "0.25-50",
+        "screenArea": "10.8",
+        "maxFeedSize": "300",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "21-432",
+        "power": "2×22"
+      },
+      {
+        "model": "ZKR2445",
+        "layers": "2",
+        "aperture": "0.25-50",
+        "screenArea": "10.8×2",
+        "maxFeedSize": "300",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "21-432",
+        "power": "2×22"
+      },
+      {
+        "model": "ZKR2452",
+        "layers": "1",
+        "aperture": "0.25-50",
+        "screenArea": "12.6",
+        "maxFeedSize": "300",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "25-504",
+        "power": "2×22"
+      },
+      {
+        "model": "ZKR2452",
+        "layers": "2",
+        "aperture": "0.25-50",
+        "screenArea": "12.6×2",
+        "maxFeedSize": "300",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "25-504",
+        "power": "2×22"
+      },
+      {
+        "model": "ZKR2460",
+        "layers": "1",
+        "aperture": "0.25-50",
+        "screenArea": "14.4",
+        "maxFeedSize": "300",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "27-540",
+        "power": "2×22"
+      },
+      {
+        "model": "ZKR2460",
+        "layers": "2",
+        "aperture": "0.25-50",
+        "screenArea": "14.4×2",
+        "maxFeedSize": "300",
+        "frequency": "16",
+        "amplitude": "7-9",
+        "capacity": "27-540",
+        "power": "2×22"
+      }
+    ],
+    "notes": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    }
+  },
+  "features": {
+    "zh": [
+      "直线运动轨迹：物料在筛面上呈直线运动，分层效果好",
+      "双电机驱动系统：振动稳定，物料处理更均匀",
+      "筛网可选规格多：适应各种物料筛分需求",
+      "耐磨性好：使用高耐磨材料，延长设备使用寿命",
+      "维护方便：模块化设计，便于更换筛网和维修"
+    ],
+    "en": [
+      "Linear Motion Trajectory: Material moves in straight line on screen surface, better stratification",
+      "Dual Motor Drive System: Stable vibration, more uniform material processing",
+      "Multiple Screen Specifications: Adaptable to various material screening requirements",
+      "High Wear Resistance: Using high wear-resistant materials, extending equipment service life",
+      "Easy Maintenance: Modular design for convenient screen replacement and repair"
+    ]
+  },
+  "applications": {
+    "zh": [
+      "矿山：各类矿石筛分与分级",
+      "建材：砂石生产线物料筛选",
+      "冶金：原料预处理与成品分级",
+      "化工：颗粒物料精细分级",
+      "煤炭：煤炭洗选与分级处理"
+    ],
+    "en": [
+      "Mining: Various ore screening and classification",
+      "Construction Materials: Sand and stone production line material screening",
+      "Metallurgy: Raw material preprocessing and finished product classification",
+      "Chemical Industry: Fine classification of granular materials",
+      "Coal: Coal washing and grading"
+    ]
+  },
+  "relatedProducts": ["ya-circular-vibrating-screen", "linear-vibrating-screen", "banana-vibrating-screen", "bar-vibrating-screen", "drum-screen", "vibrating-screen"]
+} 

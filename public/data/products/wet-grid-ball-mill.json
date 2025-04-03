@@ -1,0 +1,94 @@
+{
+  "id": "wet-grid-ball-mill",
+  "nameEn": "Wet Grid Ball Mill",
+  "nameZh": "湿式格子型球磨机",
+  "model": "MQYg1212-MQYg2145",
+  "capacity": { "min": 0.17, "max": 45, "unit": "t/h" },
+  "motorPower": { "min": 22, "max": 280, "unit": "kW" },
+  "feedSize": { "min": 20, "max": 25, "unit": "mm" },
+  "dischargeSize": { "min": 0.074, "max": 0.4, "unit": "mm" },
+  "maxBallLoad": { "min": 2.4, "max": 23.6, "unit": "t" },
+  "overview": {
+    "zh": "湿式格子型球磨机是一种高效的研磨设备，广泛应用于选矿、建材、化工等行业。其特点是筒体内设有格子装置，使研磨的物料能够快速排出，提高生产效率和处理能力。湿式作业方式特别适合需要进一步分选处理的矿石研磨，能够有效减少过粉碎情况，产品粒度分布均匀，是许多选矿生产线的首选设备。",
+    "en": "The wet grid ball mill is an efficient grinding equipment widely used in mineral processing, building materials, chemical industry and other fields. Its feature is the grid device inside the cylinder, which allows the ground material to be discharged quickly, improving production efficiency and processing capacity. The wet operation method is particularly suitable for grinding ores that require further separation processing, effectively reducing over-crushing, producing uniform particle size distribution, and making it the preferred equipment for many mineral processing production lines."
+  },
+  "specifications": [
+    { "model": "MQYg1212", "cylinderDiameter": "1200", "cylinderLength": "1200", "motorModel": "Y200L2-6", "motorPower": "22", "length": "3512", "width": "2076", "height": "1620", "capacity": "0.17-4.1", "maxBallLoad": "2.4", "weight": "9210" },
+    { "model": "MQYg1224", "cylinderDiameter": "1200", "cylinderLength": "2400", "motorModel": "Y280M-8", "motorPower": "45", "length": "5745", "width": "2104", "height": "1690", "capacity": "0.2-6.25", "maxBallLoad": "4.8", "weight": "12150" },
+    { "model": "MQYg1240", "cylinderDiameter": "1200", "cylinderLength": "4000", "motorModel": "JR117-8", "motorPower": "80", "length": "7990", "width": "2210", "height": "2262", "capacity": "0.34-8.3", "maxBallLoad": "7.8", "weight": "15531" },
+    { "model": "MQYg1515", "cylinderDiameter": "1500", "cylinderLength": "1500", "motorModel": "Y280M-8", "motorPower": "45", "length": "5740", "width": "3075", "height": "2280", "capacity": "1.4-4.5", "maxBallLoad": "5.5", "weight": "16829" },
+    { "model": "MQYg1530", "cylinderDiameter": "1500", "cylinderLength": "3000", "motorModel": "JR117-8", "motorPower": "80", "length": "7253", "width": "3075", "height": "2280", "capacity": "2.8-9", "maxBallLoad": "10", "weight": "21129" },
+    { "model": "MQYg1545", "cylinderDiameter": "1500", "cylinderLength": "4500", "motorModel": "JR127-8", "motorPower": "130", "length": "8389", "width": "3075", "height": "2280", "capacity": "3.5-12.5", "maxBallLoad": "12", "weight": "27050" },
+    { "model": "MQYg2122", "cylinderDiameter": "2100", "cylinderLength": "2200", "motorModel": "JR127-8", "motorPower": "132", "length": "7420", "width": "4225", "height": "3083", "capacity": "5-29", "maxBallLoad": "14", "weight": "36550" },
+    { "model": "MQYg2130", "cylinderDiameter": "2100", "cylinderLength": "3000", "motorModel": "JR136-8", "motorPower": "180", "length": "8220", "width": "4225", "height": "3083", "capacity": "6.5-36", "maxBallLoad": "20", "weight": "40300" },
+    { "model": "MQYg2136", "cylinderDiameter": "2100", "cylinderLength": "3600", "motorModel": "JR137-8", "motorPower": "210", "length": "8820", "width": "4225", "height": "3083", "capacity": "7.5-42", "maxBallLoad": "22", "weight": "43112" },
+    { "model": "MQYg2145", "cylinderDiameter": "2100", "cylinderLength": "4500", "motorModel": "JR138-6", "motorPower": "280", "length": "10350", "width": "3764", "height": "3083", "capacity": "10-45", "maxBallLoad": "23.6", "weight": "49680" }
+  ],
+  "features": [
+    {
+      "zh": "格子型筒体结构，排矿速度快，研磨效率高",
+      "en": "Grid-type cylinder structure for fast discharge and high grinding efficiency"
+    },
+    {
+      "zh": "传动装置平稳可靠，运行噪音低",
+      "en": "Stable and reliable transmission system with low operating noise"
+    },
+    {
+      "zh": "衬板采用耐磨材料，使用寿命长",
+      "en": "Liners made of wear-resistant materials for long service life"
+    },
+    {
+      "zh": "进出料系统设计合理，操作方便",
+      "en": "Reasonably designed feeding and discharging system for easy operation"
+    },
+    {
+      "zh": "可根据物料特性定制工艺参数",
+      "en": "Process parameters can be customized according to material characteristics"
+    }
+  ],
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Application Areas"
+    },
+    "items": [
+      {
+        "icon": "⛏️",
+        "title": { "zh": "金属矿处理", "en": "Metal Ore Processing" },
+        "description": { "zh": "金属矿石如铜、铁、铅锌等矿物的研磨处理", "en": "Grinding of metal ores such as copper, iron, lead, and zinc" }
+      },
+      {
+        "icon": "🪨",
+        "title": { "zh": "非金属矿处理", "en": "Non-metallic Mineral Processing" },
+        "description": { "zh": "非金属矿物如萤石、石英、长石等的研磨", "en": "Grinding of non-metallic minerals such as fluorite, quartz, and feldspar" }
+      },
+      {
+        "icon": "🧱",
+        "title": { "zh": "建材行业", "en": "Building Materials Industry" },
+        "description": { "zh": "建材行业的原料研磨", "en": "Raw material grinding in the building materials industry" }
+      },
+      {
+        "icon": "⚗️",
+        "title": { "zh": "化工行业", "en": "Chemical Industry" },
+        "description": { "zh": "化工行业的物料研磨", "en": "Material grinding in the chemical industry" }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "overflow-ball-mill",
+    "rod-mill",
+    "dry-grid-ball-mill"
+  ],
+  "notes": {
+    "zh": [
+      "数据为参考值，实际参数可能因物料特性而异",
+      "可根据客户需求定制不同规格设备",
+      "建议与工程师联系获取详细技术参数"
+    ],
+    "en": [
+      "Data are reference values, actual parameters may vary depending on material characteristics",
+      "Different specifications can be customized according to customer requirements",
+      "It is recommended to contact engineers for detailed technical parameters"
+    ]
+  }
+} 

@@ -1,0 +1,172 @@
+{
+  "id": "centrifugal-separator",
+  "category": "beneficiation",
+  "subcategory": "gravity-separation",
+  "model": "STLB60",
+  "series": {
+    "zh": "离心选矿机",
+    "en": "Centrifugal Separator"
+  },
+  "image": "/images/products/gravity-separation/centrifugal-separator.jpg",
+  "capacity": {
+    "zh": "0-80 t/h",
+    "en": "0-80 t/h"
+  },
+  "feedSize": {
+    "zh": "0-6 mm",
+    "en": "0-6 mm"
+  },
+  "motorPower": {
+    "zh": "0.75-18.5 kW",
+    "en": "0.75-18.5 kW"
+  },
+  "overview": {
+    "zh": "离心选矿机是一种利用离心力强化重力分选效果的现代化选矿设备，特别适合细粒矿物的选别。通过高速旋转产生强大的离心力场，使重矿物与轻矿物有效分离，大幅提高选别效率和精度。我们的离心选矿机采用先进技术设计，具有分选效率高、处理能力大、操作简便等特点。",
+    "en": "The Centrifugal Separator is a modern mineral processing equipment that utilizes centrifugal force to enhance gravity separation effects, particularly suitable for the separation of fine-grained minerals. Through high-speed rotation, it generates a powerful centrifugal field that effectively separates heavy minerals from light minerals, greatly improving separation efficiency and precision. Our centrifugal separators are designed with advanced technology, featuring high separation efficiency, large processing capacity, and simple operation."
+  },
+  "specifications": {
+    "title": {
+      "zh": "离心选矿机主要技术参数表",
+      "en": "Centrifugal Separator Main Technical Parameters"
+    },
+    "note": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    },
+    "tableHeaders": [
+      {
+        "zh": "型号",
+        "en": "Model",
+        "unit": ""
+      },
+      {
+        "zh": "处理能力",
+        "en": "Processing Capacity",
+        "unit": "t/h"
+      },
+      {
+        "zh": "反冲水转水量",
+        "en": "Backwash Water Volume",
+        "unit": "m³/h"
+      },
+      {
+        "zh": "矿浆转水量",
+        "en": "Slurry Water Volume",
+        "unit": "m³/h"
+      },
+      {
+        "zh": "给矿浓度",
+        "en": "Feed Concentration",
+        "unit": "%"
+      },
+      {
+        "zh": "进料尺寸",
+        "en": "Feed Size",
+        "unit": "mm"
+      },
+      {
+        "zh": "每次出精矿重量",
+        "en": "Concentrate Weight per Output",
+        "unit": "kg"
+      },
+      {
+        "zh": "电机功率",
+        "en": "Motor Power",
+        "unit": "kW"
+      },
+      {
+        "zh": "重量",
+        "en": "Weight",
+        "unit": "kg"
+      },
+      {
+        "zh": "外形尺寸",
+        "en": "Dimensions",
+        "unit": "mm"
+      }
+    ],
+    "tableData": [
+      ["STLB20", "0-0.6", "2-3", "1.5-4", "0-50", "0-3", "2", "0.75", "205", "914×700×900"],
+      ["STLB30", "2-3", "3-5", "5-7", "0-50", "0-3", "3-5", "1.5", "380", "1160×885×1165"],
+      ["STLB60", "8-12", "7-10", "8-12", "0-50", "0-5", "10-20", "4", "1100", "1820×1450×1700"],
+      ["STLB80", "40-45", "30-36", "40-45", "0-50", "0-5", "40-50", "11", "2300", "2476×2032×2018"],
+      ["STLB100", "60-80", "50-60", "60-80", "0-50", "0-6", "70-80", "18.5", "3700", "2849×2085×2426"]
+    ]
+  },
+  "features": {
+    "zh": [
+      "高效离心分选技术，回收率显著提高",
+      "智能控制系统，操作简便，自动化程度高",
+      "适用粒度范围广，可处理多种矿种",
+      "结构紧凑，占地面积小",
+      "能耗低，运行成本经济"
+    ],
+    "en": [
+      "High-efficiency centrifugal separation technology, significantly improved recovery rate",
+      "Intelligent control system, simple operation, high degree of automation",
+      "Wide applicable particle size range, can process various mineral types",
+      "Compact structure, small footprint",
+      "Low energy consumption, economical operating costs"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Applications"
+    },
+    "items": [
+      {
+        "icon": "precious-metals",
+        "title": {
+          "zh": "贵金属回收",
+          "en": "Precious Metal Recovery"
+        },
+        "description": {
+          "zh": "高效回收金、银等贵金属，提高资源利用率。",
+          "en": "Efficient recovery of gold, silver and other precious metals, improving resource utilization."
+        }
+      },
+      {
+        "icon": "non-ferrous-metals",
+        "title": {
+          "zh": "有色金属选矿",
+          "en": "Non-ferrous Metal Processing"
+        },
+        "description": {
+          "zh": "适用于铜、铅、锌等有色金属的选矿，提高精矿品位。",
+          "en": "Suitable for mineral processing of copper, lead, zinc and other non-ferrous metals, improving concentrate grade."
+        }
+      },
+      {
+        "icon": "fine-materials",
+        "title": {
+          "zh": "细粒物料分选",
+          "en": "Fine Material Separation"
+        },
+        "description": {
+          "zh": "特别适合细粒物料的高效分选，解决传统设备难以处理的难题。",
+          "en": "Particularly suitable for efficient separation of fine materials, solving problems difficult to handle with traditional equipment."
+        }
+      },
+      {
+        "icon": "mineral-processing",
+        "title": {
+          "zh": "碎矿厂应用",
+          "en": "Crushing Plant Applications"
+        },
+        "description": {
+          "zh": "可作为碎矿厂的核心设备，提高整体选矿效率。",
+          "en": "Can serve as core equipment in crushing plants, improving overall mineral processing efficiency."
+        }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "shaking-table", 
+    "carpet-hooking-machine", 
+    "spiral-chute", 
+    "synchronous-counter-directional-jig",
+    "synchronous-counter-directional-jig-small",
+    "sawtooth-wave-jig"
+  ]
+} 

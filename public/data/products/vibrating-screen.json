@@ -1,0 +1,148 @@
+{
+  "id": "vibrating-screen",
+  "model": "XD1845",
+  "series": {
+    "zh": "XD系列振动筛",
+    "en": "XD Series Vibrating Screen"
+  },
+  "image": "/images/preprocessing/vibrating-screen-yk1848.jpg",
+  "imagePath": "/images/products/screens/xd-vibrating-screen.jpg",
+  "capacity": {
+    "min": 50,
+    "max": 600,
+    "unit": "m³/h"
+  },
+  "motorPower": {
+    "min": 4.4,
+    "max": 30,
+    "unit": "kW"
+  },
+  "aperture": {
+    "min": 2,
+    "max": 50,
+    "unit": "mm"
+  },
+  "overview": {
+    "zh": "XD系列振动筛是高效筛分设备，采用双轴激振器驱动系统，筛面积3-21m²，处理能力50-600m³/h。适用于2-50mm物料筛分，高精度分级，广泛应用于矿产、建材和冶金工业。",
+    "en": "XD Series Vibrating Screen is a high-efficiency screening equipment featuring dual-shaft exciter drive system, 3-21m² screening area, and 50-600m³/h processing capacity. Ideal for 2-50mm material classification with high precision, widely utilized in mining, construction materials, and metallurgical industries."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Specifications"
+    },
+    "columns": [
+      { "key": "model", "title": { "zh": "型号", "en": "Model" }, "width": "15%" },
+      { "key": "screenSize", "title": { "zh": "筛面尺寸", "en": "Screen Size" }, "unit": "m²", "width": "15%" },
+      { "key": "layers", "title": { "zh": "层数", "en": "Number of Layers" }, "width": "10%" },
+      { "key": "aperture", "title": { "zh": "筛孔尺寸", "en": "Screen Aperture" }, "unit": "mm", "width": "15%" },
+      { "key": "capacity", "title": { "zh": "处理能力", "en": "Capacity" }, "unit": "m³/h", "width": "15%" },
+      { "key": "power", "title": { "zh": "电机功率", "en": "Motor Power" }, "unit": "kW", "width": "15%" },
+      { "key": "weight", "title": { "zh": "重量", "en": "Weight" }, "unit": "kg", "width": "15%" }
+    ],
+    "data": [
+      {
+        "model": "XD1230",
+        "screenSize": "3.6",
+        "layers": "2-3",
+        "aperture": "2-50",
+        "capacity": "50-80",
+        "power": "2×2.2",
+        "weight": "2300"
+      },
+      {
+        "model": "XD1545",
+        "screenSize": "6.5",
+        "layers": "2-3",
+        "aperture": "2-50",
+        "capacity": "80-150",
+        "power": "2×3.7",
+        "weight": "3800"
+      },
+      {
+        "model": "XD1845",
+        "screenSize": "8.1",
+        "layers": "2-3",
+        "aperture": "2-50",
+        "capacity": "150-200",
+        "power": "2×3.7",
+        "weight": "4500"
+      },
+      {
+        "model": "XD2160",
+        "screenSize": "12.6",
+        "layers": "2-3",
+        "aperture": "2-50",
+        "capacity": "200-300",
+        "power": "2×7.5",
+        "weight": "5800"
+      },
+      {
+        "model": "XD2470",
+        "screenSize": "16.8",
+        "layers": "2-3",
+        "aperture": "2-50",
+        "capacity": "300-450",
+        "power": "2×11",
+        "weight": "7500"
+      },
+      {
+        "model": "XD3070",
+        "screenSize": "21.0",
+        "layers": "2-3",
+        "aperture": "2-50",
+        "capacity": "400-600",
+        "power": "2×15",
+        "weight": "9400"
+      }
+    ],
+    "notes": [
+      {
+        "content": {
+          "zh": "可按照客户需求进行定制",
+          "en": "Can be customized according to customer requirements"
+        }
+      }
+    ]
+  },
+  "features": {
+    "zh": [
+      "双轴激振器驱动：产生强劲振动力，提高筛分效率，确保物料均匀分布",
+      "高强度筛箱结构：采用优质钢材，增强抗疲劳性和使用寿命，减少维护频率",
+      "多层筛网设计：可同时完成多粒度分级作业，最多可配置三层筛网",
+      "精密动平衡系统：有效降低工作噪音和振动传递，提升设备稳定性",
+      "模块化快换筛网：便于维护和更换，大幅减少停机时间，提高生产效率",
+      "可调激振参数：振幅和频率可根据不同物料特性进行优化调节"
+    ],
+    "en": [
+      "Dual-Shaft Exciter Drive: Generates powerful vibration force, enhances screening efficiency, ensures uniform material distribution",
+      "High-Strength Screen Box: Made of premium steel, improves fatigue resistance and service life, reduces maintenance frequency",
+      "Multi-Layer Screen Design: Simultaneously performs multi-size classification operations, configurable with up to three screen layers",
+      "Precision Dynamic Balance System: Effectively reduces operational noise and vibration transfer, enhances equipment stability",
+      "Modular Quick-Change Screen: Facilitates maintenance and replacement, significantly reduces downtime, improves production efficiency",
+      "Adjustable Excitation Parameters: Amplitude and frequency can be optimized according to different material characteristics"
+    ]
+  },
+  "applications": {
+    "zh": [
+      "矿山行业：矿石筛分、分级和脱水",
+      "建材领域：砂石生产线、煤炭分选",
+      "冶金工业：原料预处理、成品分级",
+      "化工行业：颗粒物料分级",
+      "环保工程：固体废物分离处理"
+    ],
+    "en": [
+      "Mining Industry: Ore screening, classification and dewatering",
+      "Construction Materials: Sand production lines, coal sorting",
+      "Metallurgical Industry: Raw material preprocessing, finished product classification",
+      "Chemical Industry: Particulate material grading",
+      "Environmental Engineering: Solid waste separation processing"
+    ]
+  },
+  "relatedProducts": [
+    "circular-vibrating-screen",
+    "linear-vibrating-screen",
+    "zkr-linear-vibrating-screen",
+    "drum-screen"
+  ]
+} 

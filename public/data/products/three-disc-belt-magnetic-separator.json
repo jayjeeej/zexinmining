@@ -1,0 +1,164 @@
+{
+  "id": "three-disc-belt-magnetic-separator",
+  "category": "beneficiation",
+  "subcategory": "magnetic-separation",
+  "model": "CP3-600",
+  "series": {
+    "zh": "三盘带式磁选机",
+    "en": "Three-Disc Belt Magnetic Separator"
+  },
+  "image": "/images/products/magnetic-separation/three-disc-belt-magnetic-separator.jpg",
+  "capacity": {
+    "zh": "80-800 kg/h",
+    "en": "80-800 kg/h"
+  },
+  "feedSize": {
+    "zh": "< 2 mm",
+    "en": "< 2 mm"
+  },
+  "motorPower": {
+    "zh": "0.75-1.5 kW",
+    "en": "0.75-1.5 kW"
+  },
+  "discNumber": {
+    "zh": "3个",
+    "en": "3 discs"
+  },
+  "magneticFieldStrength": {
+    "zh": "1700-2000 mt",
+    "en": "1700-2000 mt"
+  },
+  "dimensions": {
+    "zh": "2800-3200×800-870×1160-1250 mm",
+    "en": "2800-3200×800-870×1160-1250 mm"
+  },
+  "overview": {
+    "zh": "三盘带式磁选机是一种适用于处理细粒级弱磁性矿物的干式磁选设备。主要用于锰矿、钨矿、锡矿、稀土矿、金红石等磁性与非磁性矿物的分选提纯。设备由三个磁盘组成，可实现多级分选，提高分选精度和回收率。",
+    "en": "The Three-Disc Belt Magnetic Separator is a dry magnetic separation equipment suitable for processing fine-grained weakly magnetic minerals. It is mainly used for the separation and purification of magnetic and non-magnetic minerals such as manganese ore, tungsten ore, tin ore, rare earth ore, and rutile. The equipment consists of three magnetic discs, enabling multi-stage separation to improve separation precision and recovery rate."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Parameters"
+    },
+    "tableHeaders": [
+      {
+        "zh": "型号",
+        "en": "Model",
+        "unit": ""
+      },
+      {
+        "zh": "磁场强度",
+        "en": "Magnetic Field Strength",
+        "unit": "mt"
+      },
+      {
+        "zh": "磁盘数量",
+        "en": "Number of Discs",
+        "unit": ""
+      },
+      {
+        "zh": "电机功率",
+        "en": "Motor Power",
+        "unit": "kW"
+      },
+      {
+        "zh": "处理能力",
+        "en": "Processing Capacity",
+        "unit": "kg/h"
+      },
+      {
+        "zh": "原料粒度",
+        "en": "Feed Size",
+        "unit": "mm"
+      },
+      {
+        "zh": "外形尺寸",
+        "en": "Dimensions",
+        "unit": "mm"
+      }
+    ],
+    "tableData": [
+      ["CP3-500", "1700", "3", "0.75", "100-500", "<2", "2800×800×1220"],
+      ["CP3-600", "1800", "3", "1.5", "120-600", "<2", "3200×870×1160"],
+      ["CPX-600", "2000", "3", "1.5", "80-800", "<2", "3200×870×1250"]
+    ],
+    "note": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    }
+  },
+  "features": {
+    "zh": [
+      "三盘设计，实现多级分选，提高精度和回收率",
+      "磁场强度高，适用于弱磁性矿物的分选",
+      "干式分选，无需用水，环保节能",
+      "结构紧凑，占地面积小，安装维护简便"
+    ],
+    "en": [
+      "Three-disc design for multi-stage separation, improving precision and recovery rate",
+      "High magnetic field strength, suitable for separation of weakly magnetic minerals",
+      "Dry separation process, no water required, environmentally friendly and energy-efficient",
+      "Compact structure, small footprint, easy installation and maintenance"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Applications"
+    },
+    "items": [
+      {
+        "icon": "mineral",
+        "title": {
+          "zh": "锰矿选别",
+          "en": "Manganese Ore Separation"
+        },
+        "description": {
+          "zh": "用于锰矿的分选和提纯",
+          "en": "Separation and purification of manganese ore"
+        }
+      },
+      {
+        "icon": "mineral",
+        "title": {
+          "zh": "稀有金属矿",
+          "en": "Rare Metal Ores"
+        },
+        "description": {
+          "zh": "用于钨矿、锡矿等稀有金属矿的选别",
+          "en": "Separation of rare metal ores such as tungsten ore, tin ore, etc."
+        }
+      },
+      {
+        "icon": "mineral",
+        "title": {
+          "zh": "稀土矿物",
+          "en": "Rare Earth Minerals"
+        },
+        "description": {
+          "zh": "用于稀土矿物的分选和提纯",
+          "en": "Separation and purification of rare earth minerals"
+        }
+      },
+      {
+        "icon": "mineral",
+        "title": {
+          "zh": "金红石选别",
+          "en": "Rutile Separation"
+        },
+        "description": {
+          "zh": "用于金红石等钛矿物的选别",
+          "en": "Separation of titanium minerals such as rutile"
+        }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "permanent-magnetic-drum-separator",
+    "double-roller-permanent-magnetic-zircon-separator",
+    "four-roller-variable-frequency-electrostatic-separator",
+    "plate-type-high-intensity-wet-magnetic-separator",
+    "roller-type-high-intensity-wet-magnetic-separator"
+  ]
+} 

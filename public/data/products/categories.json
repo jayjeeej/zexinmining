@@ -1,0 +1,111 @@
+[
+  {
+    "id": "grinding",
+    "name": {
+      "zh": "磨矿分级设备",
+      "en": "Grinding & Classification Equipment"
+    },
+    "description": {
+      "zh": "高效磨矿分级设备，用于矿石细磨和分级，提高选矿效率。",
+      "en": "Efficient grinding and classification equipment for ore processing and beneficiation."
+    },
+    "subcategories": [
+      {
+        "id": "ball-rod-mills",
+        "name": {
+          "zh": "球/棒磨机",
+          "en": "Ball/Rod Mills"
+        },
+        "description": {
+          "zh": "用于矿石研磨的球磨机和棒磨机设备，包括湿式和干式型号。",
+          "en": "Ball mills and rod mills for ore grinding, including wet and dry types."
+        },
+        "products": [
+          "wet-grid-ball-mill",
+          "wet-overflow-ball-mill",
+          "dry-grid-ball-mill",
+          "wet-rod-mill"
+        ],
+        "imagePath": "/images/categories/ball-mills.jpg"
+      },
+      {
+        "id": "classification",
+        "name": {
+          "zh": "分级设备",
+          "en": "Classification Equipment"
+        },
+        "description": {
+          "zh": "高效分级设备，用于矿石颗粒分级和细度控制。",
+          "en": "Efficient classification equipment for ore particle separation and fineness control."
+        },
+        "products": [
+          "spiral-classifier",
+          "hydrocyclone"
+        ],
+        "imagePath": "/images/categories/classification.jpg"
+      }
+    ],
+    "imagePath": "/images/categories/grinding.jpg"
+  },
+  {
+    "id": "preprocessing",
+    "name": {
+      "zh": "预处理设备",
+      "en": "Preprocessing Equipment"
+    },
+    "description": {
+      "zh": "矿石破碎、筛分和给料设备，用于矿石预处理工艺。",
+      "en": "Crushing, screening and feeding equipment for ore preprocessing."
+    },
+    "subcategories": [
+      {
+        "id": "crushers",
+        "name": {
+          "zh": "破碎机",
+          "en": "Crushers"
+        },
+        "products": [
+          "ch890i", 
+          "ch870i", 
+          "ch860i", 
+          "ch550", 
+          "ch440", 
+          "2pg0425"
+        ],
+        "imagePath": "/images/categories/crushers.jpg"
+      },
+      {
+        "id": "screens",
+        "name": {
+          "zh": "振动筛",
+          "en": "Vibrating Screens"
+        },
+        "products": [
+          "zk2050", 
+          "zk1545", 
+          "yk2461", 
+          "yk2160", 
+          "yk1848", 
+          "gts1230"
+        ],
+        "imagePath": "/images/categories/screens.jpg"
+      },
+      {
+        "id": "feeders",
+        "name": {
+          "zh": "给料机",
+          "en": "Feeders"
+        },
+        "products": [
+          "gz5", 
+          "gz4", 
+          "gz3", 
+          "gz2", 
+          "gz1"
+        ],
+        "imagePath": "/images/categories/feeders.jpg"
+      }
+    ],
+    "imagePath": "/images/categories/preprocessing.jpg"
+  }
+] 

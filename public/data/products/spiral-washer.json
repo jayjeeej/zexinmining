@@ -1,0 +1,89 @@
+{
+  "id": "spiral-washer",
+  "nameEn": "Spiral Washer",
+  "nameZh": "单螺旋洗矿机",
+  "model": "FG系列",
+  "capacity": { "min": 10, "max": 50, "unit": "t/h" },
+  "motorPower": { "min": 3, "max": 11, "unit": "kW" },
+  "overview": {
+    "zh": "螺旋洗矿机是一种高效的矿物洗选设备，通过螺旋叶片搅拌和摩擦作用清洗矿物表面杂质。设备结构简单，操作可靠，维护方便，适用于粒度0.3-10mm的各类矿物洗选，处理能力10-150t/h。广泛应用于冶金、建材、硅酸盐等行业的洗砂脱泥作业。",
+    "en": "Spiral Washer is a high-efficiency mineral washing equipment that cleans mineral surface impurities through the stirring and friction action of spiral blades. With simple structure, reliable operation and easy maintenance, it's suitable for washing various minerals with particle size 0.3-10mm, processing capacity 10-150t/h. Widely used in metallurgy, building materials, silicate and other industries for sand washing and mud removal operations."
+  },
+  "specifications": [
+    {
+      "model": "FG-10",
+      "capacity": "10-15",
+      "motorPower": "3",
+      "spiralDiameter": "900",
+      "tankLength": "3500",
+      "tankWidth": "1200",
+      "totalWeight": "1650"
+    },
+    {
+      "model": "FG-20",
+      "capacity": "15-20",
+      "motorPower": "5.5",
+      "spiralDiameter": "1200",
+      "tankLength": "4000",
+      "tankWidth": "1500",
+      "totalWeight": "2100"
+    },
+    {
+      "model": "FG-30",
+      "capacity": "25-35",
+      "motorPower": "7.5",
+      "spiralDiameter": "1500",
+      "tankLength": "5000",
+      "tankWidth": "1800",
+      "totalWeight": "2850"
+    },
+    {
+      "model": "FG-50",
+      "capacity": "40-50",
+      "motorPower": "11",
+      "spiralDiameter": "1800",
+      "tankLength": "6000",
+      "tankWidth": "2200",
+      "totalWeight": "3600"
+    }
+  ],
+  "features": {
+    "zh": [
+      "优化螺旋设计：提高洗矿效率，降低能耗",
+      "坚固主轴结构：承受高强度冲击负荷，确保稳定运行",
+      "防磨损衬板：延长设备使用寿命，减少维护频率",
+      "变频调速系统：根据不同物料特性灵活调整工作参数",
+      "水流循环利用：节约水资源，减少环境污染",
+      "模块化结构：便于运输安装和后期维护"
+    ],
+    "en": [
+      "Optimized Spiral Design: Improves washing efficiency and reduces energy consumption",
+      "Robust Main Shaft Structure: Withstands high-intensity impact loads, ensuring stable operation",
+      "Anti-wear Liners: Extends equipment service life and reduces maintenance frequency",
+      "Variable Frequency Speed Control System: Flexibly adjusts working parameters according to different material characteristics",
+      "Water Circulation and Reuse: Conserves water resources and reduces environmental pollution",
+      "Modular Structure: Facilitates transportation, installation and subsequent maintenance"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Application Areas"
+    },
+    "zh": [
+      "黑色金属矿：铁矿石、锰矿石洗选",
+      "有色金属矿：铜矿、铅锌矿洗选",
+      "非金属矿：石英砂、长石洗选",
+      "建筑材料：砂石料去杂质、脱泥",
+      "砂金矿：砂金预处理"
+    ],
+    "en": [
+      "Ferrous Metal Ores: Iron ore and manganese ore washing",
+      "Non-ferrous Metal Ores: Copper, lead and zinc ore washing",
+      "Non-metallic Minerals: Quartz sand and feldspar washing",
+      "Building Materials: Sand and gravel impurity removal and mud cleaning",
+      "Placer Gold: Gold sand pre-treatment"
+    ]
+  },
+  "relatedProducts": ["double-spiral-washer", "drum-washer"]
+} 

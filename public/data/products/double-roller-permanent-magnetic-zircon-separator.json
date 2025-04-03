@@ -1,0 +1,160 @@
+{
+  "id": "double-roller-permanent-magnetic-zircon-separator",
+  "category": "beneficiation",
+  "subcategory": "magnetic-separation",
+  "model": "CTZ-160",
+  "series": {
+    "zh": "双辊永磁锆英磁选机",
+    "en": "Double Roller Permanent Magnetic Zircon Separator"
+  },
+  "image": "/images/products/magnetic-separation/double-roller-permanent-magnetic-zircon-separator.jpg",
+  "capacity": {
+    "zh": "2-8 t/h",
+    "en": "2-8 t/h"
+  },
+  "feedSize": {
+    "zh": "0-2 mm",
+    "en": "0-2 mm"
+  },
+  "motorPower": {
+    "zh": "3 kW",
+    "en": "3 kW"
+  },
+  "magneticFieldStrength": {
+    "zh": "10000-14000 Gs",
+    "en": "10000-14000 Gs"
+  },
+  "overview": {
+    "zh": "双辊永磁锆英磁选机是一种高效的干式磁选设备，采用高性能稀土永磁材料产生强磁场，适用于细粒级弱磁性矿物的分选。设备由上下两组磁辊组成，能够对物料进行两段分选，大幅提高分选精度和回收率。主要用于锆英、锑矿砂、钨砂矿、锡砂矿、铌矿、独居石、红柱石等弱磁性矿物的选别。具有磁场强度高、选别效率高、操作维护简便等特点。",
+    "en": "The Double Roller Permanent Magnetic Zircon Separator is a high-efficiency dry magnetic separation equipment that utilizes high-performance rare earth permanent magnetic materials to generate a strong magnetic field for the separation of fine-grained weakly magnetic minerals. The equipment consists of upper and lower magnetic roller assemblies, enabling two-stage separation of materials, significantly improving separation precision and recovery rate. It is mainly used for the separation of weakly magnetic minerals such as zircon, antimony ore sand, tungsten sand ore, tin sand ore, niobium ore, monazite, andalusite, etc. It features high magnetic field strength, high separation efficiency, and easy operation and maintenance."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Parameters"
+    },
+    "tableHeaders": [
+      {
+        "zh": "型号",
+        "en": "Model",
+        "unit": ""
+      },
+      {
+        "zh": "上辊尺寸",
+        "en": "Upper Roller Size",
+        "unit": "mm"
+      },
+      {
+        "zh": "下辊尺寸",
+        "en": "Lower Roller Size",
+        "unit": "mm"
+      },
+      {
+        "zh": "磁场强度",
+        "en": "Magnetic Field Strength",
+        "unit": "Gs"
+      },
+      {
+        "zh": "处理能力",
+        "en": "Processing Capacity",
+        "unit": "t/h"
+      },
+      {
+        "zh": "电机功率",
+        "en": "Motor Power",
+        "unit": "kW"
+      },
+      {
+        "zh": "重量",
+        "en": "Weight",
+        "unit": "t"
+      }
+    ],
+    "tableData": [
+      ["CTZ-160-1000", "φ160×1000", "φ160×800", "10000-14000", "2-5", "3", "2.5"],
+      ["CTZ-160-1200", "φ160×1200", "φ160×1000", "10000-14000", "3-6", "3", "2.8"],
+      ["CTZ-160-1500", "φ160×1500", "φ160×1200", "10000-14000", "4-8", "3", "3.2"]
+    ],
+    "note": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    }
+  },
+  "features": {
+    "zh": [
+      "采用稀土永磁材料，磁场强度高达10000-14000高斯",
+      "双辊设计，实现两段分选，提高精度和回收率",
+      "干式分选，无需用水，环保节能",
+      "结构紧凑，占地面积小，安装维护简便",
+      "适用于多种弱磁性矿物的高效分选",
+      "分选效果稳定，产品品位高"
+    ],
+    "en": [
+      "Rare earth permanent magnetic materials with magnetic field strength up to 10000-14000 Gauss",
+      "Double-roller design for two-stage separation, improving precision and recovery rate",
+      "Dry separation process, no water required, environmentally friendly and energy-efficient",
+      "Compact structure, small footprint, easy installation and maintenance",
+      "Suitable for efficient separation of various weakly magnetic minerals",
+      "Stable separation effect with high-grade products"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Applications"
+    },
+    "items": [
+      {
+        "icon": "rare-earth",
+        "title": {
+          "zh": "稀有金属矿",
+          "en": "Rare Metal Ores"
+        },
+        "description": {
+          "zh": "用于锆英砂、钨砂、锡砂、铌矿等稀有金属矿的选别",
+          "en": "Separation of rare metal ores such as zircon sand, tungsten sand, tin sand, niobium ore, etc."
+        }
+      },
+      {
+        "icon": "mineral",
+        "title": {
+          "zh": "非金属矿物",
+          "en": "Non-metallic Minerals"
+        },
+        "description": {
+          "zh": "用于石英、长石等非金属矿物中铁质杂质的去除",
+          "en": "Removal of iron impurities from non-metallic minerals such as quartz, feldspar, etc."
+        }
+      },
+      {
+        "icon": "beach-sand",
+        "title": {
+          "zh": "海滨砂矿",
+          "en": "Beach Sand Mining"
+        },
+        "description": {
+          "zh": "用于海滨砂矿中锆英石、金红石、独居石等矿物的选别",
+          "en": "Separation of minerals such as zircon, rutile, monazite from beach sand deposits"
+        }
+      },
+      {
+        "icon": "recycle",
+        "title": {
+          "zh": "废料回收",
+          "en": "Waste Recycling"
+        },
+        "description": {
+          "zh": "用于工业废料中有价值矿物的回收和提纯",
+          "en": "Recovery and purification of valuable minerals from industrial waste"
+        }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "permanent-magnetic-drum-separator",
+    "four-roller-variable-frequency-electrostatic-separator",
+    "plate-type-high-intensity-wet-magnetic-separator",
+    "roller-type-high-intensity-wet-magnetic-separator",
+    "three-disc-belt-magnetic-separator"
+  ]
+} 

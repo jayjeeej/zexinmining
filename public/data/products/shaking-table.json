@@ -1,0 +1,170 @@
+{
+  "id": "shaking-table",
+  "category": "beneficiation",
+  "subcategory": "gravity-separation",
+  "model": "6-S",
+  "series": {
+    "zh": "摇床",
+    "en": "Shaking Table"
+  },
+  "image": "/images/products/gravity-separation/shaking-table.jpg",
+  "capacity": {
+    "zh": "0.3-1.2 t/h",
+    "en": "0.3-1.2 t/h"
+  },
+  "feedSize": {
+    "zh": "0-2 mm",
+    "en": "0-2 mm"
+  },
+  "motorPower": {
+    "zh": "1.1 kW",
+    "en": "1.1 kW"
+  },
+  "overview": {
+    "zh": "摇床是一种高效的重力选矿设备，通过床面的往复运动和水流的冲洗作用，实现不同重量和密度矿物的分选。我们的摇床采用先进的摇动机构和床面布料设计，能够实现极高的分选精度，特别适合处理细粒物料和贵重金属矿物的分选。",
+    "en": "The shaking table is an efficient gravity separation equipment that separates minerals of different weights and densities through the reciprocating motion of the deck and the washing action of water. Our shaking tables adopt advanced shaking mechanisms and deck design, achieving extremely high separation precision, particularly suitable for processing fine particles and precious metal minerals."
+  },
+  "specifications": {
+    "title": {
+      "zh": "摇床技术参数",
+      "en": "Shaking Table Specifications"
+    },
+    "note": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    },
+    "tableHeaders": [
+      {
+        "zh": "型号",
+        "en": "Model",
+        "unit": ""
+      },
+      {
+        "zh": "床面类型",
+        "en": "Deck Type",
+        "unit": ""
+      },
+      {
+        "zh": "床面选矿面积",
+        "en": "Deck Selection Area",
+        "unit": "m²"
+      },
+      {
+        "zh": "长度",
+        "en": "Length",
+        "unit": "mm"
+      },
+      {
+        "zh": "进料尺寸",
+        "en": "Feed Size",
+        "unit": "mm"
+      },
+      {
+        "zh": "处理能力",
+        "en": "Processing Capacity",
+        "unit": "t/h"
+      },
+      {
+        "zh": "冲程",
+        "en": "Stroke",
+        "unit": "mm"
+      },
+      {
+        "zh": "冲次",
+        "en": "Stroke Frequency",
+        "unit": "r/min"
+      },
+      {
+        "zh": "耗水量",
+        "en": "Water Consumption",
+        "unit": "t/h"
+      },
+      {
+        "zh": "电机功率",
+        "en": "Motor Power",
+        "unit": "kW"
+      }
+    ],
+    "tableData": [
+      ["6-S 7.6", {"zh": "粗砂床面", "en": "Coarse Sand Deck"}, "7.6", "4500", "2", "1-1.2", "16-22", "220", "0.7-1", "1.1"],
+      ["6-S 4.08", {"zh": "细砂床面", "en": "Fine Sand Deck"}, "7.6", "4500", "0.5", "0.5-1", "11-16", "250", "0.4-0.7", "1.1"],
+      ["6-S 1.95", {"zh": "矿泥床面", "en": "Slime Deck"}, "1.95", "2100", "0-2", "0.3-0.8", "12-28", "250-450", "0.2-1", "1.1"]
+    ]
+  },
+  "features": {
+    "zh": [
+      "床面采用优质铁质材料制成，具有良好的耐磨性和使用寿命",
+      "摇动机构采用凸轮偏心传动，运行平稳，维护简便",
+      "配有精确的冲程调节装置，可根据不同矿物特性进行调整",
+      "附有完善的水流分配系统，确保矿浆在床面均匀分散",
+      "结构紧凑，占地面积小，安装维护简便"
+    ],
+    "en": [
+      "Deck made of high-quality iron material with good wear resistance and service life",
+      "Shaking mechanism uses cam eccentric drive for stable operation and easy maintenance",
+      "Equipped with precise stroke adjustment device for different mineral characteristics",
+      "Comprehensive water distribution system ensuring uniform slurry dispersion on the deck",
+      "Compact structure, small footprint, easy installation and maintenance"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Applications"
+    },
+    "items": [
+      {
+        "icon": "precious-metals",
+        "title": {
+          "zh": "贵金属选矿",
+          "en": "Precious Metal Processing"
+        },
+        "description": {
+          "zh": "高精度分选金、银、铂等贵金属矿物，达到最佳回收率。",
+          "en": "High-precision separation of gold, silver, platinum and other precious metal minerals for optimal recovery rates."
+        }
+      },
+      {
+        "icon": "heavy-metals",
+        "title": {
+          "zh": "重金属矿物",
+          "en": "Heavy Metal Minerals"
+        },
+        "description": {
+          "zh": "分选钨、锡、钽、铌等重金属矿物，提高精矿品位。",
+          "en": "Separation of tungsten, tin, tantalum, niobium and other heavy metal minerals, improving concentrate grade."
+        }
+      },
+      {
+        "icon": "fine-materials",
+        "title": {
+          "zh": "细粒物料分选",
+          "en": "Fine Particle Separation"
+        },
+        "description": {
+          "zh": "处理0.074-2mm范围内的细粒物料，实现高效分选。",
+          "en": "Processing fine materials in the range of 0.074-2mm for efficient separation."
+        }
+      },
+      {
+        "icon": "laboratory",
+        "title": {
+          "zh": "实验室应用",
+          "en": "Laboratory Applications"
+        },
+        "description": {
+          "zh": "提供小规模选矿试验和工艺研究的理想设备。",
+          "en": "Ideal equipment for small-scale mineral processing experiments and process research."
+        }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "carpet-hooking-machine", 
+    "spiral-chute", 
+    "centrifugal-separator", 
+    "synchronous-counter-directional-jig",
+    "synchronous-counter-directional-jig-small",
+    "sawtooth-wave-jig"
+  ]
+} 

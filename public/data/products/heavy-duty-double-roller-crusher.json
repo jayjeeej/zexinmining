@@ -1,0 +1,151 @@
+{
+  "id": "heavy-duty-double-roller-crusher",
+  "category": "crushers",
+  "subcategory": "preprocessing",
+  "model": "2PG0425",
+  "series": {
+    "zh": "强力对辊破碎机",
+    "en": "Heavy Duty Double Roller Crusher"
+  },
+  "image": "/images/products/crushers/heavy-duty-double-roller-crusher/main.jpg",
+  "capacity": {
+    "min": 5,
+    "max": 25,
+    "unit": "t/h"
+  },
+  "maxFeedSize": {
+    "min": 0,
+    "max": 40,
+    "unit": "mm"
+  },
+  "motorPower": {
+    "min": 11,
+    "max": 60,
+    "unit": "kW"
+  },
+  "overview": {
+    "zh": "强力对辊破碎机专为中等硬度物料细碎设计，采用双辊挤压原理工作。结构紧凑，维护简便，辊面采用耐磨合金钢制造，使用寿命长。适用于较硬物料的细碎作业，具有高效节能特点。",
+    "en": "Heavy Duty Double Roller Crusher is designed for fine crushing of medium hardness materials using dual roller compression. Compact structure, easy maintenance, with wear-resistant alloy steel rollers for long service life. Suitable for crushing harder materials with high efficiency and energy savings."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Specifications"
+    },
+    "note": {
+      "zh": "备注: 以上为强力对辊破碎机的技术参数，可根据客户需求定制其他规格。",
+      "en": "Note: The above are the technical parameters of the heavy duty double roller crusher. Other specifications can be customized according to customer requirements."
+    },
+    "tableHeaders": [
+      {
+        "zh": "型号",
+        "en": "Model"
+      },
+      {
+        "zh": "辊皮直径",
+        "en": "Roller Diameter",
+        "unit": "mm"
+      },
+      {
+        "zh": "辊皮宽度",
+        "en": "Roller Width",
+        "unit": "mm"
+      },
+      {
+        "zh": "最大进料粒度",
+        "en": "Max Feed Size",
+        "unit": "mm"
+      },
+      {
+        "zh": "理论处理能力",
+        "en": "Theoretical Processing Capacity",
+        "unit": "t/h"
+      },
+      {
+        "zh": "电机功率",
+        "en": "Motor Power",
+        "unit": "kW"
+      }
+    ],
+    "tableData": [
+      ["2PG0425", "ø 400", "250", "≤25", "5-10", "2×5.5"],
+      ["2PG0630", "ø 600", "300", "≤30", "8-15", "2×11"],
+      ["2PG0740", "ø 700", "400", "≤35", "15-20", "2×18.5"],
+      ["2PG0850", "ø 800", "500", "≤40", "20-25", "2×30"]
+    ]
+  },
+  "features": {
+    "zh": [
+      "高强度合金钢辊面，耐磨性强",
+      "液压调节装置，灵活控制排料粒度",
+      "自动过载保护系统，防止异物损坏",
+      "密封性能好，减少粉尘污染",
+      "双电机独立驱动，结构可靠"
+    ],
+    "en": [
+      "High-strength alloy steel rollers with superior wear resistance",
+      "Hydraulic adjustment for flexible discharge size control",
+      "Automatic overload protection against foreign objects",
+      "Excellent sealing to reduce dust pollution",
+      "Dual independent motors with reliable structure"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Application Areas"
+    },
+    "items": [
+      {
+        "icon": "⛏️",
+        "title": {
+          "zh": "矿山行业",
+          "en": "Mining Industry"
+        },
+        "description": {
+          "zh": "适用于中硬物料的细碎和中碎作业，处理各类矿石。",
+          "en": "Suitable for fine and medium crushing of medium-hard materials and various ores."
+        }
+      },
+      {
+        "icon": "🏭",
+        "title": {
+          "zh": "冶金化工",
+          "en": "Metallurgy & Chemical"
+        },
+        "description": {
+          "zh": "广泛用于冶金和化工行业的物料破碎处理。",
+          "en": "Widely used in metallurgical and chemical industries for material crushing."
+        }
+      },
+      {
+        "icon": "🏗️",
+        "title": {
+          "zh": "建材水泥",
+          "en": "Building Materials"
+        },
+        "description": {
+          "zh": "水泥生产线中石灰石、黏土等原料细碎和制砂。",
+          "en": "Fine crushing of limestone, clay and sand production in cement production lines."
+        }
+      },
+      {
+        "icon": "💎",
+        "title": {
+          "zh": "脆性物料",
+          "en": "Brittle Materials"
+        },
+        "description": {
+          "zh": "处理抗压强度不超过160MPa的各类脆性物料。",
+          "en": "Processing various brittle materials with compressive strength below 160MPa."
+        }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "double-roller-crusher",
+    "jaw-crusher",
+    "hammer-crusher",
+    "impact-crusher"
+  ]
+} 

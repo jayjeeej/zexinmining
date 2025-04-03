@@ -1,0 +1,164 @@
+{
+  "id": "self-priming-flotation-machine",
+  "category": "beneficiation",
+  "subcategory": "flotation",
+  "model": "ZSF系列",
+  "series": {
+    "zh": "自吸式浮选机",
+    "en": "Self-priming Flotation Machine"
+  },
+  "image": "/images/products/flotation/self-priming-flotation-machine.jpg",
+  "effectiveVolume": {
+    "zh": "1-30 m³",
+    "en": "1-30 m³"
+  },
+  "capacity": {
+    "zh": "1.0-35 m³/min",
+    "en": "1.0-35 m³/min"
+  },
+  "motorPower": {
+    "zh": "4.0-75 kW",
+    "en": "4.0-75 kW"
+  },
+  "overview": {
+    "zh": "自吸式浮选机是一种创新型浮选设备，通过特殊设计的叶轮和自吸管道，无需额外鼓风机即可自动吸入空气与矿浆混合。该设备结构简单，操作便捷，气泡分布均匀，能有效提高矿物回收率。适用于多种矿物的浮选分离，特别是在处理细粒矿物时表现优异，被广泛应用于有色金属、黑色金属和非金属矿物的选矿工艺中。",
+    "en": "The Self-priming Flotation Machine is an innovative flotation equipment that automatically draws in air to mix with slurry through specially designed impellers and self-priming pipelines, without the need for additional blowers. This equipment features a simple structure, convenient operation, and uniform bubble distribution, effectively improving mineral recovery rates. It is suitable for flotation separation of various minerals, especially performing excellently in processing fine-grained minerals, and is widely applied in beneficiation processes of non-ferrous metals, ferrous metals, and non-metallic minerals."
+  },
+  "specifications": {
+    "title": {
+      "zh": "技术参数",
+      "en": "Technical Parameters"
+    },
+    "note": {
+      "zh": "可按照客户需求进行定制",
+      "en": "Can be customized according to customer requirements"
+    },
+    "tableHeaders": [
+      {
+        "zh": "型号",
+        "en": "Model",
+        "unit": ""
+      },
+      {
+        "zh": "有效容积",
+        "en": "Effective Volume",
+        "unit": "m³"
+      },
+      {
+        "zh": "处理能力",
+        "en": "Processing Capacity",
+        "unit": "m³/min"
+      },
+      {
+        "zh": "叶轮直径",
+        "en": "Impeller Diameter",
+        "unit": "mm"
+      },
+      {
+        "zh": "叶轮转速",
+        "en": "Impeller Speed",
+        "unit": "r/min"
+      },
+      {
+        "zh": "自吸风量",
+        "en": "Self-priming Air Volume",
+        "unit": "m³/min"
+      },
+      {
+        "zh": "电机功率",
+        "en": "Motor Power",
+        "unit": "kW"
+      },
+      {
+        "zh": "重量",
+        "en": "Weight",
+        "unit": "kg"
+      }
+    ],
+    "tableData": [
+      ["ZSF-1", "1", "1.0-3.0", "350", "300", "0.3-0.6", "4.0", "1200"],
+      ["ZSF-3", "3", "2.0-6.0", "450", "285", "0.5-1.0", "7.5", "1850"],
+      ["ZSF-6", "6", "4.0-10", "550", "265", "0.8-1.5", "15", "2700"],
+      ["ZSF-12", "12", "8.0-18", "650", "240", "1.2-2.5", "30", "4500"],
+      ["ZSF-20", "20", "15-25", "750", "220", "2.0-3.5", "45", "6800"],
+      ["ZSF-30", "30", "20-35", "850", "200", "3.0-5.0", "75", "9500"]
+    ]
+  },
+  "features": {
+    "zh": [
+      "自吸式设计，无需外部鼓风机，简化设备结构，降低投资成本",
+      "特殊叶轮结构，确保气泡细小均匀，提高矿化率",
+      "气量自动调节，适应不同矿物浮选要求",
+      "能耗低，运行成本节约，经济效益显著",
+      "安装简便，维护容易，使用寿命长",
+      "处理能力大，可单槽操作或多槽串联使用"
+    ],
+    "en": [
+      "Self-priming design eliminates the need for external blowers, simplifying equipment structure and reducing investment costs",
+      "Special impeller structure ensures fine and uniform bubbles, improving mineralization rate",
+      "Automatic air volume adjustment adapts to different mineral flotation requirements",
+      "Low energy consumption, reduced operating costs, significant economic benefits",
+      "Easy installation, simple maintenance, long service life",
+      "Large processing capacity, can be operated as single tank or multiple tanks in series"
+    ]
+  },
+  "applications": {
+    "title": {
+      "zh": "应用领域",
+      "en": "Applications"
+    },
+    "items": [
+      {
+        "icon": "🔴",
+        "title": {
+          "zh": "有色金属选矿",
+          "en": "Non-ferrous Metal Processing"
+        },
+        "description": {
+          "zh": "广泛用于铜、铅、锌、镍等有色金属矿物的浮选分离",
+          "en": "Widely used in flotation separation of non-ferrous metal minerals such as copper, lead, zinc, and nickel"
+        }
+      },
+      {
+        "icon": "⚫",
+        "title": {
+          "zh": "黑色金属选矿",
+          "en": "Ferrous Metal Processing"
+        },
+        "description": {
+          "zh": "适用于铁、锰等黑色金属矿物的浮选工艺",
+          "en": "Suitable for flotation processes of ferrous metal minerals such as iron and manganese"
+        }
+      },
+      {
+        "icon": "🪨",
+        "title": {
+          "zh": "非金属矿物加工",
+          "en": "Non-metallic Mineral Processing"
+        },
+        "description": {
+          "zh": "可用于石墨、萤石、长石等非金属矿物的浮选提纯",
+          "en": "Can be used for flotation purification of non-metallic minerals such as graphite, fluorite, and feldspar"
+        }
+      },
+      {
+        "icon": "🔄",
+        "title": {
+          "zh": "中小型选厂应用",
+          "en": "Small to Medium Beneficiation Plants"
+        },
+        "description": {
+          "zh": "特别适合中小型选矿厂使用，灵活适应各种选矿需求",
+          "en": "Especially suitable for small to medium-sized beneficiation plants, flexibly adapting to various beneficiation needs"
+        }
+      }
+    ]
+  },
+  "relatedProducts": [
+    "aeration-flotation-machine",
+    "bar-flotation-machine",
+    "flotation-cell",
+    "xcf-flotation-machine",
+    "coarse-particle-flotation-machine"
+  ]
+} 

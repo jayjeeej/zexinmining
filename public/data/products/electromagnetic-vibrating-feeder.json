@@ -1,0 +1,193 @@
+{
+  "id": "electromagnetic-vibrating-feeder",
+  "nameZh": "电磁振动给料机",
+  "nameEn": "Electromagnetic Vibrating Feeder",
+  "descriptionZh": "电磁激振式物料均匀输送设备，处理能力5-230 m³/h。无需润滑，功耗低(0.15-1.5kW)，振动频率50Hz，结构简单可靠。提供300-800mm宽度选择，适用于多种散状物料的精确给料。",
+  "descriptionEn": "Electromagnetic vibration material transport equipment with 5-230 m³/h capacity. No lubrication required, low power consumption (0.15-1.5kW), 50Hz vibration frequency, simple reliable structure. Width options from 300-800mm, suitable for precise feeding of various bulk materials.",
+  "mainImagePath": "/images/preprocessing/feeder-gz3.jpg",
+  "category": "preprocessing",
+  "subcategory": "feeders",
+  "featured": false,
+  "capacity": {
+    "min": 5,
+    "max": 230,
+    "unit": "m³/h"
+  },
+  "motorPower": {
+    "min": 0.15,
+    "max": 1.5,
+    "unit": "kW"
+  },
+  "specifications": [
+    {
+      "nameZh": "型号",
+      "nameEn": "Model",
+      "valueZh": "GZ3",
+      "valueEn": "GZ3"
+    },
+    {
+      "nameZh": "处理能力",
+      "nameEn": "Processing Capacity",
+      "valueZh": "5-230 m³/h",
+      "valueEn": "5-230 m³/h"
+    },
+    {
+      "nameZh": "电机功率",
+      "nameEn": "Motor Power",
+      "valueZh": "0.15-1.5 kW",
+      "valueEn": "0.15-1.5 kW"
+    }
+  ],
+  "features": [
+    {
+      "titleZh": "简单可靠",
+      "titleEn": "Simple and Reliable",
+      "descriptionZh": "仅含电磁激振器和弹簧系统，无旋转部件，维护简单",
+      "descriptionEn": "Only electromagnetic exciter and spring system, no rotating parts, simple maintenance"
+    },
+    {
+      "titleZh": "节能环保",
+      "titleEn": "Energy Saving",
+      "descriptionZh": "功率低至0.15kW，相比机械给料机节能50%以上",
+      "descriptionEn": "Power as low as 0.15kW, over 50% energy saving compared to mechanical feeders"
+    },
+    {
+      "titleZh": "调节方便",
+      "titleEn": "Easy Adjustment",
+      "descriptionZh": "电流调节系统可实现0-100%给料量无级调节，响应迅速",
+      "descriptionEn": "Current regulation system enables 0-100% stepless feed rate adjustment with quick response"
+    },
+    {
+      "titleZh": "防堵塞设计",
+      "titleEn": "Anti-clogging Design",
+      "descriptionZh": "槽体倾角可达15°，特殊纵向振动模式防止物料堵塞",
+      "descriptionEn": "Trough inclination up to 15°, special longitudinal vibration pattern prevents material clogging"
+    },
+    {
+      "titleZh": "适用性广",
+      "titleEn": "Wide Applicability",
+      "descriptionZh": "处理粒度0.1-60mm物料，适应不同工况，提供多种型号选择",
+      "descriptionEn": "Processes materials with particle size 0.1-60mm, adaptable to different conditions, various models available"
+    }
+  ],
+  "applications": [
+    {
+      "title": {
+        "zh": "选矿生产线",
+        "en": "Mineral Processing Line"
+      },
+      "description": {
+        "zh": "连接破碎与筛分工序，精确控制下游设备给料量。振动强度可调，最大处理能力230 m³/h，适用于0.1-60mm细碎矿石。",
+        "en": "Connects crushing and screening processes with precise control of feed rate to downstream equipment. Adjustable vibration intensity, maximum processing capacity 230 m³/h, suitable for 0.1-60mm fine crushed ore."
+      },
+      "icon": "⛏️"
+    },
+    {
+      "title": {
+        "zh": "冶金工业",
+        "en": "Metallurgical Industry"
+      },
+      "description": {
+        "zh": "向高温冶炼设备均匀给料。振动小(5-30mm振幅)，稳定性高，电磁线圈绝缘等级F级，确保物料供应连续稳定。",
+        "en": "Uniformly feeds materials to high-temperature smelting equipment. Small vibration (5-30mm amplitude), high stability, Class F insulation electromagnetic coil ensures continuous stable material supply."
+      },
+      "icon": "🔥"
+    },
+    {
+      "title": {
+        "zh": "建材行业",
+        "en": "Building Materials Industry"
+      },
+      "description": {
+        "zh": "用于水泥、石灰、石膏生产的原料精确供给。控制系统精度高达±1%，根据生产需求实时调整给料量，设备宽度300-800mm可选。",
+        "en": "Used for precise supply of raw materials in cement, lime and gypsum production. Control system accuracy up to ±1%, real-time feed rate adjustment based on production requirements, available width 300-800mm."
+      },
+      "icon": "🏗️"
+    },
+    {
+      "title": {
+        "zh": "粉体加工",
+        "en": "Powder Processing"
+      },
+      "description": {
+        "zh": "实现细粒物料定量给料，频率50Hz的高频振动有效防止细粉结块和架桥，功率0.15-1.5kW满足不同产量需求。",
+        "en": "Achieves quantitative feeding of fine materials, 50Hz high-frequency vibration effectively prevents fine powder agglomeration and bridging, power 0.15-1.5kW meets different production capacity requirements."
+      },
+      "icon": "💨"
+    }
+  ],
+  "technicalParameters": [
+    {
+      "model": "GZ3",
+      "width": "300",
+      "length": "1520",
+      "frequency": "50",
+      "capacity": "5-30",
+      "excitation": "5.0",
+      "power": "0.15",
+      "dimensions": "1520×620×380",
+      "weight": "250"
+    },
+    {
+      "model": "GZ4",
+      "width": "400",
+      "length": "1530",
+      "frequency": "50",
+      "capacity": "10-55",
+      "excitation": "10.0",
+      "power": "0.25",
+      "dimensions": "1530×720×380",
+      "weight": "300"
+    },
+    {
+      "model": "GZ5",
+      "width": "500",
+      "length": "1550",
+      "frequency": "50",
+      "capacity": "20-80",
+      "excitation": "15.0",
+      "power": "0.55",
+      "dimensions": "1550×820×380",
+      "weight": "380"
+    },
+    {
+      "model": "GZ6",
+      "width": "600",
+      "length": "1550",
+      "frequency": "50",
+      "capacity": "30-120",
+      "excitation": "20.0",
+      "power": "0.75",
+      "dimensions": "1550×920×380",
+      "weight": "460"
+    },
+    {
+      "model": "GZ7",
+      "width": "700",
+      "length": "1550",
+      "frequency": "50",
+      "capacity": "40-160",
+      "excitation": "25.0",
+      "power": "1.1",
+      "dimensions": "1550×1020×380",
+      "weight": "530"
+    },
+    {
+      "model": "GZ8",
+      "width": "800",
+      "length": "1600",
+      "frequency": "50",
+      "capacity": "50-230",
+      "excitation": "30.0",
+      "power": "1.5",
+      "dimensions": "1600×1120×380",
+      "weight": "630"
+    }
+  ],
+  "relatedProducts": [
+    "plate-feeder",
+    "belt-feeder",
+    "disc-feeder",
+    "xdg-vibrating-feeder"
+  ]
+} 
