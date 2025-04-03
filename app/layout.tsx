@@ -54,52 +54,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh">
-      <head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="renderer" content="webkit" />
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            document.documentElement.classList.add('js');
-            if (typeof window !== 'undefined') {
-              // 修复特定老旧Android设备上的兼容性问题
-              if (/Android/.test(navigator.userAgent) && !(/Chrome/.test(navigator.userAgent))) {
-                document.documentElement.classList.add('legacy-android');
-              }
-              
-              // 检测并修复华为设备特殊问题 - 增强检测逻辑
-              if (/HUAWEI|HONOR|BLA-L09|EMUI/i.test(navigator.userAgent)) {
-                document.documentElement.classList.add('huawei-fix');
-                
-                // 运行时修复特定问题
-                window.addEventListener('DOMContentLoaded', function() {
-                  // 修复图像和布局问题
-                  var allImages = document.querySelectorAll('img');
-                  if (allImages.length > 0) {
-                    for (var i = 0; i < allImages.length; i++) {
-                      allImages[i].style.maxWidth = '100%';
-                      allImages[i].style.height = 'auto';
-                    }
-                  }
-                  
-                  // 修复社交图标 - 保持它们在页脚中的原始位置
-                  var socialIcons = document.querySelectorAll('.social-icon, a[href*="whatsapp"] img');
-                  if (socialIcons.length > 0) {
-                    for (var i = 0; i < socialIcons.length; i++) {
-                      socialIcons[i].style.width = '24px';
-                      socialIcons[i].style.height = '24px';
-                      socialIcons[i].style.display = 'inline-block';
-                      socialIcons[i].style.verticalAlign = 'middle';
-                    }
-                  }
-                });
-              }
-            }
-          `
-        }}></script>
-      </head>
       <body className={`${inter.className} ${notoSansSC.variable} ${sandvikSans.variable} antialiased`}>
         <LanguageProvider>
           <DynamicTitle />
