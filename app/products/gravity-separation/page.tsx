@@ -6,6 +6,18 @@ import Link from "next/link";
 import ProductCard from '@/app/components/products/ProductCard';
 import PageSection from '@/app/components/PageSection';
 import { useLanguage } from "@/app/contexts/LanguageContext";
+import { generateCategoryMetadata } from "@/app/utils/seo";
+import ProductStructuredData from "@/app/components/ProductStructuredData";
+
+// 添加页面专用SEO元数据
+export const metadata = generateCategoryMetadata({
+  titleZh: "重选设备 | 高效选矿分离设备",
+  titleEn: "Gravity Separation Equipment | Efficient Mineral Separation",
+  descriptionZh: "泽鑫矿山设备提供全系列重选设备，包括摇床、跳汰机、离心机和螺旋溜槽，适用于金、锡、钨、钽铌等矿石分选，具有高效率、低能耗、环保等优点。",
+  descriptionEn: "Zexin Mining Equipment offers a complete range of gravity separation equipment including shaking tables, jigs, centrifuges and spiral chutes for gold, tin, tungsten and tantalum-niobium ore separation, featuring high efficiency, low energy consumption and environmental benefits.",
+  keywords: ["重选设备", "摇床", "跳汰机", "螺旋溜槽", "离心选矿机", "gravity separation", "shaking table", "jig", "spiral chute", "centrifugal separator"],
+  slug: "gravity-separation"
+});
 
 // 定义产品数据类型
 interface ProductData {
@@ -40,6 +52,12 @@ export default function GravitySeparationPage() {
   const { language, isZh } = useLanguage();
   const [products, setProducts] = useState<ProductData[]>([]);
   const [loading, setLoading] = useState(true);
+  
+  // 重选设备分类描述
+  const titleZh = "重选设备";
+  const titleEn = "Gravity Separation Equipment";
+  const descriptionZh = "利用矿物比重差进行分选的设备，包括摇床、跳汰机、离心机和螺旋溜槽等。我们的重选设备适用于金、锡、钨等矿石的选别，具有高效率、低能耗、环保等优点。";
+  const descriptionEn = "Equipment that separates minerals based on specific gravity differences, including shaking tables, jigs, centrifuges, and spiral chutes. Our gravity separation equipment is suitable for gold, tin, tungsten and other ore separation, with high efficiency, low energy consumption, and environmental protection advantages.";
   
   // 格式化能力、尺寸等数据的辅助函数
   const formatCapacity = (data: any) => {
@@ -115,6 +133,15 @@ export default function GravitySeparationPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      {/* 添加结构化数据 - 对页面布局没有视觉影响 */}
+      <ProductStructuredData
+        name={isZh ? titleZh : titleEn}
+        description={isZh ? descriptionZh : descriptionEn}
+        image="/images/products/gravity-separation/category-overview.jpg"
+        category={isZh ? "重选设备" : "Gravity Separation Equipment"}
+        url="/products/gravity-separation"
+      />
+      
       {/* 页面标题区域 */}
       <PageSection 
         noPadding 
@@ -136,17 +163,15 @@ export default function GravitySeparationPage() {
           <div className="relative z-10 max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row gap-12 items-center mt-4 mb-4">
               <div className="md:w-1/2 pl-0">
-                <h1 className="text-6xl md:text-7xl font-normal text-[#333333] mb-6 text-left">
-                  {isZh ? "重选设备" : "Gravity Separation Equipment"}
+                <h1 className="text-6xl md:text-7xl font-normal text-[#333333] mb-6 text-left" itemProp="name">
+                  {isZh ? titleZh : titleEn}
                 </h1>
               </div>
               
               <div className="md:w-1/2 pr-0">
                 <div className="space-y-4 text-black text-left content-right">
-                  <p>
-                    {isZh
-                      ? "利用矿物比重差进行分选的设备，包括摇床、离心机和螺旋溜槽等。我们的重选设备适用于金、锡、钨等矿石的选别，具有高效率、低能耗、环保等优点。"
-                      : "Equipment that separates minerals based on specific gravity differences, including shaking tables, centrifuges, and spiral chutes. Our gravity separation equipment is suitable for gold, tin, tungsten and other ore separation, with high efficiency, low energy consumption, and environmental protection advantages."}
+                  <p itemProp="description">
+                    {isZh ? descriptionZh : descriptionEn}
                   </p>
                 </div>
               </div>
