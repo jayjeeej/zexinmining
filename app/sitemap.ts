@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 // 网站基础URL
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.zexinmine.com';
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.zexinmining.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // 主要页面

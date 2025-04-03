@@ -41,9 +41,9 @@ export const metadata: Metadata = {
   generator: "Next.js",
   applicationName: "Zexin Mining Equipment",
   keywords: ["矿山设备", "破碎机", "球磨机", "浮选机", "磁选机", "重选设备", "mining equipment", "crusher", "ball mill", "flotation machine", "magnetic separator", "gravity equipment"],
-  authors: [{ name: "Zexin Mining Equipment Co., Ltd", url: "https://www.zexinmine.com" }],
+  authors: [{ name: "Zexin Mining Equipment Co., Ltd", url: "https://www.zexinmining.com" }],
   // 根据实际网站地址修改基本 URL
-  metadataBase: new URL("https://www.zexinmine.com"), 
+  metadataBase: new URL("https://www.zexinmining.com"), 
   robots: { index: true, follow: true },
   viewport: {
     width: 'device-width',
@@ -59,6 +59,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh">
+      <head>
+        {/* Google Search Console 验证标签 - 请替换为您实际的验证代码 */}
+        <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
+      </head>
       <body className={`${inter.className} ${notoSansSC.variable} ${sandvikSans.variable} antialiased`}>
         <LanguageProvider>
           <DynamicTitle />

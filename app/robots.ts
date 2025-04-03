@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/'],
     },
-    sitemap: 'https://www.zexinmine.com/sitemap.xml',
+    sitemap: 'https://www.zexinmining.com/sitemap.xml',
   };
 } 
