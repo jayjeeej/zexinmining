@@ -130,10 +130,6 @@ export default function FloationColumn() {
   );
 }
 
-export async function generateMetadata(): Promise<Metadata> {
-  return metadata;
-}
-
 // Format for extraction
 export function getCapacityRange(productData: any) {
   try {
