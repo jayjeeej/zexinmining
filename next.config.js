@@ -10,6 +10,20 @@ const nextConfig = {
     // your project has type errors.
     ignoreBuildErrors: true,
   },
+  // 强制HTTPS
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload'
+          }
+        ]
+      }
+    ]
+  }
 }
 
 module.exports = nextConfig
