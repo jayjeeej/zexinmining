@@ -1,7 +1,5 @@
-import { useLanguage } from "@/app/contexts/LanguageContext";
 import { generateProductMetadata } from "@/app/utils/seo";
-import ProductStructuredData from "@/app/components/ProductStructuredData";
-import ProductDescription from "@/app/components/ProductDescription";
+import MagneticSeparatorClient from "@/app/components/products/MagneticSeparatorClient";
 
 // 添加页面专用SEO元数据
 export const metadata = generateProductMetadata({
@@ -15,8 +13,6 @@ export const metadata = generateProductMetadata({
 });
 
 export default function MagneticSeparatorPage() {
-  const { isZh } = useLanguage();
-  
   // 产品描述文本
   const nameZh = "磁选设备";
   const nameEn = "Magnetic Separation Equipment";
@@ -58,27 +54,15 @@ export default function MagneticSeparatorPage() {
   ];
   
   return (
-    <div className="container mx-auto px-4 py-8">
-      {/* 添加结构化数据 - 对页面布局没有视觉影响 */}
-      <ProductStructuredData
-        name={isZh ? nameZh : nameEn}
-        description={isZh ? descriptionZh : descriptionEn}
-        image="/images/products/magnetic-separation/magnetic-separator.jpg"
-        category={isZh ? "磁选设备" : "Magnetic Separation Equipment"}
-        url="/products/magnetic-separator"
-      />
-      
-      {/* 使用语义化的产品描述组件 */}
-      <ProductDescription
-        titleZh={nameZh}
-        titleEn={nameEn}
-        descriptionZh={descriptionZh}
-        descriptionEn={descriptionEn}
-        keyFeaturesZh={keyFeaturesZh}
-        keyFeaturesEn={keyFeaturesEn}
-        applicationsZh={applicationsZh}
-        applicationsEn={applicationsEn}
-      />
-    </div>
+    <MagneticSeparatorClient
+      nameZh={nameZh}
+      nameEn={nameEn}
+      descriptionZh={descriptionZh}
+      descriptionEn={descriptionEn}
+      keyFeaturesZh={keyFeaturesZh}
+      keyFeaturesEn={keyFeaturesEn}
+      applicationsZh={applicationsZh}
+      applicationsEn={applicationsEn}
+    />
   );
 } 
