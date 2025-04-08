@@ -24,14 +24,33 @@ const nextConfig = {
       }
     ]
   },
-  // 添加HTTP到HTTPS的重定向
+  // 修复的HTTP到HTTPS重定向（避免循环重定向）
   async redirects() {
     return [
+      // HTTP 到 HTTPS 重定向（仅当请求是HTTP时）
       {
         source: '/:path*',
         destination: 'https://www.zexinmining.com/:path*',
         permanent: true,
-        basePath: false,
+        has: [
+          {
+            type: 'header',
+            key: 'x-forwarded-proto',
+            value: 'http',
+          },
+        ],
+      },
+      // 非www到www重定向（仅当域名不是www.zexinmining.com时）
+      {
+        source: '/:path*',
+        destination: 'https://www.zexinmining.com/:path*',
+        permanent: true,
+        has: [
+          {
+            type: 'host',
+            value: 'zexinmining.com',
+          },
+        ],
       }
     ]
   }
