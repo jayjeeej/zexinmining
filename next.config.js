@@ -23,6 +23,17 @@ const nextConfig = {
         ]
       }
     ]
+  },
+  // 添加HTTP到HTTPS的重定向
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        destination: 'https://www.zexinmining.com/:path*',
+        permanent: true,
+        basePath: false,
+      }
+    ]
   }
 }
 
