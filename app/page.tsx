@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ReactNode } from "react";
 import { useLanguage } from "./contexts/LanguageContext";
 import Section from "./components/Section";
+import VideoStructuredData from "./components/VideoStructuredData";
 
 export default function Home() {
   const { isZh } = useLanguage();
@@ -52,6 +53,16 @@ export default function Home() {
 
   return (
     <main className="flex flex-col w-full">
+      {/* 视频结构化数据 - 无视觉影响 */}
+      <VideoStructuredData
+        name={isZh ? "泽鑫矿山设备矿业展示视频" : "Zexin Mining Equipment Mining Showcase Video"}
+        description={isZh ? "展示矿山采矿和处理作业的背景视频" : "Background video showcasing mining and processing operations"}
+        contentUrl="/videos/mining-bg.mp4"
+        thumbnailUrl="/images/solutions-bg.jpg"
+        uploadDate="2025-01-01"
+        duration="PT1M30S"
+      />
+      
       {/* 首屏：欢迎内容 */}
       <Section bgColor="bg-white">
         <div className="flex flex-col md:flex-row gap-12 items-center justify-between w-full">
