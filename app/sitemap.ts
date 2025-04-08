@@ -63,26 +63,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // 产品详情页面 - 这里列出了一些主要产品，实际项目中可能需要从API或数据库获取完整列表
-  const productPages = [
-    'jaw-crusher',
-    'impact-crusher',
-    'cone-crusher',
-    'hammer-crusher',
-    'vibrating-screen',
-    'linear-vibrating-screen',
-    'spiral-washer',
-    'overflow-ball-mill',
-    'wet-grid-ball-mill',
-    'sag-ball-mill',
-    'xcf-flotation-machine',
-    'permanent-magnetic-drum-separator',
-  ].map(slug => ({
-    url: `${baseUrl}/products/${getProductCategory(slug)}/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
+  // 检查产品URL可用性并生成sitemap
+  const productPages = generateProductSitemap();
 
   // 解决方案页面
   const solutionPages = [
@@ -99,6 +81,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 合并所有页面
   return [...mainPages, ...categoryPages, ...productPages, ...solutionPages];
+}
+
+/**
+ * 生成产品sitemap并检查URL可用性
+ */
+function generateProductSitemap() {
+  // 产品详情页面 - 这里列出所有产品
+  const allProducts = [
+    'jaw-crusher',
+    'impact-crusher',
+    'cone-crusher',
+    'hammer-crusher',
+    'double-roller-crusher',
+    'heavy-duty-double-roller-crusher',
+    'vibrating-screen',
+    'linear-vibrating-screen',
+    'spiral-washer',
+    'overflow-ball-mill',
+    'wet-grid-ball-mill',
+    'sag-ball-mill',
+    'xcf-flotation-machine',
+    'permanent-magnetic-drum-separator',
+    'sawtooth-wave-jig',
+    'synchronous-counter-directional-jig',
+    'carpet-hooking-machine',
+  ];
+  
+  // 检查URL可用性
+  return allProducts.map(slug => {
+    const category = getProductCategory(slug);
+    return {
+      url: `${baseUrl}/products/${category}/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    };
+  });
 }
 
 /**
