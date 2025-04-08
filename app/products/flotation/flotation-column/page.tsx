@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import ProductDetailTemplate from '@/app/components/products/ProductDetailTemplate';
 import { Metadata } from 'next';

@@ -1,5 +1,3 @@
-'use client';
-
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import { generateProductMetadata } from "@/app/utils/seo";
 import ProductStructuredData from "@/app/components/ProductStructuredData";
