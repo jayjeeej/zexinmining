@@ -21,7 +21,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
   return (
     <nav aria-label="Breadcrumb" data-breadcrumbs="">
       <ol className="flex flex-wrap w-full items-center text-sm gap-x-4" itemScope itemType="http://schema.org/BreadcrumbList">
-        <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
+        <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem" id="breadcrumb-home">
           <Link 
             href="/"
             itemScope
@@ -47,6 +47,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
             itemProp="itemListElement" 
             itemScope 
             itemType="http://schema.org/ListItem"
+            id={`breadcrumb-item-${index + 1}`}
           >
             {item.href ? (
               <Link 
