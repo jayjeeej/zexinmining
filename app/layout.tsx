@@ -95,6 +95,9 @@ export default function RootLayout({
         {/* Google Search Console 验证标签 - 请替换为您实际的验证代码 */}
         <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
         
+        {/* favicon */}
+        <link rel="icon" href="/favicon.ico" />
+        
         {/* 预连接重要域名以提高性能 */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
