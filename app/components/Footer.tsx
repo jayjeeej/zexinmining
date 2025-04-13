@@ -88,8 +88,8 @@ export default function Footer() {
                 <Image
                   src={link.icon}
                   alt={link.name}
-                  width={24}
-                  height={24}
+                  fill
+                  sizes="24px"
                   style={{ objectFit: "contain" }}
                 />
               </div>

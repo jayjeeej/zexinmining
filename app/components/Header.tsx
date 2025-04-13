@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "../contexts/LanguageContext";
-import ImageWithFallback from "./ImageWithFallback";
 
 // 导航链接数据
 const navLinks = [
@@ -130,13 +129,12 @@ export default function Header() {
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center">
-                <ImageWithFallback
+                <Image
                   src={isZh ? "/images/logo-zh.png" : "/images/logo-en.png"}
                   width={275}
                   height={62}
                   alt={isZh ? "泽鑫矿山设备" : "Zexin Mining Equipment"}
                   className="h-14 w-auto"
-                  priority={true}
                 />
               </Link>
             </div>
@@ -222,13 +220,12 @@ export default function Header() {
                   {/* 保持Logo在搜索框中的显示 */}
                   <div className="flex-shrink-0 mr-8">
                     <Link href="/" className="flex items-center" onClick={(e) => e.preventDefault()}>
-                      <ImageWithFallback
+                      <Image
                         src={isZh ? "/images/logo-zh.png" : "/images/logo-en.png"}
                         width={275}
                         height={62}
                         alt={isZh ? "泽鑫矿山设备" : "Zexin Mining Equipment"}
                         className="h-14 w-auto"
-                        priority={true}
                       />
                     </Link>
                   </div>

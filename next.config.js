@@ -12,18 +12,13 @@ const nextConfig = {
   },
   // 图片优化配置
   images: {
-    domains: ['localhost'],
-    unoptimized: true,
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'www.zexinmining.com',
       },
     ],
-    formats: ['image/avif', 'image/webp'],
-    minimumCacheTTL: 60,
+    unoptimized: true, // 全局禁用图片优化以解决404问题
   },
   // 强制HTTPS
   async headers() {
@@ -34,32 +29,6 @@ const nextConfig = {
           {
             key: 'Strict-Transport-Security',
             value: 'max-age=63072000; includeSubDomains; preload'
-          },
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable'
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
-          }
-        ]
-      },
-      {
-        source: '/fonts/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable'
-          }
-        ]
-      },
-      {
-        source: '/images/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=86400'
           }
         ]
       }
@@ -94,27 +63,7 @@ const nextConfig = {
         ],
       }
     ]
-  },
-  // 优化打包和运行时
-  compress: true,
-  poweredByHeader: false,
-  experimental: {
-    scrollRestoration: true,
-  },
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.(mp4|webm)$/,
-      use: {
-        loader: 'file-loader',
-        options: {
-          publicPath: '/_next/static/videos/',
-          outputPath: 'static/videos/',
-          name: '[name].[hash].[ext]',
-        },
-      },
-    });
-    return config;
-  },
+  }
 }
 
 module.exports = nextConfig

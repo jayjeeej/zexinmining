@@ -8,8 +8,6 @@ import NewsletterBanner from "./components/NewsletterBanner";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import CookieConsent from './components/CookieConsent'
 import DynamicTitle from './components/DynamicTitle';
-import Script from 'next/script';
-import GoogleAnalyticsManager from './components/GoogleAnalyticsManager';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -66,40 +64,9 @@ export default function RootLayout({
       <head>
         {/* Google Search Console 验证标签 - 请替换为您实际的验证代码 */}
         <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
-        {/* 预连接DNS提高性能 */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        
-        {/* 预加载关键图片资源 */}
-        <link rel="preload" href="/images/logo-zh.png" as="image" type="image/png" />
-        <link rel="preload" href="/images/logo-en.png" as="image" type="image/png" />
-        <link rel="preload" href="/images/footer-logo-zh.png" as="image" type="image/png" />
-        <link rel="preload" href="/images/footer-logo-en.png" as="image" type="image/png" />
-        
-        {/* 预加载关键字体 */}
-        <link rel="preload" href="/fonts/SandvikSansText-Bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body className={`${inter.className} ${notoSansSC.variable} ${sandvikSans.variable} antialiased`}>
-        {/* Google Analytics 脚本 - 使用懒加载方式避免阻塞渲染 */}
-        <Script 
-          src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT_ID"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-MEASUREMENT_ID', {
-              'transport_url': 'https://www.googletagmanager.com',
-              'transport_type': 'beacon',
-              'send_page_view': false
-            });
-          `}
-        </Script>
-        
         <LanguageProvider>
-          <GoogleAnalyticsManager />
           <DynamicTitle />
           <Header />
           {children}
