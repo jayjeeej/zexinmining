@@ -59,10 +59,10 @@ export default function Footer() {
             <div className="flex justify-end">
               <ul className="space-y-4">
                 {footerLinks.map((link) => (
-                  <li key={isZh ? link.nameZh : link.nameEn}>
+                  <li key={isZh ? link.nameZh : link.nameEn} className="text-right w-full">
                     <Link 
                       href={link.href}
-                      className="text-[#666666] hover:text-white text-base font-['Sandvik_Sans_Text',_sans-serif] transition-colors"
+                      className="text-[#666666] hover:text-white text-base font-['Sandvik_Sans_Text',_sans-serif] transition-colors inline-block"
                     >
                       {isZh ? link.nameZh : link.nameEn}
                     </Link>
