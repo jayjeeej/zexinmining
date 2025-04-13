@@ -71,13 +71,13 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         
         {/* 预加载关键图片资源 */}
-        <link rel="preload" href="/images/logo-zh.png" as="image" type="image/png" fetchPriority="high" />
-        <link rel="preload" href="/images/logo-en.png" as="image" type="image/png" fetchPriority="high" />
-        <link rel="preload" href="/images/footer-logo-zh.png" as="image" type="image/png" fetchPriority="high" />
-        <link rel="preload" href="/images/footer-logo-en.png" as="image" type="image/png" fetchPriority="high" />
+        <link rel="preload" href="/images/logo-zh.png" as="image" type="image/png" />
+        <link rel="preload" href="/images/logo-en.png" as="image" type="image/png" />
+        <link rel="preload" href="/images/footer-logo-zh.png" as="image" type="image/png" />
+        <link rel="preload" href="/images/footer-logo-en.png" as="image" type="image/png" />
         
         {/* 预加载关键字体 */}
-        <link rel="preload" href="/fonts/SandvikSansText-Bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" fetchPriority="high" />
+        <link rel="preload" href="/fonts/SandvikSansText-Bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body className={`${inter.className} ${notoSansSC.variable} ${sandvikSans.variable} antialiased`}>
         {/* Google Analytics 脚本 - 使用懒加载方式避免阻塞渲染 */}

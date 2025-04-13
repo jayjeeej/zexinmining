@@ -10,8 +10,6 @@ interface ImageWithFallbackProps extends Omit<ImageProps, 'onError'> {
   src: string;
   fallbackSrc?: string;
   alt: string;
-  loading?: 'eager' | 'lazy';
-  priority?: boolean;
 }
 
 /**
@@ -21,8 +19,6 @@ export default function ImageWithFallback({
   src,
   fallbackSrc = '/images/placeholder.png',
   alt,
-  loading,
-  priority,
   ...props
 }: ImageWithFallbackProps) {
   const [imgSrc, setImgSrc] = useState(src);
@@ -38,8 +34,6 @@ export default function ImageWithFallback({
     <Image
       src={imgSrc}
       alt={alt}
-      loading={priority ? "eager" : loading}
-      priority={priority}
       onError={handleError}
       {...props}
     />

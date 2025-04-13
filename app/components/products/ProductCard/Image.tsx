@@ -34,7 +34,7 @@ export default function ProductCardImage({
       }}
       onLoad={handleImageLoad}
       priority={isPriority}
-      loading="eager"
+      loading={isPriority ? "eager" : "lazy"}
       crossOrigin="anonymous"
     />
   );
