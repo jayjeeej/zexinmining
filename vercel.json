@@ -1,0 +1,7 @@
+{
+  "routes": [
+    { "src": "/favicon.ico", "dest": "/favicon.ico" }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+} 
