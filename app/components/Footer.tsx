@@ -56,7 +56,7 @@ export default function Footer() {
 
           {/* 导航链接 */}
           <div className="md:col-span-3">
-            <div>
+            <div className="flex justify-end">
               <ul className="space-y-4">
                 {footerLinks.map((link) => (
                   <li key={isZh ? link.nameZh : link.nameEn}>
@@ -74,7 +74,7 @@ export default function Footer() {
         </div>
 
         {/* 社交媒体链接 */}
-        <div className="mb-12 mt-6 flex">
+        <div className="mb-0 mt-6 flex">
           {socialLinks.map((link) => (
             <a 
               key={link.name}
@@ -84,13 +84,13 @@ export default function Footer() {
               className="mr-6 hover:opacity-80 transition-opacity"
               aria-label={link.name}
             >
-              <div className="w-6 h-6 relative">
+              <div className="w-8 h-8 relative flex items-center justify-center">
                 <Image
                   src={link.icon}
                   alt={link.name}
-                  fill
-                  sizes="24px"
-                  style={{ objectFit: "contain" }}
+                  width={24}
+                  height={24}
+                  className="max-w-full"
                 />
               </div>
             </a>

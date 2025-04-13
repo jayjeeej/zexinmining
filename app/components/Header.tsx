@@ -135,6 +135,7 @@ export default function Header() {
                   height={62}
                   alt={isZh ? "泽鑫矿山设备" : "Zexin Mining Equipment"}
                   className="h-14 w-auto"
+                  priority={true}
                 />
               </Link>
             </div>
@@ -226,6 +227,7 @@ export default function Header() {
                         height={62}
                         alt={isZh ? "泽鑫矿山设备" : "Zexin Mining Equipment"}
                         className="h-14 w-auto"
+                        priority={true}
                       />
                     </Link>
                   </div>

@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "optimize-images": "node scripts/optimize-images.js",
+    "build": "npm run optimize-images && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -21,12 +22,13 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
+    "@types/node": "20.17.30",
+    "@types/react": "19.1.1",
     "@types/react-dom": "^19",
+    "cssnano": "^7.0.6",
     "eslint": "^9",
     "eslint-config-next": "15.2.3",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "5.8.3"
   }
 }
