@@ -8,7 +8,6 @@ import NewsletterBanner from "./components/NewsletterBanner";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import CookieConsent from './components/CookieConsent'
 import DynamicTitle from './components/DynamicTitle';
-import Script from 'next/script';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -46,11 +45,13 @@ export const metadata: Metadata = {
   // 根据实际网站地址修改基本 URL
   metadataBase: new URL("https://www.zexinmining.com"), 
   robots: { index: true, follow: true },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5
-  },
+};
+
+// 分离 viewport 配置
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5
 };
 
 export default function RootLayout({
@@ -63,22 +64,16 @@ export default function RootLayout({
       <head>
         {/* Google Search Console 验证标签 - 请替换为您实际的验证代码 */}
         <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
-        {/* 预加载重要资源 */}
-        <link rel="preload" href="/images/logo-zh.png" as="image" />
-        <link rel="preload" href="/images/logo-en.png" as="image" />
-        {/* 优先加载CSS */}
-        <link rel="preload" href="/_next/static/css/app/layout.css" as="style" />
       </head>
       <body className={`${inter.className} ${notoSansSC.variable} ${sandvikSans.variable} antialiased`}>
         <LanguageProvider>
           <DynamicTitle />
           <Header />
-          <main>{children}</main>
+          {children}
           <NewsletterBanner />
           <Footer />
           <CookieConsent />
         </LanguageProvider>
-        {/* 暂时移除不存在的analytics.js脚本 */}
       </body>
     </html>
   );

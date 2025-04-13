@@ -10,6 +10,16 @@ const nextConfig = {
     // your project has type errors.
     ignoreBuildErrors: true,
   },
+  // 图片优化配置
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.zexinmining.com',
+      },
+    ],
+    unoptimized: true, // 全局禁用图片优化以解决404问题
+  },
   // 强制HTTPS
   async headers() {
     return [
