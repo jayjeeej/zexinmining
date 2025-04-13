@@ -42,7 +42,7 @@ export default function Footer() {
                     alt={isZh ? "泽鑫矿山设备" : "Zexin Mining"}
                     width={80}
                     height={28}
-                    style={{ objectFit: "contain", width: "auto", height: "auto" }}
+                    style={{ objectFit: "contain", maxWidth: "80px", height: "auto" }}
                     className="max-w-full"
                     priority
                   />
