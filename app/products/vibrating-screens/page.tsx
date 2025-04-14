@@ -16,6 +16,7 @@ interface ProductData {
     en: string;
   };
   image?: string;
+  priority?: 'high' | 'low' | 'auto';
   capacity?: {
     zh: string;
     en: string;
@@ -136,6 +137,7 @@ export default function VibrationScreensPage() {
         en: product.series?.en || product.nameEn || ''
       },
       image: imagePath,
+      priority: product.priority,
       capacity: formatCapacity(product.capacity),
       screenSize: formatCapacity(product.screenSize),
       aperture: formatCapacity(product.aperture),
@@ -147,25 +149,32 @@ export default function VibrationScreensPage() {
   useEffect(() => {
     async function loadProductsData() {
       try {
-        // 从JSON文件获取产品数据
-        const yaCircularScreenRes = await fetch('/data/products/ya-circular-vibrating-screen.json');
-        const linearScreenRes = await fetch('/data/products/linear-vibrating-screen.json');
-        const bananaScreenRes = await fetch('/data/products/banana-vibrating-screen.json');
-        const barScreenRes = await fetch('/data/products/bar-vibrating-screen.json');
-        const drumScreenRes = await fetch('/data/products/drum-screen.json');
-        const xdScreenRes = await fetch('/data/products/vibrating-screen.json');
-        const zkrScreenRes = await fetch('/data/products/zkr-linear-vibrating-screen.json');
+        // 使用Promise.all并行加载所有JSON文件，减少加载时间
+        const fetchPromises = [
+          fetch('/data/products/ya-circular-vibrating-screen.json'),
+          fetch('/data/products/linear-vibrating-screen.json'),
+          fetch('/data/products/banana-vibrating-screen.json'),
+          fetch('/data/products/bar-vibrating-screen.json'),
+          fetch('/data/products/drum-screen.json'),
+          fetch('/data/products/vibrating-screen.json'),
+          fetch('/data/products/zkr-linear-vibrating-screen.json')
+        ];
         
-        // 检查响应状态并解析JSON
-        if (yaCircularScreenRes.ok && linearScreenRes.ok && 
-            bananaScreenRes.ok && barScreenRes.ok && drumScreenRes.ok && xdScreenRes.ok && zkrScreenRes.ok) {
-          const yaCircularScreen = await yaCircularScreenRes.json();
-          const linearScreen = await linearScreenRes.json();
-          const bananaScreen = await bananaScreenRes.json();
-          const barScreen = await barScreenRes.json();
-          const drumScreen = await drumScreenRes.json();
-          const xdScreen = await xdScreenRes.json();
-          const zkrScreen = await zkrScreenRes.json();
+        const responses = await Promise.all(fetchPromises);
+        
+        // 检查所有响应是否成功
+        if (responses.every(res => res.ok)) {
+          // 并行解析JSON数据
+          const jsonPromises = responses.map(res => res.json());
+          const [
+            yaCircularScreen,
+            linearScreen,
+            bananaScreen,
+            barScreen,
+            drumScreen,
+            xdScreen,
+            zkrScreen
+          ] = await Promise.all(jsonPromises);
           
           // 格式化产品数据，并确保关键数据存在
           const productsList = [
@@ -177,6 +186,14 @@ export default function VibrationScreensPage() {
             {...ensureProductData(xdScreen), uniqueId: 'xd-1'},
             {...ensureProductData(zkrScreen), uniqueId: 'zkr-1'}
           ];
+          
+          // 为关键图像添加预加载标记
+          productsList.forEach(product => {
+            // 分析产品ID预加载前3个产品图像
+            if (['ya-circular-1', 'linear-1', 'banana-1'].includes(product.uniqueId)) {
+              product.priority = 'high';
+            }
+          });
           
           console.log("固定式振动筛产品数据:", productsList);
           setProducts(productsList);

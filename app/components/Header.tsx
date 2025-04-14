@@ -127,14 +127,15 @@ export default function Header() {
         <div className="container mx-auto px-4 max-w-[1200px]">
           <div className="flex items-center justify-between h-24">
             {/* Logo */}
-            <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center">
+            <div className="flex-shrink-0 max-w-[275px] h-14 overflow-hidden">
+              <Link href="/" className="flex items-center h-full">
                 <Image
                   src={isZh ? "/images/logo-zh.png" : "/images/logo-en.png"}
                   width={275}
                   height={62}
                   alt={isZh ? "泽鑫矿山设备" : "Zexin Mining Equipment"}
-                  className="h-14 w-auto"
+                  className="w-auto h-auto max-h-full"
+                  style={{ objectFit: "contain" }}
                   priority={true}
                 />
               </Link>
@@ -219,14 +220,15 @@ export default function Header() {
               <div className="container mx-auto h-24">
                 <div className="flex items-center h-full px-4" onClick={(e) => e.stopPropagation()}>
                   {/* 保持Logo在搜索框中的显示 */}
-                  <div className="flex-shrink-0 mr-8">
-                    <Link href="/" className="flex items-center" onClick={(e) => e.preventDefault()}>
+                  <div className="flex-shrink-0 mr-8 max-w-[275px] h-14 overflow-hidden">
+                    <Link href="/" className="flex items-center h-full" onClick={(e) => e.preventDefault()}>
                       <Image
                         src={isZh ? "/images/logo-zh.png" : "/images/logo-en.png"}
                         width={275}
                         height={62}
                         alt={isZh ? "泽鑫矿山设备" : "Zexin Mining Equipment"}
-                        className="h-14 w-auto"
+                        className="w-auto h-auto max-h-full"
+                        style={{ objectFit: "contain" }}
                         priority={true}
                       />
                     </Link>
