@@ -10,7 +10,6 @@ import CookieConsent from './components/CookieConsent'
 import DynamicTitle from './components/DynamicTitle';
 import Script from 'next/script';
 import { NavigationProvider } from './contexts/NavigationContext';
-import GlobalLoadingIndicator from './components/GlobalLoadingIndicator';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -123,7 +122,6 @@ export default function RootLayout({
         <NavigationProvider>
           <LanguageProvider>
             <DynamicTitle />
-            <GlobalLoadingIndicator />
             <Header />
             {children}
             <NewsletterBanner />
