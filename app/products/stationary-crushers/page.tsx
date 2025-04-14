@@ -37,124 +37,88 @@ export default function StationaryCrushersPage() {
   const [products, setProducts] = useState<ProductData[]>([]);
   const [loading, setLoading] = useState(true);
   
-  // 格式化能力、尺寸等数据的辅助函数
-  const formatCapacity = (data: any) => {
-    if (!data) return undefined;
-    
-    // 如果已经是正确格式，直接返回
-    if (data.zh && data.en) {
-      return data;
-    }
-    
-    // 处理数值范围格式
-    if (typeof data === 'object' && (data.min !== undefined || data.max !== undefined)) {
-      const min = data.min || 0;
-      const max = data.max || min;
-      const unit = data.unit || '';
-      const valueText = min === max ? `${min} ${unit}` : `${min}-${max} ${unit}`;
-      
-      return {
-        zh: valueText,
-        en: valueText
-      };
-    }
-    
-    // 处理字符串格式
-    if (typeof data === 'string') {
-      return {
-        zh: data,
-        en: data
-      };
-    }
-    
-    return undefined;
-  };
-  
-  // 确保数据完整性的函数，特别针对颚式和双棍破碎机
-  const ensureProductData = (product: any) => {
-    const id = product.id || '';
-    
-    // 处理颚式破碎机和双棍破碎机的数据
-    if (id === 'jaw-crusher') {
-      // 颚式破碎机：确保使用正确的maxFeedSize
-      if (!product.feedSize && product.maxFeedSize) {
-        product.feedSize = product.maxFeedSize;
-      } else if (!product.feedSize) {
-        product.feedSize = { min: 80, max: 750, unit: 'mm' };  // 颚式破碎机正确的进料口
-      }
-    } else if (id.includes('double-roller')) {
-      // 双辊破碎机：如果没有进料口数据，添加一个默认的
-      if (!product.feedSize) {
-        product.feedSize = { min: 50, max: 300, unit: 'mm' };
-      }
-    }
-    
-    // 统一图片路径格式
-    const imagePath = `/images/products/crushers/${id}.png`;
-    
-    return {
-      id: id,
-      model: product.model || '',
-      series: {
-        zh: product.series?.zh || product.nameZh || '',
-        en: product.series?.en || product.nameEn || ''
-      },
-      image: imagePath,
-      capacity: formatCapacity(product.capacity),
-      feedSize: formatCapacity(product.feedSize),
-      motorPower: formatCapacity(product.motorPower),
-      isCrusherProduct: true
-    };
-  };
-
+  // 移除预加载效果，使用Next.js优化的方式
   useEffect(() => {
+    // 使用 AbortController 来管理请求
+    const controller = new AbortController();
+    const signal = controller.signal;
+    
     async function loadProductsData() {
       try {
-        // 从JSON文件获取产品数据
-        const jawCrusherRes = await fetch('/data/products/jaw-crusher.json');
-        const coneCrusherRes = await fetch('/data/products/cone-crusher.json');
-        const impactCrusherRes = await fetch('/data/products/impact-crusher.json');
-        const hammerCrusherRes = await fetch('/data/products/hammer-crusher.json');
-        const doubleRollerCrusherRes = await fetch('/data/products/double-roller-crusher.json');
-        const heavyDutyDoubleRollerCrusherRes = await fetch('/data/products/heavy-duty-double-roller-crusher.json');
+        // 在生产环境中一次性获取所有产品数据，减少HTTP请求数量
+        try {
+          // 首先尝试获取汇总JSON文件
+          const allProductsRes = await fetch('/data/products/crusher-products.json', { 
+            signal,
+            next: { revalidate: 3600 } // 1小时缓存，在Next.js中推荐使用
+          });
+          
+          if (allProductsRes.ok) {
+            const allProducts = await allProductsRes.json();
+            const processedProducts = allProducts.map(ensureProductData);
+            setProducts(processedProducts);
+            setLoading(false);
+            return;
+          }
+        } catch (err) {
+          // 如果汇总文件不存在或加载失败，回退到单独加载
+          console.info('No combined data file, loading individual files');
+        }
         
-        // 检查响应状态并解析JSON
-        if (jawCrusherRes.ok && coneCrusherRes.ok && impactCrusherRes.ok && hammerCrusherRes.ok && 
-            doubleRollerCrusherRes.ok && heavyDutyDoubleRollerCrusherRes.ok) {
-          const jawCrusher = await jawCrusherRes.json();
-          const coneCrusher = await coneCrusherRes.json();
-          const impactCrusher = await impactCrusherRes.json();
-          const hammerCrusher = await hammerCrusherRes.json();
-          const doubleRollerCrusher = await doubleRollerCrusherRes.json();
-          const heavyDutyDoubleRollerCrusher = await heavyDutyDoubleRollerCrusherRes.json();
-          
-          // 格式化产品数据，并确保关键数据存在
-          const productsList = [
-            ensureProductData(jawCrusher), 
-            ensureProductData(coneCrusher), 
-            ensureProductData(impactCrusher), 
-            ensureProductData(hammerCrusher), 
-            ensureProductData(doubleRollerCrusher),
-            ensureProductData(heavyDutyDoubleRollerCrusher)
-          ];
-          
-          console.log("破碎机产品数据:", productsList);
-          setProducts(productsList);
+        // 回退方案：并行加载单独文件
+        const productUrls = [
+          '/data/products/jaw-crusher.json',
+          '/data/products/cone-crusher.json',
+          '/data/products/impact-crusher.json',
+          '/data/products/hammer-crusher.json',
+          '/data/products/double-roller-crusher.json',
+          '/data/products/heavy-duty-double-roller-crusher.json'
+        ];
+        
+        const responses = await Promise.all(
+          productUrls.map(url => 
+            fetch(url, { 
+              signal,
+              next: { revalidate: 3600 } // 使用Next.js的revalidate机制替代cache属性
+            })
+              .then(res => res.ok ? res.json() : null)
+              .catch(err => {
+                if (err.name !== 'AbortError') {
+                  console.error(`Error loading ${url}:`, err);
+                }
+                return null;
+              })
+          )
+        );
+        
+        // 过滤掉加载失败的产品和格式化数据
+        const productsData = responses
+          .filter(Boolean)
+          .map(product => ensureProductData(product));
+        
+        if (productsData.length > 0) {
+          setProducts(productsData);
         } else {
-          console.error('Failed to load product data');
-          // 加载失败时使用硬编码数据作为备份
+          // 如果所有产品加载失败，使用备用数据
           setProducts(getBackupCrusherProducts());
         }
-      } catch (error) {
-        console.error('Error loading products:', error);
-        // 加载失败时使用硬编码数据
-        setProducts(getBackupCrusherProducts());
+      } catch (error: unknown) {
+        const err = error as Error;
+        if (err.name !== 'AbortError') {
+          console.error('Error loading products:', err);
+          setProducts(getBackupCrusherProducts());
+        }
       } finally {
         setLoading(false);
       }
     }
     
     loadProductsData();
+    
+    // 组件卸载时取消所有正在进行的请求
+    return () => {
+      controller.abort();
+    };
   }, [language]);
 
   // 备用产品数据
@@ -287,6 +251,76 @@ export default function StationaryCrushersPage() {
         isCrusherProduct: true
       }
     ];
+  };
+
+  // 格式化能力、尺寸等数据的辅助函数
+  const formatCapacity = (data: any) => {
+    if (!data) return undefined;
+    
+    // 如果已经是正确格式，直接返回
+    if (data.zh && data.en) {
+      return data;
+    }
+    
+    // 处理数值范围格式
+    if (typeof data === 'object' && (data.min !== undefined || data.max !== undefined)) {
+      const min = data.min || 0;
+      const max = data.max || min;
+      const unit = data.unit || '';
+      const valueText = min === max ? `${min} ${unit}` : `${min}-${max} ${unit}`;
+      
+      return {
+        zh: valueText,
+        en: valueText
+      };
+    }
+    
+    // 处理字符串格式
+    if (typeof data === 'string') {
+      return {
+        zh: data,
+        en: data
+      };
+    }
+    
+    return undefined;
+  };
+  
+  // 确保数据完整性的函数，特别针对颚式和双棍破碎机
+  const ensureProductData = (product: any) => {
+    const id = product.id || '';
+    
+    // 处理颚式破碎机和双棍破碎机的数据
+    if (id === 'jaw-crusher') {
+      // 颚式破碎机：确保使用正确的maxFeedSize
+      if (!product.feedSize && product.maxFeedSize) {
+        product.feedSize = product.maxFeedSize;
+      } else if (!product.feedSize) {
+        product.feedSize = { min: 80, max: 750, unit: 'mm' };  // 颚式破碎机正确的进料口
+      }
+    } else if (id.includes('double-roller')) {
+      // 双辊破碎机：如果没有进料口数据，添加一个默认的
+      if (!product.feedSize) {
+        product.feedSize = { min: 50, max: 300, unit: 'mm' };
+      }
+    }
+    
+    // 统一图片路径格式
+    const imagePath = `/images/products/crushers/${id}.png`;
+    
+    return {
+      id: id,
+      model: product.model || '',
+      series: {
+        zh: product.series?.zh || product.nameZh || '',
+        en: product.series?.en || product.nameEn || ''
+      },
+      image: imagePath,
+      capacity: formatCapacity(product.capacity),
+      feedSize: formatCapacity(product.feedSize),
+      motorPower: formatCapacity(product.motorPower),
+      isCrusherProduct: true
+    };
   };
 
   return (
