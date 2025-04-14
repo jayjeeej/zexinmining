@@ -93,17 +93,53 @@ export default function ProductCard({ product, basePath, showDetails = true }: P
     return isZh ? (obj.zh || '') : (obj.en || '');
   };
 
-  // 获取占位图片
+  // 获取产品的图片路径
   const getPlaceholderImage = (): string => {
     // 判断是否提供了图片路径
     if (product.image) return product.image;
+    
+    // 特定产品的图片路径映射
+    const pathMappings: Record<string, string> = {
+      'jaw-crusher': '/images/products/crushers/jaw-crusher.png',
+      'cone-crusher': '/images/products/crushers/cone-crusher.png',
+      'impact-crusher': '/images/products/crushers/impact-crusher.png',
+      'hammer-crusher': '/images/products/crushers/hammer-crusher.png',
+      'double-roller-crusher': '/images/products/crushers/double-roller-crusher.png',
+      'heavy-duty-double-roller-crusher': '/images/products/crushers/heavy-duty-double-roller-crusher.png',
+      'plate-feeder': '/images/products/feeders/plate-feeder.png',
+      'belt-feeder': '/images/products/feeders/belt-feeder.png',
+      'electromagnetic-vibrating-feeder': '/images/products/feeders/electromagnetic-vibrating-feeder.png',
+      'disc-feeder': '/images/products/feeders/disc-feeder.png',
+      'xdg-vibrating-feeder': '/images/products/feeders/xdg-vibrating-feeder.png',
+      'spiral-washer': '/images/products/washers/spiral-washer.png',
+      'double-spiral-washer': '/images/products/washers/double-spiral-washer.png',
+      'drum-washer': '/images/products/washers/drum-washer.png',
+      // 振动筛特殊映射
+      'vibrating-screen': '/images/products/screens/xd-vibrating-screen.png',
+      'xd-vibrating-screen': '/images/products/screens/xd-vibrating-screen.png',
+      'ya-circular-vibrating-screen': '/images/products/screens/ya-circular-vibrating-screen.png',
+      'linear-vibrating-screen': '/images/products/screens/linear-vibrating-screen.png',
+      'banana-vibrating-screen': '/images/products/screens/banana-vibrating-screen.png',
+      'bar-vibrating-screen': '/images/products/screens/bar-vibrating-screen.png',
+      'drum-screen': '/images/products/screens/drum-screen.png',
+      'zkr-linear-vibrating-screen': '/images/products/screens/zkr-linear-vibrating-screen.png'
+    };
+    
+    // 如果产品ID存在于映射表中，直接返回对应路径
+    if (product.id && pathMappings[product.id]) {
+      return pathMappings[product.id];
+    }
     
     // 根据产品ID判断类型
     if (product.isCrusherProduct || product.id.includes('crusher') || 
         (product.series?.zh?.includes('破碎机') || product.series?.en?.includes('Crusher'))) {
       return `/images/products/crushers/${product.id}.png`;
-    } else if (product.isScreenProduct || product.id.includes('screen') || 
+    } else if (product.isScreenProduct || product.id.includes('screen') || product.id === 'vibrating-screen' ||
         (product.series?.zh?.includes('振动筛') || product.series?.en?.includes('Screen'))) {
+      // 特殊处理XD系列振动筛
+      if (product.id === 'vibrating-screen') {
+        return '/images/products/screens/xd-vibrating-screen.png';
+      }
       return `/images/products/screens/${product.id}.png`;
     } else if (product.isClassifierProduct || product.id.includes('classifier') || 
         (product.series?.zh?.includes('分级机') || product.series?.en?.includes('Classifier'))) {

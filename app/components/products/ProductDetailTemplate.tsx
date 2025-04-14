@@ -1070,7 +1070,10 @@ export default function ProductDetailTemplate({
                       'xdg-vibrating-feeder': '/images/products/feeders/xdg-vibrating-feeder.png',
                       'spiral-washer': '/images/products/washers/spiral-washer.png',
                       'double-spiral-washer': '/images/products/washers/double-spiral-washer.png',
-                      'drum-washer': '/images/products/washers/drum-washer.png'
+                      'drum-washer': '/images/products/washers/drum-washer.png',
+                      // 添加XD系列振动筛的映射
+                      'vibrating-screen': '/images/products/screens/xd-vibrating-screen.png',
+                      'xd-vibrating-screen': '/images/products/screens/xd-vibrating-screen.png'
                     };
                     
                     // 优先使用映射表中的路径

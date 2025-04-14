@@ -148,7 +148,48 @@ export default function XDVibratingScreenPage() {
   const features = normalizeFeatures(productData.features);
 
   // 获取相关产品数据
-  const relatedProducts = getRelatedProducts(productData, 'vibrating-screen', productNameMap);
+  let relatedProducts = getRelatedProducts(productData, 'vibrating-screen', productNameMap);
+  
+  // 覆盖相关产品数据，确保ID正确并包含充足的产品
+  relatedProducts = {
+    title: {
+      zh: '同类产品',
+      en: 'Similar Products'
+    },
+    basePath: '/products/vibrating-screens',
+    items: [
+      {
+        id: 'ya-circular-vibrating-screen',
+        series: productNameMap['ya-circular-vibrating-screen'],
+        image: '/images/products/screens/ya-circular-vibrating-screen.png'
+      },
+      {
+        id: 'linear-vibrating-screen',
+        series: productNameMap['linear-vibrating-screen'],
+        image: '/images/products/screens/linear-vibrating-screen.png'
+      },
+      {
+        id: 'zkr-linear-vibrating-screen',
+        series: productNameMap['zkr-linear-vibrating-screen'],
+        image: '/images/products/screens/zkr-linear-vibrating-screen.png'
+      },
+      {
+        id: 'banana-vibrating-screen',
+        series: productNameMap['banana-vibrating-screen'],
+        image: '/images/products/screens/banana-vibrating-screen.png'
+      },
+      {
+        id: 'bar-vibrating-screen',
+        series: productNameMap['bar-vibrating-screen'],
+        image: '/images/products/screens/bar-vibrating-screen.png'
+      },
+      {
+        id: 'drum-screen',
+        series: productNameMap['drum-screen'],
+        image: '/images/products/screens/drum-screen.png'
+      }
+    ]
+  };
   
   // 准备首屏参数范围数据
   const capacity = productData.capacity || { min: 50, max: 600, unit: 'm³/h' };

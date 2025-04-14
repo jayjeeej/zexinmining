@@ -154,7 +154,16 @@ export function getRelatedProducts(productData: any, currentProductId: string, p
         'coarse-particle-flotation-machine': '/images/products/flotation/coarse-particle-flotation-machine.png',
         'flotation-cell': '/images/products/flotation/flotation-cell.png',
         'self-priming-flotation-machine': '/images/products/flotation/self-priming-flotation-machine.png',
-        'xcf-flotation-machine': '/images/products/flotation/xcf-flotation-machine.png'
+        'xcf-flotation-machine': '/images/products/flotation/xcf-flotation-machine.png',
+        // 振动筛产品映射
+        'vibrating-screen': '/images/products/screens/xd-vibrating-screen.png',
+        'xd-vibrating-screen': '/images/products/screens/xd-vibrating-screen.png',
+        'ya-circular-vibrating-screen': '/images/products/screens/ya-circular-vibrating-screen.png',
+        'linear-vibrating-screen': '/images/products/screens/linear-vibrating-screen.png',
+        'banana-vibrating-screen': '/images/products/screens/banana-vibrating-screen.png',
+        'bar-vibrating-screen': '/images/products/screens/bar-vibrating-screen.png',
+        'drum-screen': '/images/products/screens/drum-screen.png',
+        'zkr-linear-vibrating-screen': '/images/products/screens/zkr-linear-vibrating-screen.png'
       };
       
       // 优先使用映射表中的路径
@@ -783,7 +792,16 @@ function getProductImagePath(productId: string): string {
     'four-roller-variable-frequency-electrostatic-separator': 'magnetic-separation/four-roller-variable-frequency-electrostatic-separator.png',
     'plate-type-high-intensity-wet-magnetic-separator': 'magnetic-separation/plate-type-high-intensity-wet-magnetic-separator.png',
     'roller-type-high-intensity-wet-magnetic-separator': 'magnetic-separation/roller-type-high-intensity-wet-magnetic-separator.png',
-    'three-disc-belt-magnetic-separator': 'magnetic-separation/three-disc-belt-magnetic-separator.png'
+    'three-disc-belt-magnetic-separator': 'magnetic-separation/three-disc-belt-magnetic-separator.png',
+    // 振动筛产品映射
+    'vibrating-screen': 'screens/xd-vibrating-screen.png',
+    'xd-vibrating-screen': 'screens/xd-vibrating-screen.png',
+    'ya-circular-vibrating-screen': 'screens/ya-circular-vibrating-screen.png',
+    'linear-vibrating-screen': 'screens/linear-vibrating-screen.png',
+    'banana-vibrating-screen': 'screens/banana-vibrating-screen.png',
+    'bar-vibrating-screen': 'screens/bar-vibrating-screen.png',
+    'drum-screen': 'screens/drum-screen.png',
+    'zkr-linear-vibrating-screen': 'screens/zkr-linear-vibrating-screen.png'
   };
   
   // 检查特定映射
