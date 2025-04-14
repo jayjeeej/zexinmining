@@ -179,18 +179,18 @@ export default function FeedingEquipmentPage() {
       },
       {
         id: 'belt-feeder',
-        model: 'DSJ-800',
+        model: '500×1000',
         series: {
-          zh: '带式给料机',
+          zh: '皮带给料机',
           en: 'Belt Feeder'
         },
         capacity: {
-          zh: '30-400 m³/h',
-          en: '30-400 m³/h'
+          zh: '10-350 m³/h',
+          en: '10-350 m³/h'
         },
         motorPower: {
-          zh: '5.5-22 kW',
-          en: '5.5-22 kW'
+          zh: '0.75-3 kW',
+          en: '0.75-3 kW'
         },
         isFeederProduct: true
       },

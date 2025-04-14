@@ -117,28 +117,28 @@ export default function ClassificationEquipmentPage() {
     return [
       {
         id: 'high-weir-spiral-classifier',
-        model: 'FG-1500',
+        model: 'FLG系列',
         series: {
           zh: '高堰式单螺旋分级机',
           en: 'High Weir Spiral Classifier'
         },
         sandReturnCapacity: {
-          zh: '10-50 t/h',
-          en: '10-50 t/h'
+          zh: '30-11625 t/d',
+          en: '30-11625 t/d'
         },
         overflowCapacity: {
-          zh: '26-195 t/h',
-          en: '26-195 t/h'
+          zh: '10-890 t/d',
+          en: '10-890 t/d'
         },
         motorPower: {
-          zh: '5.5-18.5 kW',
-          en: '5.5-18.5 kW'
+          zh: '2.2-30 kW',
+          en: '2.2-30 kW'
         },
         isClassifierProduct: true
       },
       {
         id: 'double-spiral-classifier',
-        model: 'FLC-2000',
+        model: 'FLC系列',
         series: {
           zh: '沉没式螺旋分级机',
           en: 'Submerged Spiral Classifier'

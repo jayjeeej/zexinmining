@@ -92,23 +92,153 @@ export default function MagneticSeparationPage() {
               magneticFieldStrength: formatCapacity(product.magneticFieldStrength),
               motorPower: formatCapacity(product.motorPower),
               image: product.image || `/images/products/magnetic-separation/${product.id}.png`,
-              isMagneticSeparationProduct: true
+              isMagneticSeparatorProduct: true
             })));
           } else {
             // 如果没有数据或数据格式不正确，使用备用数据
-            setProducts([]);
+            setProducts(getBackupMagneticSeparatorProducts());
           }
         } else {
           // 如果请求失败，使用备用数据
-          setProducts([]);
+          setProducts(getBackupMagneticSeparatorProducts());
         }
       } catch (error) {
         console.error("Error loading magnetic separation equipment data:", error);
         // 出错时使用备用数据
-        setProducts([]);
+        setProducts(getBackupMagneticSeparatorProducts());
       } finally {
         setLoading(false);
       }
+    }
+    
+    // 磁选设备备份数据
+    const getBackupMagneticSeparatorProducts = (): ProductData[] => {
+      return [
+        {
+          id: "permanent-magnetic-drum-separator",
+          model: "CTB",
+          series: {
+            zh: "永磁筒式磁选机",
+            en: "Permanent Magnetic Drum Separator"
+          },
+          image: "/images/products/magnetic-separation/permanent-magnetic-drum-separator.png",
+          capacity: {
+            zh: "10-280 t/h",
+            en: "10-280 t/h"
+          },
+          motorPower: {
+            zh: "1.5-11 kW",
+            en: "1.5-11 kW"
+          },
+          isMagneticSeparatorProduct: true
+        },
+        {
+          id: "double-roller-permanent-magnetic-zircon-separator",
+          model: "CTS",
+          series: {
+            zh: "双辊永磁锆英磁选机",
+            en: "Double Roller Permanent Magnetic Zircon Separator"
+          },
+          image: "/images/products/magnetic-separation/double-roller-permanent-magnetic-zircon-separator.png",
+          capacity: {
+            zh: "2-8 t/h",
+            en: "2-8 t/h"
+          },
+          motorPower: {
+            zh: "3 kW",
+            en: "3 kW"
+          },
+          magneticFieldStrength: {
+            zh: "10000-14000 Gs",
+            en: "10000-14000 Gs"
+          },
+          isMagneticSeparatorProduct: true
+        },
+        {
+          id: "four-roller-variable-frequency-electrostatic-separator",
+          model: "DXJ",
+          series: {
+            zh: "四辊变频高压静电选机",
+            en: "Four-Roller Variable Frequency High-Voltage Electrostatic Separator"
+          },
+          image: "/images/products/magnetic-separation/four-roller-variable-frequency-electrostatic-separator.png",
+          capacity: {
+            zh: "5-8 t/h",
+            en: "5-8 t/h"
+          },
+          motorPower: {
+            zh: "1.1 kW",
+            en: "1.1 kW"
+          },
+          voltage: {
+            zh: "0-80 kV",
+            en: "0-80 kV"
+          },
+          isMagneticSeparatorProduct: true
+        },
+        {
+          id: "plate-type-high-intensity-wet-magnetic-separator",
+          model: "HYQC",
+          series: {
+            zh: "平板式高强磁湿选磁选机",
+            en: "Plate-type High-intensity Wet Magnetic Separator"
+          },
+          image: "/images/products/magnetic-separation/plate-type-high-intensity-wet-magnetic-separator.png",
+          capacity: {
+            zh: "4-40 t/h",
+            en: "4-40 t/h"
+          },
+          motorPower: {
+            zh: "1.1-5.5 kW",
+            en: "1.1-5.5 kW"
+          },
+          isMagneticSeparatorProduct: true
+        },
+        {
+          id: "roller-type-high-intensity-wet-magnetic-separator",
+          model: "CXJ",
+          series: {
+            zh: "辊式高强度湿式磁选机",
+            en: "Roller-type High Intensity Wet Magnetic Separator"
+          },
+          image: "/images/products/magnetic-separation/roller-type-high-intensity-wet-magnetic-separator.png",
+          capacity: {
+            zh: "0.5-13 t/h",
+            en: "0.5-13 t/h"
+          },
+          motorPower: {
+            zh: "1.1-1.5 kW",
+            en: "1.1-1.5 kW"
+          },
+          magneticFieldStrength: {
+            zh: "11000-13500 Gs",
+            en: "11000-13500 Gs"
+          },
+          isMagneticSeparatorProduct: true
+        },
+        {
+          id: "three-disc-belt-magnetic-separator",
+          model: "CP3",
+          series: {
+            zh: "三盘带式磁选机",
+            en: "Three-Disc Belt Magnetic Separator"
+          },
+          image: "/images/products/magnetic-separation/three-disc-belt-magnetic-separator.png",
+          capacity: {
+            zh: "80-800 kg/h",
+            en: "80-800 kg/h"
+          },
+          motorPower: {
+            zh: "0.75-1.5 kW",
+            en: "0.75-1.5 kW"
+          },
+          magneticFieldStrength: {
+            zh: "1700-2000 mt",
+            en: "1700-2000 mt"
+          },
+          isMagneticSeparatorProduct: true
+        }
+      ];
     }
     
     loadProductsData();

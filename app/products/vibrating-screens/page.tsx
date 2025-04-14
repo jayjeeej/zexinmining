@@ -370,8 +370,8 @@ export default function VibrationScreensPage() {
           en: '2-50 mm'
         },
         motorPower: {
-          zh: '7.5-45 kW',
-          en: '7.5-45 kW'
+          zh: '4.4-30 kW',
+          en: '4.4-30 kW'
         },
         isScreenProduct: true,
         uniqueId: 'xd-1'

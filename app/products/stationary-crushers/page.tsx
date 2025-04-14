@@ -1,11 +1,13 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from 'next/navigation';
 import ProductCard from '@/app/components/ProductCard';
 import PageSection from '@/app/components/PageSection';
 import { useLanguage } from "@/app/contexts/LanguageContext";
+import Head from 'next/head';
 
 // 定义产品数据类型
 interface ProductData {
@@ -31,33 +33,130 @@ interface ProductData {
   [key: string]: any;
 }
 
+// 建立资源缓存系统，避免重复请求
+const resourceCache: Record<string, any> = {};
+
 // 固定式破碎机产品列表页面
 export default function StationaryCrushersPage() {
+  const router = useRouter();
   const { language, isZh } = useLanguage();
   const [products, setProducts] = useState<ProductData[]>([]);
   const [loading, setLoading] = useState(true);
   
-  // 移除预加载效果，使用Next.js优化的方式
+  // 预加载关键资源标签
+  const preloadTags = useMemo(() => {
+    return [
+      <link key="jaw-crusher" rel="preload" href="/images/products/crushers/jaw-crusher.png" as="image" type="image/png" />,
+      <link key="cone-crusher" rel="preload" href="/images/products/crushers/cone-crusher.png" as="image" type="image/png" />,
+      <link key="impact-crusher" rel="preload" href="/images/products/crushers/impact-crusher.png" as="image" type="image/png" />
+    ];
+  }, []);
+  
+  // 添加路由预取功能，提高体验
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // 预取相关产品类别
+      router.prefetch('/products/vibrating-screens');
+      router.prefetch('/products/grinding-equipment');
+      
+      // 使用 requestIdleCallback 在浏览器空闲时预取可能访问的详情页
+      if ('requestIdleCallback' in window) {
+        const idleCallback = window.requestIdleCallback(() => {
+          const commonProductIds = ['jaw-crusher', 'cone-crusher', 'impact-crusher'];
+          commonProductIds.forEach(id => {
+            router.prefetch(`/products/stationary-crushers/${id}`);
+          });
+        });
+        
+        return () => {
+          if ('cancelIdleCallback' in window) {
+            window.cancelIdleCallback(idleCallback);
+          }
+        };
+      }
+    }
+  }, [router]);
+  
+  // 优化数据获取
   useEffect(() => {
     // 使用 AbortController 来管理请求
     const controller = new AbortController();
     const signal = controller.signal;
     
+    // 添加资源预加载
+    if (typeof window !== 'undefined') {
+      // 预加载关键图片资源
+      const preloadLinks = [
+        '/images/products/crushers/jaw-crusher.png',
+        '/images/products/crushers/cone-crusher.png',
+        '/images/products/crushers/impact-crusher.png'
+      ];
+      
+      preloadLinks.forEach(href => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = href;
+        document.head.appendChild(link);
+      });
+    }
+    
     async function loadProductsData() {
+      // 如果产品数据已加载且用户切换语言，无需重新获取数据
+      if (products.length > 0) {
+        return;
+      }
+      
+      // 检查内存缓存，避免重复请求
+      const cacheKey = `crusher-products-${language}`;
+      if (resourceCache[cacheKey]) {
+        setProducts(resourceCache[cacheKey]);
+        setLoading(false);
+        return;
+      }
+      
       try {
         // 在生产环境中一次性获取所有产品数据，减少HTTP请求数量
         try {
           // 首先尝试获取汇总JSON文件
           const allProductsRes = await fetch('/data/products/crusher-products.json', { 
             signal,
-            next: { revalidate: 3600 } // 1小时缓存，在Next.js中推荐使用
+            // 优化缓存策略
+            cache: process.env.NODE_ENV === 'production' ? 'force-cache' : 'default',
+            headers: {
+              'Accept': 'application/json',
+              'X-Requested-With': 'XMLHttpRequest'
+            }
           });
           
           if (allProductsRes.ok) {
             const allProducts = await allProductsRes.json();
             const processedProducts = allProducts.map(ensureProductData);
+            
+            // 保存到内存缓存
+            resourceCache[cacheKey] = processedProducts;
+            
             setProducts(processedProducts);
             setLoading(false);
+            
+            // 预加载下一张可能需要的图片
+            if (typeof window !== 'undefined') {
+              // 使用 requestIdleCallback 在浏览器空闲时预加载图片
+              if ('requestIdleCallback' in window) {
+                window.requestIdleCallback(() => {
+                  const secondaryImages = [
+                    '/images/products/crushers/hammer-crusher.png',
+                    '/images/products/crushers/double-roller-crusher.png'
+                  ];
+                  
+                  secondaryImages.forEach(src => {
+                    const img = new (window.Image as any)();
+                    img.src = src;
+                  });
+                });
+              }
+            }
+            
             return;
           }
         } catch (err) {
@@ -75,11 +174,18 @@ export default function StationaryCrushersPage() {
           '/data/products/heavy-duty-double-roller-crusher.json'
         ];
         
+        // 使用Promise.all并行请求所有产品数据
         const responses = await Promise.all(
           productUrls.map(url => 
             fetch(url, { 
               signal,
-              next: { revalidate: 3600 } // 使用Next.js的revalidate机制替代cache属性
+              // 使用适当的缓存策略
+              cache: process.env.NODE_ENV === 'production' ? 'force-cache' : 'default',
+              priority: 'high', // 在支持的浏览器中提高请求优先级
+              headers: {
+                'Accept': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+              }
             })
               .then(res => res.ok ? res.json() : null)
               .catch(err => {
@@ -97,16 +203,29 @@ export default function StationaryCrushersPage() {
           .map(product => ensureProductData(product));
         
         if (productsData.length > 0) {
+          // 保存到内存缓存
+          resourceCache[cacheKey] = productsData;
+          
           setProducts(productsData);
         } else {
           // 如果所有产品加载失败，使用备用数据
-          setProducts(getBackupCrusherProducts());
+          const backupData = getBackupCrusherProducts();
+          
+          // 保存到内存缓存
+          resourceCache[cacheKey] = backupData;
+          
+          setProducts(backupData);
         }
       } catch (error: unknown) {
         const err = error as Error;
         if (err.name !== 'AbortError') {
           console.error('Error loading products:', err);
-          setProducts(getBackupCrusherProducts());
+          const backupData = getBackupCrusherProducts();
+          
+          // 保存到内存缓存
+          resourceCache[cacheKey] = backupData;
+          
+          setProducts(backupData);
         }
       } finally {
         setLoading(false);
@@ -119,134 +238,140 @@ export default function StationaryCrushersPage() {
     return () => {
       controller.abort();
     };
-  }, [language]);
+  }, [language, products.length]);
 
   // 备用产品数据
   const getBackupCrusherProducts = (): ProductData[] => {
     return [
       {
-        id: 'jaw-crusher',
-        model: 'PE/PEX',
+        id: "jaw-crusher",
+        model: "PE100150",
         series: {
-          zh: '颚式破碎机',
-          en: 'Jaw Crusher'
+          zh: "颚式破碎机",
+          en: "Jaw Crusher"
         },
+        image: "/images/products/crushers/jaw-crusher.png",
         capacity: {
-          zh: '1-650 t/h',
-          en: '1-650 t/h'
+          zh: "1-300 t/h",
+          en: "1-300 t/h"
         },
         feedSize: {
-          zh: '≤ 1200 mm',
-          en: '≤ 1200 mm'
+          zh: "80-750 mm",
+          en: "80-750 mm"
         },
         motorPower: {
-          zh: '5.5-160 kW',
-          en: '5.5-160 kW'
+          zh: "5.5-110 kW",
+          en: "5.5-110 kW"
         },
         isCrusherProduct: true
       },
       {
-        id: 'cone-crusher',
-        model: 'PYB-1200',
+        id: "cone-crusher",
+        model: "CS/CH",
         series: {
-          zh: '圆锥破碎机',
-          en: 'Cone Crusher'
+          zh: "圆锥破碎机",
+          en: "Cone Crusher"
         },
+        image: "/images/products/crushers/cone-crusher.png",
         capacity: {
-          zh: '40-500 t/h',
-          en: '40-500 t/h'
+          zh: "45-1200 t/h",
+          en: "45-1200 t/h"
         },
         feedSize: {
-          zh: '35-350 mm',
-          en: '35-350 mm'
+          zh: "35-300 mm",
+          en: "35-300 mm"
         },
         motorPower: {
-          zh: '30-280 kW',
-          en: '30-280 kW'
+          zh: "75-400 kW",
+          en: "75-400 kW"
         },
         isCrusherProduct: true
       },
       {
-        id: 'impact-crusher',
-        model: 'PF',
+        id: "impact-crusher",
+        model: "PF/PFW",
         series: {
-          zh: '反击式破碎机',
-          en: 'Impact Crusher'
+          zh: "反击式破碎机",
+          en: "Impact Crusher"
         },
+        image: "/images/products/crushers/impact-crusher.png",
         capacity: {
-          zh: '50-250 t/h',
-          en: '50-250 t/h'
+          zh: "30-800 t/h",
+          en: "30-800 t/h"
         },
         feedSize: {
-          zh: '≤ 800 mm',
-          en: '≤ 800 mm'
+          zh: "100-500 mm",
+          en: "100-500 mm"
         },
         motorPower: {
-          zh: '55-250 kW',
-          en: '55-250 kW'
+          zh: "37-260 kW",
+          en: "37-260 kW"
         },
         isCrusherProduct: true
       },
       {
-        id: 'hammer-crusher',
-        model: 'PC',
+        id: "hammer-crusher",
+        model: "PC",
         series: {
-          zh: '锤式破碎机',
-          en: 'Hammer Crusher'
+          zh: "锤式破碎机",
+          en: "Hammer Crusher"
         },
+        image: "/images/products/crushers/hammer-crusher.png",
         capacity: {
-          zh: '15-150 t/h',
-          en: '15-150 t/h'
+          zh: "15-150 t/h",
+          en: "15-150 t/h"
         },
         feedSize: {
-          zh: '≤ 600 mm',
-          en: '≤ 600 mm'
+          zh: "≤ 600 mm",
+          en: "≤ 600 mm"
         },
         motorPower: {
-          zh: '15-160 kW',
-          en: '15-160 kW'
+          zh: "15-160 kW",
+          en: "15-160 kW"
         },
         isCrusherProduct: true
       },
       {
-        id: 'double-roller-crusher',
-        model: '2PG',
+        id: "double-roller-crusher",
+        model: "2PG",
         series: {
-          zh: '双辊破碎机',
-          en: 'Double Roller Crusher'
+          zh: "双辊破碎机",
+          en: "Double Roller Crusher"
         },
+        image: "/images/products/crushers/double-roller-crusher.png",
         capacity: {
-          zh: '50-360 t/h',
-          en: '50-360 t/h'
+          zh: "50-360 t/h",
+          en: "50-360 t/h"
         },
         feedSize: {
-          zh: '≤ 300 mm',
-          en: '≤ 300 mm'
+          zh: "≤ 300 mm",
+          en: "≤ 300 mm"
         },
         motorPower: {
-          zh: '30-160 kW',
-          en: '30-160 kW'
+          zh: "30-160 kW",
+          en: "30-160 kW"
         },
         isCrusherProduct: true
       },
       {
-        id: 'heavy-duty-double-roller-crusher',
-        model: '2PG-HD',
+        id: "heavy-duty-double-roller-crusher",
+        model: "2PG-HD",
         series: {
-          zh: '重型双辊破碎机',
-          en: 'Heavy Duty Double Roller Crusher'
+          zh: "重型双辊破碎机",
+          en: "Heavy Duty Double Roller Crusher"
         },
+        image: "/images/products/crushers/heavy-duty-double-roller-crusher.png",
         capacity: {
-          zh: '80-450 t/h',
-          en: '80-450 t/h'
+          zh: "80-450 t/h",
+          en: "80-450 t/h"
         },
         feedSize: {
-          zh: '≤ 400 mm',
-          en: '≤ 400 mm'
+          zh: "≤ 400 mm",
+          en: "≤ 400 mm"
         },
         motorPower: {
-          zh: '55-200 kW',
-          en: '55-200 kW'
+          zh: "55-200 kW",
+          en: "55-200 kW"
         },
         isCrusherProduct: true
       }
@@ -324,70 +449,76 @@ export default function StationaryCrushersPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* 页面标题区域 */}
-      <PageSection 
-        noPadding 
-        variant="hero"
-        isHero={true}
-        breadcrumb={{
-          items: [
-            {
-              label: { zh: "产品中心", en: "Products" },
-              href: `/products`
-            },
-            {
-              label: { zh: "固定式破碎机", en: "Stationary Crushers" }
-            }
-          ]
-        }}
-      >
-        <div className="relative h-[300px] py-16 mt-0 px-6 md:px-8 flex items-center">
-          <div className="relative z-10 max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-12 items-center mt-4 mb-4">
-              <div className="md:w-1/2 pl-0">
-                <h1 className="text-6xl md:text-7xl font-normal text-[#333333] mb-6 text-left">
-                  {isZh ? "固定式破碎机" : "Stationary Crushers"}
-                </h1>
-              </div>
-              
-              <div className="md:w-1/2 pr-0">
-                <div className="space-y-4 text-black text-left content-right">
-                  <p>
-                    {isZh
-                      ? "我们提供高效的固定式破碎机，包括颚式破碎机、圆锥破碎机、反击式破碎机、锤式破碎机和辊式破碎机等，适用于各种硬度矿石的破碎作业，具有产能大、破碎比高、运行稳定、维护简便等特点。"
-                      : "We provide efficient stationary crushers, including jaw crushers, cone crushers, impact crushers, hammer crushers, and roller crushers, suitable for crushing operations of various hardness ores, featuring high capacity, high crushing ratio, stable operation, and easy maintenance."}
-                  </p>
+    <>
+      {/* 添加预加载标签 */}
+      <Head>{preloadTags}</Head>
+      
+      <div className="min-h-screen flex flex-col">
+        {/* 页面标题区域 */}
+        <PageSection 
+          noPadding 
+          variant="hero"
+          isHero={true}
+          breadcrumb={{
+            items: [
+              {
+                label: { zh: "产品中心", en: "Products" },
+                href: `/products`
+              },
+              {
+                label: { zh: "固定式破碎机", en: "Stationary Crushers" }
+              }
+            ]
+          }}
+        >
+          <div className="relative h-[300px] py-16 mt-0 px-6 md:px-8 flex items-center">
+            <div className="relative z-10 max-w-7xl mx-auto">
+              <div className="flex flex-col md:flex-row gap-12 items-center mt-4 mb-4">
+                <div className="md:w-1/2 pl-0">
+                  <h1 className="text-6xl md:text-7xl font-normal text-[#333333] mb-6 text-left">
+                    {isZh ? "固定式破碎机" : "Stationary Crushers"}
+                  </h1>
+                </div>
+                
+                <div className="md:w-1/2 pr-0">
+                  <div className="space-y-4 text-black text-left content-right">
+                    <p>
+                      {isZh
+                        ? "我们提供高效的固定式破碎机，包括颚式破碎机、圆锥破碎机、反击式破碎机、锤式破碎机和辊式破碎机等，适用于各种硬度矿石的破碎作业，具有产能大、破碎比高、运行稳定、维护简便等特点。"
+                        : "We provide efficient stationary crushers, including jaw crushers, cone crushers, impact crushers, hammer crushers, and roller crushers, suitable for crushing operations of various hardness ores, featuring high capacity, high crushing ratio, stable operation, and easy maintenance."}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </PageSection>
+        </PageSection>
 
-      {/* 破碎机型号展示 */}
-      <PageSection variant="gray" className="flex-grow">
-        <div className="max-w-7xl mx-auto h-full">
-          {/* 型号列表 - 每行3个产品 */}
-          {loading ? (
-            <div className="flex justify-center items-center h-[600px]">
-              <div className="text-center">
-                <p className="text-gray-500">{isZh ? '加载产品数据...' : 'Loading products data...'}</p>
+        {/* 破碎机型号展示 */}
+        <PageSection variant="gray" className="flex-grow">
+          <div className="max-w-7xl mx-auto h-full">
+            {/* 型号列表 - 每行3个产品 */}
+            {loading ? (
+              <div className="flex justify-center items-center h-[600px]">
+                <div className="text-center">
+                  <p className="text-gray-500">{isZh ? '加载产品数据...' : 'Loading products data...'}</p>
+                </div>
               </div>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 min-h-[600px]">
-              {products.map((product) => (
-                <ProductCard 
-                  key={product.id} 
-                  product={product} 
-                  basePath={`/products/stationary-crushers`} 
-                />
-              ))}
-            </div>
-          )}
-        </div>
-      </PageSection>
-    </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 min-h-[600px]">
+                {products.map((product) => (
+                  <div key={product.id} data-product-id={product.id}>
+                    <ProductCard 
+                      product={product} 
+                      basePath={`/products/stationary-crushers`} 
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </PageSection>
+      </div>
+    </>
   );
 } 

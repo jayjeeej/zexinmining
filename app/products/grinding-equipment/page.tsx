@@ -201,6 +201,10 @@ export default function GrindingEquipmentPage() {
           zh: '22-280 kW',
           en: '22-280 kW'
         },
+        feedSize: {
+          zh: '20-25 mm',
+          en: '20-25 mm'
+        },
         isGrindingProduct: true
       },
       {

@@ -91,19 +91,157 @@ export default function FlotationPage() {
             })));
           } else {
             // 如果没有数据或数据格式不正确，使用备用数据
-            setProducts([]);
+            setProducts(getBackupFlotationProducts());
           }
         } else {
           // 如果请求失败，使用备用数据
-          setProducts([]);
+          setProducts(getBackupFlotationProducts());
         }
       } catch (error) {
         console.error("Error loading flotation equipment data:", error);
         // 出错时使用备用数据
-        setProducts([]);
+        setProducts(getBackupFlotationProducts());
       } finally {
         setLoading(false);
       }
+    }
+    
+    // 浮选设备备份数据
+    const getBackupFlotationProducts = (): ProductData[] => {
+      return [
+        {
+          id: "aeration-flotation-machine",
+          model: "KYF",
+          series: {
+            zh: "充气搅拌式浮选机",
+            en: "Aeration Flotation Machine"
+          },
+          effectiveVolume: {
+            zh: "2.2-38 m³",
+            en: "2.2-38 m³"
+          },
+          capacity: {
+            zh: "0.5-30 m³/min",
+            en: "0.5-30 m³/min"
+          },
+          motorPower: {
+            zh: "5.5-45 kW",
+            en: "5.5-45 kW"
+          },
+          image: "/images/products/flotation/aeration-flotation-machine.png",
+          isFlotationProduct: true
+        },
+        {
+          id: "bar-flotation-machine",
+          model: "BF",
+          series: {
+            zh: "柱式浮选机",
+            en: "Bar Flotation Machine"
+          },
+          effectiveVolume: {
+            zh: "4-32 m³",
+            en: "4-32 m³"
+          },
+          capacity: {
+            zh: "0.7-25 m³/min",
+            en: "0.7-25 m³/min"
+          },
+          motorPower: {
+            zh: "7.5-55 kW",
+            en: "7.5-55 kW"
+          },
+          image: "/images/products/flotation/bar-flotation-machine.png",
+          isFlotationProduct: true
+        },
+        {
+          id: "coarse-particle-flotation-machine",
+          model: "CXYF",
+          series: {
+            zh: "粗粒浮选机",
+            en: "Coarse Particle Flotation Machine"
+          },
+          effectiveVolume: {
+            zh: "2-40 m³",
+            en: "2-40 m³"
+          },
+          capacity: {
+            zh: "0.5-38 m³/min",
+            en: "0.5-38 m³/min"
+          },
+          motorPower: {
+            zh: "5.5-75 kW",
+            en: "5.5-75 kW"
+          },
+          image: "/images/products/flotation/coarse-particle-flotation-machine.png",
+          isFlotationProduct: true
+        },
+        {
+          id: "flotation-cell",
+          model: "FC",
+          series: {
+            zh: "浮选槽",
+            en: "Flotation Cell"
+          },
+          effectiveVolume: {
+            zh: "1-24 m³",
+            en: "1-24 m³"
+          },
+          capacity: {
+            zh: "0.8-28 m³/min",
+            en: "0.8-28 m³/min"
+          },
+          motorPower: {
+            zh: "3.0-55 kW",
+            en: "3.0-55 kW"
+          },
+          image: "/images/products/flotation/flotation-cell.png",
+          isFlotationProduct: true
+        },
+        {
+          id: "self-priming-flotation-machine",
+          model: "SF",
+          series: {
+            zh: "自吸式浮选机",
+            en: "Self-priming Flotation Machine"
+          },
+          effectiveVolume: {
+            zh: "1-30 m³",
+            en: "1-30 m³"
+          },
+          capacity: {
+            zh: "1.0-35 m³/min",
+            en: "1.0-35 m³/min"
+          },
+          motorPower: {
+            zh: "4.0-75 kW",
+            en: "4.0-75 kW"
+          },
+          image: "/images/products/flotation/self-priming-flotation-machine.png",
+          isFlotationProduct: true
+        },
+        {
+          id: "xcf-flotation-machine",
+          model: "XCF",
+          series: {
+            zh: "XCF浮选机",
+            en: "XCF Flotation Machine"
+          },
+          effectiveVolume: {
+            zh: "2-36 m³",
+            en: "2-36 m³"
+          },
+          capacity: {
+            zh: "0.5-32 m³/min",
+            en: "0.5-32 m³/min"
+          },
+          motorPower: {
+            zh: "4.0-75 kW",
+            en: "4.0-75 kW"
+          },
+          image: "/images/products/flotation/xcf-flotation-machine.png",
+          isFlotationProduct: true
+        }
+      ];
     }
     
     loadProductsData();

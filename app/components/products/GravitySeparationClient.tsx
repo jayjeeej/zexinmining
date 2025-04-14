@@ -107,19 +107,179 @@ export default function GravitySeparationClient({
             })));
           } else {
             // 如果没有数据或数据格式不正确，使用备用数据
-            setProducts([]);
+            setProducts(getBackupGravitySeparationProducts());
           }
         } else {
           // 如果请求失败，使用备用数据
-          setProducts([]);
+          setProducts(getBackupGravitySeparationProducts());
         }
       } catch (error) {
         console.error("Error loading gravity separation equipment data:", error);
         // 出错时使用备用数据
-        setProducts([]);
+        setProducts(getBackupGravitySeparationProducts());
       } finally {
         setLoading(false);
       }
+    }
+    
+    // 重选设备备份数据
+    const getBackupGravitySeparationProducts = (): ProductData[] => {
+      return [
+        {
+          id: "synchronous-counter-directional-jig",
+          model: "SCDJM-4",
+          series: {
+            zh: "4室复合双动跳汰机",
+            en: "4-Chamber Composite Double-Motion Jig"
+          },
+          image: "/images/products/gravity-separation/synchronous-counter-directional-jig.png",
+          capacity: {
+            zh: "40-80 t/h",
+            en: "40-80 t/h"
+          },
+          motorPower: {
+            zh: "30 kW",
+            en: "30 kW"
+          },
+          feedSize: {
+            zh: "≤50 mm",
+            en: "≤50 mm"
+          },
+          isGravitySeparationProduct: true
+        },
+        {
+          id: "synchronous-counter-directional-jig-small",
+          model: "SCDJM-2",
+          series: {
+            zh: "2室复合双动跳汰机",
+            en: "2-Chamber Composite Double-Motion Jig"
+          },
+          image: "/images/products/gravity-separation/synchronous-counter-directional-jig-small.png",
+          capacity: {
+            zh: "15-45 t/h",
+            en: "15-45 t/h"
+          },
+          motorPower: {
+            zh: "22 kW",
+            en: "22 kW"
+          },
+          feedSize: {
+            zh: "≤50 mm",
+            en: "≤50 mm"
+          },
+          isGravitySeparationProduct: true
+        },
+        {
+          id: "sawtooth-wave-jig",
+          model: "STWJ-5",
+          series: {
+            zh: "锯齿波跳汰机",
+            en: "Sawtooth Wave Jig"
+          },
+          image: "/images/products/gravity-separation/sawtooth-wave-jig.png",
+          capacity: {
+            zh: "10-30 t/h",
+            en: "10-30 t/h"
+          },
+          motorPower: {
+            zh: "11 kW",
+            en: "11 kW"
+          },
+          feedSize: {
+            zh: "≤60 mm",
+            en: "≤60 mm"
+          },
+          isGravitySeparationProduct: true
+        },
+        {
+          id: "shaking-table",
+          model: "6-S",
+          series: {
+            zh: "摇床",
+            en: "Shaking Table"
+          },
+          image: "/images/products/gravity-separation/shaking-table.png",
+          capacity: {
+            zh: "0.3-1.2 t/h",
+            en: "0.3-1.2 t/h"
+          },
+          motorPower: {
+            zh: "1.1 kW",
+            en: "1.1 kW"
+          },
+          feedSize: {
+            zh: "0-2 mm",
+            en: "0-2 mm"
+          },
+          isGravitySeparationProduct: true
+        },
+        {
+          id: "carpet-hooking-machine",
+          model: "1200×6000",
+          series: {
+            zh: "毛毯布勾机",
+            en: "Carpet Hooking Machine"
+          },
+          image: "/images/products/gravity-separation/carpet-hooking-machine.png",
+          capacity: {
+            zh: "1-10 t/h",
+            en: "1-10 t/h"
+          },
+          motorPower: {
+            zh: "0.55-1.5 kW",
+            en: "0.55-1.5 kW"
+          },
+          feedSize: {
+            zh: "0-2 mm",
+            en: "0-2 mm"
+          },
+          isGravitySeparationProduct: true
+        },
+        {
+          id: "spiral-chute",
+          model: "5LL-1500",
+          series: {
+            zh: "玻璃钢螺旋溜槽",
+            en: "Glass Fiber Spiral Chute"
+          },
+          image: "/images/products/gravity-separation/spiral-chute.png",
+          capacity: {
+            zh: "1.5-10 t/h",
+            en: "1.5-10 t/h"
+          },
+          motorPower: {
+            zh: "无动力",
+            en: "No Power"
+          },
+          feedSize: {
+            zh: "0.02-2.0 mm",
+            en: "0.02-2.0 mm"
+          },
+          isGravitySeparationProduct: true
+        },
+        {
+          id: "centrifugal-separator",
+          model: "STLB60",
+          series: {
+            zh: "离心选矿机",
+            en: "Centrifugal Separator"
+          },
+          image: "/images/products/gravity-separation/centrifugal-separator.png",
+          capacity: {
+            zh: "0-80 t/h",
+            en: "0-80 t/h"
+          },
+          motorPower: {
+            zh: "0.75-18.5 kW",
+            en: "0.75-18.5 kW"
+          },
+          feedSize: {
+            zh: "0-6 mm",
+            en: "0-6 mm"
+          },
+          isGravitySeparationProduct: true
+        }
+      ];
     }
     
     loadProductsData();
