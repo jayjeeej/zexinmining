@@ -74,7 +74,7 @@ export default function Footer() {
         </div>
 
         {/* 社交媒体链接 */}
-        <div className="mb-0 mt-6 flex">
+        <div className="mb-4 mt-6 flex">
           {socialLinks.map((link) => (
             <a 
               key={link.name}
