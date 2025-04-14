@@ -1,0 +1,137 @@
+[
+  {
+    "id": "belt-feeder",
+    "model": "B650-B1600",
+    "series": {
+      "zh": "带式给料机",
+      "en": "Belt Feeder"
+    },
+    "image": "/images/products/feeding/belt-feeder.png",
+    "capacity": {
+      "zh": "30-1800 t/h",
+      "en": "30-1800 t/h"
+    },
+    "feedSize": {
+      "zh": "≤500 mm",
+      "en": "≤500 mm"
+    },
+    "beltWidth": {
+      "zh": "650-1600 mm",
+      "en": "650-1600 mm"
+    },
+    "motorPower": {
+      "zh": "5.5-45 kW",
+      "en": "5.5-45 kW"
+    },
+    "isFeedingProduct": true,
+    "uniqueId": "belt-feeder-1"
+  },
+  {
+    "id": "plate-feeder",
+    "model": "ZSW380-ZSW960",
+    "series": {
+      "zh": "板式给料机",
+      "en": "Plate Feeder"
+    },
+    "image": "/images/products/feeding/plate-feeder.png",
+    "capacity": {
+      "zh": "80-800 t/h",
+      "en": "80-800 t/h"
+    },
+    "feedSize": {
+      "zh": "≤800 mm",
+      "en": "≤800 mm"
+    },
+    "plateWidth": {
+      "zh": "800-1500 mm",
+      "en": "800-1500 mm"
+    },
+    "motorPower": {
+      "zh": "7.5-55 kW",
+      "en": "7.5-55 kW"
+    },
+    "isFeedingProduct": true,
+    "uniqueId": "plate-feeder-1"
+  },
+  {
+    "id": "disc-feeder",
+    "model": "SCZ",
+    "series": {
+      "zh": "圆盘给料机",
+      "en": "Disc Feeder"
+    },
+    "image": "/images/products/feeding/disc-feeder.png",
+    "capacity": {
+      "zh": "8-800 t/h",
+      "en": "8-800 t/h"
+    },
+    "feedSize": {
+      "zh": "≤300 mm",
+      "en": "≤300 mm"
+    },
+    "discDiameter": {
+      "zh": "1000-3600 mm",
+      "en": "1000-3600 mm"
+    },
+    "motorPower": {
+      "zh": "3-22 kW",
+      "en": "3-22 kW"
+    },
+    "isFeedingProduct": true,
+    "uniqueId": "disc-feeder-1"
+  },
+  {
+    "id": "electromagnetic-vibrating-feeder",
+    "model": "GZ1-GZ6",
+    "series": {
+      "zh": "电磁振动给料机",
+      "en": "Electromagnetic Vibrating Feeder"
+    },
+    "image": "/images/products/feeding/electromagnetic-vibrating-feeder.png",
+    "capacity": {
+      "zh": "5-300 t/h",
+      "en": "5-300 t/h"
+    },
+    "feedSize": {
+      "zh": "≤400 mm",
+      "en": "≤400 mm"
+    },
+    "trough": {
+      "zh": "360-1500 mm",
+      "en": "360-1500 mm"
+    },
+    "power": {
+      "zh": "0.15-4.0 kW",
+      "en": "0.15-4.0 kW"
+    },
+    "isFeedingProduct": true,
+    "uniqueId": "electromagnetic-feeder-1"
+  },
+  {
+    "id": "xdg-vibrating-feeder",
+    "model": "XDG",
+    "series": {
+      "zh": "XDG振动给料机",
+      "en": "XDG Vibrating Feeder"
+    },
+    "image": "/images/products/feeding/xdg-vibrating-feeder.png",
+    "capacity": {
+      "zh": "60-600 t/h",
+      "en": "60-600 t/h"
+    },
+    "feedSize": {
+      "zh": "≤600 mm",
+      "en": "≤600 mm"
+    },
+    "trough": {
+      "zh": "850-1800 mm",
+      "en": "850-1800 mm"
+    },
+    "motorPower": {
+      "zh": "5.5-37 kW",
+      "en": "5.5-37 kW"
+    },
+    "isFeedingProduct": true,
+    "uniqueId": "xdg-feeder-1"
+  }
+] 

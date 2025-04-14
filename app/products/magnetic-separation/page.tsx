@@ -1,13 +1,13 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import Image from "next/image";
-import Link from "next/link";
-import ProductCard from '@/app/components/products/ProductCard';
+import { useState, useEffect } from 'react';
+import { useLanguage } from '@/app/contexts/LanguageContext';
 import PageSection from '@/app/components/PageSection';
-import { useLanguage } from "@/app/contexts/LanguageContext";
+import ProductCard from '@/app/components/products/ProductCard';
+import Link from 'next/link';
+import ProductStructuredData from '@/app/components/ProductStructuredData';
 
-// 定义产品数据类型
+// 产品数据接口
 interface ProductData {
   id: string;
   model: string;
@@ -15,7 +15,6 @@ interface ProductData {
     zh: string;
     en: string;
   };
-  image?: string;
   capacity?: {
     zh: string;
     en: string;
@@ -32,7 +31,12 @@ interface ProductData {
     zh: string;
     en: string;
   };
-  [key: string]: any;
+  voltage?: {
+    zh: string;
+    en: string;
+  };
+  image?: string;
+  isMagneticSeparatorProduct?: boolean;
 }
 
 // 磁选设备产品列表页面
@@ -75,31 +79,67 @@ export default function MagneticSeparationPage() {
   };
 
   useEffect(() => {
+    // 预加载图片，加快渲染速度
+    function preloadImages() {
+      const productImages = [
+        '/images/products/magnetic-separation/permanent-magnetic-drum-separator.png',
+        '/images/products/magnetic-separation/double-roller-permanent-magnetic-zircon-separator.png',
+        '/images/products/magnetic-separation/four-roller-variable-frequency-electrostatic-separator.png',
+        '/images/products/magnetic-separation/plate-type-high-intensity-wet-magnetic-separator.png',
+        '/images/products/magnetic-separation/roller-type-high-intensity-wet-magnetic-separator.png',
+        '/images/products/magnetic-separation/three-disc-belt-magnetic-separator.png',
+      ];
+
+      productImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+    }
+
+    // 使用 AbortController 来管理请求
+    const controller = new AbortController();
+    const signal = controller.signal;
+
     async function loadProductsData() {
       try {
-        const response = await fetch('/data/products/magnetic-separation-products.json');
+        setLoading(true);
         
-        if (response.ok) {
-          const data = await response.json();
+        // 缓存键，基于语言设置
+        const cacheKey = `magnetic-separation-products-${language}`;
+        
+        // 检查会话缓存中是否有数据
+        const cachedData = sessionStorage.getItem(cacheKey);
+        if (cachedData) {
+          setProducts(JSON.parse(cachedData));
+          setLoading(false);
+          return;
+        }
+        
+        // 从预编译JSON文件获取产品数据
+        const jsonFile = language === 'en' 
+          ? '/data/products/compiled/magnetic-separation-en.json'
+          : '/data/products/compiled/magnetic-separation-zh.json';
+          
+        const apiResponse = await fetch(jsonFile, {
+          signal,
+          cache: 'force-cache',
+          next: { revalidate: 3600 } // 1小时后重新验证数据
+        });
+        
+        if (apiResponse.ok) {
+          const data = await apiResponse.json();
           // 处理产品数据
           if (Array.isArray(data) && data.length > 0) {
-            setProducts(data.map((product: any) => ({
-              id: product.id,
-              model: product.model,
-              series: product.series,
-              capacity: formatCapacity(product.capacity),
-              magneticIntensity: formatCapacity(product.magneticIntensity),
-              magneticFieldStrength: formatCapacity(product.magneticFieldStrength),
-              motorPower: formatCapacity(product.motorPower),
-              image: product.image || `/images/products/magnetic-separation/${product.id}.png`,
-              isMagneticSeparatorProduct: true
-            })));
+            setProducts(data);
+            // 存储到会话缓存中
+            sessionStorage.setItem(cacheKey, JSON.stringify(data));
           } else {
             // 如果没有数据或数据格式不正确，使用备用数据
             setProducts(getBackupMagneticSeparatorProducts());
           }
         } else {
           // 如果请求失败，使用备用数据
+          console.error('API请求失败，使用备用数据');
           setProducts(getBackupMagneticSeparatorProducts());
         }
       } catch (error) {
@@ -241,11 +281,31 @@ export default function MagneticSeparationPage() {
       ];
     }
     
+    // 开始预加载图片
+    preloadImages();
+    
+    // 加载产品数据
     loadProductsData();
+    
+    // 组件卸载时取消所有正在进行的请求
+    return () => {
+      controller.abort();
+    };
   }, [language]);
 
   return (
     <div className="min-h-screen flex flex-col">
+      {/* 添加结构化数据 - 对页面布局没有视觉影响 */}
+      <ProductStructuredData
+        name={isZh ? "磁选设备" : "Magnetic Separation Equipment"}
+        description={isZh 
+          ? "各种磁选设备，包括永磁筒式磁选机、高强度湿式磁选机和静电选机等。我们的磁选设备具有高选别精度、高处理能力和低能耗优势。" 
+          : "Various magnetic separation equipment, including permanent magnetic drum separators, high-intensity wet magnetic separators, and electrostatic separators. Our magnetic separation equipment offers high separation precision, large processing capacity, and low energy consumption advantages."}
+        image="/images/products/magnetic-separation/category-overview.png"
+        category={isZh ? "磁选设备" : "Magnetic Separation Equipment"}
+        url="/products/magnetic-separation"
+      />
+      
       {/* 页面标题区域 */}
       <PageSection 
         noPadding 
@@ -276,8 +336,8 @@ export default function MagneticSeparationPage() {
                 <div className="space-y-4 text-black text-left content-right">
                   <p>
                     {isZh
-                      ? "利用矿物磁性差异进行分选的设备，包括磁选机、磁滚筒和高梯度磁选机等。我们的磁选设备主要用于铁矿石、锰矿石等磁性矿物的选别，以及非磁性矿物中铁质杂质的去除。"
-                      : "Equipment that separates minerals based on magnetic susceptibility differences, including magnetic separators, magnetic drums, and high gradient magnetic separators. Our magnetic separation equipment is mainly used for the separation of magnetic minerals such as iron ore and manganese ore, and the removal of iron impurities from non-magnetic minerals."}
+                      ? "磁选是利用矿物磁性差异进行分选的工艺，我们提供全系列磁选设备，包括永磁筒式磁选机、高强度湿式磁选机和静电选机等。我们的磁选设备应用于铁矿、锰矿、钛铁矿、钨锡矿等多种矿物的选别，具有高选别精度、高处理能力和低能耗的优势。"
+                      : "Magnetic separation is a process that separates minerals based on magnetic differences. We provide a full range of magnetic separation equipment, including permanent magnetic drum separators, high-intensity wet magnetic separators, and electrostatic separators. Our magnetic separation equipment is applied to the selection of various minerals such as iron, manganese, ilmenite, tungsten and tin ores, featuring high separation precision, large processing capacity, and low energy consumption."}
                   </p>
                 </div>
               </div>
@@ -285,8 +345,8 @@ export default function MagneticSeparationPage() {
           </div>
         </div>
       </PageSection>
-
-      {/* 磁选设备型号展示 */}
+      
+      {/* 产品列表区域 */}
       <PageSection variant="gray" className="flex-grow">
         <div className="max-w-7xl mx-auto h-full">
           {loading ? (
@@ -301,7 +361,7 @@ export default function MagneticSeparationPage() {
                 <ProductCard 
                   key={product.id} 
                   product={product} 
-                  basePath={`/products/magnetic-separation`}
+                  basePath={`/products/magnetic-separation`} 
                 />
               ))}
             </div>

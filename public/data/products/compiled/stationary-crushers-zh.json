@@ -1,0 +1,164 @@
+[
+  {
+    "id": "jaw-crusher",
+    "model": "PE/PEX",
+    "series": {
+      "zh": "颚式破碎机",
+      "en": "Jaw Crusher"
+    },
+    "image": "/images/products/crushers/jaw-crusher.png",
+    "capacity": {
+      "zh": "1-1200 t/h",
+      "en": "1-1200 t/h"
+    },
+    "feedSize": {
+      "zh": "125-1200 mm",
+      "en": "125-1200 mm"
+    },
+    "dischargeSize": {
+      "zh": "10-350 mm",
+      "en": "10-350 mm"
+    },
+    "motorPower": {
+      "zh": "5.5-400 kW",
+      "en": "5.5-400 kW"
+    },
+    "isCrusherProduct": true,
+    "uniqueId": "jaw-1"
+  },
+  {
+    "id": "cone-crusher",
+    "model": "CS/CH",
+    "series": {
+      "zh": "圆锥破碎机",
+      "en": "Cone Crusher"
+    },
+    "image": "/images/products/crushers/cone-crusher.png",
+    "capacity": {
+      "zh": "50-1300 t/h",
+      "en": "50-1300 t/h"
+    },
+    "feedSize": {
+      "zh": "40-350 mm",
+      "en": "40-350 mm"
+    },
+    "dischargeSize": {
+      "zh": "3-100 mm",
+      "en": "3-100 mm"
+    },
+    "motorPower": {
+      "zh": "75-600 kW",
+      "en": "75-600 kW"
+    },
+    "isCrusherProduct": true,
+    "uniqueId": "cone-1"
+  },
+  {
+    "id": "impact-crusher",
+    "model": "PF/PFV",
+    "series": {
+      "zh": "反击式破碎机",
+      "en": "Impact Crusher"
+    },
+    "image": "/images/products/crushers/impact-crusher.png",
+    "capacity": {
+      "zh": "20-700 t/h",
+      "en": "20-700 t/h"
+    },
+    "feedSize": {
+      "zh": "100-800 mm",
+      "en": "100-800 mm"
+    },
+    "dischargeSize": {
+      "zh": "0-90 mm",
+      "en": "0-90 mm"
+    },
+    "motorPower": {
+      "zh": "30-250 kW",
+      "en": "30-250 kW"
+    },
+    "isCrusherProduct": true,
+    "uniqueId": "impact-1"
+  },
+  {
+    "id": "hammer-crusher",
+    "model": "PC",
+    "series": {
+      "zh": "锤式破碎机",
+      "en": "Hammer Crusher"
+    },
+    "image": "/images/products/crushers/hammer-crusher.png",
+    "capacity": {
+      "zh": "3-350 t/h",
+      "en": "3-350 t/h"
+    },
+    "feedSize": {
+      "zh": "100-500 mm",
+      "en": "100-500 mm"
+    },
+    "dischargeSize": {
+      "zh": "0-75 mm",
+      "en": "0-75 mm"
+    },
+    "motorPower": {
+      "zh": "15-300 kW",
+      "en": "15-300 kW"
+    },
+    "isCrusherProduct": true,
+    "uniqueId": "hammer-1"
+  },
+  {
+    "id": "double-roller-crusher",
+    "model": "2PG",
+    "series": {
+      "zh": "双辊破碎机",
+      "en": "Double Roller Crusher"
+    },
+    "image": "/images/products/crushers/double-roller-crusher.png",
+    "capacity": {
+      "zh": "20-200 t/h",
+      "en": "20-200 t/h"
+    },
+    "feedSize": {
+      "zh": "≤50-150 mm",
+      "en": "≤50-150 mm"
+    },
+    "dischargeSize": {
+      "zh": "5-30 mm",
+      "en": "5-30 mm"
+    },
+    "motorPower": {
+      "zh": "7.5-110 kW",
+      "en": "7.5-110 kW"
+    },
+    "isCrusherProduct": true,
+    "uniqueId": "double-roller-1"
+  },
+  {
+    "id": "heavy-duty-double-roller-crusher",
+    "model": "2PCZ",
+    "series": {
+      "zh": "重型双辊破碎机",
+      "en": "Heavy Duty Double Roller Crusher"
+    },
+    "image": "/images/products/crushers/heavy-duty-double-roller-crusher.png",
+    "capacity": {
+      "zh": "60-600 t/h",
+      "en": "60-600 t/h"
+    },
+    "feedSize": {
+      "zh": "≤700 mm",
+      "en": "≤700 mm"
+    },
+    "dischargeSize": {
+      "zh": "30-250 mm",
+      "en": "30-250 mm"
+    },
+    "motorPower": {
+      "zh": "30-400 kW",
+      "en": "30-400 kW"
+    },
+    "isCrusherProduct": true,
+    "uniqueId": "heavy-roller-1"
+  }
+] 

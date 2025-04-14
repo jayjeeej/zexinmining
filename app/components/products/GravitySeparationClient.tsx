@@ -32,6 +32,7 @@ interface ProductData {
     zh: string;
     en: string;
   };
+  isGravitySeparationProduct?: boolean;
   [key: string]: any;
 }
 
@@ -87,30 +88,68 @@ export default function GravitySeparationClient({
   };
 
   useEffect(() => {
+    // 预加载图片，加快渲染速度
+    function preloadImages() {
+      const productImages = [
+        '/images/products/gravity-separation/synchronous-counter-directional-jig.png',
+        '/images/products/gravity-separation/synchronous-counter-directional-jig-small.png',
+        '/images/products/gravity-separation/sawtooth-wave-jig.png',
+        '/images/products/gravity-separation/shaking-table.png',
+        '/images/products/gravity-separation/carpet-hooking-machine.png',
+        '/images/products/gravity-separation/spiral-chute.png',
+        '/images/products/gravity-separation/centrifugal-separator.png'
+      ];
+
+      productImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+    }
+
+    // 使用 AbortController 来管理请求
+    const controller = new AbortController();
+    const signal = controller.signal;
+
     async function loadProductsData() {
       try {
-        const response = await fetch('/data/products/gravity-separation-products.json');
+        setLoading(true);
         
-        if (response.ok) {
-          const data = await response.json();
+        // 缓存键，基于语言设置
+        const cacheKey = `gravity-separation-products-${language}`;
+        
+        // 检查会话缓存中是否有数据
+        const cachedData = sessionStorage.getItem(cacheKey);
+        if (cachedData) {
+          setProducts(JSON.parse(cachedData));
+          setLoading(false);
+          return;
+        }
+        
+        // 从预编译JSON文件获取产品数据
+        const jsonFile = language === 'en' 
+          ? '/data/products/compiled/gravity-separation-en.json'
+          : '/data/products/compiled/gravity-separation-zh.json';
+          
+        const apiResponse = await fetch(jsonFile, {
+          signal,
+          cache: 'force-cache',
+          next: { revalidate: 3600 } // 1小时后重新验证数据
+        });
+        
+        if (apiResponse.ok) {
+          const data = await apiResponse.json();
           // 处理产品数据
           if (Array.isArray(data) && data.length > 0) {
-            setProducts(data.map((product: any) => ({
-              id: product.id,
-              model: product.model,
-              series: product.series,
-              capacity: formatCapacity(product.capacity),
-              efficiency: formatCapacity(product.efficiency),
-              motorPower: formatCapacity(product.motorPower),
-              feedSize: formatCapacity(product.feedSize),
-              isGravitySeparationProduct: true
-            })));
+            setProducts(data);
+            // 存储到会话缓存中
+            sessionStorage.setItem(cacheKey, JSON.stringify(data));
           } else {
             // 如果没有数据或数据格式不正确，使用备用数据
             setProducts(getBackupGravitySeparationProducts());
           }
         } else {
           // 如果请求失败，使用备用数据
+          console.error('API请求失败，使用备用数据');
           setProducts(getBackupGravitySeparationProducts());
         }
       } catch (error) {
@@ -282,7 +321,16 @@ export default function GravitySeparationClient({
       ];
     }
     
+    // 开始预加载图片
+    preloadImages();
+    
+    // 加载产品数据
     loadProductsData();
+    
+    // 组件卸载时取消所有正在进行的请求
+    return () => {
+      controller.abort();
+    };
   }, [language]);
 
   return (

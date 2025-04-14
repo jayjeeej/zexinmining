@@ -71,31 +71,93 @@ export default function FlotationPage() {
   };
 
   useEffect(() => {
+    // 预加载图片，加快渲染速度
+    function preloadImages() {
+      const imageUrls = [
+        '/images/products/flotation/flotation-cell.png',
+        '/images/products/flotation/xcf-flotation-machine.png',
+        '/images/products/flotation/self-priming-flotation-machine.png',
+        '/images/products/flotation/coarse-particle-flotation-machine.png',
+        '/images/products/flotation/bar-flotation-machine.png',
+        '/images/products/flotation/aeration-flotation-machine.png'
+      ];
+      
+      imageUrls.forEach(url => {
+        // 使用window.Image构造函数明确类型
+        const img = new (window.Image as any)();
+        img.src = url;
+      });
+    }
+    
     async function loadProductsData() {
+      // 缓存键，基于语言设置
+      const cacheKey = `flotation-equipment-data-${language}`;
+      
+      // 尝试从会话存储中获取缓存的数据
+      const cachedData = sessionStorage.getItem(cacheKey);
+      if (cachedData) {
+        try {
+          const parsedData = JSON.parse(cachedData);
+          console.log("从缓存加载浮选设备产品数据");
+          setProducts(parsedData);
+          setLoading(false);
+          return;
+        } catch (e) {
+          console.error("缓存数据解析失败:", e);
+          // 继续尝试从API获取数据
+        }
+      }
+      
       try {
-        const response = await fetch('/data/products/flotation-products.json');
+        // 使用预编译的组合JSON，单一请求替代多个请求
+        const combinedJsonUrl = `/data/products/compiled/flotation-equipment-${language}.json`;
+        const response = await fetch(combinedJsonUrl, {
+          cache: 'force-cache', // 强制使用缓存
+          next: { revalidate: 3600 } // 1小时后重新验证
+        });
         
         if (response.ok) {
-          const data = await response.json();
-          // 处理产品数据
-          if (Array.isArray(data) && data.length > 0) {
-            setProducts(data.map((product: any) => ({
-              id: product.id,
-              model: product.model,
-              series: product.series,
-              capacity: formatCapacity(product.capacity),
-              effectiveVolume: formatCapacity(product.effectiveVolume),
-              motorPower: formatCapacity(product.motorPower),
-              image: product.image,
-              isFlotationProduct: true
-            })));
+          // 成功获取到合并后的数据
+          const productsData = await response.json();
+          setProducts(productsData);
+          // 存储到会话缓存中
+          sessionStorage.setItem(cacheKey, JSON.stringify(productsData));
+        } else {
+          // 如果合并文件不存在，回退到原始API请求
+          console.log("合并数据文件不存在，回退到API请求");
+          
+          const apiResponse = await fetch('/data/products/flotation-products.json', {
+            cache: 'force-cache'
+          });
+          
+          if (apiResponse.ok) {
+            const data = await apiResponse.json();
+            // 处理产品数据
+            if (Array.isArray(data) && data.length > 0) {
+              const formattedProducts = data.map((product: any) => ({
+                id: product.id,
+                model: product.model,
+                series: product.series,
+                capacity: formatCapacity(product.capacity),
+                effectiveVolume: formatCapacity(product.effectiveVolume),
+                motorPower: formatCapacity(product.motorPower),
+                image: product.image,
+                isFlotationProduct: true,
+                uniqueId: `${product.id}-1`
+              }));
+              
+              setProducts(formattedProducts);
+              // 存储到会话缓存中
+              sessionStorage.setItem(cacheKey, JSON.stringify(formattedProducts));
+            } else {
+              // 如果没有数据或数据格式不正确，使用备用数据
+              setProducts(getBackupFlotationProducts());
+            }
           } else {
-            // 如果没有数据或数据格式不正确，使用备用数据
+            // 如果请求失败，使用备用数据
+            console.error('API请求失败，使用备用数据');
             setProducts(getBackupFlotationProducts());
           }
-        } else {
-          // 如果请求失败，使用备用数据
-          setProducts(getBackupFlotationProducts());
         }
       } catch (error) {
         console.error("Error loading flotation equipment data:", error);
@@ -107,144 +169,157 @@ export default function FlotationPage() {
     }
     
     // 浮选设备备份数据
-    const getBackupFlotationProducts = (): ProductData[] => {
+    function getBackupFlotationProducts(): ProductData[] {
       return [
         {
-          id: "aeration-flotation-machine",
-          model: "KYF",
-          series: {
-            zh: "充气搅拌式浮选机",
-            en: "Aeration Flotation Machine"
-          },
-          effectiveVolume: {
-            zh: "2.2-38 m³",
-            en: "2.2-38 m³"
-          },
-          capacity: {
-            zh: "0.5-30 m³/min",
-            en: "0.5-30 m³/min"
-          },
-          motorPower: {
-            zh: "5.5-45 kW",
-            en: "5.5-45 kW"
-          },
-          image: "/images/products/flotation/aeration-flotation-machine.png",
-          isFlotationProduct: true
-        },
-        {
-          id: "bar-flotation-machine",
-          model: "BF",
-          series: {
-            zh: "柱式浮选机",
-            en: "Bar Flotation Machine"
-          },
-          effectiveVolume: {
-            zh: "4-32 m³",
-            en: "4-32 m³"
-          },
-          capacity: {
-            zh: "0.7-25 m³/min",
-            en: "0.7-25 m³/min"
-          },
-          motorPower: {
-            zh: "7.5-55 kW",
-            en: "7.5-55 kW"
-          },
-          image: "/images/products/flotation/bar-flotation-machine.png",
-          isFlotationProduct: true
-        },
-        {
-          id: "coarse-particle-flotation-machine",
-          model: "CXYF",
-          series: {
-            zh: "粗粒浮选机",
-            en: "Coarse Particle Flotation Machine"
-          },
-          effectiveVolume: {
-            zh: "2-40 m³",
-            en: "2-40 m³"
-          },
-          capacity: {
-            zh: "0.5-38 m³/min",
-            en: "0.5-38 m³/min"
-          },
-          motorPower: {
-            zh: "5.5-75 kW",
-            en: "5.5-75 kW"
-          },
-          image: "/images/products/flotation/coarse-particle-flotation-machine.png",
-          isFlotationProduct: true
-        },
-        {
           id: "flotation-cell",
-          model: "FC",
+          model: "JJF",
           series: {
-            zh: "浮选槽",
+            zh: "浮选机",
             en: "Flotation Cell"
           },
-          effectiveVolume: {
-            zh: "1-24 m³",
-            en: "1-24 m³"
-          },
+          image: "/images/products/flotation/flotation-cell.png",
           capacity: {
-            zh: "0.8-28 m³/min",
-            en: "0.8-28 m³/min"
+            zh: "0.37-90 m³",
+            en: "0.37-90 m³"
+          },
+          effectiveVolume: {
+            zh: "0.37-90 m³",
+            en: "0.37-90 m³"
           },
           motorPower: {
-            zh: "3.0-55 kW",
-            en: "3.0-55 kW"
+            zh: "1.1-160 kW",
+            en: "1.1-160 kW"
           },
-          image: "/images/products/flotation/flotation-cell.png",
-          isFlotationProduct: true
+          isFlotationProduct: true,
+          uniqueId: "flotation-cell-1"
+        },
+        {
+          id: "xcf-flotation-machine",
+          model: "XCF/KYF",
+          series: {
+            zh: "XCF/KYF气浮式浮选机",
+            en: "XCF/KYF Air-inflation Flotation Machine"
+          },
+          image: "/images/products/flotation/xcf-flotation-machine.png",
+          capacity: {
+            zh: "0.24-48 m³",
+            en: "0.24-48 m³"
+          },
+          effectiveVolume: {
+            zh: "0.24-48 m³",
+            en: "0.24-48 m³"
+          },
+          motorPower: {
+            zh: "1.5-110 kW",
+            en: "1.5-110 kW"
+          },
+          isFlotationProduct: true,
+          uniqueId: "xcf-flotation-1"
         },
         {
           id: "self-priming-flotation-machine",
           model: "SF",
           series: {
-            zh: "自吸式浮选机",
-            en: "Self-priming Flotation Machine"
-          },
-          effectiveVolume: {
-            zh: "1-30 m³",
-            en: "1-30 m³"
-          },
-          capacity: {
-            zh: "1.0-35 m³/min",
-            en: "1.0-35 m³/min"
-          },
-          motorPower: {
-            zh: "4.0-75 kW",
-            en: "4.0-75 kW"
+            zh: "SF充气式浮选机",
+            en: "SF Inflation Flotation Machine"
           },
           image: "/images/products/flotation/self-priming-flotation-machine.png",
-          isFlotationProduct: true
-        },
-        {
-          id: "xcf-flotation-machine",
-          model: "XCF",
-          series: {
-            zh: "XCF浮选机",
-            en: "XCF Flotation Machine"
+          capacity: {
+            zh: "0.37-51 m³",
+            en: "0.37-51 m³"
           },
           effectiveVolume: {
-            zh: "2-36 m³",
-            en: "2-36 m³"
-          },
-          capacity: {
-            zh: "0.5-32 m³/min",
-            en: "0.5-32 m³/min"
+            zh: "0.37-51 m³",
+            en: "0.37-51 m³"
           },
           motorPower: {
-            zh: "4.0-75 kW",
-            en: "4.0-75 kW"
+            zh: "1.5-150 kW",
+            en: "1.5-150 kW"
           },
-          image: "/images/products/flotation/xcf-flotation-machine.png",
-          isFlotationProduct: true
+          isFlotationProduct: true,
+          uniqueId: "sf-flotation-1"
+        },
+        {
+          id: "coarse-particle-flotation-machine",
+          model: "BF",
+          series: {
+            zh: "粗颗粒浮选机",
+            en: "Coarse Particle Flotation Machine"
+          },
+          image: "/images/products/flotation/coarse-particle-flotation-machine.png",
+          capacity: {
+            zh: "10-80 m³",
+            en: "10-80 m³"
+          },
+          effectiveVolume: {
+            zh: "10-80 m³",
+            en: "10-80 m³"
+          },
+          motorPower: {
+            zh: "30-110 kW",
+            en: "30-110 kW"
+          },
+          isFlotationProduct: true,
+          uniqueId: "bf-flotation-1"
+        },
+        {
+          id: "bar-flotation-machine",
+          model: "KYF",
+          series: {
+            zh: "棒型浮选机",
+            en: "Bar Flotation Machine"
+          },
+          image: "/images/products/flotation/bar-flotation-machine.png",
+          capacity: {
+            zh: "0.5-36 m³",
+            en: "0.5-36 m³"
+          },
+          effectiveVolume: {
+            zh: "0.5-36 m³",
+            en: "0.5-36 m³"
+          },
+          motorPower: {
+            zh: "1.5-75 kW",
+            en: "1.5-75 kW"
+          },
+          isFlotationProduct: true,
+          uniqueId: "bar-flotation-1"
+        },
+        {
+          id: "aeration-flotation-machine",
+          model: "XJQ",
+          series: {
+            zh: "机械曝气式浮选机",
+            en: "Aeration Flotation Machine"
+          },
+          image: "/images/products/flotation/aeration-flotation-machine.png",
+          capacity: {
+            zh: "0.5-24 m³",
+            en: "0.5-24 m³"
+          },
+          effectiveVolume: {
+            zh: "0.5-24 m³",
+            en: "0.5-24 m³"
+          },
+          motorPower: {
+            zh: "1.5-55 kW",
+            en: "1.5-55 kW"
+          },
+          isFlotationProduct: true,
+          uniqueId: "aeration-flotation-1"
         }
       ];
     }
     
+    // 加载产品数据并预加载图片
     loadProductsData();
+    preloadImages();
+    
+    // 组件卸载时清理
+    return () => {
+      // 如果有需要清理的资源，在这里处理
+    };
   }, [language]);
 
   return (
@@ -289,7 +364,7 @@ export default function FlotationPage() {
         </div>
       </PageSection>
 
-      {/* 浮选设备型号展示 */}
+      {/* 浮选设备产品展示 */}
       <PageSection variant="gray" className="flex-grow">
         <div className="max-w-7xl mx-auto h-full">
           {loading ? (
@@ -302,7 +377,7 @@ export default function FlotationPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 min-h-[600px]">
               {products.map((product) => (
                 <ProductCard 
-                  key={product.id} 
+                  key={product.uniqueId || product.id} 
                   product={product} 
                   basePath={`/products/flotation`} 
                 />

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "high-weir-spiral-classifier",
+    "model": "FLG系列",
+    "series": {
+      "zh": "高堰式单螺旋分级机",
+      "en": "High Weir Spiral Classifier"
+    },
+    "sandReturnCapacity": {
+      "zh": "30-11625 t/d",
+      "en": "30-11625 t/d"
+    },
+    "overflowCapacity": {
+      "zh": "10-890 t/d",
+      "en": "10-890 t/d"
+    },
+    "motorPower": {
+      "zh": "2.2-30 kW",
+      "en": "2.2-30 kW"
+    },
+    "isClassifierProduct": true
+  },
+  {
+    "id": "double-spiral-classifier",
+    "model": "FLC系列",
+    "series": {
+      "zh": "沉没式螺旋分级机",
+      "en": "Submerged Spiral Classifier"
+    },
+    "sandReturnCapacity": {
+      "zh": "160-11650 t/d",
+      "en": "160-11650 t/d"
+    },
+    "overflowCapacity": {
+      "zh": "50-705 t/d",
+      "en": "50-705 t/d"
+    },
+    "motorPower": {
+      "zh": "2.2-30 kW",
+      "en": "2.2-30 kW"
+    },
+    "isClassifierProduct": true
+  }
+] 

@@ -1,0 +1,191 @@
+[
+  {
+    "id": "ya-circular-vibrating-screen",
+    "model": "YA",
+    "series": {
+      "zh": "YA圆振动筛",
+      "en": "YA Circular Vibrating Screen"
+    },
+    "image": "/images/products/screens/ya-circular-vibrating-screen.png",
+    "capacity": {
+      "zh": "60-350 m³/h",
+      "en": "60-350 m³/h"
+    },
+    "screenSize": {
+      "zh": "4.2-14.4 m²",
+      "en": "4.2-14.4 m²"
+    },
+    "aperture": {
+      "zh": "5-100 mm",
+      "en": "5-100 mm"
+    },
+    "motorPower": {
+      "zh": "11-37 kW",
+      "en": "11-37 kW"
+    },
+    "isScreenProduct": true,
+    "uniqueId": "ya-circular-1"
+  },
+  {
+    "id": "linear-vibrating-screen",
+    "model": "ZK",
+    "series": {
+      "zh": "直线振动筛",
+      "en": "Linear Vibrating Screen"
+    },
+    "image": "/images/products/screens/linear-vibrating-screen.png",
+    "capacity": {
+      "zh": "50-300 m³/h",
+      "en": "50-300 m³/h"
+    },
+    "screenSize": {
+      "zh": "3.0-12.0 m²",
+      "en": "3.0-12.0 m²"
+    },
+    "aperture": {
+      "zh": "0.5-50 mm",
+      "en": "0.5-50 mm"
+    },
+    "motorPower": {
+      "zh": "7.5-30 kW",
+      "en": "7.5-30 kW"
+    },
+    "isScreenProduct": true,
+    "uniqueId": "linear-1"
+  },
+  {
+    "id": "banana-vibrating-screen",
+    "model": "BF",
+    "series": {
+      "zh": "香蕉筛",
+      "en": "Banana Vibrating Screen"
+    },
+    "image": "/images/products/screens/banana-vibrating-screen.png",
+    "capacity": {
+      "zh": "80-450 m³/h",
+      "en": "80-450 m³/h"
+    },
+    "screenSize": {
+      "zh": "6.5-25.0 m²",
+      "en": "6.5-25.0 m²"
+    },
+    "aperture": {
+      "zh": "5-100 mm",
+      "en": "5-100 mm"
+    },
+    "motorPower": {
+      "zh": "15-45 kW",
+      "en": "15-45 kW"
+    },
+    "isScreenProduct": true,
+    "uniqueId": "banana-1"
+  },
+  {
+    "id": "bar-vibrating-screen",
+    "model": "DGS",
+    "series": {
+      "zh": "棒条筛",
+      "en": "Bar Vibrating Screen"
+    },
+    "image": "/images/products/screens/bar-vibrating-screen.png",
+    "capacity": {
+      "zh": "60-380 m³/h",
+      "en": "60-380 m³/h"
+    },
+    "screenSize": {
+      "zh": "5.0-18.0 m²",
+      "en": "5.0-18.0 m²"
+    },
+    "aperture": {
+      "zh": "10-150 mm",
+      "en": "10-150 mm"
+    },
+    "motorPower": {
+      "zh": "11-37 kW",
+      "en": "11-37 kW"
+    },
+    "isScreenProduct": true,
+    "uniqueId": "bar-1"
+  },
+  {
+    "id": "drum-screen",
+    "model": "GT",
+    "series": {
+      "zh": "滚筒筛",
+      "en": "Drum Screen"
+    },
+    "image": "/images/products/screens/drum-screen.png",
+    "capacity": {
+      "zh": "30-200 m³/h",
+      "en": "30-200 m³/h"
+    },
+    "screenSize": {
+      "zh": "3.5-14.0 m²",
+      "en": "3.5-14.0 m²"
+    },
+    "aperture": {
+      "zh": "10-120 mm",
+      "en": "10-120 mm"
+    },
+    "motorPower": {
+      "zh": "5.5-22 kW",
+      "en": "5.5-22 kW"
+    },
+    "isScreenProduct": true,
+    "uniqueId": "drum-1"
+  },
+  {
+    "id": "vibrating-screen",
+    "model": "XD1845",
+    "series": {
+      "zh": "XD系列振动筛",
+      "en": "XD Series Vibrating Screen"
+    },
+    "image": "/images/products/screens/xd-vibrating-screen.png",
+    "capacity": {
+      "zh": "50-600 m³/h",
+      "en": "50-600 m³/h"
+    },
+    "screenSize": {
+      "zh": "3.6-21.0 m²",
+      "en": "3.6-21.0 m²"
+    },
+    "aperture": {
+      "zh": "2-50 mm",
+      "en": "2-50 mm"
+    },
+    "motorPower": {
+      "zh": "4.4-30 kW",
+      "en": "4.4-30 kW"
+    },
+    "isScreenProduct": true,
+    "uniqueId": "xd-1"
+  },
+  {
+    "id": "zkr-linear-vibrating-screen",
+    "model": "ZKR",
+    "series": {
+      "zh": "ZKR直线振动筛",
+      "en": "ZKR Linear Vibrating Screen"
+    },
+    "image": "/images/products/screens/zkr-linear-vibrating-screen.png",
+    "capacity": {
+      "zh": "30-540 m³/h",
+      "en": "30-540 m³/h"
+    },
+    "screenSize": {
+      "zh": "3.6-14.4 m²",
+      "en": "3.6-14.4 m²"
+    },
+    "aperture": {
+      "zh": "0.25-50 mm",
+      "en": "0.25-50 mm"
+    },
+    "motorPower": {
+      "zh": "11-44 kW",
+      "en": "11-44 kW"
+    },
+    "isScreenProduct": true,
+    "uniqueId": "zkr-1"
+  }
+] 

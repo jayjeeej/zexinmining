@@ -1,13 +1,12 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from "next/image";
-import Link from "next/link";
-import ProductCard from '@/app/components/products/ProductCard';
 import PageSection from '@/app/components/PageSection';
+import ProductCard from '@/app/components/products/ProductCard';
 import { useLanguage } from "@/app/contexts/LanguageContext";
+import ProductStructuredData from "@/app/components/ProductStructuredData";
 
-// 定义产品数据类型
+// 产品数据接口
 interface ProductData {
   id: string;
   model: string;
@@ -32,7 +31,7 @@ interface ProductData {
   [key: string]: any;
 }
 
-// 分级设备产品列表页面
+// 分级设备产品数据页面
 export default function ClassificationEquipmentPage() {
   const { language, isZh } = useLanguage();
   const [products, setProducts] = useState<ProductData[]>([]);
@@ -72,96 +71,184 @@ export default function ClassificationEquipmentPage() {
   };
 
   useEffect(() => {
+    // 预加载图片，加快渲染速度
+    function preloadImages() {
+      const productImages = [
+        '/images/products/classification-equipment/high-weir-spiral-classifier.png',
+        '/images/products/classification-equipment/double-spiral-classifier.png'
+      ];
+
+      productImages.forEach(src => {
+        // 使用 window.Image 规避类型错误
+        const img = new window.Image();
+        img.src = src;
+      });
+    }
+
+    // 使用 AbortController 来管理请求
+    const controller = new AbortController();
+    const signal = controller.signal;
+
     async function loadProductsData() {
       try {
-        const response = await fetch('/data/products/classification-products.json');
+        setLoading(true);
         
-        if (response.ok) {
-          const data = await response.json();
+        // 缓存键，基于语言设置
+        const cacheKey = `classification-equipment-products-${language}`;
+        
+        // 检查会话缓存中是否有数据
+        const cachedData = sessionStorage.getItem(cacheKey);
+        if (cachedData) {
+          setProducts(JSON.parse(cachedData));
+          setLoading(false);
+          return;
+        }
+        
+        // 从预编译JSON文件获取产品数据
+        const jsonFile = language === 'en' 
+          ? '/data/products/compiled/classification-equipment-en.json'
+          : '/data/products/compiled/classification-equipment-zh.json';
+          
+        const apiResponse = await fetch(jsonFile, {
+          signal,
+          cache: 'force-cache',
+          next: { revalidate: 3600 } // 1小时后重新验证数据
+        });
+        
+        if (apiResponse.ok) {
+          const data = await apiResponse.json();
           // 处理产品数据
           if (Array.isArray(data) && data.length > 0) {
-            setProducts(data.map((product: any) => ({
-              id: product.id,
-              model: product.model,
-              series: {
-                zh: product.nameZh || product.series?.zh || '',
-                en: product.nameEn || product.series?.en || ''
-              },
-              sandReturnCapacity: formatCapacity(product.sandReturnCapacity),
-              overflowCapacity: formatCapacity(product.overflowCapacity),
-              motorPower: formatCapacity(product.motorPower),
-              isClassifierProduct: true
-            })));
+            setProducts(data);
+            // 存储到会话缓存中
+            sessionStorage.setItem(cacheKey, JSON.stringify(data));
           } else {
             // 如果没有数据或数据格式不正确，使用备用数据
             setProducts(getBackupClassifierProducts());
           }
         } else {
-          // 如果请求失败，使用备用数据
-          setProducts(getBackupClassifierProducts());
+          // 如果无法获取预编译JSON，尝试获取原始JSON数据
+          try {
+            const response = await fetch('/data/products/classification-products.json', { signal });
+            
+            if (response.ok) {
+              const data = await response.json();
+              // 处理产品数据
+              if (Array.isArray(data) && data.length > 0) {
+                const formattedProducts = data.map((product: any) => ({
+                  id: product.id,
+                  model: product.model,
+                  series: {
+                    zh: product.nameZh || product.series?.zh || '',
+                    en: product.nameEn || product.series?.en || ''
+                  },
+                  sandReturnCapacity: formatCapacity(product.sandReturnCapacity),
+                  overflowCapacity: formatCapacity(product.overflowCapacity),
+                  motorPower: formatCapacity(product.motorPower),
+                  isClassifierProduct: true
+                }));
+                
+                setProducts(formattedProducts);
+                // 存储到会话缓存中
+                sessionStorage.setItem(cacheKey, JSON.stringify(formattedProducts));
+              } else {
+                // 如果没有数据或数据格式不正确，使用备用数据
+                setProducts(getBackupClassifierProducts());
+              }
+            } else {
+              // 如果请求失败，使用备用数据
+              console.error('API请求失败，使用备用数据');
+              setProducts(getBackupClassifierProducts());
+            }
+          } catch (innerError) {
+            console.error('加载产品数据失败:', innerError);
+            setProducts(getBackupClassifierProducts());
+          }
         }
       } catch (error) {
-        console.error("Error loading classification equipment data:", error);
-        // 出错时使用备用数据
-        setProducts(getBackupClassifierProducts());
+        if ((error as Error).name !== 'AbortError') {
+          console.error("Error loading classification equipment data:", error);
+          // 出错时使用备用数据
+          setProducts(getBackupClassifierProducts());
+        }
       } finally {
         setLoading(false);
       }
     }
     
+    // 分级设备备用数据
+    const getBackupClassifierProducts = (): ProductData[] => {
+      return [
+        {
+          id: 'high-weir-spiral-classifier',
+          model: 'FLG系列',
+          series: {
+            zh: '高堰式单螺旋分级机',
+            en: 'High Weir Spiral Classifier'
+          },
+          sandReturnCapacity: {
+            zh: '30-11625 t/d',
+            en: '30-11625 t/d'
+          },
+          overflowCapacity: {
+            zh: '10-890 t/d',
+            en: '10-890 t/d'
+          },
+          motorPower: {
+            zh: '2.2-30 kW',
+            en: '2.2-30 kW'
+          },
+          isClassifierProduct: true
+        },
+        {
+          id: 'double-spiral-classifier',
+          model: 'FLC系列',
+          series: {
+            zh: '沉没式螺旋分级机',
+            en: 'Submerged Spiral Classifier'
+          },
+          sandReturnCapacity: {
+            zh: '160-11650 t/d',
+            en: '160-11650 t/d'
+          },
+          overflowCapacity: {
+            zh: '50-705 t/d',
+            en: '50-705 t/d'
+          },
+          motorPower: {
+            zh: '2.2-30 kW',
+            en: '2.2-30 kW'
+          },
+          isClassifierProduct: true
+        }
+      ];
+    };
+    
+    // 开始预加载图片
+    preloadImages();
+    
+    // 加载产品数据
     loadProductsData();
+    
+    // 组件卸载时取消所有正在进行的请求
+    return () => {
+      controller.abort();
+    };
   }, [language]);
-
-  // 分级设备备用数据
-  const getBackupClassifierProducts = (): ProductData[] => {
-    return [
-      {
-        id: 'high-weir-spiral-classifier',
-        model: 'FLG系列',
-        series: {
-          zh: '高堰式单螺旋分级机',
-          en: 'High Weir Spiral Classifier'
-        },
-        sandReturnCapacity: {
-          zh: '30-11625 t/d',
-          en: '30-11625 t/d'
-        },
-        overflowCapacity: {
-          zh: '10-890 t/d',
-          en: '10-890 t/d'
-        },
-        motorPower: {
-          zh: '2.2-30 kW',
-          en: '2.2-30 kW'
-        },
-        isClassifierProduct: true
-      },
-      {
-        id: 'double-spiral-classifier',
-        model: 'FLC系列',
-        series: {
-          zh: '沉没式螺旋分级机',
-          en: 'Submerged Spiral Classifier'
-        },
-        sandReturnCapacity: {
-          zh: '160-11650 t/d',
-          en: '160-11650 t/d'
-        },
-        overflowCapacity: {
-          zh: '50-705 t/d',
-          en: '50-705 t/d'
-        },
-        motorPower: {
-          zh: '2.2-30 kW',
-          en: '2.2-30 kW'
-        },
-        isClassifierProduct: true
-      }
-    ];
-  };
 
   return (
     <div className="min-h-screen flex flex-col">
+      {/* 添加结构化数据 - 对页面布局没有视觉影响 */}
+      <ProductStructuredData
+        name={isZh ? "分级设备" : "Classification Equipment"}
+        description={isZh 
+          ? "高精度的矿物颗粒分级设备，用于选矿过程中的颗粒分选，提高后续选别效率。" 
+          : "High-precision mineral particle classification equipment for particle separation in beneficiation processes."}
+        image="/images/products/classification-equipment/category-overview.png"
+        category={isZh ? "分级设备" : "Classification Equipment"}
+        url="/products/classification-equipment"
+      />
+      
       {/* 页面标题区域 */}
       <PageSection 
         noPadding 

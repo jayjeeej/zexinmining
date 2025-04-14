@@ -1,0 +1,140 @@
+[
+  {
+    "id": "flotation-cell",
+    "model": "JJF",
+    "series": {
+      "zh": "浮选机",
+      "en": "Flotation Cell"
+    },
+    "image": "/images/products/flotation/flotation-cell.png",
+    "capacity": {
+      "zh": "0.37-90 m³",
+      "en": "0.37-90 m³"
+    },
+    "effectiveVolume": {
+      "zh": "0.37-90 m³",
+      "en": "0.37-90 m³"
+    },
+    "motorPower": {
+      "zh": "1.1-160 kW",
+      "en": "1.1-160 kW"
+    },
+    "isFlotationProduct": true,
+    "uniqueId": "flotation-cell-1"
+  },
+  {
+    "id": "xcf-flotation-machine",
+    "model": "XCF/KYF",
+    "series": {
+      "zh": "XCF/KYF气浮式浮选机",
+      "en": "XCF/KYF Air-inflation Flotation Machine"
+    },
+    "image": "/images/products/flotation/xcf-flotation-machine.png",
+    "capacity": {
+      "zh": "0.24-48 m³",
+      "en": "0.24-48 m³"
+    },
+    "effectiveVolume": {
+      "zh": "0.24-48 m³",
+      "en": "0.24-48 m³"
+    },
+    "motorPower": {
+      "zh": "1.5-110 kW",
+      "en": "1.5-110 kW"
+    },
+    "isFlotationProduct": true,
+    "uniqueId": "xcf-flotation-1"
+  },
+  {
+    "id": "self-priming-flotation-machine",
+    "model": "SF",
+    "series": {
+      "zh": "SF充气式浮选机",
+      "en": "SF Inflation Flotation Machine"
+    },
+    "image": "/images/products/flotation/self-priming-flotation-machine.png",
+    "capacity": {
+      "zh": "0.37-51 m³",
+      "en": "0.37-51 m³"
+    },
+    "effectiveVolume": {
+      "zh": "0.37-51 m³",
+      "en": "0.37-51 m³"
+    },
+    "motorPower": {
+      "zh": "1.5-150 kW",
+      "en": "1.5-150 kW"
+    },
+    "isFlotationProduct": true,
+    "uniqueId": "sf-flotation-1"
+  },
+  {
+    "id": "coarse-particle-flotation-machine",
+    "model": "BF",
+    "series": {
+      "zh": "粗颗粒浮选机",
+      "en": "Coarse Particle Flotation Machine"
+    },
+    "image": "/images/products/flotation/coarse-particle-flotation-machine.png",
+    "capacity": {
+      "zh": "10-80 m³",
+      "en": "10-80 m³"
+    },
+    "effectiveVolume": {
+      "zh": "10-80 m³",
+      "en": "10-80 m³"
+    },
+    "motorPower": {
+      "zh": "30-110 kW",
+      "en": "30-110 kW"
+    },
+    "isFlotationProduct": true,
+    "uniqueId": "bf-flotation-1"
+  },
+  {
+    "id": "bar-flotation-machine",
+    "model": "KYF",
+    "series": {
+      "zh": "棒型浮选机",
+      "en": "Bar Flotation Machine"
+    },
+    "image": "/images/products/flotation/bar-flotation-machine.png",
+    "capacity": {
+      "zh": "0.5-36 m³",
+      "en": "0.5-36 m³"
+    },
+    "effectiveVolume": {
+      "zh": "0.5-36 m³",
+      "en": "0.5-36 m³"
+    },
+    "motorPower": {
+      "zh": "1.5-75 kW",
+      "en": "1.5-75 kW"
+    },
+    "isFlotationProduct": true,
+    "uniqueId": "bar-flotation-1"
+  },
+  {
+    "id": "aeration-flotation-machine",
+    "model": "XJQ",
+    "series": {
+      "zh": "机械曝气式浮选机",
+      "en": "Aeration Flotation Machine"
+    },
+    "image": "/images/products/flotation/aeration-flotation-machine.png",
+    "capacity": {
+      "zh": "0.5-24 m³",
+      "en": "0.5-24 m³"
+    },
+    "effectiveVolume": {
+      "zh": "0.5-24 m³",
+      "en": "0.5-24 m³"
+    },
+    "motorPower": {
+      "zh": "1.5-55 kW",
+      "en": "1.5-55 kW"
+    },
+    "isFlotationProduct": true,
+    "uniqueId": "aeration-flotation-1"
+  }
+] 

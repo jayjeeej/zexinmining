@@ -1,0 +1,110 @@
+[
+  {
+    "id": "overflow-ball-mill",
+    "model": "MQY2745",
+    "series": {
+      "zh": "溢流式球磨机",
+      "en": "Overflow Ball Mill"
+    },
+    "image": "/images/products/grinding/overflow-ball-mill.png",
+    "capacity": {
+      "zh": "1.5-45 t/h",
+      "en": "1.5-45 t/h"
+    },
+    "motorPower": {
+      "zh": "15-245 kW",
+      "en": "15-245 kW"
+    },
+    "feedSize": {
+      "zh": "≤25 mm",
+      "en": "≤25 mm"
+    },
+    "dischargeSize": {
+      "zh": "0.074-0.4 mm",
+      "en": "0.074-0.4 mm"
+    },
+    "isGrindingProduct": true,
+    "uniqueId": "overflow-ball-1"
+  },
+  {
+    "id": "wet-grid-ball-mill",
+    "model": "MQYg1212-MQYg2145",
+    "series": {
+      "zh": "湿式格子型球磨机",
+      "en": "Wet Grid Ball Mill"
+    },
+    "image": "/images/products/grinding/wet-grid-ball-mill.png",
+    "capacity": {
+      "zh": "0.17-45 t/h",
+      "en": "0.17-45 t/h"
+    },
+    "motorPower": {
+      "zh": "22-280 kW",
+      "en": "22-280 kW"
+    },
+    "feedSize": {
+      "zh": "≤25 mm",
+      "en": "≤25 mm"
+    },
+    "dischargeSize": {
+      "zh": "0.074-0.4 mm",
+      "en": "0.074-0.4 mm"
+    },
+    "isGrindingProduct": true,
+    "uniqueId": "wet-grid-ball-1"
+  },
+  {
+    "id": "dry-grid-ball-mill",
+    "model": "MQGg1212-MQGg2145",
+    "series": {
+      "zh": "干式格子型球磨机",
+      "en": "Dry Grid Ball Mill"
+    },
+    "image": "/images/products/grinding/dry-grid-ball-mill.png",
+    "capacity": {
+      "zh": "0.17-45 t/h",
+      "en": "0.17-45 t/h"
+    },
+    "motorPower": {
+      "zh": "22-280 kW",
+      "en": "22-280 kW"
+    },
+    "feedSize": {
+      "zh": "20-25 mm",
+      "en": "20-25 mm"
+    },
+    "dischargeSize": {
+      "zh": "0.074-0.4 mm",
+      "en": "0.074-0.4 mm"
+    },
+    "isGrindingProduct": true,
+    "uniqueId": "dry-grid-ball-1"
+  },
+  {
+    "id": "rod-mill",
+    "model": "MQ2745",
+    "series": {
+      "zh": "棒磨机",
+      "en": "Rod Mill"
+    },
+    "image": "/images/products/grinding/rod-mill.png",
+    "capacity": {
+      "zh": "5-35 t/h",
+      "en": "5-35 t/h"
+    },
+    "motorPower": {
+      "zh": "55-240 kW",
+      "en": "55-240 kW"
+    },
+    "feedSize": {
+      "zh": "≤30 mm",
+      "en": "≤30 mm"
+    },
+    "dischargeSize": {
+      "zh": "0.8-3 mm",
+      "en": "0.8-3 mm"
+    },
+    "isGrindingProduct": true,
+    "uniqueId": "rod-mill-1"
+  }
+] 

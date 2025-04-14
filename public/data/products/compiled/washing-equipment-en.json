@@ -1,0 +1,65 @@
+[
+  {
+    "id": "spiral-washer",
+    "model": "FG Series",
+    "series": {
+      "zh": "单螺旋洗矿机",
+      "en": "Spiral Washer"
+    },
+    "capacity": {
+      "zh": "10-50 t/h",
+      "en": "10-50 t/h"
+    },
+    "motorPower": {
+      "zh": "3-11 kW",
+      "en": "3-11 kW"
+    },
+    "spiralDiameter": {
+      "zh": "900-1800 mm",
+      "en": "900-1800 mm"
+    },
+    "isWasherProduct": true
+  },
+  {
+    "id": "double-spiral-washer",
+    "model": "2FG Series",
+    "series": {
+      "zh": "双螺旋洗矿机",
+      "en": "Double Spiral Washer"
+    },
+    "capacity": {
+      "zh": "15-100 t/h",
+      "en": "15-100 t/h"
+    },
+    "motorPower": {
+      "zh": "5.5-22 kW",
+      "en": "5.5-22 kW"
+    },
+    "spiralDiameter": {
+      "zh": "1000-2000 mm",
+      "en": "1000-2000 mm"
+    },
+    "isWasherProduct": true
+  },
+  {
+    "id": "drum-washer",
+    "model": "GT Series",
+    "series": {
+      "zh": "滚筒洗矿机",
+      "en": "Drum Washer"
+    },
+    "capacity": {
+      "zh": "30-200 t/h",
+      "en": "30-200 t/h"
+    },
+    "motorPower": {
+      "zh": "7.5-45 kW",
+      "en": "7.5-45 kW"
+    },
+    "drumDiameter": {
+      "zh": "1500-3000 mm",
+      "en": "1500-3000 mm"
+    },
+    "isWasherProduct": true
+  }
+] 

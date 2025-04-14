@@ -34,77 +34,121 @@ export default function GrindingEquipmentPage() {
   const [loading, setLoading] = useState(true);
   
   useEffect(() => {
-    async function loadProducts() {
+    // 预加载图片，加快渲染速度
+    function preloadImages() {
+      const imageUrls = [
+        '/images/products/grinding/overflow-ball-mill.png',
+        '/images/products/grinding/wet-grid-ball-mill.png',
+        '/images/products/grinding/dry-grid-ball-mill.png',
+        '/images/products/grinding/rod-mill.png'
+      ];
+      
+      imageUrls.forEach(url => {
+        // 使用window.Image构造函数明确类型
+        const img = new (window.Image as any)();
+        img.src = url;
+      });
+    }
+    
+    async function loadProductsData() {
+      // 缓存键，基于语言设置
+      const cacheKey = `grinding-equipment-data-${language}`;
+      
+      // 尝试从会话存储中获取缓存的数据
+      const cachedData = sessionStorage.getItem(cacheKey);
+      if (cachedData) {
+        try {
+          const parsedData = JSON.parse(cachedData);
+          console.log("从缓存加载研磨设备产品数据");
+          setProducts(parsedData);
+          setLoading(false);
+          return;
+        } catch (e) {
+          console.error("缓存数据解析失败:", e);
+          // 继续尝试从API获取数据
+        }
+      }
+      
       try {
-        // 从JSON文件获取数据
-        const overflowBallMillRes = await fetch('/data/products/overflow-ball-mill.json');
-        const wetGridBallMillRes = await fetch('/data/products/wet-grid-ball-mill.json');
-        const dryGridBallMillRes = await fetch('/data/products/dry-grid-ball-mill.json');
-        const rodMillRes = await fetch('/data/products/rod-mill.json');
-
-        // 检查响应状态
-        if (overflowBallMillRes.ok && wetGridBallMillRes.ok && dryGridBallMillRes.ok && rodMillRes.ok) {
-          const overflowBallMill = await overflowBallMillRes.json();
-          const wetGridBallMill = await wetGridBallMillRes.json();
-          const dryGridBallMill = await dryGridBallMillRes.json();
-          const rodMill = await rodMillRes.json();
-
-          // 格式化产品数据
-          const productsList = [
-            formatProductData(overflowBallMill),
-            formatProductData(wetGridBallMill),
-            formatProductData(dryGridBallMill),
-            formatProductData(rodMill)
-          ];
-
-          if (productsList.length > 0) {
-            setProducts(productsList);
-          } else {
-            console.error('Failed to load product data');
-            // 加载失败时使用硬编码数据作为备份
-            setProducts(getBackupGrindingProducts());
-          }
+        // 使用预编译的组合JSON，单一请求替代多个请求
+        const combinedJsonUrl = `/data/products/compiled/grinding-equipment-${language}.json`;
+        const response = await fetch(combinedJsonUrl, {
+          cache: 'force-cache', // 强制使用缓存
+          next: { revalidate: 3600 } // 1小时后重新验证
+        });
+        
+        if (response.ok) {
+          // 成功获取到合并后的数据
+          const productsData = await response.json();
+          setProducts(productsData);
+          // 存储到会话缓存中
+          sessionStorage.setItem(cacheKey, JSON.stringify(productsData));
         } else {
-          console.error('Failed to load product data');
-          // 加载失败时使用硬编码数据作为备份
-          setProducts(getBackupGrindingProducts());
-        }
-        
-        // 格式化产品数据
-        function formatProductData(product: any) {
-          return {
-            id: product.id || getProductIdByName(product.nameEn || product.series?.en || product.nameZh || product.series?.zh || ''),
-            model: product.model || '',
-            series: {
-              zh: product.nameZh || product.series?.zh || '',
-              en: product.nameEn || product.series?.en || ''
-            },
-            capacity: formatCapacity(product.capacity),
-            motorPower: formatCapacity(product.motorPower),
-            feedSize: formatCapacity(product.feedSize),
-            dischargeSize: formatCapacity(product.dischargeSize),
-            isGrindingProduct: true
-          };
-        }
-        
-        // 根据产品名称生成统一的ID
-        function getProductIdByName(name: string): string {
-          const lowerName = name.toLowerCase();
+          // 如果合并文件不存在，回退到并行请求多个文件
+          console.log("合并数据文件不存在，回退到并行请求");
+          const grindingTypes = [
+            'overflow-ball-mill',
+            'wet-grid-ball-mill',
+            'dry-grid-ball-mill',
+            'rod-mill'
+          ];
           
-          if (lowerName.includes('overflow') || lowerName.includes('溢流')) {
-            return 'overflow-ball-mill';
-          } else if (lowerName.includes('ball') || lowerName.includes('球磨')) {
-            return 'wet-grid-ball-mill';
-          } else if (lowerName.includes('rod') || lowerName.includes('棒磨')) {
-            return 'rod-mill';
-          } else if (lowerName.includes('sag') || lowerName.includes('半自磨')) {
-            return 'sag-mill';
+          // 创建AbortController用于取消请求
+          const controller = new AbortController();
+          const { signal } = controller;
+          
+          // 设置请求超时
+          const timeoutId = setTimeout(() => controller.abort(), 5000);
+          
+          try {
+            // 并行请求所有产品数据
+            const responses = await Promise.all(
+              grindingTypes.map(type => 
+                fetch(`/data/products/${type}.json`, { 
+                  signal,
+                  cache: 'force-cache'
+                })
+              )
+            );
+            
+            // 清除超时
+            clearTimeout(timeoutId);
+            
+            // 检查所有响应是否成功
+            const allSuccessful = responses.every(res => res.ok);
+            
+            if (allSuccessful) {
+              // 并行解析所有JSON响应
+              const jsonData = await Promise.all(
+                responses.map(res => res.json())
+              );
+              
+              // 格式化产品数据
+              const productsList = [
+                {...formatProductData(jsonData[0]), uniqueId: 'overflow-ball-1'}, 
+                {...formatProductData(jsonData[1]), uniqueId: 'wet-grid-ball-1'}, 
+                {...formatProductData(jsonData[2]), uniqueId: 'dry-grid-ball-1'}, 
+                {...formatProductData(jsonData[3]), uniqueId: 'rod-mill-1'}
+              ];
+              
+              setProducts(productsList);
+              
+              // 存储到会话缓存中
+              sessionStorage.setItem(cacheKey, JSON.stringify(productsList));
+            } else {
+              // 至少有一个请求失败，使用备份数据
+              console.error('部分产品数据加载失败');
+              setProducts(getBackupGrindingProducts());
+            }
+          } catch (error: any) {
+            // 如果是因为超时或取消导致的错误，不需要处理
+            if (error.name !== 'AbortError') {
+              console.error('Error loading products via parallel requests:', error);
+              setProducts(getBackupGrindingProducts());
+            }
           }
-          
-          // 默认id
-          return 'grinding-' + name.toLowerCase().replace(/\s+/g, '-');
         }
-      } catch (error) {
+      } catch (error: any) {
         console.error('Error loading products:', error);
         // 加载失败时使用硬编码数据
         setProducts(getBackupGrindingProducts());
@@ -113,7 +157,50 @@ export default function GrindingEquipmentPage() {
       }
     }
     
-    loadProducts();
+    // 格式化产品数据
+    function formatProductData(product: any) {
+      return {
+        id: product.id || getProductIdByName(product.nameEn || product.series?.en || product.nameZh || product.series?.zh || ''),
+        model: product.model || '',
+        series: {
+          zh: product.nameZh || product.series?.zh || '',
+          en: product.nameEn || product.series?.en || ''
+        },
+        image: product.imagePath || `/images/products/grinding/${product.id || 'default'}.png`,
+        capacity: formatCapacity(product.capacity),
+        motorPower: formatCapacity(product.motorPower),
+        feedSize: formatCapacity(product.feedSize),
+        dischargeSize: formatCapacity(product.dischargeSize),
+        isGrindingProduct: true
+      };
+    }
+    
+    // 根据产品名称生成统一的ID
+    function getProductIdByName(name: string): string {
+      const lowerName = name.toLowerCase();
+      
+      if (lowerName.includes('overflow') || lowerName.includes('溢流')) {
+        return 'overflow-ball-mill';
+      } else if (lowerName.includes('ball') || lowerName.includes('球磨')) {
+        return 'wet-grid-ball-mill';
+      } else if (lowerName.includes('rod') || lowerName.includes('棒磨')) {
+        return 'rod-mill';
+      } else if (lowerName.includes('sag') || lowerName.includes('半自磨')) {
+        return 'sag-mill';
+      }
+      
+      // 默认id
+      return 'grinding-' + name.toLowerCase().replace(/\s+/g, '-');
+    }
+    
+    // 加载产品数据并预加载图片
+    loadProductsData();
+    preloadImages();
+    
+    // 组件卸载时清理
+    return () => {
+      // 如果有需要清理的资源，在这里处理
+    };
   }, [language]);
 
   // 格式化能力数据的辅助函数
@@ -159,6 +246,7 @@ export default function GrindingEquipmentPage() {
           zh: '溢流式球磨机',
           en: 'Overflow Ball Mill'
         },
+        image: '/images/products/grinding/overflow-ball-mill.png',
         capacity: {
           zh: '1.5-45 t/h',
           en: '1.5-45 t/h'
@@ -167,7 +255,16 @@ export default function GrindingEquipmentPage() {
           zh: '15-245 kW',
           en: '15-245 kW'
         },
-        isGrindingProduct: true
+        feedSize: {
+          zh: '≤25 mm',
+          en: '≤25 mm'
+        },
+        dischargeSize: {
+          zh: '0.074-0.4 mm',
+          en: '0.074-0.4 mm'
+        },
+        isGrindingProduct: true,
+        uniqueId: 'overflow-ball-1'
       },
       {
         id: 'wet-grid-ball-mill',
@@ -176,6 +273,7 @@ export default function GrindingEquipmentPage() {
           zh: '湿式格子型球磨机',
           en: 'Wet Grid Ball Mill'
         },
+        image: '/images/products/grinding/wet-grid-ball-mill.png',
         capacity: {
           zh: '0.17-45 t/h',
           en: '0.17-45 t/h'
@@ -184,7 +282,16 @@ export default function GrindingEquipmentPage() {
           zh: '22-280 kW',
           en: '22-280 kW'
         },
-        isGrindingProduct: true
+        feedSize: {
+          zh: '≤25 mm',
+          en: '≤25 mm'
+        },
+        dischargeSize: {
+          zh: '0.074-0.4 mm',
+          en: '0.074-0.4 mm'
+        },
+        isGrindingProduct: true,
+        uniqueId: 'wet-grid-ball-1'
       },
       {
         id: 'dry-grid-ball-mill',
@@ -193,6 +300,7 @@ export default function GrindingEquipmentPage() {
           zh: '干式格子型球磨机',
           en: 'Dry Grid Ball Mill'
         },
+        image: '/images/products/grinding/dry-grid-ball-mill.png',
         capacity: {
           zh: '0.17-45 t/h',
           en: '0.17-45 t/h'
@@ -205,7 +313,12 @@ export default function GrindingEquipmentPage() {
           zh: '20-25 mm',
           en: '20-25 mm'
         },
-        isGrindingProduct: true
+        dischargeSize: {
+          zh: '0.074-0.4 mm',
+          en: '0.074-0.4 mm'
+        },
+        isGrindingProduct: true,
+        uniqueId: 'dry-grid-ball-1'
       },
       {
         id: 'rod-mill',
@@ -214,6 +327,7 @@ export default function GrindingEquipmentPage() {
           zh: '棒磨机',
           en: 'Rod Mill'
         },
+        image: '/images/products/grinding/rod-mill.png',
         capacity: {
           zh: '5-35 t/h',
           en: '5-35 t/h'
@@ -222,7 +336,16 @@ export default function GrindingEquipmentPage() {
           zh: '55-240 kW',
           en: '55-240 kW'
         },
-        isGrindingProduct: true
+        feedSize: {
+          zh: '≤30 mm',
+          en: '≤30 mm'
+        },
+        dischargeSize: {
+          zh: '0.8-3 mm',
+          en: '0.8-3 mm'
+        },
+        isGrindingProduct: true,
+        uniqueId: 'rod-mill-1'
       }
     ];
   };
@@ -282,7 +405,7 @@ export default function GrindingEquipmentPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 min-h-[600px]">
               {products.map((product) => (
                 <ProductCard 
-                  key={product.id} 
+                  key={product.uniqueId || product.id} 
                   product={product} 
                   basePath={`/products/grinding-equipment`} 
                 />

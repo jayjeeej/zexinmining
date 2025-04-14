@@ -34,84 +34,162 @@ export default function FeedingEquipmentPage() {
   const [loading, setLoading] = useState(true);
   
   useEffect(() => {
+    // 预加载图片，加快渲染速度
+    function preloadImages() {
+      const imageUrls = [
+        '/images/products/feeding/belt-feeder.png',
+        '/images/products/feeding/plate-feeder.png',
+        '/images/products/feeding/disc-feeder.png',
+        '/images/products/feeding/electromagnetic-vibrating-feeder.png',
+        '/images/products/feeding/xdg-vibrating-feeder.png'
+      ];
+      
+      imageUrls.forEach(url => {
+        // 使用window.Image构造函数明确类型
+        const img = new (window.Image as any)();
+        img.src = url;
+      });
+    }
+    
     async function loadProductsData() {
+      // 缓存键，基于语言设置
+      const cacheKey = `feeding-equipment-data-${language}`;
+      
+      // 尝试从会话存储中获取缓存的数据
+      const cachedData = sessionStorage.getItem(cacheKey);
+      if (cachedData) {
+        try {
+          const parsedData = JSON.parse(cachedData);
+          console.log("从缓存加载给料设备产品数据");
+          setProducts(parsedData);
+          setLoading(false);
+          return;
+        } catch (e) {
+          console.error("缓存数据解析失败:", e);
+          // 继续尝试从API获取数据
+        }
+      }
+      
       try {
-        // 从JSON文件获取产品数据
-        const plateFeederRes = await fetch('/data/products/plate-feeder.json');
-        const beltFeederRes = await fetch('/data/products/belt-feeder.json');
-        const vibFeederRes = await fetch('/data/products/electromagnetic-vibrating-feeder.json');
-        const discFeederRes = await fetch('/data/products/disc-feeder.json');
-        const xdgFeederRes = await fetch('/data/products/xdg-vibrating-feeder.json');
+        // 使用预编译的组合JSON，单一请求替代多个请求
+        const combinedJsonUrl = `/data/products/compiled/feeding-equipment-${language}.json`;
+        const response = await fetch(combinedJsonUrl, {
+          cache: 'force-cache', // 强制使用缓存
+          next: { revalidate: 3600 } // 1小时后重新验证
+        });
         
-        // 检查响应状态并解析JSON
-        if (plateFeederRes.ok && beltFeederRes.ok && vibFeederRes.ok && discFeederRes.ok && xdgFeederRes.ok) {
-          const plateFeeder = await plateFeederRes.json();
-          const beltFeeder = await beltFeederRes.json();
-          const vibFeeder = await vibFeederRes.json();
-          const discFeeder = await discFeederRes.json();
-          const xdgFeeder = await xdgFeederRes.json();
-          
-          // 格式化产品数据
-          const formatProductData = (product: any) => {
-            return {
-              id: product.id || getProductIdByName(product.nameEn || product.series?.en || product.nameZh || product.series?.zh || ''),
-              model: product.model || '',
-              series: {
-                zh: product.nameZh || product.series?.zh || '',
-                en: product.nameEn || product.series?.en || ''
-              },
-              capacity: formatCapacity(product.capacity),
-              motorPower: formatCapacity(product.motorPower),
-              isFeederProduct: true
-            };
-          };
-          
-          // 根据产品名称生成统一的ID
-          const getProductIdByName = (name: string): string => {
-            const lowerName = name.toLowerCase();
-            
-            if (lowerName.includes('plate') || lowerName.includes('板式')) {
-              return 'plate-feeder';
-            } else if (lowerName.includes('belt') || lowerName.includes('带式')) {
-              return 'belt-feeder';
-            } else if ((lowerName.includes('vibrat') || lowerName.includes('振动')) && lowerName.includes('electro')) {
-              return 'electromagnetic-vibrating-feeder';
-            } else if (lowerName.includes('disc') || lowerName.includes('盘式')) {
-              return 'disc-feeder';
-            } else if (lowerName.includes('xdg')) {
-              return 'xdg-vibrating-feeder';
-            } else if (lowerName.includes('vibrat') || lowerName.includes('振动')) {
-              return 'vibrating-feeder';
-            }
-            
-            // 默认id
-            return 'feeder-' + name.toLowerCase().replace(/\s+/g, '-');
-          };
-          
-          const productsList = [
-            formatProductData(plateFeeder),
-            formatProductData(beltFeeder),
-            formatProductData(vibFeeder),
-            formatProductData(discFeeder),
-            formatProductData(xdgFeeder)
+        if (response.ok) {
+          // 成功获取到合并后的数据
+          const productsData = await response.json();
+          setProducts(productsData);
+          // 存储到会话缓存中
+          sessionStorage.setItem(cacheKey, JSON.stringify(productsData));
+        } else {
+          // 如果合并文件不存在，回退到并行请求多个文件
+          console.log("合并数据文件不存在，回退到并行请求");
+          const feedingTypes = [
+            'belt-feeder',
+            'plate-feeder',
+            'disc-feeder',
+            'electromagnetic-vibrating-feeder',
+            'xdg-vibrating-feeder'
           ];
           
-          setProducts(productsList);
-        } else {
-          console.error('Failed to load product data');
-          // 加载失败时使用硬编码数据作为备份
-          setProducts(getBackupFeederProducts());
+          // 创建AbortController用于取消请求
+          const controller = new AbortController();
+          const { signal } = controller;
+          
+          // 设置请求超时
+          const timeoutId = setTimeout(() => controller.abort(), 5000);
+          
+          try {
+            // 并行请求所有产品数据
+            const responses = await Promise.all(
+              feedingTypes.map(type => 
+                fetch(`/data/products/${type}.json`, { 
+                  signal,
+                  cache: 'force-cache'
+                })
+              )
+            );
+            
+            // 清除超时
+            clearTimeout(timeoutId);
+            
+            // 检查所有响应是否成功
+            const allSuccessful = responses.every(res => res.ok);
+            
+            if (allSuccessful) {
+              // 并行解析所有JSON响应
+              const jsonData = await Promise.all(
+                responses.map(res => res.json())
+              );
+              
+              // 格式化产品数据
+              const productsList = [
+                {...formatProductData(jsonData[0]), uniqueId: 'belt-feeder-1'}, 
+                {...formatProductData(jsonData[1]), uniqueId: 'plate-feeder-1'}, 
+                {...formatProductData(jsonData[2]), uniqueId: 'disc-feeder-1'}, 
+                {...formatProductData(jsonData[3]), uniqueId: 'electromagnetic-feeder-1'},
+                {...formatProductData(jsonData[4]), uniqueId: 'xdg-feeder-1'}
+              ];
+              
+              setProducts(productsList);
+              
+              // 存储到会话缓存中
+              sessionStorage.setItem(cacheKey, JSON.stringify(productsList));
+            } else {
+              // 至少有一个请求失败，使用备份数据
+              console.error('部分产品数据加载失败');
+              setProducts(getBackupFeedingProducts());
+            }
+          } catch (error: any) {
+            // 如果是因为超时或取消导致的错误，不需要处理
+            if (error.name !== 'AbortError') {
+              console.error('Error loading products via parallel requests:', error);
+              setProducts(getBackupFeedingProducts());
+            }
+          }
         }
-      } catch (error) {
+      } catch (error: any) {
         console.error('Error loading products:', error);
         // 加载失败时使用硬编码数据
-        setProducts(getBackupFeederProducts());
+        setProducts(getBackupFeedingProducts());
       } finally {
         setLoading(false);
       }
     }
     
+    // 格式化产品数据
+    function formatProductData(product: any) {
+      return {
+        id: product.id || '',
+        model: product.model || '',
+        series: {
+          zh: product.nameZh || product.series?.zh || '',
+          en: product.nameEn || product.series?.en || ''
+        },
+        image: product.imagePath || `/images/products/feeding/${product.id || 'default'}.png`,
+        capacity: formatCapacity(product.capacity),
+        motorPower: formatCapacity(product.motorPower),
+        feedSize: formatCapacity(product.feedSize),
+        power: formatCapacity(product.power),
+        beltWidth: formatCapacity(product.beltWidth),
+        plateWidth: formatCapacity(product.plateWidth),
+        discDiameter: formatCapacity(product.discDiameter),
+        trough: formatCapacity(product.trough),
+        isFeedingProduct: true
+      };
+    }
+    
+    // 加载产品数据并预加载图片
     loadProductsData();
+    preloadImages();
+    
+    // 组件卸载时清理
+    return () => {
+      // 如果有需要清理的资源，在这里处理
+    };
   }, [language]);
 
   // 格式化能力数据的辅助函数
@@ -127,11 +205,7 @@ export default function FeedingEquipmentPage() {
     if (typeof data === 'object' && (data.min !== undefined || data.max !== undefined)) {
       const min = data.min || 0;
       const max = data.max || min;
-      // 修正单位：给料机的处理能力单位统一为m³/h
-      let unit = data.unit || '';
-      if (unit === 't/h') {
-        unit = 'm³/h';
-      }
+      const unit = data.unit || '';
       const valueText = min === max ? `${min} ${unit}` : `${min}-${max} ${unit}`;
       
       return {
@@ -142,15 +216,9 @@ export default function FeedingEquipmentPage() {
     
     // 处理字符串格式
     if (typeof data === 'string') {
-      // 修正单位：将字符串中的t/h替换为m³/h
-      let processedString = data;
-      if (data.includes('t/h')) {
-        processedString = data.replace('t/h', 'm³/h');
-      }
-      
       return {
-        zh: processedString,
-        en: processedString
+        zh: data,
+        en: data
       };
     }
     
@@ -158,92 +226,142 @@ export default function FeedingEquipmentPage() {
   };
   
   // 备用产品数据
-  const getBackupFeederProducts = (): ProductData[] => {
+  const getBackupFeedingProducts = (): ProductData[] => {
     return [
       {
-        id: 'plate-feeder',
-        model: 'GBH80-2.2',
+        id: "belt-feeder",
+        model: "B650-B1600",
         series: {
-          zh: '板式给料机',
-          en: 'Plate Feeder'
+          zh: "带式给料机",
+          en: "Belt Feeder"
         },
+        image: "/images/products/feeding/belt-feeder.png",
         capacity: {
-          zh: '15-217 m³/h',
-          en: '15-217 m³/h'
+          zh: "30-1800 t/h",
+          en: "30-1800 t/h"
+        },
+        feedSize: {
+          zh: "≤500 mm",
+          en: "≤500 mm"
+        },
+        beltWidth: {
+          zh: "650-1600 mm",
+          en: "650-1600 mm"
         },
         motorPower: {
-          zh: '7.5 kW',
-          en: '7.5 kW'
+          zh: "5.5-45 kW",
+          en: "5.5-45 kW"
         },
-        isFeederProduct: true
+        isFeedingProduct: true,
+        uniqueId: "belt-feeder-1"
       },
       {
-        id: 'belt-feeder',
-        model: '500×1000',
+        id: "plate-feeder",
+        model: "ZSW380-ZSW960",
         series: {
-          zh: '皮带给料机',
-          en: 'Belt Feeder'
+          zh: "板式给料机",
+          en: "Plate Feeder"
         },
+        image: "/images/products/feeding/plate-feeder.png",
         capacity: {
-          zh: '10-350 m³/h',
-          en: '10-350 m³/h'
+          zh: "80-800 t/h",
+          en: "80-800 t/h"
+        },
+        feedSize: {
+          zh: "≤800 mm",
+          en: "≤800 mm"
+        },
+        plateWidth: {
+          zh: "800-1500 mm",
+          en: "800-1500 mm"
         },
         motorPower: {
-          zh: '0.75-3 kW',
-          en: '0.75-3 kW'
+          zh: "7.5-55 kW",
+          en: "7.5-55 kW"
         },
-        isFeederProduct: true
+        isFeedingProduct: true,
+        uniqueId: "plate-feeder-1"
       },
       {
-        id: 'electromagnetic-vibrating-feeder',
-        model: 'GZ3F',
+        id: "disc-feeder",
+        model: "SCZ",
         series: {
-          zh: '电磁振动给料机',
-          en: 'Electromagnetic Vibrating Feeder'
+          zh: "圆盘给料机",
+          en: "Disc Feeder"
         },
+        image: "/images/products/feeding/disc-feeder.png",
         capacity: {
-          zh: '30-380 m³/h',
-          en: '30-380 m³/h'
+          zh: "8-800 t/h",
+          en: "8-800 t/h"
+        },
+        feedSize: {
+          zh: "≤300 mm",
+          en: "≤300 mm"
+        },
+        discDiameter: {
+          zh: "1000-3600 mm",
+          en: "1000-3600 mm"
         },
         motorPower: {
-          zh: '0.45-2.2 kW',
-          en: '0.45-2.2 kW'
+          zh: "3-22 kW",
+          en: "3-22 kW"
         },
-        isFeederProduct: true
+        isFeedingProduct: true,
+        uniqueId: "disc-feeder-1"
       },
       {
-        id: 'disc-feeder',
-        model: 'BPF-550',
+        id: "electromagnetic-vibrating-feeder",
+        model: "GZ1-GZ6",
         series: {
-          zh: '盘式给料机',
-          en: 'Disc Feeder'
+          zh: "电磁振动给料机",
+          en: "Electromagnetic Vibrating Feeder"
         },
+        image: "/images/products/feeding/electromagnetic-vibrating-feeder.png",
         capacity: {
-          zh: '20-120 m³/h',
-          en: '20-120 m³/h'
+          zh: "5-300 t/h",
+          en: "5-300 t/h"
         },
-        motorPower: {
-          zh: '4-11 kW',
-          en: '4-11 kW'
+        feedSize: {
+          zh: "≤400 mm",
+          en: "≤400 mm"
         },
-        isFeederProduct: true
+        trough: {
+          zh: "360-1500 mm",
+          en: "360-1500 mm"
+        },
+        power: {
+          zh: "0.15-4.0 kW",
+          en: "0.15-4.0 kW"
+        },
+        isFeedingProduct: true,
+        uniqueId: "electromagnetic-feeder-1"
       },
       {
-        id: 'xdg-vibrating-feeder',
-        model: 'XDG-1220',
+        id: "xdg-vibrating-feeder",
+        model: "XDG",
         series: {
-          zh: 'XDG系列振动给料机',
-          en: 'XDG Series Vibrating Feeder'
+          zh: "XDG振动给料机",
+          en: "XDG Vibrating Feeder"
         },
+        image: "/images/products/feeding/xdg-vibrating-feeder.png",
         capacity: {
-          zh: '80-450 m³/h',
-          en: '80-450 m³/h'
+          zh: "60-600 t/h",
+          en: "60-600 t/h"
+        },
+        feedSize: {
+          zh: "≤600 mm",
+          en: "≤600 mm"
+        },
+        trough: {
+          zh: "850-1800 mm",
+          en: "850-1800 mm"
         },
         motorPower: {
-          zh: '7.5-22 kW',
-          en: '7.5-22 kW'
+          zh: "5.5-37 kW",
+          en: "5.5-37 kW"
         },
-        isFeederProduct: true
+        isFeedingProduct: true,
+        uniqueId: "xdg-feeder-1"
       }
     ];
   };
@@ -280,8 +398,8 @@ export default function FeedingEquipmentPage() {
                 <div className="space-y-4 text-black text-left content-right">
                   <p>
                     {isZh
-                      ? "泽鑫矿山设备给料设备包括板式给料机、带式给料机、振动给料机等，提供从料仓到生产线的稳定均匀给料，适用于矿山、砂石、水泥等行业。设备具有给料均匀、结构牢固、能耗低、维护简便等特点。"
-                      : "Zexin Mining's feeding equipment includes plate feeders, belt feeders, vibrating feeders, etc., providing stable and uniform feeding from hoppers to production lines, suitable for mining, aggregate, cement and other industries. The equipment features uniform feeding, sturdy structure, low energy consumption, and easy maintenance."}
+                      ? "我们提供多种专业给料设备，包括带式给料机、板式给料机、振动给料机等，用于各种物料的均匀给料。这些设备具有给料均匀、结构稳定、运行可靠等特点，可满足不同物料特性和给料工艺的需求。"
+                      : "We provide various professional feeding equipment, including belt feeders, plate feeders, vibrating feeders, etc., for uniform feeding of various materials. These equipment feature uniform feeding, stable structure, reliable operation, and can meet the needs of different material characteristics and feeding processes."}
                   </p>
                 </div>
               </div>
@@ -290,10 +408,9 @@ export default function FeedingEquipmentPage() {
         </div>
       </PageSection>
 
-      {/* 给料设备型号展示 */}
+      {/* 给料设备产品展示 */}
       <PageSection variant="gray" className="flex-grow">
         <div className="max-w-7xl mx-auto h-full">
-          {/* 型号列表 - 每行3个产品 */}
           {loading ? (
             <div className="flex justify-center items-center h-[600px]">
               <div className="text-center">
@@ -304,7 +421,7 @@ export default function FeedingEquipmentPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 min-h-[600px]">
               {products.map((product) => (
                 <ProductCard 
-                  key={product.id} 
+                  key={product.uniqueId || product.id} 
                   product={product} 
                   basePath={`/products/feeding-equipment`} 
                 />
