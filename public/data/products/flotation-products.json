@@ -18,7 +18,7 @@
       "zh": "5.5-45 kW",
       "en": "5.5-45 kW"
     },
-    "image": "/images/products/flotation/aeration-flotation-machine.jpg",
+    "image": "/images/products/flotation/aeration-flotation-machine.png",
     "isFlotationProduct": true
   },
   {
@@ -40,7 +40,7 @@
       "zh": "7.5-55 kW",
       "en": "7.5-55 kW"
     },
-    "image": "/images/products/flotation/bar-flotation-machine.jpg",
+    "image": "/images/products/flotation/bar-flotation-machine.png",
     "isFlotationProduct": true
   },
   {
@@ -62,7 +62,7 @@
       "zh": "5.5-75 kW",
       "en": "5.5-75 kW"
     },
-    "image": "/images/products/flotation/coarse-particle-flotation-machine.jpg",
+    "image": "/images/products/flotation/coarse-particle-flotation-machine.png",
     "isFlotationProduct": true
   },
   {
@@ -84,7 +84,7 @@
       "zh": "3.0-55 kW",
       "en": "3.0-55 kW"
     },
-    "image": "/images/products/flotation/flotation-cell.jpg",
+    "image": "/images/products/flotation/flotation-cell.png",
     "isFlotationProduct": true
   },
   {
@@ -106,7 +106,7 @@
       "zh": "4.0-75 kW",
       "en": "4.0-75 kW"
     },
-    "image": "/images/products/flotation/self-priming-flotation-machine.jpg",
+    "image": "/images/products/flotation/self-priming-flotation-machine.png",
     "isFlotationProduct": true
   },
   {
@@ -128,7 +128,7 @@
       "zh": "4.0-75 kW",
       "en": "4.0-75 kW"
     },
-    "image": "/images/products/flotation/xcf-flotation-machine.jpg",
+    "image": "/images/products/flotation/xcf-flotation-machine.png",
     "isFlotationProduct": true
   }
-] 
+]

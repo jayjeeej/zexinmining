@@ -115,32 +115,32 @@ export default function ProductCard({ product, basePath, showDetails = true }: P
     // 根据产品ID判断类型
     if (product.isCrusherProduct || product.id.includes('crusher') || 
         (product.series?.zh?.includes('破碎机') || product.series?.en?.includes('Crusher'))) {
-      return `/images/products/crushers/${product.id}.jpg`;
+      return `/images/products/crushers/${product.id}.png`;
     } else if (product.isScreenProduct || product.id.includes('screen') || 
         (product.series?.zh?.includes('振动筛') || product.series?.en?.includes('Screen'))) {
-      return `/images/products/screens/${product.id}.jpg`;
+      return `/images/products/screens/${product.id}.png`;
     } else if (product.isClassifierProduct || product.id.includes('classifier') || 
         (product.series?.zh?.includes('分级机') || product.series?.en?.includes('Classifier'))) {
-      return `/images/products/classification-equipment/${product.id}.jpg`;
+      return `/images/products/classification-equipment/${product.id}.png`;
     } else if (product.isWasherProduct || product.id.includes('washer') || 
         (product.series?.zh?.includes('洗矿机') || product.series?.en?.includes('Washer'))) {
       // 为特定的洗矿机类型提供明确的路径
       if (product.id === 'spiral-washer') {
-        return '/images/products/washers/spiral-washer.jpg';
+        return '/images/products/washers/spiral-washer.png';
       } else if (product.id === 'double-spiral-washer') {
-        return '/images/products/washers/double-spiral-washer.jpg';
+        return '/images/products/washers/double-spiral-washer.png';
       } else if (product.id === 'drum-washer') {
-        return '/images/products/washers/drum-washer.jpg';
+        return '/images/products/washers/drum-washer.png';
       } else {
-        return `/images/products/washers/${product.id}.jpg`;
+        return `/images/products/washers/${product.id}.png`;
       }
     } else if (product.id.includes('mill') || 
         (product.series?.zh?.includes('球磨机') || product.series?.zh?.includes('棒磨机') || 
          product.series?.en?.includes('Ball Mill') || product.series?.en?.includes('Rod Mill'))) {
-      return `/images/products/grinding/${product.id}.jpg`;
+      return `/images/products/grinding/${product.id}.png`;
     } else if (product.isFeederProduct || product.id.includes('feeder') || 
         (product.series?.zh?.includes('给料') || product.series?.en?.includes('Feeder'))) {
-      return `/images/products/feeders/${product.id}.jpg`;
+      return `/images/products/feeders/${product.id}.png`;
     } else if (product.isGravitySeparationProduct || 
                product.id.includes('jig') || 
                product.id.includes('shaking-table') || 
@@ -157,10 +157,10 @@ export default function ProductCard({ product, basePath, showDetails = true }: P
                 product.series?.en?.includes('Spiral Chute') || 
                 product.series?.en?.includes('Carpet Hooking Machine') || 
                 product.series?.en?.includes('Centrifugal Separator'))) {
-      return `/images/products/gravity-separation/${product.id}.jpg`;
+      return `/images/products/gravity-separation/${product.id}.png`;
     } else {
       // 默认占位图
-      return '/images/products/placeholder.jpg';
+      return '/images/products/placeholder.png';
     }
   };
   

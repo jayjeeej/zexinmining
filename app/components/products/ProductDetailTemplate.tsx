@@ -1057,20 +1057,20 @@ export default function ProductDetailTemplate({
                     
                     // 特定产品类型的图片路径映射
                     const pathMappings: Record<string, string> = {
-                      'jaw-crusher': '/images/products/crushers/jaw-crusher.jpg',
-                      'cone-crusher': '/images/products/crushers/cone-crusher.jpg',
-                      'impact-crusher': '/images/products/crushers/impact-crusher.jpg',
-                      'hammer-crusher': '/images/products/crushers/hammer-crusher.jpg',
-                      'double-roller-crusher': '/images/products/crushers/double-roller-crusher.jpg',
-                      'heavy-duty-double-roller-crusher': '/images/products/crushers/heavy-duty-double-roller-crusher.jpg',
-                      'plate-feeder': '/images/products/feeders/plate-feeder.jpg',
-                      'belt-feeder': '/images/products/feeders/belt-feeder.jpg',
-                      'electromagnetic-vibrating-feeder': '/images/products/feeders/electromagnetic-vibrating-feeder.jpg',
-                      'disc-feeder': '/images/products/feeders/disc-feeder.jpg',
-                      'xdg-vibrating-feeder': '/images/products/feeders/xdg-vibrating-feeder.jpg',
-                      'spiral-washer': '/images/products/washers/spiral-washer.jpg',
-                      'double-spiral-washer': '/images/products/washers/double-spiral-washer.jpg',
-                      'drum-washer': '/images/products/washers/drum-washer.jpg'
+                      'jaw-crusher': '/images/products/crushers/jaw-crusher.png',
+                      'cone-crusher': '/images/products/crushers/cone-crusher.png',
+                      'impact-crusher': '/images/products/crushers/impact-crusher.png',
+                      'hammer-crusher': '/images/products/crushers/hammer-crusher.png',
+                      'double-roller-crusher': '/images/products/crushers/double-roller-crusher.png',
+                      'heavy-duty-double-roller-crusher': '/images/products/crushers/heavy-duty-double-roller-crusher.png',
+                      'plate-feeder': '/images/products/feeders/plate-feeder.png',
+                      'belt-feeder': '/images/products/feeders/belt-feeder.png',
+                      'electromagnetic-vibrating-feeder': '/images/products/feeders/electromagnetic-vibrating-feeder.png',
+                      'disc-feeder': '/images/products/feeders/disc-feeder.png',
+                      'xdg-vibrating-feeder': '/images/products/feeders/xdg-vibrating-feeder.png',
+                      'spiral-washer': '/images/products/washers/spiral-washer.png',
+                      'double-spiral-washer': '/images/products/washers/double-spiral-washer.png',
+                      'drum-washer': '/images/products/washers/drum-washer.png'
                     };
                     
                     // 优先使用映射表中的路径
@@ -1117,10 +1117,10 @@ export default function ProductDetailTemplate({
                       
                       // 如果folderPath为空，使用产品类型为图片名
                       if (folderPath) {
-                        imagePath = `/images/products/${folderPath}/${productSlug}.jpg`;
+                        imagePath = `/images/products/${folderPath}/${productSlug}.png`;
                       } else {
                         // 使用通用占位图
-                        imagePath = `/images/products/placeholder.jpg`;
+                        imagePath = `/images/products/placeholder.png`;
                       }
                     }
                   }

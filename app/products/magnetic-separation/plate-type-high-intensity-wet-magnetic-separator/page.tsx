@@ -136,7 +136,7 @@ export default function PlateTypeHighIntensityWetMagneticSeparatorPage() {
     productId: formattedData.productId,
     model: formattedData.model,
     series: formattedData.series,
-    imagePath: `/images/products/magnetic-separation/plate-type-high-intensity-wet-magnetic-separator.jpg`,
+    imagePath: `/images/products/magnetic-separation/plate-type-high-intensity-wet-magnetic-separator.png`,
     overview: formattedData.overview,
     // 按照磁选设备的参数优先级顺序添加参数
     capacity: latestParams.capacity,
@@ -181,7 +181,7 @@ export default function PlateTypeHighIntensityWetMagneticSeparatorPage() {
           zh: id.includes('magnetic') ? '磁选机' : '磁选设备',
           en: id.includes('magnetic') ? 'Magnetic Separator' : 'Magnetic Separation Equipment'
         },
-        image: `/images/products/magnetic-separation/${id}.jpg`
+        image: `/images/products/magnetic-separation/${id}.png`
       }));
       
       return {

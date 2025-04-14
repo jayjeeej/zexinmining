@@ -149,7 +149,7 @@ export default function WetGridBallMillPage() {
         en: id.includes('ball') ? 'Ball Mill' : 
             id === 'rod-mill' ? 'Rod Mill' : 'Mill'
       },
-      image: `/images/products/grinding/${id}.jpg`
+      image: `/images/products/grinding/${id}.png`
     }));
     
     return {
@@ -171,7 +171,7 @@ export default function WetGridBallMillPage() {
       en: product.nameEn || product.series?.en || "Wet Grid Ball Mill",
       zh: product.nameZh || product.series?.zh || "湿式格子型球磨机"
     },
-    imagePath: '/images/products/grinding/wet-grid-ball-mill.jpg',
+    imagePath: '/images/products/grinding/wet-grid-ball-mill.png',
     capacity: product.capacity,
     motorPower: product.motorPower,
     feedSize: product.feedSize,

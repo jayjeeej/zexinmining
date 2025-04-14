@@ -193,7 +193,7 @@ export default function ImpactCrusherPage() {
     productId: productData.id,
     model: productData.model,
     series: productData.series,
-    imagePath: '/images/products/crushers/impact-crusher.jpg',
+    imagePath: '/images/products/crushers/impact-crusher.png',
     overview: productData.overview,
     capacity: capacity,
     maxFeedSize: maxFeedSize,

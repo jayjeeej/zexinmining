@@ -232,7 +232,7 @@ export default function ZKRLinearVibratingScreenPage() {
     productId: productData.id,
     model: productData.model,
     series: productData.series,
-    imagePath: productData.imagePath || '/images/products/screens/zkr-linear-vibrating-screen.jpg',
+    imagePath: productData.imagePath || '/images/products/screens/zkr-linear-vibrating-screen.png',
     overview: productData.overview,
     capacity: capacity,
     motorPower: motorPower,

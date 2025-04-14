@@ -212,7 +212,7 @@ export default function XDGVibratingFeederPage() {
       zh: productData.nameZh || 'XDG振动给料机',
       en: productData.nameEn || 'XDG Vibrating Feeder'
     },
-    imagePath: '/images/products/feeders/xdg-vibrating-feeder.jpg',
+    imagePath: '/images/products/feeders/xdg-vibrating-feeder.png',
     overview: productData.overview || {
       zh: productData.descriptionZh || '',
       en: productData.descriptionEn || ''

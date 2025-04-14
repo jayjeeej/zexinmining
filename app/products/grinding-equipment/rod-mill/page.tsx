@@ -176,7 +176,7 @@ export default function RodMillPage() {
         zh: id.includes('ball') ? '球磨机' : '磨机',
         en: id.includes('ball') ? 'Ball Mill' : 'Mill'
       },
-      image: `/images/products/grinding/${id}.jpg`
+      image: `/images/products/grinding/${id}.png`
     }));
     
     return {
@@ -198,7 +198,7 @@ export default function RodMillPage() {
       en: product.nameEn || product.series?.en || "Rod Mill",
       zh: product.nameZh || product.series?.zh || "棒磨机"
     },
-    imagePath: '/images/products/grinding/rod-mill.jpg',
+    imagePath: '/images/products/grinding/rod-mill.png',
     capacity: product.capacity,
     motorPower: product.motorPower,
     feedSize: product.feedSize,

@@ -90,7 +90,7 @@ export default function StationaryCrushersPage() {
     }
     
     // 统一图片路径格式
-    const imagePath = `/images/products/crushers/${id}.jpg`;
+    const imagePath = `/images/products/crushers/${id}.png`;
     
     return {
       id: id,

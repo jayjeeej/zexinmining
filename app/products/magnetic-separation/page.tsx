@@ -91,7 +91,7 @@ export default function MagneticSeparationPage() {
               magneticIntensity: formatCapacity(product.magneticIntensity),
               magneticFieldStrength: formatCapacity(product.magneticFieldStrength),
               motorPower: formatCapacity(product.motorPower),
-              image: product.image || `/images/products/magnetic-separation/${product.id}.jpg`,
+              image: product.image || `/images/products/magnetic-separation/${product.id}.png`,
               isMagneticSeparationProduct: true
             })));
           } else {

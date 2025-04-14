@@ -305,7 +305,7 @@ export default function DoubleSpiralClassifierPage() {
       zh: productData.nameZh || '沉没式螺旋分级机',
       en: productData.nameEn || 'Submerged Spiral Classifier'
     },
-    imagePath: '/images/products/classification-equipment/double-spiral-classifier.jpg',
+    imagePath: '/images/products/classification-equipment/double-spiral-classifier.png',
     overview: productData.overview,
     // 分级机特有参数
     sandReturnCapacity: productData.sandReturnCapacity,

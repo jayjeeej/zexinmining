@@ -332,7 +332,7 @@ export default function SpiralWasherPage() {
       zh: productData.nameZh || '单螺旋洗矿机',
       en: productData.nameEn || 'Spiral Washer'
     },
-    imagePath: '/images/products/washers/spiral-washer.jpg',
+    imagePath: '/images/products/washers/spiral-washer.png',
     overview: productData.overview,
     capacity: capacity,
     motorPower: motorPower,

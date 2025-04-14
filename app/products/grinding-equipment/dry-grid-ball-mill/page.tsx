@@ -143,7 +143,7 @@ export default function DryGridBallMillPage() {
         en: id.includes('ball') ? 'Ball Mill' : 
             id === 'rod-mill' ? 'Rod Mill' : 'Mill'
       },
-      image: `/images/products/grinding/${id}.jpg`
+      image: `/images/products/grinding/${id}.png`
     }));
     
     return {
@@ -165,7 +165,7 @@ export default function DryGridBallMillPage() {
       en: product.nameEn || product.series?.en || "Dry Grid Ball Mill",
       zh: product.nameZh || product.series?.zh || "干式格子型球磨机"
     },
-    imagePath: '/images/products/grinding/dry-grid-ball-mill.jpg',
+    imagePath: '/images/products/grinding/dry-grid-ball-mill.png',
     capacity: product.capacity,
     motorPower: product.motorPower,
     feedSize: product.feedSize,

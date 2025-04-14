@@ -209,7 +209,7 @@ export default function ElectromagneticVibratingFeederPage() {
       zh: productData.nameZh || '电磁振动给料机',
       en: productData.nameEn || 'Electromagnetic Vibrating Feeder'
     },
-    imagePath: '/images/products/feeders/electromagnetic-vibrating-feeder.jpg',
+    imagePath: '/images/products/feeders/electromagnetic-vibrating-feeder.png',
     overview: productData.overview || {
       zh: productData.descriptionZh || '',
       en: productData.descriptionEn || ''

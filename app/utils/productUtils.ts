@@ -135,26 +135,26 @@ export function getRelatedProducts(productData: any, currentProductId: string, p
       
       // 特定产品类型的图片路径映射
       const pathMappings: Record<string, string> = {
-        'jaw-crusher': '/images/products/crushers/jaw-crusher.jpg',
-        'cone-crusher': '/images/products/crushers/cone-crusher.jpg',
-        'impact-crusher': '/images/products/crushers/impact-crusher.jpg',
-        'hammer-crusher': '/images/products/crushers/hammer-crusher.jpg',
-        'double-roller-crusher': '/images/products/crushers/double-roller-crusher.jpg',
-        'heavy-duty-double-roller-crusher': '/images/products/crushers/heavy-duty-double-roller-crusher.jpg',
-        'plate-feeder': '/images/products/feeders/plate-feeder.jpg',
-        'belt-feeder': '/images/products/feeders/belt-feeder.jpg',
-        'electromagnetic-vibrating-feeder': '/images/products/feeders/electromagnetic-vibrating-feeder.jpg',
-        'disc-feeder': '/images/products/feeders/disc-feeder.jpg',
-        'xdg-vibrating-feeder': '/images/products/feeders/xdg-vibrating-feeder.jpg',
-        'spiral-washer': '/images/products/washers/spiral-washer.jpg',
-        'double-spiral-washer': '/images/products/washers/double-spiral-washer.jpg',
-        'drum-washer': '/images/products/washers/drum-washer.jpg',
-        'aeration-flotation-machine': '/images/products/flotation/aeration-flotation-machine.jpg',
-        'bar-flotation-machine': '/images/products/flotation/bar-flotation-machine.jpg',
-        'coarse-particle-flotation-machine': '/images/products/flotation/coarse-particle-flotation-machine.jpg',
-        'flotation-cell': '/images/products/flotation/flotation-cell.jpg',
-        'self-priming-flotation-machine': '/images/products/flotation/self-priming-flotation-machine.jpg',
-        'xcf-flotation-machine': '/images/products/flotation/xcf-flotation-machine.jpg'
+        'jaw-crusher': '/images/products/crushers/jaw-crusher.png',
+        'cone-crusher': '/images/products/crushers/cone-crusher.png',
+        'impact-crusher': '/images/products/crushers/impact-crusher.png',
+        'hammer-crusher': '/images/products/crushers/hammer-crusher.png',
+        'double-roller-crusher': '/images/products/crushers/double-roller-crusher.png',
+        'heavy-duty-double-roller-crusher': '/images/products/crushers/heavy-duty-double-roller-crusher.png',
+        'plate-feeder': '/images/products/feeders/plate-feeder.png',
+        'belt-feeder': '/images/products/feeders/belt-feeder.png',
+        'electromagnetic-vibrating-feeder': '/images/products/feeders/electromagnetic-vibrating-feeder.png',
+        'disc-feeder': '/images/products/feeders/disc-feeder.png',
+        'xdg-vibrating-feeder': '/images/products/feeders/xdg-vibrating-feeder.png',
+        'spiral-washer': '/images/products/washers/spiral-washer.png',
+        'double-spiral-washer': '/images/products/washers/double-spiral-washer.png',
+        'drum-washer': '/images/products/washers/drum-washer.png',
+        'aeration-flotation-machine': '/images/products/flotation/aeration-flotation-machine.png',
+        'bar-flotation-machine': '/images/products/flotation/bar-flotation-machine.png',
+        'coarse-particle-flotation-machine': '/images/products/flotation/coarse-particle-flotation-machine.png',
+        'flotation-cell': '/images/products/flotation/flotation-cell.png',
+        'self-priming-flotation-machine': '/images/products/flotation/self-priming-flotation-machine.png',
+        'xcf-flotation-machine': '/images/products/flotation/xcf-flotation-machine.png'
       };
       
       // 优先使用映射表中的路径
@@ -183,19 +183,19 @@ export function getRelatedProducts(productData: any, currentProductId: string, p
           return {
             id,
             series: name,
-            image: '/images/products/washers/spiral-washer.jpg'
+            image: '/images/products/washers/spiral-washer.png'
           };
         } else if (id === 'double-spiral-washer') {
           return {
             id,
             series: name,
-            image: '/images/products/washers/double-spiral-washer.jpg'
+            image: '/images/products/washers/double-spiral-washer.png'
           };
         } else if (id === 'drum-washer') {
           return {
             id,
             series: name,
-            image: '/images/products/washers/drum-washer.jpg'
+            image: '/images/products/washers/drum-washer.png'
           };
         }
         imageFolderPath = 'washing-equipment';
@@ -213,7 +213,7 @@ export function getRelatedProducts(productData: any, currentProductId: string, p
       return {
         id,
         series: name,
-        image: `/images/products/${imageFolderPath}/${id}.jpg`
+        image: `/images/products/${imageFolderPath}/${id}.png`
       };
     });
     
@@ -754,36 +754,36 @@ export function getFormattedProductData(product: any, productId: string, product
 function getProductImagePath(productId: string): string {
   // 特定产品的路径映射
   const pathMappings: Record<string, string> = {
-    'jaw-crusher': 'crushers/jaw-crusher.jpg',
-    'cone-crusher': 'crushers/cone-crusher.jpg',
-    'impact-crusher': 'crushers/impact-crusher.jpg',
-    'hammer-crusher': 'crushers/hammer-crusher.jpg',
-    'double-roller-crusher': 'crushers/double-roller-crusher.jpg',
-    'heavy-duty-double-roller-crusher': 'crushers/heavy-duty-double-roller-crusher.jpg',
-    'plate-feeder': 'feeders/plate-feeder.jpg',
-    'belt-feeder': 'feeders/belt-feeder.jpg',
-    'electromagnetic-vibrating-feeder': 'feeders/electromagnetic-vibrating-feeder.jpg',
-    'disc-feeder': 'feeders/disc-feeder.jpg',
-    'xdg-vibrating-feeder': 'feeders/xdg-vibrating-feeder.jpg',
-    'spiral-washer': 'washers/spiral-washer.jpg',
-    'double-spiral-washer': 'washers/double-spiral-washer.jpg',
-    'drum-washer': 'washers/drum-washer.jpg',
-    'synchronous-counter-directional-jig': 'gravity-separation/synchronous-counter-directional-jig.jpg',
-    'synchronous-counter-directional-jig-small': 'gravity-separation/synchronous-counter-directional-jig-small.jpg',
-    'sawtooth-wave-jig': 'gravity-separation/sawtooth-wave-jig.jpg',
-    'aeration-flotation-machine': 'flotation/aeration-flotation-machine.jpg',
-    'bar-flotation-machine': 'flotation/bar-flotation-machine.jpg',
-    'coarse-particle-flotation-machine': 'flotation/coarse-particle-flotation-machine.jpg',
-    'flotation-cell': 'flotation/flotation-cell.jpg',
-    'self-priming-flotation-machine': 'flotation/self-priming-flotation-machine.jpg',
-    'xcf-flotation-machine': 'flotation/xcf-flotation-machine.jpg',
+    'jaw-crusher': 'crushers/jaw-crusher.png',
+    'cone-crusher': 'crushers/cone-crusher.png',
+    'impact-crusher': 'crushers/impact-crusher.png',
+    'hammer-crusher': 'crushers/hammer-crusher.png',
+    'double-roller-crusher': 'crushers/double-roller-crusher.png',
+    'heavy-duty-double-roller-crusher': 'crushers/heavy-duty-double-roller-crusher.png',
+    'plate-feeder': 'feeders/plate-feeder.png',
+    'belt-feeder': 'feeders/belt-feeder.png',
+    'electromagnetic-vibrating-feeder': 'feeders/electromagnetic-vibrating-feeder.png',
+    'disc-feeder': 'feeders/disc-feeder.png',
+    'xdg-vibrating-feeder': 'feeders/xdg-vibrating-feeder.png',
+    'spiral-washer': 'washers/spiral-washer.png',
+    'double-spiral-washer': 'washers/double-spiral-washer.png',
+    'drum-washer': 'washers/drum-washer.png',
+    'synchronous-counter-directional-jig': 'gravity-separation/synchronous-counter-directional-jig.png',
+    'synchronous-counter-directional-jig-small': 'gravity-separation/synchronous-counter-directional-jig-small.png',
+    'sawtooth-wave-jig': 'gravity-separation/sawtooth-wave-jig.png',
+    'aeration-flotation-machine': 'flotation/aeration-flotation-machine.png',
+    'bar-flotation-machine': 'flotation/bar-flotation-machine.png',
+    'coarse-particle-flotation-machine': 'flotation/coarse-particle-flotation-machine.png',
+    'flotation-cell': 'flotation/flotation-cell.png',
+    'self-priming-flotation-machine': 'flotation/self-priming-flotation-machine.png',
+    'xcf-flotation-machine': 'flotation/xcf-flotation-machine.png',
     // 磁选设备产品映射
-    'permanent-magnetic-drum-separator': 'magnetic-separation/permanent-magnetic-drum-separator.jpg',
-    'double-roller-permanent-magnetic-zircon-separator': 'magnetic-separation/double-roller-permanent-magnetic-zircon-separator.jpg',
-    'four-roller-variable-frequency-electrostatic-separator': 'magnetic-separation/four-roller-variable-frequency-electrostatic-separator.jpg',
-    'plate-type-high-intensity-wet-magnetic-separator': 'magnetic-separation/plate-type-high-intensity-wet-magnetic-separator.jpg',
-    'roller-type-high-intensity-wet-magnetic-separator': 'magnetic-separation/roller-type-high-intensity-wet-magnetic-separator.jpg',
-    'three-disc-belt-magnetic-separator': 'magnetic-separation/three-disc-belt-magnetic-separator.jpg'
+    'permanent-magnetic-drum-separator': 'magnetic-separation/permanent-magnetic-drum-separator.png',
+    'double-roller-permanent-magnetic-zircon-separator': 'magnetic-separation/double-roller-permanent-magnetic-zircon-separator.png',
+    'four-roller-variable-frequency-electrostatic-separator': 'magnetic-separation/four-roller-variable-frequency-electrostatic-separator.png',
+    'plate-type-high-intensity-wet-magnetic-separator': 'magnetic-separation/plate-type-high-intensity-wet-magnetic-separator.png',
+    'roller-type-high-intensity-wet-magnetic-separator': 'magnetic-separation/roller-type-high-intensity-wet-magnetic-separator.png',
+    'three-disc-belt-magnetic-separator': 'magnetic-separation/three-disc-belt-magnetic-separator.png'
   };
   
   // 检查特定映射
@@ -794,51 +794,51 @@ function getProductImagePath(productId: string): string {
   // 通用路径生成逻辑
   if (productId.includes('crusher') || 
       (productNameMap[productId]?.zh.includes('破碎机') || productNameMap[productId]?.en.includes('Crusher'))) {
-    return `crushers/${productId}.jpg`;
+    return `crushers/${productId}.png`;
   }
   
   if (productId.includes('screen') || 
       (productNameMap[productId]?.zh.includes('筛') || productNameMap[productId]?.en.includes('Screen'))) {
-    return `screens/${productId}.jpg`;
+    return `screens/${productId}.png`;
   }
   
   if (productId.includes('feeder') || 
       (productNameMap[productId]?.zh.includes('给料') || productNameMap[productId]?.en.includes('Feeder'))) {
-    return `feeders/${productId}.jpg`;
+    return `feeders/${productId}.png`;
   }
   
   if (productId.includes('washer') || 
       (productNameMap[productId]?.zh.includes('洗矿') || productNameMap[productId]?.en.includes('Washer'))) {
-    return `washers/${productId}.jpg`;
+    return `washers/${productId}.png`;
   }
   
   if (productId.includes('mill') || 
       (productNameMap[productId]?.zh.includes('磨') || productNameMap[productId]?.en.includes('Mill'))) {
-    return `grinding/${productId}.jpg`;
+    return `grinding/${productId}.png`;
   }
   
   if (productId.includes('classifier') || 
       (productNameMap[productId]?.zh.includes('分级') || productNameMap[productId]?.en.includes('Classifier'))) {
-    return `classification-equipment/${productId}.jpg`;
+    return `classification-equipment/${productId}.png`;
   }
   
   if (productId.includes('jig') || 
       (productNameMap[productId]?.zh.includes('跳汰') || productNameMap[productId]?.en.includes('Jig'))) {
-    return `gravity-separation/${productId}.jpg`;
+    return `gravity-separation/${productId}.png`;
   }
   
   if (productId.includes('flotation') || 
       (productNameMap[productId]?.zh.includes('浮选') || productNameMap[productId]?.en.includes('Flotation'))) {
-    return `flotation/${productId}.jpg`;
+    return `flotation/${productId}.png`;
   }
   
   if (productId.includes('magnetic') || 
       (productNameMap[productId]?.zh.includes('磁选') || productNameMap[productId]?.en.includes('Magnetic'))) {
-    return `magnetic-separation/${productId}.jpg`;
+    return `magnetic-separation/${productId}.png`;
   }
   
   // 默认返回
-  return `${productId}.jpg`;
+  return `${productId}.png`;
 }
 
 // 获取产品类别名称

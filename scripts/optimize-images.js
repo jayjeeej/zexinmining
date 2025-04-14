@@ -56,11 +56,20 @@ async function optimizeImage(imagePath) {
     sharpInstance = sharpInstance.resize(config.maxWidth);
   }
   
-  // 优化原始格式
+  // 根据图像格式选择不同的处理方式
   const outputPath = path.join(dir, `${filename}${ext}`);
-  await sharpInstance
-    .jpeg({ quality: config.quality, mozjpeg: true })
-    .toFile(outputPath + '.tmp');
+  
+  if (ext === '.png') {
+    // 对PNG文件特殊处理，保留透明度
+    await sharpInstance
+      .png({ quality: config.quality, compressionLevel: 9, palette: true })
+      .toFile(outputPath + '.tmp');
+  } else {
+    // 优化JPEG图片
+    await sharpInstance
+      .jpeg({ quality: config.quality, mozjpeg: true })
+      .toFile(outputPath + '.tmp');
+  }
   
   // 覆盖原始文件
   fs.renameSync(outputPath + '.tmp', outputPath);
@@ -69,7 +78,7 @@ async function optimizeImage(imagePath) {
   if (config.webp) {
     const webpPath = path.join(dir, `${filename}.webp`);
     await sharpInstance
-      .webp({ quality: config.quality })
+      .webp({ quality: config.quality, alphaQuality: 100 }) // 提高透明通道质量
       .toFile(webpPath);
   }
   

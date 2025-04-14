@@ -252,7 +252,7 @@ export default function SynchronousCounterDirectionalJigPage() {
           zh: id.includes('jig') ? '跳汰机' : '重力选矿设备',
           en: id.includes('jig') ? 'Jig' : 'Gravity Separation Equipment'
         },
-        image: `/images/products/gravity-separation/${id}.jpg`
+        image: `/images/products/gravity-separation/${id}.png`
       }));
       
       return {
@@ -303,7 +303,7 @@ export default function SynchronousCounterDirectionalJigPage() {
       productId={productData.id}
       model={productData.model}
       series={productData.series}
-      imagePath={productData.image || '/images/products/gravity-separation/synchronous-counter-directional-jig.jpg'}
+      imagePath={productData.image || '/images/products/gravity-separation/synchronous-counter-directional-jig.png'}
       overview={productData.overview}
       capacity={capacity}
       maxFeedSize={maxFeedSize}

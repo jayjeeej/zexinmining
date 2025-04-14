@@ -7,7 +7,7 @@
     "zh": "充气式浮选机",
     "en": "Aeration Flotation Machine"
   },
-  "image": "/images/products/flotation/aeration-flotation-machine.jpg",
+  "image": "/images/products/flotation/aeration-flotation-machine.png",
   "effectiveVolume": {
     "zh": "2.2-38 m³",
     "en": "2.2-38 m³"
@@ -169,7 +169,7 @@
     "self-priming-flotation-machine",
     "flotation-cell",
     "xcf-flotation-machine",
-    "rod-type-flotation-machine",
+    "bar-flotation-machine",
     "coarse-particle-flotation-machine"
   ]
 } 

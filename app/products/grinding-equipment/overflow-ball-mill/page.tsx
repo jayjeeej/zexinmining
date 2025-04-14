@@ -159,7 +159,7 @@ export default function OverflowBallMillPage() {
         en: id.includes('ball') ? 'Ball Mill' : 
             id === 'rod-mill' ? 'Rod Mill' : 'Mill'
       },
-      image: `/images/products/grinding/${id}.jpg`
+      image: `/images/products/grinding/${id}.png`
     }));
     
     return {
@@ -206,7 +206,7 @@ export default function OverflowBallMillPage() {
     productId: productData.id,
     model: productData.model,
     series: productData.series,
-    imagePath: '/images/products/grinding/overflow-ball-mill.jpg',
+    imagePath: '/images/products/grinding/overflow-ball-mill.png',
     overview: productData.overview,
     capacity: capacity,
     motorPower: motorPower,

@@ -34,7 +34,7 @@ export default function MagneticSeparatorClient({
       <ProductStructuredData
         name={isZh ? nameZh : nameEn}
         description={isZh ? descriptionZh : descriptionEn}
-        image="/images/products/magnetic-separation/magnetic-separator.jpg"
+        image="/images/products/magnetic-separation/magnetic-separator.png"
         category={isZh ? "磁选设备" : "Magnetic Separation Equipment"}
         url="/products/magnetic-separator"
       />

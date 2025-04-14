@@ -305,7 +305,7 @@ export default function HighWeirSpiralClassifierPage() {
       zh: productData.nameZh || '高堰式单螺旋分级机',
       en: productData.nameEn || 'High Weir Spiral Classifier'
     },
-    imagePath: '/images/products/classification-equipment/high-weir-spiral-classifier.jpg',
+    imagePath: '/images/products/classification-equipment/high-weir-spiral-classifier.png',
     overview: productData.overview,
     // 分级机特有参数
     sandReturnCapacity: productData.sandReturnCapacity,

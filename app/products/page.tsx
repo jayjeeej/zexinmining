@@ -16,7 +16,7 @@ export default function ProductsPage() {
       nameEn: "Stationary crushers",
       descriptionZh: "高效率的矿石破碎设备，包括颚式破碎机、圆锥破碎机等，适用于各种硬度矿石。",
       descriptionEn: "High-efficiency ore crushing equipment, including jaw crushers, cone crushers, suitable for various hardness ores.",
-      image: "/images/products/stationary-crushers.jpg"
+      image: "/images/products/stationary-crushers.png"
     },
     {
       id: "vibrating-screens",
@@ -24,7 +24,7 @@ export default function ProductsPage() {
       nameEn: "Stationary vibrating screens",
       descriptionZh: "高精度筛分设备，用于矿石的分级和分选，确保后续加工的粒度要求。",
       descriptionEn: "High-precision screening equipment for ore classification and sorting, ensuring particle size requirements for subsequent processing.",
-      image: "/images/products/vibrating-screens.jpg"
+      image: "/images/products/vibrating-screens.png"
     },
     {
       id: "washing-equipment",
@@ -32,7 +32,7 @@ export default function ProductsPage() {
       nameEn: "Ore washing equipment",
       descriptionZh: "用于去除矿石表面粘附的泥质和杂质，提高后续选矿工艺的效率。",
       descriptionEn: "Used to remove clay and impurities adhering to the surface of ore to improve the efficiency of subsequent beneficiation processes.",
-      image: "/images/products/washing-equipment.jpg"
+      image: "/images/products/washing-equipment.png"
     },
     {
       id: "feeding-equipment",
@@ -40,7 +40,7 @@ export default function ProductsPage() {
       nameEn: "Feeding equipment",
       descriptionZh: "均匀稳定地向生产线输送物料，包括振动给料机、板式给料机等。",
       descriptionEn: "Evenly and steadily feed materials to the production line, including vibrating feeders, plate feeders, etc.",
-      image: "/images/products/feeding-equipment.jpg"
+      image: "/images/products/feeding-equipment.png"
     },
     {
       id: "grinding-equipment",
@@ -48,7 +48,7 @@ export default function ProductsPage() {
       nameEn: "Grinding equipment",
       descriptionZh: "用于物料细磨和超细磨的设备，包括球磨机、棒磨机等，提高后续选矿回收率。",
       descriptionEn: "Equipment for fine and ultra-fine grinding of materials, including ball mills and rod mills, improving subsequent beneficiation recovery rate.",
-      image: "/images/products/grinding-equipment.jpg"
+      image: "/images/products/grinding-equipment.png"
     },
     {
       id: "classification-equipment",
@@ -56,7 +56,7 @@ export default function ProductsPage() {
       nameEn: "Classification equipment",
       descriptionZh: "用于矿石颗粒分级处理的设备，提高选矿效率和精度，包括旋流器和分级机。",
       descriptionEn: "Equipment for ore particle classification, improving beneficiation efficiency and precision, including hydrocyclones and classifiers.",
-      image: "/images/products/classification-equipment.jpg"
+      image: "/images/products/classification-equipment.png"
     },
     {
       id: "tailings",
@@ -64,7 +64,7 @@ export default function ProductsPage() {
       nameEn: "Tailings Management",
       descriptionZh: "尾矿浓缩、过滤、干排及尾矿库建设等设备与技术。",
       descriptionEn: "Tailings thickening, filtration, dry stacking and tailings dam construction equipment and technology.",
-      image: "/images/products/tailings.jpg"
+      image: "/images/products/tailings.png"
     }
   ];
   
@@ -189,7 +189,7 @@ export default function ProductsPage() {
           >
             <div className="relative h-56 w-full overflow-hidden">
               <Image
-                src="/images/products/gravity-separation.jpg"
+                src="/images/products/gravity-separation.png"
                 alt={isZh ? "重选设备" : "Gravity Separation Equipment"}
                 fill
                 style={{ objectFit: "cover" }}
@@ -231,7 +231,7 @@ export default function ProductsPage() {
           >
             <div className="relative h-56 w-full overflow-hidden">
               <Image
-                src="/images/products/flotation.jpg"
+                src="/images/products/flotation.png"
                 alt={isZh ? "浮选设备" : "Flotation Equipment"}
                 fill
                 style={{ objectFit: "cover" }}
@@ -273,7 +273,7 @@ export default function ProductsPage() {
           >
             <div className="relative h-56 w-full overflow-hidden">
               <Image
-                src="/images/products/magnetic-separation.jpg"
+                src="/images/products/magnetic-separation.png"
                 alt={isZh ? "磁选设备" : "Magnetic Separation Equipment"}
                 fill
                 style={{ objectFit: "cover" }}

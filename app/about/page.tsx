@@ -14,7 +14,7 @@ export default function About() {
     {
       name: isZh ? "王勇军" : "Wang Yongjun",
       position: isZh ? "创始人" : "Founder",
-      image: "/images/team/team-1.jpg",
+      image: "/images/team/team-1.png",
       description: isZh
         ? "拥有30年矿山设备行业经验，成功投资过多个大型矿山项目，对矿山开发和设备应用有深刻理解"
         : "30 years of experience in mining equipment industry, successfully invested in multiple large-scale mining projects with deep understanding of mine development and equipment applications"
@@ -22,7 +22,7 @@ export default function About() {
     {
       name: isZh ? "王超" : "Eddie Wang",
       position: isZh ? "CEO" : "CEO",
-      image: "/images/team/team-2.jpg",
+      image: "/images/team/team-2.png",
       description: isZh
         ? "拥有20年矿山设备行业经验，主导了公司多项核心技术的研发"
         : "20 years of experience in the mining equipment industry, led the development of many core technologies"
@@ -30,7 +30,7 @@ export default function About() {
     {
       name: isZh ? "吴宇涛" : "Cassian Wu",
       position: isZh ? "国际业务总监" : "International Business Director",
-      image: "/images/team/team-3.jpg",
+      image: "/images/team/team-3.png",
       description: isZh
         ? "拥有丰富的国际贸易经验，负责公司全球市场拓展和客户关系管理"
         : "Rich experience in international trade, responsible for global market expansion and customer relationship management"
@@ -38,7 +38,7 @@ export default function About() {
     {
       name: isZh ? "王振国" : "Wang Zhenguo",
       position: isZh ? "技术总监" : "Technical Director",
-      image: "/images/team/team-4.jpg",
+      image: "/images/team/team-4.png",
       description: isZh
         ? "精通精益生产管理，带领团队不断提升产品质量和生产效率"
         : "Expert in lean production management, leading the team to continuously improve product quality and production efficiency"

@@ -211,7 +211,7 @@ export default function BananaVibratingScreenPage() {
     productId: productData.id,
     model: productData.model,
     series: productData.series,
-    imagePath: productData.imagePath || '/images/products/screens/banana-vibrating-screen.jpg',
+    imagePath: productData.imagePath || '/images/products/screens/banana-vibrating-screen.png',
     overview: productData.overview,
     capacity: capacity,
     motorPower: motorPower,

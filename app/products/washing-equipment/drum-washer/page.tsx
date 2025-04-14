@@ -338,7 +338,7 @@ export default function DrumWasherPage() {
       zh: productData.nameZh || '滚筒洗矿机',
       en: productData.nameEn || 'Drum Washer'
     },
-    imagePath: '/images/products/washers/drum-washer.jpg',
+    imagePath: '/images/products/washers/drum-washer.png',
     overview: productData.overview,
     capacity: capacity,
     motorPower: motorPower,

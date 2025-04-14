@@ -236,7 +236,7 @@ export default function BeltFeederPage() {
       zh: productData.nameZh || '皮带给料机',
       en: productData.nameEn || 'Belt Feeder'
     },
-    imagePath: '/images/products/feeders/belt-feeder.jpg',
+    imagePath: '/images/products/feeders/belt-feeder.png',
     overview: productData.overview || {
       zh: productData.descriptionZh || '',
       en: productData.descriptionEn || ''

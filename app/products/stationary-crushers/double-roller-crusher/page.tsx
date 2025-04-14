@@ -315,7 +315,7 @@ export default function DoubleRollerCrusherPage() {
     productId: productData.id,
     model: productData.model,
     series: productData.series,
-    imagePath: '/images/products/crushers/double-roller-crusher.jpg',
+    imagePath: '/images/products/crushers/double-roller-crusher.png',
     overview: productData.overview,
     capacity: capacity,
     maxFeedSize: maxFeedSize,

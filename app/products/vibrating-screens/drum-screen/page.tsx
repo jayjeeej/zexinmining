@@ -259,7 +259,7 @@ export default function DrumScreenPage() {
     productId: productData.id,
     model: productData.model,
     series: productData.series,
-    imagePath: productData.imagePath || '/images/products/screens/drum-screen.jpg',
+    imagePath: productData.imagePath || '/images/products/screens/drum-screen.png',
     overview: productData.overview,
     capacity: capacity,
     motorPower: motorPower,

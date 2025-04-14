@@ -166,7 +166,7 @@ export default function CoarseParticleFlotationMachinePage() {
         .map((id: string) => ({
           id,
           series: productNameMap[id],
-          image: `/images/products/flotation/${id}.jpg`
+          image: `/images/products/flotation/${id}.png`
         }));
       
       return {
@@ -217,7 +217,7 @@ export default function CoarseParticleFlotationMachinePage() {
       productId={productData.id}
       model={productData.model}
       series={productData.series}
-      imagePath={productData.image || `/images/products/flotation/${productData.id}.jpg`}
+      imagePath={productData.image || `/images/products/flotation/${productData.id}.png`}
       overview={productData.overview}
       effectiveVolume={effectiveVolume}
       capacity={capacity}

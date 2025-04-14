@@ -172,7 +172,7 @@ export default function JawCrusherPage() {
     productId: productData.id,
     model: productData.model,
     series: productData.series,
-    imagePath: '/images/products/crushers/jaw-crusher.jpg',
+    imagePath: '/images/products/crushers/jaw-crusher.png',
     overview: productData.overview,
     capacity: capacity,
     maxFeedSize: maxFeedSize,

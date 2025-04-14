@@ -23,8 +23,8 @@ export default function FloationColumn() {
       en: 'Flotation Column'
     },
     modelPrefix: 'BF',
-    coverImage: '/images/products/flotation/flotation-column/cover.jpg',
-    heroImage: '/images/products/flotation/flotation-column/hero.jpg',
+    coverImage: '/images/products/flotation/flotation-column/cover.png',
+    heroImage: '/images/products/flotation/flotation-column/hero.png',
     category: 'flotation',
     effectiveVolume: {
       min: 3,

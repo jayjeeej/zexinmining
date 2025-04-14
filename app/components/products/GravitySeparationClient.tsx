@@ -131,7 +131,7 @@ export default function GravitySeparationClient({
       <ProductStructuredData
         name={isZh ? titleZh : titleEn}
         description={isZh ? descriptionZh : descriptionEn}
-        image="/images/products/gravity-separation/category-overview.jpg"
+        image="/images/products/gravity-separation/category-overview.png"
         category={isZh ? "重选设备" : "Gravity Separation Equipment"}
         url="/products/gravity-separation"
       />

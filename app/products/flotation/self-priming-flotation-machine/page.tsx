@@ -167,7 +167,7 @@ export default function SelfPrimingFlotationMachinePage() {
           zh: '浮选设备',
           en: 'Flotation Equipment'
         },
-        image: `/images/products/flotation/${id}.jpg`
+        image: `/images/products/flotation/${id}.png`
       }));
       
       return {
@@ -218,7 +218,7 @@ export default function SelfPrimingFlotationMachinePage() {
       productId={productData.id}
       model={productData.model}
       series={productData.series}
-      imagePath={productData.image || `/images/products/flotation/${productData.id}.jpg`}
+      imagePath={productData.image || `/images/products/flotation/${productData.id}.png`}
       overview={productData.overview}
       effectiveVolume={effectiveVolume}
       capacity={capacity}

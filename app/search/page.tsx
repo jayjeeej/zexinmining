@@ -190,25 +190,25 @@ function SearchContent() {
                 // 确定正确的图片路径
                 let imagePath = '';
                 if (data.id.includes('crusher')) {
-                  imagePath = `/images/products/crushers/${data.id}.jpg`;
+                  imagePath = `/images/products/crushers/${data.id}.png`;
                 } else if (data.id === 'vibrating-screen' || data.id.includes('screen') || data.id.includes('vibrating-screen')) {
                   // 所有筛分设备图片都在 screens 目录下
                   const screenId = data.id === 'vibrating-screen' ? 'xd-vibrating-screen' : data.id;
-                  imagePath = `/images/products/screens/${screenId}.jpg`;
+                  imagePath = `/images/products/screens/${screenId}.png`;
                 } else if (data.id.includes('washer') || data.id.includes('washing')) {
-                  imagePath = `/images/products/washers/${data.id}.jpg`;
+                  imagePath = `/images/products/washers/${data.id}.png`;
                 } else if (data.id.includes('mill')) {
-                  imagePath = `/images/products/grinding/${data.id}.jpg`;
+                  imagePath = `/images/products/grinding/${data.id}.png`;
                 } else if (data.id.includes('feeder')) {
-                  imagePath = `/images/products/feeders/${data.id}.jpg`;
+                  imagePath = `/images/products/feeders/${data.id}.png`;
                 } else if (data.id.includes('classifier')) {
-                  imagePath = `/images/products/classification-equipment/${data.id}.jpg`;
+                  imagePath = `/images/products/classification-equipment/${data.id}.png`;
                 } else if (data.id.includes('jig')) {
-                  imagePath = `/images/products/gravity-separation/${data.id}.jpg`;
+                  imagePath = `/images/products/gravity-separation/${data.id}.png`;
                 } else if (data.subcategory) {
-                  imagePath = `/images/products/${data.subcategory}/${data.id}.jpg`;
+                  imagePath = `/images/products/${data.subcategory}/${data.id}.png`;
                 } else {
-                  imagePath = `/images/products/${data.id}.jpg`;
+                  imagePath = `/images/products/${data.id}.png`;
                 }
                 
                 // 调试信息

@@ -252,7 +252,7 @@ export default function SawtoothWaveJigPage() {
           zh: id.includes('jig') ? '跳汰机' : '重力选矿设备',
           en: id.includes('jig') ? 'Jig' : 'Gravity Separation Equipment'
         },
-        image: `/images/products/gravity-separation/${id}.jpg`
+        image: `/images/products/gravity-separation/${id}.png`
       }));
       
       return {
@@ -303,7 +303,7 @@ export default function SawtoothWaveJigPage() {
       productId={productData.id}
       model={productData.model}
       series={productData.series}
-      imagePath={productData.image || '/images/products/gravity-separation/sawtooth-wave-jig.jpg'}
+      imagePath={productData.image || '/images/products/gravity-separation/sawtooth-wave-jig.png'}
       overview={productData.overview}
       capacity={capacity}
       maxFeedSize={maxFeedSize}

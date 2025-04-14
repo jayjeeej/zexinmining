@@ -7,7 +7,7 @@
     "zh": "颚式破碎机",
     "en": "Jaw Crusher"
   },
-  "imagePath": "/images/products/crushers/jaw-crusher/main.jpg",
+  "imagePath": "/images/products/crushers/jaw-crusher/main.png",
   "capacity": {
     "min": 1,
     "max": 300,

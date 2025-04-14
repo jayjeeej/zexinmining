@@ -213,7 +213,7 @@ export default function DoubleRollerPermanentMagneticZirconSeparatorPage() {
           zh: id.includes('magnetic') ? '磁选机' : '磁选设备',
           en: id.includes('magnetic') ? 'Magnetic Separator' : 'Magnetic Separation Equipment'
         },
-        image: `/images/products/magnetic-separation/${id}.jpg`
+        image: `/images/products/magnetic-separation/${id}.png`
       }));
       
       return {

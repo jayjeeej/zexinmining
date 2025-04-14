@@ -260,7 +260,7 @@ export default function CarpetHookingMachinePage() {
           zh: '重力选矿设备',
           en: 'Gravity Separation Equipment'
         },
-        image: `/images/products/gravity-separation/${id}.jpg`
+        image: `/images/products/gravity-separation/${id}.png`
       }));
       
       return {

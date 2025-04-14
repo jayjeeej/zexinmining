@@ -121,11 +121,11 @@ export default function VibrationScreensPage() {
     }
     
     // 优先使用JSON中定义的imagePath，否则根据ID生成
-    let imagePath = product.imagePath || `/images/products/screens/${id}.jpg`;
+    let imagePath = product.imagePath || `/images/products/screens/${id}.png`;
     
-    // 修复文件名可能包含的double extension (.jpg.jpg)
-    if (imagePath.endsWith('.jpg.jpg')) {
-      imagePath = imagePath.replace('.jpg.jpg', '.jpg');
+    // 修复文件名可能包含的double extension (.png.png)
+    if (imagePath.endsWith('.jpg.png')) {
+      imagePath = imagePath.replace('.jpg.png', '.png');
     }
     
     return {

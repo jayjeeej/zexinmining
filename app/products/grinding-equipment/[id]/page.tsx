@@ -17,14 +17,9 @@ export default async function GrindingProductPage({ params }: { params: { id: st
   const { id } = params;
   
   try {
-    // 在服务器端获取产品数据
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || ''}/data/products/${id}.json`);
-    
-    if (!response.ok) {
-      notFound();
-    }
-    
-    const product = await response.json();
+    // 在服务器端获取产品数据 - 使用绝对路径或process.cwd()
+    const productData = await import(`@/public/data/products/${id}.json`);
+    const product = productData.default || productData;
     
     return <ProductClient product={product} id={id} />;
   } catch (error) {

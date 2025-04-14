@@ -209,7 +209,7 @@ export default function PlateFeederPage() {
       zh: productData.nameZh || '板式给料机',
       en: productData.nameEn || 'Plate Feeder'
     },
-    imagePath: '/images/products/feeders/plate-feeder.jpg',
+    imagePath: '/images/products/feeders/plate-feeder.png',
     overview: productData.overview || {
       zh: productData.descriptionZh || '',
       en: productData.descriptionEn || ''

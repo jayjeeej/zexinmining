@@ -224,7 +224,7 @@ export default function HeavyDutyDoubleRollerCrusherPage() {
           zh: id.includes('crusher') ? '破碎机' : '破碎设备',
           en: id.includes('crusher') ? 'Crusher' : 'Crushing Equipment'
         },
-        image: `/images/products/crushers/${id}.jpg`
+        image: `/images/products/crushers/${id}.png`
       }));
       
       return {
@@ -495,7 +495,7 @@ export default function HeavyDutyDoubleRollerCrusherPage() {
     productId: productData.id,
     model: productData.model,
     series: productData.series,
-    imagePath: '/images/products/crushers/heavy-duty-double-roller-crusher.jpg',
+    imagePath: '/images/products/crushers/heavy-duty-double-roller-crusher.png',
     overview: productData.overview,
     capacity: capacity,
     maxFeedSize: maxFeedSize,

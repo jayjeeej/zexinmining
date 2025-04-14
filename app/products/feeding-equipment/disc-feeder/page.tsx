@@ -212,7 +212,7 @@ export default function DiscFeederPage() {
       zh: productData.nameZh || '圆盘给料机',
       en: productData.nameEn || 'Disc Feeder'
     },
-    imagePath: '/images/products/feeders/disc-feeder.jpg',
+    imagePath: '/images/products/feeders/disc-feeder.png',
     overview: productData.overview || {
       zh: productData.descriptionZh || '粉粒物料连续定量供给设备，处理能力13.6-198.9 t/h。采用变频调速圆盘结构，确保物料精确计量输送。圆盘直径2000-3000mm，适用于化工、建材、食品等行业干燥粉状物料。',
       en: productData.descriptionEn || 'Continuous quantitative powder material feeding equipment with 13.6-198.9 t/h capacity. Features frequency-controlled adjustable disc structure for precise material metering. Disc diameter 2000-3000mm, suitable for dry powders in chemical, building materials, and food industries.'

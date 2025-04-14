@@ -336,7 +336,7 @@ export default function DoubleSpiralWasherPage() {
       zh: productData.nameZh || '双螺旋洗矿机',
       en: productData.nameEn || 'Double Spiral Washer'
     },
-    imagePath: '/images/products/washers/double-spiral-washer.jpg',
+    imagePath: '/images/products/washers/double-spiral-washer.png',
     overview: productData.overview,
     capacity: capacity,
     motorPower: motorPower,
