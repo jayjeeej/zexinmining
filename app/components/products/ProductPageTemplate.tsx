@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import ProductCard from '../ProductCard';
+import LoadingWrapper from '@/app/components/LoadingWrapper';
 
 interface ProductPageTemplateProps {
   params: {
@@ -26,15 +27,15 @@ export default function ProductPageTemplate({ params, productCategory }: Product
         // 设置产品类型标识
         const enhancedProduct = {
           ...productData,
-          isClassifierProduct: productCategory === 'classification',
-          isFlotationProduct: productCategory === 'flotation',
-          isWasherProduct: productCategory === 'washers',
-          isScreenProduct: productCategory === 'screens',
-          isCrusherProduct: productCategory === 'crushers',
-          isFeederProduct: productCategory === 'feeders',
-          isMillProduct: productCategory === 'grinding',
-          isGravitySeparationProduct: productCategory === 'gravity-separation'
-        };
+    isClassifierProduct: productCategory === 'classification',
+    isFlotationProduct: productCategory === 'flotation',
+    isWasherProduct: productCategory === 'washers',
+    isScreenProduct: productCategory === 'screens',
+    isCrusherProduct: productCategory === 'crushers',
+    isFeederProduct: productCategory === 'feeders',
+    isMillProduct: productCategory === 'grinding',
+    isGravitySeparationProduct: productCategory === 'gravity-separation'
+  };
         
         setProduct(enhancedProduct);
       } catch (error) {
@@ -47,15 +48,7 @@ export default function ProductPageTemplate({ params, productCategory }: Product
     loadProductData();
   }, [params.id, productCategory]);
 
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center min-h-[60vh]">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
-      </div>
-    );
-  }
-
-  if (!product) {
+  if (!product && !loading) {
     return (
       <div className="container mx-auto px-4 py-8 text-center">
         <p>未找到产品数据</p>
@@ -65,10 +58,17 @@ export default function ProductPageTemplate({ params, productCategory }: Product
 
   return (
     <div className="container mx-auto px-4 py-8">
+      <LoadingWrapper 
+        isLoading={loading}
+        fallback={<div className="min-h-[60vh]"></div>}
+      >
+        {product && (
       <ProductCard 
         product={product}
         showDetails={true}
       />
+        )}
+      </LoadingWrapper>
     </div>
   );
 } 

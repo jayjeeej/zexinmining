@@ -6,6 +6,8 @@ import Link from "next/link";
 import ProductCard from '@/app/components/products/ProductCard';
 import PageSection from '@/app/components/PageSection';
 import { useLanguage } from "@/app/contexts/LanguageContext";
+import ProductStructuredData from "@/app/components/ProductStructuredData";
+import LoadingWrapper from '@/app/components/LoadingWrapper';
 
 // 定义产品数据类型
 interface ProductData {
@@ -324,6 +326,17 @@ export default function FlotationPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      {/* 添加结构化数据 - 对页面布局没有视觉影响 */}
+      <ProductStructuredData
+        name={isZh ? "浮选设备" : "Flotation Equipment"}
+        description={isZh 
+          ? "基于矿物表面性质差异分选的设备，用于各类金属和非金属矿石的选别。" 
+          : "Equipment that separates minerals based on surface property differences for various metal and non-metal ores."}
+        image="/images/products/flotation-equipment.png"
+        category={isZh ? "浮选设备" : "Flotation Equipment"}
+        url="/products/flotation"
+      />
+      
       {/* 页面标题区域 */}
       <PageSection 
         noPadding 
@@ -367,42 +380,47 @@ export default function FlotationPage() {
       {/* 浮选设备产品展示 */}
       <PageSection variant="gray" className="flex-grow">
         <div className="max-w-7xl mx-auto h-full">
-          {loading ? (
-            <div className="flex justify-center items-center h-[600px]">
-              <div className="text-center">
-                <p className="text-gray-500">{isZh ? '加载产品数据...' : 'Loading products data...'}</p>
+          <LoadingWrapper 
+            isLoading={loading}
+            fallback={
+              <div className="flex justify-center items-center h-[600px]">
+                <div className="text-center">
+                  <p className="text-gray-500">{isZh ? '数据加载中...' : 'Loading data...'}</p>
+                </div>
               </div>
-            </div>
-          ) : products.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 min-h-[600px]">
-              {products.map((product) => (
-                <ProductCard 
-                  key={product.uniqueId || product.id} 
-                  product={product} 
-                  basePath={`/products/flotation`} 
-                />
-              ))}
-            </div>
-          ) : (
-            <div className="flex justify-center items-center h-[600px]">
-              <div className="text-center max-w-xl">
-                <h3 className="text-2xl font-bold text-gray-700 mb-4">
-                  {isZh ? '产品正在更新中' : 'Products are being updated'}
-                </h3>
-                <p className="text-gray-500 mb-8">
-                  {isZh 
-                    ? '我们正在努力完善产品信息，请稍后再来查看。' 
-                    : 'We are working hard to improve product information. Please check back later.'}
-                </p>
-                <Link 
-                  href="/products" 
-                  className="inline-block px-6 py-3 bg-[#0078c2] text-white rounded-lg hover:bg-[#00609a] transition-colors"
-                >
-                  {isZh ? '返回产品中心' : 'Back to Products'}
-                </Link>
+            }
+          >
+            {products.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 min-h-[600px]">
+                {products.map((product) => (
+                  <ProductCard 
+                    key={product.uniqueId || product.id} 
+                    product={product} 
+                    basePath={`/products/flotation`} 
+                  />
+                ))}
               </div>
-            </div>
-          )}
+            ) : (
+              <div className="flex justify-center items-center h-[600px]">
+                <div className="text-center max-w-xl">
+                  <h3 className="text-2xl font-bold text-gray-700 mb-4">
+                    {isZh ? '产品正在更新中' : 'Products are being updated'}
+                  </h3>
+                  <p className="text-gray-500 mb-8">
+                    {isZh 
+                      ? '我们正在努力完善产品信息，请稍后再来查看。' 
+                      : 'We are working hard to improve product information. Please check back later.'}
+                  </p>
+                  <Link 
+                    href="/products" 
+                    className="inline-block px-6 py-3 bg-[#0078c2] text-white rounded-lg hover:bg-[#00609a] transition-colors"
+                  >
+                    {isZh ? '返回产品中心' : 'Back to Products'}
+                  </Link>
+                </div>
+              </div>
+            )}
+          </LoadingWrapper>
         </div>
       </PageSection>
     </div>

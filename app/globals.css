@@ -23,6 +23,40 @@ body {
   font-family: var(--font-primary);
 }
 
+/* 隐藏所有加载圈动画 */
+.animate-spin, 
+[class*="loading-spinner"],
+[role="progressbar"],
+[class*="spinner"],
+[class*="loader"] {
+  display: none !important;
+}
+
+/* 无缝加载过渡效果 */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* 隐藏加载动画，采用无缝加载方式 */
+.loading-hidden {
+  display: none;
+}
+
+/* 页面内容在加载完成前保持不可见 */
+.content-loading {
+  opacity: 0;
+}
+
+.content-loaded {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
 /* 中文标题样式 */
 /* 首屏粗标题 */
 .heading-chinese-black {

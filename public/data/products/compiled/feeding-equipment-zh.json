@@ -6,7 +6,7 @@
       "zh": "带式给料机",
       "en": "Belt Feeder"
     },
-    "image": "/images/products/feeding/belt-feeder.png",
+    "image": "/images/products/feeders/belt-feeder.png",
     "capacity": {
       "zh": "30-1800 t/h",
       "en": "30-1800 t/h"
@@ -33,7 +33,7 @@
       "zh": "板式给料机",
       "en": "Plate Feeder"
     },
-    "image": "/images/products/feeding/plate-feeder.png",
+    "image": "/images/products/feeders/plate-feeder.png",
     "capacity": {
       "zh": "80-800 t/h",
       "en": "80-800 t/h"
@@ -60,7 +60,7 @@
       "zh": "圆盘给料机",
       "en": "Disc Feeder"
     },
-    "image": "/images/products/feeding/disc-feeder.png",
+    "image": "/images/products/feeders/disc-feeder.png",
     "capacity": {
       "zh": "8-800 t/h",
       "en": "8-800 t/h"
@@ -87,7 +87,7 @@
       "zh": "电磁振动给料机",
       "en": "Electromagnetic Vibrating Feeder"
     },
-    "image": "/images/products/feeding/electromagnetic-vibrating-feeder.png",
+    "image": "/images/products/feeders/electromagnetic-vibrating-feeder.png",
     "capacity": {
       "zh": "5-300 t/h",
       "en": "5-300 t/h"
@@ -114,7 +114,7 @@
       "zh": "XDG振动给料机",
       "en": "XDG Vibrating Feeder"
     },
-    "image": "/images/products/feeding/xdg-vibrating-feeder.png",
+    "image": "/images/products/feeders/xdg-vibrating-feeder.png",
     "capacity": {
       "zh": "60-600 t/h",
       "en": "60-600 t/h"

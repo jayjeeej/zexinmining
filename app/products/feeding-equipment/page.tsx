@@ -3,9 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import ProductCard from '@/app/components/ProductCard';
+import ProductCard from '@/app/components/products/ProductCard';
 import PageSection from '@/app/components/PageSection';
 import { useLanguage } from "@/app/contexts/LanguageContext";
+import ProductStructuredData from "@/app/components/ProductStructuredData";
+import LoadingWrapper from '@/app/components/LoadingWrapper';
 
 // 定义产品数据类型
 interface ProductData {
@@ -235,7 +237,7 @@ export default function FeedingEquipmentPage() {
           zh: "带式给料机",
           en: "Belt Feeder"
         },
-        image: "/images/products/feeding/belt-feeder.png",
+        image: "/images/products/feeders/belt-feeder.png",
         capacity: {
           zh: "30-1800 t/h",
           en: "30-1800 t/h"
@@ -262,7 +264,7 @@ export default function FeedingEquipmentPage() {
           zh: "板式给料机",
           en: "Plate Feeder"
         },
-        image: "/images/products/feeding/plate-feeder.png",
+        image: "/images/products/feeders/plate-feeder.png",
         capacity: {
           zh: "80-800 t/h",
           en: "80-800 t/h"
@@ -289,7 +291,7 @@ export default function FeedingEquipmentPage() {
           zh: "圆盘给料机",
           en: "Disc Feeder"
         },
-        image: "/images/products/feeding/disc-feeder.png",
+        image: "/images/products/feeders/disc-feeder.png",
         capacity: {
           zh: "8-800 t/h",
           en: "8-800 t/h"
@@ -316,7 +318,7 @@ export default function FeedingEquipmentPage() {
           zh: "电磁振动给料机",
           en: "Electromagnetic Vibrating Feeder"
         },
-        image: "/images/products/feeding/electromagnetic-vibrating-feeder.png",
+        image: "/images/products/feeders/electromagnetic-vibrating-feeder.png",
         capacity: {
           zh: "5-300 t/h",
           en: "5-300 t/h"
@@ -343,7 +345,7 @@ export default function FeedingEquipmentPage() {
           zh: "XDG振动给料机",
           en: "XDG Vibrating Feeder"
         },
-        image: "/images/products/feeding/xdg-vibrating-feeder.png",
+        image: "/images/products/feeders/xdg-vibrating-feeder.png",
         capacity: {
           zh: "60-600 t/h",
           en: "60-600 t/h"
@@ -411,13 +413,16 @@ export default function FeedingEquipmentPage() {
       {/* 给料设备产品展示 */}
       <PageSection variant="gray" className="flex-grow">
         <div className="max-w-7xl mx-auto h-full">
-          {loading ? (
-            <div className="flex justify-center items-center h-[600px]">
-              <div className="text-center">
-                <p className="text-gray-500">{isZh ? '加载产品数据...' : 'Loading products data...'}</p>
+          <LoadingWrapper 
+            isLoading={loading}
+            fallback={
+              <div className="flex justify-center items-center h-[600px]">
+                <div className="text-center">
+                  <p className="text-gray-500">{isZh ? '数据加载中...' : 'Loading data...'}</p>
+                </div>
               </div>
-            </div>
-          ) : (
+            }
+          >
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 min-h-[600px]">
               {products.map((product) => (
                 <ProductCard 
@@ -427,7 +432,7 @@ export default function FeedingEquipmentPage() {
                 />
               ))}
             </div>
-          )}
+          </LoadingWrapper>
         </div>
       </PageSection>
     </div>
