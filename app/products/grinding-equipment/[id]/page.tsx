@@ -6,6 +6,16 @@ import ProductDetailTemplate from '@/app/components/products/ProductDetailTempla
 import { getFormattedProductData } from '@/app/utils/productUtils';
 import { notFound } from 'next/navigation';
 
+// 为静态导出生成所有可能的参数路径
+export function generateStaticParams() {
+  return [
+    { id: 'dry-grid-ball-mill' },
+    { id: 'wet-grid-ball-mill' },
+    { id: 'overflow-ball-mill' },
+    { id: 'rod-mill' }
+  ];
+}
+
 // 动态路由页面，根据ID显示不同磨机产品
 export default function GrindingProductPage({ params }: { params: { id: string } }) {
   const { isZh } = useLanguage();
