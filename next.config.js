@@ -10,6 +10,8 @@ const nextConfig = {
     // your project has type errors.
     ignoreBuildErrors: true,
   },
+  // 指定静态生成的路由
+  output: 'export',  // 使用静态导出模式
   // 图片优化配置
   images: {
     remotePatterns: [
