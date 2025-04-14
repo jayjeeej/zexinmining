@@ -9,7 +9,6 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import CookieConsent from './components/CookieConsent'
 import DynamicTitle from './components/DynamicTitle';
 import Script from 'next/script';
-import { NavigationProvider } from './contexts/NavigationContext';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -119,16 +118,14 @@ export default function RootLayout({
         <style dangerouslySetInnerHTML={{ __html: imageLoadingStyle }} />
       </head>
       <body className={`${inter.className} ${notoSansSC.variable} ${sandvikSans.variable} antialiased`}>
-        <NavigationProvider>
-          <LanguageProvider>
-            <DynamicTitle />
-            <Header />
-            {children}
-            <NewsletterBanner />
-            <Footer />
-            <CookieConsent />
-          </LanguageProvider>
-        </NavigationProvider>
+        <LanguageProvider>
+          <DynamicTitle />
+          <Header />
+          {children}
+          <NewsletterBanner />
+          <Footer />
+          <CookieConsent />
+        </LanguageProvider>
         
         {/* 优化输入响应性能的轻量级脚本 */}
         <Script id="input-optimization" strategy="afterInteractive">
