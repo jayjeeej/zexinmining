@@ -1,20 +1,28 @@
 'use client';
 
 import React, { useState, useEffect, ReactNode } from 'react';
+import { useNavigation } from '../contexts/NavigationContext';
 
 interface LoadingWrapperProps {
   children: ReactNode;
   isLoading: boolean;
   fallback?: ReactNode;
   minLoadTime?: number; // 最小加载时间，避免闪烁
+  listenToNavigation?: boolean; // 是否监听全局导航状态
 }
 
 export default function LoadingWrapper({
   children,
-  isLoading,
+  isLoading: propsIsLoading,
   fallback,
   minLoadTime = 300, // 默认最小加载时间，避免闪烁
+  listenToNavigation = false, // 默认不监听全局导航
 }: LoadingWrapperProps) {
+  const { isNavigating, completeNavigation } = useNavigation();
+  
+  // 结合组件本身的loading状态和全局导航状态
+  const isLoading = propsIsLoading || (listenToNavigation && isNavigating);
+  
   const [showContent, setShowContent] = useState(!isLoading);
   const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);
 
@@ -28,6 +36,11 @@ export default function LoadingWrapper({
       // 如果加载完成，设置最小延迟后显示内容
       const newTimer = setTimeout(() => {
         setShowContent(true);
+        
+        // 如果在监听导航状态且之前有导航请求，通知导航完成
+        if (listenToNavigation && isNavigating) {
+          completeNavigation();
+        }
       }, minLoadTime);
       
       setTimer(newTimer);
@@ -52,7 +65,7 @@ export default function LoadingWrapper({
         if (newTimer) clearTimeout(newTimer);
       };
     }
-  }, [isLoading, minLoadTime]);
+  }, [isLoading, minLoadTime, listenToNavigation, isNavigating, completeNavigation]);
 
   return (
     <>
