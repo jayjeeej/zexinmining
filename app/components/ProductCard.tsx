@@ -13,7 +13,6 @@ interface ProductCardProps {
       en: string;
     };
     image?: string;
-    priority?: 'high' | 'low' | 'auto'; // 添加priority属性用于图像加载优先级
     capacity?: {
       zh: string;
       en: string;
@@ -95,52 +94,39 @@ export default function ProductCard({ product, basePath, showDetails = true }: P
   };
 
   // 获取占位图片
-  const getPlaceholderImage = (): { png: string; webp: string; } => {
+  const getPlaceholderImage = (): string => {
     // 判断是否提供了图片路径
-    if (product.image) {
-      // 检查图片路径是否已经包含文件扩展名
-      const basePath = product.image.endsWith('.png') 
-        ? product.image.slice(0, -4) 
-        : product.image;
-      
-      return {
-        png: `${basePath}.png`,
-        webp: `${basePath}.webp`
-      };
-    }
-    
-    // 构建基本路径（不含扩展名）
-    let basePath = '';
+    if (product.image) return product.image;
     
     // 根据产品ID判断类型
     if (product.isCrusherProduct || product.id.includes('crusher') || 
         (product.series?.zh?.includes('破碎机') || product.series?.en?.includes('Crusher'))) {
-      basePath = `/images/products/crushers/${product.id}`;
+      return `/images/products/crushers/${product.id}.png`;
     } else if (product.isScreenProduct || product.id.includes('screen') || 
         (product.series?.zh?.includes('振动筛') || product.series?.en?.includes('Screen'))) {
-      basePath = `/images/products/screens/${product.id}`;
+      return `/images/products/screens/${product.id}.png`;
     } else if (product.isClassifierProduct || product.id.includes('classifier') || 
         (product.series?.zh?.includes('分级机') || product.series?.en?.includes('Classifier'))) {
-      basePath = `/images/products/classification-equipment/${product.id}`;
+      return `/images/products/classification-equipment/${product.id}.png`;
     } else if (product.isWasherProduct || product.id.includes('washer') || 
         (product.series?.zh?.includes('洗矿机') || product.series?.en?.includes('Washer'))) {
       // 为特定的洗矿机类型提供明确的路径
       if (product.id === 'spiral-washer') {
-        basePath = '/images/products/washers/spiral-washer';
+        return '/images/products/washers/spiral-washer.png';
       } else if (product.id === 'double-spiral-washer') {
-        basePath = '/images/products/washers/double-spiral-washer';
+        return '/images/products/washers/double-spiral-washer.png';
       } else if (product.id === 'drum-washer') {
-        basePath = '/images/products/washers/drum-washer';
+        return '/images/products/washers/drum-washer.png';
       } else {
-        basePath = `/images/products/washers/${product.id}`;
+        return `/images/products/washers/${product.id}.png`;
       }
     } else if (product.id.includes('mill') || 
         (product.series?.zh?.includes('球磨机') || product.series?.zh?.includes('棒磨机') || 
          product.series?.en?.includes('Ball Mill') || product.series?.en?.includes('Rod Mill'))) {
-      basePath = `/images/products/grinding/${product.id}`;
+      return `/images/products/grinding/${product.id}.png`;
     } else if (product.isFeederProduct || product.id.includes('feeder') || 
         (product.series?.zh?.includes('给料') || product.series?.en?.includes('Feeder'))) {
-      basePath = `/images/products/feeders/${product.id}`;
+      return `/images/products/feeders/${product.id}.png`;
     } else if (product.isGravitySeparationProduct || 
                product.id.includes('jig') || 
                product.id.includes('shaking-table') || 
@@ -157,25 +143,20 @@ export default function ProductCard({ product, basePath, showDetails = true }: P
                 product.series?.en?.includes('Spiral Chute') || 
                 product.series?.en?.includes('Carpet Hooking Machine') || 
                 product.series?.en?.includes('Centrifugal Separator'))) {
-      basePath = `/images/products/gravity-separation/${product.id}`;
+      return `/images/products/gravity-separation/${product.id}.png`;
     } else if (product.isFlotationProduct || 
                product.id.includes('flotation') || 
                (product.series?.zh?.includes('浮选') || 
                 product.series?.en?.includes('Flotation'))) {
-      basePath = `/images/products/flotation/${product.id}`;
+      return `/images/products/flotation/${product.id}.png`;
     } else {
       // 默认占位图
-      basePath = '/images/products/placeholder';
+      return '/images/products/placeholder.png';
     }
-    
-    return {
-      png: `${basePath}.png`,
-      webp: `${basePath}.webp`
-    };
   };
   
   // 使用占位符图片
-  const placeholderImages = getPlaceholderImage();
+  const placeholderImage = getPlaceholderImage();
   
   // 确定显示哪些参数 - 根据产品类型决定显示顺序
   const getDisplayParameters = () => {
@@ -447,21 +428,14 @@ export default function ProductCard({ product, basePath, showDetails = true }: P
     <Link href={productPath}>
       <div className="bg-white p-6 hover:shadow-lg transition-shadow cursor-pointer group h-full">
         <div className="flex flex-col h-full">
-          <div className="relative h-[280px] w-full mb-6 img-container">
-            {/* 使用picture元素提供WebP图片和PNG回退方案 */}
-            <picture>
-              <source srcSet={placeholderImages.webp} type="image/webp" />
-              <Image
-                src={placeholderImages.png}
-                alt={getLocalizedText(product.series)}
-                fill
-                loading={product.priority === 'high' ? 'eager' : 'lazy'}
-                fetchPriority={product.priority || 'auto'}
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                style={{ objectFit: "contain" }}
-                className="object-center"
-              />
-            </picture>
+          <div className="relative h-[280px] w-full mb-6">
+            <Image
+              src={placeholderImage}
+              alt={getLocalizedText(product.series)}
+              fill
+              style={{ objectFit: "contain" }}
+              className="object-center"
+            />
           </div>
           <div className={showDetails ? "" : "text-center"}>
             <h3 className="text-3xl font-bold text-[#333333] mb-2 border-b border-transparent group-hover:border-[#333333] inline-block transition-all">

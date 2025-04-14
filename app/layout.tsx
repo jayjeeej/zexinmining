@@ -101,98 +101,21 @@ export default function RootLayout({
         {/* 预连接重要域名以提高性能 */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
+        
+        {/* 使用更通用的方式优化CSS加载 */}
         <link rel="preconnect" href="https://www.zexinmining.com" crossOrigin="anonymous" />
         
-        {/* 关键CSS内联，避免渲染阻塞 */}
-        <style dangerouslySetInnerHTML={{ __html: `
-          /* 内联关键CSS，避免阻塞渲染，减少CLS */
-          body {
-            background: #ffffff;
-            color: #171717;
-            font-family: var(--font-primary);
-            margin: 0;
-          }
-          .header {
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            width: 100%;
-            background: white;
-          }
-          h1, h2, h3 {
-            margin: 0;
-            font-weight: 400;
-          }
-          img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-          }
-          /* 修正布局偏移问题 */
-          img[data-nimg="fill"] {
-            position: absolute;
-            inset: 0;
-            height: 100%;
-            width: 100%;
-            color: transparent;
-          }
-          /* 为header logo添加特殊样式覆盖 */
-          .header img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-          }
-          .img-container {
-            position: relative;
-            overflow: hidden;
-            display: block;
-            width: 100%;
-          }
-          .img-container::before {
-            content: '';
-            display: block;
-            padding-top: 75%; /* 4:3 比例，根据实际图片调整 */
-          }
-          .img-container > * {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            contain: paint;
-          }
-          ${imageLoadingStyle}
-        ` }} />
+        {/* 预加载CSS文件，避免渲染阻塞 */}
+        <link rel="preload" href="https://www.zexinmining.com/_next/static/css/ec5d7e66bd3b6cb8.css" as="style" />
+        <link rel="preload" href="https://www.zexinmining.com/_next/static/css/cf0024cdd6f6dce0.css" as="style" />
+        <link rel="preload" href="https://www.zexinmining.com/_next/static/css/b2374641c6516a48.css" as="style" />
         
-        {/* 使用正确的方式加载非关键CSS */}
-        <link rel="stylesheet" media="print" href="https://www.zexinmining.com/_next/static/css/ec5d7e66bd3b6cb8.css" />
-        <link rel="stylesheet" media="print" href="https://www.zexinmining.com/_next/static/css/cf0024cdd6f6dce0.css" />
-        <link rel="stylesheet" media="print" href="https://www.zexinmining.com/_next/static/css/b2374641c6516a48.css" />
-        
-        <Script id="load-css" strategy="afterInteractive">
-          {`
-            function loadCSS(href) {
-              var link = document.querySelector('link[href="' + href + '"]');
-              if (link) {
-                link.media = 'all';
-              }
-            }
-            loadCSS('https://www.zexinmining.com/_next/static/css/ec5d7e66bd3b6cb8.css');
-            loadCSS('https://www.zexinmining.com/_next/static/css/cf0024cdd6f6dce0.css');
-            loadCSS('https://www.zexinmining.com/_next/static/css/b2374641c6516a48.css');
-          `}
-        </Script>
-        
-        <noscript>
-          <link rel="stylesheet" href="https://www.zexinmining.com/_next/static/css/ec5d7e66bd3b6cb8.css" />
-          <link rel="stylesheet" href="https://www.zexinmining.com/_next/static/css/cf0024cdd6f6dce0.css" />
-          <link rel="stylesheet" href="https://www.zexinmining.com/_next/static/css/b2374641c6516a48.css" />
-        </noscript>
-        
-        {/* 预加载关键图像 */}
+        {/* 预加载重要图像 */}
         <link rel="preload" as="image" href="/images/logo-zh.png" />
         <link rel="preload" as="image" href="/images/logo-en.png" />
-        <link rel="preload" as="image" fetchPriority="high" href="/images/products/screens/ya-circular-vibrating-screen.webp" type="image/webp" />
+        
+        {/* 内联关键CSS以防止图像加载时的布局偏移 */}
+        <style dangerouslySetInnerHTML={{ __html: imageLoadingStyle }} />
       </head>
       <body className={`${inter.className} ${notoSansSC.variable} ${sandvikSans.variable} antialiased`}>
         <LanguageProvider>
@@ -439,76 +362,6 @@ export default function RootLayout({
               // 在窗口调整大小时重新应用
               window.addEventListener('resize', presetImageDimensions, { passive: true });
             });
-          `}
-        </Script>
-        
-        <Script id="optimize-css" strategy="afterInteractive">
-          {`
-            // 移除未使用的CSS规则，减少CSS体积
-            function removeUnusedCSS() {
-              try {
-                // 获取所有样式表
-                const stylesheets = Array.from(document.styleSheets);
-                
-                // 遍历每个样式表
-                stylesheets.forEach(stylesheet => {
-                  try {
-                    // 跳过非同源样式表（安全限制）
-                    if (!stylesheet.href || stylesheet.href.startsWith(window.location.origin)) {
-                      // 获取所有CSS规则
-                      const cssRules = Array.from(stylesheet.cssRules || []);
-                      
-                      // 检查每条规则
-                      cssRules.forEach((rule, index) => {
-                        // 只处理样式规则
-                        if (rule.type === 1) { // CSSStyleRule
-                          try {
-                            // 检查选择器是否在页面上使用
-                            const selector = rule.selectorText;
-                            // 跳过常见的基础选择器、:hover、:focus等
-                            if (!selector.includes(':hover') && 
-                                !selector.includes(':focus') && 
-                                !selector.includes(':active') &&
-                                !selector.includes('::') &&
-                                !selector.match(/^(html|body|div|span|h[1-6]|p|a|img|ul|li|button)$/)) {
-                              // 测试选择器是否匹配任何元素
-                              if (!document.querySelector(selector)) {
-                                // 移除未使用的规则
-                                try {
-                                  stylesheet.deleteRule(index);
-                                } catch (e) {
-                                  // 忽略删除错误
-                                }
-                              }
-                            }
-                          } catch (e) {
-                            // 忽略无效选择器
-                          }
-                        }
-                      });
-                    }
-                  } catch (e) {
-                    // 忽略跨域样式表错误
-                  }
-                });
-              } catch (e) {
-                console.error('CSS optimization error:', e);
-              }
-            }
-            
-            // 等待页面完全加载后再优化CSS
-            if (document.readyState === 'complete') {
-              removeUnusedCSS();
-            } else {
-              window.addEventListener('load', function() {
-                // 使用requestIdleCallback在浏览器空闲时运行
-                if ('requestIdleCallback' in window) {
-                  requestIdleCallback(removeUnusedCSS, { timeout: 2000 });
-                } else {
-                  setTimeout(removeUnusedCSS, 1000);
-                }
-              });
-            }
           `}
         </Script>
       </body>
