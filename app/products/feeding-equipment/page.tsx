@@ -173,9 +173,10 @@ export default function FeedingEquipmentPage() {
         },
         image: product.imagePath || `/images/products/feeding/${product.id || 'default'}.png`,
         capacity: formatCapacity(product.capacity),
-        motorPower: formatCapacity(product.motorPower),
+        // 如果存在power字段但没有motorPower字段，使用power数据作为motorPower
+        motorPower: product.motorPower ? formatCapacity(product.motorPower) : 
+                  (product.power ? formatCapacity(product.power) : undefined),
         feedSize: formatCapacity(product.feedSize),
-        power: formatCapacity(product.power),
         beltWidth: formatCapacity(product.beltWidth),
         plateWidth: formatCapacity(product.plateWidth),
         discDiameter: formatCapacity(product.discDiameter),
@@ -331,7 +332,7 @@ export default function FeedingEquipmentPage() {
           zh: "360-1500 mm",
           en: "360-1500 mm"
         },
-        power: {
+        motorPower: {
           zh: "0.15-4.0 kW",
           en: "0.15-4.0 kW"
         },

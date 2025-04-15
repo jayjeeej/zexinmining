@@ -124,7 +124,7 @@
       "frequency": "50",
       "capacity": "5-30",
       "excitation": "5.0",
-      "power": "0.15",
+      "motorPower": "0.15",
       "dimensions": "1520×620×380",
       "weight": "250"
     },
@@ -135,7 +135,7 @@
       "frequency": "50",
       "capacity": "10-55",
       "excitation": "10.0",
-      "power": "0.25",
+      "motorPower": "0.25",
       "dimensions": "1530×720×380",
       "weight": "300"
     },
@@ -146,7 +146,7 @@
       "frequency": "50",
       "capacity": "20-80",
       "excitation": "15.0",
-      "power": "0.55",
+      "motorPower": "0.55",
       "dimensions": "1550×820×380",
       "weight": "380"
     },
@@ -157,7 +157,7 @@
       "frequency": "50",
       "capacity": "30-120",
       "excitation": "20.0",
-      "power": "0.75",
+      "motorPower": "0.75",
       "dimensions": "1550×920×380",
       "weight": "460"
     },
@@ -168,7 +168,7 @@
       "frequency": "50",
       "capacity": "40-160",
       "excitation": "25.0",
-      "power": "1.1",
+      "motorPower": "1.1",
       "dimensions": "1550×1020×380",
       "weight": "530"
     },
@@ -179,7 +179,7 @@
       "frequency": "50",
       "capacity": "50-230",
       "excitation": "30.0",
-      "power": "1.5",
+      "motorPower": "1.5",
       "dimensions": "1600×1120×380",
       "weight": "630"
     }
