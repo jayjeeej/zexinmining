@@ -1,9 +1,33 @@
 const createNextIntlPlugin = require('next-intl/plugin');
+const fs = require('fs');
+const path = require('path');
+
+// 创建特定路由占位符
+function createRoutePlaceholders() {
+  const routes = [
+    'app/en/about',
+    'app/zh/about',
+  ];
+  
+  routes.forEach(route => {
+    const routePath = path.join(process.cwd(), '.next/server', route);
+    try {
+      fs.mkdirSync(routePath, { recursive: true });
+      console.log(`创建路由目录: ${routePath}`);
+    } catch (err) {
+      if (err.code !== 'EEXIST') {
+        console.error(`创建目录失败: ${err}`);
+      }
+    }
+  });
+}
 
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // 在构建前创建必要的目录
+  onBuildStart: createRoutePlaceholders,
   output: 'standalone', // 确保使用standalone输出模式
   eslint: {
     // Warning: This allows production builds to successfully complete even if
