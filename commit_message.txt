@@ -8,4 +8,10 @@
 
 - 添加.cloudflare/pages.toml配置，排除大型缓存文件
 - 增强Next.js配置以减小构建输出大小
-- 添加压缩插件和优化构建设置 
+- 添加压缩插件和优化构建设置
+
+[Cursor] 添加自定义构建脚本解决Cloudflare Pages大文件限制问题
+
+- 创建自定义构建脚本，在验证前删除大型缓存文件
+- 更新Cloudflare Pages配置，使用自定义构建脚本
+- 添加pages.dev.json配置文件指定Node版本和构建参数 
