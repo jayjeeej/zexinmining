@@ -30,6 +30,28 @@ const nextConfig = {
   },
   // 确保所有路由正确处理
   trailingSlash: false,
+  // 确保所有路由正确处理，特别处理/en/about路由
+  async rewrites() {
+    return [
+      {
+        source: '/en/about',
+        destination: '/en/about',
+      },
+      {
+        source: '/zh/about',
+        destination: '/zh/about',
+      }
+    ];
+  },
+  // 特别优化about页面的输出
+  output: 'export',
+  distDir: '.next',
+  generateStaticParams: async () => {
+    return [
+      { locale: 'en', path: '/about' },
+      { locale: 'zh', path: '/about' }
+    ];
+  },
   // 图片优化配置
   images: {
     remotePatterns: [
