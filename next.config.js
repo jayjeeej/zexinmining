@@ -135,6 +135,18 @@ const nextConfig = {
   // 修复的HTTP到HTTPS重定向（避免循环重定向）
   async redirects() {
     return [
+      // 将动态路由重定向到静态路由
+      {
+        source: '/:locale(en|zh)/about',
+        has: [
+          {
+            type: 'host',
+            value: '(.*)zexinmining.com(.*)',
+          },
+        ],
+        permanent: true,
+        destination: '/:locale/about',
+      },
       // HTTP 到 HTTPS 重定向（仅当请求是HTTP时）
       {
         source: '/:path*',
@@ -174,11 +186,6 @@ const nextConfig = {
         {
           source: '/zh/about',
           destination: '/zh/about',
-        },
-        // 处理其他语言相关路由
-        {
-          source: '/:locale(en|zh)/:path*',
-          destination: '/:locale/:path*',
         }
       ]
     };
