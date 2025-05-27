@@ -28,6 +28,8 @@ const nextConfig = {
       exclude: ['error', 'warn'],
     },
   },
+  // 确保所有路由正确处理
+  trailingSlash: false,
   // 图片优化配置
   images: {
     remotePatterns: [
