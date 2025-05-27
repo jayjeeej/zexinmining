@@ -43,9 +43,7 @@ const nextConfig = {
       }
     ];
   },
-  // 特别优化about页面的输出
-  output: 'export',
-  distDir: '.next',
+  // 特别优化about页面的静态参数生成
   generateStaticParams: async () => {
     return [
       { locale: 'en', path: '/about' },
