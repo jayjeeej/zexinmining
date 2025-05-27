@@ -1,0 +1,2 @@
+[build]
+excluded_outputs = [".next/cache/**"] 
