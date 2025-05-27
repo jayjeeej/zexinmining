@@ -139,6 +139,23 @@ const nextConfig = {
       }
     ]
   },
+  // 添加rewrites配置处理动态路由
+  async rewrites() {
+    return {
+      beforeFiles: [
+        // 确保/en/about和/zh/about路由正确处理
+        {
+          source: '/:locale(en|zh)/about',
+          destination: '/:locale/about',
+        },
+        // 处理其他语言相关路由
+        {
+          source: '/:locale(en|zh)/:path*',
+          destination: '/:locale/:path*',
+        }
+      ]
+    };
+  },
   // 配置代码分割策略
   webpack: (config, { isServer }) => {
     // 修改代码分割的大小阈值，创建更多小块
