@@ -1,0 +1,598 @@
+{
+  "id": "hydrocyclone-separator",
+  "title": "Mining Hydrocyclone Separator",
+  "series": "FX Series High-Efficiency Mining Hydrocyclone",
+  "imageSrc": "/images/products/classification-equipment/hydrocyclone-separator.jpg",
+  "productCategory": "Mineral Desliming Equipment",
+  "subcategory": "classification-equipment",
+  "model": "FX600",
+  "meta": [
+    {
+      "key": "Feed pressure",
+      "displayValue": "0.03-0.4 MPa (4.35-58 psi)"
+    },
+    {
+      "key": "Processing capacity",
+      "displayValue": "1-350 m³/h (4.4-1540.4 gpm)"
+    },
+    {
+      "key": "Classification size",
+      "displayValue": "74-220 mesh"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "pressure": [
+        {
+          "unit": "MPa",
+          "conversionFactor": 1,
+          "label": "MPa"
+        },
+        {
+          "unit": "psi",
+          "conversionFactor": 145.038,
+          "label": "psi"
+        }
+      ],
+      "flow": [
+        {
+          "unit": "m³/h",
+          "conversionFactor": 1,
+          "label": "m³/h"
+        },
+        {
+          "unit": "gpm",
+          "conversionFactor": 4.40287,
+          "label": "gpm"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "kg",
+          "conversionFactor": 1,
+          "label": "kg"
+        },
+        {
+          "unit": "lb",
+          "conversionFactor": 2.20462,
+          "label": "lb"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/classification-equipment/hydrocyclone-separator",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/classification-equipment/hydrocyclone-separator",
+    "zh": "/zh/products/ore-processing/classification-equipment/hydrocyclone-separator"
+  },
+  "overview": "The FX Series Mining Hydrocyclone Separator is an advanced classification equipment designed for efficient particle separation in mineral processing operations. Featuring optimized vortex design and wear-resistant materials, it delivers superior classification performance with high throughput and precise cut points.",
+  "detailedDescription": "The Mining Hydrocyclone Separator introduces innovative classification technology that transforms mineral separation processes in the mining industry. This system creates exceptional separation efficiency through its optimized vortex finder design, addressing common classification challenges while enhancing material recovery rates. Its balanced approach to slurry processing delivers consistent results across varying ore conditions, making it valuable for mining operations that require efficient separation without compromising throughput capacity or classification precision.",
+  "specifications": {
+    "title": "FX Series Mining Hydrocyclone Technical Parameters",
+    "note": "Parameters can be customized according to specific requirements",
+    "tableHeaders": [
+      "Model",
+      "Body Diameter (mm)",
+      "Cone Angle (°)",
+      "Feed Size (mm)",
+      "Overflow Port (mm)",
+      "Max Feed Size (mm)",
+      "Feed Pressure (MPa)",
+      "Capacity (m³/h)",
+      "Classification Size (mesh)",
+      "Length (mm)",
+      "Width (mm)",
+      "Height (mm)",
+      "Weight (kg)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Body Diameter (in.)",
+      "Cone Angle (°)",
+      "Feed Size (in.)",
+      "Overflow Port (in.)",
+      "Max Feed Size (in.)",
+      "Feed Pressure (psi)",
+      "Capacity (gpm)",
+      "Classification Size (mesh)",
+      "Length (in.)",
+      "Width (in.)",
+      "Height (in.)",
+      "Weight (lb)"
+    ],
+    "tableData": [
+      [
+        "FX50",
+        "50",
+        "15,6",
+        "11-16",
+        "3-8",
+        "0.3",
+        "0.1-0.4",
+        "1-2",
+        "10-74",
+        "160",
+        "155",
+        "350",
+        "2"
+      ],
+      [
+        "FX75",
+        "75",
+        "15,6",
+        "15-22",
+        "6-12",
+        "0.6",
+        "0.1-0.4",
+        "2-5",
+        "20-74",
+        "240",
+        "230",
+        "465",
+        "4.2"
+      ],
+      [
+        "FX100",
+        "100",
+        "20,15,8",
+        "20-40",
+        "8-18",
+        "1",
+        "0.06-0.35",
+        "5-12",
+        "20-100",
+        "268",
+        "215",
+        "720",
+        "13"
+      ],
+      [
+        "FX125",
+        "125",
+        "17,8",
+        "25-40",
+        "8-18",
+        "1",
+        "0.06-0.35",
+        "8-15",
+        "20-74",
+        "250",
+        "210",
+        "525",
+        "8"
+      ],
+      [
+        "FX150",
+        "150",
+        "20,15,8",
+        "30-45",
+        "8-22",
+        "1.5",
+        "0.06-0.35",
+        "11-20",
+        "30-74",
+        "310",
+        "310",
+        "820",
+        "32"
+      ],
+      [
+        "FX200",
+        "200",
+        "20,15,10",
+        "40-65",
+        "16-32",
+        "2",
+        "0.06-0.35",
+        "25-40",
+        "40-100",
+        "400",
+        "365",
+        "1030",
+        "54"
+      ],
+      [
+        "FX250",
+        "250",
+        "20,15,10",
+        "60-100",
+        "16-45",
+        "3",
+        "0.06-0.35",
+        "40-60",
+        "40-100",
+        "490",
+        "415",
+        "1430",
+        "84"
+      ],
+      [
+        "FX300",
+        "300",
+        "20,15",
+        "65-115",
+        "20-50",
+        "5",
+        "0.04-0.3",
+        "45-85",
+        "50-150",
+        "550",
+        "480",
+        "1415",
+        "108"
+      ],
+      [
+        "FX350",
+        "350",
+        "20,15",
+        "80-120",
+        "30-70",
+        "6",
+        "0.04-0.3",
+        "60-100",
+        "50-150",
+        "775",
+        "605",
+        "1765",
+        "220"
+      ],
+      [
+        "FX500",
+        "500",
+        "15",
+        "130-200",
+        "35-100",
+        "10",
+        "0.03-0.3",
+        "140-220",
+        "74-150",
+        "895",
+        "830",
+        "2380",
+        "540"
+      ],
+      [
+        "FX610",
+        "610",
+        "20",
+        "170-220",
+        "75-120",
+        "13",
+        "0.03-0.2",
+        "200-300",
+        "74-220",
+        "1075",
+        "1030",
+        "2250",
+        "830"
+      ],
+      [
+        "FX600",
+        "660",
+        "20",
+        "180-240",
+        "80-150",
+        "16",
+        "0.03-0.2",
+        "250-350",
+        "74-220",
+        "1140",
+        "1110",
+        "2635",
+        "990"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "FX50",
+        "1.97",
+        "15,6",
+        "0.43-0.63",
+        "0.12-0.31",
+        "0.01",
+        "14.5-58.0",
+        "4.4-8.8",
+        "10-74",
+        "6.30",
+        "6.10",
+        "13.78",
+        "4.41"
+      ],
+      [
+        "FX75",
+        "2.95",
+        "15,6",
+        "0.59-0.87",
+        "0.24-0.47",
+        "0.02",
+        "14.5-58.0",
+        "8.8-22.0",
+        "20-74",
+        "9.45",
+        "9.06",
+        "18.31",
+        "9.26"
+      ],
+      [
+        "FX100",
+        "3.94",
+        "20,15,8",
+        "0.79-1.57",
+        "0.31-0.71",
+        "0.04",
+        "8.7-50.8",
+        "22.0-52.8",
+        "20-100",
+        "10.55",
+        "8.46",
+        "28.35",
+        "28.66"
+      ],
+      [
+        "FX125",
+        "4.92",
+        "17,8",
+        "0.98-1.57",
+        "0.31-0.71",
+        "0.04",
+        "8.7-50.8",
+        "35.2-66.0",
+        "20-74",
+        "9.84",
+        "8.27",
+        "20.67",
+        "17.64"
+      ],
+      [
+        "FX150",
+        "5.91",
+        "20,15,8",
+        "1.18-1.77",
+        "0.31-0.87",
+        "0.06",
+        "8.7-50.8",
+        "48.4-88.1",
+        "30-74",
+        "12.20",
+        "12.20",
+        "32.28",
+        "70.55"
+      ],
+      [
+        "FX200",
+        "7.87",
+        "20,15,10",
+        "1.57-2.56",
+        "0.63-1.26",
+        "0.08",
+        "8.7-50.8",
+        "110.1-176.1",
+        "40-100",
+        "15.75",
+        "14.37",
+        "40.55",
+        "119.05"
+      ],
+      [
+        "FX250",
+        "9.84",
+        "20,15,10",
+        "2.36-3.94",
+        "0.63-1.77",
+        "0.12",
+        "8.7-50.8",
+        "176.1-264.2",
+        "40-100",
+        "19.29",
+        "16.34",
+        "56.30",
+        "185.19"
+      ],
+      [
+        "FX300",
+        "11.81",
+        "20,15",
+        "2.56-4.53",
+        "0.79-1.97",
+        "0.20",
+        "5.8-43.5",
+        "198.1-374.2",
+        "50-150",
+        "21.65",
+        "18.90",
+        "55.71",
+        "238.10"
+      ],
+      [
+        "FX350",
+        "13.78",
+        "20,15",
+        "3.15-4.72",
+        "1.18-2.76",
+        "0.24",
+        "5.8-43.5",
+        "264.2-440.3",
+        "50-150",
+        "30.51",
+        "23.82",
+        "69.49",
+        "485.02"
+      ],
+      [
+        "FX500",
+        "19.69",
+        "15",
+        "5.12-7.87",
+        "1.38-3.94",
+        "0.39",
+        "4.4-43.5",
+        "616.4-968.6",
+        "74-150",
+        "35.24",
+        "32.68",
+        "93.70",
+        "1190.50"
+      ],
+      [
+        "FX610",
+        "24.02",
+        "20",
+        "6.69-8.66",
+        "2.95-4.72",
+        "0.51",
+        "4.4-29.0",
+        "880.6-1320.9",
+        "74-220",
+        "42.32",
+        "40.55",
+        "88.58",
+        "1829.84"
+      ],
+      [
+        "FX600",
+        "25.98",
+        "20",
+        "7.09-9.45",
+        "3.15-5.91",
+        "0.63",
+        "4.4-29.0",
+        "1100.7-1541.0",
+        "74-220",
+        "44.88",
+        "43.70",
+        "103.74",
+        "2182.58"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "",
+      "length",
+      "length",
+      "length",
+      "pressure",
+      "flow",
+      "",
+      "length",
+      "length",
+      "length",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Optimized Vortex Design",
+      "description": "Our proprietary vortex finder design creates optimal classification conditions by maintaining precise flow patterns. This design maximizes separation efficiency while preventing short-circuiting, resulting in superior particle size distribution control."
+    },
+    {
+      "title": "Multiple Cone Angle Options",
+      "description": "Available with cone angles of 6°, 8°, 10°, 15°, and 20°, our hydrocyclones can be tailored to your specific separation requirements. Different angles optimize performance for various particle size ranges and material characteristics."
+    },
+    {
+      "title": "Wide Operating Pressure Range",
+      "description": "Operating pressure from 0.03 to 0.4 MPa allows for precise adjustment based on material characteristics and desired separation points, ensuring optimal classification results across different ore types."
+    },
+    {
+      "title": "Comprehensive Size Range",
+      "description": "With body diameters from 50mm to 660mm and processing capacities from 1 to 350 m³/h, our hydrocyclones handle operations from small-scale plants to large industrial complexes with exceptional reliability."
+    },
+    {
+      "title": "Wear-Resistant Construction",
+      "description": "Manufactured with premium wear-resistant materials including polyurethane and ceramic linings, our hydrocyclones are engineered for extended service life in demanding mining environments."
+    },
+    {
+      "title": "Precise Classification Control",
+      "description": "The specialized vortex finder and spigot design enables superior control over separation cut points, optimizing the recovery of valuable minerals while efficiently removing unwanted particles."
+    },
+    {
+      "title": "Energy Efficient Operation",
+      "description": "Our optimized design minimizes pressure drop while maintaining superior classification performance, resulting in lower operational costs and reduced power consumption across the entire processing circuit."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Gold Mining",
+        "description": "Efficiently classifies and concentrates gold-bearing ores, providing precise particle size control for optimal recovery in subsequent processing stages while handling high throughput requirements."
+      },
+      {
+        "title": "Copper Processing",
+        "description": "Delivers accurate classification in copper ore processing circuits, ensuring optimal particle size distribution for flotation and maximizing mineral recovery rates."
+      },
+      {
+        "title": "Iron Ore Beneficiation",
+        "description": "Provides effective size classification in iron ore processing, improving downstream separation efficiency and product quality through precise particle size control."
+      },
+      {
+        "title": "Tailings Treatment",
+        "description": "Efficiently processes mining tailings for recovery of valuable minerals and preparation of tailings for disposal or recycling, reducing environmental impact."
+      },
+      {
+        "title": "Fine Particle Processing",
+        "description": "Specialized in handling fine-grained minerals where precise classification is crucial for product quality and recovery rates, particularly effective for particles below 74 microns."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What factors determine hydrocyclone separation efficiency?",
+      "answer": "Hydrocyclone separation efficiency is influenced by several key factors: feed pressure, feed concentration, particle size distribution, feed flow rate, cyclone geometry (body diameter, cone angle, vortex finder diameter), and material characteristics. Optimal performance requires careful consideration and adjustment of these parameters based on specific application requirements."
+    },
+    {
+      "question": "How do I select the right hydrocyclone size for my operation?",
+      "answer": "Selection depends on several factors: required processing capacity (m³/h), desired cut point, feed material characteristics, operating pressure requirements, and space constraints. Key specifications include body diameter, cone angle, and pressure range. Our engineering team can help determine the optimal model based on your specific processing requirements and material analysis."
+    },
+    {
+      "question": "What maintenance is required for mining hydrocyclones?",
+      "answer": "Regular maintenance includes inspection of wear parts (especially the vortex finder, spigot, and cone section), monitoring of operating pressure and flow rates, checking for unusual vibration or noise, and cleaning of feed ports to prevent blockage. Maintenance frequency depends on material abrasiveness and operating conditions, with inspections typically recommended every 2-4 weeks."
+    },
+    {
+      "question": "Can hydrocyclones handle different types of minerals?",
+      "answer": "Yes, our hydrocyclones are designed to process various minerals with different densities and hardness characteristics. They effectively handle metallic ores (gold, copper, iron), non-metallic minerals, and industrial minerals. The adjustable operating parameters allow customization for specific material properties."
+    },
+    {
+      "question": "What are the advantages of polyurethane-lined hydrocyclones?",
+      "answer": "Polyurethane-lined hydrocyclones offer several benefits: excellent wear resistance, extended service life, reduced maintenance costs, consistent performance over time, smooth surface finish for improved flow characteristics, and resistance to corrosion and chemical attack. They are particularly suitable for abrasive applications."
+    },
+    {
+      "question": "How does feed pressure affect classification performance?",
+      "answer": "Feed pressure directly impacts classification efficiency. Higher pressures (0.2-0.4 MPa) generally result in finer separation points and higher capacity but increased wear. Lower pressures (0.03-0.2 MPa) provide coarser separation points and are suitable for larger particle sizes. The optimal pressure depends on desired cut point and material characteristics."
+    }
+  ],
+  "seo": {
+    "title": "High-Efficiency Mining Hydrocyclone | Gold & Copper Ore Cyclone Separator | Zexin Mining",
+    "description": "Zexin Mining's FX Series Hydrocyclones deliver precise classification for gold, copper and iron ore processing with up to 350 m³/h capacity. Our polyurethane-lined cyclones provide exceptional wear resistance and accurate cut points for optimal mineral recovery.",
+    "keywords": "Mining Hydrocyclone Separator, Gold Mining Cyclone, Copper Mining Cyclone Separator, Iron Ore Cyclone, High-Efficiency Mining Cyclone, Mineral Processing Cyclone, Tailings Treatment Cyclone, Fine-Grained Mineral Cyclone, Coarse-Grained Mineral Cyclone, Cyclone Classifier for Mining, Dewatering Cyclone for Mines, Desanding Cyclone in Mining, Concentrating Cyclone for Ore, Stainless Steel Mining Cyclone, Polyurethane-Lined Mining Cyclone, Custom-Designed Mining Cyclone, Multi-Cyclone System for Mining, Portable Mining Cyclone, High-Pressure Mining Cyclone, Low-Maintenance Mining Cyclone"
+  },
+  "relatedProducts": [
+    "high-weir-spiral-classifier",
+    "submerged-spiral-classifier",
+    "cone-classifier"
+  ],
+  "imageSrcAlt": "Hydrocyclone Separator | Zexin Mining"
+}

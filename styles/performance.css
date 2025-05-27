@@ -1,0 +1,746 @@
+/* 
+ * 全局样式 - 主要用于性能优化相关的样式
+ * 参考Sandvik风格 
+ */
+
+/* 懒加载效果 */
+img[data-src],
+video[data-src],
+iframe[data-src] {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+img.zx-loaded,
+video.zx-loaded,
+iframe.zx-loaded {
+  opacity: 1;
+}
+
+/* 滚动效果 */
+[data-fade-in] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-fade-in].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 滚动效果变体 */
+[data-fade-in="left"] {
+  transform: translateX(-20px);
+}
+
+[data-fade-in="left"].visible {
+  transform: translateX(0);
+}
+
+[data-fade-in="right"] {
+  transform: translateX(20px);
+}
+
+[data-fade-in="right"].visible {
+  transform: translateX(0);
+}
+
+[data-fade-in="up"] {
+  transform: translateY(20px);
+}
+
+[data-fade-in="up"].visible {
+  transform: translateY(0);
+}
+
+[data-fade-in="down"] {
+  transform: translateY(-20px);
+}
+
+[data-fade-in="down"].visible {
+  transform: translateY(0);
+}
+
+[data-fade-in="scale"] {
+  transform: scale(0.95);
+}
+
+[data-fade-in="scale"].visible {
+  transform: scale(1);
+}
+
+/* 滚动进度条 */
+.scroll-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: rgb(var(--primary-default) / 1);
+  transition: width 0.2s ease-out;
+}
+
+/* Header 滚动效果 */
+[data-header] {
+  position: sticky;
+  top: 0;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  z-index: 30;
+  background-color: white;
+}
+
+[data-header].header-scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 性能优化：减少重绘区域 */
+[data-offscreen] {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* 页面过渡效果 */
+.page-transition-enter {
+  opacity: 0;
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+.page-transition-exit {
+  opacity: 1;
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+/* 优化链接点击触感 */
+a, 
+button,
+[role="button"] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 确保图片不会导致布局偏移 */
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+/* 图片和视频响应式处理 */
+.responsive-media {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 默认比例 */
+  overflow: hidden;
+}
+
+.responsive-media img,
+.responsive-media video,
+.responsive-media iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* OptimizedImage组件样式 */
+.optimized-image {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.optimized-image.image-loading {
+  opacity: 0.6;
+}
+
+/* 加载动画旋转效果 */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* 定义primary颜色用于边框 */
+.border-t-primary {
+  border-top-color: rgb(var(--primary-default) / 1);
+} 
+
+/* 产品卡片和分类卡片的动画效果 */
+.category-card,
+.product-card {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  position: relative;
+}
+
+/* 悬停时的动画效果 */
+@keyframes card-float {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+@keyframes card-sink {
+  0% {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* 支持悬停的设备 */
+@media (hover: hover) {
+  /* 只有当animation-ready类存在时才激活悬停动画 */
+  html.animation-ready .category-card:hover,
+  html.animation-ready .category-card:focus-within,
+  html.animation-ready .product-card:hover,
+  html.animation-ready .product-card:focus-within {
+    animation: card-float 0.3s ease-out forwards;
+    z-index: 10;
+  }
+
+  /* 添加从悬停状态回到原始状态的过渡效果 */
+  html.animation-ready .category-card:not(:hover):not(:focus-within),
+  html.animation-ready .product-card:not(:hover):not(:focus-within) {
+    animation: card-sink 0.3s ease-out forwards;
+  }
+
+  /* 流程图动画效果 */
+  html.animation-ready .flow-chart-container img {
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+
+  html.animation-ready .flow-chart-container:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  /* 非动画状态 */
+  .category-card:hover:not(:has(html.animation-ready)),
+  .product-card:hover:not(:has(html.animation-ready)) {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+}
+
+/* 触摸设备上的动画效果 */
+@media (hover: none) {
+  /* 卡片的轻触效果 */
+  .category-card:active,
+  .product-card:active {
+    transform: scale(1.02);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  }
+  
+  /* 流程图的轻触效果 */
+  .flow-chart-container:active img {
+    transform: scale(1.02);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  }
+}
+
+/* 确保动画性能优化 */
+html .category-card,
+html .product-card,
+html .flow-chart-container img,
+html .dropdown-menu-container {
+  will-change: transform;
+}
+
+/* Header下拉菜单动画效果 */
+.dropdown-menu {
+  transition: opacity 150ms ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.dropdown-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.dropdown-menu-content {
+  transition: transform 150ms ease-out;
+  transform: translateY(-8px);
+}
+
+.dropdown-menu.open .dropdown-menu-content {
+  transform: translateY(0);
+}
+
+/* 只有当animation-ready类存在时才激活菜单动画效果 */
+html.animation-ready .dropdown-menu {
+  transition: opacity 200ms ease-in-out;
+}
+
+html.animation-ready .dropdown-menu-content {
+  transition: transform 200ms ease-out;
+}
+
+@keyframes menu-slide-down {
+  0% {
+    transform: translateY(-8px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes menu-slide-up {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-8px);
+    opacity: 0;
+  }
+}
+
+html.animation-ready .dropdown-menu.open {
+  animation: menu-slide-down 0.2s ease-out forwards;
+}
+
+html.animation-ready .dropdown-menu:not(.open) {
+  animation: menu-slide-up 0.2s ease-out forwards;
+} 
+
+/* 模态框动画效果 */
+.modal-backdrop {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: opacity 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+/* 手风琴内容区域展开/收起动画效果 */
+html.animation-ready .transition-all.duration-300.ease-in-out.overflow-hidden {
+  transition-property: max-height, opacity !important;
+  transition-duration: 0.3s !important;
+  transition-timing-function: ease-in-out !important;
+  will-change: max-height, opacity;
+}
+
+/* 旋转箭头动画效果 */
+html.animation-ready span[class*="transition-transform"] {
+  transition: transform 0.3s ease-in-out !important;
+}
+
+/* 确保导航后不被pageStabilizer.js覆盖 */
+html.animation-ready:not(.body.page-transitioning) .transition-all.duration-300.ease-in-out.overflow-hidden {
+  transition-property: max-height, opacity !important;
+  transition-duration: 0.3s !important;
+  transition-timing-function: ease-in-out !important;
+}
+
+html.animation-ready:not(.body.page-transitioning) span[class*="transition-transform"] {
+  transition-property: transform !important;
+  transition-duration: 0.3s !important;
+  transition-timing-function: ease-in-out !important;
+}
+
+.modal-dialog {
+  opacity: 0;
+  transform: translateY(-20px) scale(0.95);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* 非动画状态下立即显示 */
+.modal-backdrop.modal-open {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-dialog.modal-dialog-open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* 添加入场和退场动画 */
+@keyframes modal-fade-in {
+  0% {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+@keyframes modal-fade-out {
+  0% {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes modal-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes modal-slide-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+}
+
+/* 支持动画的设备，且animation-ready类存在时才激活动画 */
+@media (prefers-reduced-motion: no-preference) {
+  html.animation-ready .modal-backdrop.modal-open {
+    animation: modal-fade-in 0.3s ease-out forwards;
+  }
+
+  html.animation-ready .modal-backdrop.modal-closing {
+    animation: modal-fade-out 0.3s ease-out forwards;
+  }
+
+  html.animation-ready .modal-dialog.modal-dialog-open {
+    animation: modal-slide-in 0.3s ease-out forwards;
+  }
+
+  html.animation-ready .modal-dialog.modal-dialog-closing {
+    animation: modal-slide-out 0.3s ease-out forwards;
+  }
+} 
+
+/* 搜索浮层动画效果 - 优化版 */
+@keyframes search-fade-in {
+  0% {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    opacity: 0.5;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes search-fade-out {
+  0% {
+    opacity: 0.5;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes search-slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes search-slide-up {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes search-content-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes search-content-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* 背景遮罩层 */
+.search-overlay-bg {
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0);
+  animation: search-fade-out 350ms ease-out forwards;
+}
+
+.search-overlay-bg.open {
+  opacity: 0.5;
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: search-fade-in 500ms cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+/* 搜索下拉框 */
+.search-dropdown {
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+  visibility: hidden;
+  animation: search-slide-up 300ms ease-out forwards;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+.search-dropdown.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  visibility: visible;
+  animation: search-slide-down 600ms cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+/* 搜索内容区 */
+.search-content {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: search-content-out 250ms ease-out forwards;
+}
+
+.search-dropdown.open .search-content {
+  opacity: 1;
+  transform: translateY(0);
+  animation: search-content-in 500ms cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  animation-delay: 150ms;
+}
+
+/* 搜索取消按钮效果 */
+.search-cancel-button {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 250ms ease-out, transform 250ms ease-out;
+}
+
+.search-dropdown.open .search-cancel-button {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 450ms ease-out, transform 450ms ease-out;
+  transition-delay: 200ms;
+}
+
+/* 确保动画性能优化 */
+html .search-dropdown {
+  will-change: transform;
+}
+
+/* 移动菜单动画效果 - 增强版 */
+@keyframes mobile-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mobile-fade-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.mobile-menu {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  max-height: calc(100vh - 90px);
+  transform: translateY(-10px);
+  animation: mobile-fade-out 250ms ease-out forwards;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  animation: mobile-fade-in 350ms cubic-bezier(0.2, 0.6, 0.35, 1) forwards;
+}
+
+/* 防止移动菜单产生CLS */
+@media (min-width: 1024px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+/* 移动菜单内容动画效果 */
+.mobile-menu-content {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+  transition-delay: 0ms;
+}
+
+.mobile-menu.open .mobile-menu-content {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 150ms;
+}
+
+/* 页面禁止滚动时的样式 */
+body.overflow-hidden {
+  overflow: hidden !important;
+  /* 以下属性防止滚动条消失时导致的页面位移 */
+  padding-right: var(--scrollbar-width, 0px);
+  width: 100%;
+  box-sizing: border-box;
+  overscroll-behavior: none;
+}
+
+/* 移动菜单项级联动画 */
+.mobile-menu li {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 250ms ease-out, transform 250ms ease-out;
+}
+
+.mobile-menu.open li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 为每个菜单项设置递增的延迟 */
+.mobile-menu.open li:nth-child(1) { transition-delay: 150ms; }
+.mobile-menu.open li:nth-child(2) { transition-delay: 180ms; }
+.mobile-menu.open li:nth-child(3) { transition-delay: 210ms; }
+.mobile-menu.open li:nth-child(4) { transition-delay: 240ms; }
+.mobile-menu.open li:nth-child(5) { transition-delay: 270ms; }
+.mobile-menu.open li:nth-child(6) { transition-delay: 300ms; }
+.mobile-menu.open li:nth-child(7) { transition-delay: 330ms; }
+.mobile-menu.open li:nth-child(8) { transition-delay: 360ms; }
+.mobile-menu.open li:nth-child(9) { transition-delay: 390ms; }
+.mobile-menu.open li:nth-child(10) { transition-delay: 420ms; }
+
+/* 产品规格表格动画效果 */
+.table-animation-container {
+  transition: max-height 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
+  will-change: max-height, opacity;
+  max-height: 100%; /* 确保初始状态不受限制 */
+}
+
+/* 表格视图从简化到完整的动画 */
+@keyframes table-expand {
+  0% {
+    max-height: 300px;
+    opacity: 0.8;
+    transform: translateY(-10px);
+  }
+  100% {
+    max-height: 3000px; /* 增大最大高度值确保能完全展示内容 */
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 启用动画时的效果 */
+html.animation-ready .table-animation-container {
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform-origin: top;
+}
+
+/* 自定义动画时间类 */
+html.animation-ready .table-animation-container.animation-duration-1s {
+  animation-duration: 1s;
+}
+
+html.animation-ready .table-animation-container.animation-duration-1-5s {
+  animation-duration: 1.5s;
+}
+
+html.animation-ready .table-animation-container.animation-duration-2s {
+  animation-duration: 2s;
+}
+
+/* 为从简化视图转换到完整视图的表格添加展开动画 */
+html.animation-ready .table-animation-container.expanding {
+  animation-name: table-expand;
+  position: relative;
+  z-index: 1;
+}
+
+/* 表格容器在不同视图下的基础高度设置 */
+.table-container {
+  height: auto;
+  max-height: none;
+  transition: height 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}

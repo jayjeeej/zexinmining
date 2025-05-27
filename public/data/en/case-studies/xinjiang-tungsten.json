@@ -1,0 +1,22 @@
+{
+  "id": "xinjiang-tungsten",
+  "title": "100t/d Tungsten Processing Plant in Xinjiang",
+  "location": "Xinjiang, China",
+  "year": "2023",
+  "category": "Tungsten Processing",
+  "client": "Mining Company",
+  "description": "A 100t/d tungsten processing plant designed and built by Zexin Mining Equipment. The plant processes tungsten ore with approximately 7% WO3 grade, featuring a comprehensive gravity separation process.",
+  "challenge": "The project faced several technical challenges: processing tungsten ore with complex mineral composition, achieving efficient liberation of tungsten minerals, and implementing effective water recycling and tailings management. The ore feed size was limited to 200mm, with medium hardness and low clay/water content (less than 6%).",
+  "solution": "The processing plant implemented a multi-stage crushing and gravity separation circuit. The crushing circuit used a jaw crusher to reduce ore size to 25mm. The grinding circuit employed a rod mill followed by jigging for coarse tungsten recovery. The process included continuous hydraulic classification, spiral chutes for roughing, and shaking tables for cleaning. The plant featured a closed-circuit water recycling system with tailings dewatering.",
+  "results": "The plant successfully achieved the target production capacity of 100t/d. The tungsten concentrate met quality specifications with moisture content below 3%. Tailings were effectively dewatered to 15-20% moisture content, suitable for storage and transport. The water recycling system ensured efficient resource utilization and environmental compliance.",
+  "images": [
+    "/images/cases/xinjiang-tungsten/tungsten-processing-plant-xinjiang.jpg",
+    "/images/cases/xinjiang-tungsten/tungsten-gravity-separation-process.jpg",
+    "/images/cases/xinjiang-tungsten/tungsten-jigging-and-shaking-table.jpg"
+  ],
+  "imagesAlt": [
+    "Tungsten Processing Plant Xinjiang | Zexin Mining",
+    "Tungsten Gravity Separation Process | Zexin Mining",
+    "Tungsten Jigging And Shaking Table | Zexin Mining"
+  ]
+}

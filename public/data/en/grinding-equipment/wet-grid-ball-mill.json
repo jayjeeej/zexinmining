@@ -1,0 +1,545 @@
+{
+  "id": "wet-grid-ball-mill",
+  "title": "Wet Grid Ball Mill",
+  "series": "ZMGQ Series Wet Grid Ball Mill",
+  "imageSrc": "/images/products/grinding-equipment/wet-grid-ball-mill.jpg",
+  "productCategory": "Mineral Grinding Equipment",
+  "subcategory": "grinding-equipment",
+  "model": "ZMGQ 2130",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "0.96~24 t/h (1.06~26.46 stph)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "18.5~280 kW (24.8~375.5 hp)"
+    },
+    {
+      "key": "Effective Volume",
+      "displayValue": "0.45~10.7 m³ (15.9~377.9 ft³)"
+    }
+  ],
+  "href": "/en/products/ore-processing/grinding-equipment/wet-grid-ball-mill",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/grinding-equipment/wet-grid-ball-mill",
+    "zh": "/zh/products/ore-processing/grinding-equipment/wet-grid-ball-mill"
+  },
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.03937,
+          "label": "in"
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "short ton",
+          "conversionFactor": 1.1023,
+          "label": "short tons"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.1023,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.341,
+          "label": "hp"
+        }
+      ],
+      "volume": [
+        {
+          "unit": "m³",
+          "conversionFactor": 1,
+          "label": "m³"
+        },
+        {
+          "unit": "ft³",
+          "conversionFactor": 35.3147,
+          "label": "ft³"
+        }
+      ],
+      "rotation": [
+        {
+          "unit": "r/min",
+          "conversionFactor": 1,
+          "label": "r/min"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "overview": "The ZMGQ Series Wet Grid Ball Mill represents Zexin Mining's advanced grinding technology, delivering superior fine grinding performance with 15-25% reduced energy consumption. This grid-type ball mill features innovative discharge grate design that accelerates material processing, prevents over-grinding, and optimizes particle size distribution for mineral processing applications including gold, copper, iron, and non-metallic minerals.",
+  "detailedDescription": "The ZMGQ Series wet grid ball mill introduces revolutionary energy efficiency technology that transforms mineral grinding operations in various processing applications. This innovative milling system creates optimal material flow patterns through its specialized grid structure and advanced liner design, addressing common challenges of high energy consumption and excessive pulp retention. Its balanced approach to efficient grinding mechanics delivers consistent particle size reduction across diverse ore types, making it valuable processing equipment for operations seeking production cost optimization without compromising grinding quality, particularly when fine particle control and reduced energy consumption are critical requirements.",
+  "specifications": {
+    "title": "ZMGQ Series Wet Ball Mill Technical Specifications",
+    "note": "Can be customized according to customer requirements",
+    "tableHeaders": [
+      "Model",
+      "Cylinder Diameter (mm)",
+      "Cylinder Length (mm)",
+      "Motor Model",
+      "Motor Power (kW)",
+      "Length (mm)",
+      "Width (mm)",
+      "Height (mm)",
+      "Effective Volume (m³)",
+      "Max Processing Capacity (t/h)",
+      "Weight (kg)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Cylinder Diameter (in)",
+      "Cylinder Length (in)",
+      "Motor Model",
+      "Motor Power (hp)",
+      "Length (in)",
+      "Width (in)",
+      "Height (in)",
+      "Effective Volume (ft³)",
+      "Max Processing Capacity (stph)",
+      "Weight (lb)"
+    ],
+    "tableData": [
+      [
+        "ZMGQ 0909",
+        "900",
+        "900",
+        "Y225S-8",
+        "18.5",
+        "4750",
+        "2213",
+        "2050",
+        "0.45",
+        "0.96",
+        "4620"
+      ],
+      [
+        "ZMGQ 0918",
+        "900",
+        "1800",
+        "Y225M-8",
+        "22",
+        "5000",
+        "2280",
+        "2050",
+        "0.9",
+        "1.92",
+        "5340"
+      ],
+      [
+        "ZMGQ 1212",
+        "1200",
+        "1200",
+        "Y225M-8",
+        "22",
+        "5788",
+        "2994",
+        "2540",
+        "1.14",
+        "2.4",
+        "11438"
+      ],
+      [
+        "ZMGQ 1224",
+        "1200",
+        "2400",
+        "Y315S-8",
+        "55",
+        "6673",
+        "2994",
+        "2540",
+        "2.28",
+        "3.96",
+        "13200"
+      ],
+      [
+        "ZMGQ 1515",
+        "1500",
+        "1500",
+        "JR115-8",
+        "60",
+        "6094",
+        "3300",
+        "2766",
+        "2.5",
+        "5",
+        "13700"
+      ],
+      [
+        "ZMGQ 1530",
+        "1500",
+        "3000",
+        "JR125-8",
+        "95",
+        "7979",
+        "3300",
+        "2766",
+        "5",
+        "10",
+        "18690"
+      ],
+      [
+        "ZMGQ 2122",
+        "2100",
+        "2200",
+        "JR128-8",
+        "155",
+        "7750",
+        "4839",
+        "3794",
+        "6.6",
+        "15",
+        "45400"
+      ],
+      [
+        "ZMGQ 2130",
+        "2100",
+        "3000",
+        "JR137-8",
+        "210",
+        "8744",
+        "4394.7",
+        "3110",
+        "9",
+        "20",
+        "45790"
+      ],
+      [
+        "ZMGQ 2430",
+        "2400",
+        "3000",
+        "JR1410-8",
+        "280",
+        "9728",
+        "4956",
+        "4018",
+        "12.1",
+        "22.5",
+        "67000"
+      ],
+      [
+        "ZMGQ 2721",
+        "2700",
+        "2100",
+        "JR1410-8",
+        "280",
+        "9300",
+        "5500",
+        "4500",
+        "10.7",
+        "24",
+        "63000"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "ZMGQ 0909",
+        "35.4",
+        "35.4",
+        "Y225S-8",
+        "24.8",
+        "187.0",
+        "87.1",
+        "80.7",
+        "15.9",
+        "1.06",
+        "10185.3"
+      ],
+      [
+        "ZMGQ 0918",
+        "35.4",
+        "70.9",
+        "Y225M-8",
+        "29.5",
+        "196.9",
+        "89.8",
+        "80.7",
+        "31.8",
+        "2.12",
+        "11772.7"
+      ],
+      [
+        "ZMGQ 1212",
+        "47.2",
+        "47.2",
+        "Y225M-8",
+        "29.5",
+        "227.9",
+        "117.9",
+        "100.0",
+        "40.3",
+        "2.65",
+        "25215.4"
+      ],
+      [
+        "ZMGQ 1224",
+        "47.2",
+        "94.5",
+        "Y315S-8",
+        "73.8",
+        "262.7",
+        "117.9",
+        "100.0",
+        "80.5",
+        "4.37",
+        "29100.8"
+      ],
+      [
+        "ZMGQ 1515",
+        "59.1",
+        "59.1",
+        "JR115-8",
+        "80.5",
+        "239.9",
+        "129.9",
+        "108.9",
+        "88.3",
+        "5.51",
+        "30203.2"
+      ],
+      [
+        "ZMGQ 1530",
+        "59.1",
+        "118.1",
+        "JR125-8",
+        "127.4",
+        "314.1",
+        "129.9",
+        "108.9",
+        "176.6",
+        "11.02",
+        "41204.7"
+      ],
+      [
+        "ZMGQ 2122",
+        "82.7",
+        "86.6",
+        "JR128-8",
+        "207.9",
+        "305.1",
+        "190.5",
+        "149.4",
+        "233.0",
+        "16.53",
+        "100089.4"
+      ],
+      [
+        "ZMGQ 2130",
+        "82.7",
+        "118.1",
+        "JR137-8",
+        "281.6",
+        "344.3",
+        "173.0",
+        "122.4",
+        "317.8",
+        "22.05",
+        "100949.5"
+      ],
+      [
+        "ZMGQ 2430",
+        "94.5",
+        "118.1",
+        "JR1410-8",
+        "375.5",
+        "382.8",
+        "195.1",
+        "158.2",
+        "427.3",
+        "24.8",
+        "147708.7"
+      ],
+      [
+        "ZMGQ 2721",
+        "106.3",
+        "82.7",
+        "JR1410-8",
+        "375.5",
+        "366.1",
+        "216.5",
+        "177.2",
+        "377.9",
+        "26.46",
+        "138891.7"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "length",
+      "",
+      "power",
+      "length",
+      "length",
+      "length",
+      "volume",
+      "capacity",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Innovative Grid Structure",
+      "description": "Innovative grid design promotes faster material discharge, reducing unnecessary grinding and saving 15-25% energy compared to overflow ball mills. The unique internal compartment design maintains optimal grinding media distribution while preventing material retention, resulting in lower power consumption per ton of processed material."
+    },
+    {
+      "title": "Precise Particle Size Control",
+      "description": "The grid structure with optimized aperture sizes ensures consistent product fineness, achieving target particle size with minimal deviation. This precision results in improved downstream processing efficiency, enhanced recovery rates, and reduced reagent consumption in subsequent separation processes."
+    },
+    {
+      "title": "Enhanced Grinding Efficiency",
+      "description": "Special internal lifter design creates ideal cascading and cataracting motion patterns for grinding media, maximizing impact and attrition forces while minimizing ball-on-liner impacts. This scientifically optimized motion pattern increases grinding efficiency by 15-20% compared to conventional ball mills."
+    },
+    {
+      "title": "Advanced Liner System",
+      "description": "High-chromium or high-manganese steel liners with optimized wave patterns extend service life while maintaining efficient grinding action. The modular design allows for targeted replacement of high-wear sections, reducing maintenance costs and downtime while ensuring consistent grinding performance throughout the liner lifecycle."
+    },
+    {
+      "title": "Intelligent Load Monitoring",
+      "description": "Integrated load cells and power consumption monitoring system provides real-time feedback on mill operation, automatically adjusting feed rate and water addition to maintain optimal grinding conditions. The intelligent control system prevents overloading, bearing damage, and energy waste while ensuring consistent product quality."
+    },
+    {
+      "title": "Optimized Ball Charge System",
+      "description": "Specialized ball loading composition with scientific ratio of different ball sizes creates ideal grinding conditions for various ore types. The system includes automated ball addition recommendations based on power draw and production parameters, maintaining optimal grinding media levels and size distribution."
+    },
+    {
+      "title": "Versatile Application Adaptability",
+      "description": "Adjustable operating parameters allow optimizing performance for different ore hardness, feed size, and product requirements. The robust design handles various minerals from soft to hard (Mohs 3-9), with specially engineered components to resist corrosion, abrasion, and impact, ensuring reliable operation across diverse applications."
+    },
+    {
+      "title": "Low Maintenance Design",
+      "description": "Easy-access maintenance points, quick-change liner systems, and durable components reduce maintenance time and frequency. The streamlined design eliminates common failure points found in conventional mills, with specially engineered bearings and lubrication systems extending service intervals by up to 30%."
+    }
+  ],
+  "applications": {
+    "title": "Application Areas",
+    "items": [
+      {
+        "title": "Gold and Precious Metals Processing",
+        "description": "Provides optimal grinding for gold, silver, and platinum group metal ores, preparing ideal particle size for maximum leaching efficiency. The grid structure prevents over-grinding that can lead to gold slime losses, while ensuring sufficient liberation for excellent recovery rates. Especially effective in complex sulfide gold ore processing circuits requiring precise size control."
+      },
+      {
+        "title": "Base Metal Ore Grinding",
+        "description": "Delivers superior performance in copper, lead, zinc, and nickel ore grinding applications, particularly when preparing feed material for flotation. The precise particle size control creates optimal liberation without excessive fines generation, improving mineral separation efficiency and concentrate grades while reducing reagent consumption."
+      },
+      {
+        "title": "Iron Ore Processing",
+        "description": "Efficiently processes various iron ore types including magnetite, hematite, and limonite, preparing ground material for magnetic separation or flotation. The energy-saving design significantly reduces operating costs in high-throughput iron ore operations, while the grid structure prevents over-grinding that can negatively impact downstream processing."
+      },
+      {
+        "title": "Industrial Minerals Processing",
+        "description": "Provides consistent, controlled grinding for industrial minerals including limestone, kaolin, talc, barite, and feldspar. The precise particle size distribution achieved ensures product quality and performance in applications ranging from ceramics to fillers, coatings, and construction materials."
+      },
+      {
+        "title": "Chemical Industry Applications",
+        "description": "Delivers reliable fine grinding for various chemical processing applications requiring specific surface area development and particle size control. The corrosion-resistant design options make it suitable for grinding various chemical compounds and intermediates while maintaining product specifications and process efficiency."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What makes the ZMGQ grid ball mill more energy-efficient than conventional ball mills?",
+      "answer": "The ZMGQ grid ball mill achieves superior energy efficiency through several key design elements: 1) The specialized grid discharge system prevents material over-grinding by promptly removing particles that have reached target size, reducing unnecessary energy consumption; 2) Optimized internal lifters create ideal ball motion patterns that maximize grinding efficiency while minimizing energy waste; 3) The scientific ball charge distribution ensures optimal energy transfer to the material; 4) Advanced liner designs reduce power consumption from friction losses; 5) Integrated intelligent control systems maintain optimal operating conditions. Combined, these features typically reduce energy consumption by 15-25% compared to overflow-type ball mills processing the same materials, with some operations reporting up to 30% energy savings in specific applications."
+    },
+    {
+      "question": "What are the main differences between grid ball mills and overflow ball mills?",
+      "answer": "The primary differences between grid ball mills and overflow ball mills include: 1) Discharge mechanism - grid mills use a perforated discharge grate that accelerates material passage, while overflow mills rely on pulp rising and flowing over the discharge end; 2) Retention time - grid mills have shorter material retention time, reducing over-grinding; 3) Energy efficiency - grid mills typically consume 15-25% less energy for the same grinding task; 4) Grinding media load - grid mills operate efficiently with lower ball charges (typically 35-42% versus 40-45% in overflow mills); 5) Pulp density - grid mills perform optimally at slightly higher pulp densities; 6) Product size distribution - grid mills generally produce narrower particle size distributions with fewer ultra-fines; 7) Internal structure - grid mills incorporate specialized grate plates, pulp lifters, and discharge systems not found in overflow designs. The ZMGQ Series incorporates advanced grid technology with energy-saving improvements to maximize these inherent advantages."
+    },
+    {
+      "question": "What maintenance is required for the ZMGQ wet grid ball mill?",
+      "answer": "Maintenance for the ZMGQ wet grid ball mill includes: 1) Daily inspections of lubrication systems, drive components, feed arrangements, and discharge functions; 2) Weekly monitoring of liner wear patterns, grinding media levels, and bearing conditions; 3) Monthly inspection of grid plates, discharge grates, and internal lifters for wear; 4) Scheduled liner replacements typically every 8,000-12,000 operating hours, depending on material abrasiveness; 5) Ball charge replenishment based on power draw measurements, typically added in small quantities weekly or bi-weekly; 6) Major inspections every 12-18 months including drive system maintenance, bearing analysis, and structural integrity checks. The ZMGQ design incorporates maintenance-friendly features including accessible inspection ports, modular liner systems, and simplified discharge grate designs that reduce maintenance time by up to 40% compared to conventional mills. Our technical support includes customized maintenance schedules based on specific operating conditions and materials processed."
+    },
+    {
+      "question": "What is the optimal ball charge composition for the ZMGQ grid ball mill?",
+      "answer": "The optimal ball charge composition for the ZMGQ grid ball mill depends on feed characteristics and desired product fineness, but typically follows this distribution: 1) For initial charging of a new mill: 30-40% large balls (80-100mm), 40-50% medium balls (60-80mm), and 10-30% small balls (40-60mm); 2) For harder ores (Bond Work Index >14 kWh/t), increase the proportion of larger balls by 5-10%; 3) For finer grinding requirements (<75 microns), increase the proportion of smaller balls by 10-15%; 4) The total ball charge typically ranges from 35-42% of mill volume, lower than conventional overflow mills; 5) For makeup charges during operation, typically add only the largest size (80-100mm) balls, as natural attrition will create a balanced size distribution over time. The ZMGQ Series includes specialized internal lifters designed to optimize the motion patterns of this ball charge composition, maximizing grinding efficiency while protecting the mill liners. Our technical team provides customized ball charging recommendations based on specific ore characteristics and processing requirements."
+    },
+    {
+      "question": "What feed size is appropriate for the ZMGQ wet grid ball mill?",
+      "answer": "The appropriate feed size for the ZMGQ wet grid ball mill depends on the model size and application, but generally adheres to these guidelines: 1) Maximum feed size should not exceed 15-20mm for optimal performance; 2) For primary grinding applications, feed in the range of 10-15mm is ideal; 3) For secondary or fine grinding applications, feed size of 1-3mm is recommended; 4) The 80% passing size (P80) of the feed should not exceed 12mm for large mills (>2m diameter) and 8mm for smaller mills; 5) Feed with excessive fines (<74 microns) content can reduce grinding efficiency; ideal feed contains less than 15-20% material already at final product size; 6) Feed size uniformity is important - a narrower size distribution improves grinding efficiency by 5-10%. The ZMGQ Series incorporates advanced shell lifter designs that efficiently handle the recommended feed sizes while minimizing liner wear and optimizing energy transfer to the grinding media. For applications with coarser feed requirements, we recommend pre-grinding with rod mills or incorporating specialized feed-end liner designs."
+    },
+    {
+      "question": "What is the typical grinding efficiency improvement when switching from an overflow ball mill to a ZMGQ grid ball mill?",
+      "answer": "When switching from a conventional overflow ball mill to a ZMGQ grid ball mill, operations typically experience the following efficiency improvements: 1) Energy consumption reduction of 15-25%, with some operations reporting up to 30% reduction depending on previous mill efficiency; 2) Throughput increase of 10-20% for the same installed power; 3) Grinding media consumption reduction of 8-15%; 4) Liner wear reduction of 10-20%; 5) More consistent product size distribution with 15-25% fewer ultra-fines; 6) Improved response to feed variations, maintaining product consistency with 30-40% less fluctuation; 7) Reduced water consumption by 5-10% due to ability to operate at higher pulp densities. These improvements result from the ZMGQ's advanced grid discharge design, optimized internal geometry, and specialized liner configurations. The actual efficiency gains depend on ore characteristics, operating practices, and the condition of the previous equipment. Our engineering team offers comprehensive mill audits to estimate specific improvement potential for individual operations considering the switch to ZMGQ technology."
+    },
+    {
+      "question": "How does the ZMGQ wet grid ball mill handle clay-rich or sticky ores?",
+      "answer": "The ZMGQ wet grid ball mill effectively handles clay-rich or sticky ores through several specialized design features: 1) The grid discharge system prevents material buildup by maintaining consistent pulp flow through the mill; 2) Optimized lifter profiles create enhanced slurry movement that prevents clay accumulation on mill internals; 3) The ability to operate at higher pulp densities (up to 78-82% solids depending on ore type) helps manage clay viscosity issues; 4) Special grid plate designs with progressive aperture configurations prevent blinding and ensure consistent discharge even with sticky materials; 5) Advanced water addition control systems maintain optimal pulp rheology; 6) Optional high-pressure spray systems at the discharge end clear accumulations from grid openings. For extremely challenging clay-rich ores, we recommend operating at slightly lower ball charges (32-38%) and implementing specialized operating procedures including periodic high-dilution flushing cycles. Our technical team provides customized recommendations for processing sticky ores based on specific clay mineralogy and content."
+    },
+    {
+      "question": "What control systems are available for optimizing ZMGQ ball mill performance?",
+      "answer": "The ZMGQ Series offers comprehensive control systems for performance optimization, including: 1) Advanced mill load monitoring using bearing pressure sensors, power draw measurement, and acoustic sensors to maintain optimal filling levels; 2) Intelligent feed control systems that automatically adjust feed rate based on mill load and product specifications; 3) Automated ball charging recommendations based on power draw trends and grinding efficiency calculations; 4) Real-time pulp density control with automated water addition to maintain optimal grinding conditions; 5) Bearing temperature monitoring with predictive maintenance alerts; 6) Vibration analysis systems for early detection of component wear or imbalance; 7) Integrated control with upstream and downstream equipment to optimize overall circuit performance; 8) Optional expert system software that continuously learns and adjusts operating parameters based on historical performance data. These control systems typically improve grinding efficiency by an additional 5-10% beyond the mechanical design advantages, while reducing operator intervention and preventing potential damage from abnormal operating conditions. Control system options range from basic instrumentation packages to fully integrated automation solutions compatible with plant-wide control networks."
+    },
+    {
+      "question": "What are the installation requirements for the ZMGQ wet grid ball mill?",
+      "answer": "Installation of the ZMGQ wet grid ball mill requires attention to several key factors: 1) Foundation design - requires engineered concrete foundation with proper vibration isolation and load distribution, typically 2.5-3 times the total operating weight of the fully charged mill; 2) Accessibility - minimum clearance of 1.5m around the mill perimeter for maintenance, with additional space at discharge and feed ends for component removal; 3) Feed system - properly designed feed chute with consistent material delivery and water addition points; 4) Discharge system - adequate clearance for discharge slurry collection and pump placement; 5) Ancillary systems - space for lubrication systems, control panels, and hydraulic units; 6) Overhead clearance - sufficient height for liner replacement and potential ball charging equipment; 7) Power supply - appropriate electrical infrastructure for motor starting and operation, including potential soft-start or VFD systems for larger models; 8) Alignment considerations - precision alignment of drive components and mill positioning is critical, requiring specialized installation equipment. Our technical team provides detailed installation manuals, foundation drawings, and supervisory services to ensure proper installation and commissioning. For retrofit installations replacing existing mills, we offer custom adaptation designs to minimize foundation modifications."
+    },
+    {
+      "question": "How does ball mill size selection impact efficiency for different applications?",
+      "answer": "Ball mill size selection significantly impacts grinding efficiency across different applications: 1) Diameter-to-length ratio - longer mills (L:D ratio >1.5) provide more retention time and gradual size reduction, ideal for harder ores requiring more grinding stages; shorter mills (L:D ratio <1.2) offer more impact energy and are better for softer materials; 2) Mill diameter directly determines the impact energy available, with larger diameters creating higher impact forces necessary for harder ores; 3) Internal volume affects throughput capacity, with optimal volumetric loading being 35-42% for the ZMGQ Series; 4) Larger mills (>3m diameter) typically achieve 5-10% better energy efficiency than smaller mills for the same reduction ratio; 5) Mill dimensions influence grinding media motion patterns, with optimized lift heights occurring at different critical speeds depending on diameter. The ZMGQ Series is available in various size combinations to match specific application requirements. Our engineering team conducts detailed grinding circuit simulations to recommend the optimal mill dimensions based on throughput requirements, ore characteristics, feed size, product specifications, and energy efficiency considerations. Properly sized ZMGQ mills typically require 10-15% less installed power than conventional mills for the same duty."
+    }
+  ],
+  "seo": {
+    "keywords": "wet grid ball mill,energy-saving wet ball mill,wet grinding ball mill,industrial grid ball mill,grid ball mill for mining,wet milling equipment,grid ball mill manufacturer,grid ball mill price,grid ball mill specifications,grid ball mill applications,grid ball mill design,grid ball mill capacity,grid ball mill efficiency,grid ball mill working principle,grid ball mill for mineral processing",
+    "description": "Zexin Mining's ZMGQ Series wet grid ball mill delivers 15-25% energy reduction with enhanced grinding efficiency. Our advanced grid discharge technology prevents over-grinding while ensuring precise particle size control. Ideal for gold, copper, and iron ore processing with simplified maintenance and extended component life.",
+    "title": "Wet Grid Ball Mill | Efficient Grinding Equipment | Zexin Mining"
+  },
+  "relatedProducts": [
+    "wet-rod-mill",
+    "wet-overflow-ball-mill",
+    "dry-ball-mill",
+    "wet-energy-saving-grid-ball-mill",
+    "dry-rod-mill"
+  ],
+  "imageSrcAlt": "Wet Grid Ball Mill | Zexin Mining"
+}

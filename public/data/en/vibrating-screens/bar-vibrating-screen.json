@@ -1,0 +1,359 @@
+{
+  "id": "bar-vibrating-screen",
+  "title": "Grizzly Screen",
+  "series": "ZGS Series Heavy-duty Grizzly Screen",
+  "imageSrc": "/images/products/vibrating-screens/bar-vibrating-screen.jpg",
+  "productCategory": "Mineral Screen Equipment",
+  "subcategory": "vibrating-screens",
+  "model": "ZGS1548",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "15-312 t/h (17-344 stph)"
+    },
+    {
+      "key": "Screening particle size",
+      "displayValue": "30-150 mm (1.18-5.91 in.)"
+    },
+    {
+      "key": "Motor power",
+      "displayValue": "11-37 kW (15-50 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/vibrating-screens/bar-vibrating-screen",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/vibrating-screens/bar-vibrating-screen",
+    "zh": "/zh/products/ore-processing/vibrating-screens/bar-vibrating-screen"
+  },
+  "overview": "Zexin Mining's ZGS Series Heavy-duty Grizzly Screen specializes in coarse material separation for primary screening applications. Designed with reinforced bar structure for exceptional durability, it effectively handles large rocks, ore, and aggregates with minimal maintenance. The adjustable grizzly bar spacing allows customization for various feed materials, making it ideal for mining operations, quarries, and aggregate production facilities seeking reliable pre-screening solutions.",
+  "detailedDescription": "The ZGS Series represents a fundamental advancement in primary material separation philosophy. This equipment approaches coarse material challenges through an integration of durability with process optimization science. Its mechanical design emphasizes longevity and reliability while addressing the economic impacts of pre-screening efficiency on downstream operations. The system delivers value through its impact on total ownership costs, extending beyond throughput considerations to encompass maintenance accessibility, energy consumption patterns, and adaptability to changing production requirements in dynamic mining environments.",
+  "specifications": {
+    "title": "Grizzly Screen Specifications",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Deck Size (mm)",
+      "Inclination (degree)",
+      "Amplitude (mm)",
+      "Number of Layer",
+      "Capacity (t/h)",
+      "Motor Power (kW)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Deck Size (in.)",
+      "Inclination (degree)",
+      "Amplitude (in.)",
+      "Number of Layer",
+      "Capacity (stph)",
+      "Motor Power (hp)"
+    ],
+    "tableData": [
+      [
+        "ZGS1237",
+        "1200×3700",
+        "15-20",
+        "8-12",
+        "2",
+        "15-86",
+        "11"
+      ],
+      [
+        "ZGS1237-3",
+        "1500×3500",
+        "15-20",
+        "8-12",
+        "3",
+        "16-90",
+        "15"
+      ],
+      [
+        "ZGS1548",
+        "1500×4800",
+        "15-20",
+        "8-12",
+        "2",
+        "22.5-162",
+        "22"
+      ],
+      [
+        "ZGS1548-3",
+        "1500×4800",
+        "15-20",
+        "8-12",
+        "3",
+        "22.5-162",
+        "30"
+      ],
+      [
+        "ZGS1854",
+        "1800×5400",
+        "15-20",
+        "8-12",
+        "2",
+        "32-312",
+        "30"
+      ],
+      [
+        "ZGS1854-3",
+        "1800×5400",
+        "15-20",
+        "8-12",
+        "3",
+        "32-312",
+        "37"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "ZGS1237",
+        "47.2×145.7",
+        "15-20",
+        "0.31-0.47",
+        "2",
+        "17-95",
+        "15"
+      ],
+      [
+        "ZGS1237-3",
+        "59.1×137.8",
+        "15-20",
+        "0.31-0.47",
+        "3",
+        "18-99",
+        "20"
+      ],
+      [
+        "ZGS1548",
+        "59.1×189.0",
+        "15-20",
+        "0.31-0.47",
+        "2",
+        "25-179",
+        "30"
+      ],
+      [
+        "ZGS1548-3",
+        "59.1×189.0",
+        "15-20",
+        "0.31-0.47",
+        "3",
+        "25-179",
+        "40"
+      ],
+      [
+        "ZGS1854",
+        "70.9×212.6",
+        "15-20",
+        "0.31-0.47",
+        "2",
+        "35-344",
+        "40"
+      ],
+      [
+        "ZGS1854-3",
+        "70.9×212.6",
+        "15-20",
+        "0.31-0.47",
+        "3",
+        "35-344",
+        "50"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "",
+      "length",
+      "",
+      "capacity",
+      "power"
+    ]
+  },
+  "features": [
+    {
+      "title": "Adjustable Bar Spacing",
+      "description": "Customizable grizzly bar arrangement with spacing from 30-150mm allows adaptation to various material types and target separation sizes. The unique T-profile bar design prevents material lodging while maximizing open area, improving throughput by up to 35% compared to traditional grizzly decks."
+    },
+    {
+      "title": "Scalping Capability",
+      "description": "Exceptional pre-screening performance removes oversize material and debris before it enters the main crushing circuit. This primary screening function significantly reduces wear on downstream equipment, extends crusher liner life by up to 40%, and prevents blockages that cause costly downtime in mining and quarrying operations."
+    },
+    {
+      "title": "Heavy-duty Construction",
+      "description": "Engineered with manganese-steel bars (hardness HRC58-62) and reinforced side plates, the equipment withstands extreme impact loads from large rocks and ore. The robust structural design handles materials up to 500mm, making it ideal for hard rock mining applications where durability is essential for continuous operation in demanding environments."
+    },
+    {
+      "title": "Modular Deck System",
+      "description": "Innovative sectional grizzly deck design with bolt-in replaceable bars enables targeted maintenance without complete disassembly. This modular approach allows for replacing only worn sections, reducing service time by up to 65% and minimizing inventory requirements for spare parts, particularly valuable for remote mining locations."
+    },
+    {
+      "title": "Vibration Mechanism",
+      "description": "The powerful eccentric shaft drive system delivers precise vibratory action with adjustable amplitude (8-12mm), creating optimal material movement across the grizzly deck. This ensures efficient separation while preventing material build-up, increasing processing capacity by up to 30% compared to static grizzly systems in aggregate and ore processing applications."
+    },
+    {
+      "title": "Low Maintenance Design",
+      "description": "Self-cleaning bar configuration with specialized profiles prevents material accumulation common in wet and sticky conditions. The rugged bearing assemblies with extended lubrication intervals require minimal attention, reducing maintenance frequency by up to 70% compared to conventional equipment and supporting continuous operation in demanding production environments."
+    },
+    {
+      "title": "Versatile Application Range",
+      "description": "Adaptable design handles diverse materials from primary ore to recycled concrete and construction waste. The equipment performs effectively in temperature ranges from -20°C to 50°C and accommodates feed materials with variable characteristics, making it suitable for multiple industries including mining, quarrying, recycling, and aggregate production."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Primary Mine Ore Separation",
+        "description": "Efficiently scalps run-of-mine materials, removing oversize rocks and separating primary ore for optimal crusher feed preparation in gold, copper, and iron mining operations."
+      },
+      {
+        "title": "Quarry Aggregate Production",
+        "description": "Ideally suited for pre-screening limestone, granite, and basalt, improving crusher efficiency and ensuring consistent product sizing for construction aggregate markets."
+      },
+      {
+        "title": "Recycled Material Processing",
+        "description": "Effectively separates demolition waste, concrete, and construction debris, supporting sustainable material recovery operations and reducing landfill requirements."
+      },
+      {
+        "title": "Coal Preparation",
+        "description": "Reliably removes oversize rocks and foreign materials from run-of-mine coal, protecting processing equipment and improving throughput in coal preparation plants."
+      },
+      {
+        "title": "Mineral Ore Beneficiation",
+        "description": "Performs initial separation of ore materials in beneficiation circuits, ensuring optimal feed consistency for downstream concentration processes."
+      },
+      {
+        "title": "Heavy Construction Applications",
+        "description": "Provides efficient material classification for road building, dam construction, and infrastructure projects requiring precise aggregate sizing."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What advantages does a grizzly screen offer compared to conventional feeder systems?",
+      "answer": "Grizzly screens provide several crucial advantages: 1) Superior scalping efficiency with removal of up to 80% of undersized material before crushing; 2) Reduced crusher wear with typical liner life extension of 30-45%; 3) Lower energy consumption in the overall processing circuit by up to 20%; 4) Decreased maintenance requirements with specialized bar profiles preventing material buildup; 5) Higher throughput capacity compared to traditional feeders; 6) Rapid adaptation to different material types with adjustable bar spacing; 7) More effective handling of wet or sticky materials that would typically blind conventional screens. These benefits make grizzly screens essential for efficient primary processing operations in mining and aggregate production."
+    },
+    {
+      "question": "How do I select the appropriate bar spacing for my application?",
+      "answer": "Bar spacing selection depends on several key factors: 1) Target separation size - typically set spacing about 10-15% larger than the desired separation point; 2) Material characteristics - increase spacing for sticky materials to prevent blinding; 3) Feed composition - consider the percentage of near-size material that may cause lodging; 4) Downstream equipment requirements - ensure appropriate sizing for crusher or mill feed specifications; 5) Production goals - wider spacing increases capacity but may allow more fines to pass; 6) Material fragmentation properties - harder materials may require different spacing than friable ones. Our engineering team provides detailed material analysis to recommend the optimal configuration for specific operating conditions and production requirements."
+    },
+    {
+      "question": "What materials can be processed with the ZGS Series equipment?",
+      "answer": "The ZGS Series handles diverse material types, including: 1) Hard rock ore from mining operations (gold, copper, iron, etc.); 2) Limestone, granite, and quarry stone for aggregate production; 3) Recycled concrete and construction debris; 4) Coal and energy minerals with variable composition; 5) Industrial minerals such as gypsum and phosphate; 6) River gravel and natural aggregate deposits. The equipment effectively processes materials with top size up to 500mm and densities ranging from 1.2-4.5 t/m³, with moisture content tolerance up to 15%. This versatility makes it suitable for primary separation across multiple industries where coarse material handling is required."
+    },
+    {
+      "question": "What are the maintenance requirements for a grizzly screen?",
+      "answer": "Maintenance protocol for optimal operation includes: 1) Daily visual inspection of bar wear and material flow patterns; 2) Weekly checking of fasteners and tension elements due to vibration effects; 3) Monthly lubrication of bearings and drive components as per schedule; 4) Quarterly inspection of vibration mechanism and structural integrity; 5) Bi-annual replacement of wear elements depending on material abrasiveness. The modular design allows for replacement of individual bars rather than complete deck assemblies, reducing maintenance time by up to 65%. Most operations report maintenance requirements of approximately 4-6 hours monthly, significantly less than conventional screening equipment in similar applications."
+    },
+    {
+      "question": "How can I maximize screening efficiency and throughput?",
+      "answer": "Key operational strategies include: 1) Maintain proper feed distribution across the full deck width; 2) Optimize feed rate to prevent deck overloading and material buildup; 3) Adjust bar spacing based on feed material characteristics and target separation size; 4) Ensure proper vibration parameters (8-12mm amplitude) for material type; 5) Install appropriate dust suppression measures for dry materials; 6) Implement proper feed chute design to control material velocity onto the deck; 7) Establish regular cleaning routines for difficult materials. These practices typically increase separation efficiency by 15-25% while maintaining maximum throughput rates and equipment reliability in demanding applications."
+    },
+    {
+      "question": "Can the equipment handle wet or sticky materials effectively?",
+      "answer": "Yes, the ZGS Series is specifically designed for challenging materials with several features addressing moisture issues: 1) Specialized T-profile bars that resist material adhesion; 2) Higher vibration amplitude settings (10-12mm) that effectively shed sticky particles; 3) Wider bar spacing options to prevent blinding in wet conditions; 4) Steeper deck angles (18-20°) for improved material flow with cohesive feeds; 5) Wear-resistant manganese steel construction that maintains performance even with abrasive clay-bearing materials. The equipment effectively handles materials with moisture content up to 15% without significant performance degradation, making it ideal for operations dealing with varying seasonal conditions or naturally damp feed materials."
+    },
+    {
+      "question": "What installation considerations are important for optimal performance?",
+      "answer": "Critical installation factors include: 1) Appropriate foundation design to support dynamic loads (typically 1.8-2.2 times static weight); 2) Proper vibration isolation to prevent force transmission to surrounding structures; 3) Adequate clearance (minimum 1m) above and below for material flow and maintenance access; 4) Correct feed chute design to distribute material evenly across the deck width; 5) Appropriate power supply for motor requirements with consideration for starting loads; 6) Effective dust containment systems for dry applications; 7) Accessibility for inspection and maintenance activities. Our technical team provides comprehensive installation guidelines and can review site plans to ensure optimal equipment placement and integration with existing processing circuits."
+    },
+    {
+      "question": "How does bar wear affect performance, and what are the replacement intervals?",
+      "answer": "Bar wear impacts performance through several mechanisms: 1) Increased spacing between bars as wear progresses, changing separation characteristics; 2) Development of rounded profiles that can affect material flow patterns; 3) Potential for increased material bypass of oversized particles. Typical replacement intervals range from 6-18 months depending on material abrasiveness, with manganese steel bars offering 2-3 times the service life of standard steel in most applications. The modular design allows for replacement of individual bars rather than complete assemblies, optimizing maintenance costs. Our application engineers can recommend specific wear-resistant alloys based on your material properties to maximize service intervals."
+    },
+    {
+      "question": "What economic benefits can operations expect when implementing a grizzly screen?",
+      "answer": "Quantifiable economic advantages include: 1) Crusher throughput increases of 20-30% due to improved feed consistency; 2) Reduction in crusher liner wear costs by 30-40%; 3) Overall energy consumption decrease of 12-18% across the processing circuit; 4) Increased recovery of valuable material through more efficient separation; 5) Labor cost reduction through decreased maintenance requirements; 6) Lower transportation costs by removing waste material early in the process; 7) Extended equipment life for downstream processes. Most operations experience ROI periods of 8-14 months depending on production volumes, with the greatest benefits seen in hard rock applications where crusher wear and energy consumption represent significant operational costs."
+    }
+  ],
+  "seo": {
+    "title": "Vibrating Grizzly Screen | Heavy-duty Primary Mining Separator",
+    "keywords": "grizzly screen,vibrating grizzly screen,heavy-duty grizzly,rock grizzly screen,grizzly bar screen,scalping screen,primary screening equipment,mining grizzly screen,aggregate screening,coarse material separator,pre-screening system,grizzly deck,vibratory grizzly,grizzly separator,heavy-duty vibrating screen,grizzly bar spacing,grizzly screen capacity,mining feeder,grizzly feeder,grizzly screen manufacturer",
+    "description": "Zexin Mining's vibrating grizzly screen delivers superior primary separation for mining and aggregate operations. Rugged design ensures high recovery rates with minimal maintenance, ideal for small mines processing diverse materials."
+  },
+  "searchKeywords": [
+    "grizzly screen",
+    "vibrating screen",
+    "vibrating grizzly screen",
+    "heavy-duty grizzly",
+    "rock grizzly screen",
+    "grizzly bar screen",
+    "primary screening equipment",
+    "scalping screen",
+    "aggregate screening",
+    "coarse material separator",
+    "grizzly separator"
+  ],
+  "relatedProducts": [
+    "banana-multislope-vibrating-screen",
+    "trommel-screen",
+    "dewatering-screen",
+    "inclined-vibrating-screen",
+    "linear-vibrating-screen"
+  ],
+  "imageSrcAlt": "Bar Vibrating Screen | Zexin Mining"
+}

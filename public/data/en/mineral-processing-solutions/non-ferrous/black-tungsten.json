@@ -1,0 +1,53 @@
+{
+  "id": "black-tungsten",
+  "mineralName": "Black Tungsten Ore",
+  "title": "Black Tungsten Ore Beneficiation Process",
+  "processTitle": "Black Tungsten Ore Beneficiation Process Flow",
+  "processIntroduction": "Black tungsten ore, as a crucial tungsten resource, typically occurs in quartz vein deposits, either as large veins or fine veins, characterized by coarse grain size and significant gravity differences - features that facilitate efficient separation. Based on years of practical experience, Zexin has developed an integrated beneficiation process centered on gravity separation, optimizing the process into four key stages: rough separation, gravity concentration, fine separation, and slime treatment, achieving efficient concentration and separation of black tungsten ore.",
+  "processSteps": [
+    {
+      "title": "Rough Separation",
+      "description": "In the rough separation stage, Zexin innovatively applies new dynamic screen jigs to pre-concentrate fine-grained materials, significantly improving feed grade through efficient pre-concentration. The rough concentrate proceeds directly to fine separation, effectively simplifying the process flow while reducing energy consumption and processing costs."
+    },
+    {
+      "title": "Gravity Concentration",
+      "description": "Gravity concentration is the core process in black tungsten ore beneficiation. Zexin employs an innovative combination of multi-stage jigging and shaking tables, coupled with middlings regrinding, creating an efficient closed-circuit gravity separation process. The qualified ore after fine crushing is classified by vibrating screens and fed to jigs and shaking tables respectively. Jig concentration produces high-grade rough concentrate, while coarse tailings undergo regrinding and recycling, and fine tailings enter multi-stage shaking tables for further separation, ensuring maximum recovery of valuable components."
+    },
+    {
+      "title": "Fine Separation",
+      "description": "In the fine separation stage, Zexin has developed unique combined processes of flotation-gravity or flotation-gravity-magnetic separation, achieving deep purification of black tungsten concentrate. Using innovative coarse-fine classification table-flotation technology (optimized combination of flotation and shaking tables) with mechanical flotation effectively removes sulfide minerals. For complex ores containing scheelite and cassiterite, a multi-process combination of gravity-flotation-magnetic separation is employed, achieving efficient separation of various concentrates and significantly enhancing product value."
+    },
+    {
+      "title": "Slime Treatment",
+      "description": "For slimes generated during the beneficiation process, Zexin has developed systematic treatment solutions. The process begins with efficient flotation for desulfurization, followed by flexible application of gravity separation, flotation, magnetic separation, and electrostatic separation or their combinations based on the characteristics of different minerals in the slimes. This approach not only achieves deep recovery of tungsten minerals but also enables comprehensive recovery of associated rare and precious metal minerals, embodying the concept of efficient resource utilization."
+    }
+  ],
+  "applicationsImage": "/images/products/mineral-processing-solutions/non-ferrous/black-tungsten-beneficiation-process-flow.jpg",
+  "applications": [
+    {
+      "title": "Large Vein Tungsten Ore Processing",
+      "description": "For quartz-vein type tungsten deposits, our optimized gravity separation process can fully leverage the advantages of coarse particle separation, achieving rapid and efficient pre-concentration while significantly reducing subsequent processing costs."
+    },
+    {
+      "title": "Fine Vein Tungsten Ore Separation",
+      "description": "Addressing the challenges of fine vein tungsten ore separation, our developed multi-stage combined separation process ensures efficient recovery of fine-grained materials, achieving ideal separation indices."
+    },
+    {
+      "title": "Complex Co-existing Ore Separation",
+      "description": "For complex ores containing scheelite, cassiterite, and other co-existing minerals, our gravity-flotation-magnetic separation combined process enables precise separation of various components, maximizing resource value."
+    },
+    {
+      "title": "Associated Metals Recovery",
+      "description": "Through advanced development in fine separation and slime treatment stages, we can achieve efficient recovery of associated metals, providing comprehensive solutions for resource utilization and creating greater economic benefits."
+    }
+  ],
+  "relatedProducts": [
+    "sawtooth-wave-jig",
+    "shaking-table",
+    "self-aspirated-flotation-cell",
+    "dewatering-screen",
+    "pneumatic-flotation-cell",
+    "submerged-spiral-classifier",
+    "wet-rod-mill"
+  ]
+}

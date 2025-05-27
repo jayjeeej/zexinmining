@@ -1,0 +1,22 @@
+{
+  "id": "guilin-yongfu-polymetallic",
+  "title": "桂林永福300吨/日铅锌铜多金属选矿厂",
+  "location": "中国广西桂林永福县",
+  "year": "2023",
+  "category": "多金属选矿",
+  "client": "某矿业公司",
+  "description": "泽鑫矿山设备为某矿业公司提供的桂林永福300吨/日铅锌铜多金属选矿厂项目，是一个老矿坑复产项目，包括选矿试验研究、工程设计、设备供应和安装调试等一条龙服务。",
+  "challenge": "该项目是一个老矿坑复产工程，面临诸多挑战：原矿石品位波动大，矿物组成复杂，铜铅锌硫化物相互嵌布，难以有效分离；矿区基础设施老旧，部分设备需要更新改造；环保要求日益严格，尾矿处理和水资源循环利用需要优化解决方案；同时还需要控制投资成本，确保项目经济可行性。",
+  "solution": "泽鑫矿山设备基于详细的矿石性质分析，设计了一套全面的加工方案。工艺流程首先采用两段一闭路破碎系统，将最大粒度350mm的原矿加工至12mm，其中粗碎采用颚式破碎机，细碎采用圆锥破碎机，筛分则使用圆振动筛进行物料分级。磨矿系统采用一段闭路磨矿与中矿再磨相结合的工艺，一段磨矿采用格子型球磨机配合高堰式单螺旋分级机，产品细度达到-200目占60%；中矿再磨则采用溢流型球磨机与水力旋流器，使再磨产品细度达到-200目占80%。在矿物分离环节，浮选采用铜铅混浮-尾矿浮锌-铜铅分离的工艺流程。铜铅混浮环节采用一粗三扫四精的浮选流程，粗扫选使用充气式浮选机，精选则采用自吸式浮选机；浮锌作业采用相似的一粗三扫三精流程；铜铅分离则采用一粗二扫二精流程，全部使用自吸式浮选机。精矿脱水方面，铜精矿采用沉淀池自然沉降脱水工艺，而铅、锌精矿则使用浓密机与陶瓷过滤机组成的两段机械脱水系统，最终精矿水分控制在约12%。尾矿处理采用湿式排放方式，由油隔离泵直接输送至尾矿库存储。",
+  "results": "该项目自投产以来运行稳定，日处理矿石300吨，产品回收率和精矿品位均达到设计要求。铜精矿品位达到20%以上，铅精矿品位达到60%以上，锌精矿品位达到50%以上。精确的工艺控制和高效的设备配置使选矿回收率较原工艺提高了5-8个百分点，显著提高了矿山的经济效益。工艺流程的优化也减少了选矿药剂用量，降低了生产成本和环境影响。该项目成功实现了资源的高效利用，为老矿山的复产和可持续发展提供了典范。",
+  "images": [
+    "/images/cases/guilin-yongfu-polymetallic/yongfu-lead-zinc-copper-processing-plant-guilin.jpg",
+    "/images/cases/guilin-yongfu-polymetallic/polymetallic-ore-flotation-process-flow.jpg",
+    "/images/cases/guilin-yongfu-polymetallic/lead-zinc-flotation-cells-separation-equipment.jpg"
+  ],
+  "imagesAlt": [
+    "Yongfu Lead Zinc Copper Processing Plant Guilin | Zexin Mining",
+    "Polymetallic Ore Flotation Process Flow | Zexin Mining",
+    "Lead Zinc Flotation Cells Separation Equipment | Zexin Mining"
+  ]
+}

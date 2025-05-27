@@ -1,0 +1,304 @@
+{
+  "id": "double-roll-permanent-magnetic-zircon-separator",
+  "title": "Double Roll Permanent Magnetic Zircon Separator",
+  "series": "CTZ Series Permanent Magnetic Separator",
+  "imageSrc": "/images/products/magnetic-separator/double-roll-permanent-magnetic-zircon-separator.jpg",
+  "productCategory": "Mineral Processing Equipment",
+  "subcategory": "magnetic-separator",
+  "model": "CTZ-160",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "2-8 t/h (2.2-8.8 stph)"
+    },
+    {
+      "key": "Magnetic Field Strength",
+      "displayValue": "10000-14000 Gs"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "3 Kw (4 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "st",
+          "conversionFactor": 1.10231,
+          "label": "st"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/magnetic-separator/double-roll-permanent-magnetic-zircon-separator",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/magnetic-separator/double-roll-permanent-magnetic-zircon-separator",
+    "zh": "/zh/products/ore-processing/magnetic-separator/double-roll-permanent-magnetic-zircon-separator"
+  },
+  "overview": "Zexin Mining's Double Roll Permanent Magnetic Zircon Separator delivers superior dry magnetic separation for weakly magnetic minerals. With two precision-engineered magnetic rollers arranged vertically and rare earth permanent magnets generating field strengths up to 14000 Gauss, these separators provide exceptional efficiency in processing fine-grained materials such as zircon, tungsten, tin, and rare earth minerals.",
+  "detailedDescription": "The CTZ Series Double Roll Permanent Magnetic Zircon Separator introduces innovative multi-stage magnetic separation technology that transforms the processing of weakly magnetic minerals. This system creates optimized particle separation through its powerful magnetic field distribution with intensities up to 14000 Gauss, addressing common recovery challenges while enhancing product purity. Its sequential approach to magnetic separation delivers consistent results across varying feed conditions, making it valuable processing equipment that adapts to different mineral characteristics without compromising operational efficiency or requiring water resources.",
+  "specifications": {
+    "title": "Double Roll Permanent Magnetic Zircon Separator Specifications",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Upper Roller Size (mm)",
+      "Lower Roller Size (mm)",
+      "Magnetic Field Strength (Gs)",
+      "Processing Capacity (t/h)",
+      "Motor Power (kW)",
+      "Weight (t)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Upper Roller Size (in.)",
+      "Lower Roller Size (in.)",
+      "Magnetic Field Strength (Gs)",
+      "Processing Capacity (stph)",
+      "Motor Power (hp)",
+      "Weight (st)"
+    ],
+    "tableData": [
+      [
+        "CTZ-160-1000",
+        "φ160×1000",
+        "φ160×800",
+        "10000-14000",
+        "2-5",
+        "3",
+        "2.5"
+      ],
+      [
+        "CTZ-160-1200",
+        "φ160×1200",
+        "φ160×1000",
+        "10000-14000",
+        "3-6",
+        "3",
+        "2.8"
+      ],
+      [
+        "CTZ-160-1500",
+        "φ160×1500",
+        "φ160×1200",
+        "10000-14000",
+        "4-8",
+        "3",
+        "3.2"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "CTZ-160-1000",
+        "φ6.3×39.4",
+        "φ6.3×31.5",
+        "10000-14000",
+        "2.2-5.5",
+        "4.0",
+        "2.8"
+      ],
+      [
+        "CTZ-160-1200",
+        "φ6.3×47.2",
+        "φ6.3×39.4",
+        "10000-14000",
+        "3.3-6.6",
+        "4.0",
+        "3.1"
+      ],
+      [
+        "CTZ-160-1500",
+        "φ6.3×59.1",
+        "φ6.3×47.2",
+        "10000-14000",
+        "4.4-8.8",
+        "4.0",
+        "3.5"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "length",
+      "",
+      "capacity",
+      "power",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Dual Roller Configuration",
+      "description": "The CTZ Series utilizes a precision-engineered vertical dual-roller configuration that maximizes separation efficiency and mineral recovery. This advanced design creates two sequential separation zones, enabling the progressive processing of minerals for improved product grades. The double-roller system increases recovery rates by up to 30% compared to conventional single-roller separators while maintaining exceptional separation precision."
+    },
+    {
+      "title": "High-Intensity Rare Earth Magnetic System",
+      "description": "Incorporates specialized rare earth permanent magnets that generate a uniform high-intensity magnetic field with strengths ranging from 10000 to 14000 Gauss. The optimized field geometry creates ideal conditions for particle separation, enabling effective processing of weakly magnetic materials with subtle magnetic differences and improving separation efficiency by up to 25% compared to conventional magnetic systems."
+    },
+    {
+      "title": "Precise Material Flow Control",
+      "description": "Features a proprietary feed distribution system that ensures optimal material presentation to both magnetic rollers. This specialized material flow control maintains ideal separation conditions even during extended processing campaigns, eliminating production interruptions and quality fluctuations while reducing material loss by up to 40% compared to conventional separators."
+    },
+    {
+      "title": "Dry Processing Technology",
+      "description": "Engineered for completely waterless operation, providing significant environmental and operational advantages in water-scarce regions. The dry separation process eliminates the need for water recovery systems, slurry handling, and dewatering equipment, reducing operating costs by up to 35% compared to wet separation processes while producing dry products ready for immediate packaging or further processing."
+    },
+    {
+      "title": "Adjustable Magnetic Field Configuration",
+      "description": "Equipped with innovative mechanisms that allow optimization of the magnetic field distribution for different mineral types. This adjustability enables precise targeting of specific mineral magnetic susceptibility ranges, maximizing recovery of valuable components while ensuring high concentrate grades across a wide range of feed characteristics and mineral compositions."
+    },
+    {
+      "title": "Wear-Resistant Components",
+      "description": "Constructed with premium-grade wear-resistant materials at all material contact points, ensuring extended operational life even when processing abrasive minerals. The specialized surface treatments and material selection reduce maintenance frequency by up to 60% compared to standard equipment, minimizing operational interruptions and replacement costs while maintaining consistent separation performance."
+    },
+    {
+      "title": "Integrated Control System",
+      "description": "Equipped with an intuitive control interface that allows real-time monitoring and adjustment of all critical operating parameters including roller speed, feed rate, and splitter positions. The intelligent control system includes automated performance optimization algorithms, enabling both manual and programmatic operation while maintaining detailed process records for quality assurance and continuous improvement."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Zircon Sand Processing",
+        "description": "Efficiently separates zircon from beach sand and heavy mineral concentrates, producing high-purity zircon for ceramics, foundry, and refractory applications. The high-intensity magnetic field effectively removes weakly magnetic minerals while preserving non-magnetic zircon crystals, resulting in premium-grade zircon products with controlled impurity levels."
+      },
+      {
+        "title": "Rare Earth Mineral Concentration",
+        "description": "Separates rare earth minerals such as monazite and xenotime from associated gangue and other heavy minerals, improving the quality and value of mineral concentrates. The precise magnetic field control enables selective segregation based on subtle magnetic susceptibility differences, producing high-grade concentrates for further processing into rare earth elements."
+      },
+      {
+        "title": "Tungsten Ore Beneficiation",
+        "description": "Effectively concentrates tungsten-bearing minerals such as wolframite while removing magnetic impurities from scheelite concentrates. The double-roll design enables sequential magnetic separation within a single unit, maximizing recovery of these valuable strategic minerals while maintaining exceptional grade control even with fine particle sizes."
+      },
+      {
+        "title": "Tin Mineral Processing",
+        "description": "Precisely separates cassiterite from associated minerals with different magnetic properties, producing high-grade tin concentrates for smelting operations. The adjustable magnetic field parameters allow optimization for complex tin ores with varying gangue mineralogy, ensuring maximum recovery of tin values while minimizing impurities."
+      },
+      {
+        "title": "Tantalum-Niobium Recovery",
+        "description": "Upgrades tantalum and niobium concentrates by removing magnetic mineral contaminants, producing premium products for the electronics and specialty alloy industries. The variable field intensity enables processing adaptation for diverse mineral types with different physical and magnetic characteristics, ensuring consistent product quality."
+      },
+      {
+        "title": "Industrial Mineral Purification",
+        "description": "Removes magnetic impurities from industrial minerals such as quartz, feldspar, and silica sand. The sophisticated magnetic field technology enables recovery of high-purity materials while removing unwanted magnetic particles, supporting production of premium-grade industrial minerals for glass, ceramics, and other high-specification applications."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does a double roll permanent magnetic zircon separator work?",
+      "answer": "The double roll permanent magnetic zircon separator operates based on the principle of magnetic susceptibility differences among minerals. The system utilizes two vertically arranged magnetic rollers with powerful rare earth permanent magnets that generate high-intensity magnetic fields ranging from 10000 to 14000 Gauss. As material passes through the first (upper) magnetic roller, moderately magnetic particles are attracted and separated, while the remaining material continues to the second (lower) roller for further refinement. This creates a sequential two-stage separation process within a single machine. The dual-roller configuration allows for progressive separation, with each roller optimized for different magnetic intensity ranges, enabling effective recovery of minerals with varying magnetic properties. This is particularly effective for weakly magnetic minerals that conventional separators might miss, while producing multiple product streams with different magnetic characteristics."
+    },
+    {
+      "question": "What advantages does a double roll design offer compared to single roll magnetic separators?",
+      "answer": "The double roll design provides several significant advantages: 1) Enhanced separation efficiency through sequential two-stage processing within a single unit; 2) Increased recovery rates of up to 30% for weakly magnetic minerals; 3) Ability to process mixed feeds with varying magnetic susceptibilities more effectively; 4) Improved selectivity and grade control through staged separation; 5) Reduced floor space requirements compared to multiple single-roll units; 6) Lower energy consumption per ton of processed material; 7) Ability to produce multiple product streams with different magnetic properties simultaneously; 8) More consistent performance with feed variations due to the progressive separation approach. These benefits make double roll separators particularly valuable for complex mineral processing applications requiring high precision and efficiency, especially when dealing with minerals that have subtle differences in magnetic properties."
+    },
+    {
+      "question": "What materials can be processed with the CTZ series separators?",
+      "answer": "The CTZ series effectively separates materials based on magnetic susceptibility differences, including: 1) Zircon sand and concentrates; 2) Rare earth minerals such as monazite and xenotime; 3) Tungsten-bearing minerals like wolframite; 4) Tin minerals including cassiterite with magnetic inclusions; 5) Tantalum-niobium minerals; 6) Industrial minerals requiring magnetic cleaning such as quartz and feldspar; 7) Beach sand heavy mineral concentrates; 8) Ilmenite-rutile-zircon mixtures from mineral sands operations. The separators handle dry materials with particle sizes typically between 0.1-2mm and are particularly effective for fine-grained weakly magnetic minerals that might be difficult to recover using conventional magnetic separation methods. The high field intensity makes these separators ideal for minerals with magnetic susceptibilities in the range of 10^-5 to 10^-3 cm³/g."
+    },
+    {
+      "question": "How does the dual-roller system improve separation performance?",
+      "answer": "The dual-roller system enhances separation performance in multiple ways: 1) Sequential processing that allows coarse separation followed by fine refinement; 2) Optimization of each roller for different magnetic intensity ranges, matching specific mineral characteristics; 3) Progressive removal of minerals with varying magnetic susceptibilities; 4) Reduced particle entrainment and misplacement compared to single-stage systems; 5) Ability to handle higher throughput while maintaining separation efficiency; 6) Enhanced recovery of weakly magnetic particles that might be missed in single-roll designs; 7) Creation of multiple product streams with different magnetic characteristics; 8) More consistent performance with variable feeds. The upper roller typically removes the more magnetic fractions, allowing the lower roller to focus on the more difficult, subtly magnetic particles. This sequential approach significantly improves both recovery and grade compared to single-stage separation processes."
+    },
+    {
+      "question": "What maintenance procedures are recommended for double roll magnetic separators?",
+      "answer": "Recommended maintenance includes: 1) Daily inspection of magnetic roller surfaces for material buildup or wear; 2) Regular cleaning of product collection chutes and splitters to prevent blockages; 3) Weekly verification of roller bearing conditions and drive components; 4) Monthly lubrication of mechanical systems according to the manufacturer's schedule; 5) Quarterly inspection of magnetic circuit integrity and field strength using a gaussmeter; 6) Semi-annual comprehensive inspection of all components including drive systems and material handling components; 7) Annual replacement of wear-prone components if needed. Most operations report maintenance requirements of approximately 3-4 hours monthly, with feed systems requiring the most attention. Proper maintenance ensures consistent separation performance and extends equipment life while maintaining safe operating conditions. It's particularly important to check for any ferromagnetic material buildup on the rollers as this can significantly impact separation efficiency."
+    },
+    {
+      "question": "How does feed material preparation affect magnetic separation efficiency?",
+      "answer": "Feed preparation critically impacts separation efficiency through several factors: 1) Particle size distribution should be controlled for optimal separation, typically under 2mm, with finer sizes generally yielding better selectivity; 2) Moisture content should be minimized as excess moisture can cause particles to agglomerate, reducing separation efficiency; 3) Material liberation degree affects separation - well-liberated particles show better separation characteristics; 4) Consistent feed rate and even distribution across rollers is essential for stable performance; 5) Pre-classification of feed improves efficiency by presenting similarly sized particles to the magnetic field; 6) Dust removal prior to separation prevents equipment fouling and improves workplace conditions; 7) Pre-concentration using other methods (e.g., gravity) can improve overall circuit performance by reducing the load on magnetic separators. Investing in appropriate feed preparation systems typically improves overall recovery and grade by 15-25% while extending equipment life and reducing operational issues."
+    },
+    {
+      "question": "What factors influence the optimal processing capacity of the separator?",
+      "answer": "Optimal processing capacity depends on multiple considerations: 1) Magnetic susceptibility of target minerals - more weakly magnetic materials generally require slower throughput; 2) Particle size distribution - finer materials typically require reduced capacity for effective separation; 3) Roller dimensions - longer and larger diameter rollers allow higher throughput; 4) Feed material density and flow characteristics; 5) Desired separation precision and product quality requirements; 6) Magnetic field intensity configuration; 7) Material bed depth on the magnetic rollers; 8) Potential for particle agglomeration or clumping; 9) Feed composition complexity and variability. While the equipment has rated capacity ranges (e.g., 2-8 t/h for the CTZ series), actual optimal capacity should be determined through testing and optimization for each specific material. Operating beyond the optimal capacity typically results in reduced separation efficiency, lower product grades, and potential recovery losses of valuable minerals."
+    },
+    {
+      "question": "Can the CTZ series handle materials with variable magnetic properties?",
+      "answer": "Yes, the CTZ series is specifically designed to handle materials with variable magnetic properties through several adaptive features: 1) Two-stage sequential processing that allows separation of minerals with different magnetic susceptibilities; 2) Adjustable splitter positions to optimize product stream divisions; 3) Configurable feed rate to optimize residence time in the magnetic field; 4) Ability to process minerals with a wide range of magnetic susceptibilities; 5) Multiple product collection points that can be adjusted based on performance monitoring; 6) Feed presentation systems that ensure uniform material distribution; 7) Stabilized magnetic circuit design that maintains consistent field strength during operation. These adaptability features make the double roll system particularly effective for processing natural mineral deposits with inherent variability or mixed materials with different magnetic characteristics. The system excels at separating complex mineral assemblages that might be difficult to process with simpler magnetic separation equipment."
+    },
+    {
+      "question": "What are the advantages of rare earth permanent magnets compared to electromagnetic systems?",
+      "answer": "Rare earth permanent magnets offer numerous advantages: 1) Higher magnetic field strengths (up to 14000 Gauss) compared to conventional electromagnets; 2) No electricity consumption for field generation, reducing operating costs significantly; 3) Elimination of cooling water requirements for electromagnetic coils; 4) Consistent field strength without fluctuations due to power variations; 5) Zero risk of separation failure due to power outages; 6) Lower maintenance requirements without electrical components and cooling systems; 7) Smaller and lighter equipment design with more compact magnetic circuits; 8) Immediate operation without warm-up periods; 9) Enhanced ability to capture weakly magnetic particles; 10) Lower overall lifetime cost despite higher initial investment. These benefits make rare earth permanent magnetic separators particularly valuable for applications requiring high field intensities and reliable operation, especially in remote locations or areas with unreliable power supply. The only limitation is that field strength is not adjustable during operation, but this is addressed through mechanical adjustment of separation parameters."
+    }
+  ],
+  "seo": {
+    "title": "Double Roll Permanent Magnetic Zircon Separator | High-Precision Mineral Processing | Zexin Mining",
+    "keywords": "double roll permanent zircon magnetic separator,zircon roll magnetic separator,dual roll zircon separator,permanent magnet zircon roll separator,zircon sand magnetic separator,high intensity zircon roll separator,two roll zirconium separator,zircon ore magnetic separator,industrial zircon roll separator,mineral zircon magnetic separator,zirconium roll separator machine,zirconium sand processing equipment,roll type zircon separator,zirconium magnetic roll separator,zirconium ore sorting machine,permanent magnet roll separator for zircon,zirconium mineral recovery system,double roll zirconium concentrator,zirconium magnetic separation technology,zirconium sand purification equipment",
+    "description": "Zexin Mining's Double Roll Permanent Magnetic Zircon Separator achieves superior mineral separation with 14000 Gauss field strength. Our two-stage processing system delivers 30% higher recovery rates for zircon, rare earth minerals, and tungsten ores with zero water consumption."
+  },
+  "searchKeywords": [
+    "double roll permanent zircon magnetic separator",
+    "zircon sand magnetic separator",
+    "high intensity magnetic roll separator",
+    "rare earth mineral separator",
+    "tungsten ore magnetic separator",
+    "zirconium processing equipment",
+    "dry magnetic separation system",
+    "permanent magnet zircon separator",
+    "industrial mineral purification",
+    "high-efficiency zircon separator"
+  ],
+  "relatedProducts": [
+    "permanent-drum-magnetic-separator",
+    "wet-high-intensity-magnetic-roll-separator",
+    "plate-high-intensity-magnetic-separator",
+    "triple-disc-belt-magnetic-separator",
+    "four-roll-high-voltage-electrostatic-separator"
+  ],
+  "imageSrcAlt": "Double Roll Permanent Magnetic Zircon Separator | Zexin Mining"
+}

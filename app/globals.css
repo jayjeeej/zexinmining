@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS变量定义 */
+:root {
+  --primary-default: 43, 108, 176; /* rgb值：蓝色 */
+  --primary-hover: 33, 88, 146;
+  --primary-active: 23, 68, 116;
+  --secondary-default: 224, 60, 49; /* rgb值：红色 */
+  --secondary-hover: 194, 50, 39;
+  --secondary-active: 164, 40, 29;
+  --gray-50: 249, 250, 251;
+  --gray-100: 243, 244, 246;
+  --gray-200: 229, 231, 235;
+  --gray-300: 209, 213, 219;
+  --gray-400: 156, 163, 175;
+  --gray-500: 107, 114, 128;
+  --gray-600: 75, 85, 99;
+  --gray-700: 55, 65, 81;
+  --gray-800: 31, 41, 55;
+  --gray-900: 17, 24, 39;
+  
+  /* 过渡动画设置 */
+  --page-transition-duration: 300ms;
+  --element-transition-duration: 200ms;
+}
+
+/* 全局平滑过渡效果  */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 页面过渡动画 */
+body {
+  opacity: 1;
+  transition: opacity var(--page-transition-duration) ease-in-out;
+}
+
+/* 平滑显示图片，防止闪烁 */
+img {
+  transition: opacity var(--element-transition-duration) ease-in-out;
+}
+
+/* 产品卡片过渡效果 */
+.product-grid-container {
+  transition: opacity var(--element-transition-duration) ease-in-out;
+}
+
+/* 固定高度的容器，防止布局移位 */
+.product-grid-container ul {
+  min-height: 500px; /* 根据实际内容调整 */
+}
+
+/* 预加载过渡效果 */
+.preloading * {
+  transition: none !important;
+}
+
+/* 字体声明 */
+@font-face {
+  font-family: 'ZexinSansHeadline';
+  src: url('/fonts/zexinSansHeadline-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 兼容旧代码的Medium字重字体声明 */
+@font-face {
+  font-family: 'ZexinSansDisplay';
+  src: url('/fonts/ZexinSansDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ZexinSansText';
+  src: url('/fonts/zexinSansText-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ZexinSansText';
+  src: url('/fonts/zexinSansText-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 应用ZexinSansText字体到整个网站 */
+@layer base {
+  html {
+    font-family: 'ZexinSansText', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  /* 应用ZexinSansHeadline字体到标题 */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'ZexinSansHeadline', 'ZexinSansText', system-ui, sans-serif;
+  }
+}
+
+/* Add any custom global styles below */
+/* Removed empty body ruleset */ 
+
+/* 隐藏滚动条样式 */
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+}
+
+@layer components {
+  .contain {
+    width: 100%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .contain {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .contain {
+      max-width: 92%;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .contain {
+      max-width: 95%;
+    }
+  }
+} 

@@ -1,0 +1,380 @@
+{
+  "id": "centrifugal-separator",
+  "title": "STLB Series Enhanced Gravity Concentrator",
+  "series": "STLB Series High-Efficiency Centrifugal Separator",
+  "imageSrc": "/images/products/gravity-separation/centrifugal-separator.jpg",
+  "productCategory": "Gravity Separation Equipment",
+  "subcategory": "gravity-separation",
+  "model": "STLB60",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "8-12 mtph (8.8-13.2 stph)"
+    },
+    {
+      "key": "Max. feed size",
+      "displayValue": "0-5 mm (0-0.2 in.)"
+    },
+    {
+      "key": "Motor power",
+      "displayValue": "4 kW (5.4 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "ton",
+          "conversionFactor": 1.10231,
+          "label": "ton"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "mtph"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/gravity-separation/centrifugal-separator",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/gravity-separation/centrifugal-separator",
+    "zh": "/zh/products/ore-processing/gravity-separation/centrifugal-separator"
+  },
+  "overview": "The STLB Series enhanced gravity concentrator employs advanced centrifugal concentration technology, specifically engineered for efficient recovery of free gold and precious metals. Through high-G force separation and fluidized bed technology, it achieves exceptional recovery rates for particles ranging from 0.074mm to 5mm. The equipment excels in processing alluvial gold, hard rock gold ore, and tailings reprocessing, with recovery rates consistently exceeding 95%.",
+  "detailedDescription": "The STLB Series gold centrifugal concentrator introduces innovative high-G force technology that transforms fine particle separation in precious metal recovery. This enhanced gravity concentrator creates optimized mineral stratification through its precision-engineered bowl design, addressing common challenges with ultra-fine gold while enhancing resource utilization. Its balanced approach to centrifugal concentration delivers consistent results across diverse ore types, making it valuable equipment for operations processing alluvial, hard rock, and tailings material without compromising recovery efficiency.",
+  "specifications": {
+    "title": "Centrifugal Separator Technical Specifications",
+    "note": "Can be customized according to customer requirements",
+    "tableHeaders": [
+      "Model",
+      "Processing Capacity (t/h)",
+      "Backwash Water Volume (m³/h)",
+      "Slurry Water Volume (m³/h)",
+      "Feed Concentration (%)",
+      "Feed Size (mm)",
+      "Concentrate Weight per Output (kg)",
+      "Motor Power (kW)",
+      "Weight (kg)",
+      "Dimensions (mm)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Processing Capacity (stph)",
+      "Backwash Water Volume (m³/h)",
+      "Slurry Water Volume (m³/h)",
+      "Feed Concentration (%)",
+      "Feed Size (in.)",
+      "Concentrate Weight per Output (lb)",
+      "Motor Power (hp)",
+      "Weight (lb)",
+      "Dimensions (in.)"
+    ],
+    "tableData": [
+      [
+        "STLB20",
+        "0-0.6",
+        "2-3",
+        "1.5-4",
+        "0-50",
+        "0-3",
+        "2",
+        "0.75",
+        "205",
+        "914×700×900"
+      ],
+      [
+        "STLB30",
+        "2-3",
+        "3-5",
+        "5-7",
+        "0-50",
+        "0-3",
+        "3-5",
+        "1.5",
+        "380",
+        "1160×885×1165"
+      ],
+      [
+        "STLB60",
+        "8-12",
+        "7-10",
+        "8-12",
+        "0-50",
+        "0-5",
+        "10-20",
+        "4",
+        "1100",
+        "1820×1450×1700"
+      ],
+      [
+        "STLB80",
+        "40-45",
+        "30-36",
+        "40-45",
+        "0-50",
+        "0-5",
+        "40-50",
+        "11",
+        "2300",
+        "2476×2032×2018"
+      ],
+      [
+        "STLB100",
+        "60-80",
+        "50-60",
+        "60-80",
+        "0-50",
+        "0-6",
+        "70-80",
+        "18.5",
+        "3700",
+        "2849×2085×2426"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "STLB20",
+        "0-0.66",
+        "2-3",
+        "1.5-4",
+        "0-50",
+        "0-0.12",
+        "4.4",
+        "1",
+        "452",
+        "36×28×35"
+      ],
+      [
+        "STLB30",
+        "2.2-3.3",
+        "3-5",
+        "5-7",
+        "0-50",
+        "0-0.12",
+        "6.6-11",
+        "2",
+        "838",
+        "46×35×46"
+      ],
+      [
+        "STLB60",
+        "8.8-13.2",
+        "7-10",
+        "8-12",
+        "0-50",
+        "0-0.2",
+        "22-44",
+        "5.4",
+        "2425",
+        "72×57×67"
+      ],
+      [
+        "STLB80",
+        "44-50",
+        "30-36",
+        "40-45",
+        "0-50",
+        "0-0.2",
+        "88-110",
+        "14.7",
+        "5071",
+        "97×80×79"
+      ],
+      [
+        "STLB100",
+        "66-88",
+        "50-60",
+        "60-80",
+        "0-50",
+        "0-0.24",
+        "154-176",
+        "24.8",
+        "8157",
+        "112×82×96"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "capacity",
+      "",
+      "",
+      "",
+      "length",
+      "weight",
+      "power",
+      "weight",
+      "length"
+    ]
+  },
+  "features": [
+    {
+      "title": "Advanced Fluidized Bed Technology",
+      "description": "Incorporates patented fluidization system with optimized water distribution, achieving consistent recovery rates above 95% for particles down to 0.074mm."
+    },
+    {
+      "title": "Precision G-Force Control",
+      "description": "Advanced centrifugal system with variable G-force control enables optimal separation across different particle size ranges and mineral densities."
+    },
+    {
+      "title": "Enhanced Water Management",
+      "description": "Efficient water distribution system reduces consumption by 30% while maintaining optimal fluidization and separation performance."
+    },
+    {
+      "title": "Superior Concentration Design",
+      "description": "Patented concentration bowl geometry maximizes particle retention and recovery, particularly effective for ultra-fine gold particles."
+    },
+    {
+      "title": "Streamlined Maintenance",
+      "description": "Modular design with rubber-lined internals and stainless steel components reduces maintenance time by 50% and extends service life."
+    },
+    {
+      "title": "Multi-Mineral Processing",
+      "description": "Versatile operation handles various precious metals including gold, platinum, silver, and rare earth elements with consistent high recovery rates."
+    },
+    {
+      "title": "Robust Construction",
+      "description": "Heavy-duty components with wear-resistant materials ensure 8-10 years of reliable operation in demanding mining environments."
+    },
+    {
+      "title": "Environmental Compliance",
+      "description": "Closed-circuit operation with zero chemical usage meets strict environmental regulations while maintaining high recovery efficiency."
+    }
+  ],
+  "applications": {
+    "title": "Application Areas",
+    "items": [
+      {
+        "title": "Hard Rock Gold Mining",
+        "description": "Optimized for primary gold ore processing, achieving recovery rates up to 98% for free gold, particularly effective in grinding circuit applications."
+      },
+      {
+        "title": "Alluvial Gold Recovery",
+        "description": "Specialized configuration for placer gold operations, efficiently recovering fine gold from 0.074mm to 2mm with minimal gangue entrainment."
+      },
+      {
+        "title": "Tailings Reprocessing",
+        "description": "Enhanced recovery of residual gold from tailings with 40% higher efficiency than conventional gravity methods, maximizing resource utilization."
+      },
+      {
+        "title": "PGM Concentration",
+        "description": "Effective separation of platinum group metals and associated precious minerals, achieving consistent high-grade concentrates."
+      }
+    ]
+  },
+  "technicalAdvantages": null,
+  "faqs": [
+    {
+      "question": "What is the operating principle of the STLB Series enhanced gravity concentrator?",
+      "answer": "The concentrator utilizes enhanced gravitational force through centrifugal action, creating a stable fluidized bed environment. Heavy minerals are captured in the concentration zone while lighter particles are discharged, achieving precise separation based on density differences."
+    },
+    {
+      "question": "What particle size range is optimal for gold recovery?",
+      "answer": "The STLB Series effectively processes material from 0.074mm to 5mm, with optimal performance in the 0.074-2mm range. The advanced fluidization system enables recovery rates exceeding 95% for ultra-fine particles down to 0.074mm."
+    },
+    {
+      "question": "How can gold recovery rates be maximized?",
+      "answer": "Recovery optimization involves maintaining proper feed density (20-30% solids), ensuring stable feed rate, and adjusting operating parameters including G-force and fluidization water pressure based on ore characteristics."
+    },
+    {
+      "question": "What maintenance schedule is recommended?",
+      "answer": "Regular inspections are recommended every 500 operating hours, with comprehensive maintenance at 1000-hour intervals. The rubber-lined internals and stainless steel components extend service life to 8-10 years under normal conditions."
+    },
+    {
+      "question": "Can the equipment be integrated into existing processing circuits?",
+      "answer": "Yes, the STLB Series features standardized connections and flexible installation options, allowing seamless integration into grinding circuits, gravity circuits, or as a scavenging unit in flotation plants."
+    },
+    {
+      "question": "What are the water requirements and management options?",
+      "answer": "The STLB60 requires 15-22 m³/h of process water. The advanced water management system includes closed-circuit operation, reducing fresh water consumption by up to 80% through recycling."
+    },
+    {
+      "question": "What advantages does it offer over conventional gravity separation?",
+      "answer": "Compared to traditional methods, the STLB Series delivers 40% higher recovery rates, especially for fine particles, while consuming 30% less energy and requiring minimal operator intervention."
+    },
+    {
+      "question": "What is the expected service life and durability?",
+      "answer": "With proper maintenance, the equipment operates reliably for 8-10 years. Key components use industrial-grade wear-resistant materials, significantly reducing replacement frequency and operating costs."
+    },
+    {
+      "question": "Can it process multiple mineral types simultaneously?",
+      "answer": "Yes, the adjustable operating parameters allow efficient processing of various precious metals and heavy minerals simultaneously, maintaining high recovery rates for each target mineral."
+    },
+    {
+      "question": "What technical support and services are provided?",
+      "answer": "We offer comprehensive support including installation supervision, operator training, process optimization, and regular maintenance services to ensure optimal equipment performance throughout its lifecycle."
+    }
+  ],
+  "seo": {
+    "keywords": "centrifugal concentrator,gold centrifugal concentrator,centrifugal gold separator,centrifugal concentrator for fine gold,centrifugal concentrator for alluvial gold,centrifugal concentrator for placer gold,centrifugal concentrator for tailings recovery,centrifugal concentrator for tin ore,centrifugal concentrator for tungsten recovery,small scale gold centrifugal concentrator,hard rock gold centrifugal separator,energy saving centrifugal concentrator,mining centrifugal concentrator,fine gold recovery centrifugal concentrator,centrifugal concentrator for mineral processing,STLB series,STLB60,precious metal recovery equipment",
+    "description": "Zexin Mining's STLB Series centrifugal concentrator achieves 95-98% gold recovery efficiency. Our professional gold separator equipment processes fine, alluvial, placer gold and tailings with 30% less energy consumption. Ideal for small-scale mining with minimal maintenance requirements.",
+    "title": "STLB Gold Centrifugal Concentrator | High-Recovery Separator for Fine Gold Mining"
+  },
+  "relatedProducts": [
+    "synchronous-counter-directional-jig",
+    "synchronous-counter-directional-jig-small",
+    "sawtooth-wave-jig",
+    "shaking-table",
+    "spiral-chute"
+  ],
+  "imageSrcAlt": "Centrifugal Separator | Zexin Mining"
+}

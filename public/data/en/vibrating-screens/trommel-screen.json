@@ -1,0 +1,308 @@
+{
+  "id": "trommel-screen",
+  "title": "Trommel Screen",
+  "series": "GT Series Trommel Screen",
+  "imageSrc": "/images/products/vibrating-screens/trommel-screen.jpg",
+  "productCategory": "Mineral Screen Equipment",
+  "subcategory": "vibrating-screens",
+  "model": "GT2460",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "30-240 t/h (33-264 stph)"
+    },
+    {
+      "key": "Screening particle size",
+      "displayValue": "10-100 mm (0.39-3.94 in.)"
+    },
+    {
+      "key": "Motor power",
+      "displayValue": "3-11 kW (4-15 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "m",
+          "conversionFactor": 1,
+          "label": "m"
+        },
+        {
+          "unit": "ft",
+          "conversionFactor": 3.28084,
+          "label": "ft"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/vibrating-screens/trommel-screen",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/vibrating-screens/trommel-screen",
+    "zh": "/zh/products/ore-processing/vibrating-screens/trommel-screen"
+  },
+  "overview": "Zexin Mining's GT Series Trommel Screen represents advanced rotary screening technology, featuring a slow-rotating drum (3-6rpm) with integrated spiral lifting system. This heavy-duty screening solution processes 30-240 m³/h of material through apertures ranging from 10-100mm. Engineered for superior performance in high-moisture conditions, it excels in mining, recycling, and aggregate applications, offering extended service life through wear-resistant design and efficient material separation.",
+  "detailedDescription": "The GT Series embodies a distinct engineering philosophy in material separation that leverages rotational dynamics rather than vibrational force. This equipment represents a strategic alternative within the screening technology spectrum, particularly valuable where conventional vibrating screens face inherent limitations. Its significance extends beyond screening performance to operational economics, addressing the total cost of ownership through reduced energy requirements and maintenance complexity. The system's fundamental contribution to mineral processing stems from its ability to transform traditionally problematic materials into processable streams while creating minimal operational disruption.",
+  "specifications": {
+    "title": "Trommel Screen Technical Specifications",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Drum Diameter (m)",
+      "Drum Length (m)",
+      "Aperture Size (mm)",
+      "Capacity (t/h)",
+      "Motor Power (kW)",
+      "Weight (t)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Drum Diameter (ft)",
+      "Drum Length (ft)",
+      "Aperture Size (in.)",
+      "Capacity (stph)",
+      "Motor Power (hp)",
+      "Weight (ton)"
+    ],
+    "tableData": [
+      [
+        "GT1230",
+        "1.2",
+        "3.0",
+        "10-100",
+        "30-60",
+        "3",
+        "2.6"
+      ],
+      [
+        "GT1540",
+        "1.5",
+        "4.0",
+        "10-100",
+        "50-100",
+        "4",
+        "3.8"
+      ],
+      [
+        "GT1550",
+        "1.5",
+        "5.0",
+        "10-100",
+        "60-120",
+        "5.5",
+        "4.5"
+      ],
+      [
+        "GT1860",
+        "1.8",
+        "6.0",
+        "10-100",
+        "90-180",
+        "7.5",
+        "7.2"
+      ],
+      [
+        "GT2060",
+        "2.0",
+        "6.0",
+        "10-100",
+        "120-240",
+        "11",
+        "9.5"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "GT1230",
+        "3.9",
+        "9.8",
+        "0.39-3.94",
+        "33-66",
+        "4",
+        "2.9"
+      ],
+      [
+        "GT1540",
+        "4.9",
+        "13.1",
+        "0.39-3.94",
+        "55-110",
+        "5.4",
+        "4.2"
+      ],
+      [
+        "GT1550",
+        "4.9",
+        "16.4",
+        "0.39-3.94",
+        "66-132",
+        "7.4",
+        "5.0"
+      ],
+      [
+        "GT1860",
+        "5.9",
+        "19.7",
+        "0.39-3.94",
+        "99-198",
+        "10.1",
+        "7.9"
+      ],
+      [
+        "GT2060",
+        "6.6",
+        "19.7",
+        "0.39-3.94",
+        "132-264",
+        "14.8",
+        "10.5"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "length",
+      "length",
+      "capacity",
+      "power",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Advanced Rotary Design",
+      "description": "Precision-engineered drum with 3-6rpm rotation speed and optimized spiral lifting system increases material retention time by 50%. Special drum structure ensures even material distribution, preventing overloading and improving screening efficiency by 35% compared to conventional trommels. Unique spiral flight design increases material contact surface area, enhancing separation accuracy to 98%."
+    },
+    {
+      "title": "High-Performance Screening",
+      "description": "Customizable aperture sizes (10-100mm) with anti-clogging design handles materials with moisture content up to 35%. Unique screen configuration maintains 95% open area while increasing throughput by 25% with precise classification. Innovative stepped aperture distribution enhances screening uniformity and reduces material adhesion."
+    },
+    {
+      "title": "Wear-Resistant Construction",
+      "description": "Premium wear-resistant liners with hardness up to HRC65 extend service life 3-4 times longer than standard materials. Modular screen panels with quick-change system reduce maintenance downtime by 60% and operating costs by 40%. Special alloy steel screen panels with 50% improved impact resistance withstand harsh operating conditions."
+    },
+    {
+      "title": "Energy-Efficient Operation",
+      "description": "Low-speed, high-torque drive system consumes 35% less energy than conventional screening equipment. Variable frequency control enables optimal speed selection for different materials while minimizing energy usage. Intelligent start-stop system automatically adjusts operating state based on material load, saving up to 25% additional energy."
+    },
+    {
+      "title": "Versatile Application Design",
+      "description": "Processes a wide range of materials from minerals to construction waste with capacities from 30-240 m³/h. Adapts to feed materials with moisture content up to 35%, operating temperature from -20°C to 60°C, suitable for indoor and outdoor installation. Optional dust suppression, noise reduction, and automatic cleaning systems available."
+    },
+    {
+      "title": "Environmental Noise Reduction",
+      "description": "Features innovative sound-dampening materials and vibration reduction technology, controlling operational noise below 75 decibels. Sealed design reduces dust emissions by over 90%. Equipped with intelligent spraying system achieving 95% dust suppression efficiency with 40% less water consumption than conventional equipment."
+    },
+    {
+      "title": "Safety Protection Systems",
+      "description": "Equipped with multiple safety protection devices including overload protection, emergency stop, and anti-pinch devices. Intelligent monitoring system continuously tracks equipment operation status, automatically alerting and taking protective measures when abnormalities are detected. Maintenance access designed with ergonomics to ensure safe maintenance procedures."
+    }
+  ],
+  "applications": {
+    "title": "Application Fields",
+    "items": [
+      {
+        "title": "Mining and Mineral Processing",
+        "description": "Efficiently screens gold ore, coal, iron ore, and various minerals, with specialized drum design for optimal material separation and recovery. Satisfies both wet and dry processing requirements while maintaining consistent throughput."
+      },
+      {
+        "title": "Construction and Demolition Waste",
+        "description": "Excels in construction waste recycling, processing concrete, bricks, and mixed debris. Heavy-duty construction handles abrasive materials while ensuring high-quality material recovery."
+      },
+      {
+        "title": "Sand and Aggregate Processing",
+        "description": "Precisely classifies sand, gravel, and crushed stone with effective washing capabilities. Ideal for producing clean, well-graded construction aggregates while minimizing material loss."
+      },
+      {
+        "title": "Compost and Organic Waste",
+        "description": "Features specialized anti-clogging design for effective screening of compost, wood waste, and organic materials. Maintains high throughput even when processing sticky, high-moisture content materials."
+      },
+      {
+        "title": "Municipal Solid Waste",
+        "description": "Reliably processes municipal waste streams, separating recyclables and organic materials. Robust construction handles variable feed materials while ensuring consistent product quality."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What advantages does the GT Series Trommel Screen offer compared to traditional screening equipment?",
+      "answer": "The GT Series offers multiple advantages: 1) 35% improved screening efficiency through optimized drum design and spiral lifting system; 2) Capability to handle materials with up to 35% moisture content; 3) 35% energy savings through low-speed operation; 4) 50% reduced maintenance time through modular design; 5) 3-4 times longer wear part lifespan; 6) Intelligent control system ensuring optimal performance; 7) Versatile application range from mining to waste processing; 8) Environmental noise-reduction design, keeping noise below 75 decibels; 9) High intelligence level, supporting remote monitoring and fault prediction."
+    },
+    {
+      "question": "How does the trommel screen effectively handle high-moisture materials?",
+      "answer": "Our trommel effectively handles high-moisture materials through: 1) Special drum rotation structure preventing material accumulation; 2) Anti-clogging screen panels maintaining throughput; 3) Optimized 3-6rpm rotation speed ensuring proper material flow; 4) Spiral lifting system improving material separation; 5) Wear-resistant liners handling abrasive wet materials; 6) Intelligent spraying system assisting material flow; 7) Special aperture design preventing blockage; 8) Automatic cleaning system keeping screens clear. The system maintains screening efficiency for materials with moisture content up to 35%."
+    },
+    {
+      "question": "What maintenance requirements should operators consider?",
+      "answer": "Regular maintenance includes: 1) Daily checks: drum rotation, material flow, bearing temperature, drive components; 2) Weekly maintenance: checking drive systems, screen panel wear, clearing accumulated material, tightening bolts; 3) Monthly maintenance: lubricating bearings, checking motors, calibrating rotation speed, replacing worn parts; 4) Quarterly maintenance: comprehensive inspection, replacing wear items, testing control systems. Key component lifespan: screen panels 6-12 months, wear-resistant liners 12-18 months, bearings 2-3 years, drive components 3-4 years. Intelligent monitoring systems provide preventive maintenance reminders and component life prediction."
+    },
+    {
+      "question": "How should one select the appropriate model for specific applications?",
+      "answer": "Model selection should consider: 1) Performance requirements - recommend selecting a model 20% above actual needs; 2) Material characteristics - including particle size distribution, density, moisture content, stickiness; 3) Process requirements - separation precision, product specifications, processing technology; 4) Site conditions - installation space, feed and discharge methods, auxiliary equipment; 5) Usage environment - indoor/outdoor, temperature, humidity, dust; 6) Maintenance conditions - spare parts supply, maintenance space, technical support. We provide on-site assessment, material testing, and 3D simulation services to ensure optimal selection."
+    },
+    {
+      "question": "What economic benefits can operators expect?",
+      "answer": "Key economic advantages include: 1) Energy savings - 25-40% energy consumption reduction compared to conventional equipment; 2) Maintenance cost - 40% lower maintenance expenses, wear parts lasting 3-4 times longer; 3) Production efficiency - 35% improved processing efficiency, 60% reduced downtime; 4) Labor cost - intelligent control reducing labor requirements by 30%; 5) Product quality - separation accuracy improved to 98%, increasing product value; 6) Environmental benefits - compliance with latest environmental standards, avoiding penalty risks; 7) Return on investment - typically recovered within 10-14 months, with 20-25% annual return. Medium-sized operations save $100,000-$150,000 annually in operating costs."
+    },
+    {
+      "question": "What are the environmental performance characteristics?",
+      "answer": "The equipment features comprehensive environmental characteristics: 1) Noise control - uses innovative sound-dampening materials, operating noise under 75 decibels; 2) Dust control - sealed design reducing dust emissions by 90%; 3) Water conservation - intelligent spraying system saving 40% water usage; 4) Energy efficiency - 25-40% energy savings compared to traditional equipment; 5) Material recovery - improving material recovery rates, reducing waste; 6) Environmental adaptability - suitable for harsh environments from -20°C to 60°C; 7) Intelligent control - automatically optimizing operating parameters, reducing resource consumption."
+    },
+    {
+      "question": "How is equipment safety ensured?",
+      "answer": "Safety assurance measures include: 1) Hardware protection - overload protection, emergency shutdown, anti-pinch settings; 2) Software monitoring - real-time monitoring of key parameters, automatic alarm for abnormalities; 3) Operation safety - user-friendly operation interface, anti-misoperation design; 4) Maintenance safety - ergonomically designed maintenance access; 5) Training support - providing professional operation and maintenance training; 6) Emergency plans - comprehensive fault handling and emergency procedures; 7) Safety certification - complying with international safety standard certifications; 8) Technical support - 24-hour fault response service."
+    },
+    {
+      "question": "How can equipment service life be optimized?",
+      "answer": "Service life extension measures: 1) Scientific operation - strictly following operation procedures; 2) Preventive maintenance - implementing planned maintenance and inspections; 3) Parts selection - using original high-quality components; 4) Environmental protection - ensuring dust, rain, and other protection; 5) Load control - avoiding overload operation; 6) Lubrication maintenance - regularly lubricating equipment; 7) Technical upgrades - timely implementing necessary technical modifications; 8) Data analysis - using operational data to optimize usage patterns. Through these measures, equipment service life can be extended by over 50%."
+    }
+  ],
+  "seo": {
+    "title": "Trommel Screen | Mining Trommel Screen Equipment | Rotary Drum Screen",
+    "keywords": "trommel screen,mining trommel screen,rotary screen,trommel separator,mining equipment,screening equipment,coal trommel screen,aggregate trommel screen,gold trommel screen,construction waste trommel,composting trommel,sand washing trommel,recycling trommel screen,high moisture material trommel,wet material screen,industrial trommel screen,heavy duty trommel,fine material separator,coarse material separator,ore processing equipment",
+    "description": "Zexin Mining's GT Series Trommel Screen features advanced rotary technology with 35% improved efficiency. Designed for mining operations and recycling applications with anti-clogging design and low energy consumption for optimal material recovery."
+  },
+  "relatedProducts": [
+    "bar-vibrating-screen",
+    "inclined-vibrating-screen",
+    "banana-multislope-vibrating-screen",
+    "dewatering-screen",
+    "linear-vibrating-screen"
+  ],
+  "imageSrcAlt": "Trommel Screen | Zexin Mining"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "gabon-manganese",
+  "title": "2 Million Tons Manganese Processing Plant for Tata Group in Gabon",
+  "location": "Franceville, Gabon",
+  "year": "2020",
+  "category": "Manganese Ore",
+  "client": "Tata Group",
+  "description": "A large-scale manganese ore processing plant designed and constructed by Zexin Mining Equipment for Tata Group in Gabon, with an annual capacity of 2 million tons. The project optimized the beneficiation process for manganese resources with high impurity content, producing high-quality manganese concentrate that meets metallurgical industry standards.",
+  "challenge": "The project faced significant challenges due to underdeveloped infrastructure in the region and the hot, humid, rainy climate, which impacted both construction and equipment operation. Additionally, the client demanded strict environmental standards, requiring innovative solutions for tailings management and water resource utilization.",
+  "solution": "Due to the relatively high grade of raw ore with coarse grain size distribution ideal for gravity separation, we designed a processing flow including crushing, screening, washing, and jigging operations. After crushing, the material underwent screening for classification, followed by a washing process to remove clay and fine mud. The jigging process then efficiently handled coarse-grained manganese ore, achieving grade improvement and impurity removal to ensure final products met the strict requirements of the metallurgical industry.\n\nHigh-efficiency thickening and filtration technology was employed for tailings treatment, achieving dry stacking of tailings. A rainwater collection system and water treatment system were designed, enabling 95% recycling rate of production water, significantly reducing consumption of local freshwater resources.",
+  "results": "The processing plant has been operating efficiently since commissioning, achieving the designed annual capacity of 2 million tons. The manganese concentrate produced meets strict metallurgical quality specifications with optimized grade and reduced impurities. The environmental performance has been exceptional, with dry-stacked tailings minimizing environmental impact and the water recycling system achieving the targeted 95% water reuse rate. The plant has become a benchmark operation for sustainable mining practices in Central Africa.",
+  "images": [
+    "/images/cases/gabon-manganese/gabon-tata-group-manganese-processing-plant.jpg",
+    "/images/cases/gabon-manganese/manganese-beneficiation-plant-franceville-gabon.jpg",
+    "/images/cases/gabon-manganese/two-stage-washing-jigging-process-manganese.jpg"
+  ],
+  "imagesAlt": [
+    "Gabon Tata Group Manganese Processing Plant | Zexin Mining",
+    "Manganese Beneficiation Plant Franceville Gabon | Zexin Mining",
+    "Two Stage Washing Jigging Process Manganese | Zexin Mining"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "copper-lead-zinc",
+  "mineralName": "Copper-Lead-Zinc Ore",
+  "title": "Copper-Lead-Zinc Ore Beneficiation Process",
+  "processTitle": "Copper-Lead-Zinc Ore Processing Workflow",
+  "processIntroduction": "Our copper-lead-zinc processing technology utilizes a bulk flotation-concentrate regrinding approach, which significantly reduces grinding costs by eliminating the need to fine-grind the entire ore feed. This process is particularly effective for complex ores with intricate mineral associations and uneven grain distribution, employing eco-friendly reagents to achieve superior separation efficiency.",
+  "processSteps": [
+    {
+      "title": "Crushing and Primary Grinding",
+      "description": "Raw ore undergoes staged crushing to below 25mm, followed by primary grinding to achieve appropriate liberation for bulk flotation. This controlled size reduction preserves energy efficiency while ensuring sufficient mineral liberation for the initial separation stage."
+    },
+    {
+      "title": "Bulk Cu-Pb Flotation",
+      "description": "The ground ore is subjected to bulk flotation using optimized reagent schemes to selectively recover copper and lead minerals while leaving zinc minerals in the tailings. This stage implements precise reagent dosing with our \"collect early\" principle, reducing unnecessary recirculation and mineral losses."
+    },
+    {
+      "title": "Concentrate Regrinding",
+      "description": "Bulk Cu-Pb concentrate undergoes fine regrinding to achieve further liberation of interlocked minerals and remove residual reagents from mineral surfaces. This selective regrinding approach significantly reduces energy consumption compared to conventional processes that regrind the entire feed."
+    },
+    {
+      "title": "Cu-Pb Separation",
+      "description": "The reground bulk concentrate enters the Cu-Pb separation circuit where specialized depressants and collectors are used to achieve selective flotation of copper minerals while depressing lead minerals. Enhanced froth washing techniques minimize entrainment of unwanted minerals, significantly improving concentrate grades."
+    },
+    {
+      "title": "Zinc Recovery",
+      "description": "Tailings from the bulk Cu-Pb flotation are conditioned with activators and zinc-specific collectors before entering the zinc flotation circuit. A multi-stage cleaning process ensures the production of high-grade zinc concentrate with minimized impurities."
+    },
+    {
+      "title": "Concentrate Dewatering and Handling",
+      "description": "The three separate concentrates (copper, lead, and zinc) undergo thickening, filtering, and drying to produce marketable products. Advanced dewatering technologies minimize moisture content while reducing energy consumption in the drying process."
+    }
+  ],
+  "applicationsImage": "/images/products/mineral-processing-solutions/non-ferrous/copper-lead-zinc-beneficiation-process-flow.jpg",
+  "applications": [
+    {
+      "title": "Complex Sulfide Ore Processing",
+      "description": "Our optimized bulk flotation-regrinding process excels at processing complex copper-lead-zinc sulfide ores with intricate mineral associations, achieving effective separation and high recovery rates."
+    },
+    {
+      "title": "Fine-Grained Polymetallic Ores",
+      "description": "The selective regrinding approach is particularly effective for fine-grained ores where traditional processing methods struggle to achieve adequate liberation without excessive energy consumption."
+    },
+    {
+      "title": "Low-Grade Polymetallic Deposits",
+      "description": "Our technology enables economic recovery from previously marginal deposits by reducing processing costs through optimized grinding and enhanced flotation performance."
+    },
+    {
+      "title": "Environmentally Sensitive Operations",
+      "description": "Featuring advanced eco-friendly reagent systems and reduced energy requirements, our process is ideal for operations in environmentally sensitive areas or regions with strict regulatory compliance."
+    }
+  ],
+  "relatedProducts": [
+    "vibratory-feeder",
+    "wet-overflow-ball-mill",
+    "xfc-air-inflation-flotation-cell",
+    "hydrocyclone-separator",
+    "inclined-vibrating-screen",
+    "jaw-crusher",
+    "linear-vibrating-screen",
+    "cone-crusher"
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "id": "shaking-table",
+  "title": "Shaking Table",
+  "series": "6-S Series Concentration Table",
+  "imageSrc": "/images/products/gravity-separation/shaking-table.jpg",
+  "productCategory": "Gravity Separation Equipment",
+  "subcategory": "gravity-separation",
+  "model": "6-S",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "0.3-1.2 mtph (0.33-1.32 stph)"
+    },
+    {
+      "key": "Max. feed size",
+      "displayValue": "0-2 mm (0-0.08 in.)"
+    },
+    {
+      "key": "Motor power",
+      "displayValue": "1.1 kW (1.5 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "ton",
+          "conversionFactor": 1.10231,
+          "label": "ton"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "mtph"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/gravity-separation/shaking-table",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/gravity-separation/shaking-table",
+    "zh": "/zh/products/ore-processing/gravity-separation/shaking-table"
+  },
+  "overview": "The shaking table is an efficient gravity separation equipment that separates minerals of different weights and densities through the reciprocating motion of the deck and the washing action of water. Our shaking tables adopt advanced shaking mechanisms and deck design, achieving extremely high separation precision, particularly suitable for processing fine particles and precious metal minerals.",
+  "detailedDescription": "The 6-S Series Concentration Table represents the pinnacle of gravitational separation technology. With a carefully engineered deck design featuring specialized riffles and optimal slope angles, our shaking tables achieve exceptional separation efficiency for a wide range of ores. The precision-engineered drive mechanism creates the perfect stroke and frequency combinations to separate minerals based on specific gravity differences as small as 0.1. The table's versatility allows it to handle feed materials from fine slimes to coarse sands, making it an indispensable tool for operations ranging from precious metal recovery to mineral sand processing. Our latest models feature enhanced water distribution systems and wear-resistant deck surfaces that extend operational life while maintaining separation precision.",
+  "specifications": {
+    "title": "Shaking Table Specifications",
+    "note": "Can be customized according to customer requirements",
+    "tableHeaders": [
+      "Model",
+      "Deck Type",
+      "Deck Selection Area (m²)",
+      "Length (mm)",
+      "Feed Size (mm)",
+      "Processing Capacity (t/h)",
+      "Stroke (mm)",
+      "Stroke Frequency (r/min)",
+      "Water Consumption (t/h)",
+      "Motor Power (kW)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Deck Type",
+      "Deck Selection Area (ft²)",
+      "Length (in.)",
+      "Feed Size (in.)",
+      "Processing Capacity (stph)",
+      "Stroke (in.)",
+      "Stroke Frequency (r/min)",
+      "Water Consumption (t/h)",
+      "Motor Power (hp)"
+    ],
+    "tableData": [
+      [
+        "6-S 7.6",
+        "Coarse Sand Deck",
+        "7.6",
+        "4500",
+        "2",
+        "1-1.2",
+        "16-22",
+        "220",
+        "0.7-1",
+        "1.1"
+      ],
+      [
+        "6-S 4.08",
+        "Fine Sand Deck",
+        "7.6",
+        "4500",
+        "0.5",
+        "0.5-1",
+        "11-16",
+        "250",
+        "0.4-0.7",
+        "1.1"
+      ],
+      [
+        "6-S 1.95",
+        "Slime Deck",
+        "1.95",
+        "2100",
+        "0-2",
+        "0.3-0.8",
+        "12-28",
+        "250-450",
+        "0.2-1",
+        "1.1"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "6-S 7.6",
+        "Coarse Sand Deck",
+        "81.8",
+        "177.2",
+        "0.08",
+        "1.1-1.32",
+        "0.63-0.87",
+        "220",
+        "0.7-1",
+        "1.5"
+      ],
+      [
+        "6-S 4.08",
+        "Fine Sand Deck",
+        "81.8",
+        "177.2",
+        "0.02",
+        "0.55-1.1",
+        "0.43-0.63",
+        "250",
+        "0.4-0.7",
+        "1.5"
+      ],
+      [
+        "6-S 1.95",
+        "Slime Deck",
+        "21.0",
+        "82.7",
+        "0-0.08",
+        "0.33-0.88",
+        "0.47-1.1",
+        "250-450",
+        "0.2-1",
+        "1.5"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "",
+      "area",
+      "length",
+      "length",
+      "capacity",
+      "length",
+      "",
+      "",
+      "power"
+    ]
+  },
+  "features": [
+    {
+      "title": "High-Precision Separation Technology",
+      "description": "Our proprietary deck design with specialized riffle patterns optimizes mineral sorting based on specific gravity, achieving separation efficiency up to 99% for density differences as small as 0.2. The precisely engineered configuration allows recovery of valuable minerals down to 0.075mm particle size."
+    },
+    {
+      "title": "Advanced Drive Mechanism",
+      "description": "The 6-S series features our latest electromagnetic drive system that delivers perfectly calibrated, smooth reciprocating motion. This innovative design eliminates traditional mechanical wear points, reducing maintenance by up to 60% while providing precise stroke adjustments from 11-28mm."
+    },
+    {
+      "title": "Superior Water Distribution System",
+      "description": "Our patented water distribution technology creates ideal laminar flow conditions across the entire deck surface. The specially designed water channeling system maintains optimal separation conditions through independently controlled dresser water and wash water inputs."
+    },
+    {
+      "title": "Wear-Resistant Deck Surface",
+      "description": "Decks are constructed with premium-grade, impact-resistant materials featuring our exclusive polyurethane and rubber composite overlays. This advanced surface technology extends operational life by up to 300% compared to conventional tables while maintaining precise separation characteristics."
+    },
+    {
+      "title": "Modular Design for Customized Applications",
+      "description": "The 6-S series offers interchangeable deck configurations - Coarse Sand, Fine Sand, and Slime decks - allowing operations to adapt to changing feed characteristics. Our modular approach enables quick deck changes with minimal downtime for ultimate processing flexibility."
+    },
+    {
+      "title": "Compact Footprint with Maximum Efficiency",
+      "description": "Engineered to deliver maximum separation efficiency while minimizing space requirements. The compact design allows for easy integration into existing processing circuits, with the 6-S 1.95 model requiring just 4m² of floor space while processing up to 0.8 tons per hour."
+    },
+    {
+      "title": "Environmentally Friendly Processing",
+      "description": "Our shaking tables achieve exceptional recovery rates with minimal environmental impact, using only water and gravity forces for separation. The water-efficient design reduces consumption by up to 30% compared to conventional gravity separators without sacrificing performance."
+    },
+    {
+      "title": "Quick-Change Slope Adjustment System",
+      "description": "Innovative slope adjustment mechanism allows operators to make precise modifications to deck angle during operation. This quick-response system enables real-time optimization based on feed characteristics, enhancing recovery of valuable minerals without processing interruptions."
+    }
+  ],
+  "applications": {
+    "title": "Application Areas",
+    "items": [
+      {
+        "title": "Precious Metal Processing",
+        "description": "High-precision separation of gold, silver, platinum and other precious metal minerals for optimal recovery rates."
+      },
+      {
+        "title": "Heavy Metal Minerals",
+        "description": "Separation of tungsten, tin, tantalum, niobium and other heavy metal minerals, improving concentrate grade."
+      },
+      {
+        "title": "Fine Particle Separation",
+        "description": "Processing fine materials in the range of 0.074-2mm for efficient separation."
+      },
+      {
+        "title": "Laboratory Applications",
+        "description": "Ideal equipment for small-scale mineral processing experiments and process research."
+      }
+    ]
+  },
+  "technicalAdvantages": null,
+  "faqs": [
+    {
+      "question": "What is the working principle of a shaking table?",
+      "answer": "Shaking tables operate on the principle of gravity separation combined with differential movement. The table deck moves in a reciprocating motion while water flows across its surface. Heavier minerals settle against the riffles and move along them due to the shaking action, while lighter particles are washed over the riffles by the flowing water. This creates distinct separation zones on the table surface, allowing for precise collection of different mineral fractions based on their specific gravity."
+    },
+    {
+      "question": "What particle size range is optimal for shaking tables?",
+      "answer": "Our 6-S series shaking tables are designed to process materials in the size range of 0.074mm to 2mm, with specific deck configurations optimized for different size fractions. The Coarse Sand deck handles 0.5-2mm, the Fine Sand deck is ideal for 0.2-0.5mm, and the Slime deck is specially designed for ultra-fine material from 0.074-0.2mm. For optimal performance, feed material should be closely sized to ensure consistent separation results."
+    },
+    {
+      "question": "How do I maintain a shaking table for optimal performance?",
+      "answer": "Regular maintenance of your 6-S shaking table includes daily inspection of the deck surface for wear, checking the water distribution system for blockages, and monitoring the drive mechanism for proper operation. We recommend lubricating all moving parts according to the maintenance schedule, inspecting riffle conditions monthly, and cleaning the water distribution pipes weekly. The deck surface should be thoroughly cleaned after each operating cycle to prevent mineral buildup that could affect separation efficiency."
+    },
+    {
+      "question": "Can shaking tables be integrated with other equipment in a processing circuit?",
+      "answer": "Yes, our shaking tables are designed for seamless integration into comprehensive mineral processing circuits. They typically follow crushing and grinding stages and can be preceded by classifiers or hydrocyclones for optimal size distribution. In many circuits, shaking tables serve as final cleaning devices after other concentration equipment like spirals or jigs. We offer complete engineering support for circuit design to ensure optimal placement and integration of tables within your existing or new processing system."
+    },
+    {
+      "question": "What factors affect the separation efficiency of a shaking table?",
+      "answer": "Several key factors influence shaking table performance: 1) Feed rate consistency - even distribution is critical; 2) Particle size distribution - closely sized material yields better results; 3) Pulp density - typically 25-30% solids for optimal separation; 4) Deck slope adjustment - must be calibrated for specific mineral characteristics; 5) Stroke length and frequency - determines the transport rate along riffles; 6) Wash water volume and distribution - controls how materials move across the deck. Our technical specialists provide comprehensive training on optimizing these parameters for your specific application."
+    },
+    {
+      "question": "How many concentrate fractions can be collected from a shaking table?",
+      "answer": "The 6-S series tables are designed with multi-point collection systems that typically allow for 3-5 distinct product fractions: high-grade concentrate, middlings (which can be recirculated), tailings, and optionally ultra-high grade and low-grade transition products. The precise separation points can be adjusted during operation using our movable splitter system, allowing operators to respond to changes in feed characteristics or optimize for different recovery strategies."
+    },
+    {
+      "question": "What is the difference between the various deck types offered?",
+      "answer": "Our three specialized deck configurations are designed for specific applications: The Coarse Sand deck features larger, more widely spaced riffles for efficient processing of 0.5-2mm material and is ideal for initial roughing operations. The Fine Sand deck has medium-sized, precisely spaced riffles optimized for 0.2-0.5mm particles, perfect for cleaning and upgrading concentrates. The Slime deck incorporates our unique micro-riffle pattern specifically engineered for ultra-fine particles (0.074-0.2mm) that conventional tables struggle to recover effectively."
+    },
+    {
+      "question": "What power and water requirements are needed for operating a shaking table?",
+      "answer": "The 6-S series tables operate with energy-efficient 1.1kW (1.5hp) motors requiring standard three-phase power supply. Water requirements vary by model and application, typically ranging from 0.2-1 cubic meters per hour depending on the deck type and feed characteristics. Our water-efficient design includes recirculation options that can reduce fresh water consumption by up to 60% in closed-circuit operations, making the tables suitable for use in water-sensitive environments."
+    },
+    {
+      "question": "How long does it take to install and commission a shaking table?",
+      "answer": "Installation of our shaking tables typically requires 1-2 days for mechanical setup, foundation preparation, and utility connections. Commissioning and optimization usually takes an additional 1-2 days as our technicians work with your team to calibrate the equipment for your specific mineral characteristics. We provide comprehensive installation documentation and optional on-site technical support to ensure your table is operating at peak efficiency as quickly as possible."
+    },
+    {
+      "question": "Can shaking tables process different minerals simultaneously?",
+      "answer": "Yes, shaking tables excel at separating multiple minerals in a single operation based on differences in specific gravity. The table naturally creates distinct bands of minerals across its width, which can be collected separately. This makes them particularly valuable for processing complex ores containing multiple valuable minerals or for cleaning operations where several mineral species need to be segregated. The visual nature of the separation also allows operators to make real-time adjustments to optimize recovery of multiple target minerals."
+    }
+  ],
+  "seo": {
+    "keywords": "shaking table,gold shaking table,mineral concentration table,gravity separation table,mining shaking table,fine gold recovery equipment,laboratory shaking table,gold ore processing equipment,high precision mineral separator,wet gravity separator,small scale gold mining equipment,precious metal recovery table,placer mining equipment,mineral beneficiation table,tungsten ore concentrator,tin ore concentration table",
+    "description": "Zexin Mining's 6-S Shaking Table achieves 98% recovery rate for gold, tin and rare minerals with 0.04mm fine particle separation capability. Ideal for small operations with 0.3-1.2 t/h throughput and minimal power requirements of just 1.1kW.",
+    "title": "Gold Shaking Table | High-Precision Mineral Separator | Fine Particle Recovery Equipment"
+  },
+  "relatedProducts": [
+    "synchronous-counter-directional-jig",
+    "synchronous-counter-directional-jig-small",
+    "sawtooth-wave-jig",
+    "spiral-chute",
+    "centrifugal-separator"
+  ],
+  "imageSrcAlt": "Shaking Table | Zexin Mining"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "hainan-iron-tailings",
+  "title": "Hainan Changjiang Iron Tailings Comprehensive Utilization EPC Project",
+  "location": "Changjiang, Hainan, China",
+  "year": "2022",
+  "category": "Iron Ore",
+  "client": "A State-owned Large Steel Enterprise",
+  "description": "Located in Changjiang County, Hainan Province, this national key project processes 10,000 tons of iron tailings daily with original ore grade of 10-20 degrees. Zexin Mining Equipment provided comprehensive services from design to commissioning. The process includes primary crushing, secondary crushing, screening, and jigging, achieving efficient recovery of low-grade tailings.",
+  "challenge": "The main challenges included difficulty in processing low-grade tailings with poor recovery rates using traditional methods. The limited site space required a highly optimized process layout. Strict local environmental requirements necessitated a balance between production efficiency and environmental protection.",
+  "solution": "We implemented an innovative process route with an optimized crushing and screening system to improve material classification efficiency and multi-stage jigging process to increase iron mineral recovery. Our compact plant layout design enabled short-path material transfer. We installed high-efficiency dust removal and water treatment systems to meet environmental requirements, along with an intelligent control system for full-process automation.",
+  "results": "The project achieved its expected goals with tailings comprehensive utilization rate increased by 25%. Annual iron concentrate production reached approximately 400,000 tons with grade improved to over 60%, meeting steel production requirements. Water recycling rate reached 95% with dust emissions below national standards. The project created significant economic benefits for the owner while reducing environmental pressure from tailings storage.",
+  "images": [
+    "/images/cases/hainan-iron-tailings/hainan-iron-tailings-processing-plant-zexin-mining.jpg",
+    "/images/cases/hainan-iron-tailings/hainan-tailings-treatment-facility-equipment.jpg",
+    "/images/cases/hainan-iron-tailings/iron-tailings-recovery-process-china.jpg"
+  ],
+  "imagesAlt": [
+    "Hainan Iron Tailings Processing Plant Zexin Mining | Zexin Mining",
+    "Hainan Tailings Treatment Facility Equipment | Zexin Mining",
+    "Iron Tailings Recovery Process China | Zexin Mining"
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "id": "spiral-washer",
+  "title": "Single Shaft Screw Washer",
+  "series": "FG Series Mineral Spiral Washing Equipment",
+  "imageSrc": "/images/products/washing-equipment/spiral-washer.jpg",
+  "productCategory": "Mineral Processing Equipment",
+  "subcategory": "washing-equipment",
+  "model": "FG-30",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "10-50 t/h (11-55 stph)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "3-11 kW (4-15 hp)"
+    },
+    {
+      "key": "Spiral Diameter",
+      "displayValue": "900-1800 mm (35-71 in.)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "kg",
+          "conversionFactor": 1,
+          "label": "kg"
+        },
+        {
+          "unit": "lb",
+          "conversionFactor": 2.20462,
+          "label": "lb"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/washing-equipment/spiral-washer",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/washing-equipment/spiral-washer",
+    "zh": "/zh/products/ore-processing/washing-equipment/spiral-washer"
+  },
+  "overview": "Zexin Mining's FG Series Single Shaft Screw Washer provides efficient mineral cleaning through spiral blade agitation, removing surface impurities while preserving material integrity. With simple structure and reliable operation, these washers deliver consistent performance for particles 0.3-10mm across metallurgy, construction and silicate industries.",
+  "detailedDescription": "The FG Series single shaft screw washer introduces innovative cleaning technology that transforms aggregate washing operations in various industries. This system creates optimized particle separation through its precision-engineered screw blade design, addressing clay contamination challenges while enhancing aggregate quality. Its balanced approach to material agitation and water circulation delivers consistent results across varying feed materials, making it essential processing equipment that adapts to different contamination levels without compromising operational reliability.",
+  "specifications": {
+    "title": "Spiral Washer Technical Specifications",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Capacity (t/h)",
+      "Motor Power (kW)",
+      "Spiral Diameter (mm)",
+      "Tank Length (mm)",
+      "Tank Width (mm)",
+      "Total Weight (kg)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Capacity (stph)",
+      "Motor Power (hp)",
+      "Spiral Diameter (in.)",
+      "Tank Length (in.)",
+      "Tank Width (in.)",
+      "Total Weight (lb)"
+    ],
+    "tableData": [
+      [
+        "FG-10",
+        "10-15",
+        "3",
+        "900",
+        "3500",
+        "1200",
+        "1650"
+      ],
+      [
+        "FG-20",
+        "15-20",
+        "5.5",
+        "1200",
+        "4000",
+        "1500",
+        "2100"
+      ],
+      [
+        "FG-30",
+        "25-35",
+        "7.5",
+        "1500",
+        "5000",
+        "1800",
+        "2850"
+      ],
+      [
+        "FG-50",
+        "40-50",
+        "11",
+        "1800",
+        "6000",
+        "2200",
+        "3600"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "FG-10",
+        "11-17",
+        "4",
+        "35.4",
+        "137.8",
+        "47.2",
+        "3638"
+      ],
+      [
+        "FG-20",
+        "17-22",
+        "7.4",
+        "47.2",
+        "157.5",
+        "59.1",
+        "4630"
+      ],
+      [
+        "FG-30",
+        "28-39",
+        "10.1",
+        "59.1",
+        "196.9",
+        "70.9",
+        "6283"
+      ],
+      [
+        "FG-50",
+        "44-55",
+        "14.8",
+        "70.9",
+        "236.2",
+        "86.6",
+        "7937"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "capacity",
+      "power",
+      "length",
+      "length",
+      "length",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Advanced Screw Blade Design",
+      "description": "Engineered with precisely calculated spiral pitch and blade profile that creates ideal turbulence patterns for efficient particle cleaning. The specialized geometry ensures 30% improved washing efficiency compared to conventional designs while maintaining gentle material handling that preserves mineral integrity."
+    },
+    {
+      "title": "Heavy-Duty Main Shaft Assembly",
+      "description": "Features industrial-grade alloy steel construction with oversized bearings that withstand continuous operation in harsh environments. This robust drive system handles up to 50 t/h throughput while maintaining perfect alignment even under maximum load conditions."
+    },
+    {
+      "title": "Premium Wear-Resistant Components",
+      "description": "Incorporates replaceable high-chrome alloy liners strategically positioned in high-wear zones that extend equipment service life by up to 40%. The specialized metallurgy provides exceptional resistance to abrasion from sand and gravel while maintaining dimensional stability."
+    },
+    {
+      "title": "Adjustable Speed Control System",
+      "description": "Equipped with variable frequency drive technology that enables precise adjustment of screw rotation speed to match specific material characteristics. This adaptive control capability optimizes washing efficiency across different mineral types and contamination levels."
+    },
+    {
+      "title": "Efficient Water Management",
+      "description": "Integrates advanced water circulation features including optimized spray nozzles and water recirculation systems that reduce fresh water consumption by up to 40% compared to conventional washers, supporting environmentally responsible processing operations."
+    },
+    {
+      "title": "Simple Maintenance Access",
+      "description": "Designed with easy-access maintenance points that facilitate fast inspection and component replacement without specialized tools. The standardized interface system enables rapid wear part replacement, reducing downtime during service intervals."
+    },
+    {
+      "title": "Compact Footprint Design",
+      "description": "Engineered with space efficiency in mind, requiring up to 30% less installation area than comparable capacity log washers. The vertical orientation maximizes cleaning performance while minimizing site preparation requirements and foundation costs."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Ferrous Metal Processing",
+        "description": "Effectively removes clay, silt, and organic impurities from iron and manganese ores prior to concentration. The spiral washing action gently separates contaminants without excessive material degradation, improving downstream magnetic separation efficiency while reducing reagent consumption in flotation processes."
+      },
+      {
+        "title": "Non-ferrous Mineral Cleaning",
+        "description": "Provides thorough cleaning of copper, lead, zinc, and other non-ferrous ore materials to enhance recovery rates in subsequent processing stages. The adjustable washing intensity accommodates varying mineral hardness characteristics while effectively removing surface oxides and weathered coatings."
+      },
+      {
+        "title": "Silica Sand Production",
+        "description": "Delivers premium cleaning performance for industrial silica sand applications requiring high purity levels. The precisely controlled agitation removes clay coatings and organic contaminants without excessive fines generation, producing washed sand products that meet strict specifications for glass manufacturing and foundry applications."
+      },
+      {
+        "title": "Construction Aggregates",
+        "description": "Efficiently processes construction sand and gravel to remove clay, silt, and organic materials that would compromise concrete quality. The robust design handles abrasive materials while maintaining precise control over washing intensity, producing clean aggregates that meet industry standards for strength and durability."
+      },
+      {
+        "title": "Placer Gold Mining",
+        "description": "Supports pre-treatment of alluvial gold-bearing materials by removing clay and light contaminants while preserving heavy mineral fractions. The spiral action effectively disaggregates consolidated materials without excessive energy input, preparing feed for subsequent gravity concentration processes with minimal valuable mineral losses."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does a single shaft screw washer work?",
+      "answer": "Single shaft screw washers operate through the combined action of mechanical agitation and water flow. Material enters the feed end where it encounters a rotating spiral shaft with strategically designed blades. As the screw rotates, it creates turbulent washing action while gradually moving material upward against flowing water. This counter-current process creates particle-to-particle scrubbing that effectively removes surface contaminants like clay and silt. The cleaned material is discharged at the elevated end, while impurities flow out with the water. The precisely engineered screw pitch and rotation speed ensure optimal residence time for thorough cleaning while maintaining material integrity."
+    },
+    {
+      "question": "What advantages does a screw washer offer over other washing equipment?",
+      "answer": "Screw washers provide several key advantages: 1) Simple design with fewer moving parts, resulting in higher reliability and lower maintenance; 2) Lower water consumption compared to drum washers; 3) Reduced power requirements while maintaining high throughput rates; 4) Excellent performance with moderately clayey materials in the 0.3-10mm size range; 5) Smaller footprint compared to equivalent capacity washing equipment; 6) Effective dual function of washing and material transport in one unit; 7) Adjustable washing intensity through variable speed control; 8) Lower capital investment and operating costs compared to complex washing systems; 9) Easy operation and maintenance with readily available replacement parts; 10) Versatility across various material types without requiring significant adjustments."
+    },
+    {
+      "question": "What types of materials can be processed in FG series screw washers?",
+      "answer": "FG series screw washers effectively process a wide range of materials including: 1) Silica sand and industrial minerals requiring high purity; 2) Iron ore and manganese ore with moderate clay contamination; 3) Construction sand and gravel with clay coatings; 4) Limestone and dolomite for construction applications; 5) Non-ferrous metallic ores including copper, lead and zinc; 6) Coal requiring removal of fine impurities; 7) Glass sand requiring quality cleaning; 8) Foundry sand for industrial applications; 9) Feldspar and other industrial minerals; 10) Mineral sands and aggregates. The equipment performs best with materials in the 0.3-10mm size range with low to moderate clay content, typically less than 10% by weight."
+    },
+    {
+      "question": "How do I select the appropriate screw washer size for my application?",
+      "answer": "Selecting the proper screw washer requires evaluation of several key parameters: 1) Required processing capacity (10-50 t/h for FG series); 2) Material particle size distribution (optimal for 0.3-10mm); 3) Clay or contaminant content percentage in feed material; 4) Required cleanliness level in final product; 5) Available water supply quantity and quality; 6) Material specific gravity and bulk density; 7) Available installation space; 8) Environmental requirements for water management; 9) Budget constraints for capital and operating costs; 10) Process position within the overall flowsheet. Our engineering team provides detailed application assessments to recommend appropriate equipment sizing based on your specific operational needs."
+    },
+    {
+      "question": "What maintenance procedures are required for screw washers?",
+      "answer": "Effective maintenance for screw washers includes: 1) Regular inspection of spiral blades for wear and replacement as needed (typically every 3-6 months depending on material abrasiveness); 2) Monitoring and lubrication of main bearing assemblies according to scheduled intervals; 3) Inspection of drive components including motor, coupling, and reducer; 4) Checking wear liners in high-impact areas and replacing when worn beyond tolerance; 5) Verification of water spray nozzles for proper operation; 6) Inspection of discharge overflow weirs and adjusting as required; 7) Monitoring structural integrity and tightening fasteners as needed; 8) Checking alignment of drive components. With proper maintenance, FG series washers typically achieve service intervals of 3,000-4,000 operating hours between major maintenance activities."
+    },
+    {
+      "question": "How does water management work with screw washers?",
+      "answer": "Water management in screw washers involves several aspects: 1) Fresh water is typically introduced at the discharge end, creating counter-current flow against material direction; 2) Typical consumption ranges from 0.5-1.5 m³ of water per ton of processed material; 3) Contaminated water exits through the overflow weir at the feed end, carrying away clay and silt; 4) Most operations incorporate water recycling systems where process water is treated through settling ponds or mechanical clarifiers and recirculated; 5) Optional water management packages can reduce fresh water makeup requirements to as little as 0.2 m³ per ton while maintaining effective cleaning performance; 6) Water quality monitoring ensures optimal washing efficiency; 7) Flow rates can be adjusted to match specific material contamination levels."
+    },
+    {
+      "question": "How does a screw washer compare to a log washer for clay removal?",
+      "answer": "Screw washers and log washers serve similar purposes but have key differences: 1) Screw washers are more effective for materials with low to moderate clay content (up to 10%), while log washers handle higher clay content (up to 20%); 2) Screw washers process smaller material (0.3-10mm) compared to log washers (10-150mm); 3) Screw washers have lower power requirements and water consumption; 4) Log washers provide more aggressive scrubbing through counter-rotating shafts, better for stubborn clay; 5) Screw washers have simpler designs, lower capital costs, and easier maintenance; 6) Log washers offer better retention time control for heavily contaminated materials; 7) Screw washers provide gentler material handling, reducing fines generation; 8) Screw washers typically require less headroom in a plant layout; 9) Log washers generally cost 40-60% more to purchase and operate."
+    },
+    {
+      "question": "What key features should I look for when purchasing a screw washer?",
+      "answer": "When evaluating screw washers, consider these critical features: 1) Blade design and material quality - look for wear-resistant alloys with optimized geometry; 2) Main shaft construction - ensure heavy-duty design with adequate bearing support; 3) Drive system reliability - verify use of industrial-grade components; 4) Wear protection in high-impact zones - check for replaceable liners; 5) Adjustable operation parameters - ensure speed control capabilities; 6) Water management features - verify efficient spray systems and overflow controls; 7) Maintenance accessibility - confirm easy access to wear components; 8) Structural integrity - evaluate frame and tank construction quality; 9) Manufacturer support - consider parts availability and technical service; 10) Standardization - favor designs with readily available replacement components."
+    },
+    {
+      "question": "How does energy efficiency in screw washers compare to other washing methods?",
+      "answer": "Screw washers offer excellent energy efficiency compared to alternative washing technologies. Power requirements range from 3kW for smaller models to 11kW for larger units, translating to specific energy consumption of approximately 0.2-0.3 kWh per ton of processed material. This represents energy efficiency improvements of up to 40% compared to drum washers and up to 60% compared to log washers with equivalent cleaning effectiveness. Factors contributing to this efficiency include optimized spiral geometry that minimizes resistance, high-efficiency motors meeting IE3 standards, and precision-engineered drive components that minimize power transmission losses. The simple mechanical design with single rotating element significantly reduces energy requirements compared to more complex washing systems."
+    }
+  ],
+  "seo": {
+    "title": "Screw Washer | Single Shaft Log Washer | Sand Washing Equipment | Zexin Mining",
+    "keywords": "screw washer,spiral washer,single shaft log washer,sand screw washer,aggregate washer,screw scrubber,mining screw scrubber,industrial screw washer,screw washer design,screw washer price,screw washer for sale,screw washer parts,screw washer auger,screw washer bearings,screw washer maintenance,screw washer troubleshooting,mclanahan screw washer,eagle iron works screw scrubber,single spiral classifier,log washer for fine material,spiral sand washer,spiral gravel washer,spiral washer manufacturer,spiral washer capacity,high-efficiency spiral washer",
+    "description": "Zexin Mining's FG Series Single Shaft Screw Washers deliver 30% improved cleaning efficiency with advanced water conservation technology. Our precision-engineered design processes 10-50 t/h of mineral materials while reducing water consumption by up to 40% compared to conventional washers."
+  },
+  "searchKeywords": [
+    "screw washer",
+    "single shaft log washer",
+    "sand screw washer",
+    "aggregate washer",
+    "screw scrubber",
+    "mining screw scrubber",
+    "industrial screw washer",
+    "mclanahan screw washer",
+    "eagle iron works screw scrubber",
+    "spiral washer"
+  ],
+  "relatedProducts": [
+    "twin-shaft-log-washer",
+    "wheel-bucket-sand-washer"
+  ],
+  "imageSrcAlt": "Spiral Washer | Zexin Mining"
+}

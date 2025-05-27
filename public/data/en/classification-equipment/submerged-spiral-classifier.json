@@ -1,0 +1,592 @@
+{
+  "id": "submerged-spiral-classifier",
+  "title": "Submerged Spiral Classifier",
+  "series": "FLC/2FLC Series Submerged Spiral Classifier",
+  "imageSrc": "/images/products/classification-equipment/submerged-spiral-classifier.jpg",
+  "productCategory": "Mineral Desliming Equipment",
+  "subcategory": "classification-equipment",
+  "model": "FLC-1500",
+  "meta": [
+    {
+      "key": "Spiral speed",
+      "displayValue": "2.5-7.4 r.p.m"
+    },
+    {
+      "key": "Processing capacity",
+      "displayValue": "160-23300 t/d (176.4-25684 stpd)"
+    },
+    {
+      "key": "Motor power",
+      "displayValue": "5.5-45 kW (7.4-60.3 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "ton",
+          "conversionFactor": 1.10231,
+          "label": "ton"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/d",
+          "conversionFactor": 1,
+          "label": "t/d"
+        },
+        {
+          "unit": "ton/d",
+          "conversionFactor": 1.10231,
+          "label": "stpd"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ],
+      "speed": [
+        {
+          "unit": "r.p.m",
+          "conversionFactor": 1,
+          "label": "r.p.m"
+        },
+        {
+          "unit": "r.p.m",
+          "conversionFactor": 1,
+          "label": "r.p.m"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/classification-equipment/submerged-spiral-classifier",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/classification-equipment/submerged-spiral-classifier",
+    "zh": "/zh/products/ore-processing/classification-equipment/submerged-spiral-classifier"
+  },
+  "overview": "The FLC/2FLC Series Submerged Spiral Classifier is an efficient mineral processing equipment designed for precise particle size separation and sand washing in mining operations. With robust spiral design and enhanced processing capacity, it offers superior ore classification performance with minimal energy consumption.",
+  "detailedDescription": "The Submerged Spiral Classifier introduces innovative spiral technology that transforms mineral classification and separation processes in the mining industry. This system creates exceptional particle grading precision through its unique submerged design, addressing common classification challenges while enhancing material recovery rates. Its balanced approach to slurry processing delivers consistent results across varying ore conditions, making it valuable for mining operations that require efficient separation without compromising throughput capacity or energy efficiency.",
+  "specifications": {
+    "title": "FLC/2FLC Series Submerged Spiral Classifier Technical Parameters",
+    "note": "Custom configurations available upon request. Contact us for specific application requirements.",
+    "tableHeaders": [
+      "Type",
+      "Model",
+      "Spiral Speed (r.p.m)",
+      "Return Capacity (t/d)",
+      "Overflow Capacity (t/d)",
+      "Spiral Diameter (mm)",
+      "Tank Length (mm)",
+      "Tank Depth",
+      "Motor Model",
+      "Motor Power (kW)",
+      "Lifting Motor Model",
+      "Lifting Power (kW)",
+      "Weight (kg)"
+    ],
+    "tableHeadersImperial": [
+      "Type",
+      "Model",
+      "Spiral Speed (r.p.m)",
+      "Return Capacity (stpd)",
+      "Overflow Capacity (stpd)",
+      "Spiral Diameter (in.)",
+      "Tank Length (in.)",
+      "Tank Depth",
+      "Motor Model",
+      "Motor Power (hp)",
+      "Lifting Motor Model",
+      "Lifting Power (hp)",
+      "Weight (lb)"
+    ],
+    "tableData": [
+      [
+        "Single Spiral",
+        "FLC-1000",
+        "2.5,3,5,7.4",
+        "160-700",
+        "85",
+        "1000",
+        "6500",
+        "14-18",
+        "Y132M-6",
+        "5.5",
+        "Manual",
+        "-",
+        "5195"
+      ],
+      [
+        "Single Spiral",
+        "FLC-1200",
+        "5,6,7",
+        "1150-1640",
+        "120",
+        "1200",
+        "8400",
+        "14-18",
+        "Y160M-6",
+        "7.5",
+        "Y90L-4",
+        "1.5",
+        "9583"
+      ],
+      [
+        "Single Spiral",
+        "FLC-1500",
+        "2.5,4,6",
+        "1140-2740",
+        "185",
+        "1500",
+        "10500",
+        "14-18",
+        "Y160L-6",
+        "7.5",
+        "Y100L-4",
+        "2.2",
+        "14226"
+      ],
+      [
+        "Single Spiral",
+        "FLC-2000",
+        "3,6,5.5",
+        "3890-5940",
+        "400",
+        "2000",
+        "13000",
+        "14-18",
+        "Y160M-6/Y160L-4",
+        "11/15",
+        "Y100L-4",
+        "3",
+        "27753"
+      ],
+      [
+        "Single Spiral",
+        "FLC-2400",
+        "3.64",
+        "6800",
+        "455",
+        "2400",
+        "14130",
+        "14-18",
+        "Y200L-6",
+        "18.5",
+        "Y112M-4",
+        "4",
+        "32467"
+      ],
+      [
+        "Single Spiral",
+        "FLC-3000",
+        "3.2",
+        "11650",
+        "705",
+        "3000",
+        "14300",
+        "14-18",
+        "Y200L-4",
+        "30",
+        "Y112M-4",
+        "4",
+        "43500"
+      ],
+      [
+        "Double Spiral",
+        "2FLC-1200",
+        "3,8,6",
+        "1770-2800",
+        "240",
+        "1200",
+        "8400",
+        "14-18",
+        "Y160M-6",
+        "7.5x2",
+        "Y100L-4",
+        "2.2x2",
+        "19610"
+      ],
+      [
+        "Double Spiral",
+        "2FLC-1500",
+        "2.5,4,6",
+        "2240-5360",
+        "370",
+        "1500",
+        "10500",
+        "14-18",
+        "Y160M-6",
+        "7.5x2",
+        "Y100L-4",
+        "2.2x2",
+        "27450"
+      ],
+      [
+        "Double Spiral",
+        "2FLC-2000",
+        "3,6,5.5",
+        "7780-11880",
+        "640",
+        "2000",
+        "12900",
+        "14-18",
+        "Y160L-6/4/Y200L-6/Y200L-4",
+        "2x11,2x15/22/30",
+        "Y100L-4",
+        "3.0x2",
+        "50621"
+      ],
+      [
+        "Double Spiral",
+        "2FLC-2400",
+        "3.67",
+        "13700",
+        "910",
+        "2400",
+        "14130",
+        "14-18",
+        "Y225S-4",
+        "37",
+        "Y112M-4",
+        "4.0x2",
+        "65283"
+      ],
+      [
+        "Double Spiral",
+        "2FLC-3000",
+        "3.2",
+        "23300",
+        "1410",
+        "3000",
+        "14300",
+        "14-18",
+        "Y225M-4",
+        "45",
+        "Y112M-4",
+        "4.0x2",
+        "84900"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "Single Spiral",
+        "FLC-1000",
+        "2.5,3,5,7.4",
+        "176-772",
+        "94",
+        "39.4",
+        "255.9",
+        "14-18",
+        "Y132M-6",
+        "7.4",
+        "Manual",
+        "-",
+        "11452"
+      ],
+      [
+        "Single Spiral",
+        "FLC-1200",
+        "5,6,7",
+        "1267-1808",
+        "132",
+        "47.2",
+        "330.7",
+        "14-18",
+        "Y160M-6",
+        "10.1",
+        "Y90L-4",
+        "2.0",
+        "21127"
+      ],
+      [
+        "Single Spiral",
+        "FLC-1500",
+        "2.5,4,6",
+        "1257-3020",
+        "204",
+        "59.1",
+        "413.4",
+        "14-18",
+        "Y160L-6",
+        "10.1",
+        "Y100L-4",
+        "3.0",
+        "31362"
+      ],
+      [
+        "Single Spiral",
+        "FLC-2000",
+        "3,6,5.5",
+        "4288-6547",
+        "441",
+        "78.7",
+        "511.8",
+        "14-18",
+        "Y160M-6/Y160L-4",
+        "14.8/20.1",
+        "Y100L-4",
+        "4.0",
+        "61185"
+      ],
+      [
+        "Single Spiral",
+        "FLC-2400",
+        "3.64",
+        "7496",
+        "502",
+        "94.5",
+        "556.3",
+        "14-18",
+        "Y200L-6",
+        "24.8",
+        "Y112M-4",
+        "5.4",
+        "71578"
+      ],
+      [
+        "Single Spiral",
+        "FLC-3000",
+        "3.2",
+        "12842",
+        "777",
+        "118.1",
+        "562.9",
+        "14-18",
+        "Y200L-4",
+        "40.2",
+        "Y112M-4",
+        "5.4",
+        "95900"
+      ],
+      [
+        "Double Spiral",
+        "2FLC-1200",
+        "3,8,6",
+        "1951-3086",
+        "265",
+        "47.2",
+        "330.7",
+        "14-18",
+        "Y160M-6",
+        "10.1x2",
+        "Y100L-4",
+        "3.0x2",
+        "43232"
+      ],
+      [
+        "Double Spiral",
+        "2FLC-1500",
+        "2.5,4,6",
+        "2469-5908",
+        "408",
+        "59.1",
+        "413.4",
+        "14-18",
+        "Y160M-6",
+        "10.1x2",
+        "Y100L-4",
+        "3.0x2",
+        "60518"
+      ],
+      [
+        "Double Spiral",
+        "2FLC-2000",
+        "3,6,5.5",
+        "8576-13095",
+        "706",
+        "78.7",
+        "507.9",
+        "14-18",
+        "Y160L-6/4/Y200L-6/Y200L-4",
+        "2x14.8,2x20.1/29.5/40.2",
+        "Y100L-4",
+        "4.0x2",
+        "111600"
+      ],
+      [
+        "Double Spiral",
+        "2FLC-2400",
+        "3.67",
+        "15102",
+        "1003",
+        "94.5",
+        "556.3",
+        "14-18",
+        "Y225S-4",
+        "49.6",
+        "Y112M-4",
+        "5.4x2",
+        "143920"
+      ],
+      [
+        "Double Spiral",
+        "2FLC-3000",
+        "3.2",
+        "25684",
+        "1554",
+        "118.1",
+        "562.9",
+        "14-18",
+        "Y225M-4",
+        "60.3",
+        "Y112M-4",
+        "5.4x2",
+        "187168"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "",
+      "speed",
+      "capacity",
+      "capacity",
+      "length",
+      "length",
+      "",
+      "",
+      "power",
+      "",
+      "power",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Advanced Submerged Spiral Design",
+      "description": "Our submerged spiral design ensures optimal classification efficiency with the spiral completely immersed in the slurry. This configuration maximizes material contact and separation precision while preventing fine particles from being carried away in the overflow."
+    },
+    {
+      "title": "Dual Configuration Options",
+      "description": "Available in both single and double spiral configurations, our classifiers can be tailored to your specific capacity requirements. The double spiral models offer up to twice the processing capacity while maintaining the same footprint efficiency."
+    },
+    {
+      "title": "Variable Speed Operation",
+      "description": "Multiple spiral speed options (2.5-7.4 r.p.m) allow for precise adjustment based on material characteristics and desired separation points, ensuring optimal classification results across different ore types."
+    },
+    {
+      "title": "High Processing Capacity",
+      "description": "With return capacities ranging from 160 to 23,300 t/d, our spiral classifiers handle industrial-scale mineral processing demands with exceptional reliability and consistent performance even under heavy load conditions."
+    },
+    {
+      "title": "Robust Construction",
+      "description": "Manufactured with wear-resistant materials and reinforced structural components, our classifiers are designed for continuous operation in demanding mining environments, delivering extended service life and reduced maintenance requirements."
+    },
+    {
+      "title": "Automated Lifting System",
+      "description": "The integrated motorized lifting system enables precise spiral position adjustment without interrupting operations, simplifying maintenance procedures and optimizing classification efficiency through accurate height control."
+    },
+    {
+      "title": "Energy Efficient Operation",
+      "description": "Our optimized motor selection and mechanical design minimize power consumption while maintaining superior classification performance, resulting in lower operational costs and reduced environmental impact."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Ore Classification",
+        "description": "Ideal for closed-circuit grinding operations in mineral processing plants, separating fine particles for regrinding while allowing coarse particles to advance to the next processing stage."
+      },
+      {
+        "title": "Sand and Gravel Washing",
+        "description": "Effectively removes clay, silt, and other impurities from sand and gravel in construction material production, improving product quality and meeting industry specifications."
+      },
+      {
+        "title": "Slurry Dewatering",
+        "description": "Efficiently reduces moisture content in mineral slurries by separating solid particles from water, improving downstream processing efficiency and reducing drying costs."
+      },
+      {
+        "title": "Gold and Precious Metal Mining",
+        "description": "Provides critical size classification in gold and precious metal recovery circuits, ensuring optimal particle size distribution for subsequent concentration processes."
+      },
+      {
+        "title": "Coal Processing",
+        "description": "Separates fine coal particles by size, improving washing efficiency and product quality in coal preparation plants while maximizing resource utilization."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is a submerged spiral classifier and how does it work?",
+      "answer": "A submerged spiral classifier is a mineral processing equipment that separates particles based on size and density. It features a mechanically driven spiral that rotates within a slurry tank. As the spiral rotates, heavier/coarser particles settle to the bottom and are transported upward by the spiral against the water flow, while finer particles remain suspended and flow out with the overflow water. The submerged design means the spiral is completely immersed in the slurry, providing optimal separation efficiency."
+    },
+    {
+      "question": "What is the difference between single spiral and double spiral classifiers?",
+      "answer": "Single spiral classifiers have one spiral shaft within the tank and are suitable for operations with moderate capacity requirements. Double spiral classifiers feature two parallel spiral shafts within a wider tank, effectively doubling the processing capacity while maintaining similar separation efficiency. Double spiral models are ideal for higher throughput operations and offer better space efficiency per ton of processed material."
+    },
+    {
+      "question": "What factors affect the classification efficiency of a spiral classifier?",
+      "answer": "Several factors influence classification efficiency: spiral speed (slower speeds typically improve precision), spiral immersion depth, tank slope angle, feed material characteristics (size distribution and density), slurry density, feed rate, and overflow weir height. Proper adjustment of these parameters based on specific ore properties is essential for achieving optimal classification results."
+    },
+    {
+      "question": "What maintenance is required for spiral classifiers?",
+      "answer": "Regular maintenance includes inspection of spiral blades for wear and damage, lubrication of bearings and transmission components, checking for proper spiral alignment, inspection of the lifting mechanism, monitoring motor performance, and cleaning of the tank to prevent build-up. The maintenance frequency depends on operating conditions, with more abrasive materials requiring more frequent inspection."
+    },
+    {
+      "question": "How does a submerged spiral classifier compare to a high weir classifier?",
+      "answer": "Submerged spiral classifiers have the spiral completely immersed in the slurry, creating a finer separation point and are ideal for finer material classification. High weir classifiers have part of the spiral above the slurry level, creating a higher overflow point that allows for coarser particle separation. Submerged models typically achieve more precise classification of fine materials, while high weir models handle coarser separations."
+    },
+    {
+      "question": "What is the typical lifespan of a spiral classifier?",
+      "answer": "With proper maintenance, a quality spiral classifier can operate for 15-20 years or more. The actual lifespan depends on operating conditions, material abrasiveness, maintenance practices, and operating hours. Components like spiral blades and bearings may require replacement several times throughout the equipment's life, but the main structure and tank can last for decades when properly maintained."
+    }
+  ],
+  "seo": {
+    "title": "Submerged Spiral Classifier | High Efficiency Mineral Separation Equipment | Zexin Mining",
+    "description": "Zexin Mining's FLC/2FLC Submerged Spiral Classifiers deliver precision particle separation with capacities up to 23,300 t/d. Our robust spiral classifiers feature energy-efficient design, dual spiral options, and automated control systems ideal for mining and mineral processing operations.",
+    "keywords": "Submerged Spiral Classifier, Submerged Screw Classifier, High Weir Spiral Classifier, Mineral Processing Classifier, Ore Separation Classifier, Double Spiral Classifier, Sand Washing Classifier, Slurry Dewatering Classifier, Mining Separation Equipment, Gravity Spiral Classifier, Spiral Classifier Manufacturer, Spiral Classifier Specifications"
+  },
+  "relatedProducts": [
+    "high-weir-spiral-classifier",
+    "cone-classifier",
+    "hydrocyclone-separator"
+  ],
+  "imageSrcAlt": "Submerged Spiral Classifier | Zexin Mining"
+}

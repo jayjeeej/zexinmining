@@ -1,0 +1,332 @@
+{
+  "id": "inclined-vibrating-screen",
+  "title": "Inclined Vibrating Screen",
+  "series": "ZYA Series Inclined Circular Motion Vibrating Screen",
+  "imageSrc": "/images/products/vibrating-screens/inclined-vibrating-screen.jpg",
+  "productCategory": "Mineral Screen Equipment",
+  "subcategory": "vibrating-screens",
+  "model": "ZXYA2160",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "150-300 t/h (165-330 stph)"
+    },
+    {
+      "key": "Screening particle size",
+      "displayValue": "5-100 mm (0.2-3.9 in.)"
+    },
+    {
+      "key": "Motor power",
+      "displayValue": "11-37 kW (15-50 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "ton",
+          "conversionFactor": 1.10231,
+          "label": "ton"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "mtph"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/vibrating-screens/inclined-vibrating-screen",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/vibrating-screens/inclined-vibrating-screen",
+    "zh": "/zh/products/ore-processing/vibrating-screens/inclined-vibrating-screen"
+  },
+  "overview": "The YA Series Inclined Vibrating Screen from Zexin Mining delivers exceptional screening performance with its proven circular motion technology. Ideal for mineral processing in small to medium operations, this multi-deck inclined screen efficiently separates materials from 5-100mm with high accuracy. The robust eccentric shaft drive system ensures consistent screening performance across diverse applications including iron ore, aggregate, limestone, and coal. With processing capacities of 60-350 t/h and screen areas of 4.2-14.4m², this versatile equipment offers reliable operation while maintaining energy efficiency and low maintenance requirements.",
+  "detailedDescription": "The ZXYA Series embodies a strategic approach to mineral sizing that emphasizes operational versatility within diverse processing contexts. This equipment leverages fundamentally different engineering principles from both horizontal and banana-type screens, creating a distinct operational niche that balances investment considerations against performance requirements. Its balanced design philosophy addresses the essential screening challenges faced by growing mining operations, where the interplay between recovery rate, product specification consistency, and economical processing creates complex operational demands.",
+  "specifications": {
+    "title": "YA Series Inclined Vibrating Screen Specifications",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Screen Size (m²)",
+      "Layers",
+      "Aperture Size (mm)",
+      "Capacity (t/h)",
+      "Motor Power (kW)",
+      "Weight (t)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Screen Size (ft²)",
+      "Layers",
+      "Aperture Size (in.)",
+      "Capacity (stph)",
+      "Motor Power (hp)",
+      "Weight (ton)"
+    ],
+    "tableData": [
+      [
+        "ZXYA1236",
+        "4.2",
+        "1-3",
+        "5-100",
+        "60-120",
+        "11",
+        "3.5"
+      ],
+      [
+        "ZXYA1545",
+        "6.8",
+        "1-3",
+        "5-100",
+        "80-150",
+        "15",
+        "4.8"
+      ],
+      [
+        "ZXYA1848",
+        "7.5",
+        "1-3",
+        "5-100",
+        "100-180",
+        "18.5",
+        "5.6"
+      ],
+      [
+        "ZXYA2160",
+        "12.6",
+        "1-3",
+        "5-100",
+        "150-300",
+        "30",
+        "9.8"
+      ],
+      [
+        "ZXYA2460",
+        "14.4",
+        "1-3",
+        "5-100",
+        "200-350",
+        "37",
+        "11.2"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "ZXYA1236",
+        "45.2",
+        "1-3",
+        "0.2-3.9",
+        "66-132",
+        "15",
+        "3.9"
+      ],
+      [
+        "ZXYA1545",
+        "73.2",
+        "1-3",
+        "0.2-3.9",
+        "88-165",
+        "20",
+        "5.3"
+      ],
+      [
+        "ZXYA1848",
+        "80.7",
+        "1-3",
+        "0.2-3.9",
+        "110-198",
+        "25",
+        "6.2"
+      ],
+      [
+        "ZXYA2160",
+        "135.6",
+        "1-3",
+        "0.2-3.9",
+        "165-330",
+        "40",
+        "10.8"
+      ],
+      [
+        "ZXYA2460",
+        "155.0",
+        "1-3",
+        "0.2-3.9",
+        "220-386",
+        "50",
+        "12.3"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "area",
+      "",
+      "length",
+      "capacity",
+      "power",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Eccentric Shaft Drive System",
+      "description": "Reliable eccentric shaft drive mechanism generates consistent circular motion trajectory for optimal material stratification and screening accuracy. The durable design maintains stable amplitude across various operating conditions, resulting in extended service life for both the drive components and screen panels."
+    },
+    {
+      "title": "Multi-deck Configuration",
+      "description": "Available in single to triple deck configurations enabling simultaneous classification of multiple size fractions in one pass. Each deck features independent tensioning mechanisms for precise screen media tensioning, enhancing performance during material separation of iron ore, coal, limestone, and construction aggregates."
+    },
+    {
+      "title": "Inclined Screen Design",
+      "description": "Optimized 20° inclined angle provides ideal material distribution and travel speed across the deck surface, maximizing screening efficiency while ensuring thorough material separation. This design significantly improves throughput capacity compared to horizontal screens when processing various material types."
+    },
+    {
+      "title": "Robust Construction",
+      "description": "Heavy-duty welded steel frame with reinforced side plates withstands demanding mining and quarrying environments. The strengthened mounting points and vibration-resistant connections enhance structural integrity, ensuring reliable operation under continuous heavy loading conditions typical in mineral processing applications."
+    },
+    {
+      "title": "Dust-sealed Bearing Assembly",
+      "description": "Premium dust-sealed bearings with automated lubrication system prevent contamination in dusty environments, significantly reducing maintenance frequency. This sealed design extends bearing life by up to 40% compared to conventional systems, maintaining consistent performance in wet screening and dewatering applications."
+    }
+  ],
+  "applications": {
+    "title": "Application Areas",
+    "items": [
+      {
+        "title": "Mining & Mineral Processing",
+        "description": "Excellent performance in screening iron ore, gold ore, copper ore, and coal with precise particle size classification. The multi-deck configuration allows for efficient separation of different material fractions while maintaining high throughput rates and maximizing recovery of valuable minerals in small to medium mining operations."
+      },
+      {
+        "title": "Aggregate & Construction Materials",
+        "description": "Ideal for screening construction aggregates, limestone, granite, and recycled construction materials. The robust design handles abrasive materials while delivering accurate sizing for road base, concrete aggregate, asphalt mixing, and other construction applications requiring precise material gradation."
+      },
+      {
+        "title": "Coal Preparation",
+        "description": "Exceptional efficiency in wet and dry coal screening applications, including raw coal sizing, dewatering, and final product classification. The optimized circular motion pattern prevents blinding and ensures consistent performance even with variable feed materials and moderate moisture content typically encountered in coal processing."
+      },
+      {
+        "title": "Industrial Minerals",
+        "description": "Precise screening of limestone, dolomite, kaolin, and other industrial minerals for various manufacturing processes. The adjustable amplitude and screen media options allow customization for specific material characteristics and desired product specifications, ensuring consistent quality for industrial applications."
+      },
+      {
+        "title": "Recycling & Environmental",
+        "description": "Effective separation of various recycled materials and waste products, supporting sustainable resource recovery operations. The durable construction withstands the challenges of mixed waste streams while efficiently separating materials by size for further processing or disposal in environmental applications."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does an inclined vibrating screen differ from other vibrating screen types?",
+      "answer": "Inclined vibrating screens operate at a typical 20° angle with circular motion generated by an eccentric shaft drive, creating an optimal balance between material travel speed and screening efficiency. Unlike horizontal screens, the inclined design uses gravity to assist material flow, resulting in higher throughput capacity and better stratification. Compared to multi-slope (banana) screens, inclined screens feature simpler construction and lower installation height, making them ideal for applications with space constraints or where simplified maintenance is preferred. The circular motion pattern provides excellent screening performance for most mining and aggregate materials with particle sizes from 5-100mm."
+    },
+    {
+      "question": "What advantages does the ZXYA Series offer for screening aggregate materials?",
+      "answer": "The ZXYA Series excels in aggregate screening applications through several key advantages: The precise circular motion pattern provides thorough material stratification and separation for accurate sizing of construction aggregates like crushed stone, gravel, and sand. The multi-deck configuration allows producers to simultaneously create multiple product sizes in a single pass, increasing operational efficiency. The robust construction with reinforced side plates and premium bearings handles the abrasive nature of aggregate materials while maintaining consistent performance even under continuous heavy loading. Finally, the straightforward design offers simplified maintenance and lower operating costs compared to more complex screening systems, making it particularly suitable for small to medium aggregate producers."
+    },
+    {
+      "question": "What screen media options are available for the ZXYA Series, and how do they affect performance?",
+      "answer": "The ZXYA Series supports multiple screen media options including woven wire mesh, punched plate, polyurethane panels, and rubber panels. Woven wire mesh offers high open area percentage (35-45%) for maximum throughput but with shorter wear life in abrasive applications. Punched plate provides excellent durability with moderate open area (25-35%), balancing capacity and service life. Polyurethane and rubber panels deliver superior wear resistance for highly abrasive materials, though with lower open area (20-30%). Our application engineers can recommend the optimal media type based on your specific material characteristics, target particle size, and moisture content to balance screening efficiency, capacity, and maintenance intervals in your operation."
+    },
+    {
+      "question": "How does the eccentric shaft drive system enhance screening performance?",
+      "answer": "The eccentric shaft drive system in the ZXYA Series creates consistent circular motion through mechanical precision rather than electrical adjustments, delivering several performance benefits: The uniform circular trajectory ensures even material distribution across the entire screen surface, eliminating dead zones and maximizing effective screening area. The mechanically generated motion maintains stable amplitude regardless of load variations, ensuring consistent screening performance even with fluctuating feed rates. The robust design handles higher G-forces (typically 4-5G) than comparable electrical systems, effectively preventing screen blinding and improving separation efficiency with challenging materials. Additionally, the mechanical simplicity of the system results in lower maintenance requirements and enhanced reliability in dusty and harsh operating environments typical in mining applications."
+    },
+    {
+      "question": "What maintenance requirements should operators consider for optimal performance?",
+      "answer": "To maintain optimal ZXYA Series performance, operators should implement several key maintenance practices: Regular inspection of bearing lubrication systems (weekly checks and monthly greasing) to prevent premature bearing failure. Screen media tension checks every 100 operating hours to ensure proper tensioning and prevent material bypassing. Eccentric weight balancing confirmation quarterly or after any drive component replacement to maintain proper motion patterns. Rubber spring mount inspection every 500 hours for signs of deterioration or damage. Regular cleaning of dust seals and motor cooling fins to prevent overheating. Following these maintenance protocols typically results in 20-30% longer component life and significantly reduces unplanned downtime. Most operators report maintenance requirements of just 4-6 hours per month for routine servicing."
+    },
+    {
+      "question": "How does the ZXYA Series handle high-moisture or sticky materials that typically cause screen blinding?",
+      "answer": "The ZXYA Series addresses high-moisture material challenges through several design elements: The circular motion generated by the eccentric shaft creates a constant agitation that helps prevent material adhesion to screen surfaces. The optimized 20° inclined angle improves material flow velocity, reducing residence time where blinding might occur. The higher G-force capabilities (adjustable up to 5G depending on model) provide aggressive material movement that helps dislodge sticky particles. For particularly challenging materials, the system can be configured with specialized anti-blinding screen media options including self-cleaning wire mesh, ball deck cleaning systems, or spray bars for material conditioning. These features collectively enable the YA Series to maintain screening efficiency with materials containing up to 15-20% moisture content, though performance will gradually decline as moisture levels increase beyond this range."
+    },
+    {
+      "question": "What installation requirements should be considered when integrating a ZXYA Series screen?",
+      "answer": "Key installation considerations for the ZXYA Series include: Robust foundation design to support dynamic loads (typically requiring 1.5-2 times the static weight capacity), with proper vibration isolation to prevent transmission to surrounding structures. Adequate feed distribution system to ensure even material presentation across the full screen width for maximum efficiency. Sufficient headroom clearance (minimum 1.5m above the screen) for maintenance access and screen media replacement. Proper chute design below each deck to efficiently collect and direct classified materials without buildup or blockage. Dust containment systems where required by operational or environmental considerations. Our engineering team provides comprehensive installation guidance including 3D models for integration planning, foundation load calculations, and connection details to ensure optimal performance in your specific processing circuit."
+    },
+    {
+      "question": "What production capacity improvements can operators expect when upgrading to the ZXYA Series?",
+      "answer": "Operations upgrading to the ZXYA Series typically experience capacity improvements of 15-25% compared to older vibrating screen technologies, with several contributing factors: The optimized circular motion pattern improves material stratification, allowing more efficient separation and higher throughput without sacrificing product quality. The enhanced vibration intensity (adjustable to application requirements) helps overcome blinding issues that limit capacity in conventional screens. The robust drive system maintains consistent performance under varying load conditions, preventing the efficiency losses common in older designs during feed surges. The improved screen media tensioning system minimizes premature wear and blinding, maintaining optimal open area throughout operating cycles. These efficiency gains translate to higher throughput with the same footprint, making the YA Series an ideal upgrade path for operations seeking increased production without major infrastructure changes."
+    },
+    {
+      "question": "What size classification range is most effective for the ZXYA Series?",
+      "answer": "The ZXYA Series delivers optimal performance in the 5-100mm size classification range, with efficiency characteristics that vary by particle size: For coarse material separation (40-100mm), efficiency rates typically exceed 95% with throughput capacities at the higher end of the specification range. For medium-sized material (10-40mm), separation efficiencies of 90-95% are standard with balanced capacity and precision. For finer screening (5-10mm), efficiency remains strong at 85-90% though throughput capacity is reduced compared to coarser applications. While the YA Series can be configured for separations below 5mm, alternative technologies may offer better performance for ultra-fine applications. The multi-deck configuration enables simultaneous classification of various size fractions, making the YA Series particularly effective for producing multiple product grades in a single processing stage."
+    },
+    {
+      "question": "How does the circular motion pattern specifically benefit mining applications?",
+      "answer": "The circular motion pattern provides several specific benefits in mining applications: The consistent 360° movement pattern ensures continuous material agitation across the entire screen surface, critical for accurate classification of valuable minerals. The balanced motion reduces structural stress compared to linear motion screens, resulting in longer service life in demanding mining environments. The circular trajectory prevents material from becoming trapped in screen apertures, reducing blinding issues common with irregular ore particles. The motion pattern promotes better material stratification, allowing finer particles to efficiently pass through the screen deck while effectively conveying oversize material to discharge. These characteristics collectively enhance recovery rates of valuable minerals while maintaining higher throughput capacities than comparable technologies, particularly beneficial for small to medium mining operations processing complex ore bodies with variable material characteristics."
+    }
+  ],
+  "seo": {
+    "title": "Inclined Vibrating Screen | Multi-deck Mining & Aggregate Screening",
+    "keywords": "inclined vibrating screen,circular vibrating screen,mining vibrating screen,multi-deck vibrating screen,aggregate screening,high-capacity vibrating screen,wet screening,screening equipment,vibratory screen,mineral processing screen,iron ore screening,coal screening,limestone screening,construction aggregate screen,circular motion screen,vibrating screen deck,material separation,screen media,vibration exciter,screening efficiency",
+    "description": "Zexin Mining's inclined vibrating screen delivers exceptional separation performance with multi-deck configurations. Ideal for small mining operations processing various ores with high recovery rates and energy-efficient operation."
+  },
+  "relatedProducts": [
+    "banana-multislope-vibrating-screen",
+    "trommel-screen",
+    "dewatering-screen",
+    "bar-vibrating-screen",
+    "linear-vibrating-screen"
+  ],
+  "imageSrcAlt": "Inclined Vibrating Screen | Zexin Mining"
+}

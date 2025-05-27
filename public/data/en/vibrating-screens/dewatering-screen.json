@@ -1,0 +1,354 @@
+{
+  "id": "dewatering-screen",
+  "title": "Dewatering Screen",
+  "series": "DWS Series High-Efficiency Dewatering Screen",
+  "imageSrc": "/images/products/vibrating-screens/dewatering-screen.jpg",
+  "productCategory": "Mineral Screen Equipment",
+  "subcategory": "vibrating-screens",
+  "model": "DWS-1845",
+  "meta": [
+    {
+      "key": "Processing Capacity",
+      "displayValue": "50-600 t/h (55-661 stph)"
+    },
+    {
+      "key": "Screening particle size",
+      "displayValue": "0.074-2 mm (0.003-0.079 in.)"
+    },
+    {
+      "key": "Motor power",
+      "displayValue": "4.4-30 kW (5.9-40.2 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "kg",
+          "conversionFactor": 1,
+          "label": "kg"
+        },
+        {
+          "unit": "lb",
+          "conversionFactor": 2.20462,
+          "label": "lb"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/vibrating-screens/dewatering-screen",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/vibrating-screens/dewatering-screen",
+    "zh": "/zh/products/ore-processing/vibrating-screens/dewatering-screen"
+  },
+  "overview": "Zexin Mining's DWS Series High-Efficiency Dewatering Screen provides exceptional dewatering performance for fine particles while maximizing recovery rates. Designed for small to medium-sized mining operations, this vibrating dewatering screen effectively reduces moisture content in fine sand, tailings, coal slurry, and various mineral concentrates to 8-15%. With screen deck areas ranging from 3.6 to 21 square meters, the powerful dual-exciter system delivers strong vibration for optimal dewatering while maintaining low energy consumption and minimal maintenance requirements.",
+  "detailedDescription": "The DWS Series represents a paradigm shift in fine particle moisture management technology. This system addresses the fundamental water-solid separation challenges from an engineering perspective focused on resource conservation and operational economics. Its value extends beyond traditional dewatering metrics, offering mining operators a comprehensive solution that intersects water management constraints with production objectives. The equipment's significance lies in its ability to transform problematic wet fines from liability to asset while meeting increasingly stringent environmental requirements for water usage and tailings management.",
+  "specifications": {
+    "title": "High-Efficiency Dewatering Screen Technical Parameters",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Screen Area (m²)",
+      "Layers",
+      "Screen Opening (mm)",
+      "Capacity (t/h)",
+      "Motor Power (kW)",
+      "Weight (kg)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Screen Area (ft²)",
+      "Layers",
+      "Screen Opening (in.)",
+      "Capacity (stph)",
+      "Motor Power (hp)",
+      "Weight (lb)"
+    ],
+    "tableData": [
+      [
+        "DWS-1230",
+        "3.6",
+        "1",
+        "0.074-2",
+        "50-80",
+        "2×2.2",
+        "2300"
+      ],
+      [
+        "DWS-1545",
+        "6.5",
+        "1",
+        "0.074-2",
+        "80-150",
+        "2×3.7",
+        "3800"
+      ],
+      [
+        "DWS-1845",
+        "8.1",
+        "1",
+        "0.074-2",
+        "150-200",
+        "2×3.7",
+        "4500"
+      ],
+      [
+        "DWS-2160",
+        "12.6",
+        "1",
+        "0.074-2",
+        "200-300",
+        "2×7.5",
+        "5800"
+      ],
+      [
+        "DWS-2470",
+        "16.8",
+        "1",
+        "0.074-2",
+        "300-450",
+        "2×11",
+        "7500"
+      ],
+      [
+        "DWS-3070",
+        "21.0",
+        "1",
+        "0.074-2",
+        "400-600",
+        "2×15",
+        "9400"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "DWS-1230",
+        "38.8",
+        "1",
+        "0.003-0.079",
+        "55-88",
+        "2×2.9",
+        "5,070"
+      ],
+      [
+        "DWS-1545",
+        "70.0",
+        "1",
+        "0.003-0.079",
+        "88-165",
+        "2×5.0",
+        "8,378"
+      ],
+      [
+        "DWS-1845",
+        "87.2",
+        "1",
+        "0.003-0.079",
+        "165-220",
+        "2×5.0",
+        "9,921"
+      ],
+      [
+        "DWS-2160",
+        "135.6",
+        "1",
+        "0.003-0.079",
+        "220-331",
+        "2×10.1",
+        "12,787"
+      ],
+      [
+        "DWS-2470",
+        "180.8",
+        "1",
+        "0.003-0.079",
+        "331-496",
+        "2×14.8",
+        "16,535"
+      ],
+      [
+        "DWS-3070",
+        "226.0",
+        "1",
+        "0.003-0.079",
+        "441-661",
+        "2×20.1",
+        "20,723"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "area",
+      "",
+      "length",
+      "capacity",
+      "power",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "High-Frequency Vibration System",
+      "description": "Powerful dual-exciter mechanism produces up to 7G of centrifugal force and 1200-1500 RPM vibration frequency, compressing the material bed for maximum moisture extraction, effectively handling even sub-0.5mm fine particles. The system significantly outperforms conventional dewatering equipment, reducing moisture content to 8-15% in most applications."
+    },
+    {
+      "title": "Specialized Polyurethane Screen Media",
+      "description": "Premium wear-resistant polyurethane deck panels with precisely engineered slot openings (0.074-2mm) provide extended service life while preventing material loss. Optimized open area and tapered slot design maximize moisture discharge while ensuring high recovery rates of fine particles in mining applications."
+    },
+    {
+      "title": "Adjustable Vibration Parameters",
+      "description": "Adjustable amplitude and frequency settings allow fine-tuning for different materials, from fine sand to tailings and coal slurry. This versatility enables operators to optimize dewatering performance across various applications while maintaining energy efficiency for different particle sizes and feed densities."
+    },
+    {
+      "title": "Multi-Zone Deck Design",
+      "description": "Innovative deck configuration features drainage, dewatering, and drying zones that progressively reduce moisture content as material moves across the deck. A 5° inclination angle coupled with specialized discharge end dam creates optimal material bed thickness for maximum moisture removal in coal slurry, mineral tailings, and sand processing applications."
+    },
+    {
+      "title": "Heavy-Duty Structural Design",
+      "description": "Reinforced steel structure with strengthened side plates and premium sealed bearings ensures reliable operation in harsh mining environments. The robust design handles high-density material loads while resisting corrosion and wear, significantly reducing maintenance requirements and downtime compared to conventional dewatering screens."
+    },
+    {
+      "title": "Compact Footprint Efficiency",
+      "description": "Space-saving design delivers exceptional dewatering performance in minimal installation area, particularly suitable for space-constrained small to medium mining operations. High-capacity processing capabilities eliminate the need for multiple units while achieving excellent moisture reduction results in applications from mineral concentrates to industrial sludge processing."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Fine Sand Dewatering",
+        "description": "Excels in dewatering fine sand (0.074-2mm) for construction materials, glass manufacturing, and foundry applications. The high-frequency vibration system effectively reduces moisture content to 8-12% while recovering up to 95% of fine particles, significantly improving product quality and reducing drying costs compared to conventional dewatering methods."
+      },
+      {
+        "title": "Mineral Tailings Management",
+        "description": "Efficiently dewaters mining tailings from gold, copper, iron and other mineral processing operations, reducing disposal volumes by up to 45% while enabling water recovery and reuse. Specialized polyurethane screen media prevents valuable fine particle loss while achieving optimal moisture reduction, improving handling, storage, and environmental compliance."
+      },
+      {
+        "title": "Coal Slurry Processing",
+        "description": "Processes fine coal slurry and coal washing by-products with high efficiency and low operating costs. The powerful vibration system effectively reduces moisture content to 15-20% even with challenging fine particle distributions, significantly improving power generation thermal efficiency while reducing transportation costs and handling difficulties."
+      },
+      {
+        "title": "Industrial Sludge Treatment",
+        "description": "Effectively dewaters various industrial sludges from wastewater treatment, paper manufacturing, and chemical production. Adjustable vibration parameters and specialized screen configurations adapt to diverse sludge characteristics, reducing disposal volumes by up to 60% while enabling valuable material recovery, supporting sustainable waste management practices."
+      },
+      {
+        "title": "Aggregate Production",
+        "description": "High-capacity dewatering of manufactured sand, crushed stone fines, and recycled construction materials. The robust system processes abrasive materials while consistently reducing moisture content to optimal levels for concrete mixing, asphalt production, and other construction applications, eliminating the negative effects of excess moisture on binding performance and final product strength."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How do high-frequency dewatering screens differ from conventional dewatering equipment?",
+      "answer": "High-frequency dewatering screens operate at significantly higher vibration frequencies (1200-1500 RPM) and centrifugal forces (up to 7G), creating intense compression and vibration that forces moisture from even the finest particles compared to conventional dewatering equipment. Specialized polyurethane deck panels with precisely engineered slot openings retain fine particles while efficiently draining water. This combination achieves moisture content reduction to 8-15% compared to 20-30% with conventional screens, while processing material as fine as 74 microns without significant solids loss. Additionally, the multi-zone deck design with dam technology creates optimal bed properties for different particle size distributions, maximizing dewatering efficiency."
+    },
+    {
+      "question": "Why are DWS series particularly effective for dewatering fine sand and mining tailings?",
+      "answer": "DWS series excels in dewatering fine sand and mining tailings through several specialized features: The high-frequency vibration system (1200-1500 RPM) generates intense centrifugal forces that effectively squeeze moisture from fine particle beds; precisely engineered polyurethane panel slot widths as narrow as 0.074mm retain valuable fine particles while maximizing moisture discharge; optimized 5° deck inclination angle coupled with dam technology creates ideal material bed thickness for effective dewatering; multi-zone design progressively dewaters material as it moves across the deck. These features combine to reduce moisture content to 8-15% in most applications while maintaining recovery rates above 95% for particles above 74 microns, significantly outperforming conventional fine particle dewatering methods."
+    },
+    {
+      "question": "What screen media options are available for the DWS series and how do they affect performance?",
+      "answer": "DWS series offers specialized polyurethane deck panels as the primary screen media, available in multiple configurations: Standard slot widths ranging from 0.074-2mm to accommodate different particle sizes; tapered slot design improves moisture discharge while preventing blinding; wedge wire designs provide higher percentage open area for increased capacity; specially treated surfaces enhance wear resistance for abrasive materials. For particularly challenging applications, optional screen media include ceramic-embedded polyurethane offering up to 3x longer service life in highly abrasive conditions; rubber panels for applications with variable particle sizes; and stainless steel wedge wire panels for corrosive processing environments requiring chemical compatibility. Our application engineers recommend optimal screen media based on your material characteristics, target moisture content, and production requirements, balancing dewatering efficiency, solids recovery, and maintenance intervals."
+    },
+    {
+      "question": "What maintenance requirements should operators consider to ensure optimal performance?",
+      "answer": "To maintain optimal DWS series performance, operators should implement several key maintenance measures: Weekly inspection of bearing lubrication systems with monthly grease replenishment to prevent premature bearing failure; daily verification of vibration parameters using the equipped monitoring system to ensure proper operation; monthly inspection of deck panels for wear and damage, particularly in high-wear feed zones; quarterly inspection and adjustment of discharge end dams as needed to maintain optimal material bed characteristics; regular cleaning of drainage ports to prevent fine particle buildup and clogging; periodic inspection of motor mounts and vibration isolation springs every 500 operating hours. Following these protocols typically extends component life by 30-40%, significantly reducing unplanned downtime. Most operators report routine maintenance requiring only 3-5 hours per month, making the DWS series particularly maintenance-friendly compared to alternative dewatering technologies."
+    },
+    {
+      "question": "What capacity improvements can operators expect when upgrading from conventional equipment to DWS series?",
+      "answer": "Operations upgrading to DWS series typically experience 30-50% capacity improvements over conventional dewatering equipment for several reasons: The high-frequency vibration system (1200-1500 RPM) processes material more efficiently, achieving higher throughput in a smaller footprint; specialized screen media with optimized open area maximizes drainage capacity while maintaining solids recovery; multi-zone deck configuration provides progressive dewatering that prevents bottlenecks in the process; powerful dual exciters handle variable feed densities without performance loss. These efficiency improvements typically allow one DWS series unit to replace multiple conventional units while achieving superior moisture reduction (8-15% final moisture content versus 20-30% with conventional equipment). For small to medium mining operations, this translates to reduced capital investment, lower operating costs, and simplified maintenance requirements while improving product quality and recovery rates."
+    },
+    {
+      "question": "What are the optimal feed conditions for the DWS series, and how does it handle variations in particle size and feed density?",
+      "answer": "DWS series performs optimally with feed solids concentration between 15-60% (by weight) and primary particle sizes of 0.074-2mm, although it effectively handles a certain percentage of finer and coarser material as well. The system adapts to feed condition variations through several design features: Adjustable vibration parameters (amplitude and frequency) can be fine-tuned for different material characteristics; multi-zone deck configuration provides graduated drainage conditions that accommodate different feed densities; powerful dual exciters maintain effective vibration even with fluctuating material loads; optional feed distribution systems ensure material is evenly spread across the entire screen width. For operations with highly variable feed conditions, automatic control systems can continuously adjust vibration parameters based on feed density measurements, maintaining consistent performance as conditions change. This adaptability makes the DWS series particularly valuable in mining operations where ore characteristics and processing conditions frequently vary."
+    },
+    {
+      "question": "How does the DWS series handle challenging materials such as clay-contaminated sand or high-fines coal slurry?",
+      "answer": "DWS series effectively processes challenging materials through several specialized features: High-frequency vibration (1200-1500 RPM) creates intense shear forces that break weak bonds between fine particles and water molecules; high centrifugal forces (up to 7G) compress the material bed, forcing moisture out even in the presence of clay contamination; optimized deck angle coupled with dam technology creates ideal material stratification that helps separate fine particles and moisture; specialized polyurethane screen media resists blinding even with sticky materials. For particularly difficult applications such as high-clay-content coal slurry, optional features include strategic material conditioning spray systems, specialized feed distribution systems that optimize material presentation, and vibration pattern adjustments that enhance separation of fine particles from moisture. These capabilities allow the DWS series to reduce moisture content to 15-20% even in traditionally difficult materials that would challenge conventional dewatering equipment."
+    },
+    {
+      "question": "What installation requirements should be considered when integrating DWS series screens into existing operations?",
+      "answer": "Key installation considerations for DWS series include: Proper foundation design to support dynamic loads (typically requiring 1.5-2x static weight bearing capacity) with appropriate vibration isolation to prevent vibration transfer to surrounding structures; adequate feed distribution system ensuring material evenly covers the entire screen width; sufficient clearance above the screen (minimum 1m) for maintenance and screen media replacement; proper chute design below the screen for effective collection of dewatered material while providing clear drainage paths for discharged water; sufficient power supply to handle the startup load of the dual exciter system; integration with existing water management systems to process discharged liquid. Our engineering team provides comprehensive installation planning support, including 3D models for integration into plant layouts, foundation load calculations, and connection details to ensure optimal performance in your specific processing circuit."
+    },
+    {
+      "question": "What energy consumption advantages does the DWS series offer compared to alternative dewatering technologies?",
+      "answer": "Compared to alternative dewatering technologies, DWS series offers significant energy advantages: 40-60% lower energy consumption per ton of processed material compared to centrifuges performing similar dewatering functions; 25-35% more energy efficient than filter presses due to mechanical rather than pressure dewatering mechanisms; elimination of thermal drying requirements in many applications, saving substantial energy costs; optimized dual exciter design providing maximum vibration energy with minimal power input; precisely balanced vibration patterns that minimize energy waste through harmonics. For a typical operation processing 100 tons per hour of fine material, DWS series requires approximately 15-30 kWh, while a centrifuge achieving similar moisture reduction would require 50-80 kWh. This energy efficiency translates directly to lower operating costs and reduced carbon footprint, making DWS series particularly valuable for mining operations seeking to minimize energy consumption while maintaining high throughput."
+    },
+    {
+      "question": "How does dewatering screen performance vary with different mineral types and particle characteristics?",
+      "answer": "Dewatering performance varies by mineral type, influenced by several factors: Particle shape significantly affects drainage efficiency, with angular particles (such as crushed stone fines) retaining more moisture due to irregular surface features, typically resulting in 2-3% higher final moisture content than rounded particles (such as natural sand); mineral density impacts compression achieved under vibration, with high-density materials (iron ore fines at 4.5-5 g/cm³) achieving 3-5% lower final moisture content than lighter materials (coal fines at 1.3-1.8 g/cm³); surface properties affect moisture attachment, with hydrophobic minerals (like sulfides) dewatering more effectively than hydrophilic minerals (like clay-contaminated silicates); particle size distribution influences bed porosity, with well-graded materials typically achieving better dewatering results than uniformly sized particles. The DWS series adapts to these variations through adjustable vibration parameters, customized screen media configurations, and optimized deck designs that can be tuned for specific material characteristics, ensuring optimal performance across a range of mining applications from metal ores to industrial minerals and coal."
+    }
+  ],
+  "seo": {
+    "title": "High-Efficiency Dewatering Screen | Mining Material Dewatering Equipment",
+    "description": "Zexin Mining high-efficiency dewatering screens reduce fine material moisture content to 8-15%, achieving exceptional particle recovery rates. Particularly suitable for small to medium-sized mining operations processing tailings, coal slurry, and fine sand, with low energy consumption and simple maintenance.",
+    "keywords": "dewatering screen, high-frequency dewatering screen, fine sand dewatering screen, tailings dewatering screen, coal slurry dewatering screen, mining dewatering screen, sand and gravel dewatering equipment, sludge dewatering screen, vibrating dewatering screen, high-efficiency dewatering screen, multi-layer dewatering screen, mineral processing dewatering, fine particle dewatering, moisture reduction screen, mining water resource management, small mining dewatering, aggregate dewatering, fine material recovery"
+  },
+  "relatedProducts": [
+    "banana-multislope-vibrating-screen",
+    "inclined-vibrating-screen",
+    "bar-vibrating-screen",
+    "linear-vibrating-screen",
+    "trommel-screen"
+  ],
+  "imageSrcAlt": "Dewatering Screen | Zexin Mining"
+}

@@ -1,0 +1,380 @@
+{
+  "id": "wheel-bucket-sand-washer",
+  "title": "Wheel Bucket Sand Washer",
+  "series": "XS Series Wheel Bucket Sand Washing Equipment",
+  "imageSrc": "/images/products/washing-equipment/wheel-bucket-sand-washer.jpg",
+  "productCategory": "Mineral Processing Equipment",
+  "subcategory": "washing-equipment",
+  "model": "XS-2810",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "15-200 t/h (16.5-220 stph)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "4-15 kW (5.4-20.1 hp)"
+    },
+    {
+      "key": "Feed Size",
+      "displayValue": "≤10 mm (≤0.39 in.)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "kg",
+          "conversionFactor": 1,
+          "label": "kg"
+        },
+        {
+          "unit": "lb",
+          "conversionFactor": 2.20462,
+          "label": "lb"
+        }
+      ],
+      "speed": [
+        {
+          "unit": "r/min",
+          "conversionFactor": 1,
+          "label": "r/min"
+        },
+        {
+          "unit": "rpm",
+          "conversionFactor": 1,
+          "label": "rpm"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/washing-equipment/wheel-bucket-sand-washer",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/washing-equipment/wheel-bucket-sand-washer",
+    "zh": "/zh/products/ore-processing/washing-equipment/wheel-bucket-sand-washer"
+  },
+  "overview": "Zexin Mining's XS Series Wheel Bucket Sand Washers deliver exceptional cleaning performance for sand, gravel and other aggregates through innovative bucket wheel technology. With high processing capacity and low water consumption, these robust washers effectively remove clay, dust and impurities while minimizing material loss and power consumption.",
+  "detailedDescription": "The XS Series Wheel Bucket Sand Washer introduces innovative cleaning technology that revolutionizes aggregate washing operations in mining and construction industries. This robust system creates optimal particle separation through its precision-engineered wheel bucket design, addressing clay contamination challenges while enhancing material quality. Its balanced approach to gentle washing and efficient water utilization delivers consistent results across varying feed materials, making it essential processing equipment that adapts to different contamination levels without compromising operational reliability or final product quality.",
+  "specifications": {
+    "title": "Wheel Bucket Sand Washer Technical Specifications",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Diameter of the wheel bucket (mm)",
+      "Speed of rotation (r/min)",
+      "Max. feeding size (mm)",
+      "Processing capacity (t/h)",
+      "Motor power (kW)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Diameter of the wheel bucket (in.)",
+      "Speed of rotation (rpm)",
+      "Max. feeding size (in.)",
+      "Processing capacity (stph)",
+      "Motor power (hp)"
+    ],
+    "tableData": [
+      [
+        "XS-2210",
+        "2200",
+        "2.5",
+        "≤10",
+        "15-30",
+        "4"
+      ],
+      [
+        "XS-2610",
+        "2600",
+        "2.5",
+        "≤10",
+        "20-50",
+        "5.5"
+      ],
+      [
+        "XS-2810",
+        "2800",
+        "1.2",
+        "≤10",
+        "50-80",
+        "11"
+      ],
+      [
+        "XS-2815",
+        "2800",
+        "1.17",
+        "≤10",
+        "60-100",
+        "11"
+      ],
+      [
+        "XS-3016",
+        "3000",
+        "1.2",
+        "≤10",
+        "70-110",
+        "11"
+      ],
+      [
+        "XS-3210",
+        "3200",
+        "1",
+        "≤10",
+        "80-120",
+        "15"
+      ],
+      [
+        "XS-3215",
+        "3200",
+        "1.17",
+        "≤10",
+        "95-130",
+        "15"
+      ],
+      [
+        "XS-3610",
+        "3600",
+        "1",
+        "≤10",
+        "110-200",
+        "15"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "XS-2210",
+        "86.6",
+        "2.5",
+        "≤0.39",
+        "16.5-33",
+        "5.4"
+      ],
+      [
+        "XS-2610",
+        "102.4",
+        "2.5",
+        "≤0.39",
+        "22-55",
+        "7.4"
+      ],
+      [
+        "XS-2810",
+        "110.2",
+        "1.2",
+        "≤0.39",
+        "55-88",
+        "14.8"
+      ],
+      [
+        "XS-2815",
+        "110.2",
+        "1.17",
+        "≤0.39",
+        "66-110",
+        "14.8"
+      ],
+      [
+        "XS-3016",
+        "118.1",
+        "1.2",
+        "≤0.39",
+        "77-121",
+        "14.8"
+      ],
+      [
+        "XS-3210",
+        "126.0",
+        "1",
+        "≤0.39",
+        "88-132",
+        "20.1"
+      ],
+      [
+        "XS-3215",
+        "126.0",
+        "1.17",
+        "≤0.39",
+        "105-143",
+        "20.1"
+      ],
+      [
+        "XS-3610",
+        "141.7",
+        "1",
+        "≤0.39",
+        "121-220",
+        "20.1"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "speed",
+      "length",
+      "capacity",
+      "power"
+    ]
+  },
+  "features": [
+    {
+      "title": "Advanced Wheel Bucket Design",
+      "description": "Engineered with precisely calculated bucket geometry and spacing that creates optimal lifting patterns for efficient particle cleaning. The specialized design ensures 30% improved washing efficiency compared to conventional designs while minimizing material loss and preserving grain integrity through gentle lifting action."
+    },
+    {
+      "title": "Durable Bucket Construction",
+      "description": "Features industrial-grade high manganese steel bucket components that resist wear from abrasive sand and gravel. Each bucket is specifically designed to maximize material lifting while providing extended service life even in continuous operation with highly abrasive materials, reducing replacement frequency and maintenance costs."
+    },
+    {
+      "title": "Efficient Water Utilization System",
+      "description": "Incorporates advanced water circulation features including optimized water level control and recirculation systems that reduce fresh water consumption by up to 35% compared to conventional washers. The closed-circuit design supports environmentally responsible processing while maintaining high cleaning efficiency."
+    },
+    {
+      "title": "Low-Speed High-Torque Drive System",
+      "description": "Powered by an energy-efficient motor and precision reducer assembly that delivers high torque at optimized rotation speeds (1-2.5 r/min). This specialized drive system reduces power consumption by up to 25% compared to traditional washers while providing reliable operation under varying load conditions."
+    },
+    {
+      "title": "Heavy-Duty Bearing Assembly",
+      "description": "Equipped with oversized sealed bearings and robust structural supports that withstand both radial and axial loads during continuous operation. The precision-engineered bearing system ensures extended equipment life even in harsh environments, while minimizing maintenance requirements and unplanned downtime."
+    },
+    {
+      "title": "Modular Component Design",
+      "description": "Constructed with easily replaceable wear components that facilitate rapid maintenance without complete equipment disassembly. The standardized modular design enables bucket replacement in as little as 30 minutes, reducing maintenance downtime while extending overall equipment service life through routine component rotation."
+    },
+    {
+      "title": "Adjustable Overflow System",
+      "description": "Features precision weir control that enables fine-tuning of water levels and overflow rates according to specific material characteristics. This adaptable system optimizes washing performance for different sand types and contamination levels, ensuring consistent final product quality regardless of feed variations."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Construction Sand Processing",
+        "description": "Effectively cleans construction sand by removing clay, dust and organic impurities to meet stringent quality standards for concrete production. The gentle washing action preserves particle size distribution while achieving high cleanliness levels, producing premium washed sand that improves concrete strength and workability."
+      },
+      {
+        "title": "Aggregate Production",
+        "description": "Provides thorough washing of crushed stone, gravel and other aggregates for road construction and concrete manufacturing. The robust design handles abrasive materials while effectively removing fine clay coatings and dust particles, producing clean aggregates that meet industry standards and specifications."
+      },
+      {
+        "title": "Silica Sand Processing",
+        "description": "Delivers excellent cleaning performance for industrial silica sand applications requiring high purity levels. The precision-controlled washing process removes clay coatings and iron impurities without excessive fines generation, producing washed silica sand that meets strict specifications for glass manufacturing and foundry applications."
+      },
+      {
+        "title": "Artificial Sand Manufacturing",
+        "description": "Efficiently processes manufactured sand from crushed rock, removing ultra-fine particles and dust that would otherwise compromise concrete quality. The wheel bucket design provides optimal separation of contaminants while preserving desirable particle shape and size distribution, creating high-quality artificial sand for construction applications."
+      },
+      {
+        "title": "Mining and Mineral Processing",
+        "description": "Supports the beneficiation of various minerals by removing surface contaminants and fine particles prior to downstream processing. The effective washing action improves subsequent concentration processes by providing cleaner feed material, enhancing recovery rates and final product quality across diverse mining applications."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does a wheel bucket sand washer work?",
+      "answer": "Wheel bucket sand washers operate through a rotating wheel equipped with evenly spaced buckets. The feed material enters a water-filled trough where heavier sand particles settle at the bottom. As the wheel rotates slowly (1-2.5 r/min), the buckets scoop up the settled material and lift it as the wheel turns. During this lifting process, the material undergoes continuous washing as water flows through the buckets. The buckets are designed with drainage holes that allow water and fine impurities to return to the trough while retaining clean sand. At the highest position, the clean sand is discharged into a collection chute. This process efficiently removes clay, dust, and other contaminants while utilizing gravity and water flow to separate impurities from valuable sand."
+    },
+    {
+      "question": "What advantages do wheel bucket sand washers offer over other washing equipment?",
+      "answer": "Wheel bucket sand washers provide several significant advantages: 1) Lower power consumption - typically 30-50% less than spiral washers with similar capacity; 2) Gentle material handling that preserves particle gradation and shape; 3) Lower water consumption with efficient water recycling capabilities; 4) Minimal material loss during the washing process; 5) Effective removal of clay, dust and lightweight contaminants; 6) Simple robust construction with fewer moving parts, reducing maintenance requirements; 7) Lower operating noise compared to high-speed washing systems; 8) More effective dewatering capability, producing drier final product; 9) Longer service life for wear components due to low rotation speeds; 10) Ability to handle variations in feed material size and contamination levels."
+    },
+    {
+      "question": "What types of materials can be processed in XS series wheel bucket washers?",
+      "answer": "XS series wheel bucket washers effectively process a wide range of materials including: 1) Natural river and lake sand; 2) Crushed stone sand from various rock types; 3) Quartz sand for construction and industrial applications; 4) Silica sand for glass manufacturing; 5) Foundry sand requiring clay removal; 6) Fine gravel and aggregate materials; 7) Manufactured sand from crushing operations; 8) Mineral sands requiring cleaning; 9) Construction waste sand for recycling; 10) Various industrial minerals requiring washing. The equipment performs optimally with materials sized up to 10mm with moderate clay or dust contamination, typically processing between 15-200 t/h depending on model size."
+    },
+    {
+      "question": "How do I select the appropriate wheel bucket washer size for my application?",
+      "answer": "Selecting the proper wheel bucket washer involves evaluating several key factors: 1) Required processing capacity (15-200 t/h for XS series); 2) Feed material characteristics including particle size distribution (optimal for materials ≤10mm); 3) Clay or contaminant content percentage; 4) Required cleanliness level in final product; 5) Available water supply and quality; 6) Material density and bulk properties; 7) Available installation space; 8) Environmental requirements for water management; 9) Energy efficiency requirements; 10) Integration with existing processing equipment. Our engineering team provides comprehensive application assessment to recommend the optimal equipment sizing based on your specific operational requirements and material characteristics."
+    },
+    {
+      "question": "What maintenance procedures are required for wheel bucket sand washers?",
+      "answer": "Effective maintenance for wheel bucket sand washers includes: 1) Regular inspection of buckets for wear and replacement as needed (typically every 4-6 months depending on material abrasiveness); 2) Lubrication of main bearings according to manufacturer's schedule; 3) Checking drive components including motor, reducer, and gear coupling; 4) Inspection of overflow weir and water level control mechanisms; 5) Monitoring water spray nozzles if equipped; 6) Checking structural components for signs of wear or corrosion; 7) Inspecting discharge chute for wear and proper alignment; 8) Verification of electrical components and control systems. With proper maintenance, XS series washers typically achieve service intervals of 3,000-5,000 operating hours between major maintenance activities, with simple bucket replacement being the most common service requirement."
+    },
+    {
+      "question": "How does water management work with wheel bucket sand washers?",
+      "answer": "Water management in wheel bucket sand washers involves several key aspects: 1) The main washing action occurs in a water-filled trough where the wheel operates; 2) Water consumption typically ranges from 0.5-1.0 m³ per ton of processed material; 3) Contaminated water containing fine particles and clay overflows from the equipment through adjustable weirs; 4) Most operations incorporate water recycling systems where process water is treated through settling ponds, clarifiers, or filter presses; 5) Recycled water can be returned to the washing circuit, reducing fresh water requirements by up to 80%; 6) Proper water management increases equipment efficiency while minimizing environmental impact; 7) Water level in the trough is critical for optimal operation and can be adjusted based on material characteristics; 8) Some advanced models incorporate internal water sprays for enhanced cleaning performance."
+    },
+    {
+      "question": "How does a wheel bucket sand washer compare to a spiral sand washer?",
+      "answer": "Wheel bucket and spiral sand washers serve similar purposes but have important differences: 1) Power efficiency - wheel bucket washers consume 30-50% less power for the same capacity; 2) Material handling - wheel bucket systems provide gentler material handling with less degradation of particle shape; 3) Water usage - wheel bucket washers typically require less water for equivalent cleaning effectiveness; 4) Final moisture content - wheel bucket washers generally produce drier final product due to better dewatering action; 5) Space requirements - spiral washers have a smaller footprint but require more height; 6) Maintenance aspects - wheel bucket washers have simpler maintenance requirements but bucket replacement is more frequent; 7) Processing capacity - larger wheel bucket models typically offer higher capacities than spiral washers; 8) Material loss - wheel bucket washers typically have lower material losses in the washing process; 9) Noise levels - wheel bucket washers operate more quietly due to lower rotation speeds; 10) Service life - both systems offer good longevity, with wheel bucket washers typically having better overall equipment life but more frequent wear part replacement."
+    },
+    {
+      "question": "What factors affect the cleaning efficiency of wheel bucket sand washers?",
+      "answer": "Multiple factors influence wheel bucket sand washer cleaning efficiency: 1) Rotation speed - typically 1-2.5 r/min, with slower speeds for more difficult materials; 2) Water level in the washing trough - affects residence time and agitation intensity; 3) Feed material size distribution - optimal performance with materials ≤10mm; 4) Type and amount of contamination - clay content, organic matter, or fine dust; 5) Water quality and additives - clean water improves efficiency, while certain additives can enhance clay removal; 6) Bucket design and condition - worn buckets reduce efficiency; 7) Feed rate relative to equipment capacity - operating at optimal loading improves performance; 8) Water temperature - warmer water typically improves clay removal; 9) Proper overflow control - affects removal of fine suspended particles; 10) Material retention time in washing zone - longer retention improves cleaning of difficult materials. Optimizing these parameters ensures maximum cleaning effectiveness while maintaining high productivity."
+    },
+    {
+      "question": "What customization options are available for XS series wheel bucket sand washers?",
+      "answer": "XS series wheel bucket sand washers offer several customization options to match specific application requirements: 1) Material selection for buckets - standard manganese steel or premium wear-resistant alloys for highly abrasive materials; 2) Bucket design variations - different perforation patterns optimized for specific material types; 3) Drive system options - standard or energy-efficient motor packages; 4) Control systems - from basic manual controls to fully automated operation with remote monitoring capabilities; 5) Water management accessories - including recirculation systems, water level sensors, and automated adjustment; 6) Structural modifications - custom heights, feed arrangements, or discharge configurations; 7) Integration packages - for seamless connection with existing processing equipment; 8) Environmental options - enhanced water conservation features or sound dampening packages; 9) Climate adaptations - for extreme temperature environments or high-humidity conditions; 10) Capacity adjustments - fine-tuned designs for specific throughput requirements between standard models. Our engineering team works closely with customers to develop customized solutions based on specific operational needs."
+    }
+  ],
+  "seo": {
+    "title": "Wheel Bucket Sand Washer | High-Efficiency Aggregate Cleaning Equipment | Zexin Mining",
+    "description": "Zexin Mining's XS Series Wheel Bucket Sand Washers deliver 30% higher cleaning efficiency with innovative bucket technology. Our robust equipment processes 15-200 t/h while reducing water consumption by 35% and power usage by 25% compared to conventional washers.",
+    "keywords": "wheel bucket sand washer,bucket wheel sand washing machine,sand washing machine,gravel washing machine,sand and gravel washer,high-efficiency sand washer,industrial sand washer,sand dewatering machine,sand cleaning equipment,sand washing plant,mining sand washing machine,construction sand washer,aggregate washing equipment,mineral sand washing equipment,wheel type sand washer,heavy-duty sand washer,sand washer with wheel bucket,sand processing equipment,sand washer maintenance,portable sand washing machine"
+  },
+  "searchKeywords": [
+    "wheel bucket sand washer",
+    "bucket wheel sand washing machine",
+    "sand washing machine",
+    "gravel washing machine",
+    "sand and gravel washer",
+    "high-efficiency sand washer",
+    "industrial sand washer",
+    "sand dewatering machine",
+    "sand cleaning equipment",
+    "sand washing plant"
+  ],
+  "relatedProducts": [
+    "spiral-washer",
+    "twin-shaft-log-washer"
+  ],
+  "imageSrcAlt": "Wheel Bucket Sand Washer | Zexin Mining"
+}

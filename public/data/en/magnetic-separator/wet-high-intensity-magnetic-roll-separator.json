@@ -1,0 +1,441 @@
+{
+  "id": "wet-high-intensity-magnetic-roll-separator",
+  "title": "Wet High Intensity Magnetic Roll Separator",
+  "series": "HYG Series Wet High Intensity Magnetic Roll Separator",
+  "imageSrc": "/images/products/magnetic-separator/wet-high-intensity-magnetic-roll-separator.jpg",
+  "productCategory": "Mineral Processing Equipment",
+  "subcategory": "magnetic-separator",
+  "model": "HYG2212",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "0.5-13 t/h (0.55-14.33 stph)"
+    },
+    {
+      "key": "Feed Size",
+      "displayValue": "0.5~3 mm (0.02~0.12 in.)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "1.1-1.5 kW (1.48-2.01 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/magnetic-separator/wet-high-intensity-magnetic-roll-separator",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/magnetic-separator/wet-high-intensity-magnetic-roll-separator",
+    "zh": "/zh/products/ore-processing/magnetic-separator/wet-high-intensity-magnetic-roll-separator"
+  },
+  "overview": "Zexin Mining's HYG Series Wet High Intensity Magnetic Roll Separators deliver exceptional separation performance for weakly magnetic minerals with magnetic field strengths up to 13,500 Gauss. Engineered for effective wet processing of fine-grained materials, these separators maximize recovery of valuable minerals from complex ores.",
+  "detailedDescription": "The HYG Series wet high intensity magnetic roll separator introduces advanced gradient magnetic field technology that transforms the beneficiation of weakly magnetic minerals in mineral processing circuits. This system creates optimized particle separation through its powerful magnetic roller design, addressing common recovery challenges while enhancing concentrate grade. Its balanced approach to wet magnetic separation delivers consistent results across varying slurry conditions, making it valuable processing equipment that adapts to different ore characteristics without compromising operational efficiency.",
+  "specifications": {
+    "title": "Wet High Intensity Magnetic Roll Separator Specifications",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Roller Size (mm)",
+      "Magnetic Field Strength (Gs)",
+      "Roller Speed (r/min)",
+      "Feed Size (mm)",
+      "Capacity (t/h)",
+      "Motor Power (kW)",
+      "Weight (t)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Roller Size (in.)",
+      "Magnetic Field Strength (Gs)",
+      "Roller Speed (r/min)",
+      "Feed Size (in.)",
+      "Capacity (stph)",
+      "Motor Power (hp)",
+      "Weight (US ton)"
+    ],
+    "tableData": [
+      [
+        "HYG1606",
+        "Φ160×600",
+        "11000",
+        "70",
+        "0.5-3",
+        "0.5-1",
+        "1.1",
+        "0.25"
+      ],
+      [
+        "HYG1608",
+        "Φ160×800",
+        "11000",
+        "70",
+        "0.5-3",
+        "0.6-1.2",
+        "1.1",
+        "0.3"
+      ],
+      [
+        "HYG1610",
+        "Φ160×1000",
+        "11000",
+        "70",
+        "0.5-3",
+        "0.8-1.5",
+        "1.1",
+        "0.45"
+      ],
+      [
+        "HYG1612",
+        "Φ160×1200",
+        "11000",
+        "70",
+        "0.5-3",
+        "1-2",
+        "1.5",
+        "0.6"
+      ],
+      [
+        "HYG2210",
+        "Φ220×1000",
+        "12000",
+        "60",
+        "0.5-3",
+        "1-2",
+        "1.5",
+        "0.6"
+      ],
+      [
+        "HYG2212",
+        "Φ220×1200",
+        "12000",
+        "60",
+        "0.5-3",
+        "2-3",
+        "1.5",
+        "0.8"
+      ],
+      [
+        "HYG2215",
+        "Φ220×1500",
+        "12000",
+        "60",
+        "0.5-3",
+        "5-7",
+        "1.5",
+        "1.1"
+      ],
+      [
+        "HYG2218",
+        "Φ220×1800",
+        "12000",
+        "60",
+        "0.5-3",
+        "8-13",
+        "1.5",
+        "1.3"
+      ],
+      [
+        "HYG2610",
+        "Φ260×1000",
+        "13500",
+        "60",
+        "0.5-3",
+        "3-5",
+        "1.5",
+        "1"
+      ],
+      [
+        "HYG2612",
+        "Φ260×1200",
+        "13500",
+        "60",
+        "0.5-3",
+        "5-7",
+        "1.5",
+        "1.1"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "HYG1606",
+        "Φ6.3×23.6",
+        "11000",
+        "70",
+        "0.02-0.12",
+        "0.55-1.10",
+        "1.48",
+        "0.28"
+      ],
+      [
+        "HYG1608",
+        "Φ6.3×31.5",
+        "11000",
+        "70",
+        "0.02-0.12",
+        "0.66-1.32",
+        "1.48",
+        "0.33"
+      ],
+      [
+        "HYG1610",
+        "Φ6.3×39.4",
+        "11000",
+        "70",
+        "0.02-0.12",
+        "0.88-1.65",
+        "1.48",
+        "0.50"
+      ],
+      [
+        "HYG1612",
+        "Φ6.3×47.2",
+        "11000",
+        "70",
+        "0.02-0.12",
+        "1.10-2.20",
+        "2.01",
+        "0.66"
+      ],
+      [
+        "HYG2210",
+        "Φ8.7×39.4",
+        "12000",
+        "60",
+        "0.02-0.12",
+        "1.10-2.20",
+        "2.01",
+        "0.66"
+      ],
+      [
+        "HYG2212",
+        "Φ8.7×47.2",
+        "12000",
+        "60",
+        "0.02-0.12",
+        "2.20-3.31",
+        "2.01",
+        "0.88"
+      ],
+      [
+        "HYG2215",
+        "Φ8.7×59.1",
+        "12000",
+        "60",
+        "0.02-0.12",
+        "5.51-7.72",
+        "2.01",
+        "1.21"
+      ],
+      [
+        "HYG2218",
+        "Φ8.7×70.9",
+        "12000",
+        "60",
+        "0.02-0.12",
+        "8.82-14.33",
+        "2.01",
+        "1.43"
+      ],
+      [
+        "HYG2610",
+        "Φ10.2×39.4",
+        "13500",
+        "60",
+        "0.02-0.12",
+        "3.31-5.51",
+        "2.01",
+        "1.10"
+      ],
+      [
+        "HYG2612",
+        "Φ10.2×47.2",
+        "13500",
+        "60",
+        "0.02-0.12",
+        "5.51-7.72",
+        "2.01",
+        "1.21"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "",
+      "",
+      "length",
+      "capacity",
+      "power",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "High-Gradient Magnetic Field System",
+      "description": "The HYG series utilizes precision-engineered magnetic circuit design that generates field strengths up to 13,500 Gauss, enabling effective recovery of weakly magnetic materials including hematite, limonite, and ilmenite. This high gradient field improves recovery rates by up to 35% compared to conventional magnetic systems for fine-grained minerals between 0.5-3mm."
+    },
+    {
+      "title": "Advanced Roller Design",
+      "description": "Engineered with specialized magnetic pole arrangement that ensures optimal field distribution across the entire working surface. The magnetic roller structure creates multiple high-gradient zones with precisely calibrated field intensities, enabling selective recovery of particles with different magnetic susceptibilities and improving concentrate grade by up to 15%."
+    },
+    {
+      "title": "Wet Processing Advantage",
+      "description": "Specially designed for slurry applications with enhanced particle dispersion mechanisms that prevent agglomeration of fine particles. The wet separation process significantly improves magnetic particle mobility and reduces entrainment of non-magnetic materials, resulting in sharper separation and higher concentrate grades for fine-grained weakly magnetic minerals."
+    },
+    {
+      "title": "Adjustable Operation Parameters",
+      "description": "Easily configurable roller speed, feed rate, and slurry density controls allow operators to optimize separation performance for different ore characteristics. These adjustable parameters enable quick adaptation to variations in feed composition, ensuring consistent product quality and maximizing recovery efficiency across diverse ore types and processing conditions."
+    },
+    {
+      "title": "Efficient Magnetic Matrix Configuration",
+      "description": "The magnetic roller incorporates an optimized magnetic matrix design that maximizes field gradient and particle capture efficiency. This configuration significantly improves the selective separation of particles with varying magnetic susceptibilities, enabling the effective processing of complex ores containing multiple mineral species with different magnetic properties."
+    },
+    {
+      "title": "Robust Industrial Construction",
+      "description": "Heavy-duty stainless steel components and corrosion-resistant materials withstand continuous operation in wet processing environments. The sealed bearing assembly and reinforced frame ensure reliable performance with minimal maintenance, providing a service life exceeding 10 years in demanding mineral processing operations with proper maintenance protocols."
+    },
+    {
+      "title": "Versatile Application Range",
+      "description": "Efficiently processes weakly magnetic minerals with capacities ranging from 0.5-13 t/h depending on model selection. The equipment performs consistently across various mineral types including hematite, limonite, ilmenite, wolframite, tantalum-niobium, and rare earth minerals, making it ideal for concentration, purification, and processing applications in diverse mining operations."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Weakly Magnetic Iron Ore Processing",
+        "description": "Efficiently separates and concentrates weakly magnetic iron minerals such as hematite, limonite, and specularite, producing high-grade iron concentrates suitable for steelmaking and direct reduction processes."
+      },
+      {
+        "title": "Non-ferrous Metal Ore Beneficiation",
+        "description": "Effectively concentrates weakly magnetic minerals from tungsten, tin, and molybdenum ores, improving downstream processing efficiency and final product quality for these valuable industrial metals."
+      },
+      {
+        "title": "Rare Earth Mineral Processing",
+        "description": "Precisely separates paramagnetic rare earth minerals from non-magnetic gangue materials, supporting the production of high-purity rare earth concentrates essential for advanced technology applications."
+      },
+      {
+        "title": "Titanium Mineral Concentration",
+        "description": "Selectively recovers titanium-bearing minerals like ilmenite and rutile from heavy mineral sands and primary deposits, producing high-grade titanium concentrates for pigment and metal production."
+      },
+      {
+        "title": "Industrial Mineral Purification",
+        "description": "Removes magnetic impurities from non-metallic industrial minerals including quartz, feldspar, and kaolin, ensuring high-purity raw materials for ceramic, glass, and other manufacturing industries."
+      },
+      {
+        "title": "Environmental Remediation",
+        "description": "Extracts weakly magnetic contaminants from industrial process streams and wastewater, supporting environmental compliance objectives while enabling recovery of valuable materials that would otherwise be lost."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does a wet high intensity magnetic roll separator work?",
+      "answer": "The wet high intensity magnetic roll separator utilizes a rotating magnetic roller that generates a high-gradient magnetic field up to 13,500 Gauss. Mineral slurry is fed onto the roller surface where magnetic particles are attracted to and held against the roller while non-magnetic particles flow away with the carrier water. As the roller rotates out of the magnetic field zone, the captured magnetic particles are released into a separate collection point. This process creates distinct streams of magnetic concentrate and non-magnetic tailings, with the wet environment improving fine particle dispersion and separation efficiency compared to dry processing methods."
+    },
+    {
+      "question": "What are the advantages of wet magnetic roll separators over dry magnetic separation?",
+      "answer": "Wet magnetic roll separators offer several key advantages for fine particle processing: 1) Improved particle dispersion in the slurry prevents agglomeration that can trap non-magnetic particles; 2) Enhanced mobility of particles allows better alignment with magnetic fields; 3) Reduced friction between particles improves separation efficiency; 4) Better control of fine particles under 0.5mm that would be difficult to handle in dry systems; 5) Higher recovery rates for weakly magnetic minerals; 6) Lower dust generation for improved working conditions; 7) More precise separation of particles with similar magnetic properties. These benefits make wet magnetic roll separation particularly effective for processing fine-grained weakly magnetic minerals."
+    },
+    {
+      "question": "What materials can be processed with the HYG series separators?",
+      "answer": "The HYG series effectively processes weakly magnetic and paramagnetic materials with particle sizes between 0.5-3mm, including: 1) Iron ores such as hematite, limonite, and specularite; 2) Titanium-bearing minerals like ilmenite; 3) Tungsten ores including wolframite; 4) Manganese ores; 5) Tantalum-niobium minerals; 6) Rare earth minerals with paramagnetic properties; 7) Chromite ores; 8) Garnet and other industrial minerals. The separators can also remove magnetic impurities from non-metallic minerals like quartz, feldspar, and kaolin, making them versatile for various mineral processing applications requiring high-precision magnetic separation."
+    },
+    {
+      "question": "How do I select the right model for my application?",
+      "answer": "Model selection depends on several factors: 1) Required processing capacity - match expected throughput with model specifications; 2) Material characteristics - consider particle size, magnetic susceptibility, and slurry properties; 3) Feed composition - analyze the percentage of magnetic particles expected; 4) Desired recovery and grade targets; 5) Installation constraints - evaluate available space and existing plant configuration; 6) Operational conditions - consider water quality and availability. Our engineering team provides comprehensive material testing services to recommend the optimal model and configuration for your specific requirements, ensuring maximum performance and return on investment."
+    },
+    {
+      "question": "What maintenance procedures are recommended for wet high intensity magnetic roll separators?",
+      "answer": "Recommended maintenance includes: 1) Daily inspection of feed distribution systems and discharge points; 2) Regular monitoring of roller rotation and drive systems; 3) Weekly checking of magnetic field consistency using field strength meters; 4) Bi-weekly inspection of water spray systems and slurry density controls; 5) Monthly examination of roller surface condition for wear; 6) Quarterly lubrication of bearings and drive components; 7) Semi-annual inspection of electrical components and control systems; 8) Annual comprehensive review of all mechanical components. Most operations report maintenance requirements of approximately 4-6 hours monthly, with magnetic components typically maintaining performance for 8-10 years under normal operating conditions."
+    },
+    {
+      "question": "How does magnetic field strength affect separation performance?",
+      "answer": "Magnetic field strength directly influences separation performance in several ways: 1) Higher field strengths (11,000-13,500 Gauss) enable capture of very weakly magnetic particles that would pass through lower intensity systems; 2) Increased field strength improves recovery rates for fine particles with low magnetic susceptibility; 3) Field gradient (rate of change in field strength) affects selectivity between particles with similar magnetic properties; 4) Stronger fields allow processing of more dilute slurries and higher throughput rates; 5) Optimal field strength depends on the specific mineral's magnetic susceptibility - excessive field strength can sometimes reduce selectivity by capturing slightly magnetic gangue minerals. Our technical team can help determine the optimal field strength for your specific mineral application."
+    },
+    {
+      "question": "What are the optimal slurry conditions for effective separation?",
+      "answer": "Optimal slurry conditions for wet high intensity magnetic roll separators include: 1) Solids concentration typically between 10-30% by weight, depending on mineral type; 2) Neutral pH range (6.5-8.5) for most applications to prevent corrosion and mineral surface charge issues; 3) Consistent feed rate to maintain even material distribution across the roller width; 4) Proper slurry dispersion and mixing to prevent settling and agglomeration; 5) Temperature typically ambient to 40°C, with higher temperatures potentially affecting magnetic field performance; 6) Minimal presence of organic contaminants that could coat particles; 7) Controlled water chemistry to prevent scaling on surfaces. Pre-conditioning of feed slurry with appropriate reagents may sometimes improve separation performance for specific minerals."
+    },
+    {
+      "question": "Can the HYG series handle variable feed characteristics?",
+      "answer": "Yes, the HYG series is designed with flexibility to accommodate variable feed characteristics through several adaptable features: 1) Adjustable roller speed (60-70 r/min) to optimize residence time in the magnetic field; 2) Configurable field intensity for different mineral susceptibilities; 3) Adaptable slurry feed rates and densities; 4) Multiple feed distribution options to handle varying particle size distributions; 5) Ability to process materials with changing magnetic properties through real-time adjustments. The equipment can effectively handle variations in ore composition typically encountered in mining operations, though significant changes may require adjustment of operational parameters for optimal performance. Regular performance monitoring and parameter adjustment are recommended when processing ores with highly variable characteristics."
+    },
+    {
+      "question": "What are the installation requirements for a HYG series magnetic separator?",
+      "answer": "Installation requirements include: 1) Stable foundation capable of supporting the operational weight plus slurry load; 2) Water supply for slurry preparation and cleaning (typically 1.5-2.5m³/h depending on model); 3) Power supply for the roller drive motor (three-phase connection); 4) Proper feed distribution system to ensure even material presentation across the roller width; 5) Slurry collection tanks and pumping systems for recirculation; 6) Adequate drainage systems for overflow and cleaning operations; 7) Access space around equipment for maintenance (minimum 1m clearance recommended); 8) Environmental controls if processing materials with specific temperature requirements. Our technical team provides detailed installation guidelines and can assist with integrating the equipment into existing processing circuits."
+    }
+  ],
+  "seo": {
+    "title": "Wet High Intensity Magnetic Roll Separator | Iron & Rare Earth Minerals | Zexin Mining",
+    "keywords": "wet high intensity magnetic roll separator,WHIMS roll separator,wet magnetic roll separator,high gradient magnetic roll separator,roll type magnetic separator,hematite magnetic separator,fine particle magnetic separator,tungsten magnetic separator,magnetic roll mining equipment,slurry magnetic roll separator,ilmenite beneficiation equipment,magnetic roll concentrator,rare earth mineral separator,wet magnetic process equipment,magnetic iron ore separator,wet magnetic field technology,magnetic roll separators for sale,magnetic roll separator manufacturer,magnetic mineral recovery equipment,roll magnetic separator specifications",
+    "description": "Zexin Mining's wet high intensity magnetic roll separator achieves 35% higher recovery of weakly magnetic minerals with 13,500 Gauss field strength. Our precision-engineered design ensures optimal separation of fine materials (0.5-3mm), particularly effective for processing hematite, ilmenite and rare earth minerals."
+  },
+  "searchKeywords": [
+    "wet high intensity magnetic roll separator",
+    "WHIMS roll separator",
+    "high gradient magnetic separator",
+    "weakly magnetic mineral separator",
+    "wet roller magnetic separator",
+    "hematite magnetic separator",
+    "fine particle magnetic separator",
+    "mineral processing equipment",
+    "industrial magnetic roller",
+    "high intensity wet separator"
+  ],
+  "relatedProducts": [
+    "permanent-drum-magnetic-separator",
+    "plate-high-intensity-magnetic-separator",
+    "triple-disc-belt-magnetic-separator",
+    "double-roll-permanent-magnetic-zircon-separator",
+    "four-roll-high-voltage-electrostatic-separator"
+  ],
+  "imageSrcAlt": "Wet High Intensity Magnetic Roll Separator | Zexin Mining"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "guilin-yongfu-polymetallic",
+  "title": "300t/d Lead-Zinc-Copper Polymetallic Processing Plant in Yongfu, Guilin",
+  "location": "Yongfu County, Guilin, Guangxi, China",
+  "year": "2023",
+  "category": "Polymetallic Ore Processing",
+  "client": "Mining Company",
+  "description": "A 300t/d lead-zinc-copper polymetallic processing plant designed and built by Zexin Mining Equipment for a mining company in Yongfu, Guilin. This project involved the revitalization of an old mine site, including mineral processing test research, engineering design, equipment supply, and installation commissioning.",
+  "challenge": "This project faced multiple challenges as an old mine revitalization project: the raw ore had significant grade fluctuations with complex mineral composition, and the copper-lead-zinc sulfides were intricately embedded, making effective separation difficult. The mine site had aging infrastructure with equipment requiring updating and renovation. Increasingly strict environmental requirements necessitated optimized solutions for tailings handling and water resource recycling. Additionally, investment costs needed to be controlled to ensure project economic viability.",
+  "solution": "Zexin Mining Equipment designed a comprehensive processing solution based on detailed ore characteristics analysis. The process began with a two-stage crushing circuit featuring one closed circuit, processing raw ore with a maximum size of 350mm down to 12mm using jaw crushers for primary crushing, cone crushers for secondary crushing, and circular vibrating screens for classification. The grinding system incorporated single-stage closed-circuit grinding with middlings regrinding, where primary grinding achieved 60% passing 200 mesh using grate-type ball mills with high-weir single spiral classifiers, while middlings regrinding reached 80% passing 200 mesh using overflow ball mills with hydrocyclones for classification. For mineral separation, the flotation process followed a copper-lead bulk flotation, tailings zinc flotation, and copper-lead separation flowsheet. The copper-lead bulk flotation used one rougher, three scavengers, and four cleaners, with forced-air flotation machines for roughing/scavenging and self-aeration flotation machines for cleaning. Similarly, zinc flotation employed one rougher, three scavengers, and three cleaners, while copper-lead separation utilized one rougher, two scavengers, and two cleaners. The concentrate dewatering system used sedimentation tanks for natural settling of copper concentrate, while lead and zinc concentrates underwent two-stage mechanical dewatering with thickeners and ceramic filters, achieving approximately 12% moisture content. Finally, tailings management employed wet disposal with direct transportation to the tailings storage facility via oil-separation pumps.",
+  "results": "Since commissioning, the plant has operated stably with a daily processing capacity of 300 tons of ore, meeting design requirements for recovery rates and concentrate grades. Copper concentrate grade exceeds 20%, lead concentrate grade exceeds 60%, and zinc concentrate grade exceeds 50%. The precise process control and efficient equipment configuration improved recovery rates by 5-8 percentage points compared to the original process, significantly enhancing the mine's economic benefits. The optimized process flow also reduced reagent consumption, lowering production costs and environmental impact. This project successfully achieved efficient resource utilization, providing an exemplary model for the revitalization and sustainable development of old mine sites.",
+  "images": [
+    "/images/cases/guilin-yongfu-polymetallic/yongfu-lead-zinc-copper-processing-plant-guilin.jpg",
+    "/images/cases/guilin-yongfu-polymetallic/polymetallic-ore-flotation-process-flow.jpg",
+    "/images/cases/guilin-yongfu-polymetallic/lead-zinc-flotation-cells-separation-equipment.jpg"
+  ],
+  "imagesAlt": [
+    "Yongfu Lead Zinc Copper Processing Plant Guilin | Zexin Mining",
+    "Polymetallic Ore Flotation Process Flow | Zexin Mining",
+    "Lead Zinc Flotation Cells Separation Equipment | Zexin Mining"
+  ]
+}

@@ -1,0 +1,336 @@
+{
+  "id": "cone-crusher",
+  "title": "Cone Crusher",
+  "series": "ZYP Series Hydraulic Cone Crusher",
+  "imageSrc": "/images/products/stationary-crushers/cone-crusher.jpg",
+  "productCategory": "Mining Crushing Equipment",
+  "subcategory": "stationary-crushers",
+  "model": "ZYP-1200",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "50-500 t/h (55-550 stph)"
+    },
+    {
+      "key": "Feed size",
+      "displayValue": "35-300 mm (1.4-12 in.)"
+    },
+    {
+      "key": "Motor power",
+      "displayValue": "55-280 kW (75-375 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "ton",
+          "conversionFactor": 1.10231,
+          "label": "ton"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "mtph"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/stationary-crushers/cone-crusher",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/stationary-crushers/cone-crusher",
+    "zh": "/zh/products/ore-processing/stationary-crushers/cone-crusher"
+  },
+  "overview": "The ZYP Series Hydraulic Cone Crusher from Zexin Mining represents advanced secondary and tertiary crushing technology, combining exceptional performance with versatility for demanding applications. Featuring a multi-cylinder hydraulic system and lamination crushing principle, this robust crusher delivers superior particle shape, high reduction ratio, and consistent output for medium-hard to hard materials. Ideal for small to medium mining operations, quarries, and aggregate production, the ZYP Series offers outstanding energy efficiency while maintaining precise control over product gradation. Its adaptability across various material types including limestone, granite, river pebbles, and metallic ores makes it an essential component in efficient crushing circuits.",
+  "detailedDescription": "The ZYP Series hydraulic cone crusher introduces innovative crushing dynamics that transform secondary and tertiary crushing processes in mining and quarrying. This precision crushing equipment creates optimized stone-on-stone interaction through its unique chamber design, addressing common challenges with hard rock materials while enhancing product quality. Its intelligent approach to crushing mechanics delivers consistent results for small mine operations, particularly valuable for those seeking cubical aggregate production without compromising throughput or efficiency.",
+  "specifications": {
+    "title": "ZYP Series Hydraulic Cone Crusher Specifications",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Cone Diameter (mm)",
+      "Feed Opening (mm)",
+      "Max. Feed Size (mm)",
+      "Motor Power (kW)",
+      "Capacity (t/h)",
+      "Weight (kg)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Cone Diameter (in.)",
+      "Feed Opening (in.)",
+      "Max. Feed Size (in.)",
+      "Motor Power (hp)",
+      "Capacity (stph)",
+      "Weight (lb)"
+    ],
+    "tableData": [
+      [
+        "ZYP-600",
+        "600",
+        "75",
+        "65",
+        "30",
+        "40",
+        "5600"
+      ],
+      [
+        "ZYP-900",
+        "900",
+        "135",
+        "110",
+        "55",
+        "50-90",
+        "10800"
+      ],
+      [
+        "ZYP-1200",
+        "1200",
+        "170",
+        "145",
+        "110",
+        "110-168",
+        "25000"
+      ],
+      [
+        "ZYP-1750",
+        "1750",
+        "250",
+        "215",
+        "155",
+        "280-480",
+        "50500"
+      ],
+      [
+        "ZYP-2000",
+        "2000",
+        "350",
+        "300",
+        "280",
+        "100-500",
+        "84000"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "ZYP-600",
+        "23.6",
+        "3.0",
+        "2.6",
+        "75",
+        "55-99",
+        "11.9"
+      ],
+      [
+        "ZYP-900",
+        "35.4",
+        "5.5",
+        "4.5",
+        "121",
+        "99-198",
+        "21.5"
+      ],
+      [
+        "ZYP-1200",
+        "47.2",
+        "7.3",
+        "5.9",
+        "177",
+        "138-308",
+        "37.7"
+      ],
+      [
+        "ZYP-1500",
+        "59.1",
+        "8.7",
+        "7.3",
+        "248",
+        "215-418",
+        "56.9"
+      ],
+      [
+        "ZYP-1750",
+        "68.9",
+        "11.8",
+        "11.8",
+        "375",
+        "319-550",
+        "92.0"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "length",
+      "length",
+      "power",
+      "capacity",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Advanced Multi-cylinder Hydraulic System",
+      "description": "Integrated hydraulic protection and adjustment system with multi-cylinder design provides 280% greater protection force than spring cone crushers, instantly responding to uncrushable objects while enabling CSS adjustments within minutes rather than hours, significantly reducing maintenance downtime in demanding applications."
+    },
+    {
+      "title": "Lamination Crushing Technology",
+      "description": "Optimized crushing chamber with special curved profile creates stone-on-stone crushing action, delivering superior cubical product shape with 40% fewer flaky particles than traditional cone crushers, maximizing value for concrete, asphalt, and high-specification aggregate applications."
+    },
+    {
+      "title": "Precision Eccentric Bushing Design",
+      "description": "Advanced eccentric bushing technology with optimized stroke patterns generates greater crushing forces with lower energy input, enabling processing of materials up to 350MPa hardness while maintaining precise particle size distribution and extending component life by up to 30%."
+    },
+    {
+      "title": "High-performance Wear Components",
+      "description": "Premium manganese steel liners (Mn18Cr2) with specialized heat treatment provide exceptional wear resistance in abrasive applications, offering 30-50% longer service life than standard components while maintaining consistent crushing performance throughout the wear cycle."
+    },
+    {
+      "title": "Rapid CSS Adjustment System",
+      "description": "Hydraulic adjustment mechanism allows precise closed-side setting changes in minutes without stopping production, enabling operators to quickly adapt to changing material characteristics or product requirements while maintaining maximum productivity across various applications."
+    },
+    {
+      "title": "Energy-efficient Design",
+      "description": "Optimized crushing chamber profile and precision balancing reduce energy consumption by up to 30% compared to conventional cone crushers, while the advanced lubrication system minimizes friction losses, significantly lowering operational costs for limestone, granite, and river pebble processing."
+    }
+  ],
+  "applications": {
+    "title": "Application Areas",
+    "items": [
+      {
+        "title": "Mining Operations",
+        "description": "Exceptional performance in secondary and tertiary crushing of metallic ores including copper, iron, gold, and zinc with compression strengths up to 350MPa. The precision chamber design and hydraulic adjustment system ensure consistent product size while maximizing throughput rates, perfect for small to medium mining operations requiring high efficiency and product quality."
+      },
+      {
+        "title": "Limestone & Cement Production",
+        "description": "Optimized for limestone processing with specialized chamber profiles that deliver precise gradation control and superior particle shape. Produces high-quality aggregates for cement production with minimal fines generation, while the hydraulic adjustment system enables rapid transitions between different product specifications without stopping production."
+      },
+      {
+        "title": "Granite & Hard Rock Processing",
+        "description": "Engineered to handle high-abrasion materials like granite, basalt, and quartzite with premium manganese steel components and optimized crushing dynamics. The multi-cylinder design provides excellent protection against equipment damage from uncrushable objects while maintaining high reduction ratios and exceptional product shape for premium construction aggregates."
+      },
+      {
+        "title": "River Pebble & Alluvial Material Processing",
+        "description": "Specialized configurations for processing rounded river pebbles and alluvial deposits, converting these challenging materials into high-value cubical products. The optimized chamber design creates intensive inter-particle crushing action that effectively breaks down rounded shapes while minimizing energy consumption and wear rates."
+      },
+      {
+        "title": "Aggregate & Construction Material Production",
+        "description": "Produces premium-grade construction aggregates meeting strict international specifications for shape, gradation, and cleanliness. The precise hydraulic adjustment system allows operators to quickly switch between different product sizes, making it ideal for quarry operations producing multiple aggregate specifications from a single crusher."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What types of materials can be effectively processed with the ZYP Series Hydraulic Cone Crusher?",
+      "answer": "The ZYP Series effectively processes medium-hard to hard materials with compression strengths up to 350MPa and moisture content below 5%. Ideal materials include granite, basalt, limestone, river pebbles, iron ore, copper ore, gold ore, quartzite, diabase, and similar rock types. The crusher is particularly effective for materials requiring precise particle shape control and consistent gradation. It's not recommended for extremely abrasive materials (>15% silica content), sticky materials with high clay content, or materials with moisture content exceeding 5%, as these require specialized crushing solutions."
+    },
+    {
+      "question": "How does the hydraulic multi-cylinder system improve crusher performance and reliability?",
+      "answer": "The hydraulic multi-cylinder system delivers multiple operational advantages: 1) Integrated overload protection that responds within milliseconds to uncrushable objects, preventing catastrophic damage; 2) Rapid CSS adjustment capability, allowing setting changes in 5-10 minutes versus hours for traditional spring cone crushers; 3) Consistent crushing force throughout the entire crushing chamber, maintaining optimal performance even as liners wear; 4) Balanced pressure distribution that reduces eccentric bushing and bearing loads, extending component life by 25-40%; 5) Automated operation adaptation to changing feed conditions, ensuring consistent product quality regardless of variations in feed material."
+    },
+    {
+      "question": "What maintenance schedule is recommended for the ZYP Series Hydraulic Cone Crusher?",
+      "answer": "Optimal performance requires a structured maintenance program: 1) Daily inspection of lubrication system, hydraulic pressure, and visible wear components; 2) Weekly checking of dust seals, feed distribution, and operating temperature; 3) Monthly inspection of manganese liners, eccentric bushing, and hydraulic system components; 4) Quarterly comprehensive inspection and preventive component replacement. Manganese liner rotation or replacement interval varies by material: limestone (800-1200 hours), granite (500-700 hours), and river pebbles (600-900 hours). The advanced monitoring system provides predictive maintenance alerts, while the quick-change liner design reduces routine maintenance downtime by up to 40% compared to conventional cone crushers."
+    },
+    {
+      "question": "How does the ZYP Series compare to spring cone crushers and other types of crushing equipment?",
+      "answer": "The ZYP Series offers several advantages over traditional spring cone crushers and other equipment: 1) Superior hydraulic protection system responds 5-10 times faster than spring systems to prevent damage from uncrushable objects; 2) 30% higher throughput capacity within the same footprint through optimized chamber design; 3) Better product shape with 40% fewer flaky particles through lamination crushing technology; 4) 25-30% lower energy consumption per ton through improved crushing dynamics; 5) Faster maintenance and setting adjustments through hydraulic systems; 6) Greater adaptability to varying feed materials through quick CSS adjustment. While the initial investment may be 15-20% higher than spring cone crushers, the operational savings typically deliver ROI within 12-18 months for most applications."
+    },
+    {
+      "question": "What factors should be considered when selecting the right ZYP Series model?",
+      "answer": "Selection depends on several application-specific factors: 1) Material properties - hardness, abrasiveness, and crushability; 2) Production requirements - desired capacity, feed size, and target product size; 3) Installation constraints - available headroom, existing plant configuration, and foundation capabilities; 4) Operational considerations - continuous vs. intermittent operation, product specification flexibility requirements, and operator expertise; 5) Economic factors - initial investment, operational costs, and expected return on investment. Our application engineers provide comprehensive material testing and equipment selection services to ensure the optimal ZYP model for your specific requirements, including customized chamber configurations for your exact material characteristics."
+    },
+    {
+      "question": "How does the lamination crushing technology improve aggregate quality?",
+      "answer": "Lamination crushing technology significantly enhances aggregate quality through several mechanisms: 1) Creates stone-on-stone crushing action in the packed crushing chamber, breaking particles along natural weaknesses rather than by direct compression; 2) Produces more cubical particles with aspect ratios closer to 1:1:1, improving concrete workability and strength; 3) Reduces micro-fracturing within particles, resulting in stronger aggregates with better durability in concrete and asphalt applications; 4) Creates fractured faces on rounded materials like river pebbles, improving interlock characteristics; 5) Generates controlled particle size distribution with fewer extreme fines or oversized particles. These quality improvements translate to 10-15% stronger concrete mixes, 15-20% better asphalt performance, and reduced cement or bitumen requirements in final products."
+    },
+    {
+      "question": "What are the key features of the ZYP Series hydraulic adjustment system?",
+      "answer": "The hydraulic adjustment system incorporates multiple advanced features: 1) Precision control allowing CSS adjustments in 1mm increments across the full range (3-60mm); 2) Rapid adjustment capability, enabling complete setting changes in 5-10 minutes without stopping the crusher; 3) Remote operation through control panel or optional wireless interface for safe adjustments without approaching the equipment; 4) Integrated measurement system that provides real-time feedback on actual CSS regardless of liner wear condition; 5) Memory function that stores optimal settings for different products; 6) Automatic compensation for liner wear that maintains consistent product sizing throughout component life; 7) Synchronized multi-cylinder operation ensuring uniform force distribution and consistent crushing performance across the entire chamber."
+    },
+    {
+      "question": "How does the ZYP Series contribute to reducing operational costs in crushing circuits?",
+      "answer": "The ZYP Series delivers significant cost reductions: 1) Energy efficiency - 25-30% lower power consumption per ton processed, saving approximately $30,000-$70,000 annually per crusher; 2) Maintenance costs - 30-40% reduction in maintenance time and 20-30% lower spare parts consumption through premium wear components and simplified hydraulic systems; 3) Product quality - fewer reprocessing requirements and reduced waste material through precise size control; 4) Operational flexibility - ability to produce multiple product specifications from a single crusher through quick setting adjustments; 5) Higher throughput - 20-30% increased capacity utilizing the same footprint; 6) Extended component life - up to 50% longer intervals between major component replacements. These factors typically result in 15-25% lower cost per ton processed compared to conventional cone crushers."
+    },
+    {
+      "question": "What safety features are incorporated into the ZYP Series Hydraulic Cone Crusher?",
+      "answer": "The ZYP Series incorporates comprehensive safety systems: 1) Multi-level hydraulic overload protection that instantly relieves pressure during tramp metal events; 2) Thermal monitoring with automatic shutdown to prevent overheating; 3) Double dust seal system minimizing airborne particulates; 4) Pressure relief valves preventing hydraulic system damage; 5) Emergency stop buttons accessible from multiple locations; 6) Enclosed design with safety interlocks on access doors; 7) Low-speed maintenance drive for safe inspection procedures; 8) Anti-rotation locks for maintenance operations; 9) Integrated fire suppression monitoring; 10) Bearing temperature sensors with automatic shutdown capability. These features comply with international safety standards including CE, OSHA, and ISO requirements, ensuring operator safety and equipment protection."
+    },
+    {
+      "question": "What customization options are available for the ZYP Series Hydraulic Cone Crusher?",
+      "answer": "The ZYP Series offers extensive customization: 1) Chamber profile variations (extra-coarse, standard, medium, fine, extra-fine) optimized for specific materials and applications; 2) Manganese liner compositions ranging from standard (18% Mn) to premium alloys for extremely abrasive applications; 3) Enhanced cooling systems for high-temperature environments; 4) Cold weather packages with special hydraulic fluids and heaters for operation down to -40°C; 5) Advanced automation packages including automated setting control based on product monitoring; 6) Specialized dust suppression systems; 7) Custom feed arrangements including rotary or static distributors; 8) High-altitude modifications for operation up to 4500m elevation; 9) Integration with plant control systems through multiple communication protocols. Our engineering team works directly with customers to develop application-specific configurations that optimize performance for unique operational requirements."
+    }
+  ],
+  "seo": {
+    "title": "Hydraulic Cone Crusher | High-efficiency Mining & Aggregate Processing",
+    "keywords": "hydraulic cone crusher,multi-cylinder cone crusher,mining cone crusher,limestone cone crusher,granite cone crusher,river pebble crusher,secondary crusher,tertiary crusher,high-efficiency cone crusher,stone crusher,cone crusher specifications,hard rock crusher,quarry crusher,aggregate production equipment,small mine crusher,energy-efficient crusher,cubical aggregate crusher,precision crushing equipment",
+    "description": "Zexin Mining's hydraulic cone crusher delivers 30% higher efficiency with precise product size control. Ideal for small mines processing limestone, granite & river pebbles with high recovery rates."
+  },
+  "relatedProducts": [
+    "jaw-crusher",
+    "impact-crusher",
+    "hammer-crusher",
+    "hp-cone-crusher",
+    "double-roller-crusher"
+  ],
+  "imageSrcAlt": "Cone Crusher | Zexin Mining"
+}

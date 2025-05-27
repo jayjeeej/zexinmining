@@ -1,0 +1,22 @@
+{
+  "id": "myanmar-tin",
+  "title": "River Sand Tin Processing Plant in Loikaw, Myanmar",
+  "location": "Loikaw, Myanmar",
+  "year": "2016",
+  "category": "Tin Ore",
+  "client": "Myanmar Mining Company",
+  "description": "A specialized tin processing plant designed and constructed by Zexin Mining Equipment for processing river sand tin deposits in Loikaw, Myanmar. The plant was designed to efficiently process alluvial tin ore with significant density differences between valuable minerals and waste materials, achieving high recovery rates and product quality.",
+  "challenge": "The project faced multiple challenges including severe power shortages in the region, difficult transportation conditions due to underdeveloped infrastructure, and the need to process complex river sand tin deposits. The remote location and limited access to technical support further complicated the project implementation. Additionally, the seasonal variations in river flow and sand composition required a flexible processing solution.",
+  "solution": "Given the significant density difference between tin minerals and waste materials, we designed a processing flow combining screening, jigging, and multi-stage shaking table separation. The screening process was implemented first to classify the feed material, followed by jigging to remove large amounts of waste materials, and finally multi-stage shaking table separation for fine classification and concentration. This approach maximized recovery while maintaining high concentrate grade.\n\nTo address the power shortage issue, we implemented an energy-efficient design with variable frequency drives and optimized equipment selection. A backup power system was installed to ensure stable operation. For transportation challenges, we designed modular equipment that could be easily disassembled and transported to the site.",
+  "results": "The processing plant has been operating successfully since commissioning, achieving excellent recovery rates and product quality. The innovative processing flow proved highly effective in handling the complex river sand tin deposits, with concentrate grade consistently meeting customer specifications. The energy-efficient design significantly reduced power consumption, while the modular approach facilitated smooth installation and maintenance. The project has become a model for sustainable tin processing in Myanmar's challenging conditions.",
+  "images": [
+    "/images/cases/myanmar-tin/river-sand-tin-processing-plant-loikaw.jpg",
+    "/images/cases/myanmar-tin/jigging-shaking-table-process-tin.jpg",
+    "/images/cases/myanmar-tin/tin-concentrate-production-myanmar.jpg"
+  ],
+  "imagesAlt": [
+    "River Sand Tin Processing Plant Loikaw | Zexin Mining",
+    "Jigging Shaking Table Process Tin | Zexin Mining",
+    "Tin Concentrate Production Myanmar | Zexin Mining"
+  ]
+}

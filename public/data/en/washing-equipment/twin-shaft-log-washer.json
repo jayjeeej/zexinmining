@@ -1,0 +1,323 @@
+{
+  "id": "twin-shaft-log-washer",
+  "title": "Twin Shaft Log Washer",
+  "series": "ZX Series Heavy Duty Twin Shaft Log Washer",
+  "imageSrc": "/images/products/washing-equipment/twin-shaft-log-washer.jpg",
+  "productCategory": "Mineral Processing Equipment",
+  "subcategory": "washing-equipment",
+  "model": "ZX-2050",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "15-100 t/h (17-110 stph)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "5.5-22 kW (7.4-29.5 hp)"
+    },
+    {
+      "key": "Shaft Diameter",
+      "displayValue": "1000-2000 mm (39.4-78.7 in.)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "ton/h",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "kg",
+          "conversionFactor": 1,
+          "label": "kg"
+        },
+        {
+          "unit": "lb",
+          "conversionFactor": 2.20462,
+          "label": "lb"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/washing-equipment/twin-shaft-log-washer",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/washing-equipment/twin-shaft-log-washer",
+    "zh": "/zh/products/ore-processing/washing-equipment/twin-shaft-log-washer"
+  },
+  "overview": "Zexin Mining's ZX Series Twin Shaft Log Washers provide superior clay removal and material scrubbing through counter-rotating shafts with specially designed paddles. These robust machines efficiently process materials with high clay content, delivering exceptional cleaning performance for aggregates, hard rock minerals, and industrial materials up to 150mm in size.",
+  "detailedDescription": "The ZX Series twin shaft log washer introduces advanced material liberation technology that transforms challenging washing applications in mining and aggregate production. This system creates optimized particle-on-particle attrition through its precision-engineered paddle configuration and counter-rotating shaft design, addressing difficult clay contamination challenges while enhancing valuable mineral recovery. Its balanced approach to aggressive material scrubbing and controlled material advancement delivers consistent results across varying feed characteristics, making it essential processing equipment that adapts to different clay content levels without compromising operational reliability.",
+  "specifications": {
+    "title": "Twin Shaft Log Washer Technical Specifications",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Capacity (t/h)",
+      "Motor Power (kW)",
+      "Shaft Diameter (mm)",
+      "Tank Length (mm)",
+      "Tank Width (mm)",
+      "Total Weight (kg)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Capacity (stph)",
+      "Motor Power (hp)",
+      "Shaft Diameter (in.)",
+      "Tank Length (in.)",
+      "Tank Width (in.)",
+      "Total Weight (lb)"
+    ],
+    "tableData": [
+      [
+        "ZX-1530",
+        "15-25",
+        "5.5",
+        "1000",
+        "4000",
+        "1600",
+        "3200"
+      ],
+      [
+        "ZX-1840",
+        "25-50",
+        "11",
+        "1500",
+        "5000",
+        "2000",
+        "4500"
+      ],
+      [
+        "ZX-2050",
+        "50-80",
+        "15",
+        "1800",
+        "6000",
+        "2500",
+        "6200"
+      ],
+      [
+        "ZX-2460",
+        "80-100",
+        "22",
+        "2000",
+        "7000",
+        "3000",
+        "8800"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "ZX-1530",
+        "17-28",
+        "7.4",
+        "39.4",
+        "157.5",
+        "63.0",
+        "7055"
+      ],
+      [
+        "ZX-1840",
+        "28-55",
+        "14.8",
+        "59.1",
+        "196.9",
+        "78.7",
+        "9921"
+      ],
+      [
+        "ZX-2050",
+        "55-88",
+        "20.1",
+        "70.9",
+        "236.2",
+        "98.4",
+        "13669"
+      ],
+      [
+        "ZX-2460",
+        "88-110",
+        "29.5",
+        "78.7",
+        "275.6",
+        "118.1",
+        "19401"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "capacity",
+      "power",
+      "length",
+      "length",
+      "length",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Dual Counter-Rotating Shaft Design",
+      "description": "Engineered with two heavy-duty shafts rotating in opposite directions that create maximum material-on-material scrubbing action. This powerful configuration generates 40% more cleaning intensity than single-shaft designs, effectively removing even the most stubborn clay and contaminants while promoting thorough material liberation through controlled retention time."
+    },
+    {
+      "title": "Advanced Paddle Configuration",
+      "description": "Features precision-engineered paddle geometry with optimized spacing and attack angles that maximize scrubbing efficiency without material degradation. The specialized paddle design includes wear-resistant alloy steel construction with replaceable wear shoes that extend service life by up to 50% while maintaining consistent scrubbing performance throughout the equipment lifecycle."
+    },
+    {
+      "title": "Heavy-Duty Drive System",
+      "description": "Incorporates industrial-grade gear reducers and motors with synchronous shaft control that ensures perfect coordination between the counter-rotating shafts even under maximum load conditions. This robust drive system handles materials up to 150mm in size while maintaining ideal shaft speeds for optimal cleaning performance across various material types."
+    },
+    {
+      "title": "Reinforced Tub Construction",
+      "description": "Built with extra-thick steel plate and strategic internal reinforcements that withstand intense operational stresses in demanding washing applications. The abrasion-resistant tub design features high-chrome steel wear liners in high-impact zones, extending service intervals by up to 40% while maintaining structural integrity throughout years of continuous operation."
+    },
+    {
+      "title": "Adjustable Retention Control System",
+      "description": "Equipped with a precision weir adjustment mechanism that enables fine-tuning of material retention time based on feed characteristics and contamination levels. This adaptive control capability optimizes cleaning effectiveness across different clay content percentages while ensuring consistent product quality regardless of variations in feed material properties."
+    },
+    {
+      "title": "Integrated Fines Recovery",
+      "description": "Designed with specialized internal flow channels and optional external processing circuits that capture and recover valuable fines from the washing process. This comprehensive material management approach increases overall recovery rates by up to 15% compared to conventional washers, converting potential waste streams into valuable product while minimizing environmental impact."
+    },
+    {
+      "title": "Modular Component Architecture",
+      "description": "Constructed with a sectional design philosophy that facilitates easy maintenance access and component replacement even in confined installation environments. The standardized modular approach enables rapid servicing of high-wear components without complete system disassembly, reducing maintenance downtime by up to 60% while extending overall equipment service life."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Aggregate Production",
+        "description": "Efficiently processes sand, gravel, and crushed stone with high clay content to produce clean construction aggregates meeting stringent specifications. The intense scrubbing action effectively removes surface contaminants and clay coatings without excessive material degradation, resulting in higher-quality products with improved gradation characteristics and consistent performance in concrete and asphalt applications."
+      },
+      {
+        "title": "Iron Ore Processing",
+        "description": "Delivers superior cleaning of clay-contaminated iron ore materials prior to concentration processes. The twin-shaft configuration thoroughly liberates valuable iron minerals from clay matrices while minimizing valuable mineral losses, increasing downstream magnetic separation efficiency by up to 12% and reducing reagent consumption in subsequent flotation operations."
+      },
+      {
+        "title": "Silica Sand Production",
+        "description": "Provides intensive cleaning for industrial silica sand applications requiring exceptional purity levels. The adjustable retention time allows precise control of scrubbing intensity to remove surface contaminants while minimizing attrition of valuable silica particles, producing premium washed products for glass manufacturing, foundry applications, and other high-specification industrial uses."
+      },
+      {
+        "title": "Mineral Processing",
+        "description": "Effectively processes a wide range of mineral ores including phosphate, potash, bauxite, and copper ore with clay contamination. The powerful scrubbing action liberates valuable minerals from clay matrices without excessive size reduction, preparing feed material for subsequent concentration processes while significantly reducing downstream processing costs."
+      },
+      {
+        "title": "Coal Washing",
+        "description": "Handles difficult-to-process coal materials with high clay content in preparation for thermal or metallurgical applications. The twin-shaft system efficiently removes clay and shale contaminants while preserving coal particle size distribution, reducing ash content by up to 25% and improving overall product quality and combustion characteristics in power generation applications."
+      },
+      {
+        "title": "Recycled Materials Processing",
+        "description": "Supports processing of recycled concrete, asphalt, and construction waste materials with clay and soil contamination. The robust design effectively handles variable feed characteristics while thoroughly cleaning recovered aggregates, contributing to sustainable construction practices by converting waste streams into valuable products that meet specifications for reuse in new construction applications."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does a twin shaft log washer work?",
+      "answer": "Twin shaft log washers operate through the synchronized counter-rotation of two parallel shafts equipped with specially designed paddles. As material enters the feed end, it encounters the rotating paddles that create intense agitation and particle-on-particle scrubbing action. The counter-rotating motion forces material to move along the length of the machine while continuously tumbling against itself. This creates maximum attrition between particles, effectively removing clay and other contaminants from the surface of the material. The paddles are precisely angled to advance material toward the discharge end at a controlled rate, ensuring optimal retention time for thorough cleaning. Water flows counter to the material direction, carrying away liberated contaminants. The combination of mechanical agitation, controlled retention time, and opposing water flow creates an exceptionally effective cleaning process for materials with high clay content that cannot be effectively processed by other washing technologies."
+    },
+    {
+      "question": "What advantages does a twin shaft log washer offer over other washing equipment?",
+      "answer": "Twin shaft log washers provide several critical advantages: 1) Superior cleaning performance for materials with high clay content or stubborn contaminants that spiral washers cannot effectively process; 2) Ability to handle larger material sizes up to 150mm compared to 10-30mm for spiral washers; 3) Controlled retention time that can be adjusted based on contamination levels; 4) More thorough cleaning through intense particle-on-particle attrition rather than just water action; 5) Effective processing of materials with varying clay types including sticky or plastic clays; 6) Higher clay contamination tolerance (up to 15-20% by weight); 7) Better liberation of valuable minerals from clay matrices; 8) More effective cleaning of irregular or angular materials; 9) Ability to process materials with higher bulk density; 10) Superior performance with materials requiring significant retention time for effective cleaning. While twin shaft log washers typically have higher capital and operating costs than simpler washing systems, they deliver superior results in challenging applications where other technologies fail to achieve required product specifications."
+    },
+    {
+      "question": "What types of materials can be processed in ZX series twin shaft log washers?",
+      "answer": "ZX series twin shaft log washers effectively process a wide range of materials including: 1) Crushed stone and quarry products with high clay contamination; 2) Natural sand and gravel with clay balls or coatings; 3) Iron ore with adhering clay materials; 4) Silica sand requiring premium cleaning for industrial applications; 5) Recycled concrete and construction materials with soil contamination; 6) Coal with clay or shale impurities; 7) Phosphate rock and other industrial minerals; 8) Potash and similar evaporite minerals; 9) Bauxite and aluminum ores; 10) Heavy mineral sands requiring liberation; 11) Limestone and dolomite with clay contamination; 12) Materials that have proven difficult to clean with conventional washing equipment. The equipment performs most effectively with materials sized between 6mm and 150mm, though specific performance varies based on material characteristics and contamination levels. Materials with clay content up to 20% by weight can be effectively processed, making these machines ideal for challenging washing applications."
+    },
+    {
+      "question": "What factors determine the appropriate twin shaft log washer size for an application?",
+      "answer": "Selecting the proper twin shaft log washer requires evaluation of several critical parameters: 1) Required processing capacity (15-100 t/h for ZX series); 2) Maximum feed material size and overall size distribution (optimal for 6-150mm); 3) Clay or contaminant content percentage and type (plastic vs. non-plastic clays); 4) Required product cleanliness specifications; 5) Feed material specific gravity and bulk density; 6) Clay tenacity and adhesion characteristics; 7) Desired retention time based on contamination severity; 8) Available installation space and infrastructure; 9) Water availability and treatment capabilities; 10) Expected variation in feed material properties; 11) Downstream processing requirements; 12) Process position within the overall flowsheet. Our engineering team conducts comprehensive material testing and process simulation to recommend optimal equipment sizing and configuration based on specific operational requirements and material characteristics. For the most challenging applications, we offer pilot-scale testing services to validate performance before full-scale implementation."
+    },
+    {
+      "question": "What maintenance procedures are required for twin shaft log washers?",
+      "answer": "Effective maintenance for twin shaft log washers includes several key procedures: 1) Regular inspection and replacement of paddle wear shoes according to established wear schedules (typically every 4-8 weeks depending on material abrasiveness); 2) Monitoring and maintenance of main bearing assemblies including temperature monitoring and scheduled lubrication; 3) Regular inspection of shaft seals and replacement as needed to prevent water intrusion; 4) Inspection of drive components including motors, couplings, and gear reducers; 5) Checking tub liner plates in high-wear zones and replacing when worn beyond specified tolerance; 6) Verification of shaft alignment and paddle clearances; 7) Inspection of discharge weir components and adjustment mechanisms; 8) Monitoring of structural integrity and tightening of mounting hardware; 9) Regular cleaning of overflow screens and water management systems; 10) Inspection of electrical control systems and sensors. With proper maintenance, ZX series twin shaft log washers typically achieve operational availability exceeding 95% with major maintenance intervals of 2,000-3,000 operating hours. Our service teams provide comprehensive maintenance training and support programs to maximize equipment performance and service life."
+    },
+    {
+      "question": "How does water usage in twin shaft log washers compare to other washing technologies?",
+      "answer": "Twin shaft log washers typically require higher water usage compared to spiral washers due to their more intensive cleaning action and larger processing volumes. Standard water consumption ranges from 2.0-3.5 m³ per ton of processed material, compared to 0.5-1.5 m³ for spiral washers. However, this higher consumption is justified by superior cleaning performance with difficult materials that cannot be effectively processed by lower-water technologies. The ZX series incorporates several water efficiency features that optimize consumption, including internal water recirculation channels and precisely designed overflow systems. When equipped with our advanced water management package, which includes thickeners and clarifiers, up to 80% of process water can be recirculated, reducing fresh water requirements to as little as 0.4-0.7 m³ per ton. Additionally, the more thorough cleaning achieved often eliminates the need for secondary washing processes, potentially reducing overall system water consumption. For operations in water-restricted environments, we offer specialized low-water configurations that balance cleaning performance with water conservation requirements."
+    },
+    {
+      "question": "What power requirements and energy efficiency characteristics do twin shaft log washers have?",
+      "answer": "ZX series twin shaft log washers require more substantial power input than simpler washing systems due to their mechanical intensity and robust construction. Power requirements range from 5.5kW for the ZX-1530 model to 22kW for the ZX-2460, translating to specific energy consumption of approximately 0.3-0.4 kWh per ton of processed material. While this is 15-25% higher than spiral washers, the superior cleaning performance with difficult materials often eliminates the need for multiple processing stages, potentially reducing overall system energy consumption. Several design features contribute to energy efficiency: 1) Precision-balanced paddles that minimize energy losses; 2) High-efficiency IE3/Premium motors; 3) Optimized gear reduction systems with low transmission losses; 4) Variable frequency drive options for process optimization; 5) Advanced bearing designs that reduce friction losses. The primary factors affecting power consumption include material characteristics, throughput rate, clay content, and required retention time. Our engineering team conducts detailed power consumption analysis during system design to optimize energy efficiency while meeting required performance specifications."
+    },
+    {
+      "question": "How are twin shaft log washers installed and what site preparation is required?",
+      "answer": "Installing twin shaft log washers requires careful planning and site preparation. The installation process involves several key steps: 1) Foundation design and construction according to specific equipment loading requirements (typically requires reinforced concrete with anchor bolt embedments); 2) Positioning of main washer assembly using appropriately sized cranes (equipment weights range from 3,200-8,800kg); 3) Installation of drive systems including motors, reducers, and drive couplings; 4) Alignment of shafts and drive components to precise tolerances; 5) Connection of water supply and discharge management systems; 6) Installation of electrical controls and monitoring systems; 7) Verification of all mechanical connections and safety systems; 8) Initial no-load testing followed by graduated load testing. Site preparation requirements include: adequate foundation capacity, access for maintenance, water supply infrastructure (typically 100-250 m³/h depending on model), power supply (typically 400V/50Hz three-phase), drainage systems for process water, and material handling systems for feed and discharge. Our technical specialists provide comprehensive installation supervision and commissioning services, including detailed foundation drawings, electrical schematics, and process flow diagrams. Typical installation requires 3-5 days for standard models, with additional time for water management systems and complex control integration."
+    },
+    {
+      "question": "How does material feed size affect twin shaft log washer performance?",
+      "answer": "Material feed size is a critical factor in twin shaft log washer performance. ZX series units are designed to process materials from 6mm up to 150mm, with optimal performance typically achieved with material in the 20-100mm range. Unlike spiral washers which are limited to smaller particles (typically under 10mm), log washers excel with larger materials where the scrubbing action can effectively remove clay and contaminants through particle-on-particle attrition. Several size-related factors affect performance: 1) Materials below 6mm may experience excessive loss in the overflow; 2) Very fine materials (<1mm) generally require supplementary processing systems; 3) Larger materials provide more effective scrubbing surfaces for clay removal; 4) Excessive oversize materials (>150mm) can damage paddles and cause operational issues; 5) Wide particle size distributions can reduce efficiency as larger particles may damage smaller ones during processing. For applications with broad size distributions, we recommend pre-screening to remove both excessive fines and oversize material. The ZX series can be equipped with specialized paddle configurations optimized for specific size ranges, ensuring maximum cleaning efficiency across different material characteristics."
+    },
+    {
+      "question": "What considerations are important when integrating twin shaft log washers into an existing processing plant?",
+      "answer": "Integrating twin shaft log washers into existing plants requires careful consideration of several factors: 1) Space requirements - log washers have a larger footprint than spiral washers and require adequate maintenance access around all sides; 2) Foundation requirements - substantial reinforced concrete foundations with proper anchor systems are essential due to equipment weight and dynamic loading; 3) Material handling - feed and discharge conveyors must be properly sized and positioned, with discharge typically requiring steeper conveyor angles due to material wetness; 4) Water management - process water systems need appropriate capacity for both fresh water supply and wastewater handling (settling ponds, thickeners, or filter presses); 5) Power infrastructure - adequate electrical supply with appropriate motor starters and controls; 6) Process balance - upstream crushing and screening must be coordinated with washer capacity; 7) Noise considerations - log washers typically generate 85-90dB during operation, potentially requiring sound attenuation; 8) Integration with existing control systems - PLC integration and operator interface requirements; 9) Maintenance access - crane or lifting access for paddle and component replacement; 10) Water quality monitoring and management systems. Our engineering team provides comprehensive integration services including 3D plant modeling, process simulation, and detailed installation planning to ensure smooth implementation with minimal disruption to existing operations. For complex integration projects, we offer phased implementation approaches that maintain plant production during the upgrade process."
+    }
+  ],
+  "seo": {
+    "title": "Twin Shaft Log Washer | Heavy-Duty Clay Removal Equipment | Zexin Mining",
+    "keywords": "twin shaft log washer,dual shaft scrubber,log washer,mclanahan log washer,eagle iron works log washer,heavy duty log washer,mining scrubber,aggregate scrubber,twin shaft aggregate washer,log washer design,log washer capacity,log washer price,log washer for sale,log washer parts,log washer paddles,log washer bearings,log washer drive system,log washer maintenance,log washer troubleshooting,log washer replacement shafts",
+    "description": "Zexin Mining's ZX Series Twin Shaft Log Washers deliver 40% more cleaning intensity with advanced counter-rotating paddle technology. Our heavy-duty design processes 15-100 t/h of clay-contaminated materials while providing 50% longer paddle service life than conventional washers."
+  },
+  "searchKeywords": [
+    "twin shaft log washer",
+    "dual shaft scrubber",
+    "heavy duty log washer",
+    "mining scrubber",
+    "aggregate scrubber",
+    "log washer design",
+    "log washer parts",
+    "log washer paddles",
+    "log washer maintenance",
+    "twin shaft aggregate washer"
+  ],
+  "relatedProducts": [
+    "spiral-washer",
+    "wheel-bucket-sand-washer"
+  ],
+  "imageSrcAlt": "Twin Shaft Log Washer | Zexin Mining"
+}

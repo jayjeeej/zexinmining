@@ -1,0 +1,682 @@
+{
+  "id": "high-weir-spiral-classifier",
+  "title": "High Weir Spiral Classifier",
+  "series": "FLG/2FLG Series High Weir Spiral Classifier",
+  "imageSrc": "/images/products/classification-equipment/high-weir-spiral-classifier.jpg",
+  "productCategory": "Mineral Desliming Equipment",
+  "subcategory": "classification-equipment",
+  "model": "FLG-1500",
+  "meta": [
+    {
+      "key": "Spiral speed",
+      "displayValue": "2.4-22 r.p.m"
+    },
+    {
+      "key": "Processing capacity",
+      "displayValue": "30-23300 t/d (33-25684 stpd)"
+    },
+    {
+      "key": "Motor power",
+      "displayValue": "1.1-45 kW (1.48-60.3 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "ton",
+          "conversionFactor": 1.10231,
+          "label": "ton"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/d",
+          "conversionFactor": 1,
+          "label": "t/d"
+        },
+        {
+          "unit": "stpd",
+          "conversionFactor": 1.10231,
+          "label": "stpd"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ],
+      "speed": [
+        {
+          "unit": "r.p.m",
+          "conversionFactor": 1,
+          "label": "r.p.m"
+        },
+        {
+          "unit": "r.p.m",
+          "conversionFactor": 1,
+          "label": "r.p.m"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/classification-equipment/high-weir-spiral-classifier",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/classification-equipment/high-weir-spiral-classifier",
+    "zh": "/zh/products/ore-processing/classification-equipment/high-weir-spiral-classifier"
+  },
+  "overview": "The FLG/2FLG Series High Weir Spiral Classifier is a precision mineral processing equipment designed for efficient particle size separation and solid-liquid classification. With its elevated weir design and optimized spiral configuration, it delivers superior classification performance for various mining operations.",
+  "detailedDescription": "The High Weir Spiral Classifier introduces innovative spiral technology that transforms mineral classification processes in the mining industry. This system creates exceptional particle separation precision through its elevated weir design, addressing common classification challenges while enhancing material recovery rates. Its balanced approach to slurry processing delivers consistent results across varying ore conditions, making it valuable for mining operations that require efficient separation without compromising throughput capacity or energy efficiency.",
+  "specifications": {
+    "title": "FLG/2FLG Series High Weir Spiral Classifier Technical Parameters",
+    "note": "Can be customized according to customer requirements",
+    "tableHeaders": [
+      "Type",
+      "Model",
+      "Spiral Speed (r.p.m)",
+      "Return Sand (t/d)",
+      "Overflow Capacity (t/d)",
+      "Spiral Diameter (mm)",
+      "Tank Length (mm)",
+      "Tank Depth",
+      "Motor Model",
+      "Motor Power (kW)",
+      "Lifting Motor Model",
+      "Lifting Power (kW)",
+      "Weight (kg)"
+    ],
+    "tableHeadersImperial": [
+      "Type",
+      "Model",
+      "Spiral Speed (r.p.m)",
+      "Return Sand (stpd)",
+      "Overflow Capacity (stpd)",
+      "Spiral Diameter (in.)",
+      "Tank Length (in.)",
+      "Tank Depth",
+      "Motor Model",
+      "Motor Power (hp)",
+      "Lifting Motor Model",
+      "Lifting Power (hp)",
+      "Weight (lb)"
+    ],
+    "tableData": [
+      [
+        "Single Spiral",
+        "FLG-300",
+        "8.3~22",
+        "30~80",
+        "10-30",
+        "300",
+        "3680",
+        "",
+        "",
+        "1.1",
+        "Manual",
+        "-",
+        "668"
+      ],
+      [
+        "Single Spiral",
+        "FLG-500",
+        "8.5~15.5",
+        "145~260",
+        "21-75",
+        "500",
+        "4246",
+        "",
+        "Y90L-6",
+        "1.1",
+        "Manual",
+        "-",
+        "1600"
+      ],
+      [
+        "Single Spiral",
+        "FLG-750",
+        "2.4~9.9",
+        "255~564",
+        "65-154",
+        "750",
+        "4980",
+        "",
+        "Y132S-6",
+        "3",
+        "Manual",
+        "-",
+        "2716"
+      ],
+      [
+        "Single Spiral",
+        "FLG-1000",
+        "3.5~7.6",
+        "473~1026",
+        "85",
+        "1000",
+        "6120",
+        "",
+        "Y132M2-6",
+        "5.5",
+        "Manual",
+        "-",
+        "4400"
+      ],
+      [
+        "Single Spiral",
+        "FLG-1200",
+        "5~8",
+        "1165~1630",
+        "155",
+        "1200",
+        "6125",
+        "",
+        "Y132M2-6",
+        "5.5",
+        "Y90L-4",
+        "1.5",
+        "8765"
+      ],
+      [
+        "Single Spiral",
+        "FLG-1500",
+        "2.5~6",
+        "1140~2740",
+        "235",
+        "1500",
+        "7940",
+        "",
+        "Y160M-6",
+        "7.5",
+        "Y100L1-4",
+        "2.2",
+        "12500"
+      ],
+      [
+        "Single Spiral",
+        "FLG-2000",
+        "3.6~5.5",
+        "3890~5940",
+        "400",
+        "2000",
+        "8250",
+        "",
+        "Y160L-6/4",
+        "11; 15",
+        "Y100L2-4",
+        "3",
+        "20814"
+      ],
+      [
+        "Single Spiral",
+        "FLG-2400",
+        "3.64",
+        "6800",
+        "580",
+        "2400",
+        "8940",
+        "14-18.5",
+        "Y160L-4",
+        "15",
+        "Y100L2-4",
+        "3",
+        "25650"
+      ],
+      [
+        "Single Spiral",
+        "FLG-3000",
+        "3.2",
+        "11650",
+        "890",
+        "3000",
+        "13950",
+        "",
+        "Y200L2-6",
+        "22",
+        "Y113M-4",
+        "4",
+        "37000"
+      ],
+      [
+        "Double Spiral",
+        "2FLG-1200",
+        "5~8",
+        "2340~3200",
+        "310",
+        "1200",
+        "6125",
+        "",
+        "Y132M2-6",
+        "5.5x2",
+        "Y100L1-4",
+        "2.2x2",
+        "15840"
+      ],
+      [
+        "Double Spiral",
+        "2FLG-1500",
+        "2.5~6",
+        "2280~5480",
+        "470",
+        "1500",
+        "7940",
+        "",
+        "Y160M-6",
+        "7.5x2",
+        "Y100L-4",
+        "2.2x2",
+        "22110"
+      ],
+      [
+        "Double Spiral",
+        "2FLG-2000",
+        "3.6~5.5",
+        "7780~11880",
+        "800",
+        "2000",
+        "8900",
+        "",
+        "Y200L2-6/Y200L-4",
+        "22;30",
+        "Y100L2-4",
+        "3.0x2",
+        "36341"
+      ],
+      [
+        "Double Spiral",
+        "2FLG-2400",
+        "3.67",
+        "13600",
+        "1160",
+        "2400",
+        "11500",
+        "",
+        "Y200L-4",
+        "30",
+        "Y100L2-4",
+        "3.0x2",
+        "45874"
+      ],
+      [
+        "Double Spiral",
+        "2FLG-3000",
+        "3.2",
+        "23300",
+        "1785",
+        "3000",
+        "12140",
+        "",
+        "Y225M-4",
+        "45",
+        "Y112M-4",
+        "4.0x2",
+        "73030"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "Single Spiral",
+        "FLG-300",
+        "8.3~22",
+        "33~88",
+        "11-33",
+        "11.8",
+        "144.9",
+        "",
+        "",
+        "1.5",
+        "Manual",
+        "-",
+        "1472"
+      ],
+      [
+        "Single Spiral",
+        "FLG-500",
+        "8.5~15.5",
+        "160~287",
+        "23-83",
+        "19.7",
+        "167.2",
+        "",
+        "Y90L-6",
+        "1.5",
+        "Manual",
+        "-",
+        "3527"
+      ],
+      [
+        "Single Spiral",
+        "FLG-750",
+        "2.4~9.9",
+        "281~622",
+        "72-170",
+        "29.5",
+        "196.1",
+        "",
+        "Y132S-6",
+        "4.0",
+        "Manual",
+        "-",
+        "5987"
+      ],
+      [
+        "Single Spiral",
+        "FLG-1000",
+        "3.5~7.6",
+        "522~1131",
+        "94",
+        "39.4",
+        "240.9",
+        "",
+        "Y132M2-6",
+        "7.4",
+        "Manual",
+        "-",
+        "9700"
+      ],
+      [
+        "Single Spiral",
+        "FLG-1200",
+        "5~8",
+        "1284~1797",
+        "171",
+        "47.2",
+        "241.1",
+        "",
+        "Y132M2-6",
+        "7.4",
+        "Y90L-4",
+        "2.0",
+        "19324"
+      ],
+      [
+        "Single Spiral",
+        "FLG-1500",
+        "2.5~6",
+        "1257~3020",
+        "259",
+        "59.1",
+        "312.6",
+        "",
+        "Y160M-6",
+        "10.1",
+        "Y100L1-4",
+        "3.0",
+        "27557"
+      ],
+      [
+        "Single Spiral",
+        "FLG-2000",
+        "3.6~5.5",
+        "4288~6547",
+        "441",
+        "78.7",
+        "324.8",
+        "",
+        "Y160L-6/4",
+        "14.8; 20.1",
+        "Y100L2-4",
+        "4.0",
+        "45886"
+      ],
+      [
+        "Single Spiral",
+        "FLG-2400",
+        "3.64",
+        "7496",
+        "639",
+        "94.5",
+        "352.0",
+        "14-18.5",
+        "Y160L-4",
+        "20.1",
+        "Y100L2-4",
+        "4.0",
+        "56549"
+      ],
+      [
+        "Single Spiral",
+        "FLG-3000",
+        "3.2",
+        "12842",
+        "981",
+        "118.1",
+        "549.2",
+        "",
+        "Y200L2-6",
+        "29.5",
+        "Y113M-4",
+        "5.4",
+        "81571"
+      ],
+      [
+        "Double Spiral",
+        "2FLG-1200",
+        "5~8",
+        "2579~3527",
+        "342",
+        "47.2",
+        "241.1",
+        "",
+        "Y132M2-6",
+        "7.4x2",
+        "Y100L1-4",
+        "3.0x2",
+        "34921"
+      ],
+      [
+        "Double Spiral",
+        "2FLG-1500",
+        "2.5~6",
+        "2513~6041",
+        "518",
+        "59.1",
+        "312.6",
+        "",
+        "Y160M-6",
+        "10.1x2",
+        "Y100L-4",
+        "3.0x2",
+        "48745"
+      ],
+      [
+        "Double Spiral",
+        "2FLG-2000",
+        "3.6~5.5",
+        "8576~13095",
+        "882",
+        "78.7",
+        "350.4",
+        "",
+        "Y200L2-6/Y200L-4",
+        "29.5;40.2",
+        "Y100L2-4",
+        "4.0x2",
+        "80121"
+      ],
+      [
+        "Double Spiral",
+        "2FLG-2400",
+        "3.67",
+        "14991",
+        "1279",
+        "94.5",
+        "452.8",
+        "",
+        "Y200L-4",
+        "40.2",
+        "Y100L2-4",
+        "4.0x2",
+        "101136"
+      ],
+      [
+        "Double Spiral",
+        "2FLG-3000",
+        "3.2",
+        "25684",
+        "1967",
+        "118.1",
+        "478.0",
+        "",
+        "Y225M-4",
+        "60.3",
+        "Y112M-4",
+        "5.4x2",
+        "161002"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "",
+      "speed",
+      "capacity",
+      "capacity",
+      "length",
+      "length",
+      "",
+      "",
+      "power",
+      "",
+      "power",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "High Weir Design",
+      "description": "Our proprietary high weir configuration creates optimal classification conditions by maintaining precise slurry levels. This design maximizes separation efficiency while preventing fine particles from being prematurely discharged, resulting in superior particle size distribution control."
+    },
+    {
+      "title": "Dual Configuration Options",
+      "description": "Available in both single and double spiral configurations, our classifiers can be tailored to your specific capacity requirements. The double spiral models offer up to twice the processing capacity while maintaining the same classification precision and operational efficiency."
+    },
+    {
+      "title": "Wide Speed Range Operation",
+      "description": "With spiral speeds ranging from 2.4 to 22 r.p.m, our classifiers allow for precise adjustment based on material characteristics and desired separation points, ensuring optimal classification results across different ore types and processing requirements."
+    },
+    {
+      "title": "Extensive Capacity Range",
+      "description": "Processing capacities from 30 to 23,300 t/d allow our high weir classifiers to handle operations from small-scale plants to large industrial complexes with exceptional reliability and consistent performance even under varying load conditions."
+    },
+    {
+      "title": "Durable Construction",
+      "description": "Manufactured with premium wear-resistant materials and reinforced structural components, our high weir classifiers are engineered for continuous operation in demanding mining environments, delivering extended service life and minimized maintenance downtime."
+    },
+    {
+      "title": "Precise Overflow Control",
+      "description": "The specialized high weir design enables superior control over overflow discharge, allowing for precise adjustment of the separation cut point and optimizing the recovery of valuable minerals while efficiently removing unwanted fine particles."
+    },
+    {
+      "title": "Energy Efficient Design",
+      "description": "Our optimized drive system and mechanical configuration minimize power consumption while maintaining superior classification performance, resulting in lower operational costs and reduced environmental impact across the entire processing circuit."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Mineral Processing",
+        "description": "Ideal for closed-circuit grinding operations in mineral processing plants, separating fine particles for regrinding while allowing coarse particles to advance to the next processing stage, improving overall grinding efficiency and product quality."
+      },
+      {
+        "title": "Aggregate Production",
+        "description": "Efficiently classifies and washes construction aggregates, removing clay, silt, and other impurities to produce clean sand and gravel products that meet strict industry specifications and quality standards."
+      },
+      {
+        "title": "Coal Preparation",
+        "description": "Provides effective size classification in coal washing plants, improving downstream processing efficiency by ensuring optimal particle size distribution and removing fine impurities that affect product quality."
+      },
+      {
+        "title": "Metal Mining",
+        "description": "Delivers precise particle size control in various metal ore processing circuits, including gold, copper, iron, and zinc, optimizing recovery rates in subsequent concentration processes."
+      },
+      {
+        "title": "Industrial Minerals",
+        "description": "Ensures accurate size classification for industrial minerals such as kaolin, feldspar, and silica, where precise particle size distribution is crucial for product performance and market value."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is the difference between a high weir spiral classifier and a submerged spiral classifier?",
+      "answer": "High weir spiral classifiers have the spiral partially exposed above the slurry level with a higher overflow weir, creating a coarser separation point. This design is ideal for applications requiring relatively coarser particle separation (typically >0.15mm). In contrast, submerged spiral classifiers have the spiral completely immersed in the slurry, achieving finer separation points and are better suited for fine material classification. High weir models typically operate at higher spiral speeds and provide better dewatering of coarse material."
+    },
+    {
+      "question": "How do I select the right size of high weir spiral classifier for my operation?",
+      "answer": "Selecting the appropriate classifier size depends on several factors: required processing capacity (tons per day), desired particle size separation point, feed material characteristics (size distribution and density), and space constraints. Key specifications to consider include spiral diameter, spiral speed options, tank length, and motor power. Our engineering team can help determine the optimal model based on your specific processing requirements, material analysis, and operational parameters."
+    },
+    {
+      "question": "What maintenance is required for high weir spiral classifiers?",
+      "answer": "Regular maintenance includes inspection of spiral blades for wear and damage, lubrication of bearings and drive components, checking for proper spiral alignment, inspection of the lifting mechanism, monitoring motor performance, and cleaning of the tank to prevent sediment build-up. Maintenance frequency depends on operating conditions, with more abrasive materials requiring more frequent inspections. We recommend a comprehensive inspection every 3-6 months for optimal performance."
+    },
+    {
+      "question": "Can high weir spiral classifiers handle different types of minerals?",
+      "answer": "Yes, our high weir spiral classifiers are designed to process a wide range of minerals and materials with different densities and hardness characteristics. They effectively handle metallic ores (gold, copper, iron), non-metallic minerals, coal, sand and gravel, and various industrial minerals. The adjustable spiral speed and weir height allow for customization to specific material properties, ensuring optimal classification results across different applications."
+    },
+    {
+      "question": "What are the advantages of double spiral classifiers over single spiral models?",
+      "answer": "Double spiral classifiers offer several advantages: nearly doubled processing capacity within a similar footprint, improved efficiency for high-throughput operations, better handling of fluctuating feed rates, reduced capital cost per ton of processed material, and operational redundancy (if one spiral requires maintenance, the unit can often continue operating at reduced capacity). However, they require more powerful motors and have a higher initial capital cost compared to single spiral models."
+    },
+    {
+      "question": "How does spiral speed affect classification performance?",
+      "answer": "Spiral speed is a critical operational parameter that directly impacts classification efficiency. Higher speeds (8-22 r.p.m) generally result in coarser separation points and are suitable for materials with larger particle sizes. Lower speeds (2.4-8 r.p.m) provide finer separation points and better precision for materials with smaller particle sizes. The optimal speed depends on feed characteristics, desired cut point, and processing objectives. Our classifiers offer multiple speed options to accommodate various operational requirements."
+    }
+  ],
+  "seo": {
+    "title": "High Weir Spiral Classifier | Efficient Mineral Classification Equipment | Zexin Mining",
+    "description": "Zexin Mining's FLG/2FLG High Weir Spiral Classifiers deliver precision particle separation with capacities up to 23,300 t/d. Our robust classifiers feature versatile speed ranges, dual spiral options, and optimized weir design ideal for mining and mineral processing operations.",
+    "keywords": "High Weir Spiral Classifier, High Weir Screw Classifier, High Weir Double Spiral Classifier, Mineral Processing High Weir Classifier, Ore Separation High Weir Classifier, High Weir Sand Classifier, High Weir Slurry Classifier, High Efficiency High Weir Classifier, High Weir Gravity Classifier, Industrial High Weir Classifier, High Capacity High Weir Classifier, Heavy Duty High Weir Classifier, High Weir Classifier Design, High Weir Classifier Specifications, High Weir Classifier Manufacturer, High Weir Classifier Price, High Weir Classifier Maintenance, High Weir Spiral Separator, High Weir Dewatering Classifier, High Weir Automatic Classifier"
+  },
+  "relatedProducts": [
+    "submerged-spiral-classifier",
+    "cone-classifier",
+    "hydrocyclone-separator"
+  ],
+  "imageSrcAlt": "High Weir Spiral Classifier | Zexin Mining"
+}

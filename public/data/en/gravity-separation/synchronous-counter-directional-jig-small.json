@@ -1,0 +1,331 @@
+{
+  "id": "synchronous-counter-directional-jig-small",
+  "title": "Composite Jig Separator",
+  "series": "SCDJM Series Small-Scale Composite Jig Separator",
+  "imageSrc": "/images/products/gravity-separation/synchronous-counter-directional-jig-small.jpg",
+  "productCategory": "Gravity Separation Equipment",
+  "subcategory": "gravity-separation",
+  "model": "SCDJM-2",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "15-45 mtph (16.5-49.6 stph)"
+    },
+    {
+      "key": "Max. feed size",
+      "displayValue": "0-50 mm (0-1.97 in.)"
+    },
+    {
+      "key": "Motor power",
+      "displayValue": "22 kW (29.5 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "ton",
+          "conversionFactor": 1.10231,
+          "label": "ton"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "mtph"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/gravity-separation/synchronous-counter-directional-jig-small",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/gravity-separation/synchronous-counter-directional-jig-small",
+    "zh": "/zh/products/ore-processing/gravity-separation/synchronous-counter-directional-jig-small"
+  },
+  "overview": "The SCDJM Series Small-Scale Composite Jig Separator is a high-efficiency gravity concentration equipment designed for small to medium-scale mineral processing operations. Utilizing innovative dual-pulse technology and advanced hybrid motion mechanics, it creates powerful vertical alternating water flow for optimal mineral stratification and separation. This compact mineral beneficiation equipment effectively handles materials ranging from 0.5-50mm and is particularly suitable for iron ore, gold, tin ore, tungsten, and other mineral processing applications, offering superior separation quality, high recovery rates, and exceptional energy efficiency, making it the ideal solution for small mining operations seeking industrial-grade processing performance.",
+  "detailedDescription": "The SCDJM Series small scale jig concentrator introduces innovative dual-pulse technology that transforms gravity separation in compact mining operations. This energy-saving mineral concentrator creates optimized stratification patterns through its unique hydraulic mechanics, addressing common challenges with diverse particle sizes while enhancing recovery precision. Its balanced approach to gravity concentration delivers consistent results across various ore types, making it valuable equipment for small mining operations processing gold, tin, and iron without compromising throughput efficiency.",
+  "specifications": {
+    "title": "2-Chamber Composite Jig Separator Specifications",
+    "note": "Can be customized according to customer requirements",
+    "tableHeaders": [
+      "Model",
+      "Stroke / Adjustment Range (mm)",
+      "Jigging Chamber Number",
+      "Section Type",
+      "Jigging Chamber Area (m²)",
+      "Frequency Range (cycles/min)",
+      "Feed Size (mm)",
+      "Processing Capacity (t/h)",
+      "Motor Power (kW)",
+      "Water Consumption (m³/h)",
+      "Weight (t)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Stroke / Adjustment Range (in.)",
+      "Jigging Chamber Number",
+      "Section Type",
+      "Jigging Chamber Area (ft²)",
+      "Frequency Range (cycles/min)",
+      "Feed Size (in.)",
+      "Processing Capacity (stph)",
+      "Motor Power (hp)",
+      "Water Consumption (m³/h)",
+      "Weight (ton)"
+    ],
+    "tableData": [
+      [
+        "SCDJM-2",
+        "0-150",
+        "2",
+        "Rectangular",
+        "4",
+        "60-150",
+        "0-50",
+        "15-45",
+        "22",
+        "150-300",
+        "4.5"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "SCDJM-2",
+        "0-5.9",
+        "2",
+        "Rectangular",
+        "43.1",
+        "60-150",
+        "0-1.97",
+        "16.5-49.6",
+        "29.5",
+        "150-300",
+        "5.0"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "",
+      "",
+      "area",
+      "",
+      "length",
+      "capacity",
+      "power",
+      "",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Advanced Dual-Pulse Motion Technology",
+      "description": "Features innovative parallel up-down dual-motion design, creating powerful vertical alternating water flow force with greater penetration through mineral layers. The upper screening motion works in synchronized coordination with the lower motion, achieving more efficient mineral stratification and significantly improving separation quality, recovery rates, and processing capacity while handling materials with varying density characteristics."
+    },
+    {
+      "title": "Dual-Layer Progressive Separation Structure",
+      "description": "Processes coarse minerals in the upper layer and fine minerals in the lower layer, handling particles from 50mm down to 0.5mm for simultaneous multi-size mineral beneficiation. The four-stage separation process (primary concentration, secondary cleaning, and two recovery stages) ensures premium concentrate quality, maximum recovery rates, and reduced resource waste, optimizing both product value and resource utilization."
+    },
+    {
+      "title": "High-Precision Gravity Concentration",
+      "description": "Enables direct observation of the mineral stratification process through strategically positioned viewing windows, allowing real-time quality control based on concentrate purity. Optimized hindered settling principle effectively separates minerals based on specific gravity differences, particularly suitable for materials with significant density variations like iron ore, gold, and tin ores, achieving exceptional separation precision even in challenging applications."
+    },
+    {
+      "title": "Energy and Resource Conservation",
+      "description": "Optimized hydraulic system and efficient drive mechanism reduce power consumption by up to 35% compared to conventional jigs of similar capacity, delivering substantial operating cost savings. The precision-engineered water distribution system minimizes water usage while maintaining separation efficiency, with over 85% water recyclability in closed circuits, making it ideal for operations in water-sensitive regions or with strict environmental requirements."
+    },
+    {
+      "title": "Quick Installation and Simple Maintenance",
+      "description": "Modular design allows for rapid assembly and straightforward maintenance without complete disassembly to access major components, significantly reducing downtime and maintenance costs. Simplified design features fewer moving parts than conventional jigs, further enhancing reliability and service life while minimizing the need for specialized maintenance personnel, particularly valuable for remote mining operations."
+    },
+    {
+      "title": "Multi-Mineral Processing Capability",
+      "description": "Effectively processes various minerals including iron ore, copper ore, gold ore, tin ore, tungsten ore, lead-zinc ore, tantalum-niobium ore, mercury ore, fluorite, and barite with exceptional separation efficiency. Adjustable stroke and frequency parameters allow precise optimization for different mineral characteristics and processing requirements, making it a versatile solution for diverse mining operations."
+    },
+    {
+      "title": "Intelligent Control System",
+      "description": "Equipped with user-friendly control interface for precise adjustment of critical operating parameters including stroke length, frequency, water flow, and bed depth to optimize separation results. By controlling the discharge rate of minerals on the screen, operators can freely adjust concentrate layer purity, flexibly balancing separation precision and production output to meet changing market requirements for quality and volume."
+    },
+    {
+      "title": "Robust Industrial Construction",
+      "description": "Constructed with corrosion-resistant materials and wear-resistant components to withstand harsh mineral processing environments while maintaining long-term performance. All critical components are protected against wear and abrasion, extending service life and reducing maintenance requirements while ensuring stable separation performance under demanding 24/7 operational conditions."
+    },
+    {
+      "title": "Economic Efficiency and Fast ROI",
+      "description": "Provides an economical solution for small mining operations requiring professional gravity concentration technology without the capital expense of larger equipment. Lower operating and maintenance costs combined with excellent recovery rates and premium product quality contribute to attractive return on investment, typically achieved within 6-18 months, making it financially accessible for small producers and startup mining operations."
+    }
+  ],
+  "applications": {
+    "title": "Application Areas",
+    "items": [
+      {
+        "title": "Iron Ore Beneficiation",
+        "description": "Ideal for gravity concentration of hematite, magnetite, and other iron ore types, effectively separating valuable minerals from gangue to produce high-grade iron concentrates with minimal processing costs. Jigging separation significantly reduces the processing volume for subsequent grinding and magnetic separation stages, lowering overall production costs while improving concentrate quality and recovery rates, particularly effective for upgrading low and medium-grade iron ores."
+      },
+      {
+        "title": "Precious Metal Recovery",
+        "description": "Delivers exceptional performance in recovering gold, tin, tungsten, and other valuable minerals through optimized stratification technology and controlled pulsation mechanics. Particularly effective for processing free gold and coarse-grained precious minerals, providing an environmentally friendly alternative to chemical concentration methods with higher recovery rates and lower processing costs, ideal for small-scale precious metal mining operations."
+      },
+      {
+        "title": "Coal Washing and Cleaning",
+        "description": "Offers efficient coal beneficiation for small mining operations, effectively removing gangue and impurities to improve coal quality and calorific value. The equipment handles a wide particle size range, processing both coarse and fine coal fractions simultaneously with flexible operation parameters and minimal maintenance requirements, producing cleaner coal products with reduced ash content and improved market value."
+      },
+      {
+        "title": "Laboratory and Pilot-Scale Testing",
+        "description": "Provides ideal laboratory and pilot-scale solutions for mineral processing research and flowsheet development, suitable for process optimization and performance verification before full-scale implementation. The moderate equipment scale allows for both scientific data collection and processing commercial quantities of material for immediate economic returns, bridging the gap between laboratory testing and industrial production."
+      },
+      {
+        "title": "Small-Scale Mining Operations",
+        "description": "Delivers complete mineral processing solutions for rural and remote mining areas with limited infrastructure and investment capacity. Advanced composite jigging technology enables these operations to achieve efficient mineral concentration with minimal capital investment, creating sustainable economic value while meeting modern recovery and environmental standards, supporting small-enterprise development in resource-rich regions."
+      },
+      {
+        "title": "Mineral Processing Plant Upgrades",
+        "description": "Ideal for upgrading existing small processing plants seeking improved separation efficiency and recovery rates without major capital expansion. The compact footprint allows for easy integration into existing flowsheets, while the advanced separation technology delivers immediate improvements in concentrate grade and recovery, extending mine life and enhancing profitability for established operations facing declining ore grades or increasing processing challenges."
+      }
+    ]
+  },
+  "technicalAdvantages": null,
+  "caseStudies": [
+    {
+      "title": "Changjiang State-Owned Iron Mine Processing Plant in Hainan",
+      "description": "A state-owned iron mine in Changjiang County, Hainan Province, employed our SCDJM-2 Composite Jig Separator to process low-grade iron ore, overcoming challenges with high impurity content and poor magnetic separation performance. The equipment achieved efficient separation in limited space, significantly improving concentrate grade.",
+      "results": "8% concentrate grade improvement, 93.5% recovery rate, 25% reduction in operating costs",
+      "imageSrc": "/images/cases/hainan-iron-tailings/hainan-iron-tailings-processing-plant-zexin-mining.jpg",
+      "href": "/en/cases/hainan-iron-tailings"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What advantages does the Composite Jig Separator offer compared to traditional jigging machines?",
+      "answer": "The Composite Jig Separator delivers significant advantages through its innovative dual-pulse technology, creating more powerful vertical alternating water flow through coordinated expansion and contraction movements. This generates superior separation conditions compared to conventional single-motion jigs. The upper screening motion functions similarly to traditional manual panning principles for efficient mineral layer loosening, while the synchronized lower motion creates optimal hindered settling conditions, resulting in better stratification based on specific gravity differences. This mechanism achieves higher recovery rates (typically 5-8% improvement) and cleaner concentrates with fewer impurities. The dual-motion design increases processing capacity by allowing greater mineral bed thickness while maintaining separation precision. From an operational perspective, the compact design requires 30-40% less floor space, uses 20-35% less water and power, and features simplified maintenance procedures with fewer wear parts, resulting in lower operating costs and higher profitability compared to traditional jigging equipment."
+    },
+    {
+      "question": "What particle size range can the SCDJM-2 Composite Jig Separator effectively process?",
+      "answer": "The SCDJM-2 Composite Jig Separator effectively processes materials from 0.5mm to 50mm through its advanced dual-layer separation structure. The upper layer handles coarse particles while the lower layer processes finer fractions, enabling simultaneous multi-size mineral beneficiation. For optimal performance with mixed feed materials, we recommend preliminary classification into appropriate size fractions (e.g., 0.5-6mm, 6-25mm, 25-50mm) for separately optimized processing, although the equipment can handle mixed feeds with proper parameter adjustments. The system allows precise calibration of critical parameters including stroke length (0-150mm), frequency (60-150 cycles/min), and water flow rate to optimize recovery for each material type and size fraction. This gravity concentration technology is particularly effective for medium to coarse-grained minerals with sufficient density differences, providing a more environmentally friendly and economical alternative to flotation or chemical concentration methods for suitable materials, with separation efficiency typically ranging from 85-98% depending on feed characteristics and operating conditions."
+    },
+    {
+      "question": "How does the SCDJM-2 Composite Jig Separator achieve efficient gravity separation?",
+      "answer": "The SCDJM-2 Composite Jig Separator achieves exceptional gravity separation efficiency through its patented dual-pulse synchronous counter-directional technology. The process creates powerful vertical alternating water currents that penetrate deeply through the mineral bed: when the upper and lower moving parts converge, the water medium generates an upward flow, causing particles to loosen and stratify based on specific gravity; when these parts separate, the rapid downward water movement causes heavy minerals to concentrate on the screen under controlled suction force, completing the hindered settling separation with remarkable precision. This dynamic cycle repeats 60-150 times per minute, creating ideal conditions for density-based particle segregation. Operators can optimize separation performance by adjusting multiple parameters: stroke length controls the intensity of pulsation; frequency determines stratification cycles; water flow affects bed fluidity; and bed depth influences separation precision. The system allows direct observation of stratification quality through strategically positioned viewing windows, enabling real-time process control. The discharge speed can be precisely regulated鈥攕lower discharge produces higher-grade concentrates with exceptional purity (typically 3-5% higher than conventional jigs); faster discharge yields higher throughput and recovery rates, allowing flexible optimization based on specific production requirements and market conditions."
+    },
+    {
+      "question": "What installation and commissioning requirements should be considered for the SCDJM-2 Composite Jig Separator?",
+      "answer": "Installing the SCDJM-2 Composite Jig Separator requires careful attention to several critical factors: equipment leveling (maximum tolerance 卤2mm), foundation stability (reinforced concrete pad recommended), and proper hydraulic system connections with clean water supply. The modular design allows for simplified transportation and efficient assembly鈥攎echanical installation typically requires only 2-3 days with standard lifting equipment, followed by 1-2 additional days for commissioning and parameter optimization. During commissioning, key factors include establishing stable water supply (150-300 m³/h with 85% recycling capability), optimizing coordination between jigging frequency and stroke length for specific mineral characteristics, and developing proper bed formation through controlled material accumulation. The equipment reaches stable operating conditions within 15-20 minutes after startup. Our engineering support includes comprehensive installation manuals with detailed assembly procedures and parameter recommendations based on material properties. We also offer remote commissioning support services with optional on-site assistance to ensure optimal performance from initial startup, helping clients quickly master essential operation techniques and separation process optimization methods for maximum recovery and grade achievements."
+    },
+    {
+      "question": "What routine maintenance does the SCDJM-2 Composite Jig Separator require?",
+      "answer": "The SCDJM-2 Composite Jig Separator features a simplified maintenance program compared to conventional mineral processing equipment, focusing on preventive care to maximize availability and performance. Daily maintenance involves visual inspection of water flow distribution, bed condition monitoring, jigging frequency verification, and basic drive system checks, typically requiring 15-20 minutes per shift. Weekly maintenance includes lubricating accessible moving parts according to the lubrication schedule, inspecting screen surfaces for wear patterns (critical for separation efficiency), and checking rubber diaphragm seal integrity to prevent leakage. Major maintenance intervals are scheduled every 2,000 operating hours, including comprehensive inspection and possible replacement of wear components such as valve seals, screens, and connection points. The innovative gearless drive system eliminates common oil lubrication requirements and prevents potential oil contamination issues in the mineral processing circuit. All maintenance points are designed for easy access with standard tools, significantly reducing downtime and maintenance costs compared to traditional equipment. This streamlined maintenance approach, combined with the system's robust construction and fewer moving parts, results in typical equipment availability exceeding 95% with proper care."
+    },
+    {
+      "question": "How can the SCDJM-2 Composite Jig Separator be integrated into existing mineral processing circuits?",
+      "answer": "The SCDJM-2 Composite Jig Separator offers exceptional flexibility for integration into both new and existing mineral processing circuits. Its compact design (approximately 40% smaller footprint than conventional jigs of similar capacity) makes it ideal for retrofitting space-constrained processing plants seeking improved gravity concentration performance. In mineral processing flowsheets, the equipment can serve multiple functions: as a primary gravity separator processing crushed raw ore to remove waste rock before further processing; as an intermediate concentration step after crushing and sizing; or as a scavenging unit recovering valuable minerals from tailings streams to maximize overall recovery. For iron ore processing, it can be integrated with crushing, screening, and classification equipment to create a complete gravity concentration circuit, significantly reducing the processing load for grinding, magnetic separation, and other downstream processes, thereby reducing overall capital and operating costs. The system's wide adjustment range for operating parameters allows flexible configuration according to specific mineral characteristics and separation requirements. Our engineering team provides comprehensive integration support, including process flow designs, equipment layout optimization, and control system integration to ensure seamless incorporation into existing operations with minimal disruption and rapid performance improvement."
+    },
+    {
+      "question": "What types of ore can the SCDJM-2 Composite Jig Separator effectively process?",
+      "answer": "The SCDJM-2 Composite Jig Separator demonstrates exceptional versatility in processing diverse ore types through its advanced gravity concentration technology. The system excels at separating minerals with sufficient density differences, including iron ore (particularly effective with hematite and magnetite), gold ore (high recovery of free gold particles), base metal ores (copper, lead, zinc), tin ore, tungsten ore, tantalum-niobium minerals, rare earth minerals, and industrial minerals like fluorite and barite. The advanced dual-pulse technology creates ideal separation conditions for materials with density differences as low as 0.5-0.7 g/cm³, significantly expanding the range of applicable ore types compared to conventional jigging equipment. For iron ore processing, typical feed grades of 25-45% Fe can be upgraded to 58-65% Fe concentrates in a single processing step, while gold recovery can exceed 95% for free gold particles coarser than 0.5mm. The equipment performs particularly well with challenging ores containing finer mineral liberation sizes that conventional gravity separators struggle to process effectively. Operating parameters including stroke, frequency, water flow, and bed configuration can be precisely calibrated to optimize separation performance for specific ore characteristics based on mineralogical analysis and processing objectives, with our applications team providing detailed recommendations for optimal setup based on ore testing and similar operations."
+    },
+    {
+      "question": "How does the water consumption and recycling system of the SCDJM-2 Composite Jig Separator compare to other gravity separation methods?",
+      "answer": "The SCDJM-2 Composite Jig Separator operates with a typical water consumption of 150-300 cubic meters per hour during operation. However, the advanced water management system enables exceptional efficiency through closed-circuit recycling, where over 85% of process water is recovered and reused, significantly reducing fresh water requirements to approximately 20-45 cubic meters per hour. This represents a 25-35% improvement in water efficiency compared to conventional jigging systems of similar capacity. The precision-engineered water distribution system ensures optimal flow patterns through the separation chambers while minimizing overall consumption, critical for operations in water-sensitive regions. Compared to other gravity concentration methods processing similar capacities, the Composite Jig Separator offers superior water efficiency鈥攕piral concentrators typically require 2.5-3.5 m³ of water per ton of processed material, while the SCDJM-2 operates efficiently at 1.5-2.5 m³ per ton with recycling. For complete mineral processing operations, we offer supplementary water management packages including clarification systems, flocculant dosing stations, and recycled water distribution systems to further reduce consumption while maintaining optimal separation performance. These environmental protection features not only support sustainable mining practices but also reduce operational costs and simplify permitting processes in jurisdictions with strict water usage regulations, providing both ecological and economic advantages."
+    },
+    {
+      "question": "What economic benefits can be expected from using the SCDJM-2 Composite Jig Separator?",
+      "answer": "The SCDJM-2 Composite Jig Separator delivers compelling economic benefits, with most applications achieving full return on investment within 6-18 months depending on ore value and production scale. The advanced dual-pulse technology significantly improves separation quality鈥攑roducing higher-grade concentrates with fewer impurities that command premium market prices (typically 3-8% higher than those from conventional gravity separation methods). The progressive four-stage separation structure ensures both premium concentrate quality and maximized valuable mineral recovery, reducing resource waste and increasing saleable product volume. For iron ore processing, preliminary concentration through jigging separation significantly reduces subsequent processing loads, lowering energy consumption for grinding by 30-45% and reducing media consumption in magnetic separation by 20-30%, delivering substantial operational cost savings. The inherent energy efficiency (35% lower power consumption than traditional equipment of similar capacity) combined with lower water consumption and simplified maintenance requirements reduces overall operating costs by 25-40%. For small to medium-sized mining enterprises, particularly in remote areas with limited infrastructure, the Composite Jig Separator provides professional separation performance with significantly lower capital investment (40-60% less than conventional processing plants), minimal civil works requirements, rapid commissioning (typically operational within 3-5 days of delivery), and simplified operation, delivering an exceptionally attractive return on investment rate while extending resource utilization and improving overall project economics."
+    },
+    {
+      "question": "How flexible is the operation of the SCDJM-2 Composite Jig Separator for varying production requirements?",
+      "answer": "The SCDJM-2 Composite Jig Separator offers exceptional operational flexibility, capable of adapting to diverse production requirements and changing material characteristics. The system can operate continuously in 24/7 production environments or intermittently as needed, with rapid stabilization after startup (typically reaching optimal separation conditions within 15-20 minutes). This operational flexibility extends across multiple dimensions: the advanced hydraulic drive system enables precise adjustment of critical parameters including stroke length (0-150mm), frequency (60-150 cycles/minute), and water flow distribution to accommodate different ore types and processing objectives; bed layer thickness and discharge rate can be regulated with exceptional precision, with stratification effects visible through viewing windows, allowing real-time quality control based on concentrate purity requirements鈥攕lower discharge produces higher separation precision, while faster discharge increases throughput and recovery rates; additionally, the equipment maintains stable separation performance across operating capacities from 30% to 100% of rated throughput, adapting to feed fluctuations without efficiency loss. The intelligent control system incorporates automated parameter optimization based on feed characteristics and desired product specifications, with data logging capabilities for performance analysis and continuous improvement. The digital control interface includes pre-programmed startup and shutdown sequences that protect components and maintain bed integrity during transitions, extending equipment life while providing ideal operational convenience for various production scenarios from continuous high-volume processing to batch operations for smaller producers."
+    }
+  ],
+  "seo": {
+    "keywords": "gravity jig separator,mineral jig machine,small scale jig concentrator,composite jig separator,hydraulic jig separator,diaphragm jig concentrator,jig separator for gold recovery,jig machine for tin ore processing,jig concentrator for tungsten ore,jig separator for iron ore,small scale gold jig machine,high recovery jig concentrator,gravity separation jigging machine,movable sieve jig separator,SCDJM-2",
+    "description": "Zexin Minings SCDJM-2 Composite Jig Separator achieves 35% higher recovery with 30% less energy consumption. Our innovative dual-pulse mineral jig machine provides exceptional concentration for gold, tin, tungsten and iron ores, perfect for small scale mining operations.",
+    "title": "Small Scale Jig Concentrator | High-Recovery Gravity Separator for Gold Mining"
+  },
+  "searchKeywords": [
+    "Small-Scale Composite Jig Separator",
+    "Compact Hybrid Jig Machine",
+    "Gravity Separation Equipment",
+    "Mineral Jig Concentrator",
+    "High-Efficiency Jig Separator",
+    "Energy-Saving Jig Machine",
+    "Gold Recovery Jig",
+    "Tin Ore Jig Separator",
+    "Tungsten Concentration Jig",
+    "Small-Scale Mining Equipment",
+    "Dual-Pulse Jigging Machine",
+    "Compact Gravity Separator",
+    "SCDJM-2",
+    "Iron Ore Beneficiation Equipment",
+    "Hindered Settling Equipment",
+    "Mineral Processing Jig",
+    "Portable Jig Concentrator",
+    "Energy-Efficient Gravity Separator",
+    "Compound Jig Machine"
+  ],
+  "relatedProducts": [
+    "synchronous-counter-directional-jig",
+    "sawtooth-wave-jig",
+    "shaking-table",
+    "spiral-chute",
+    "centrifugal-separator"
+  ],
+  "imageSrcAlt": "Synchronous Counter Directional Jig Small | Zexin Mining"
+}

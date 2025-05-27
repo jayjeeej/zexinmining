@@ -1,0 +1,53 @@
+{
+  "id": "feldspar",
+  "mineralName": "Feldspar",
+  "title": "Feldspar Beneficiation Process",
+  "processTitle": "Feldspar Beneficiation Process Flow",
+  "processIntroduction": "Based on the varying characteristics of feldspar ores, Zexin designs tailored beneficiation processes including magnetic separation, flotation, or combined processing techniques. These processes effectively remove impurities such as iron, quartz, and mica to produce high-grade potassium and sodium feldspar concentrates. Our flexible approach can be customized for potassium feldspar, sodium feldspar, and nepheline syenite processing, ensuring optimal recovery and product quality for each specific ore type.",
+  "processSteps": [
+    {
+      "title": "Crushing and Screening",
+      "description": "Depending on the size of the raw ore, Zexin implements various crushing processes ranging from simple single-stage to comprehensive three-stage crushing operations. The bulk mineral undergoes initial coarse crushing followed by screening, with properly sized material advancing to grinding while oversized particles return for further crushing. This crucial preparation step ensures that only properly sized material proceeds to subsequent operations, establishing optimal particle size distribution for maximum processing efficiency."
+    },
+    {
+      "title": "Grinding and Classification",
+      "description": "Qualified products from the crushing stage enter wet grid ball mills for grinding. The mill discharge is fed into classification equipment where the underflow returns to the ball mill for further grinding while the overflow proceeds as the qualified product from the grinding stage. This closed-circuit grinding operation ensures precise particle size control, which is critical for effective impurity removal in subsequent processing stages and ultimately determines the quality of the final feldspar concentrate."
+    },
+    {
+      "title": "Desliming",
+      "description": "The properly ground material is directed to classifier hoppers for desliming operations. This step efficiently removes fine clay particles and other slimes that could interfere with downstream separation processes. Effective desliming significantly improves the performance of subsequent magnetic separation and flotation stages by removing particles that might otherwise contaminate the final product or reduce separation efficiency."
+    },
+    {
+      "title": "Separation and Purification",
+      "description": "After desliming, the material undergoes a two-stage magnetic separation process (weak magnetic + strong magnetic) to remove magnetic substances from the ore. To further purify the magnetic separation concentrate and remove potential iron compounds, calcium minerals, mica, and excess quartz to improve concentrate grade, flotation processing is applied. For these impurity minerals, Zexin typically employs highly selective collectors to obtain high-grade feldspar fine powder, achieving superior product purity while maintaining excellent recovery rates."
+    }
+  ],
+  "applicationsImage": "/images/products/mineral-processing-solutions/non-metallic/feldspar-beneficiation-process-flow.jpg",
+  "applications": [
+    {
+      "title": "High-Grade Feldspar for Ceramic Industry",
+      "description": "Our comprehensive beneficiation process produces premium-grade feldspar concentrates with minimal iron content, meeting the stringent requirements of high-quality ceramic manufacturing. The multi-stage purification approach effectively removes iron-bearing minerals, mica, and other colorants that would otherwise affect the whiteness and transparency of ceramic products. Our optimized grinding circuits ensure consistent particle size distribution, which is crucial for controlled melting behavior in ceramic formulations."
+    },
+    {
+      "title": "Purified Feldspar for Glass Manufacturing",
+      "description": "Zexin's specialized magnetic separation and flotation technology produces ultra-pure feldspar concentrates with exceptionally low iron content for the glass industry. Our process effectively removes iron-bearing minerals that would otherwise cause coloration in glass products. The carefully controlled beneficiation process also maintains optimal alumina-to-alkali ratios required for various glass formulations, making our feldspar concentrates ideal for both container and flat glass manufacturing."
+    },
+    {
+      "title": "High-Quality Fillers for Paints and Coatings",
+      "description": "Our feldspar beneficiation technology creates high-whiteness, ultra-fine feldspar powders with controlled particle size distribution for the paints and coatings industry. The multi-stage purification process removes contaminants that affect brightness and performance properties of the final product. The resulting high-purity feldspar filler provides improved durability, scratch resistance, and matting properties in coating formulations while maintaining excellent suspension characteristics."
+    },
+    {
+      "title": "Specialty Feldspar Products for Advanced Applications",
+      "description": "Through precise impurity control and tailored processing, we produce specialty feldspar concentrates for advanced applications including engineered stone, high-performance ceramics, and specialty glass formulations. These products feature exceptionally low iron and titanium content, precise particle size distribution, and carefully controlled chemistry. Our ability to customize the beneficiation process to meet specific technical requirements enables the production of high-value feldspar products for applications where standard grades cannot deliver the required performance."
+    }
+  ],
+  "relatedProducts": [
+    "jaw-crusher",
+    "vibratory-feeder",
+    "cone-crusher",
+    "inclined-vibrating-screen",
+    "pneumatic-flotation-cell",
+    "wet-overflow-ball-mill",
+    "hydrocyclone-separator"
+  ]
+}

@@ -1,0 +1,568 @@
+{
+  "id": "wet-rod-mill",
+  "title": "Wet Rod Mill",
+  "series": "ZMBY Series Wet Rod Mill",
+  "imageSrc": "/images/products/grinding-equipment/wet-rod-mill.jpg",
+  "productCategory": "Mineral Grinding Equipment",
+  "subcategory": "grinding-equipment",
+  "model": "ZMBYg 2136",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "0.62~86 t/h (0.68~94.8 stph)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "22~380 kW (29.5~509.6 hp)"
+    },
+    {
+      "key": "Effective Volume",
+      "displayValue": "0.9~17.7 m³ (31.8~625.1 ft³)"
+    }
+  ],
+  "href": "/en/products/ore-processing/grinding-equipment/wet-rod-mill",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/grinding-equipment/wet-rod-mill",
+    "zh": "/zh/products/ore-processing/grinding-equipment/wet-rod-mill"
+  },
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.03937,
+          "label": "in"
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "st",
+          "conversionFactor": 1.1023,
+          "label": "short ton"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.1023,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.341,
+          "label": "hp"
+        }
+      ],
+      "volume": [
+        {
+          "unit": "m³",
+          "conversionFactor": 1,
+          "label": "m³"
+        },
+        {
+          "unit": "ft³",
+          "conversionFactor": 35.3147,
+          "label": "ft³"
+        }
+      ],
+      "rotation": [
+        {
+          "unit": "r/min",
+          "conversionFactor": 1,
+          "label": "r/min"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "overview": "The MBY Series Wet Rod Mill is a high-efficiency grinding equipment primarily used for primary grinding or pre-grinding operations in mineral processing. Its unique rod grinding media design produces more uniform particle sizes with minimal over-grinding, widely applied in non-ferrous metals, ferrous metals, building materials, and chemical industries, especially suited for processing clay-prone ores.",
+  "detailedDescription": "Zexin Mining's MBY Series Wet Rod Mill introduces innovative cylinder structure and rod milling technology that transforms traditional grinding methods. This wet rod mill creates ideal grinding conditions through precisely calculated rod media proportions and optimized internal design, addressing industry challenges of excessive fine particle generation and uneven sizing. Its balanced engineering design consistently delivers narrow particle size distribution across various material conditions, making it the ideal choice for mining operations pursuing production efficiency and product quality, particularly when uniform particle control and processing of clay-prone ores are required.",
+  "specifications": {
+    "title": "Wet Rod Mill Technical Specifications",
+    "note": "Can be customized according to customer requirements",
+    "tableHeaders": [
+      "Model",
+      "Cylinder Diameter (mm)",
+      "Cylinder Length (mm)",
+      "Motor Model",
+      "Motor Power (kW)",
+      "Motor Speed (r/min)",
+      "Length (mm)",
+      "Width (mm)",
+      "Height (mm)",
+      "Processing Capacity (t/h)",
+      "Effective Volume (m³)",
+      "Weight (kg)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Cylinder Diameter (in)",
+      "Cylinder Length (in)",
+      "Motor Model",
+      "Motor Power (hp)",
+      "Motor Speed (r/min)",
+      "Length (in)",
+      "Width (in)",
+      "Height (in)",
+      "Processing Capacity (stph)",
+      "Effective Volume (ft³)",
+      "Weight (lb)"
+    ],
+    "tableData": [
+      [
+        "ZMBY 0918",
+        "900",
+        "1800",
+        "Y225M-8",
+        "22",
+        "730",
+        "4980",
+        "2370",
+        "2020",
+        "0.62~3.2",
+        "0.9",
+        "5700"
+      ],
+      [
+        "ZMBY 0924",
+        "900",
+        "2400",
+        "Y250M-8",
+        "30",
+        "730",
+        "5670",
+        "3280",
+        "2020",
+        "0.81~4.3",
+        "1.2",
+        "5880"
+      ],
+      [
+        "ZMBY 1224",
+        "1200",
+        "2400",
+        "Y280M-8",
+        "45",
+        "730",
+        "6450",
+        "2800",
+        "2500",
+        "0.4~4.9",
+        "2.28",
+        "12308"
+      ],
+      [
+        "ZMBY 1530",
+        "1500",
+        "3000",
+        "JR125-8",
+        "95",
+        "725",
+        "7935",
+        "3185",
+        "2280",
+        "",
+        "5",
+        "19990"
+      ],
+      [
+        "ZMBYg 1530",
+        "1500",
+        "3000",
+        "JR117-8",
+        "80",
+        "725",
+        "7253",
+        "3070",
+        "2280",
+        "2.4~7.5",
+        "5",
+        "21210"
+      ],
+      [
+        "ZMBYg 2130",
+        "2100",
+        "3000",
+        "JR136-8",
+        "180",
+        "735",
+        "8122",
+        "4220",
+        "3073",
+        "14~35",
+        "9",
+        "42123.5"
+      ],
+      [
+        "ZMBYg 2136",
+        "2100",
+        "3600",
+        "JR137-8",
+        "210",
+        "735",
+        "8958",
+        "4320",
+        "3025",
+        "43~61",
+        "10.8",
+        "45800.5"
+      ],
+      [
+        "ZMBYg 2430",
+        "2400",
+        "3000",
+        "JR138-8",
+        "280",
+        "735",
+        "9004.5",
+        "4836.4",
+        "3490",
+        "",
+        "11.5",
+        "55795"
+      ],
+      [
+        "ZMBYg 2732",
+        "2700",
+        "3200",
+        "JR157-8",
+        "320",
+        "750",
+        "10509",
+        "5000",
+        "3620",
+        "",
+        "15.7",
+        "83110"
+      ],
+      [
+        "ZMBYg 2736",
+        "2700",
+        "3600",
+        "JR158-8",
+        "380",
+        "743",
+        "10764",
+        "5750",
+        "3620",
+        "32~86",
+        "17.7",
+        "90441"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "ZMBY 0918",
+        "35.4",
+        "70.9",
+        "Y225M-8",
+        "29.5",
+        "730",
+        "196.1",
+        "93.3",
+        "79.5",
+        "0.68~3.5",
+        "31.8",
+        "12566.4"
+      ],
+      [
+        "ZMBY 0924",
+        "35.4",
+        "94.5",
+        "Y250M-8",
+        "40.2",
+        "730",
+        "223.2",
+        "129.1",
+        "79.5",
+        "0.89~4.7",
+        "42.4",
+        "12963.0"
+      ],
+      [
+        "ZMBY 1224",
+        "47.2",
+        "94.5",
+        "Y280M-8",
+        "60.3",
+        "730",
+        "253.9",
+        "110.2",
+        "98.4",
+        "0.44~5.4",
+        "80.5",
+        "27134.9"
+      ],
+      [
+        "ZMBY 1530",
+        "59.1",
+        "118.1",
+        "JR125-8",
+        "127.4",
+        "725",
+        "312.4",
+        "125.4",
+        "89.8",
+        "",
+        "176.6",
+        "44069.8"
+      ],
+      [
+        "ZMBYg 1530",
+        "59.1",
+        "118.1",
+        "JR117-8",
+        "107.3",
+        "725",
+        "285.6",
+        "120.9",
+        "89.8",
+        "2.6~8.3",
+        "176.6",
+        "46759.6"
+      ],
+      [
+        "ZMBYg 2130",
+        "82.7",
+        "118.1",
+        "JR136-8",
+        "241.4",
+        "735",
+        "319.8",
+        "166.1",
+        "121.0",
+        "15.4~38.6",
+        "317.8",
+        "92866.9"
+      ],
+      [
+        "ZMBYg 2136",
+        "82.7",
+        "141.7",
+        "JR137-8",
+        "281.6",
+        "735",
+        "352.7",
+        "170.1",
+        "119.1",
+        "47.4~67.2",
+        "381.4",
+        "100972.3"
+      ],
+      [
+        "ZMBYg 2430",
+        "94.5",
+        "118.1",
+        "JR138-8",
+        "375.5",
+        "735",
+        "354.5",
+        "190.4",
+        "137.4",
+        "",
+        "406.1",
+        "123006.7"
+      ],
+      [
+        "ZMBYg 2732",
+        "106.3",
+        "126.0",
+        "JR157-8",
+        "429.1",
+        "750",
+        "413.7",
+        "196.9",
+        "142.5",
+        "",
+        "554.5",
+        "183223.1"
+      ],
+      [
+        "ZMBYg 2736",
+        "106.3",
+        "141.7",
+        "JR158-8",
+        "509.6",
+        "743",
+        "423.8",
+        "226.4",
+        "142.5",
+        "35.3~94.8",
+        "625.1",
+        "199380.8"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "length",
+      "",
+      "power",
+      "rotation",
+      "length",
+      "length",
+      "length",
+      "capacity",
+      "volume",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Precise Particle Size Control",
+      "description": "Wet rod mills replace steel balls with rod-shaped grinding media, achieving narrower product particle size distribution with significantly reduced overgrinding. Product particles finer than 74 microns (200 mesh) are typically controlled below 20%, providing ideal feed conditions for downstream separation processes."
+    },
+    {
+      "title": "Efficient Processing of Clay-Prone Ores",
+      "description": "The unique rod milling process effectively processes clay-prone ores, reducing issues with increased slurry viscosity. This prevents efficiency reduction and energy consumption increases caused by clay formation, with particularly outstanding results for clay-containing and weathered ores."
+    },
+    {
+      "title": "Energy-Saving Single-Layer Cylinder Design",
+      "description": "Featuring single-layer cylinder design and optimized liner structure, the mill reduces equipment weight, lowering startup and idle power consumption. Energy consumption is 15-20% lower than same-specification ball mills, significantly reducing production costs."
+    },
+    {
+      "title": "High-Strength Alloy Liners",
+      "description": "Special high-manganese steel or wear-resistant alloy liners offer long service life and excellent impact resistance. The wave-shaped liner design improves grinding efficiency while reducing idle losses, with liner replacement intervals typically between 8,000-12,000 hours."
+    },
+    {
+      "title": "Reinforced Cylinder Structure",
+      "description": "The cylinder structure is manufactured using high-strength steel and advanced welding techniques, with precise dynamic balance testing ensuring stable operation with minimal vibration. This extends the service life of bearings and transmission components, with overall equipment service life exceeding 20 years."
+    },
+    {
+      "title": "Optimized Feeding and Discharge System",
+      "description": "Specially designed spiral feeder and classification discharge device ensure smooth slurry flow, preventing short-circuiting and blockages. This maintains stable slurry concentration and uniform residence time distribution, improving grinding efficiency by 5-10%."
+    },
+    {
+      "title": "Intelligent Monitoring System",
+      "description": "Equipped with advanced load monitoring and automatic control system that continuously monitors cylinder speed, power consumption, slurry concentration, and bearing temperature. The system intelligently adjusts feed rate and grinding conditions to maintain optimal operating status."
+    },
+    {
+      "title": "Integrated Closed-Circuit Design",
+      "description": "Seamlessly integrates with classification equipment to form closed-circuit grinding systems, improving grinding efficiency and reducing over-grinding and under-grinding. This significantly enhances product quality stability with excellent adaptability and compatibility with various mineral processing technologies."
+    }
+  ],
+  "applications": {
+    "title": "Application Areas",
+    "items": [
+      {
+        "title": "Metal Ore Processing",
+        "description": "Widely used in primary or pre-grinding operations for copper, lead, zinc, gold, iron and other metal mining operations. Effectively processes ores of various hardness, particularly suitable for grinding operations requiring uniform particle size distribution before flotation."
+      },
+      {
+        "title": "Non-metallic Mineral Processing",
+        "description": "Suitable for crushing and coarse grinding of potassium feldspar, quartz, fluorite and other non-metallic minerals, producing uniform particle sizes. Especially suitable for preparing raw materials for fine powder and high-grade concentrate production."
+      },
+      {
+        "title": "Building Materials Industry",
+        "description": "Used for coarse and fine grinding of cement raw materials and ceramic raw materials. Produces material particles with regular shape, uniform size, and appropriate surface roughness, improving processing performance in subsequent production processes."
+      },
+      {
+        "title": "Chemical Industry",
+        "description": "Suitable for wet grinding of various chemical raw materials such as pigments, catalysts, fillers, and more. Achieves narrow particle size distribution requirements, effectively controlling product fineness and uniformity."
+      },
+      {
+        "title": "Coal Preparation Industry",
+        "description": "Used in coal preparation processes for coal slurry treatment and coal gangue reselection. Improves separation efficiency between organic and inorganic materials by controlling grinding conditions and rod media proportions, enhancing product quality."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What advantages does the wet rod mill have compared to ball mills?",
+      "answer": "The main advantages of wet rod mills compared to ball mills include: 1) Narrower product particle size distribution with less overgrinding, typically keeping -200 mesh content below 20%; 2) Better suited for processing clay-prone ores, reducing efficiency losses caused by clay formation; 3) Lower energy consumption, typically 15-20% less than same-specification ball mills; 4) More suitable as primary or pre-grinding equipment, improving overall grinding efficiency by 15-25% when forming a composite grinding system with downstream ball mills; 5) Simpler cylinder structure with lower maintenance costs."
+    },
+    {
+      "question": "What feed size can the wet rod mill handle?",
+      "answer": "Wet rod mills typically handle feed sizes of 15-25mm, with maximum acceptance up to 30mm. The reasonable feed size range depends on cylinder diameter, generally recommended not to exceed 1/40-1/60 of the cylinder diameter. Compared to ball mills, rod mills can accept larger feed sizes. If the feed is too large, it increases rod consumption and energy consumption, potentially causing rod bending; if the feed is too fine, it fails to fully leverage the advantages of rod mills, decreasing efficiency."
+    },
+    {
+      "question": "How should rod media proportions be selected for wet rod mills?",
+      "answer": "Rod media proportions for wet rod mills should be determined based on ore hardness, feed size, and required product size. Typically, a mixed rod configuration is used, with new installations having rod diameter distributions of: Ø100-120mm at 15-20%, Ø80-100mm at 30-40%, Ø60-80mm at 30-40%, and Ø40-60mm at 10-15%. For harder ores, increase the proportion of larger diameter rods, while for finer product sizes, increase the proportion of smaller diameter rods. When adding supplementary rods, generally only larger diameter rods are added, allowing the mill to naturally form a reasonable rod diameter distribution."
+    },
+    {
+      "question": "What is the suitable ore hardness range for wet rod mills?",
+      "answer": "Wet rod mills are suitable for processing various ores with Mohs hardness of 3-9, but achieve highest efficiency with medium hardness ores (Mohs hardness 4-7). For higher hardness ores (such as quartzite, granite, etc.), rod mills can still be used, but should be equipped with appropriately increased rod loading rate and reduced feed size. For softer ores, the advantages of rod mills are particularly evident, significantly reducing overgrinding while lowering energy consumption. Rod mills are especially suitable for processing clay-prone ores; the stronger the clay-forming tendency, the more apparent the advantages of rod mills over ball mills."
+    },
+    {
+      "question": "What are the optimal operating conditions for wet rod mills?",
+      "answer": "The optimal operating conditions for wet rod mills include: 1) Rod loading rate of 35-40%, which can be slightly higher for initial installation and stabilize during operation; 2) Slurry concentration typically 65-72% solids content, adjusted according to ore properties; 3) Rotation speed generally 65-72% of critical speed, lower than ball mills; 4) Uniform and continuous feeding, avoiding overload or idle operation; 5) Maintaining appropriate classification efficiency, typically controlling the recirculation ratio at 200-300%; 6) Maintaining appropriate grinding media surface condition, neither too smooth nor too rough. Following these conditions achieves optimal grinding efficiency and minimal energy consumption."
+    },
+    {
+      "question": "What are the rod consumption and operating costs for wet rod mills?",
+      "answer": "Rod consumption in wet rod mills typically ranges between 250-500 grams per ton of ore processed, depending on ore hardness, grinding fineness, and operating conditions. Compared to ball mills, rod mills typically have 10-20% lower media consumption. Rod costs are slightly higher than steel balls, but due to lower overall consumption, unit grinding costs are typically lower than ball mills. Additionally, rod mills use 15-20% less energy than ball mills, with slightly lower maintenance costs. Overall, wet rod mills' total operating costs are typically 10-15% lower than ball mills of equivalent processing capacity."
+    },
+    {
+      "question": "What maintenance does a wet rod mill require?",
+      "answer": "Wet rod mill maintenance includes: 1) Daily inspections: monitoring bearing temperature, lubricant condition, reducer performance, and rod loading, recording at least once per shift; 2) Regular maintenance: checking liner wear conditions and cleaning feeding and discharge devices and screens every 500-1,000 hours; 3) Rod replenishment: typically adding rods every 1-2 weeks based on power changes and production conditions to maintain stable loading rate; 4) Major overhaul: performed every 8,000-12,000 hours to replace liners and service bearings and transmission components. Proper maintenance can extend rod mill service life beyond 20 years while maintaining stable production efficiency."
+    },
+    {
+      "question": "How can rod entanglement issues be resolved in wet rod mill operation?",
+      "answer": "Rod entanglement is a common issue in wet rod mills, with solutions including: 1) Maintaining appropriate rotation speed, typically 65-72% of critical speed, avoiding excessive speed; 2) Maintaining appropriate rod loading rate, not exceeding 40%; 3) Maintaining appropriate feed rate, avoiding idle operation or severe overloading; 4) Using quality rod media with good straightness and uniform hardness; 5) Controlling appropriate slurry concentration, typically 65-72% solids content; 6) Regularly adding new rods while gradually phasing out deformed rods; 7) Using wave-shaped liner design to increase friction and reduce rod slippage; 8) If problems are severe, stopping the mill to clean and replace bent rods. These measures significantly reduce the frequency of rod entanglement."
+    },
+    {
+      "question": "Can wet rod mills be used as standalone grinding equipment?",
+      "answer": "Wet rod mills can be used as standalone grinding equipment, but are typically most suitable as coarse grinding or primary grinding equipment. When used as standalone grinding equipment, the most suitable grinding product size is 0.5-3mm, with product content finer than 200 mesh (74 microns) preferably not exceeding 30%. For processes with lower fineness requirements, such as certain non-metallic mineral processing and chemical raw material pretreatment, wet rod mills can definitely be used as standalone grinding equipment. However, for processes requiring finer grinding products, it's recommended to configure rod mills with ball mills in series to leverage their respective advantages for optimal economic benefits."
+    },
+    {
+      "question": "What is the optimal configuration for wet rod mills in grinding systems?",
+      "answer": "The optimal configuration for wet rod mills is in series with ball mills as primary grinding equipment, forming a rod mill-ball mill composite grinding system. In this configuration, the rod mill processes feed material typically 15-25mm in size, producing coarse grinding products (0.5-3mm) that then enter the ball mill for further fine grinding. This configuration fully leverages the rod mill's advantages in processing coarse particles and producing uniform products, while utilizing the ball mill's efficiency in the fine grinding stage. This can improve overall grinding efficiency by 15-25% and reduce energy consumption by 10-15%. For mineral processing plants with large processing volumes and complex ore properties, this composite grinding system is the most economical and effective choice."
+    }
+  ],
+  "seo": {
+    "keywords": "wet rod mill,wet rod mill equipment,wet rod mill price,wet rod mill manufacturer,mining wet rod mill,wet rod mill models,wet rod mill parameters,wet rod mill selection,wet rod mill applications,wet grinding mill,wet rod mill specifications,wet ball mill,wet rod mill maintenance,wet rod mill installation,wet rod mill working principle",
+    "description": "Zexin Mining's ZMBY Series wet rod mill features innovative rod grinding media design for more uniform particle size distribution with reduced overgrinding and 15-20% lower energy consumption. Our wet rod milling equipment is particularly suitable for processing clay-prone ores, offers simple maintenance, long service life, and forms efficient grinding systems when combined with ball mills.",
+    "title": "Wet Rod Mill | Uniform Particle Size Grinding Equipment | Zexin Mining Equipment"
+  },
+  "relatedProducts": [
+    "wet-energy-saving-grid-ball-mill",
+    "dry-rod-mill",
+    "wet-overflow-ball-mill",
+    "wet-grid-ball-mill",
+    "dry-ball-mill"
+  ],
+  "imageSrcAlt": "Wet Rod Mill | Zexin Mining"
+}

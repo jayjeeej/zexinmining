@@ -1,0 +1,55 @@
+{
+  "id": "manganese",
+  "mineralName": "Manganese Ore",
+  "title": "Manganese Ore Beneficiation Process",
+  "processTitle": "Manganese Ore Beneficiation Process Flow",
+  "processIntroduction": "Manganese minerals are weakly magnetic, making them suitable for recovery using strong magnetic separators. Zexin's manganese ore beneficiation process primarily employs magnetic separation technology, divided into two stages: strong magnetic rough selection and medium magnetic fine selection. This process can increase manganese grade by 4% to 10%, bringing substantial economic benefits to processing plants. Our technology is particularly effective for high-phosphorus, high-silicon, and low-iron manganese ores.",
+  "processSteps": [
+    {
+      "title": "Strong Magnetic Rough Selection",
+      "description": "Zexin first employs specialized manganese ore magnetic separators to preliminarily remove impurities from the manganese ore. The rough selection concentrate is processed through spiral classifiers for classification, while the rough selection tailings are directly discharged to the tailings thickener. This initial magnetic separation stage effectively removes the majority of non-magnetic gangue materials, significantly increasing the manganese content in the concentrate for subsequent processing stages."
+    },
+    {
+      "title": "Classification",
+      "description": "The classifier underflow is directed to magnetic separators for fine selection, while the classifier overflow is sent to thickeners for concentration. This critical classification step ensures optimal particle size distribution for the subsequent processing stages, separating fine particles that require concentration from coarser particles suitable for gravity and magnetic separation, thereby maximizing overall process efficiency and recovery rates."
+    },
+    {
+      "title": "Gravity Separation",
+      "description": "Following classification, the coarser fraction undergoes gravity separation using specialized equipment such as jigs, shaking tables and spiral separators. This additional gravity separation stage further enhances the separation efficiency by exploiting the density difference between manganese minerals and gangue. The jigging process effectively pre-concentrates coarse particles, while shaking tables provide precise separation for finer fractions. The gravity separation concentrate is combined with the magnetic separation concentrate to produce a higher-grade final product, while the tailings are processed through subsequent magnetic separation to recover remaining manganese values."
+    },
+    {
+      "title": "Medium Magnetic Fine Selection",
+      "description": "The medium magnetic fine selection tailings are discharged to the tailings thickener, while the fine selection concentrate merges with the thickener underflow. This advanced magnetic separation stage employs precisely calibrated magnetic field strengths optimized for manganese minerals, achieving significant grade improvement and removing remaining impurities. The selective nature of this process ensures maximum manganese recovery while maintaining high product quality specifications."
+    },
+    {
+      "title": "Concentration",
+      "description": "The thickener overflow enters the water recycling system, while the thickener underflow combines with the fine selection concentrate to form the final beneficiation concentrate. This concentration stage not only facilitates water conservation through efficient recycling but also produces a dewatered manganese concentrate suitable for subsequent processing or direct market application. The optimized concentration parameters ensure consistent product quality meeting stringent industrial specifications."
+    }
+  ],
+  "applicationsImage": "/images/products/mineral-processing-solutions/ferrous/manganese-beneficiation-process-flow.jpg",
+  "applications": [
+    {
+      "title": "High-Grade Manganese Concentrate Production",
+      "description": "Our integrated magnetic separation technology achieves industry-leading recovery rates on manganese deposits, producing premium-grade concentrates suitable for direct metallurgical processing. The system's adaptability handles variations in ore mineralogy and grain size distribution while maintaining consistent performance metrics, maximizing resource utilization and operational profitability even with challenging ore compositions."
+    },
+    {
+      "title": "Low-Grade Manganese Resource Valorization",
+      "description": "The high-efficiency magnetic separation capabilities of our process transform marginal manganese deposits into economically viable resources. By rejecting a significant percentage of waste material early in the process while recovering a high percentage of manganese values, operations can drastically reduce processing costs per ton of final concentrate. This approach has successfully revitalized numerous deposits previously classified as sub-economic, expanding global manganese reserves while minimizing environmental footprint."
+    },
+    {
+      "title": "High-Phosphorus Manganese Ore Processing",
+      "description": "Our specialized process configuration effectively processes high-phosphorus manganese ores that are challenging for conventional beneficiation methods. Through strategic combinations of magnetic separation intensities and selective classification stages, the technology significantly reduces phosphorus content in the final concentrate while maintaining high manganese recovery. This capability enables the utilization of previously problematic ore bodies, expanding the viable resource base for manganese production worldwide."
+    },
+    {
+      "title": "Environmentally Sustainable Processing",
+      "description": "Our advanced manganese ore processing technology offers significant environmental advantages through reduced reagent usage and efficient water recycling systems. The predominantly physical separation process minimizes chemical consumption and associated waste management challenges. Additionally, the optimized circuit design achieves high energy efficiency, reducing carbon footprint while maintaining production targets. These sustainability features enable operations to meet increasingly stringent environmental regulations while maintaining economic competitiveness."
+    }
+  ],
+  "relatedProducts": [
+    "vibratory-feeder",
+    "twin-shaft-log-washer",
+    "submerged-spiral-classifier",
+    "inclined-vibrating-screen",
+    "permanent-drum-magnetic-separator"
+  ]
+}

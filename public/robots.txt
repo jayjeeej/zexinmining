@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.zexinmining.com
+
+# Sitemaps
+Sitemap: https://www.zexinmining.com/sitemap.xml
+Sitemap: https://www.zexinmining.com/server-sitemap.xml
+Sitemap: https://www.zexinmining.com/product-sitemap.xml

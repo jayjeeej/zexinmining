@@ -1,0 +1,49 @@
+{
+  "id": "molybdenum",
+  "mineralName": "Molybdenum",
+  "title": "Molybdenum Ore Processing Technology",
+  "processTitle": "Molybdenum Ore Processing Flow",
+  "processIntroduction": "Through the implementation of regrinding and re-flotation process for rough concentrate, the concentrate quality has been significantly improved. Zexin's technical team customizes optimized concentrate regrinding process parameters based on the unique properties of different ores, achieving both energy efficiency and performance enhancement while ensuring product quality.",
+  "processSteps": [
+    {
+      "title": "Staged Grinding for Enhanced Concentrate Quality",
+      "description": "Innovatively introducing the concept of staged grinding, first conducting mixed rough flotation in the coarse grinding stage to obtain high-grade rough concentrate, followed by fine regrinding and deep cleaning. This differentiated treatment approach not only significantly reduces the amount of ore requiring regrinding but also achieves optimal mineral liberation through precise grinding fineness control, improving concentrate quality while significantly reducing energy consumption."
+    },
+    {
+      "title": "Enhanced Flotation Process for Higher Molybdenum Concentrate Grade",
+      "description": "Establishing a strict reagent staging system in the rough flotation stage, maximizing early enrichment effects through precise control of reagent dosage at each stage and optimized collector combinations. Meanwhile, developing an innovative foam optimization system utilizing secondary enrichment principles combined with intelligent water supplementation devices effectively improves concentrate grade while reducing reagent consumption."
+    },
+    {
+      "title": "Staged Separation for Guaranteed Recovery",
+      "description": "Developing a unique multi-stage separation process, adopting differentiated separation parameters and reagent systems based on the flotation kinetics of molybdenum minerals of different particle sizes. Through precise control of process conditions at each separation stage, optimal recovery of molybdenum minerals across different particle sizes is ensured, comprehensively improving processing indicators."
+    }
+  ],
+  "applicationsImage": "/images/products/mineral-processing-solutions/non-ferrous/molybdenum-beneficiation-process-flow.jpg",
+  "applications": [
+    {
+      "title": "Precise Separation of Single Molybdenum Ore",
+      "description": "For high-grade single molybdenum ores, we have optimized various parameters of the staged grinding-flotation combined process, achieving both improved concentrate grade and recovery rate while significantly reducing production costs."
+    },
+    {
+      "title": "Efficient Processing of Difficult Molybdenum Ores",
+      "description": "For complex refractory molybdenum ores, adopting innovative enhanced flotation processes and intelligent reagent control systems successfully breaks through traditional process bottlenecks, achieving stable improvement in separation indicators."
+    },
+    {
+      "title": "Fine-Grain Molybdenum Recovery",
+      "description": "For fine-grained molybdenum ores, developing specialized fine particle separation processes with optimized flotation conditions and reagent formulations significantly improves the recovery rate of fine-grain molybdenum minerals."
+    },
+    {
+      "title": "Associated Mineral Separation and Purification",
+      "description": "For complex molybdenum ores associated with sulfides, developing unique selective depression-activation processes combined with optimized flotation sequences achieves efficient separation of molybdenum and associated sulfides."
+    }
+  ],
+  "relatedProducts": [
+    "vibratory-feeder",
+    "wet-overflow-ball-mill",
+    "xfc-air-inflation-flotation-cell",
+    "hp-cone-crusher",
+    "jaw-crusher",
+    "hydrocyclone-separator",
+    "inclined-vibrating-screen"
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "id": "centrifugal-separator",
+  "title": "离心选矿机",
+  "series": "STLB系列高效离心选矿机",
+  "imageSrc": "/images/products/gravity-separation/centrifugal-separator.jpg",
+  "productCategory": "重力选矿设备",
+  "subcategory": "gravity-separation",
+  "model": "STLB60",
+  "meta": [
+    {
+      "key": "处理能力",
+      "displayValue": "8-12 吨/小时"
+    },
+    {
+      "key": "最大进料尺寸",
+      "displayValue": "0-5 毫米"
+    },
+    {
+      "key": "电机功率",
+      "displayValue": "4 千瓦"
+    }
+  ],
+  "unitConversion": {
+    "enabled": false,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "毫米"
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "平方米"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "吨"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "吨/小时"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "千瓦"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": false,
+      "position": "top-right",
+      "labels": {
+        "toggle": "单位切换",
+        "metric": "公制",
+        "imperial": "英制"
+      }
+    }
+  },
+  "href": "/zh/products/ore-processing/gravity-separation/centrifugal-separator",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/gravity-separation/centrifugal-separator",
+    "zh": "/zh/products/ore-processing/gravity-separation/centrifugal-separator"
+  },
+  "overview": "STLB系列设备采用先进的旋转分选技术,通过高速旋转产生强大的离心场,实现矿物颗粒的高效分离。该设备特别适合处理细粒级物料,在金属矿和非金属矿的选别中表现出色。",
+  "detailedDescription": "STLB系列离心选金机引入创新离心分选技术，革新细粒贵金属回收工艺。这款高效砂金离心机通过独特的旋转力场解决传统设备无法有效处理的微细粒难题，为砂金、岩金和尾矿回收提供卓越解决方案。其专利捕集槽设计确保重矿物高效富集，流态化水系统维持稳定分选环境，适合中小型矿山的各类金矿回收，不使用汞等化学试剂，实现环保高效选矿。",
+  "specifications": {
+    "title": "离心选矿机技术规格",
+    "note": "可根据客户需求定制",
+    "tableHeaders": [
+      "型号",
+      "处理能力 (吨/小时)",
+      "反冲水转水量 (立方米/小时)",
+      "矿浆转水量 (立方米/小时)",
+      "给矿浓度 (%)",
+      "进料尺寸 (毫米)",
+      "每次出精矿重量 (千克)",
+      "电机功率 (千瓦)",
+      "重量 (千克)",
+      "外形尺寸 (毫米)"
+    ],
+    "tableData": [
+      [
+        "STLB20",
+        "0-0.6",
+        "2-3",
+        "1.5-4",
+        "0-50",
+        "0-3",
+        "2",
+        "0.75",
+        "205",
+        "914×700×900"
+      ],
+      [
+        "STLB30",
+        "2-3",
+        "3-5",
+        "5-7",
+        "0-50",
+        "0-3",
+        "3-5",
+        "1.5",
+        "380",
+        "1160×885×1165"
+      ],
+      [
+        "STLB60",
+        "8-12",
+        "7-10",
+        "8-12",
+        "0-50",
+        "0-5",
+        "10-20",
+        "4",
+        "1100",
+        "1820×1450×1700"
+      ],
+      [
+        "STLB80",
+        "40-45",
+        "30-36",
+        "40-45",
+        "0-50",
+        "0-5",
+        "40-50",
+        "11",
+        "2300",
+        "2476×2032×2018"
+      ],
+      [
+        "STLB100",
+        "60-80",
+        "50-60",
+        "60-80",
+        "0-50",
+        "0-6",
+        "70-80",
+        "18.5",
+        "3700",
+        "2849×2085×2426"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "capacity",
+      "",
+      "",
+      "",
+      "length",
+      "weight",
+      "power",
+      "weight",
+      "length"
+    ]
+  },
+  "features": [
+    {
+      "title": "高效分选技术",
+      "description": "采用先进分选工艺,分选效率较传统设备提升40%,尤其适合处理微细粒物料和密度差小的矿种。"
+    },
+    {
+      "title": "精确分选系统",
+      "description": "根据进料特性调节运行参数,实现最佳分选效果。"
+    },
+    {
+      "title": "节能降耗设计",
+      "description": "优化的水循环系统和动力系统,较同类设备能耗降低30%,实现绿色环保生产。"
+    },
+    {
+      "title": "高效富集工艺",
+      "description": "特殊的富集槽结构设计,提高了重矿物的捕收率,适用于各类难选矿物的分选。"
+    },
+    {
+      "title": "便捷维护方案",
+      "description": "模块化结构设计,关键部件易于更换,最大限度减少停机维护时间。"
+    },
+    {
+      "title": "多矿种适用",
+      "description": "可调节的工艺参数,使设备在金、银、铂、钨、锡等多种矿物分选中均有良好表现。"
+    },
+    {
+      "title": "耐久性能",
+      "description": "核心部件采用耐磨材料,延长使用寿命,降低运营成本。"
+    },
+    {
+      "title": "环保作业",
+      "description": "闭路水循环系统,减少废水排放,无需添加化学试剂。"
+    }
+  ],
+  "applications": {
+    "title": "应用领域",
+    "items": [
+      {
+        "title": "贵金属富集",
+        "description": "高效回收金矿、银矿中的细粒贵金属,特别适合处理难选冲积矿床。"
+      },
+      {
+        "title": "稀有金属选别",
+        "description": "用于钨矿、锡矿、钽铌矿等稀有金属的分选,实现高品位精矿。"
+      },
+      {
+        "title": "重砂分选",
+        "description": "高效分离钛铁矿、金红石等重砂矿物,提高产品品质。"
+      },
+      {
+        "title": "尾矿再选",
+        "description": "对选厂尾矿进行二次回收处理,提高资源综合利用率。"
+      }
+    ]
+  },
+  "technicalAdvantages": null,
+  "faqs": [
+    {
+      "question": "设备的工作原理是什么?",
+      "answer": "通过高速旋转产生强大的离心场,使不同密度的矿物在离心力作用下分层,实现高效分选。"
+    },
+    {
+      "question": "最适合处理的物料粒度是多少?",
+      "answer": "设备适用于0-5毫米粒度范围,在0-2毫米细粒级物料分选中效果最佳。"
+    },
+    {
+      "question": "如何提高分选效率?",
+      "answer": "通过调节转速、给料浓度和流态化水压等参数,优化分选工艺,同时保持设备稳定运行。"
+    },
+    {
+      "question": "设备维护要求有哪些?",
+      "answer": "需定期检查旋转部件、水系统和磨损件,建议每500-1000小时进行一次全面维护。"
+    },
+    {
+      "question": "能否与现有生产线对接?",
+      "answer": "设备具有良好的适应性,可根据工艺需求灵活配置,轻松接入现有选矿流程。"
+    },
+    {
+      "question": "用水量是多少?",
+      "answer": "STLB60型需要7-10立方米/小时的反冲水和8-12立方米/小时的矿浆水,可通过闭路循环降低消耗。"
+    },
+    {
+      "question": "与传统设备相比有何优势?",
+      "answer": "具有更高的分选效率、更低的能耗、更小的占地面积,特别是在细粒物料处理方面表现突出。"
+    },
+    {
+      "question": "设备使用寿命多长?",
+      "answer": "正常维护条件下可稳定运行8-10年,关键部件采用耐磨材料延长使用周期。"
+    },
+    {
+      "question": "能同时处理多种矿物吗?",
+      "answer": "可以,通过调整工艺参数实现多种矿物的高效分选,满足不同物料的处理需求。"
+    },
+    {
+      "question": "提供哪些技术支持?",
+      "answer": "提供全方位的操作培训、工艺指导和维护保养服务,确保设备高效稳定运行。"
+    }
+  ],
+  "seo": {
+    "keywords": "离心选矿机,尼尔森离心机,金矿离心机,砂金离心机,重选离心机,离心选金机,离心选矿设备,离心重选机,尾矿回收离心机,小型离心选矿机,STLB系列,高效选金设备,细粒金回收,细粒金提取,重选设备",
+    "description": "泽鑫矿山STLB系列离心选矿机采用先进离心技术，回收率高达95-98%，能耗比传统设备降低30%。我们的专业选金设备能有效处理各类金矿砂，特别适合小型矿山及尾矿回收，免费提供选矿方案。",
+    "title": "离心选金机 | 高回收率砂金离心机 | STLB系列专业选矿设备"
+  },
+  "relatedProducts": [
+    "synchronous-counter-directional-jig",
+    "synchronous-counter-directional-jig-small",
+    "sawtooth-wave-jig",
+    "shaking-table",
+    "spiral-chute"
+  ],
+  "imageSrcAlt": "Centrifugal Separator | Zexin Mining"
+}

@@ -1,0 +1,592 @@
+{
+  "id": "coarse-flotation-cell",
+  "title": "Coarse Flotation Cell",
+  "series": "CLF Series",
+  "imageSrc": "/images/products/flotation-equipment/coarse-flotation-cell.jpg",
+  "productCategory": "Mineral Processing Equipment",
+  "subcategory": "flotation equipment",
+  "model": "CLF Series",
+  "meta": [
+    {
+      "key": "Effective Volume",
+      "displayValue": "2-40 m³ (70.6-1412.6 ft³)"
+    },
+    {
+      "key": "Processing Capacity",
+      "displayValue": "0.5-38 m³/min (17.7-1342.0 ft³/min)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "5.5-75 kW (7.4-100.6 HP)"
+    }
+  ],
+  "href": "/en/products/ore-processing/flotation-equipment/coarse-flotation-cell",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/flotation-equipment/coarse-flotation-cell",
+    "zh": "/zh/products/ore-processing/flotation-equipment/coarse-flotation-cell"
+  },
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "millimeters"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "inches"
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "square meters"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "square feet"
+        }
+      ],
+      "volume": [
+        {
+          "unit": "m³",
+          "conversionFactor": 1,
+          "label": "cubic meters"
+        },
+        {
+          "unit": "ft³",
+          "conversionFactor": 35.3147,
+          "label": "cubic feet"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "m³/min",
+          "conversionFactor": 1,
+          "label": "cubic meters/minute"
+        },
+        {
+          "unit": "ft³/min",
+          "conversionFactor": 35.3147,
+          "label": "cubic feet/minute"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kilowatts"
+        },
+        {
+          "unit": "HP",
+          "conversionFactor": 1.34102,
+          "label": "horsepower"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "kg",
+          "conversionFactor": 1,
+          "label": "kilograms"
+        },
+        {
+          "unit": "lb",
+          "conversionFactor": 2.20462,
+          "label": "pounds"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Conversion",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "overview": "The Coarse Flotation Cell is a high-efficiency flotation equipment specially designed for processing coarse and heavy mineral particles. It adopts a dual-tank structure (suction tank and direct flow tank) to effectively process mineral particles with larger size and higher specific gravity. Its specially designed impeller structure generates powerful stirring force and reasonable flow field distribution, improving the flotation efficiency of coarse-grained minerals, widely used in the beneficiation processes of non-ferrous metals, ferrous metals, and precious metals.",
+  "detailedDescription": "The CLF Series Coarse Flotation Cell is Zexin Mining Equipment's professional solution to the challenges of processing coarse and heavy mineral particles, with its innovative dual-tank structure revolutionizing the limitations of traditional flotation machines in recovering large-diameter minerals. Its powerful stirring system combined with optimized flow field distribution not only prevents coarse and heavy mineral particles from settling but also significantly increases mineral-bubble contact probability and attachment efficiency. This equipment demonstrates excellent adaptability under various complex ore conditions, especially when processing minerals larger than 0.2mm, where recovery rates are 20-30% higher than traditional equipment, making it an ideal choice for coarse-grained mineral flotation and creating favorable conditions for concentrator plants to increase capacity and reduce costs.",
+  "specifications": {
+    "title": "Technical Parameters",
+    "note": "Can be customized according to customer requirements",
+    "tableHeaders": [
+      "Model",
+      "Volume (m³)",
+      "Dimensions (mm)",
+      "Capacity (m³/min)",
+      "Air (m³/m².min)",
+      "Tank Type",
+      "Motor (kW)",
+      "Speed (r/min)",
+      "Impeller (mm)",
+      "Scraper (kW)",
+      "Scraper Speed (r/min)",
+      "Weight (kg)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Volume (ft³)",
+      "Dimensions (in)",
+      "Capacity (ft³/min)",
+      "Air (ft³/ft².min)",
+      "Tank Type",
+      "Motor (HP)",
+      "Speed (r/min)",
+      "Impeller (in)",
+      "Scraper (HP)",
+      "Scraper Speed (r/min)",
+      "Weight (lb)"
+    ],
+    "tableData": [
+      [
+        "CLF-2",
+        "2",
+        "1200×1600×1250",
+        "0.5-2",
+        "1.5",
+        "Suction Tank",
+        "7.5",
+        "790",
+        "460",
+        "1.5",
+        "16",
+        "1591"
+      ],
+      [
+        "CLF-2",
+        "2",
+        "1200×1600×1250",
+        "0.5-2",
+        "1.5",
+        "Direct Flow Tank",
+        "5.5",
+        "790",
+        "410",
+        "1.5",
+        "16",
+        "1481"
+      ],
+      [
+        "CLF-4",
+        "4",
+        "1600×2100×1500",
+        "1-4",
+        "1.5",
+        "Suction Tank",
+        "15",
+        "730",
+        "620",
+        "1.5",
+        "16",
+        "3002"
+      ],
+      [
+        "CLF-4",
+        "4",
+        "1600×2100×1500",
+        "1-4",
+        "1.5",
+        "Direct Flow Tank",
+        "11",
+        "730",
+        "580",
+        "1.5",
+        "16",
+        "2702"
+      ],
+      [
+        "CLF-8",
+        "6",
+        "1900×2500×1950",
+        "1-6",
+        "1.5",
+        "Suction Tank",
+        "22",
+        "790",
+        "750",
+        "1.5",
+        "16",
+        "5168"
+      ],
+      [
+        "CLF-8",
+        "6",
+        "1900×2500×1950",
+        "1-6",
+        "1.5",
+        "Direct Flow Tank",
+        "15",
+        "730",
+        "645",
+        "1.5",
+        "16",
+        "4654"
+      ],
+      [
+        "CLF-16",
+        "16",
+        "2500×3200×2400",
+        "4-16",
+        "1.5",
+        "Suction Tank",
+        "45",
+        "730",
+        "790",
+        "1.5",
+        "16",
+        "9230"
+      ],
+      [
+        "CLF-16",
+        "16",
+        "2500×3200×2400",
+        "4-16",
+        "1.5",
+        "Direct Flow Tank",
+        "37",
+        "730",
+        "750",
+        "1.5",
+        "16",
+        "8970"
+      ],
+      [
+        "CLF-30",
+        "30",
+        "3300×4000×3000",
+        "7-30",
+        "1.5",
+        "Suction Tank",
+        "75",
+        "740",
+        "1110",
+        "1.5",
+        "16",
+        "17010"
+      ],
+      [
+        "CLF-30",
+        "30",
+        "3300×4000×3000",
+        "7-30",
+        "1.5",
+        "Direct Flow Tank",
+        "55",
+        "740",
+        "880",
+        "1.5",
+        "16",
+        "15950"
+      ],
+      [
+        "CLF-40",
+        "40",
+        "φ4200×3900",
+        "8-38",
+        "1.5",
+        "Suction Tank",
+        "75",
+        "740",
+        "1090",
+        "1.5",
+        "16",
+        "23690"
+      ],
+      [
+        "CLF-40",
+        "40",
+        "φ4200×3900",
+        "8-38",
+        "1.5",
+        "Direct Flow Tank",
+        "75",
+        "740",
+        "1090",
+        "1.5",
+        "16",
+        "23690"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "CLF-2",
+        "70.6",
+        "47.2×63.0×49.2",
+        "17.7-70.6",
+        "4.92",
+        "Suction Tank",
+        "10.1",
+        "790",
+        "18.1",
+        "2.0",
+        "16",
+        "3507"
+      ],
+      [
+        "CLF-2",
+        "70.6",
+        "47.2×63.0×49.2",
+        "17.7-70.6",
+        "4.92",
+        "Direct Flow Tank",
+        "7.4",
+        "790",
+        "16.1",
+        "2.0",
+        "16",
+        "3265"
+      ],
+      [
+        "CLF-4",
+        "141.3",
+        "63.0×82.7×59.1",
+        "35.3-141.3",
+        "4.92",
+        "Suction Tank",
+        "20.1",
+        "730",
+        "24.4",
+        "2.0",
+        "16",
+        "6618"
+      ],
+      [
+        "CLF-4",
+        "141.3",
+        "63.0×82.7×59.1",
+        "35.3-141.3",
+        "4.92",
+        "Direct Flow Tank",
+        "14.8",
+        "730",
+        "22.8",
+        "2.0",
+        "16",
+        "5957"
+      ],
+      [
+        "CLF-8",
+        "211.9",
+        "74.8×98.4×76.8",
+        "35.3-211.9",
+        "4.92",
+        "Suction Tank",
+        "29.5",
+        "790",
+        "29.5",
+        "2.0",
+        "16",
+        "11393"
+      ],
+      [
+        "CLF-8",
+        "211.9",
+        "74.8×98.4×76.8",
+        "35.3-211.9",
+        "4.92",
+        "Direct Flow Tank",
+        "20.1",
+        "730",
+        "25.4",
+        "2.0",
+        "16",
+        "10260"
+      ],
+      [
+        "CLF-16",
+        "565.0",
+        "98.4×126.0×94.5",
+        "141.3-565.0",
+        "4.92",
+        "Suction Tank",
+        "60.3",
+        "730",
+        "31.1",
+        "2.0",
+        "16",
+        "20349"
+      ],
+      [
+        "CLF-16",
+        "565.0",
+        "98.4×126.0×94.5",
+        "141.3-565.0",
+        "4.92",
+        "Direct Flow Tank",
+        "49.6",
+        "730",
+        "29.5",
+        "2.0",
+        "16",
+        "19775"
+      ],
+      [
+        "CLF-30",
+        "1059.4",
+        "130.0×157.5×118.1",
+        "247.2-1059.4",
+        "4.92",
+        "Suction Tank",
+        "100.6",
+        "740",
+        "43.7",
+        "2.0",
+        "16",
+        "37500"
+      ],
+      [
+        "CLF-30",
+        "1059.4",
+        "130.0×157.5×118.1",
+        "247.2-1059.4",
+        "4.92",
+        "Direct Flow Tank",
+        "73.8",
+        "740",
+        "34.6",
+        "2.0",
+        "16",
+        "35165"
+      ],
+      [
+        "CLF-40",
+        "1412.6",
+        "φ165.4×153.5",
+        "282.5-1342.0",
+        "4.92",
+        "Suction Tank",
+        "100.6",
+        "740",
+        "42.9",
+        "2.0",
+        "16",
+        "52227"
+      ],
+      [
+        "CLF-40",
+        "1412.6",
+        "φ165.4×153.5",
+        "282.5-1342.0",
+        "4.92",
+        "Direct Flow Tank",
+        "100.6",
+        "740",
+        "42.9",
+        "2.0",
+        "16",
+        "52227"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "volume",
+      "length",
+      "capacity",
+      "area",
+      "",
+      "power",
+      "",
+      "length",
+      "power",
+      "",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Professional Dual-Tank Design",
+      "description": "Innovative dual-tank structure with suction tank and direct flow tank creates optimal slurry flow field distribution, effectively preventing coarse heavy particles from settling while improving the suspension and flotation efficiency of large-diameter minerals."
+    },
+    {
+      "title": "Powerful Stirring System",
+      "description": "Specially designed large impellers and stirring system generate strong turbulence capable of effectively suspending mineral particles with specific gravity up to 7.0, keeping coarse particles up to 0.5mm in diameter well dispersed."
+    },
+    {
+      "title": "High Recovery Processing Technology",
+      "description": "Patented flotation technology for coarse particles achieves 20-30% higher recovery rates than traditional flotation machines when processing 0.2-0.5mm grade minerals, significantly enhancing the economic benefits of beneficiation."
+    },
+    {
+      "title": "Adjustable Operation Parameters",
+      "description": "Advanced adjustable impeller position and speed design allows operators to optimize flotation conditions based on different ore characteristics, adapting to various complex mineral combinations and particle size distributions."
+    },
+    {
+      "title": "Optimized Energy Efficiency",
+      "description": "Scientifically designed energy consumption optimization system reduces energy consumption per unit processing by 15-25% while maintaining powerful stirring effects, significantly lowering operating costs."
+    },
+    {
+      "title": "Durable Stable Structure",
+      "description": "Reinforced mechanical structure and highly wear-resistant materials ensure long-term stable operation even when processing coarse, abrasive minerals, reducing maintenance downtime and spare parts consumption."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "icon": "copper",
+        "title": "Non-ferrous Metal Roughing",
+        "description": "Widely applied in roughing operations of copper, lead, zinc, and other non-ferrous metal minerals, particularly suitable for processing medium-to-low grade ores and coarse-grained sulfide minerals."
+      },
+      {
+        "icon": "iron",
+        "title": "Ferrous Metal Beneficiation",
+        "description": "Used in flotation processes of coarse-grained ferrous metal minerals such as iron and manganese, effectively improving recovery rates of magnetite and limonite coarse particles."
+      },
+      {
+        "icon": "precious-metals",
+        "title": "Precious Metal Recovery",
+        "description": "Suitable for flotation purification of coarse-grained precious metal minerals like gold and silver, with particularly outstanding performance in native gold and silver ore separation."
+      },
+      {
+        "icon": "industrial-minerals",
+        "title": "Industrial Mineral Processing",
+        "description": "Efficiently processes coarse particle separation of non-metallic minerals such as graphite, fluorite, and barite, improving single recovery rates of coarse-grained minerals."
+      },
+      {
+        "icon": "tailings",
+        "title": "Tailings Retreatment",
+        "description": "Especially suitable for recovering coarse-grained valuable minerals in tailings retreatment processes, providing economically viable technical solutions for the resource utilization of old tailings."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is the difference between a Coarse Flotation Cell and a conventional flotation machine?",
+      "answer": "The Coarse Flotation Cell uses a dual-tank structure (suction tank and direct flow tank) and specially designed impeller system, while conventional flotation machines typically have a single-tank design. Coarse Flotation Cells have greater stirring intensity, allowing them to effectively suspend mineral particles with higher specific gravity and larger particle size; their flow field distribution is more rational, preventing coarse heavy particles from settling; and they have stronger bubble-mineral contact capability, significantly improving recovery rates of large-diameter minerals (0.2-0.5mm) by 20-30% compared to conventional flotation machines."
+    },
+    {
+      "question": "What is the maximum particle size that a Coarse Flotation Cell can process?",
+      "answer": "Coarse Flotation Cells are designed to process larger-sized mineral particles, generally capable of effectively processing particles up to 0.5mm in diameter, and in some mineral types and specific conditions, even particles up to 0.8mm. Processing capability is closely related to the mineral's specific gravity, shape, surface properties, and beneficiation reagent scheme. For minerals with specific gravity in the range of 2.5-7.0, CLF Series Coarse Flotation Cells can provide excellent flotation effects."
+    },
+    {
+      "question": "In which mineral applications does the Coarse Flotation Cell perform best?",
+      "answer": "Coarse Flotation Cells perform particularly well in the following mineral applications: roughing operations of sulfide copper-lead-zinc ores; flotation separation of ferrous metals such as magnetite and hematite; recovery of native gold and coarse-grained gold-silver ores; separation of coarse-grained graphite, barite, and other industrial minerals; and recovery of coarse-grained valuable minerals from various tailings. Especially when processing coarse particles that traditional flotation machines struggle to recover effectively, CLF Series Coarse Flotation Cells demonstrate clear technical advantages and economic benefits."
+    },
+    {
+      "question": "How do I select the appropriate Coarse Flotation Cell model?",
+      "answer": "Selecting the appropriate Coarse Flotation Cell model requires consideration of the following factors: the processing capacity requirements of the concentrator plant; the particle size distribution and specific gravity of the ore; properties of the target minerals; feed concentration; separation recovery requirements; and process flow design and plant space limitations. CLF Series Coarse Flotation Cells are available in multiple specifications, ranging from 2 cubic meters to 40 cubic meters, and suitable unit volumes and tank types (suction tank or direct flow tank) can be selected according to actual needs. Laboratory or pilot-scale flotation tests are recommended before finalizing the selection to obtain optimal process parameters and equipment configuration."
+    },
+    {
+      "question": "What are the key maintenance points for a Coarse Flotation Cell?",
+      "answer": "Key maintenance points for Coarse Flotation Cells include: regularly checking the wear condition of impellers and stators (which may be more severe than conventional flotation machines due to processing coarse particles); inspecting and adjusting the height relationship between the impeller and slurry level; lubricating main shaft bearings and transmission components; checking motor performance and connections; cleaning accumulated deposits in the tank; and ensuring the air system is unobstructed. It is recommended to establish a regular maintenance schedule based on the abrasiveness of the processed minerals, typically conducting a comprehensive inspection and necessary repairs every 1-2 months when processing highly abrasive minerals."
+    }
+  ],
+  "seo": {
+    "title": "Coarse Flotation Cell | High-Recovery Coarse Particle Flotation Equipment | Zexin Mining",
+    "description": "Zexin Mining's CLF Series Coarse Flotation Cell is specially designed for processing coarse and heavy mineral particles, featuring innovative dual-tank structure and powerful stirring system. Our patented flotation technology improves coarse particle recovery rates by 20-30% while reducing energy consumption by 15-25%. Ideal for efficient roughing operations of non-ferrous metals, ferrous metals, precious metals, and industrial minerals.",
+    "keywords": "Coarse flotation cell,Coarse particle flotation equipment,Bulk flotation machine,Mineral coarse flotation system,High-efficiency coarse flotation cell,Coarse particle flotation tank,Large flotation machine,Ore coarse flotation equipment,Industrial coarse flotation system,Coarse particle separation flotation machine,Coarse flotation cell price,Coarse flotation cell manufacturer,Coarse flotation machine working principle,High-capacity flotation machine,Coarse tailings flotation equipment"
+  },
+  "relatedProducts": [
+    "pneumatic-flotation-cell",
+    "self-aspirated-flotation-cell",
+    "xfc-air-inflation-flotation-cell"
+  ],
+  "imageSrcAlt": "Coarse Flotation Cell | Zexin Mining"
+}

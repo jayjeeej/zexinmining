@@ -1,0 +1,379 @@
+{
+  "id": "xfc-air-inflation-flotation-cell",
+  "title": "XFC Air Inflation Flotation Cell",
+  "series": "XCF Series",
+  "imageSrc": "/images/products/flotation-equipment/xfc-air-inflation-flotation-cell.jpg",
+  "productCategory": "Mineral Processing Equipment",
+  "subcategory": "flotation equipment",
+  "model": "XCF Series",
+  "meta": [
+    {
+      "key": "Effective Volume",
+      "displayValue": "2-36 m³ (70.6-1271.3 ft³)"
+    },
+    {
+      "key": "Processing Capacity",
+      "displayValue": "0.5-32 m³/min (17.7-1130.1 ft³/min)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "4.0-75 kW (5.4-100.6 HP)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "millimeters"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "inches"
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "square meters"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "square feet"
+        }
+      ],
+      "volume": [
+        {
+          "unit": "m³",
+          "conversionFactor": 1,
+          "label": "cubic meters"
+        },
+        {
+          "unit": "ft³",
+          "conversionFactor": 35.3147,
+          "label": "cubic feet"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "m³/min",
+          "conversionFactor": 1,
+          "label": "cubic meters/minute"
+        },
+        {
+          "unit": "ft³/min",
+          "conversionFactor": 35.3147,
+          "label": "cubic feet/minute"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kilowatts"
+        },
+        {
+          "unit": "HP",
+          "conversionFactor": 1.34102,
+          "label": "horsepower"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "kg",
+          "conversionFactor": 1,
+          "label": "kilograms"
+        },
+        {
+          "unit": "lb",
+          "conversionFactor": 2.20462,
+          "label": "pounds"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Conversion",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/flotation-equipment/xfc-air-inflation-flotation-cell",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/flotation-equipment/xfc-air-inflation-flotation-cell",
+    "zh": "/zh/products/ore-processing/flotation-equipment/xfc-air-inflation-flotation-cell"
+  },
+  "overview": "The XFC Air Inflation Flotation Cell is a high-efficiency pneumatic flotation equipment that adopts an advanced impeller-stator system design, achieving efficient mixing and mineralization of slurry and air through forced circulation and jet aeration. This equipment features high aeration volume, superior mineralization rates, and low energy consumption, making it widely applied in flotation separation processes for non-ferrous metals, ferrous metals, and non-metallic minerals, and an ideal choice for modern mineral processing plants.",
+  "detailedDescription": "The XCF Series Air Inflation Flotation Cell combines innovative impeller-stator system with precisely controlled aeration technology to deliver exceptional performance for various beneficiation processes. Its uniquely designed forced circulation system ensures uniform slurry flow, effectively avoiding dead zones and short-circuit phenomena, while the patented jet aeration device produces a large number of fine, uniform bubbles, significantly improving bubble-mineral contact efficiency and attachment probability. In practical applications, XCF flotation cells demonstrate mineral recovery rates 10-15% higher than traditional flotation equipment and superior concentrate grades, especially when processing difficult-to-float ores. The system's energy optimization design also reduces unit processing energy consumption by approximately 25%, while its highly automated control system supports remote operation and intelligent parameter adjustment, meeting modern processing plants' demands for efficient, stable, and economical operation.",
+  "specifications": {
+    "title": "Technical Parameters",
+    "note": "Custom configurations available upon request",
+    "tableHeaders": [
+      "Model",
+      "Volume (m³)",
+      "Capacity (m³/min)",
+      "Dimensions (mm)",
+      "Impeller (mm)",
+      "Speed (r/min)",
+      "Air (m³/min)",
+      "Power (kW)",
+      "Weight (kg)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Volume (ft³)",
+      "Capacity (ft³/min)",
+      "Dimensions (in)",
+      "Impeller (in)",
+      "Speed (r/min)",
+      "Air (ft³/min)",
+      "Power (HP)",
+      "Weight (lb)"
+    ],
+    "tableData": [
+      [
+        "XCF-2",
+        "2",
+        "0.5-3.0",
+        "1400×1400×1800",
+        "400",
+        "300",
+        "0.3-0.8",
+        "4.0",
+        "1350"
+      ],
+      [
+        "XCF-4",
+        "4",
+        "2.0-6.0",
+        "1800×1800×2000",
+        "500",
+        "280",
+        "0.6-1.2",
+        "7.5",
+        "2100"
+      ],
+      [
+        "XCF-8",
+        "8",
+        "4.0-12",
+        "2200×2200×2200",
+        "600",
+        "260",
+        "1.0-2.0",
+        "15",
+        "3600"
+      ],
+      [
+        "XCF-16",
+        "16",
+        "8.0-20",
+        "2800×2800×2400",
+        "700",
+        "240",
+        "1.8-3.0",
+        "30",
+        "5800"
+      ],
+      [
+        "XCF-24",
+        "24",
+        "15-26",
+        "3200×3200×2600",
+        "800",
+        "220",
+        "2.5-4.0",
+        "45",
+        "7500"
+      ],
+      [
+        "XCF-36",
+        "36",
+        "20-32",
+        "3600×3600×2800",
+        "900",
+        "200",
+        "3.0-5.0",
+        "75",
+        "9800"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "XCF-2",
+        "70.6",
+        "17.7-105.9",
+        "55.1×55.1×70.9",
+        "15.7",
+        "300",
+        "10.6-28.2",
+        "5.4",
+        "2976"
+      ],
+      [
+        "XCF-4",
+        "141.3",
+        "70.6-211.9",
+        "70.9×70.9×78.7",
+        "19.7",
+        "280",
+        "21.2-42.4",
+        "10.1",
+        "4630"
+      ],
+      [
+        "XCF-8",
+        "282.5",
+        "141.3-423.8",
+        "86.6×86.6×86.6",
+        "23.6",
+        "260",
+        "35.3-70.6",
+        "20.1",
+        "7937"
+      ],
+      [
+        "XCF-16",
+        "565.0",
+        "282.5-706.3",
+        "110.2×110.2×94.5",
+        "27.6",
+        "240",
+        "63.6-105.9",
+        "40.2",
+        "12787"
+      ],
+      [
+        "XCF-24",
+        "847.6",
+        "529.7-918.2",
+        "126.0×126.0×102.4",
+        "31.5",
+        "220",
+        "88.3-141.3",
+        "60.3",
+        "16535"
+      ],
+      [
+        "XCF-36",
+        "1271.3",
+        "706.3-1130.1",
+        "141.7×141.7×110.2",
+        "35.4",
+        "200",
+        "105.9-176.6",
+        "100.6",
+        "21605"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "volume",
+      "capacity",
+      "length",
+      "length",
+      "",
+      "volume",
+      "power",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Advanced Impeller-Stator System",
+      "description": "Specially designed patented impeller-stator combination produces optimal turbulence patterns and bubble distribution, increasing mineralization rates by 15-20% compared to traditional flotation machines, significantly improving mineral recovery."
+    },
+    {
+      "title": "Precise Aeration Control Technology",
+      "description": "Jet aeration system combined with precise air volume control devices produces fine uniform bubbles of 0.2-0.8mm diameter, providing optimal bubble size distribution for different minerals."
+    },
+    {
+      "title": "Efficient Slurry Circulation System",
+      "description": "Innovative forced circulation technology optimizes slurry flow, avoiding dead zones and short-circuit phenomena, ensuring all mineral particles have sufficient flotation opportunities."
+    },
+    {
+      "title": "Optimized Energy Efficiency Design",
+      "description": "Scientific fluid dynamics design and high-efficiency impellers reduce unit processing energy consumption by approximately 25% while maintaining or improving flotation performance, significantly lowering operating costs."
+    },
+    {
+      "title": "Intelligent Control System",
+      "description": "Highly automated control devices support precise adjustment of air volume, liquid level, impeller speed and other key parameters, and can implement remote monitoring and intelligent operation."
+    },
+    {
+      "title": "Robust Durable Structure",
+      "description": "Key components manufactured from high wear-resistant materials and rational structural design ensure long-term stable operation of equipment in harsh slurry environments, reducing maintenance frequency and downtime."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "icon": "copper",
+        "title": "Non-ferrous Metal Processing",
+        "description": "Widely used in the flotation separation of copper, lead, zinc, nickel and other non-ferrous metal minerals, achieving high recovery rates and excellent grade control, with outstanding performance in complex sulfide ore processing."
+      },
+      {
+        "icon": "iron",
+        "title": "Ferrous Metal Processing",
+        "description": "Suitable for flotation processes of iron, manganese and other ferrous metal minerals, particularly effective in removing silica and other impurities and improving concentrate grade."
+      },
+      {
+        "icon": "industrial-minerals",
+        "title": "Non-metallic Mineral Processing",
+        "description": "Efficiently processes fluorite, feldspar, graphite and other non-metallic minerals, achieving a balance between high-purity products and high recovery rates."
+      },
+      {
+        "icon": "coal",
+        "title": "Coal Beneficiation",
+        "description": "Used in coal flotation de-ashing and desulfurization processes, effectively separating ash and sulfides from coal slurry, increasing clean coal yield."
+      },
+      {
+        "icon": "large-scale",
+        "title": "Large-scale Processing Plants",
+        "description": "Particularly suitable for large mineral processing plants, capable of continuously and efficiently processing large volumes of ore, providing stable and reliable production performance and automated operation capabilities."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does the XFC Air Inflation Flotation Cell work?",
+      "answer": "The XFC Air Inflation Flotation Cell operates through a specially designed impeller-stator system and jet aeration device. When the impeller rotates at high speed, the slurry forms a specific circulation pattern in the tank, while air introduced by the aeration system is dispersed by the impeller into numerous fine bubbles uniformly distributed throughout the slurry. Hydrophobic mineral particles contact these bubbles and attach to their surfaces, rising with the bubbles to form a mineralized froth layer, which is collected by scrapers into the concentrate launder, while hydrophilic gangue particles remain in the slurry and discharge through the tailings outlet. This mechanism achieves effective mineral separation."
+    },
+    {
+      "question": "What advantages does the XFC Air Inflation Flotation Cell offer compared to other flotation machines?",
+      "answer": "The main advantages of XFC Air Inflation Flotation Cells include: (1) Specially designed impeller-stator system produces more uniform bubble distribution and higher mineralization rates, with recovery rates 15-20% higher than traditional flotation machines; (2) Forced circulation technology avoids dead zones and short-circuit phenomena, giving mineral particles more thorough flotation opportunities; (3) Precisely controlled aeration system can adjust bubble size and distribution according to different mineral characteristics; (4) Low energy consumption, with unit processing energy consumption reduced by approximately 25%; (5) Highly automated control system supports remote operation and intelligent parameter adjustment; (6) Easy maintenance with long service life for key components."
+    },
+    {
+      "question": "What types of minerals can be processed using XFC Air Inflation Flotation Cells?",
+      "answer": "XFC Air Inflation Flotation Cells have wide applicability and can process many types of minerals, including: sulfide ores (such as copper, lead, zinc, nickel); oxide ores (after sulfidation treatment); ferrous metal minerals (iron, manganese, etc.); non-metallic minerals (fluorite, feldspar, graphite, etc.); coal (de-ashing and desulfurization); and solid-liquid separation in industrial wastewater treatment. The equipment performs particularly well when processing fine particle size fractions (high proportion of -0.074mm) and moderately difficult flotation minerals, especially for beneficiation processes requiring precise control of bubble size and distribution."
+    },
+    {
+      "question": "How do I select the appropriate XFC Air Inflation Flotation Cell specifications?",
+      "answer": "Selecting appropriate XFC Air Inflation Flotation Cell specifications requires consideration of the following factors: (1) Processing capacity requirements - determining the required flotation volume based on the total processing capacity of the plant; (2) Ore characteristics - including mineral composition, particle size distribution, density, etc.; (3) Flotation process flow - including the number and requirements of roughing, cleaning, and scavenging stages; (4) Residence time requirements - different minerals require different flotation times; (5) Site constraints and space planning. The XCF series offers multiple specifications from 2 cubic meters to 36 cubic meters, and it is recommended to conduct laboratory or pilot plant tests before making final decisions to determine optimal flotation parameters and equipment configurations. Our engineers can provide professional selection advice based on your specific requirements."
+    },
+    {
+      "question": "What are the key points for daily maintenance of XFC Air Inflation Flotation Cells?",
+      "answer": "Daily maintenance and care of XFC Air Inflation Flotation Cells mainly includes: (1) Regularly inspecting impeller and stator wear conditions, typically every 3-6 months, adjusting frequency according to the abrasiveness of the processed minerals; (2) Checking and cleaning the aeration system to ensure clear air passages; (3) Lubricating bearings and transmission components, replacing lubricating oil according to the recommended cycles in the manual; (4) Checking motor operating status and belt tension; (5) Maintaining the automatic control system and calibrating various sensors; (6) Periodically cleaning potential sediment accumulation inside the flotation tank; (7) Checking scraper mechanism wear conditions and adjusting or replacing in a timely manner. It is recommended to establish a standardized maintenance plan and maintain detailed maintenance records to extend equipment service life and ensure stable operation."
+    }
+  ],
+  "seo": {
+    "title": "XFC Air Inflation Flotation Cell | High-Efficiency Pneumatic Flotation Equipment | Zexin Mining",
+    "description": "Zexin Mining's XCF Series Air Inflation Flotation Cells employ advanced impeller-stator systems and precise aeration technology, providing 15-20% higher mineralization rates compared to traditional equipment while reducing energy consumption by 25%. Our high-efficiency flotation equipment is ideal for precise separation of non-ferrous metals, ferrous metals, and non-metallic minerals, making it the perfect choice for large-scale processing plants.",
+    "keywords": "air inflation flotation cell, pneumatic flotation machine, air-driven flotation machine, mining air inflation flotation, high-efficiency air inflation flotation, air inflation flotation tank, air inflation flotation equipment, industrial air inflation flotation, air inflation flotation system, slurry air inflation flotation, air inflation flotation manufacturer, XCF flotation machine, flotation machine working principle, flotation machine maintenance, air inflation flotation parts"
+  },
+  "relatedProducts": [
+    "pneumatic-flotation-cell",
+    "self-aspirated-flotation-cell",
+    "coarse-flotation-cell"
+  ],
+  "imageSrcAlt": "Xfc Air Inflation Flotation Cell | Zexin Mining"
+}

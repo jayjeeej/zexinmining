@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "title": "欢迎来到泽鑫集团",
+    "subtitle": "我们运用专业的智慧和与客户协作的工作方式，共同打造更具韧性、更强大的业务。",
+    "cta": "查看我们的产品"
+  },
+  "epcmo": {
+    "title": "EPCMO全流程服务",
+    "heading": "矿业项目一站式解决方案",
+    "description": "我们提供从工程设计、采购、施工到管理运营的全过程专业服务，凭借丰富经验和先进技术，为全球矿业客户创造持久价值和卓越运营效果。",
+    "link": "了解更多"
+  },
+  "latestNews": {
+    "title": "最新消息",
+    "allNewsLink": "所有新闻和新闻稿",
+    "newsItems": {
+      "newsType": "新闻稿"
+    }
+  },
+  "navigation": {
+    "products": "产品与服务",
+    "solutions": "解决方案",
+    "investors": "投资者",
+    "careers": "职业发展",
+    "news": "新闻与媒体",
+    "about": "关于我们",
+    "contact": "联系我们"
+  },
+  "footer": {
+    "dataPrivacy": "数据隐私",
+    "accessibility": "无障碍声明",
+    "legal": "法律声明"
+  },
+  "share": {
+    "label": "分享:",
+    "shareOn": "分享到"
+  }
+} 

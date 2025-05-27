@@ -1,0 +1,300 @@
+{
+  "id": "hammer-crusher",
+  "title": "Hammer Crusher",
+  "series": "ZPC Series High-efficiency Hammer Crusher",
+  "imageSrc": "/images/products/stationary-crushers/hammer-crusher.jpg",
+  "productCategory": "Mining Crushing Equipment",
+  "subcategory": "stationary-crushers",
+  "model": "ZPC-1000*1000",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "30-180 t/h (33-198 stph)"
+    },
+    {
+      "key": "Feed size",
+      "displayValue": "350-500 mm (14-20 in.)"
+    },
+    {
+      "key": "Motor power",
+      "displayValue": "37-132 kW (50-177 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "ton",
+          "conversionFactor": 1.10231,
+          "label": "ton"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "mtph"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/stationary-crushers/hammer-crusher",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/stationary-crushers/hammer-crusher",
+    "zh": "/zh/products/ore-processing/stationary-crushers/hammer-crusher"
+  },
+  "overview": "The ZPC Series High-efficiency Hammer Crusher from Zexin Mining represents advanced crushing technology designed specifically for brittle materials of low to medium hardness. Achieving exceptional crushing ratios with its high-speed rotating hammer system, this versatile crusher delivers premium single-stage reduction while ensuring energy efficiency and stable operation. Perfect for small to medium mining operations, coal processing, limestone production, and construction waste recycling, the ZPC Series combines durability with precision to maximize productivity while minimizing operational costs.",
+  "detailedDescription": "The ZPC Series mining hammer crusher introduces innovative impact-based crushing technology that transforms single-stage reduction processes in resource processing. This energy-efficient heavy hammer crusher creates optimized fragmentation through its high-speed rotor design, addressing common challenges with brittle materials while enhancing throughput performance. Its balanced approach to high-reduction crushing delivers consistent results for small mine operations, particularly valuable for those seeking fine crushing solutions without sacrificing production capacity.",
+  "specifications": {
+    "title": "ZPC Series Hammer Crusher Specifications",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Max. Feed Size (mm)",
+      "CSS Range (mm)",
+      "Capacity (t/h)",
+      "Motor Power (kW)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Max. Feed Size (in.)",
+      "CSS Range (in.)",
+      "Capacity (stph)",
+      "Motor Power (hp)"
+    ],
+    "tableData": [
+      [
+        "ZPC-800*800",
+        "350",
+        "20-60",
+        "30-60",
+        "37"
+      ],
+      [
+        "ZPC-1000*1000",
+        "400",
+        "20-80",
+        "50-80",
+        "55"
+      ],
+      [
+        "ZPC-1250*1250",
+        "450",
+        "20-100",
+        "80-130",
+        "90"
+      ],
+      [
+        "ZPC-1400*1400",
+        "500",
+        "20-120",
+        "120-180",
+        "132"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "ZPC-800*800",
+        "13.8",
+        "0.8-2.4",
+        "33-66",
+        "50"
+      ],
+      [
+        "ZPC-1000*1000",
+        "15.7",
+        "0.8-3.1",
+        "55-88",
+        "74"
+      ],
+      [
+        "ZPC-1250*1250",
+        "17.7",
+        "0.8-3.9",
+        "88-143",
+        "121"
+      ],
+      [
+        "ZPC-1400*1400",
+        "19.7",
+        "0.8-4.7",
+        "132-198",
+        "177"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "length",
+      "capacity",
+      "power"
+    ]
+  },
+  "features": [
+    {
+      "title": "High-performance Alloy Hammers",
+      "description": "Precision-cast chromium-molybdenum alloy hammers with HRC58-62 hardness rating provide 3-5 times longer service life compared to standard hammers, dramatically reducing replacement frequency and maintenance costs in abrasive applications."
+    },
+    {
+      "title": "Ultra-high Crushing Ratio",
+      "description": "Advanced hammer configuration achieves crushing ratios of up to 30:1, reducing 350-500mm feed material to 10-25mm finished product in a single operation, eliminating the need for multiple crushing stages in small to medium mining operations."
+    },
+    {
+      "title": "Adjustable Product Size Control",
+      "description": "Hydraulically-adjusted gap setting (10-80mm) with digital positioning system allows precise control of output size while maintaining maximum production efficiency, enabling operators to quickly adapt to changing product requirements without stopping production."
+    },
+    {
+      "title": "Energy-efficient Design",
+      "description": "Optimized rotor balance and crushing chamber design reduces energy consumption by 25% compared to conventional hammer crushers, while achieving higher throughput and better product shape, significantly lowering operational costs for coal, limestone, and construction waste processing."
+    },
+    {
+      "title": "Rapid Maintenance System",
+      "description": "Innovative split-frame design with hydraulic opening mechanism and modular component configuration allows complete hammer replacement in under 90 minutes, reducing maintenance downtime by 60% compared to traditional hammer crushers."
+    },
+    {
+      "title": "Intelligent Overload Protection",
+      "description": "Advanced monitoring system with automatic rotor reversing capability instantly detects uncrushable objects, protecting critical components from damage while minimizing operational interruptions in challenging mining and recycling applications."
+    },
+    {
+      "title": "Versatile Application Range",
+      "description": "Efficiently processes a wide variety of materials with various hardness levels (<200MPa) and moisture contents (<15%), making it ideal for coal, limestone, gypsum, salt, brick, tile, and construction waste."
+    }
+  ],
+  "applications": {
+    "title": "Application Areas",
+    "items": [
+      {
+        "title": "Coal Processing",
+        "description": "Superior performance in coal crushing with specialized hammer configurations for different coal types, including anthracite, bituminous, and lignite. Produces consistent product sizes from 0-25mm with minimal fines generation, achieving throughput rates 30% higher than conventional crushers while operating at 25% lower energy consumption."
+      },
+      {
+        "title": "Limestone & Building Materials",
+        "description": "Optimized for limestone, chalk, gypsum, salt, and brick processing with hardened hammers that resist abrasive wear. Produces high-quality aggregates with excellent particle shape for cement production, construction materials, and road building applications, delivering consistent gradation that meets stringent industry specifications."
+      },
+      {
+        "title": "Mining Operations",
+        "description": "Performs effectively in small to medium mining operations handling soft to medium-hard ores and minerals with compression strength below 200MPa. Ideal for primary and secondary crushing applications where single-stage reduction significantly reduces capital investment and operational complexity."
+      },
+      {
+        "title": "Construction & Demolition Waste Recycling",
+        "description": "Specialized configuration for processing construction waste, concrete debris, and demolition materials with reinforcement separation capability. Produces recycled aggregates suitable for road base, backfill, and secondary construction products while reducing landfill volumes and supporting circular economy initiatives."
+      },
+      {
+        "title": "Clay & Ceramic Material Processing",
+        "description": "Engineered for efficient processing of clay, shale, and ceramic raw materials with custom hammer designs that prevent material buildup. Delivers precise particle size reduction required for high-quality ceramic production, brick manufacturing, and refractory materials."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What types of materials can be processed with the ZPC Series Hammer Crusher?",
+      "answer": "The ZPC Series is designed for brittle materials with compression strength below 200MPa and moisture content under 15%. It efficiently processes coal (anthracite, bituminous, lignite), limestone, gypsum, salt, clay, shale, construction waste, and medium-soft minerals. The crusher is not recommended for highly abrasive materials (>15% silica content), extremely hard minerals (>200MPa), or materials with high moisture content (>15%), as these require specialized crushing solutions."
+    },
+    {
+      "question": "How does the ZPC Hammer Crusher compare to jaw crushers and impact crushers?",
+      "answer": "The ZPC Hammer Crusher offers distinct advantages in specific applications: 1) Higher reduction ratio (up to 30:1) compared to jaw crushers (3:1-5:1) and standard impact crushers (10:1-15:1); 2) Better product shape with fewer flaky particles; 3) Lower energy consumption per ton (25% less than comparable impact crushers); 4) Lower capital investment for single-stage crushing; 5) Better performance with moderately moist materials. However, jaw crushers handle harder materials, while impact crushers may process larger feed sizes in certain configurations."
+    },
+    {
+      "question": "What maintenance schedule is recommended for the ZPC Series Hammer Crusher?",
+      "answer": "Optimal performance requires a structured maintenance program: 1) Daily inspection of hammer wear, belt tension, and material buildup; 2) Weekly greasing of bearings and checking of fasteners; 3) Monthly inspection of wear plates, screens, and rotor balance; 4) Quarterly comprehensive inspection and preventive component replacement. Hammer rotation or replacement interval varies by material: limestone (300-500 hours), coal (500-800 hours), and clay (200-400 hours). The modular design allows complete hammer replacement in under 90 minutes, minimizing downtime in continuous operations."
+    },
+    {
+      "question": "How can I optimize the performance and efficiency of my hammer crusher?",
+      "answer": "Performance optimization involves several key practices: 1) Maintain proper feed rate and distribution across the crusher width; 2) Adjust crusher gap settings to match material properties and desired product size; 3) Select appropriate screen configurations for your specific application; 4) Implement a regular hammer rotation schedule to ensure even wear; 5) Monitor motor load to prevent over-crushing; 6) Ensure optimal rotor speed for different materials (higher for harder materials, lower for softer ones); 7) Install proper dust collection systems; 8) Use the crusher's automatic protection systems. These practices can increase productivity by 15-25% while reducing operating costs."
+    },
+    {
+      "question": "What are the key factors to consider when selecting the right hammer crusher model?",
+      "answer": "Selection depends on several application-specific factors: 1) Material properties - hardness, abrasiveness, moisture content, and crushability; 2) Production requirements - desired capacity, feed size, and product size; 3) Installation constraints - available space, foundation requirements, and existing plant configuration; 4) Operational considerations - continuous vs. intermittent operation, maintenance capabilities, and spare parts availability; 5) Economic factors - initial investment, operational costs, and expected return on investment. Our application engineers provide comprehensive material testing and equipment selection services to ensure the optimal solution for your specific requirements."
+    },
+    {
+      "question": "What safety features are incorporated into the ZPC Series Hammer Crusher?",
+      "answer": "The ZPC Series incorporates multiple safety systems: 1) Automatic overload detection and protection; 2) Tramp iron detection to prevent damage from uncrushable objects; 3) Emergency stop systems accessible from multiple locations; 4) Enclosed design with safety interlocks to prevent access during operation; 5) Vibration monitoring to detect imbalance; 6) Temperature sensors on critical bearings; 7) Dust suppression systems; 8) Low-speed maintenance drive for safe inspection and maintenance procedures. These features comply with international safety standards including CE, OSHA, and ISO requirements."
+    },
+    {
+      "question": "How does the hammer crusher contribute to reducing operational costs in mining and processing?",
+      "answer": "The ZPC Series delivers significant cost reductions: 1) Energy efficiency - 25% lower power consumption compared to conventional crushers, saving approximately $20,000-$50,000 annually per crusher; 2) Maintenance costs - 60% reduction in maintenance time and 35% lower spare parts consumption due to hardened alloy components; 3) Operational simplicity - single-stage crushing eliminates the need for multiple crushing units; 4) Increased throughput - 30% higher capacity utilizing the same footprint; 5) Improved product quality - better particle shape reduces downstream processing costs; 6) Extended component life - specialized alloys provide 3-5 times longer service intervals. These factors typically result in 15-20% lower cost per ton processed."
+    },
+    {
+      "question": "What customization options are available for the ZPC Series Hammer Crusher?",
+      "answer": "The ZPC Series offers extensive customization: 1) Hammer design variations (thickness, weight, material composition) for different applications; 2) Screen/grate configurations with various aperture sizes and materials; 3) Feed and discharge arrangements to suit existing plant layouts; 4) Special liners for highly abrasive materials; 5) Variable frequency drives for precise speed control; 6) Cold weather packages for operation down to -40°C; 7) High-temperature designs for materials up to 150°C; 8) Specialized dust suppression systems; 9) Advanced monitoring packages with remote diagnostics capability. Our engineering team works with customers to develop application-specific modifications that optimize performance for unique operating conditions."
+    },
+    {
+      "question": "What is the typical return on investment period for a ZPC Series Hammer Crusher?",
+      "answer": "Most operations achieve ROI within 10-18 months through multiple savings channels: 1) Energy cost reduction of 20-30% compared to conventional crushing methods; 2) Maintenance cost savings of 30-40% due to extended wear part life and simplified design; 3) Labor cost reduction from simplified operation and maintenance; 4) Increased production capacity of 15-30% from the same footprint; 5) Revenue enhancement from improved product quality and consistency. Small to medium mining operations typically report annual benefits exceeding $100,000-$250,000 per crusher depending on production volume and material value."
+    },
+    {
+      "question": "How does the hammer crusher support environmental sustainability in mining operations?",
+      "answer": "The ZPC Series contributes to sustainability through several features: 1) Energy efficiency - 25% lower power consumption reduces carbon footprint; 2) Noise reduction - enclosed design with vibration dampening maintains noise levels below 85dB at 1m distance; 3) Dust minimization - integrated dust suppression systems reduce airborne emissions by up to 90%; 4) Resource efficiency - extended wear part life reduces material consumption and waste; 5) Recycling support - enables effective processing of construction waste for material recovery; 6) Water conservation - dry crushing process requires no process water; 7) Smaller footprint - single-stage crushing reduces land use requirements compared to multi-stage systems. These features help operations meet environmental regulations while supporting corporate sustainability goals."
+    }
+  ],
+  "seo": {
+    "title": "Hammer Crusher | Heavy-duty Mining & Coal Processing Equipment",
+    "keywords": "hammer crusher,heavy hammer crusher,mining hammer crusher,coal crusher,limestone crusher,fine crusher,medium crusher,coarse crusher,high-efficiency crusher,crusher manufacturer,crusher specifications,crusher applications,crusher working principle,crusher maintenance,crusher selection,crusher parts,small mine equipment,energy-efficient crusher,single-stage crusher,construction waste crusher",
+    "description": "Zexin Mining's high-efficiency hammer crusher delivers 30% higher crushing ratio with 25% lower energy consumption. Ideal for small mines processing coal, limestone & construction waste with high recovery rates."
+  },
+  "relatedProducts": [
+    "jaw-crusher",
+    "impact-crusher",
+    "hp-cone-crusher",
+    "cone-crusher",
+    "double-roller-crusher"
+  ],
+  "imageSrcAlt": "Hammer Crusher | Zexin Mining"
+}

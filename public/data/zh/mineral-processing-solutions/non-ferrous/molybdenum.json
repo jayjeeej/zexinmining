@@ -1,0 +1,49 @@
+{
+  "id": "molybdenum",
+  "mineralName": "钼矿",
+  "title": "钼矿选矿工艺",
+  "processTitle": "钼矿选矿工艺流程",
+  "processIntroduction": "通过对粗精矿实施再磨再选工艺,显著提升了精矿品质。泽鑫技术团队根据不同矿石的独特性质,量身定制最优化的精矿再磨工艺参数,在确保产品品质的同时,实现了节能增效的双重目标。",
+  "processSteps": [
+    {
+      "title": "阶段磨矿，提高精矿指标",
+      "description": "创新性地引入分段磨矿理念,首先在粗磨阶段进行混合粗选,获取高品位粗精矿,再对其进行精细再磨和深度精选。这种差异化处理方案不仅大幅减少了需要再磨的矿量,还通过精准控制磨矿细度实现了最佳单体解离度,在提升精矿品质的同时显著降低了能源消耗。"
+    },
+    {
+      "title": "强化浮选工艺，提高钼精矿品位",
+      "description": "在粗选环节建立了严格的药剂分级投加制度,通过精确控制各阶段药剂用量和优化捕收剂组合,最大限度发挥了早期富集效应。同时开发了创新的泡沫优化系统,利用二次富集原理并配合智能补水装置,有效提升了精矿品位,降低了药剂消耗。"
+    },
+    {
+      "title": "阶段选别，保证回收率",
+      "description": "开发了独特的多级分选工艺,根据不同粒级钼矿物的浮选动力学特性,采用差异化的选别参数和药剂制度。通过精确调控各选别环节的工艺条件,确保了不同粒级钼矿物的最佳回收效果,全面提升了选矿指标。"
+    }
+  ],
+  "applicationsImage": "/images/products/mineral-processing-solutions/non-ferrous/molybdenum-beneficiation-process-flow.jpg",
+  "applications": [
+    {
+      "title": "单一钼矿精准选别",
+      "description": "针对品位较高的单一钼矿,我们优化了阶段磨矿-浮选联合工艺的各项参数,实现了精矿品位和回收率的双重提升,显著降低了生产成本。"
+    },
+    {
+      "title": "难选钼矿高效处理",
+      "description": "面对成分复杂的难选钼矿,采用创新的强化浮选工艺和智能药剂控制系统,成功突破了传统工艺的瓶颈,实现了选别指标的稳定提高。"
+    },
+    {
+      "title": "微细粒钼矿回收",
+      "description": "对于微细粒嵌布的钼矿,开发了专门的细粒级选别工艺,通过优化的浮选条件和药剂配方,显著提高了细粒级钼矿物的回收率。"
+    },
+    {
+      "title": "共生矿物分离提纯",
+      "description": "针对与硫化物共生的复杂钼矿,研发了独特的选择性抑制-活化工艺,配合优化的浮选顺序,实现了钼矿和共生硫化物的高效分离。"
+    }
+  ],
+  "relatedProducts": [
+    "vibratory-feeder",
+    "wet-overflow-ball-mill",
+    "xfc-air-inflation-flotation-cell",
+    "hp-cone-crusher",
+    "jaw-crusher",
+    "hydrocyclone-separator",
+    "inclined-vibrating-screen"
+  ]
+}

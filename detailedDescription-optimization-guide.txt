@@ -1,0 +1,66 @@
+# detailedDescription优化指南
+
+## 核心原则
+
+1. **避免重复** - detailedDescription不应与JSON文件的其他部分(features, applications, FAQs, specifications)重复
+2. **保持精简** - 控制在60-80个单词(约400-500字符)
+3. **优化SEO** - 自然融入关键搜索词，尤其是seo.keywords字段中的词汇
+4. **价值导向** - 突出产品独特价值，而非重复技术细节
+
+## 优化步骤
+
+1. **检查现有内容**
+   - 对比detailedDescription与features中的描述
+   - 对比detailedDescription与applications中的用例
+   - 对比detailedDescription与FAQs中的解答
+   - 对比detailedDescription与specifications中的参数
+
+2. **删除重复内容**
+   - 删除与features重复的功能描述
+   - 删除与applications重复的应用场景
+   - 删除与FAQs重复的问题解答
+   - 删除与specifications重复的具体参数数值
+
+3. **避免使用的内容类型**
+   - 具体数值和百分比(如"30% higher efficiency")
+   - 详细技术参数(如"35-45° angles")
+   - 特定应用物料列表(如"iron ore, gold ore...")
+   - 具体机械结构描述(已在features中详述)
+
+4. **保留和增强内容**
+   - 产品名称和主要类别(必须包含，如"multi-slope banana vibrating screen")
+   - 产品定位和市场差异化要素
+   - 解决的行业问题或挑战
+   - 独特的设计理念或方法论
+
+5. **SEO关键词融入技巧**
+   - 在第一句包含主要产品名称关键词
+   - 分散使用长尾关键词，避免堆砌
+   - 使用同义词和变体词丰富内容
+   - 确保关键词占比不超过2-3%(2-3个关键词/100个单词)
+
+## 示例模板
+
+"The [产品系列] [主要关键词] introduces innovative [独特优势] that transform [应用领域] in [行业]. This system creates [独特价值1] through its unique design, addressing common [行业挑战] while enhancing [独特价值2]. Its balanced approach to [核心功能] delivers consistent results across varying conditions, making it valuable [目标客户] equipment that adapts to [客户需求] without compromising [性能指标]."
+
+## 检查清单
+
+- [ ] 字数控制在60-80个单词之间
+- [ ] 不含具体数值和参数
+- [ ] 包含2-3个主要SEO关键词
+- [ ] 不与features重复
+- [ ] 不与applications重复
+- [ ] 不与specifications重复
+- [ ] 不与FAQs重复
+- [ ] 突出产品独特价值
+- [ ] 语言流畅，易于理解
+
+## 常见错误
+
+1. 复制features中的功能列表
+2. 详述已在specifications中列出的参数
+3. 列举已在applications中提到的应用场景
+4. 描述太长，超过100个单词
+5. 关键词堆砌，不自然
+6. 内容过于通用，缺乏产品特色
+7. 使用过多技术术语，不易理解 

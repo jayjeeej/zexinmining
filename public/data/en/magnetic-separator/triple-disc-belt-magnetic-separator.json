@@ -1,0 +1,334 @@
+{
+  "id": "triple-disc-belt-magnetic-separator",
+  "title": "Triple Disc Belt Magnetic Separator",
+  "series": "CP Series Disc Magnetic Separator",
+  "imageSrc": "/images/products/magnetic-separator/triple-disc-belt-magnetic-separator.jpg",
+  "productCategory": "Mineral Processing Equipment",
+  "subcategory": "magnetic-separator",
+  "model": "CP600",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "0.08-0.8 t/h (0.09-0.88 stph)"
+    },
+    {
+      "key": "Feed Size",
+      "displayValue": "<2 mm (<0.08 in.)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "0.75-5.25 kW (1.0-7.0 hp)"
+    }
+  ],
+  "href": "/en/products/ore-processing/magnetic-separator/triple-disc-belt-magnetic-separator",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/magnetic-separator/triple-disc-belt-magnetic-separator",
+    "zh": "/zh/products/ore-processing/magnetic-separator/triple-disc-belt-magnetic-separator"
+  },
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "overview": "Zexin Mining's CP Series Triple Disc Belt Magnetic Separator delivers exceptional precision for processing fine-grained magnetic minerals with weak magnetic properties. This advanced belt-type separator combines high-intensity magnetic fields with a unique triple-disc design to efficiently recover valuable minerals from complex ores, providing superior selectivity and grade improvement across various mineral processing applications.",
+  "detailedDescription": "The CP Series Triple Disc Belt Magnetic Separator introduces innovative disc-array technology that transforms mineral beneficiation in fine particle processing. This magnetic separation system creates optimized particle sorting through its proprietary triple-disc configuration, addressing common recovery challenges while enhancing mineral purity. Its balanced approach to magnetic field distribution delivers consistent results across varying ore conditions, making it valuable processing equipment that adapts to different mineral characteristics without compromising operational efficiency.",
+  "specifications": {
+    "title": "Triple Disc Belt Magnetic Separator Technical Specifications",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Dimensions (mm)",
+      "Belt Width (mm)",
+      "Magnetic Field Intensity (Gauss)",
+      "Effective Working Area (m²)",
+      "Capacity (t/h)",
+      "Motor Power (kW)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Dimensions (in.)",
+      "Belt Width (in.)",
+      "Magnetic Field Intensity (Gauss)",
+      "Effective Working Area (ft²)",
+      "Capacity (stph)",
+      "Motor Power (hp)"
+    ],
+    "tableData": [
+      [
+        "CP600",
+        "1450×1200×1350",
+        "600",
+        "8000-14000",
+        "0.55",
+        "0.08-0.15",
+        "0.75"
+      ],
+      [
+        "CP800",
+        "1450×1400×1350",
+        "800",
+        "8000-14000",
+        "0.78",
+        "0.15-0.25",
+        "1.5"
+      ],
+      [
+        "CP1000",
+        "1600×1600×1450",
+        "1000",
+        "8000-14000",
+        "1.01",
+        "0.25-0.35",
+        "2.2"
+      ],
+      [
+        "CP1200",
+        "1800×1800×1500",
+        "1200",
+        "8000-14000",
+        "1.27",
+        "0.35-0.45",
+        "3.0"
+      ],
+      [
+        "CP1500",
+        "2100×2100×1550",
+        "1500",
+        "8000-14000",
+        "1.65",
+        "0.45-0.65",
+        "4.0"
+      ],
+      [
+        "CP1800",
+        "2400×2400×1600",
+        "1800",
+        "8000-14000",
+        "2.01",
+        "0.65-0.8",
+        "5.25"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "CP600",
+        "57.1×47.2×53.1",
+        "23.6",
+        "8000-14000",
+        "5.9",
+        "0.09-0.17",
+        "1.0"
+      ],
+      [
+        "CP800",
+        "57.1×55.1×53.1",
+        "31.5",
+        "8000-14000",
+        "8.4",
+        "0.17-0.28",
+        "2.0"
+      ],
+      [
+        "CP1000",
+        "63.0×63.0×57.1",
+        "39.4",
+        "8000-14000",
+        "10.9",
+        "0.28-0.39",
+        "3.0"
+      ],
+      [
+        "CP1200",
+        "70.9×70.9×59.1",
+        "47.2",
+        "8000-14000",
+        "13.7",
+        "0.39-0.50",
+        "4.0"
+      ],
+      [
+        "CP1500",
+        "82.7×82.7×61.0",
+        "59.1",
+        "8000-14000",
+        "17.8",
+        "0.50-0.72",
+        "5.4"
+      ],
+      [
+        "CP1800",
+        "94.5×94.5×63.0",
+        "70.9",
+        "8000-14000",
+        "21.6",
+        "0.72-0.88",
+        "7.0"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "length",
+      "",
+      "area",
+      "capacity",
+      "power"
+    ]
+  },
+  "features": [
+    {
+      "title": "Triple-Disc Magnetic System",
+      "description": "Features a unique arrangement of three magnetic discs that create a cascading separation effect. This innovative design generates multiple magnetic field zones with different intensities, allowing for staged separation of minerals with varying magnetic susceptibilities. The progressive processing approach improves selectivity and produces higher-grade concentrates compared to single-stage separators."
+    },
+    {
+      "title": "Adjustable Magnetic Field Intensity",
+      "description": "Incorporates independently adjustable magnetic field intensity for each of the three discs, allowing operators to optimize separation parameters for specific ore characteristics. This flexibility enables precise tuning for different mineral compositions, maximizing recovery efficiency while maintaining high-grade concentrate production across diverse ore types."
+    },
+    {
+      "title": "Specialized Belt Design",
+      "description": "Features a proprietary multi-layer composite belt with optimized tensile strength and wear resistance. The specialized belt material provides ideal interaction with the magnetic field while resisting abrasion from fine mineral particles. The controlled belt tension system ensures consistent feed presentation to each magnetic disc, improving separation consistency and equipment longevity."
+    },
+    {
+      "title": "Precision Feed Distribution",
+      "description": "Engineered with an advanced feed distribution system that ensures uniform material presentation across the belt width. The specialized vibrating feeder creates a mono-layer particle arrangement, eliminating particle clustering and ensuring each particle receives optimal exposure to the magnetic field, significantly improving recovery efficiency for fine-grained minerals."
+    },
+    {
+      "title": "Continuous Self-Cleaning Mechanism",
+      "description": "Incorporates an automatic belt cleaning system that prevents material buildup and cross-contamination between processing batches. The specialized scraper and wash system ensures complete removal of residual particles, maintaining separation efficiency during extended operation while reducing maintenance requirements and improving product consistency."
+    },
+    {
+      "title": "Automated Control System",
+      "description": "Features a programmable control system with real-time monitoring of key operational parameters including belt speed, feed rate, and magnetic field intensity. The intelligent system allows operators to save optimal settings for different ore types, facilitating quick changeovers between processing campaigns while ensuring consistent separation performance under varying feed conditions."
+    },
+    {
+      "title": "Compact Modular Design",
+      "description": "Engineered with a space-efficient footprint that maximizes processing capacity while minimizing installation space requirements. The modular construction facilitates easy maintenance access and component replacement, reducing downtime during service intervals. The standardized design allows for simple integration into existing processing circuits or mobile plant applications."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Rare Earth Mineral Processing",
+        "description": "Efficiently separates and concentrates paramagnetic rare earth minerals from complex ore bodies, achieving high recovery rates for elements like neodymium, praseodymium, and samarium. The triple-disc design enables effective separation of minerals with slight differences in magnetic susceptibility, critical for producing high-purity rare earth concentrates."
+      },
+      {
+        "title": "Tantalum and Niobium Recovery",
+        "description": "Provides exceptional separation performance for tantalum and niobium minerals from associated gangue materials. The adjustable field intensity allows for selective recovery of these valuable technology metals even at fine particle sizes, producing concentrates that meet stringent purity requirements for electronic and aerospace applications."
+      },
+      {
+        "title": "Lithium Mica Beneficiation",
+        "description": "Effectively separates lithium-bearing micas (lepidolite, zinnwaldite) from non-magnetic gangue minerals in lithium ore processing. The specialized belt design handles the platy morphology of mica minerals while the triple-disc configuration allows for staged concentration, improving lithium content in the final product."
+      },
+      {
+        "title": "Ilmenite and Rutile Processing",
+        "description": "Separates ilmenite and rutile minerals with different magnetic susceptibilities, producing distinct titanium-bearing concentrates for pigment production or titanium metal manufacturing. The precision control system enables fine adjustment of separation parameters to accommodate variations in titanium mineral properties from different deposit sources."
+      },
+      {
+        "title": "Iron Ore Purification",
+        "description": "Removes weakly magnetic impurities from iron ore concentrates, improving product quality for premium steel production applications. The system effectively separates silicates, phosphates, and other contaminating minerals from iron-bearing phases, producing high-purity iron concentrates with precisely controlled chemical composition."
+      },
+      {
+        "title": "Tungsten Mineral Concentration",
+        "description": "Recovers weakly paramagnetic tungsten minerals including scheelite and wolframite from complex polymetallic ores. The high sensitivity of the triple-disc design enables effective separation even at fine grain sizes, allowing recovery of valuable tungsten minerals that would be lost in conventional magnetic separation processes."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does the triple-disc design improve separation efficiency compared to conventional magnetic separators?",
+      "answer": "The triple-disc design creates a staged separation process with progressively increasing magnetic field intensity across three separate separation zones. This configuration provides several key advantages: 1) Minerals with different magnetic susceptibilities are captured at different stages, improving selectivity; 2) Each disc can be optimized for a specific magnetic intensity range, maximizing recovery across the full spectrum of magnetic properties; 3) The staged approach prevents magnetic mineral agglomeration that often occurs in single-stage separators; 4) Cross-contamination between strongly and weakly magnetic particles is minimized, producing cleaner concentrates; 5) The multiple separation points allow for mid-process product streams with different specifications. Laboratory testing shows this design typically improves recovery by 15-20% while increasing concentrate grade by 5-8% compared to single-stage magnetic separators processing the same feed material."
+    },
+    {
+      "question": "What feed preparation is required for optimal operation of the CP series separator?",
+      "answer": "For optimal operation, feed material should meet several key criteria: 1) Particle size should be consistently below 2mm, with best performance achieved in the 0.05-0.5mm range where liberation is maximized; 2) Moisture content should be kept below 3% to prevent material adhesion and ensure proper flow behavior; 3) Feed should be pre-screened to remove oversize particles that could damage the belt or create uneven material distribution; 4) Clay and slime content (<0.038mm) should be minimized through washing or desliming as these can coat magnetic particles and interfere with separation; 5) Feed rate must be controlled to maintain a mono-layer particle arrangement on the belt for optimal magnetic field interaction. Our technical team can provide specific recommendations for feed preparation based on ore characterization testing, which we recommend prior to equipment selection and commissioning."
+    },
+    {
+      "question": "How does belt speed affect separation performance?",
+      "answer": "Belt speed is a critical operating parameter that directly impacts separation performance in several ways: 1) Slower belt speeds increase residence time in the magnetic field, improving recovery of weakly magnetic minerals but reducing overall throughput; 2) Faster belt speeds favor recovery of strongly magnetic particles while potentially reducing capture efficiency for weakly magnetic minerals; 3) Optimal belt speed varies by mineral type and particle size, with finer particles typically requiring slower speeds; 4) Belt speed affects particle tumbling behavior, which influences the probability of magnetic particles contacting the belt surface near the magnetic discs; 5) The relationship between belt speed and separation efficiency follows a non-linear curve with an optimal range for each application. The CP series features variable speed control (0.1-0.5 m/s) to allow operations to determine the ideal belt speed through empirical testing. We typically recommend starting at a slower speed (0.15-0.2 m/s) and incrementally increasing while monitoring concentrate grade and recovery to identify the optimal operating point."
+    },
+    {
+      "question": "What maintenance procedures are required for the CP series magnetic separators?",
+      "answer": "Regular maintenance ensures optimal performance and longevity of the CP series separators. Key maintenance procedures include: 1) Daily inspection of the belt for wear, damage, or tracking issues, with adjustment of the belt tensioning system as needed; 2) Weekly cleaning of the magnetic disc assemblies and belt underside to remove accumulated magnetic particles; 3) Monthly lubrication of bearings and drive components according to the maintenance schedule; 4) Quarterly inspection of electrical systems, controls, and magnetic field intensity to ensure consistent performance; 5) Semi-annual replacement of belt cleaning components and inspection of feed distribution system; 6) Annual comprehensive inspection of the entire unit including magnetic components and belt drive system. The modular design facilitates easy access to key components, typically allowing maintenance procedures to be completed in 2-4 hours. We recommend keeping critical spare parts on hand, particularly belts and cleaning system components, to minimize potential downtime."
+    },
+    {
+      "question": "How do you determine the optimal operating parameters for specific ore types?",
+      "answer": "Determining optimal operating parameters follows a systematic approach: 1) Laboratory characterization of the ore including mineralogy, magnetic susceptibility distribution, and liberation analysis by size fraction; 2) Bench-scale testing using a laboratory magnetic separator to establish preliminary magnetic field requirements and separation potential; 3) Pilot testing with a CP series unit to validate laboratory results and optimize key parameters including belt speed, feed rate, and magnetic field intensity for each disc; 4) Statistical analysis of test results to develop operating parameter models for different ore variability scenarios; 5) On-site commissioning with iterative optimization based on actual production conditions. Our technical team provides comprehensive testing services to develop customized operating parameters for each installation. This process typically identifies 3-5 parameter sets that can be programmed into the control system to handle expected ore variability throughout the deposit, ensuring consistent separation performance as feed characteristics change."
+    },
+    {
+      "question": "What are the advantages of the CP series over induced roll magnetic separators for fine particle processing?",
+      "answer": "The CP series offers several distinct advantages over induced roll magnetic separators for fine particle applications: 1) Superior handling of very fine particles (<0.075mm) due to the horizontal belt orientation that prevents particle loss from centrifugal forces; 2) More effective separation of minerals with similar magnetic susceptibilities through the staged triple-disc design; 3) Lower operating costs with reduced wear components and power consumption (typically 15-25% less energy per ton processed); 4) Improved recovery of weakly magnetic minerals due to longer residence time in the magnetic field zones; 5) Better process control with independent adjustment of each magnetic disc; 6) Higher throughput capacity per unit area of installation space; 7) Lower maintenance requirements with simplified belt replacement compared to roll assemblies. While induced roll separators may offer advantages for coarser particles with strong magnetic properties, the CP series excels in applications involving fine-grained materials with weak to moderate magnetic susceptibility – particularly crucial for rare earth elements, battery minerals, and other technology metals processing."
+    },
+    {
+      "question": "Can the CP series handle wet processing applications?",
+      "answer": "The standard CP series is designed primarily for dry processing applications with moisture content below 3%. However, we offer a specialized wet processing variant (CPW series) that incorporates several key modifications: 1) Stainless steel construction for all components in contact with slurry; 2) Specialized water-resistant belt material with modified tracking system; 3) Sealed magnetic disc assemblies to prevent water ingress; 4) Modified feed distribution system designed for slurry applications; 5) Integrated water spray and drainage systems for continuous operation. The wet processing variant is particularly effective for applications involving ultrafine particles (<0.045mm) where dry processing may present dust management challenges or where the ore requires wet processing due to clay content or pre-existing slurry streams. The CPW series handles slurry concentrations between 15-35% solids by weight, with optimal performance typically achieved at 25-30% solids concentration for most mineral applications."
+    },
+    {
+      "question": "What safety features are incorporated into the CP series design?",
+      "answer": "Safety is a primary consideration in the CP series design, which incorporates multiple protective features: 1) Fully enclosed belt and drive system with interlocked safety guards that prevent operation when opened; 2) Emergency stop buttons positioned at strategic locations around the equipment; 3) Belt alignment monitoring system that automatically halts operation if belt tracking deviates beyond acceptable parameters; 4) Thermal protection for all drive motors and control systems; 5) Dust containment and collection points for connection to plant dust management systems; 6) Electrical systems designed to international standards with appropriate protection ratings for mining environments; 7) Comprehensive safety signage and operator warning indicators; 8) Low voltage control circuits for operator safety during adjustments; 9) Non-slip working platforms and appropriate guardrails for maintenance access points. These features ensure operator safety while facilitating necessary maintenance procedures, meeting or exceeding safety regulations for mineral processing equipment in all major mining jurisdictions."
+    },
+    {
+      "question": "How is the CP series configured for processing circuits with multiple feed streams or product requirements?",
+      "answer": "The CP series can be configured in various arrangements to handle complex processing requirements: 1) Parallel processing lines can be established for different feed streams, each optimized for specific ore characteristics; 2) Series configuration with multiple units can create a cleaner-scavenger circuit to maximize both grade and recovery; 3) The control system can be integrated with upstream and downstream equipment for automated transitions between ore types; 4) Split-feed configurations allow processing of different size fractions through separate units with optimized parameters; 5) Custom product collection systems can create multiple product streams from a single unit by partitioning the discharge areas beneath each magnetic disc; 6) Mobile configurations are available for operations requiring frequent relocation between processing sites. Our engineering team works closely with clients to design optimal circuit configurations based on metallurgical requirements and plant constraints, providing complete system integration including feed preparation, material handling, and process control. This approach ensures the magnetic separation circuit delivers maximum value within the broader processing flowsheet."
+    }
+  ],
+  "seo": {
+    "title": "Triple Disc Magnetic Separator | Fine Particle Separation | Zexin Mining",
+    "keywords": "triple disc magnetic separator,disc belt magnetic separator,high intensity magnetic separator,rare earth magnetic separator,fine particle magnetic separator,tantalum niobium separator,lithium mineral separator,triple zone magnetic separator,industrial disc magnetic separator,technology metals separator,mineral processing magnetic separator,adjustable field magnetic separator,precision magnetic separator,disc type magnetic separator,specialty mineral separator",
+    "description": "Zexin Mining's Triple Disc Belt Magnetic Separator delivers exceptional separation of fine weakly-magnetic minerals. Our innovative triple-disc technology provides superior recovery of rare earth elements, lithium minerals, and technology metals with precise magnetic field control and automated operation."
+  },
+  "relatedProducts": [
+    "plate-high-intensity-magnetic-separator",
+    "wet-high-intensity-magnetic-roll-separator",
+    "permanent-drum-magnetic-separator",
+    "double-roll-permanent-magnetic-zircon-separator",
+    "four-roll-high-voltage-electrostatic-separator"
+  ],
+  "imageSrcAlt": "Triple Disc Belt Magnetic Separator | Zexin Mining"
+}

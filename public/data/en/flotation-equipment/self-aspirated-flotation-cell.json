@@ -1,0 +1,364 @@
+{
+  "id": "self-aspirated-flotation-cell",
+  "title": "Self-Aspirated Flotation Cell",
+  "series": "ZSF Series",
+  "imageSrc": "/images/products/flotation-equipment/self-aspirated-flotation-cell.jpg",
+  "productCategory": "Mineral Processing Equipment",
+  "subcategory": "flotation equipment",
+  "model": "ZSF Series",
+  "meta": [
+    {
+      "key": "Effective Volume",
+      "displayValue": "1-30 m³ (35.3-1059.4 ft³)"
+    },
+    {
+      "key": "Processing Capacity",
+      "displayValue": "1.0-35 m³/min (35.3-1236.0 ft³/min)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "4.0-75 kW (5.4-100.6 HP)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "millimeters"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "inches"
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "square meters"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "square feet"
+        }
+      ],
+      "volume": [
+        {
+          "unit": "m³",
+          "conversionFactor": 1,
+          "label": "cubic meters"
+        },
+        {
+          "unit": "ft³",
+          "conversionFactor": 35.3147,
+          "label": "cubic feet"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "m³/min",
+          "conversionFactor": 1,
+          "label": "cubic meters/minute"
+        },
+        {
+          "unit": "ft³/min",
+          "conversionFactor": 35.3147,
+          "label": "cubic feet/minute"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kilowatts"
+        },
+        {
+          "unit": "HP",
+          "conversionFactor": 1.34102,
+          "label": "horsepower"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "kg",
+          "conversionFactor": 1,
+          "label": "kilograms"
+        },
+        {
+          "unit": "lb",
+          "conversionFactor": 2.20462,
+          "label": "pounds"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Conversion",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/flotation-equipment/self-aspirated-flotation-cell",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/flotation-equipment/self-aspirated-flotation-cell",
+    "zh": "/zh/products/ore-processing/flotation-equipment/self-aspirated-flotation-cell"
+  },
+  "overview": "The Self-Aspirated Flotation Cell is an advanced mineral separation device that automatically draws in air through specially designed impeller systems, providing efficient mineral separation without external blowers. With a simple structure, uniform bubble distribution, and significantly improved mineral recovery rates, it is widely used in processing various metallic and non-metallic minerals.",
+  "detailedDescription": "The ZSF Series Self-Aspirated Flotation Cell employs innovative self-priming technology for efficient operation without external aeration equipment, revolutionizing traditional flotation processes. Its unique impeller design achieves excellent mineral-bubble contact, significantly improving recovery rates for difficult-to-float minerals while enhancing selectivity. The system's uniform bubble generation and distribution characteristics provide stable flotation performance under various ore conditions, making it a highly adaptable and energy-efficient mineral processing equipment that delivers both economic and technical benefits for all types of mineral processing applications.",
+  "specifications": {
+    "title": "Technical Parameters",
+    "note": "Custom configurations available upon request",
+    "tableHeaders": [
+      "Model",
+      "Volume (m³)",
+      "Capacity (m³/min)",
+      "Impeller (mm)",
+      "Speed (r/min)",
+      "Air (m³/min)",
+      "Power (kW)",
+      "Weight (kg)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Volume (ft³)",
+      "Capacity (ft³/min)",
+      "Impeller (in)",
+      "Speed (r/min)",
+      "Air (ft³/min)",
+      "Power (HP)",
+      "Weight (lb)"
+    ],
+    "tableData": [
+      [
+        "ZSF-1",
+        "1",
+        "1.0-3.0",
+        "350",
+        "300",
+        "0.3-0.6",
+        "4.0",
+        "1200"
+      ],
+      [
+        "ZSF-3",
+        "3",
+        "2.0-6.0",
+        "450",
+        "285",
+        "0.5-1.0",
+        "7.5",
+        "1850"
+      ],
+      [
+        "ZSF-6",
+        "6",
+        "4.0-10",
+        "550",
+        "265",
+        "0.8-1.5",
+        "15",
+        "2700"
+      ],
+      [
+        "ZSF-12",
+        "12",
+        "8.0-18",
+        "650",
+        "240",
+        "1.2-2.5",
+        "30",
+        "4500"
+      ],
+      [
+        "ZSF-20",
+        "20",
+        "15-25",
+        "750",
+        "220",
+        "2.0-3.5",
+        "45",
+        "6800"
+      ],
+      [
+        "ZSF-30",
+        "30",
+        "20-35",
+        "850",
+        "200",
+        "3.0-5.0",
+        "75",
+        "9500"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "ZSF-1",
+        "35.3",
+        "35.3-105.9",
+        "13.8",
+        "300",
+        "10.6-21.2",
+        "5.4",
+        "2646"
+      ],
+      [
+        "ZSF-3",
+        "105.9",
+        "70.6-211.9",
+        "17.7",
+        "285",
+        "17.7-35.3",
+        "10.1",
+        "4079"
+      ],
+      [
+        "ZSF-6",
+        "211.9",
+        "141.3-353.1",
+        "21.7",
+        "265",
+        "28.3-53.0",
+        "20.1",
+        "5952"
+      ],
+      [
+        "ZSF-12",
+        "423.8",
+        "282.5-635.7",
+        "25.6",
+        "240",
+        "42.4-88.3",
+        "40.2",
+        "9921"
+      ],
+      [
+        "ZSF-20",
+        "706.3",
+        "529.7-882.9",
+        "29.5",
+        "220",
+        "70.6-123.6",
+        "60.3",
+        "14991"
+      ],
+      [
+        "ZSF-30",
+        "1059.4",
+        "706.3-1236.0",
+        "33.5",
+        "200",
+        "105.9-176.6",
+        "100.6",
+        "20944"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "volume",
+      "capacity",
+      "length",
+      "",
+      "volume",
+      "power",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Innovative Self-Priming Design",
+      "description": "Patented self-priming system eliminates the need for external blowers, simplifying equipment structure, reducing investment costs and maintenance complexity, making the system more reliable and efficient."
+    },
+    {
+      "title": "Optimized Bubble Generation",
+      "description": "Specially designed impeller and stator assembly produces fine, uniform bubbles, significantly improving mineral-bubble contact efficiency, increasing recovery rates by 10-15% compared to traditional flotation machines."
+    },
+    {
+      "title": "Flexible Air Regulation",
+      "description": "Advanced self-aspiration control system allows precise adjustment of air volume, easily adapting to different mineral types and flotation conditions, providing optimal flotation performance and selectivity."
+    },
+    {
+      "title": "Exceptional Energy Efficiency",
+      "description": "Energy-saving design reduces power consumption by 20-30% while maintaining or improving processing capacity, significantly lowering operating costs and improving economic benefits."
+    },
+    {
+      "title": "Robust Reliable Operation",
+      "description": "Reinforced mechanical structure and wear-resistant materials ensure long-term stable operation in harsh mineral processing environments, reducing maintenance downtime."
+    },
+    {
+      "title": "Rapid Installation & Commissioning",
+      "description": "Modular design supports quick installation and simple system integration, significantly shortening project implementation cycles and accelerating return on investment."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "icon": "copper",
+        "title": "Non-ferrous Metal Processing",
+        "description": "Widely used in the flotation separation of copper, lead, zinc, nickel and other non-ferrous metal minerals, achieving high recovery rates and good grade control."
+      },
+      {
+        "icon": "iron",
+        "title": "Ferrous Metal Processing",
+        "description": "Suitable for flotation processes of iron, manganese and other ferrous metal minerals, improving separation efficiency and concentrate quality."
+      },
+      {
+        "icon": "industrial-minerals",
+        "title": "Non-metallic Mineral Processing",
+        "description": "Efficiently processes graphite, fluorite, feldspar and other non-metallic minerals, achieving high-purity separation and fine recovery."
+      },
+      {
+        "icon": "coal",
+        "title": "Coal Beneficiation",
+        "description": "Optimizes coal flotation processes, significantly improving coal slurry treatment results, increasing clean coal production and quality."
+      },
+      {
+        "icon": "small-scale",
+        "title": "Small to Medium Processing Plants",
+        "description": "Especially suitable for small and medium-sized mineral processing enterprises, easy to operate, low investment cost, flexibly adapting to various mineral processing needs."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does a self-aspirated flotation cell work?",
+      "answer": "Self-aspirated flotation cells operate through specially designed impellers and self-aspiration systems. When the impeller rotates at high speed, it creates a negative pressure area around the impeller, automatically drawing in air through the air intake pipe. This air is dispersed by the impeller into fine bubbles and uniformly distributed throughout the slurry. Hydrophobic mineral particles attach to the bubbles and rise to form a mineralized froth layer at the surface, which is collected by scrapers, while hydrophilic gangue particles remain in the slurry."
+    },
+    {
+      "question": "What advantages do self-aspirated flotation cells offer compared to traditional flotation equipment?",
+      "answer": "The main advantages of self-aspirated flotation cells include: no need for external blowers, reducing investment and energy consumption; finer and more uniform bubbles, improving mineral recovery; simplified equipment structure, lowering maintenance costs; automatic air volume regulation, strong adaptability; smaller footprint, easier installation; lower energy consumption, reducing operating costs by 20-30%; more stable flotation indices, more consistent product quality."
+    },
+    {
+      "question": "What types of minerals can be processed using self-aspirated flotation cells?",
+      "answer": "Self-aspirated flotation cells are suitable for processing a wide range of minerals, including sulfide ores (copper, lead, zinc, nickel), oxide ores (after sulfidation treatment), precious metal ores (gold, silver), ferrous metals (iron, manganese), non-metallic minerals (graphite, fluorite, feldspar), and coal. Any mineral suitable for flotation processes can achieve good separation results in self-aspirated flotation cells when paired with appropriate flotation reagents."
+    },
+    {
+      "question": "How do I select the right self-aspirated flotation cell model for my needs?",
+      "answer": "Selecting the appropriate self-aspirated flotation cell model requires consideration of several factors: processing capacity requirements, ore characteristics (particle size distribution, mineral composition), target recovery rate and grade, budget constraints, space availability, and existing flotation circuits. Laboratory testing and pilot trials are recommended before final selection to determine optimal flotation parameters and equipment specifications. Our engineers can provide detailed equipment selection recommendations based on your specific requirements."
+    },
+    {
+      "question": "What routine maintenance does a self-aspirated flotation cell require?",
+      "answer": "Routine maintenance for self-aspirated flotation cells includes: periodic inspection of impellers and stators for wear (typically every 2-4 months); checking self-aspiration pipes for blockages; maintenance of motors and drive systems; lubrication and inspection of bearings and seals; cleaning and adjustment of scraper mechanisms; and calibration of control systems. It is recommended to establish a preventative maintenance schedule based on the abrasiveness of the processed ore and operational intensity to ensure long-term stable equipment operation."
+    }
+  ],
+  "seo": {
+    "title": "Self-Aspirated Flotation Cell | Energy-Efficient Mineral Processing Equipment | Zexin Mining",
+    "description": "Zexin Mining's ZSF Series Self-Aspirated Flotation Cells utilize innovative self-priming technology for efficient operation without external aeration equipment. Our patented impeller design provides higher mineral recovery rates while reducing energy consumption by 20-30%. Ideal for processing non-ferrous, ferrous, and non-metallic minerals.",
+    "keywords": "self-aspirated flotation cell, self-priming flotation equipment, mining self-aspirated flotation machine, high-efficiency self-aspirated flotation, self-aspirated flotation tank, self-aspirated air flotation, mechanical self-aspirated flotation, industrial self-aspirated flotation, self-aspirated flotation system, flotation machine manufacturer, mineral flotation equipment, flotation impeller design, flotation rotor, flotation stator"
+  },
+  "relatedProducts": [
+    "pneumatic-flotation-cell",
+    "coarse-flotation-cell",
+    "xfc-air-inflation-flotation-cell"
+  ],
+  "imageSrcAlt": "Self Aspirated Flotation Cell | Zexin Mining"
+}

@@ -1,0 +1,810 @@
+{
+  "id": "hp-cone-crusher",
+  "title": "HP Series Hydraulic Cone Crusher",
+  "series": "HP Series High-efficiency Hydraulic Cone Crusher",
+  "imageSrc": "/images/products/stationary-crushers/hp-cone-crusher.jpg",
+  "productCategory": "Mining Crushing Equipment",
+  "subcategory": "stationary-crushers",
+  "model": "HP Series",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "90-1200 t/h (99-1323 stph)"
+    },
+    {
+      "key": "Feed size",
+      "displayValue": "95-353 mm (3.7-13.9 in.)"
+    },
+    {
+      "key": "Motor power",
+      "displayValue": "132-630 kW (177-845 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "ton",
+          "conversionFactor": 1.10231,
+          "label": "ton"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/stationary-crushers/hp-cone-crusher",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/stationary-crushers/hp-cone-crusher",
+    "zh": "/zh/products/ore-processing/stationary-crushers/hp-cone-crusher"
+  },
+  "overview": "Zexin Mining's HP Series Hydraulic Cone Crusher employs advanced crushing technology for efficient processing of hard rock materials with high capacity, low energy consumption, superior particle shape, and exceptional reliability for mining and aggregate applications.",
+  "detailedDescription": "The HP Series Hydraulic Cone Crusher introduces innovative hydraulic technology combined with optimized crushing chamber design, addressing traditional cone crusher challenges when processing hard minerals. Its balanced crushing force distribution delivers exceptional product size distribution while significantly reducing energy consumption and wear costs. The unique multiple-cavity design offers customized solutions for varying material characteristics, ensuring optimal production efficiency and product quality across medium and fine crushing applications.",
+  "specifications": {
+    "title": "HP Series Cone Crusher Specifications",
+    "note": "Can be customized according to customer requirements",
+    "tableHeaders": [
+      "Model",
+      "Cavity",
+      "Standard Type Feed Size (mm)",
+      "Standard Type Min Discharge Size (mm)",
+      "Short Type Feed Size (mm)",
+      "Short Type Min Discharge Size (mm)",
+      "Power (kW)",
+      "Capacity (t/h)",
+      "Weight (ton)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Cavity",
+      "Standard Type Feed Size (in.)",
+      "Standard Type Min Discharge Size (in.)",
+      "Short Type Feed Size (in.)",
+      "Short Type Min Discharge Size (in.)",
+      "Power (hp)",
+      "Capacity (stph)",
+      "Weight (ton)"
+    ],
+    "tableData": [
+      [
+        "HP200",
+        "Super coarse",
+        "",
+        "",
+        "",
+        "",
+        "132-200",
+        "90-250",
+        "14"
+      ],
+      [
+        "",
+        "Coarse",
+        "185",
+        "19",
+        "76",
+        "10",
+        "132-200",
+        "90-250",
+        "14"
+      ],
+      [
+        "",
+        "Medium",
+        "125",
+        "17",
+        "54",
+        "6",
+        "132-200",
+        "90-250",
+        "14"
+      ],
+      [
+        "",
+        "Fine",
+        "95",
+        "13",
+        "23",
+        "6",
+        "132-200",
+        "90-250",
+        "14"
+      ],
+      [
+        "",
+        "Super Fine",
+        "",
+        "",
+        "10",
+        "5",
+        "132-200",
+        "90-250",
+        "14"
+      ],
+      [
+        "HP300",
+        "Super coarse",
+        "230",
+        "25",
+        "",
+        "",
+        "180-250",
+        "115-440",
+        "19.96"
+      ],
+      [
+        "",
+        "Coarse",
+        "210",
+        "20",
+        "75",
+        "10",
+        "180-250",
+        "115-440",
+        "19.96"
+      ],
+      [
+        "",
+        "Medium",
+        "150",
+        "15",
+        "50",
+        "8",
+        "180-250",
+        "115-440",
+        "19.96"
+      ],
+      [
+        "",
+        "Fine",
+        "105",
+        "10",
+        "20",
+        "6",
+        "180-250",
+        "115-440",
+        "19.96"
+      ],
+      [
+        "",
+        "Super Fine",
+        "",
+        "",
+        "20",
+        "6",
+        "180-250",
+        "115-440",
+        "19.96"
+      ],
+      [
+        "HP400",
+        "Super coarse",
+        "295",
+        "30",
+        "",
+        "",
+        "280-355",
+        "140-630",
+        "28.72"
+      ],
+      [
+        "",
+        "Coarse",
+        "250",
+        "25",
+        "90",
+        "10",
+        "280-355",
+        "140-630",
+        "28.72"
+      ],
+      [
+        "",
+        "Medium",
+        "195",
+        "20",
+        "50",
+        "8",
+        "280-355",
+        "140-630",
+        "28.72"
+      ],
+      [
+        "",
+        "Fine",
+        "110",
+        "14",
+        "40",
+        "6",
+        "280-355",
+        "140-630",
+        "28.72"
+      ],
+      [
+        "",
+        "Super Fine",
+        "",
+        "",
+        "30",
+        "6",
+        "280-355",
+        "140-630",
+        "28.72"
+      ],
+      [
+        "HP500",
+        "Super coarse",
+        "330",
+        "30",
+        "",
+        "",
+        "355-450",
+        "175-790",
+        "38"
+      ],
+      [
+        "",
+        "Coarse",
+        "285",
+        "25",
+        "90",
+        "13",
+        "355-450",
+        "175-790",
+        "38"
+      ],
+      [
+        "",
+        "Medium",
+        "200",
+        "20",
+        "55",
+        "10",
+        "355-450",
+        "175-790",
+        "38"
+      ],
+      [
+        "",
+        "Fine",
+        "133",
+        "16",
+        "40",
+        "8",
+        "355-450",
+        "175-790",
+        "38"
+      ],
+      [
+        "",
+        "Super Fine",
+        "",
+        "",
+        "35",
+        "6",
+        "355-450",
+        "175-790",
+        "38"
+      ],
+      [
+        "HP800",
+        "Super coarse",
+        "353",
+        "32",
+        "",
+        "",
+        "550-630",
+        "260-1200",
+        "64.1"
+      ],
+      [
+        "",
+        "Coarse",
+        "297",
+        "32",
+        "155",
+        "13",
+        "550-630",
+        "260-1200",
+        "64.1"
+      ],
+      [
+        "",
+        "Medium",
+        "267",
+        "25",
+        "92",
+        "10",
+        "550-630",
+        "260-1200",
+        "64.1"
+      ],
+      [
+        "",
+        "Fine",
+        "219",
+        "16",
+        "33",
+        "6",
+        "550-630",
+        "260-1200",
+        "64.1"
+      ],
+      [
+        "",
+        "Super Fine",
+        "",
+        "",
+        "",
+        "",
+        "550-630",
+        "260-1200",
+        "64.1"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "HP200",
+        "Super coarse",
+        "",
+        "",
+        "",
+        "",
+        "177-268",
+        "99-276",
+        "15.4"
+      ],
+      [
+        "",
+        "Coarse",
+        "7.3",
+        "0.75",
+        "3.0",
+        "0.39",
+        "177-268",
+        "99-276",
+        "15.4"
+      ],
+      [
+        "",
+        "Medium",
+        "4.9",
+        "0.67",
+        "2.1",
+        "0.24",
+        "177-268",
+        "99-276",
+        "15.4"
+      ],
+      [
+        "",
+        "Fine",
+        "3.7",
+        "0.51",
+        "0.9",
+        "0.24",
+        "177-268",
+        "99-276",
+        "15.4"
+      ],
+      [
+        "",
+        "Super Fine",
+        "",
+        "",
+        "0.39",
+        "0.2",
+        "177-268",
+        "99-276",
+        "15.4"
+      ],
+      [
+        "HP300",
+        "Super coarse",
+        "9.1",
+        "0.98",
+        "",
+        "",
+        "241-335",
+        "127-485",
+        "22.0"
+      ],
+      [
+        "",
+        "Coarse",
+        "8.3",
+        "0.79",
+        "3.0",
+        "0.39",
+        "241-335",
+        "127-485",
+        "22.0"
+      ],
+      [
+        "",
+        "Medium",
+        "5.9",
+        "0.59",
+        "2.0",
+        "0.31",
+        "241-335",
+        "127-485",
+        "22.0"
+      ],
+      [
+        "",
+        "Fine",
+        "4.1",
+        "0.39",
+        "0.79",
+        "0.24",
+        "241-335",
+        "127-485",
+        "22.0"
+      ],
+      [
+        "",
+        "Super Fine",
+        "",
+        "",
+        "0.79",
+        "0.24",
+        "241-335",
+        "127-485",
+        "22.0"
+      ],
+      [
+        "HP400",
+        "Super coarse",
+        "11.6",
+        "1.18",
+        "",
+        "",
+        "375-476",
+        "154-694",
+        "31.7"
+      ],
+      [
+        "",
+        "Coarse",
+        "9.8",
+        "0.98",
+        "3.5",
+        "0.39",
+        "375-476",
+        "154-694",
+        "31.7"
+      ],
+      [
+        "",
+        "Medium",
+        "7.7",
+        "0.79",
+        "2.0",
+        "0.31",
+        "375-476",
+        "154-694",
+        "31.7"
+      ],
+      [
+        "",
+        "Fine",
+        "4.3",
+        "0.55",
+        "1.6",
+        "0.24",
+        "375-476",
+        "154-694",
+        "31.7"
+      ],
+      [
+        "",
+        "Super Fine",
+        "",
+        "",
+        "1.2",
+        "0.24",
+        "375-476",
+        "154-694",
+        "31.7"
+      ],
+      [
+        "HP500",
+        "Super coarse",
+        "13.0",
+        "1.18",
+        "",
+        "",
+        "476-603",
+        "193-871",
+        "41.9"
+      ],
+      [
+        "",
+        "Coarse",
+        "11.2",
+        "0.98",
+        "3.5",
+        "0.51",
+        "476-603",
+        "193-871",
+        "41.9"
+      ],
+      [
+        "",
+        "Medium",
+        "7.9",
+        "0.79",
+        "2.2",
+        "0.39",
+        "476-603",
+        "193-871",
+        "41.9"
+      ],
+      [
+        "",
+        "Fine",
+        "5.2",
+        "0.63",
+        "1.6",
+        "0.31",
+        "476-603",
+        "193-871",
+        "41.9"
+      ],
+      [
+        "",
+        "Super Fine",
+        "",
+        "",
+        "1.4",
+        "0.24",
+        "476-603",
+        "193-871",
+        "41.9"
+      ],
+      [
+        "HP800",
+        "Super coarse",
+        "13.9",
+        "1.26",
+        "",
+        "",
+        "738-845",
+        "287-1323",
+        "70.7"
+      ],
+      [
+        "",
+        "Coarse",
+        "11.7",
+        "1.26",
+        "6.1",
+        "0.51",
+        "738-845",
+        "287-1323",
+        "70.7"
+      ],
+      [
+        "",
+        "Medium",
+        "10.5",
+        "0.98",
+        "3.6",
+        "0.39",
+        "738-845",
+        "287-1323",
+        "70.7"
+      ],
+      [
+        "",
+        "Fine",
+        "8.6",
+        "0.63",
+        "1.3",
+        "0.24",
+        "738-845",
+        "287-1323",
+        "70.7"
+      ],
+      [
+        "",
+        "Super Fine",
+        "",
+        "",
+        "",
+        "",
+        "738-845",
+        "287-1323",
+        "70.7"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "",
+      "length",
+      "length",
+      "length",
+      "length",
+      "power",
+      "capacity",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Advanced Hydraulic Protection System",
+      "description": "Integrated hydraulic protection mechanism provides real-time overload safety with automatic adjustment capability, preventing damage from uncrushable objects while maintaining maximum uptime. System reacts within 0.1 seconds to pressure spikes, reducing maintenance costs by up to 40% compared to conventional cone crushers."
+    },
+    {
+      "title": "Optimized Crushing Chamber Design",
+      "description": "Engineered crushing chambers with five different cavity configurations (super coarse to super fine) deliver superior particle shape across varied applications. Specialized chamber profiles increase throughput by 25% while producing consistently cubical products with minimal flakiness, significantly enhancing downstream material value."
+    },
+    {
+      "title": "Enhanced Crushing Force Distribution",
+      "description": "Precision-balanced force distribution through revolutionary triple-point load bearing design ensures even wear patterns and consistent product gradation. This technology maintains optimal crushing efficiency throughout the liner lifecycle, extending wear component service intervals by up to 30% compared to conventional designs."
+    },
+    {
+      "title": "User-friendly CSS Adjustment System",
+      "description": "Hydraulically-powered closed-side setting (CSS) adjustment with digital control allows precise product size management with 0.1mm accuracy. Operators can adjust crusher settings under load conditions without production stoppage, significantly improving operational flexibility and reducing configuration time by 85%."
+    },
+    {
+      "title": "High-performance Lubrication System",
+      "description": "Integrated forced lubrication system with dual-pump redundancy and intelligent oil temperature control maintains optimal operating conditions across ambient temperature ranges from -20°C to +50°C. Advanced filtration technology extends oil service life by 40%, reducing maintenance requirements and increasing crusher reliability."
+    },
+    {
+      "title": "Energy-efficient Drive Design",
+      "description": "Optimized power transmission system with high-efficiency motor and precision-engineered drive components reduces energy consumption by up to 30% compared to traditional cone crushers. The system maintains optimal crushing efficiency across varying feed conditions while minimizing power spikes during operation."
+    },
+    {
+      "title": "Premium Wear-resistant Materials",
+      "description": "Manganese steel liners with optimized metallurgical composition (14-22% Mn) provide exceptional wear resistance in high-abrasion applications. Advanced heat treatment process increases hardness profiles throughout the wear cycle, extending component life by 25-40% while maintaining crushing efficiency and product quality."
+    },
+    {
+      "title": "Intelligent Monitoring System",
+      "description": "Comprehensive sensor network continuously monitors critical parameters including lubrication pressure, hydraulic pressure, temperature, vibration, and power draw. Early warning system detects potential issues before failure, reducing unplanned downtime by up to 70% and enabling proactive maintenance scheduling based on actual operating conditions."
+    }
+  ],
+  "applications": {
+    "title": "Application Areas",
+    "items": [
+      {
+        "title": "Mining Operations",
+        "description": "Exceptional performance in medium to hard ore crushing applications including copper, gold, iron, zinc, and molybdenum mining. Delivers precise secondary and tertiary crushing with consistent product size distribution and minimal fines generation, making it ideal for operations requiring tight control over downstream processing."
+      },
+      {
+        "title": "Aggregate Production",
+        "description": "Produces premium-quality cubical aggregates with minimal flakiness for demanding construction applications including concrete, asphalt, and road base materials. Its precise particle shape control and adjustable output settings meet the most stringent industry specifications while maximizing production efficiency."
+      },
+      {
+        "title": "Hard Rock Processing",
+        "description": "Specialized design handles highly abrasive materials including granite, basalt, and quartzite with compression strengths up to 300 MPa. Advanced liner metallurgy and optimized crushing dynamics deliver superior performance in challenging applications where conventional crushers experience excessive wear and reduced productivity."
+      },
+      {
+        "title": "Metallurgical Processing",
+        "description": "Ideal for demanding metal ore concentration applications requiring precise control over material liberation and downstream efficiency. Delivers optimized product size distribution for grinding circuit feed preparation, improving mill throughput by 10-15% while reducing overall energy consumption in the processing circuit."
+      },
+      {
+        "title": "Cement Production",
+        "description": "Efficiently produces consistently sized limestone and other materials for cement manufacturing with precise control over product gradation. The hydraulic adjustment system enables rapid adaptation to varying material characteristics, ensuring uniform feed to downstream processes while maintaining production targets."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What are the main advantages of HP Series Hydraulic Cone Crushers compared to standard cone crushers?",
+      "answer": "HP Series crushers offer several distinct advantages: 1) Advanced hydraulic protection system that reacts instantly to uncrushable materials; 2) Optimized crushing chambers for superior product shape and gradation; 3) Higher processing capacity (15-30% more) within the same footprint; 4) Lower energy consumption per ton of material (20-30% reduction); 5) Simplified maintenance with hydraulic opening system; 6) Longer component lifespan due to premium metallurgy and balanced force distribution; 7) Greater operational flexibility with rapid CSS adjustment; 8) Intelligent monitoring capabilities for proactive maintenance planning."
+    },
+    {
+      "question": "How do I select the right cavity configuration for my HP Cone Crusher?",
+      "answer": "Cavity selection depends on your specific application requirements: 1) Super coarse cavity - primary crushing or feed sizes up to 350mm; 2) Coarse cavity - secondary crushing with feed sizes up to 250mm, for coarse product sizes; 3) Medium cavity - intermediate crushing for medium product sizes (10-25mm); 4) Fine cavity - tertiary crushing for smaller products (6-16mm); 5) Super fine cavity - finishing applications requiring very fine output (5-10mm). Key considerations include: feed material characteristics, desired product size distribution, crushing circuit configuration, and downstream processing requirements. Our application engineers can perform material testing to recommend the optimal cavity configuration."
+    },
+    {
+      "question": "What maintenance schedule is recommended for HP Series Cone Crushers?",
+      "answer": "For optimal performance, follow this maintenance schedule: 1) Daily inspections - visual checks of lubrication system, hydraulic pressure, and wear indicators; 2) Weekly maintenance - greasing of external bearings, belt tension checks, and liner wear measurement; 3) Monthly service - comprehensive inspection of all systems, oil and filter analysis; 4) Quarterly maintenance - replacement of filters and scheduled component inspection; 5) Annual overhaul - complete crusher inspection and preventive component replacement. Wear component replacement intervals vary by application, typically 1000-4000 hours for mantle and bowl liners depending on material abrasiveness. The maintenance-friendly design reduces service time by up to 50% compared to conventional crushers."
+    },
+    {
+      "question": "How does the hydraulic adjustment system improve crusher performance?",
+      "answer": "The hydraulic adjustment system provides four critical performance advantages: 1) Precise CSS control - allows 0.1mm accuracy in setting adjustments, ensuring exact product size control; 2) Dynamic adjustment - settings can be changed while the crusher is running under load, eliminating production stoppage; 3) Overload protection - automatically detects and responds to uncrushable materials, preventing damage to critical components; 4) Quick maintenance access - hydraulic opening system reduces maintenance downtime by up to 60%. These features combine to increase overall equipment effectiveness (OEE) by 15-25% while improving product consistency and reducing operational risk."
+    },
+    {
+      "question": "What types of materials can be processed with the HP Series Cone Crusher?",
+      "answer": "HP Series crushers are designed for medium to hard materials with compression strengths up to 300 MPa. They efficiently process a wide range of materials including: 1) Hard rock - granite, basalt, quartzite, and hard limestone; 2) Metal ores - copper, gold, iron, molybdenum, and zinc ores; 3) Industrial minerals - barite, fluorite, and phosphate rock; 4) Construction materials - various aggregate types for concrete and asphalt production. They are not recommended for highly plastic materials with high clay content, extremely abrasive materials (>22% silica content) without special liner configurations, or materials with moisture content exceeding 8-10%."
+    },
+    {
+      "question": "How can I optimize the performance and efficiency of my HP Cone Crusher?",
+      "answer": "Performance optimization involves several key practices: 1) Maintain consistent feed distribution - use appropriate chute design and level sensors to prevent segregation; 2) Control feed rate - utilize a proper feeder to maintain 70-80% of rated capacity for optimal efficiency; 3) Ensure proper feed sizing - stay within recommended maximum feed size limits; 4) Monitor and control CSS - adjust settings based on wear progression and product requirements; 5) Implement proper dust control measures; 6) Maintain lubrication and hydraulic systems according to specifications; 7) Use the intelligent monitoring system to track performance trends; 8) Schedule regular liner inspections and rotations to ensure even wear. These practices can increase productivity by 15-25% and extend component life by 20-40%."
+    },
+    {
+      "question": "What factors determine the capacity of HP Series Cone Crushers?",
+      "answer": "Crusher capacity is influenced by several factors: 1) Crusher model and size - larger models process more material (HP200 to HP800 range from 90 to 1200 t/h); 2) Cavity configuration - coarser cavities typically have higher throughput than finer cavities; 3) CSS setting - wider settings increase capacity but produce coarser products; 4) Feed material characteristics - hardness, abrasiveness, and moisture content significantly impact throughput; 5) Feed size distribution - properly sized feed maximizes efficiency; 6) Material density - heavier materials reduce volumetric capacity; 7) Crusher speed setting - optimized for material type and desired product; 8) Crushing ratio requirements - higher reduction ratios may reduce capacity. Our application engineers can perform material testing to predict actual performance for your specific application."
+    },
+    {
+      "question": "How does the HP Cone Crusher contribute to reducing operational costs?",
+      "answer": "HP Series crushers deliver significant cost reductions through: 1) Energy efficiency - 20-30% lower power consumption per ton compared to conventional crushers; 2) Higher throughput - 15-30% increased capacity within the same footprint; 3) Superior product shape - reduces downstream processing costs and increases product value; 4) Extended wear life - premium metallurgy and optimized crushing dynamics extend component lifespan by 25-40%; 5) Reduced maintenance - hydraulic systems and intelligent monitoring reduce service time and frequency; 6) Lower lubricant consumption - advanced lubrication system extends oil life; 7) Decreased downtime - automation and protection systems maintain productivity; 8) Improved product yield - consistent gradation maximizes saleable product. These advantages typically result in 15-25% lower cost per ton processed."
+    },
+    {
+      "question": "What safety features are incorporated into the HP Series Cone Crusher?",
+      "answer": "The HP Series incorporates comprehensive safety systems: 1) Automated tramp relief system protects against uncrushable materials; 2) Pressure relief valves prevent hydraulic system overload; 3) Emergency stop systems accessible from multiple locations; 4) Enclosed design with safety interlocks to prevent access during operation; 5) Temperature sensors on critical bearings and oil circulation system; 6) Vibration monitoring to detect imbalance or liner failure; 7) Overload protection through motor current monitoring; 8) Low-speed maintenance drive for safe inspection procedures; 9) Anti-spin device prevents counter-rotation during shutdown. These features comply with international safety standards including CE, OSHA, and ISO requirements."
+    },
+    {
+      "question": "How does the HP Cone Crusher technology support environmental sustainability?",
+      "answer": "The HP Series contributes to sustainability through: 1) Energy efficiency - 20-30% reduction in power consumption minimizes carbon footprint; 2) Improved product yield - maximizes resource utilization from raw materials; 3) Superior product shape - increases downstream efficiency, further reducing overall energy usage; 4) Reduced maintenance waste - extended component life decreases material consumption and disposal requirements; 5) Efficient dust control systems minimize particulate emissions; 6) Lower lubricant consumption and extended service intervals reduce oil waste; 7) Compact footprint minimizes required installation space; 8) Noise reduction through optimized crushing dynamics and enclosure design. These features help operations meet environmental compliance requirements while supporting corporate sustainability initiatives."
+    }
+  ],
+  "seo": {
+    "title": "HP Series Hydraulic Cone Crusher | High-efficiency Secondary & Tertiary Crushing",
+    "keywords": "hydraulic cone crusher,HP cone crusher,secondary crusher,tertiary crusher,hard rock crusher,aggregate crusher,mining cone crusher,high-efficiency crusher,hydraulic protection crusher,cone crusher specification,cone crusher applications,crusher maintenance,crusher selection,premium cone crusher,high-capacity crusher,energy-efficient crusher,hydraulic adjustment,automation crusher,intelligent crusher,cubical product crusher",
+    "description": "Zexin Mining's HP Series Hydraulic Cone Crusher delivers 30% higher throughput with superior product shape. Advanced hydraulic protection system and optimized chamber design ensure maximum uptime and exceptional performance in hard rock crushing applications."
+  },
+  "relatedProducts": [
+    "jaw-crusher",
+    "impact-crusher",
+    "hammer-crusher",
+    "double-roller-crusher",
+    "cone-crusher"
+  ],
+  "imageSrcAlt": "Hp Cone Crusher | Zexin Mining"
+}

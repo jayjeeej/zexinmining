@@ -1,0 +1,62 @@
+{
+  "id": "copper-lead-zinc",
+  "mineralName": "铜铅锌矿",
+  "title": "铜铅锌矿选矿工艺",
+  "processTitle": "铜铅锌矿选矿工艺流程",
+  "processIntroduction": "我们的铜铅锌矿选矿技术采用混合浮选-精矿再磨流程，通过避免对全部原矿进行精细磨矿，显著降低磨矿成本。这一工艺特别适用于矿物共生关系密切、嵌布粒度不均匀的复杂矿石，同时应用环保型浮选药剂，实现卓越的分离效率。",
+  "processSteps": [
+    {
+      "title": "破碎与初磨",
+      "description": "原矿经过阶段破碎至25毫米以下，随后进行初级磨矿以达到混合浮选所需的解离度。这种受控的粒度减小过程保持能源效率，同时确保初始分离阶段的矿物充分解离。"
+    },
+    {
+      "title": "铜铅混合浮选",
+      "description": "磨矿后的矿浆进入混合浮选工序，通过优化的药剂方案选择性回收铜和铅矿物，同时将锌矿物留在尾矿中。该阶段实施精确的药剂控制，遵循\"优先捕收\"原则，减少不必要的循环和矿物损失。"
+    },
+    {
+      "title": "精矿再磨",
+      "description": "铜铅混合精矿进行精细再磨，进一步解离嵌锁矿物并去除矿物表面残留的药剂。与传统的全料再磨工艺相比，这种选择性再磨方法显著降低了能耗。"
+    },
+    {
+      "title": "铜铅分离",
+      "description": "再磨后的混合精矿进入铜铅分离流程，使用专用抑制剂和捕收剂实现铜矿物的选择性浮选，同时抑制铅矿物。强化的泡沫冲洗技术最大限度减少夹带的杂质，显著提高精矿品位。"
+    },
+    {
+      "title": "锌回收",
+      "description": "铜铅混合浮选的尾矿经过活化剂和锌专用捕收剂调整后进入锌浮选流程。多级精选过程确保生产出杂质最少的高品位锌精矿。"
+    },
+    {
+      "title": "精矿脱水处理",
+      "description": "三种分离的精矿(铜、铅和锌)分别经过浓缩、过滤和干燥处理，生产出符合市场要求的产品。先进的脱水技术最大限度减少含水量，同时降低干燥过程的能耗。"
+    }
+  ],
+  "applicationsImage": "/images/products/mineral-processing-solutions/non-ferrous/copper-lead-zinc-beneficiation-process-flow.jpg",
+  "applications": [
+    {
+      "title": "复杂硫化矿处理",
+      "description": "我们优化的混合浮选-精矿再磨工艺在处理矿物关系复杂的铜铅锌硫化矿方面表现卓越，实现有效分离和高回收率。"
+    },
+    {
+      "title": "细粒级多金属矿处理",
+      "description": "选择性再磨方法对细粒嵌布的矿石特别有效，在传统加工方法难以在不过度消耗能源的情况下实现足够解离的情况下表现出色。"
+    },
+    {
+      "title": "低品位多金属矿床开发",
+      "description": "我们的技术通过优化磨矿和强化浮选性能降低加工成本，使以前边缘性的矿床能够实现经济回收。"
+    },
+    {
+      "title": "环境敏感区域作业",
+      "description": "采用先进的环保药剂系统和降低能源需求，我们的工艺特别适合在环境敏感区域或监管严格地区的作业。"
+    }
+  ],
+  "relatedProducts": [
+    "vibratory-feeder",
+    "wet-overflow-ball-mill",
+    "xfc-air-inflation-flotation-cell",
+    "hydrocyclone-separator",
+    "inclined-vibrating-screen",
+    "jaw-crusher",
+    "linear-vibrating-screen",
+    "cone-crusher"
+  ]
+}

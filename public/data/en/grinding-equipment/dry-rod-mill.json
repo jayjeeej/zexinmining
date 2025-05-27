@@ -1,0 +1,474 @@
+{
+  "id": "dry-rod-mill",
+  "title": "Dry Rod Mill",
+  "series": "ZMBS Series Dry Rod Mill",
+  "imageSrc": "/images/products/grinding-equipment/dry-rod-mill.jpg",
+  "productCategory": "Mineral Grinding Equipment",
+  "subcategory": "grinding-equipment",
+  "model": "ZMBS2130",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "0.62-180 t/h (0.68-198.4 stph)"
+    },
+    {
+      "key": "Feed Size",
+      "displayValue": "≤25 mm (≤0.98 in)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "18.5-630 kW (24.8-844.8 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.03937,
+          "label": "in"
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "short ton",
+          "conversionFactor": 1.1023,
+          "label": "short tons"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.1023,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.341,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/grinding-equipment/dry-rod-mill",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/grinding-equipment/dry-rod-mill",
+    "zh": "/zh/products/ore-processing/grinding-equipment/dry-rod-mill"
+  },
+  "overview": "Zexin Mining's MBS Series Dry Rod Mill delivers superior grinding performance with 20-30% lower energy consumption compared to standard dry ball mills. Specifically engineered for small to medium mining operations, this specialized grinding equipment produces consistent particle sizes between 0.833-0.147mm with minimal over-grinding and dust generation. Our dry rod mills combine advanced steel rod grinding media with innovative chamber design to ensure higher throughput, precise product gradation, and reduced operating costs across various mineral processing applications.",
+  "detailedDescription": "The MBS Series dry rod mill introduces innovative waterless grinding technology that transforms mineral processing in arid regions and applications requiring dry material handling. This specialized mill creates optimized particle size distribution through its uniquely arranged steel rod media, addressing common challenges with wet grinding while enhancing product quality. Its balanced approach to energy-efficient size reduction delivers consistent results across diverse ore types, making it valuable processing equipment for operations with water limitations or requiring dry downstream processing without compromising grinding efficiency.",
+  "specifications": {
+    "title": "MBS Series Dry Rod Mill Technical Parameters",
+    "note": "Can be customized according to customer requirements",
+    "tableHeaders": [
+      "Model",
+      "Cylinder Diameter (mm)",
+      "Cylinder Length (mm)",
+      "Rotation Speed (r/min)",
+      "Feed Size (mm)",
+      "Discharge Size (mm)",
+      "Capacity (t/h)",
+      "Motor Power (kW)",
+      "Weight (ton)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Cylinder Diameter (in.)",
+      "Cylinder Length (in.)",
+      "Rotation Speed (r/min)",
+      "Feed Size (in.)",
+      "Discharge Size (in.)",
+      "Capacity (stph)",
+      "Motor Power (hp)",
+      "Weight (ton)"
+    ],
+    "tableData": [
+      [
+        "ZMBS0918",
+        "900",
+        "1800",
+        "36-38",
+        "≤25",
+        "0.833-0.147",
+        "0.62-3.2",
+        "18.5",
+        "5.9"
+      ],
+      [
+        "ZMBS0924",
+        "900",
+        "2400",
+        "36",
+        "≤25",
+        "0.833-0.147",
+        "0.81-4.3",
+        "22",
+        "6.7"
+      ],
+      [
+        "ZMBS1224",
+        "1200",
+        "2400",
+        "36",
+        "≤25",
+        "0.833-0.147",
+        "1.1-4.9",
+        "30",
+        "13.9"
+      ],
+      [
+        "ZMBS1530",
+        "1500",
+        "3000",
+        "29.7",
+        "≤25",
+        "0.833-0.147",
+        "2.4-7.5",
+        "75",
+        "19.8"
+      ],
+      [
+        "ZMBS1830",
+        "1830",
+        "3000",
+        "25.4",
+        "≤25",
+        "0.833-0.147",
+        "4.8-11.6",
+        "130",
+        "34.9"
+      ],
+      [
+        "ZMBS2130",
+        "2100",
+        "3000",
+        "23.7",
+        "≤25",
+        "0.833-0.147",
+        "14-35",
+        "155",
+        "46.5"
+      ],
+      [
+        "ZMBS2136",
+        "2100",
+        "3600",
+        "23.7",
+        "≤25",
+        "0.833-0.147",
+        "19-43",
+        "180",
+        "48.7"
+      ],
+      [
+        "ZMBS2430",
+        "2400",
+        "3000",
+        "21",
+        "≤30",
+        "0.833-0.147",
+        "25-65",
+        "245",
+        "59.7"
+      ],
+      [
+        "ZMBS2736",
+        "2700",
+        "3600",
+        "20.7",
+        "≤30",
+        "0.833-0.147",
+        "32-86",
+        "380",
+        "92.5"
+      ],
+      [
+        "ZMBS2740",
+        "2700",
+        "4000",
+        "20.7",
+        "≤30",
+        "0.833-0.147",
+        "32-92",
+        "400",
+        "95"
+      ],
+      [
+        "ZMBS3245",
+        "3200",
+        "4500",
+        "18",
+        "≤30",
+        "0.833-0.147",
+        "64-180",
+        "630",
+        "149"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "ZMBS0918",
+        "35.43",
+        "70.87",
+        "36-38",
+        "≤0.98",
+        "0.033-0.006",
+        "0.68-3.53",
+        "24.8",
+        "5.9"
+      ],
+      [
+        "ZMBS0924",
+        "35.43",
+        "94.49",
+        "36",
+        "≤0.98",
+        "0.033-0.006",
+        "0.89-4.74",
+        "29.5",
+        "6.7"
+      ],
+      [
+        "ZMBS1224",
+        "47.24",
+        "94.49",
+        "36",
+        "≤0.98",
+        "0.033-0.006",
+        "1.21-5.40",
+        "40.3",
+        "13.9"
+      ],
+      [
+        "ZMBS1530",
+        "59.06",
+        "118.11",
+        "29.7",
+        "≤0.98",
+        "0.033-0.006",
+        "2.65-8.27",
+        "100.6",
+        "19.8"
+      ],
+      [
+        "ZMBS1830",
+        "72.05",
+        "118.11",
+        "25.4",
+        "≤0.98",
+        "0.033-0.006",
+        "5.29-12.79",
+        "174.3",
+        "34.9"
+      ],
+      [
+        "ZMBS2130",
+        "82.68",
+        "118.11",
+        "23.7",
+        "≤0.98",
+        "0.033-0.006",
+        "15.43-38.59",
+        "208",
+        "46.5"
+      ],
+      [
+        "ZMBS2136",
+        "82.68",
+        "141.73",
+        "23.7",
+        "≤0.98",
+        "0.033-0.006",
+        "20.94-47.40",
+        "241.4",
+        "48.7"
+      ],
+      [
+        "ZMBS2430",
+        "94.49",
+        "118.11",
+        "21",
+        "≤0.97",
+        "0.033-0.006",
+        "27.56-71.65",
+        "328.6",
+        "59.7"
+      ],
+      [
+        "ZMBS2736",
+        "106.30",
+        "141.73",
+        "20.7",
+        "≤0.97",
+        "0.033-0.006",
+        "35.27-94.80",
+        "509.6",
+        "92.5"
+      ],
+      [
+        "ZMBS2740",
+        "106.30",
+        "157.48",
+        "20.7",
+        "≤0.97",
+        "0.033-0.006",
+        "35.27-101.41",
+        "536.4",
+        "95"
+      ],
+      [
+        "ZMBS3245",
+        "126.00",
+        "177.17",
+        "18",
+        "≤0.97",
+        "0.033-0.006",
+        "70.55-198.41",
+        "844.8",
+        "149"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "length",
+      "",
+      "length",
+      "length",
+      "capacity",
+      "power",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Energy-Efficient Grinding Technology",
+      "description": "Advanced cylinder design and optimized rod pattern reduces energy consumption by 20-30% compared to conventional dry ball mills, with special liner design that minimizes energy loss while maximizing grinding efficiency, resulting in significantly lower operational costs for small to medium mining operations."
+    },
+    {
+      "title": "Superior Particle Size Control",
+      "description": "Steel rod grinding media creates linear contact grinding action that produces uniform product size distribution with 40% fewer fines compared to ball mills. The parallel arrangement of grinding rods eliminates over-grinding while delivering precise size reduction to 0.833-0.147mm, ideal for applications requiring consistent particle sizing."
+    },
+    {
+      "title": "Waterless Operation Capability",
+      "description": "Complete dry grinding system eliminates water requirements, making it ideal for mining operations in arid regions or where water conservation is critical. Integrated dust collection system captures 95% of airborne particles, creating an environmentally responsible dry grinding solution that reduces water consumption while maintaining processing efficiency."
+    },
+    {
+      "title": "Reduced Equipment Footprint",
+      "description": "Compact design with 25% smaller footprint compared to wet grinding systems of equivalent capacity, eliminating need for thickeners, water recycling systems, and slurry pumps. This space-efficient configuration reduces infrastructure requirements and capital investment, making it particularly suitable for small mining enterprises with space constraints."
+    },
+    {
+      "title": "Enhanced Maintenance Accessibility",
+      "description": "Large inspection doors and modular liner design allow for 40% faster maintenance access compared to conventional mills. Quick-release rod discharge system enables complete rod media replacement in under 8 hours, reducing maintenance downtime and increasing operational availability for higher annual throughput."
+    }
+  ],
+  "applications": {
+    "title": "Application Areas",
+    "items": [
+      {
+        "title": "Gold and Silver Processing",
+        "description": "Provides superior dry grinding for precious metal ores prior to leaching or direct smelting. The precise particle size control (0.833-0.147mm) improves gold and silver liberation while minimizing over-grinding, resulting in 5-15% higher recovery rates. Particularly effective for operations in water-scarce regions where conventional wet grinding is problematic, the MBS Series enables small to medium gold mining operations to achieve professional processing results with lower investment and operating costs."
+      },
+      {
+        "title": "Non-ferrous Metal Ore Processing",
+        "description": "Optimized for copper, lead, zinc, and tin ores where controlled particle size directly impacts downstream recovery efficiency. The linear grinding action of steel rods produces ideally shaped particles with minimal fines generation, improving concentrate grade and recovery in subsequent dry separation processes. Especially valuable for small mining operations processing complex ores, the dry grinding capability eliminates the need for water management infrastructure while reducing metal oxide formation that can interfere with flotation recovery."
+      },
+      {
+        "title": "Industrial Minerals Production",
+        "description": "Delivers precise size reduction for feldspar, quartz, limestone, talc, barite, and other industrial minerals requiring specific particle size distribution. The dry grinding process preserves mineral properties essential for ceramics, glass, fillers, and construction applications while maintaining precise product specifications. With energy consumption 20-30% lower than ball mills, the MBS Series offers small mineral processors significant operating cost advantages while producing higher-value industrial mineral products with tighter size control."
+      },
+      {
+        "title": "Cement and Construction Materials",
+        "description": "Provides efficient dry processing for cement raw materials, clinker, and various construction aggregates. The rod mill's ability to produce cubical particles with minimal fines improves cement quality and strength development while reducing binder requirements. Small to medium cement producers benefit from lower energy consumption and maintenance costs compared to conventional grinding systems, while the dust control system ensures environmental compliance and material conservation."
+      },
+      {
+        "title": "Rare Earth and Strategic Minerals",
+        "description": "Specialized grinding solution for rare earth elements (REEs), tungsten, molybdenum, and other strategic minerals where precise liberation and minimal contamination are critical. The dry processing capability prevents mineral dissolution and chemical reactions that can complicate downstream recovery, while the adjustable grinding parameters allow optimization for different ore characteristics. Small mining operations processing high-value strategic minerals benefit from the lower investment costs and simplified flowsheet, making previously marginal deposits economically viable."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What are the key differences between a dry rod mill and a dry ball mill?",
+      "answer": "Dry rod mills and dry ball mills differ in several fundamental ways: 1) Grinding media - rod mills use steel rods (50-100mm diameter) arranged parallel to the mill axis, while ball mills use spherical balls of various sizes; 2) Grinding action - rods create linear contact with material, producing more uniform particle size distribution with fewer fines, while balls create point contact, generating more fines; 3) Size reduction ratio - rod mills typically have ratios of 15:1 to 20:1, while ball mills can achieve 50:1 or higher; 4) Product size - rod mills excel at producing material between 0.833-0.147mm, while ball mills are better suited for finer grinding below 0.075mm; 5) Energy efficiency - rod mills consume 20-30% less power than ball mills for comparable capacity in the medium size range. The MBS Series dry rod mill is specifically designed for applications requiring precise particle sizing with minimal fines generation, optimal for small to medium mining operations processing 14-35 tons per hour."
+    },
+    {
+      "question": "What maintenance requirements should be expected for the MBS Series Dry Rod Mill?",
+      "answer": "Effective maintenance of the MBS Series requires attention to several key areas: 1) Rod media inspection - check every 500-700 operating hours for uneven wear, bending, or breakage, with typical rod replacement intervals of 3,000-5,000 hours depending on material abrasiveness; 2) Liner inspection - examine every 1,500-2,000 hours, with complete replacement typically required after 8,000-12,000 hours; 3) Bearing lubrication - follow a strict weekly schedule using high-temperature grease; 4) Drive system - monthly inspection of gears, pinions, and motor alignment; 5) Dust collection system - daily cleaning of filters and weekly inspection of seals and ducting; 6) Feed and discharge systems - weekly checks for wear and proper operation. The mill features large inspection doors and modular design allowing maintenance access without complete disassembly. Our comprehensive documentation includes detailed maintenance schedules, and we recommend keeping critical spare parts (rods, liners, bearings) in inventory to minimize downtime. With proper maintenance, the MBS Series typically achieves 95%+ operational availability."
+    },
+    {
+      "question": "How does material moisture content affect dry rod mill performance?",
+      "answer": "Material moisture content significantly impacts dry rod mill performance. The MBS Series performs optimally with feed moisture below 4%, with performance declining proportionally as moisture increases. Beyond 6-7% moisture, material begins adhering to grinding media and mill linings, reducing grinding efficiency by 15-25% and increasing energy consumption. At moisture levels exceeding 8-10%, material caking and blinding of discharge screens becomes severe, potentially causing complete mill overload and shutdown. For materials with inherent moisture above 4%, we recommend incorporating a pre-drying stage in the processing circuit. The MBS Series includes several features to manage moderate moisture, including specialized lifter designs that enhance material movement, heated mill shell options to prevent material buildup, and upgraded dust collection systems that accommodate moisture-laden air. For operations processing materials with variable moisture content, our engineering team can design customized solutions that maintain grinding efficiency while accommodating moisture fluctuations."
+    },
+    {
+      "question": "What feed size and capacity options are available for different applications?",
+      "answer": "The MBS Series accommodates various feed size and capacity requirements: 1) Standard configuration handles feed sizes up to 25mm for smaller models and up to 50mm for larger models, with capacity ranges from 0.62-3.2 t/h for the smallest unit (MBS0918) to 64-180 t/h for the largest (MBS3245); 2) Feed size directly impacts capacity - each 10% increase in feed size above recommended specifications reduces capacity by approximately 15-20%; 3) Material hardness significantly affects throughput - capacity ratings are based on medium-hardness materials (Bond Work Index 12-14 kWh/t), with capacity decreasing by approximately 10-15% for every 2 kWh/t increase in hardness; 4) Desired product fineness also impacts capacity - production rates are based on standard discharge sizes (0.833-0.147mm), with capacity decreasing by 20-30% when producing finer material. Our engineering team provides detailed capacity calculations based on your specific material characteristics and size reduction requirements, ensuring appropriate model selection for your application."
+    },
+    {
+      "question": "What advantages does the MBS Series offer for small to medium mining operations?",
+      "answer": "The MBS Series offers several distinct advantages for small to medium mining operations: 1) Lower capital investment - simplified dry processing eliminates costs for water management systems, thickeners, and slurry handling equipment, reducing initial investment by 25-40% compared to wet grinding circuits; 2) Reduced infrastructure requirements - smaller footprint and elimination of water requirements allow installation in remote or water-scarce locations; 3) Simplified operation - straightforward mechanical design with fewer components reduces operational complexity and staffing requirements; 4) Lower operating costs - 20-30% energy savings combined with reduced water, chemical and waste management costs significantly improve processing economics; 5) Flexible throughput - maintains efficiency across varying production rates (50-100% of capacity), allowing operations to scale processing based on ore availability; 6) Environmental advantages - elimination of slurry handling reduces environmental risks while integrated dust collection minimizes airborne emissions; 7) Faster commissioning - typically operational within 15-20 days of installation versus 30-45 days for wet grinding systems. These advantages make professional mineral processing accessible to smaller operations that previously found conventional grinding systems prohibitively expensive or complex, improving the economic viability of modest-sized mineral deposits."
+    },
+    {
+      "question": "How does the MBS Series dry rod mill control dust during operation?",
+      "answer": "The MBS Series incorporates a comprehensive dust management system: 1) Sealed mill construction with pressurized labyrinth seals at trunnion bearings prevents dust leakage at rotation points; 2) Integrated negative pressure dust collection system with high-efficiency cyclones captures 95%+ of airborne particles during operation; 3) Strategic feed chute design with airlock mechanisms minimizes dust escape during material charging; 4) Advanced pulse-jet filtration system with automatic cleaning cycles ensures continuous dust collection without performance degradation; 5) Optional HEPA filtration available for operations processing materials containing silica or other hazardous components; 6) Computerized monitoring continuously measures differential pressure across filters to maintain optimal collection efficiency; 7) Collected dust is automatically returned to the product stream, eliminating material loss; 8) The system maintains negative pressure throughout the milling circuit, preventing dust migration to other plant areas. This comprehensive approach ensures operator safety, environmental compliance, and material conservation while maintaining a clean working environment. The dust collection system is engineered for minimal maintenance, with access ports for inspection and component replacement without disrupting mill operation."
+    }
+  ],
+  "seo": {
+    "title": "Dry Rod Mill | Precision Grinding with Minimal Over-Milling for Mining",
+    "keywords": "dry rod mill,rod mill machine,mineral rod mill,energy efficient rod mill,uniform particle grinding,dry milling equipment,rod mill for mining,precise size reduction,minimal over-grinding,rod mill applications,industrial rod mills,medium-size grinding,small mine equipment,water-saving grinding,mining rod mill",
+    "description": "Zexin Mining's dry rod mill delivers uniform 0.833-0.147mm particles with 40% fewer fines and 30% energy savings. Perfect for precise size control in copper and gold processing, eliminating water needs with simplified operation."
+  },
+  "relatedProducts": [
+    "dry-ball-mill",
+    "wet-energy-saving-grid-ball-mill",
+    "wet-rod-mill",
+    "wet-grid-ball-mill",
+    "wet-overflow-ball-mill"
+  ],
+  "imageSrcAlt": "Dry Rod Mill | Zexin Mining"
+}

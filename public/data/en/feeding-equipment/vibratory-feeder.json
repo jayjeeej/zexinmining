@@ -1,0 +1,637 @@
+{
+  "id": "vibratory-feeder",
+  "title": "Vibratory Feeder",
+  "series": "ZG Series Heavy-Duty Vibratory Feeders",
+  "imageSrc": "/images/products/feeding-equipment/vibratory-feeder.jpg",
+  "productCategory": "Mineral Processing Equipment",
+  "subcategory": "feeding-equipment",
+  "model": "ZG100-4",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "30-1400 t/h (33-1543 stph)"
+    },
+    {
+      "key": "Feed Size",
+      "displayValue": "Up to 500 mm (19.7 in.)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "2x0.25-2x5.5 kW (2x0.34-2x7.38 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "ton/h",
+          "conversionFactor": 1.10231,
+          "label": "ton/h"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ],
+      "frequency": [
+        {
+          "unit": "r/min",
+          "conversionFactor": 1,
+          "label": "r/min"
+        },
+        {
+          "unit": "r/min",
+          "conversionFactor": 1,
+          "label": "r/min"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/feeding-equipment/vibratory-feeder",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/feeding-equipment/vibratory-feeder",
+    "zh": "/zh/products/ore-processing/feeding-equipment/vibratory-feeder"
+  },
+  "overview": "Zexin Mining's ZG Series Vibratory Feeders deliver exceptional material handling performance in demanding mining operations. With dual vibration motor design and robust trough construction, these high-efficiency feeders ensure reliable, uniform feeding while providing consistent throughput for maximum productivity in challenging environments.",
+  "detailedDescription": "The ZG Series vibratory feeder introduces advanced engineering that transforms bulk material handling in mining and aggregate operations. This precision-engineered system creates optimized material flow through its synchronized dual-motor vibration mechanism, addressing common feeding challenges while enhancing production efficiency. Its balanced approach to controlled material delivery provides consistent results across varying load conditions, making it essential processing equipment that adapts to different material characteristics without compromising operational reliability.",
+  "specifications": {
+    "title": "Vibratory Feeder Specifications",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Max. Feed Size (mm)",
+      "Vibration Frequency (r/min)",
+      "Double Amplitude (mm)",
+      "Capacity (t/h) - Horizontal",
+      "Capacity (t/h) - 10° Decline",
+      "Motor Power (kW)",
+      "Trough Dimensions (mm)",
+      "Overall Dimensions (mm)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Max. Feed Size (in.)",
+      "Vibration Frequency (r/min)",
+      "Double Amplitude (in.)",
+      "Capacity (ton/h) - Horizontal",
+      "Capacity (ton/h) - 10° Decline",
+      "Motor Power (hp)",
+      "Trough Dimensions (in.)",
+      "Overall Dimensions (in.)"
+    ],
+    "tableData": [
+      [
+        "ZG40-4",
+        "100",
+        "1450",
+        "4",
+        "30",
+        "40",
+        "2x0.25",
+        "400×1000×200",
+        "1337×750×600"
+      ],
+      [
+        "ZG50-4",
+        "150",
+        "1450",
+        "4",
+        "60",
+        "85",
+        "2x0.25",
+        "500×1000×200",
+        "1374×800×630"
+      ],
+      [
+        "ZG63-4",
+        "200",
+        "1450",
+        "4",
+        "110",
+        "150",
+        "2x0.50",
+        "630×1250×250",
+        "1648×1000×767"
+      ],
+      [
+        "ZG70-4",
+        "200",
+        "1450",
+        "4",
+        "120",
+        "170",
+        "2x0.50",
+        "700×1290×250",
+        "1548×1010×787"
+      ],
+      [
+        "ZG80-4",
+        "250",
+        "1450",
+        "4",
+        "160",
+        "230",
+        "2x0.75",
+        "800×1500×250",
+        "1910×1188×850"
+      ],
+      [
+        "ZG90-4",
+        "250",
+        "1450",
+        "4",
+        "180",
+        "250",
+        "2x0.75",
+        "900×1483×250",
+        "2003×1178×960"
+      ],
+      [
+        "ZG100-4",
+        "300",
+        "1450",
+        "4-6",
+        "270",
+        "380",
+        "2x1.1",
+        "1000×1750×250",
+        "2190×1362×900"
+      ],
+      [
+        "ZG100-4Z",
+        "350",
+        "1450",
+        "4-6",
+        "270",
+        "380",
+        "2x1.5",
+        "1000×1700×250",
+        "2165×1716×1068"
+      ],
+      [
+        "ZG110-4",
+        "300",
+        "1450",
+        "4-6",
+        "300",
+        "420",
+        "2x1.1",
+        "1100×1673×250",
+        "2151×1362×970"
+      ],
+      [
+        "ZG110-4Z",
+        "350",
+        "1450",
+        "4-6",
+        "300",
+        "420",
+        "2x1.5",
+        "1100×1700×250",
+        "2165×1816×1068"
+      ],
+      [
+        "ZG125-4",
+        "350",
+        "1450",
+        "4-6",
+        "460",
+        "650",
+        "2x2.25",
+        "1250×2000×315",
+        "2540×1500×1030"
+      ],
+      [
+        "ZG125-4Z",
+        "350",
+        "1450",
+        "4-6",
+        "460",
+        "650",
+        "2x2.25",
+        "1250×1800×300",
+        "2273×1970×1176"
+      ],
+      [
+        "ZG130-4",
+        "350",
+        "1450",
+        "4-6",
+        "480",
+        "670",
+        "2x2.25",
+        "1300×2040×300",
+        "2544×1556×1084"
+      ],
+      [
+        "ZG150-6",
+        "350",
+        "960",
+        "4-6",
+        "520",
+        "750",
+        "2x3.0",
+        "1500×1800×400",
+        "2250×1864×1412"
+      ],
+      [
+        "ZG150-6Z",
+        "350",
+        "960",
+        "4-6",
+        "520",
+        "750",
+        "2x3.0",
+        "1500×1800×400",
+        "2289×2180×1302"
+      ],
+      [
+        "ZG160-6Z",
+        "500",
+        "1450",
+        "5-6",
+        "770",
+        "1100",
+        "2x3.2",
+        "1600×2500×315",
+        "3050×1850×1110"
+      ],
+      [
+        "ZG180-6Z",
+        "500",
+        "1450",
+        "5-6",
+        "900",
+        "1200",
+        "2x3.7",
+        "1800×2325×375",
+        "2885×2210×1260"
+      ],
+      [
+        "ZG200-6Z",
+        "500",
+        "1450",
+        "5-6",
+        "1000",
+        "1400",
+        "2x5.5",
+        "2000×3000×280",
+        "3490×2400×1220"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "ZG40-4",
+        "3.9",
+        "1450",
+        "0.16",
+        "33",
+        "44",
+        "2x0.34",
+        "15.7×39.4×7.9",
+        "52.6×29.5×23.6"
+      ],
+      [
+        "ZG50-4",
+        "5.9",
+        "1450",
+        "0.16",
+        "66",
+        "94",
+        "2x0.34",
+        "19.7×39.4×7.9",
+        "54.1×31.5×24.8"
+      ],
+      [
+        "ZG63-4",
+        "7.9",
+        "1450",
+        "0.16",
+        "121",
+        "165",
+        "2x0.67",
+        "24.8×49.2×9.8",
+        "64.9×39.4×30.2"
+      ],
+      [
+        "ZG70-4",
+        "7.9",
+        "1450",
+        "0.16",
+        "132",
+        "187",
+        "2x0.67",
+        "27.6×50.8×9.8",
+        "61.0×39.8×31.0"
+      ],
+      [
+        "ZG80-4",
+        "9.8",
+        "1450",
+        "0.16",
+        "176",
+        "254",
+        "2x1.01",
+        "31.5×59.1×9.8",
+        "75.2×46.8×33.5"
+      ],
+      [
+        "ZG90-4",
+        "9.8",
+        "1450",
+        "0.16",
+        "198",
+        "276",
+        "2x1.01",
+        "35.4×58.4×9.8",
+        "78.9×46.4×37.8"
+      ],
+      [
+        "ZG100-4",
+        "11.8",
+        "1450",
+        "0.16-0.24",
+        "298",
+        "419",
+        "2x1.48",
+        "39.4×68.9×9.8",
+        "86.2×53.6×35.4"
+      ],
+      [
+        "ZG100-4Z",
+        "13.8",
+        "1450",
+        "0.16-0.24",
+        "298",
+        "419",
+        "2x2.01",
+        "39.4×66.9×9.8",
+        "85.2×67.6×42.0"
+      ],
+      [
+        "ZG110-4",
+        "11.8",
+        "1450",
+        "0.16-0.24",
+        "331",
+        "463",
+        "2x1.48",
+        "43.3×65.9×9.8",
+        "84.7×53.6×38.2"
+      ],
+      [
+        "ZG110-4Z",
+        "13.8",
+        "1450",
+        "0.16-0.24",
+        "331",
+        "463",
+        "2x2.01",
+        "43.3×66.9×9.8",
+        "85.2×71.5×42.0"
+      ],
+      [
+        "ZG125-4",
+        "13.8",
+        "1450",
+        "0.16-0.24",
+        "507",
+        "716",
+        "2x3.02",
+        "49.2×78.7×12.4",
+        "100.0×59.1×40.6"
+      ],
+      [
+        "ZG125-4Z",
+        "13.8",
+        "1450",
+        "0.16-0.24",
+        "507",
+        "716",
+        "2x3.02",
+        "49.2×70.9×11.8",
+        "89.5×77.6×46.3"
+      ],
+      [
+        "ZG130-4",
+        "13.8",
+        "1450",
+        "0.16-0.24",
+        "529",
+        "738",
+        "2x3.02",
+        "51.2×80.3×11.8",
+        "100.2×61.3×42.7"
+      ],
+      [
+        "ZG150-6",
+        "13.8",
+        "960",
+        "0.16-0.24",
+        "573",
+        "826",
+        "2x4.02",
+        "59.1×70.9×15.7",
+        "88.6×73.4×55.6"
+      ],
+      [
+        "ZG150-6Z",
+        "13.8",
+        "960",
+        "0.16-0.24",
+        "573",
+        "826",
+        "2x4.02",
+        "59.1×70.9×15.7",
+        "90.1×85.8×51.3"
+      ],
+      [
+        "ZG160-6Z",
+        "19.7",
+        "1450",
+        "0.20-0.24",
+        "848",
+        "1212",
+        "2x4.29",
+        "63.0×98.4×12.4",
+        "120.1×72.8×43.7"
+      ],
+      [
+        "ZG180-6Z",
+        "19.7",
+        "1450",
+        "0.20-0.24",
+        "992",
+        "1322",
+        "2x4.96",
+        "70.9×91.5×14.8",
+        "113.6×87.0×49.6"
+      ],
+      [
+        "ZG200-6Z",
+        "19.7",
+        "1450",
+        "0.20-0.24",
+        "1102",
+        "1543",
+        "2x7.38",
+        "78.7×118.1×11.0",
+        "137.4×94.5×48.0"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "frequency",
+      "length",
+      "capacity",
+      "capacity",
+      "power",
+      "length",
+      "length"
+    ]
+  },
+  "features": [
+    {
+      "title": "Synchronized Dual Motor Drive",
+      "description": "Equipped with paired vibration motors with eccentric weights that operate in perfect synchronization to produce precise, directional vibration forces. This self-balancing drive system provides consistent material flow while minimizing structural stress and energy consumption, delivering up to 25% higher efficiency compared to conventional feeders."
+    },
+    {
+      "title": "Heavy-Duty Trough Design",
+      "description": "Constructed with premium wear-resistant steel and strategically incorporated reinforcing ribs to prevent deformation under extreme load conditions. The optimized geometry features a tapered design that eliminates material buildup while evenly distributing feed across the entire width, handling particles up to 500mm with minimal wear."
+    },
+    {
+      "title": "Adjustable Vibration Parameters",
+      "description": "Controls amplitude through adjustable eccentric weights and frequency through variable speed drive technology, enabling precise adjustment of material flow characteristics. Operators can optimize vibration parameters between 4-6mm amplitude at frequencies of 960-1450 r/min to suit specific material properties and production requirements."
+    },
+    {
+      "title": "Advanced Isolation System",
+      "description": "Features heavy-duty compression springs and elastomeric vibration isolators that effectively contain vibration energy within the feeder assembly. This isolation system prevents vibration transmission to supporting structures, extending equipment life while eliminating up to 95% of dynamic forces to prevent foundation fatigue."
+    },
+    {
+      "title": "Wear-Resistant Liner System",
+      "description": "Equipped with replaceable trough liners manufactured from specialized wear-resistant materials, providing up to 300% longer service life compared to standard steel. Modular design allows targeted replacement of high-wear areas, significantly reducing maintenance costs and downtime in demanding applications."
+    },
+    {
+      "title": "Versatile Installation Options",
+      "description": "Designed with multiple mounting configurations to accommodate various feed arrangements and space constraints. The compact footprint and flexible orientation options (horizontal or 10° inclined) efficiently integrate into existing operations, reducing installation costs while maximizing available space utilization."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Primary Crushing Circuits",
+        "description": "Provides controlled feeding to primary crushers in mining operations, handling feed sizes up to 500mm while ensuring consistent material distribution. The vibration mechanism prevents material bridging and ratholing in hoppers, maintaining stable throughput rates up to 1400 t/h and extending crusher liner life through even loading."
+      },
+      {
+        "title": "Screening Operations",
+        "description": "Delivers precise material conveyance to screening equipment in quarry and aggregate processing facilities. Adjustable vibration parameters optimize material stratification and screening efficiency, preventing screen blinding while ensuring maximum separation effectiveness and production rates."
+      },
+      {
+        "title": "Sand & Aggregate Processing",
+        "description": "Controls the flow of excavated material in construction aggregate production, providing metered feeding to washing, classification, and dewatering equipment. The robust design handles abrasive materials while maintaining consistent feed rates to ensure optimal downstream process performance."
+      },
+      {
+        "title": "Recycling Facilities",
+        "description": "Manages the flow of mixed waste materials including construction debris, glass, and various recyclables. Powerful vibration action prevents material bridging while effectively separating fines through optional perforated deck designs, improving downstream sorting efficiency and increasing recovery rates."
+      },
+      {
+        "title": "Coal Handling Systems",
+        "description": "Effectively controls coal extraction and transport from receiving hoppers to processing equipment in power generation applications. Sealed designs minimize dust generation while handling variations in material moisture content, maintaining consistent feed rates regardless of material characteristics."
+      },
+      {
+        "title": "Cement Production",
+        "description": "Provides reliable extraction and transport of limestone, clay, and additives from hoppers to processing equipment. The heavy-duty structure withstands the abrasiveness of cement materials, while variable speed control enables precise blending of different feed components, ensuring consistent raw material quality."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does a vibratory feeder work?",
+      "answer": "The vibratory feeder uses dual motor-driven eccentric weights to produce directional vibration forces. When synchronized, these motors create specific vibration patterns that effectively convey material forward at controlled rates. Feed material enters the reinforced trough, which transforms vibration energy into material motion. As the entire trough assembly vibrates at frequencies of 960-1450 r/min with 4-6mm amplitude, material is propelled through a combination of vertical tossing action and horizontal advancement. This mechanical approach provides superior reliability when handling various materials while offering precise flow control through adjustable vibration parameters. The isolation system, consisting of heavy-duty springs or rubber mounts, contains vibration within the feeder assembly while preventing transmission to supporting structures."
+    },
+    {
+      "question": "What advantages do vibratory feeders offer compared to other feeding equipment?",
+      "answer": "Vibratory feeders provide several key advantages: 1) Superior energy efficiency with 20-30% lower power consumption than alternative technologies; 2) Minimal maintenance requirements with fewer moving parts and no rotating components in contact with material; 3) Precise feed rate control through adjustable vibration parameters; 4) Excellent handling capability for difficult materials, including sticky, abrasive, or irregular particles; 5) Compact footprint requiring less installation space; 6) Self-cleaning operation preventing material buildup; 7) Ability to handle hot materials when equipped with special liners; 8) Lower noise levels compared to mechanical alternatives; 9) Fewer wear components and longer service life; 10) More flexible feed rate adjustment without mechanical modifications; 11) Ability to operate in inclined configurations, achieving both conveying and dewatering; 12) Easier integration with automated control systems."
+    },
+    {
+      "question": "What types of materials can ZG Series vibratory feeders handle?",
+      "answer": "ZG Series vibratory feeders effectively process a wide range of materials including: 1) Crushed rock and ore up to 500mm in size; 2) Coal and lignite with varying moisture content; 3) Sand, gravel, and construction aggregates; 4) Limestone, clay, and other cement raw materials; 5) Recycled construction waste and demolition debris; 6) Various metals and alloys in foundry applications; 7) Agricultural products including grains, fertilizers, and biomass; 8) Food ingredients in industrial processing; 9) Chemical compounds and minerals requiring controlled feeding; 10) Hot materials up to 350°C when equipped with heat-resistant components. This versatile design makes these feeders suitable for virtually any free-flowing bulk material regardless of particle size, abrasiveness, or density."
+    },
+    {
+      "question": "How is the capacity of a vibratory feeder determined?",
+      "answer": "Determining vibratory feeder capacity involves several key factors: 1) Trough width and length dimensions, defining the effective conveying surface; 2) Material characteristics including bulk density, particle size, and flowability; 3) Vibration parameters including frequency (typically 960-1450 r/min) and amplitude (4-6mm); 4) Trough inclination angle (horizontal or 10° inclined); 5) Material bed depth on the trough; 6) Material coefficient of friction; 7) Required conveying distance. Our engineering team uses specialized calculation methods incorporating these variables to determine appropriate feeder sizing for specific applications. For most materials, ZG Series feeders achieve capacity ranges from 30 t/h in smaller models to 1400 t/h in larger configurations, typically performing optimally at 70-80% of maximum rated capacity to accommodate feed variations."
+    },
+    {
+      "question": "What maintenance procedures are required for vibratory feeders?",
+      "answer": "Effective vibratory feeder maintenance includes: 1) Regular inspection of motor bearings and lubrication at specified intervals (typically every 2,000 operating hours); 2) Checking vibration motors for proper synchronization and operation; 3) Inspecting spring or rubber isolation systems for wear or damage; 4) Checking trough liner condition and replacing when worn; 5) Verifying proper torque and integrity of all fasteners and structural components; 6) Checking electrical connections and control components; 7) Monitoring amplitude to ensure it remains within specified range; 8) Cleaning any material buildup, especially in transition areas; 9) Verifying proper power consumption and current draw. With proper maintenance, ZG Series vibratory feeders typically achieve 15,000-20,000 operating hours service intervals between major component replacements."
+    },
+    {
+      "question": "How should a vibratory feeder be properly installed for optimal performance?",
+      "answer": "Optimal installation requires attention to several key factors: 1) Foundation design with sufficient mass and rigidity to support the feeder and absorb residual forces - typically 3-5 times the feeder weight; 2) Proper isolation from supporting structure using supplied springs or rubber mounts; 3) Sufficient clearance around the unit for maintenance access; 4) Correct power supply with appropriate circuit protection; 5) Proper alignment with upstream feed points ensuring centered material loading; 6) Correct transition to downstream equipment with appropriate clearances; 7) Horizontal installation or specific inclination as required by the application; 8) Flexible connections at material transfer points; 9) Proper spring extension according to manufacturer specifications; 10) Secure anchoring that doesn't restrict proper vibration motion. Our installation manuals provide detailed guidance for each model, and our technical team provides installation supervision services to ensure optimal setup."
+    },
+    {
+      "question": "How does the dual motor drive system improve reliability?",
+      "answer": "The dual motor drive system improves reliability through several mechanisms: 1) Synchronized counter-rotation creates a balanced force system, minimizing structural stress; 2) Elimination of complex mechanical drive components found in single-motor designs, such as eccentric shafts, bearings, and universal joints; 3) Redundancy allowing continued operation at reduced capacity even if one motor experiences problems; 4) Lower individual motor loads resulting in cooler operation and extended bearing life; 5) Simplified maintenance utilizing standard industrial motors rather than specialized components; 6) Better vibration control through precise force balancing; 7) Reduced power consumption through optimized energy transfer; 8) More even wear distribution on the trough structure; 9) Lower noise levels due to balanced operation; 10) Integrated thermal protection in each motor preventing damage from overheating. These advantages combine to provide industry-leading reliability ratings for properly maintained equipment, with mean time between failures (MTBF) exceeding 30,000 operating hours."
+    },
+    {
+      "question": "What factors should be considered when selecting a vibratory feeder?",
+      "answer": "Key selection factors include: 1) Required capacity range (ZG Series from 30-1400 t/h); 2) Material characteristics including maximum particle size (up to 500mm), bulk density, abrasiveness, and temperature; 3) Available installation space and height limitations; 4) Feed control precision requirements; 5) Upstream hopper configuration and loading method; 6) Downstream equipment requirements and integration needs; 7) Operating environment including dust, humidity, and temperature conditions; 8) Power availability and electrical specifications; 9) Noise limitations in the installation area; 10) Future capacity requirements and flexibility needs; 11) Total ownership cost including initial investment, energy consumption, and maintenance requirements. Our application engineers provide comprehensive assessment services based on these parameters to determine the vibratory feeder specifications best suited for your specific application."
+    },
+    {
+      "question": "How do amplitude and frequency affect feeder performance?",
+      "answer": "Amplitude and frequency are the primary parameters controlling feeder performance: 1) Amplitude (typically 4-6mm in ZG Series) primarily determines the throwing action and therefore material velocity. Larger amplitude increases capacity but may cause excessive material bouncing and degradation. 2) Frequency (960-1450 r/min) affects how often the throwing action occurs. Higher frequency provides smoother flow but requires more power. 3) The combination of amplitude and frequency determines the 'G-force' applied to material, which must exceed material friction to initiate motion. 4) Larger amplitudes are generally better suited for coarse, heavy materials while higher frequencies work better for finer materials. 5) Proper selection depends on material characteristics, with adjustable systems providing flexibility for changing conditions. 6) Excessive amplitude can lead to structural fatigue and premature component failure. 7) ZG Series designs allow adjustment of both parameters after installation to optimize performance."
+    },
+    {
+      "question": "What safety features are included in ZG Series vibratory feeders?",
+      "answer": "ZG Series vibratory feeders incorporate comprehensive safety features including: 1) Fully enclosed vibration motors with IP66 protection preventing dust and moisture ingress; 2) Thermal overload protection preventing motor damage from overheating; 3) Heavy-duty motor guards preventing contact with rotating components; 4) Vibration isolation systems preventing excessive motion transfer to surrounding structures; 5) Emergency stop functionality when integrated with plant control systems; 6) Vibration-resistant electrical connections preventing wire fatigue; 7) Lifting lugs designed for safe hoisting during installation and maintenance; 8) Warning labels identifying potential hazards and safe operating procedures; 9) Grounding points for proper electrical safety; 10) Design compliance with international safety standards including ISO 21873; 11) Smooth exterior surfaces minimizing potential pinch points; 12) Optional vibration sensors that can detect abnormal operation. These safety features protect both equipment and personnel during operation, maintenance, and installation."
+    }
+  ],
+  "seo": {
+    "title": "Heavy Duty Vibratory Feeder | Mining & Quarry Equipment | Zexin Mining",
+    "description": "Zexin Mining's ZG Series Vibratory Feeders deliver reliable material handling with capacities up to 1400 t/h. Our dual motor design provides 25% higher efficiency than conventional equipment, with precise flow control and 95% reduced structural vibration transmission.",
+    "keywords": "Vibratory Feeder, Mining Feeder, Quarry Feeder, Heavy Duty Feeder, Material Handling Equipment, Dual Motor Feeder, Industrial Feeder, Vibrating Equipment, Bulk Material Feeder, Mining Equipment, Aggregate Feeder, Stone Feeder, Ore Feeder, Construction Material Feeder, High Capacity Feeder, Adjustable Feeder, Reliable Feeder, Durable Feeder, Mining Machinery, Material Processing Equipment"
+  },
+  "relatedProducts": [
+    "grizzly-feeder",
+    "apron-feeder"
+  ],
+  "imageSrcAlt": "Vibratory Feeder | Zexin Mining"
+}

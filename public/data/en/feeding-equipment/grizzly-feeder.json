@@ -1,0 +1,417 @@
+{
+  "id": "grizzly-feeder",
+  "title": "Vibrating Grizzly Feeder",
+  "series": "VF Series Heavy-Duty Grizzly Feeders",
+  "imageSrc": "/images/products/feeding-equipment/grizzly-feeder.jpg",
+  "productCategory": "Mineral Processing Equipment",
+  "subcategory": "feeding-equipment",
+  "model": "VF-1560",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "30-3500 t/h (33-3858 stph)"
+    },
+    {
+      "key": "Feed Size",
+      "displayValue": "Up to 1600 mm (63 in.)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "2x1.5-2x20 kW (2x2-2x27 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "ton/h",
+          "conversionFactor": 1.10231,
+          "label": "ton/h"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "kg",
+          "conversionFactor": 1,
+          "label": "kg"
+        },
+        {
+          "unit": "lb",
+          "conversionFactor": 2.20462,
+          "label": "lb"
+        }
+      ],
+      "angle": [
+        {
+          "unit": "°",
+          "conversionFactor": 1,
+          "label": "°"
+        },
+        {
+          "unit": "°",
+          "conversionFactor": 1,
+          "label": "°"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/feeding-equipment/grizzly-feeder",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/feeding-equipment/grizzly-feeder",
+    "zh": "/zh/products/ore-processing/feeding-equipment/grizzly-feeder"
+  },
+  "overview": "Zexin Mining's VF Series Grizzly Feeders provide excellent material handling and primary screening capabilities in demanding mining operations. Featuring dual vibrating motor drives and robust grizzly bar designs, these powerful feeders ensure consistent, uniform feeding while effectively removing fine materials before primary crushing.",
+  "detailedDescription": "The VF Series vibrating grizzly feeder employs advanced engineering to revolutionize bulk material handling and classification processes in mining and quarry operations. This dual-function system creates optimized material flow through high-amplitude mechanisms, addressing common feeding and screening challenges while improving production efficiency. Its balanced approach to material transport control provides consistent results across varying load conditions, making it a key processing component capable of accommodating different material characteristics without compromising operational reliability.",
+  "specifications": {
+    "title": "Vibrating Grizzly Feeder Specifications",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Max. Feed Size (mm)",
+      "Capacity (t/h)",
+      "Motor Power (kW)",
+      "Grizzly Inclination (°)",
+      "Double Amplitude (mm)",
+      "Feeder Dimensions (mm)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Max. Feed Size (in.)",
+      "Capacity (ton/h)",
+      "Motor Power (hp)",
+      "Grizzly Inclination (°)",
+      "Double Amplitude (in.)",
+      "Feeder Dimensions (in.)"
+    ],
+    "tableData": [
+      [
+        "VF-0724",
+        "450",
+        "30-80",
+        "2x1.5",
+        "5",
+        "4-6",
+        "700×2400"
+      ],
+      [
+        "VF-0932",
+        "560",
+        "80-150",
+        "2x2.2",
+        "5",
+        "4-8",
+        "900×3200"
+      ],
+      [
+        "VF-1148",
+        "600",
+        "150-300",
+        "2x7.5",
+        "5",
+        "4-8",
+        "1100×4800"
+      ],
+      [
+        "VF-1256",
+        "800",
+        "300-600",
+        "2x12",
+        "5-10",
+        "4-8",
+        "1200×5600"
+      ],
+      [
+        "VF-1560",
+        "900",
+        "400-800",
+        "2x12",
+        "5-10",
+        "4-8",
+        "1500×6000"
+      ],
+      [
+        "VF-1860",
+        "1000",
+        "500-1200",
+        "2x14",
+        "5-10",
+        "4-8",
+        "1800×6000"
+      ],
+      [
+        "VF-2060",
+        "1200",
+        "900-1500",
+        "2x16",
+        "5-10",
+        "4-8",
+        "2000×6000"
+      ],
+      [
+        "VF-2460",
+        "1400",
+        "1200-2500",
+        "2x18",
+        "5-15",
+        "4-8",
+        "2400×6000"
+      ],
+      [
+        "VF-3060",
+        "1600",
+        "1500-3500",
+        "2x20",
+        "5-15",
+        "4-8",
+        "3000×6000"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "VF-0724",
+        "17.7",
+        "33-88",
+        "2x2.0",
+        "5",
+        "0.16-0.24",
+        "27.6×94.5"
+      ],
+      [
+        "VF-0932",
+        "22.0",
+        "88-165",
+        "2x2.9",
+        "5",
+        "0.16-0.31",
+        "35.4×126.0"
+      ],
+      [
+        "VF-1148",
+        "23.6",
+        "165-331",
+        "2x10.1",
+        "5",
+        "0.16-0.31",
+        "43.3×189.0"
+      ],
+      [
+        "VF-1256",
+        "31.5",
+        "331-661",
+        "2x16.1",
+        "5-10",
+        "0.16-0.31",
+        "47.2×220.5"
+      ],
+      [
+        "VF-1560",
+        "35.4",
+        "441-882",
+        "2x16.1",
+        "5-10",
+        "0.16-0.31",
+        "59.1×236.2"
+      ],
+      [
+        "VF-1860",
+        "39.4",
+        "551-1323",
+        "2x18.8",
+        "5-10",
+        "0.16-0.31",
+        "70.9×236.2"
+      ],
+      [
+        "VF-2060",
+        "47.2",
+        "992-1653",
+        "2x21.5",
+        "5-10",
+        "0.16-0.31",
+        "78.7×236.2"
+      ],
+      [
+        "VF-2460",
+        "55.1",
+        "1323-2756",
+        "2x24.1",
+        "5-15",
+        "0.16-0.31",
+        "94.5×236.2"
+      ],
+      [
+        "VF-3060",
+        "63.0",
+        "1653-3858",
+        "2x26.8",
+        "5-15",
+        "0.16-0.31",
+        "118.1×236.2"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "capacity",
+      "power",
+      "angle",
+      "length",
+      "length"
+    ]
+  },
+  "features": [
+    {
+      "title": "Heavy-Duty Grizzly Bar Design",
+      "description": "Constructed with high-strength manganese steel grizzly bars offering superior wear resistance and impact resistance. The precisely spaced bar configuration effectively separates fine materials while maximizing throughput, with grizzly openings adjustable in the 50-200mm range to accommodate various processing requirements."
+    },
+    {
+      "title": "Dual Vibrating Motor Drive",
+      "description": "Equipped with synchronized pairs of vibrating motors producing precise elliptical motion patterns for optimal material conveyance and screening. This balanced drive system eliminates torsional stresses while providing powerful transmission up to 150kN, ensuring consistent material flow and preventing drive component failure even under extreme load conditions."
+    },
+    {
+      "title": "Adjustable Vibration Parameters",
+      "description": "Controls amplitude through adjustable eccentric weights, enabling fine-tuning of material flow characteristics. Operators can optimize double amplitude settings between 4-8mm to suit specific material properties, maximizing screening efficiency while accommodating variations in feed composition, moisture content, and required throughput."
+    },
+    {
+      "title": "Reinforced Pan and Frame Structure",
+      "description": "Features heavy-duty welded steel construction with strategically incorporated reinforcing ribs capable of withstanding extreme impact loads and operational stresses. Tapered hopper designs prevent material buildup while evenly distributing feed across the entire width, and robust spring isolation systems protect supporting structures from vibration transmission."
+    },
+    {
+      "title": "Screening-Feeding Combination Design",
+      "description": "Integrates feeding and primary screening functions in a single compact unit, reducing capital equipment costs and installation space requirements by up to 40%. The two-stage design first absorbs the impact force of primary discharge, then effectively separates fines before conveying to the crusher, extending downstream equipment life and improving overall process efficiency."
+    },
+    {
+      "title": "Modular Bar Assembly System",
+      "description": "Employs sectional grizzly design with individually replaceable bars, simplifying maintenance and reducing downtime during service intervals. The bolt-in bar configuration allows quick replacement of worn components without complete disassembly, while enabling operators to modify grizzly spacing to accommodate changing process requirements or material characteristics."
+    },
+    {
+      "title": "Wear-Resistant Surfaces",
+      "description": "Equipped with replaceable AR400/AR500 steel liners in high-wear areas, providing up to 300% longer service life compared to standard steel plate. Critical impact zones feature dedicated chromium carbide overlay plates for additional reinforcement, offering superior resistance to the most abrasive materials while maintaining dimensional stability throughout the operational lifetime."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Primary Crushing Circuits",
+        "description": "Provides controlled feeding and screening for hard rock mining primary crushing operations. The robust bar design effectively handles run-of-mine material up to the 1600mm, while removing fines to prevent crusher plugging, optimize crusher performance, and significantly increase throughput with capacities up to 3500 t/h even with highly variable feed."
+      },
+      {
+        "title": "Quarry Operations",
+        "description": "Delivers efficient material handling in limestone, granite, and aggregate quarries requiring stable feed rates and preliminary screening. The easily adjusted grizzly spacing allows operators to adapt to different product specifications, optimizing the handling of blasted material and improving overall plant efficiency in construction material production."
+      },
+      {
+        "title": "Coal Processing",
+        "description": "Controls the flow and primary selection of raw coal in preparation plants. The screening function effectively removes clay, shale, and fine coal particles before primary crushing, reducing wear on downstream equipment, while the spring-mounted design absorbs impact from loader discharge and maintains accurate feed control even with varying coal properties."
+      },
+      {
+        "title": "Mineral Processing",
+        "description": "Handles primary feeding and screening for metallic and non-metallic mineral processing facilities. Variable amplitude settings allow precise control of material velocity and bed depth, optimizing separation efficiency while ensuring consistent feed to downstream concentration processes, maximizing recovery of valuable minerals."
+      },
+      {
+        "title": "Recycling Operations",
+        "description": "Processes mixed construction and demolition waste in recycling facilities, effectively separating soil and fine materials from larger concrete, asphalt, and metal components. The robust structure withstands impacts from irregular objects while controlling material flow to sorting equipment, supporting efficient resource recovery operations with reduced downtime from material handling issues."
+      },
+      {
+        "title": "Bulk Material Conveying",
+        "description": "Manages controlled material extraction from hoppers and stockpiles in port terminals and bulk handling facilities. The vibrating action prevents material bridging and ratholing while ensuring consistent flow rates, effectively handling materials ranging from coal and minerals to biomass and other commodities with minimal maintenance requirements."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does a vibrating grizzly feeder work?",
+      "answer": "The vibrating grizzly feeder uses dual motor-driven eccentric weight assemblies to produce directional vibrating forces. When synchronized, these motors create elliptical motion patterns that effectively convey material forward while allowing fine particles to pass through the bar spacing. Feed material enters the reinforced pan section, which absorbs initial impact force and begins controlled conveyance. As material moves along the vibrating deck, it encounters the grizzly section where predetermined spacings (typically adjustable between 50-200mm) allow fine material to pass through while larger particles continue along the bars to the discharge point. This dual-function design combines controlled feeding and primary screening, eliminating the need for separate equipment. Vibration parameters including amplitude (4-8mm) and motor speed can be adjusted to optimize material flow and screening efficiency for specific applications. This mechanical approach provides superior reliability when handling large, heavy, or abrasive materials discharged directly from trucks or front-end loaders."
+    },
+    {
+      "question": "What advantages do vibrating grizzly feeders offer compared to other feeding equipment?",
+      "answer": "Vibrating grizzly feeders provide several key advantages: 1) Dual functionality combining controlled feeding and primary screening in a single unit, reducing capital equipment costs by up to 40%; 2) Superior impact resistance for direct reception of materials discharged from trucks and loaders; 3) Effective removal of fines before crushing, extending crusher liner life by 20-30%; 4) Prevention of crusher plugging and blind operation through pre-screening; 5) Reduced dust generation through efficient fines removal; 6) Fewer moving parts and lower maintenance requirements compared to apron feeders; 7) Lower energy consumption per ton of processed material; 8) Smaller footprint compared to separate feeding and screening devices; 9) Effective handling of sticky materials through high vibration forces; 10) Adjustable parameters for optimized performance across various material types; 11) Higher operational reliability in harsh mining environments; 12) Simplified material flow paths with fewer transfer points and associated material degradation."
+    },
+    {
+      "question": "What types of materials can VF Series grizzly feeders handle?",
+      "answer": "VF Series grizzly feeders effectively process a wide range of materials including: 1) Blasted rock and ore up to 1600mm in maximum size; 2) Raw coal with varying moisture content; 3) Limestone and other quarry materials; 4) Iron ore, copper ore, and other metallic minerals; 5) Construction and demolition waste; 6) Recycled concrete and asphalt; 7) Clay-bearing materials that tend to blind conventional screens; 8) Sticky minerals with high moisture content; 9) Materials with high fines content requiring pre-screening; 10) Materials with widely varying particle size distribution. The robust steel pan and bar construction makes these feeders particularly suitable for applications where material size, weight, or abrasiveness presents problems for alternative feeding technologies. The adjustable bar spacing allows customization for specific material characteristics, optimizing both feeding and screening functions across a variety of applications in mining, quarrying, and recycling industries."
+    },
+    {
+      "question": "How is the capacity of a vibrating grizzly feeder determined?",
+      "answer": "Determining vibrating grizzly feeder capacity involves several key factors: 1) Feed material characteristics including bulk density, particle size distribution, and moisture content; 2) Required throughput rate in tons per hour (VF Series range from 30-3500 t/h); 3) Feeder width and length dimensions defining the effective bed area; 4) Vibration parameters including frequency and amplitude settings; 5) Grizzly bar spacing and percentage of open area; 6) Material bed depth on the feeder deck; 7) Inclination angle of the grizzly section (5-15° for VF Series); 8) Motor power and available vibration force; 9) Required screening efficiency and acceptable oversize carryover; 10) Material velocity requirements for proper discharge. Our engineering team provides comprehensive capacity calculations based on these parameters and specific material properties to ensure proper equipment sizing. For operations with variable feed conditions, we typically recommend selecting a feeder with 15-20% additional capacity margin to accommodate peak load requirements and ensure consistent performance even under challenging conditions."
+    },
+    {
+      "question": "What maintenance procedures are required for grizzly feeders?",
+      "answer": "Effective grizzly feeder maintenance includes: 1) Regular inspection of grizzly bars for wear, replacing when approaching 50% of original thickness; 2) Checking vibrator motor bearings and lubrication at specified intervals (typically 1000-2000 operating hours); 3) Inspecting spring isolation system for proper performance and replacing damaged springs; 4) Verifying fastener torque on grizzly bars, vibrating motors, and structural components (monthly); 5) Monitoring amplitude and motor current draw for early detection of potential issues; 6) Inspecting feeder box liners and replacing when worn; 7) Checking electrical connections and motor protection systems; 8) Cleaning material buildup between grizzly bars (frequency depends on material characteristics); 9) Annual inspection of structural integrity and welding; 10) Vibration analysis to detect bearing wear or unbalanced conditions (recommended quarterly). With proper maintenance, VF Series grizzly feeders typically achieve 5,000-8,000 operating hours service intervals between major component replacements, with specific requirements depending on material abrasiveness and operating conditions."
+    },
+    {
+      "question": "How is grizzly bar spacing determined and adjusted?",
+      "answer": "Determining and adjusting grizzly bar spacing involves several considerations: 1) Primary crusher receiving specifications - bar spacing is typically set 15-20% smaller than the crusher's maximum receiving size to prevent bridging; 2) Desired percentage of fines removal - narrower spacing removes more fines before crushing; 3) Material characteristics including stickiness and blinding tendencies; 4) Required capacity - wider spacing increases throughput but reduces screening efficiency; 5) Feed material shape, with elongated particles requiring wider spacing. The VF Series achieves adjustable bar spacing through replaceable spacer blocks or adjustable mounting fixtures. The adjustment procedure typically involves: 1) Stopping and locking out the equipment; 2) Removing fixing bolts from the selected grizzly section; 3) Replacing spacer blocks of appropriate size (available in 10mm increments); 4) Reinstalling and torquing mounting bolts to specification. This modular design allows operators to modify bar spacing (from 50-200mm) without complete disassembly, enabling customization for specific material requirements or adaptation to changing process conditions within 4-6 hours of maintenance time."
+    },
+    {
+      "question": "How do vibrating grizzly feeders improve crusher efficiency?",
+      "answer": "Vibrating grizzly feeders improve crusher efficiency through multiple mechanisms: 1) Controlled feed rate - steady, metered material delivery prevents crusher overloading and maintains optimal crushing chamber filling; 2) Fines removal - screening out particles already below the crusher set size (typically 30-40% of feed in many applications), eliminating unnecessary processing and increasing effective crusher capacity by up to 45%; 3) Consistent material distribution - evenly presenting material across the full width of the crusher inlet, optimizing crushing action; 4) Impact protection - absorbing primary discharge forces otherwise transmitted directly to crusher components; 5) Surge control - managing uneven feeding in batch loading operations, providing steady material flow; 6) Crusher plugging prevention - removing fines that would otherwise lead to material compaction within the crushing chamber; 7) Reduced wear - elimination of fine abrasive particles extends crusher liner life by 20-30%; 8) Power optimization - processing only material requiring size reduction, more efficiently utilizing crusher energy; 9) Improved product quality - more consistent crusher loading produces more uniform product gradation; 10) Reduced dust generation - preliminary fines removal reduces dust created during crushing. These advantages combine to significantly improve overall crushing circuit efficiency and reduce operating costs throughout the processing operation."
+    },
+    {
+      "question": "What factors should be considered when selecting a vibrating grizzly feeder?",
+      "answer": "Key selection factors include: 1) Required capacity range (VF Series from 30-3500 t/h); 2) Maximum feed size (up to 1600mm for largest models); 3) Material characteristics including bulk density, abrasiveness, and moisture content; 4) Primary crusher specifications and optimal feeding requirements; 5) Desired percentage of fines removal before crushing; 6) Loading method (front-end loader, mine truck, or continuous methods); 7) Available installation space and height limitations; 8) Structural support requirements and foundation considerations; 9) Power availability and electrical specifications; 10) Environmental conditions including dust control requirements; 11) Material flow integration with existing or planned equipment; 12) Maintenance access requirements; 13) Noise limitations that may affect isolation system design; 14) Capital budget constraints versus operational savings from efficient pre-screening. Our engineering team provides comprehensive application assessment services based on these parameters to determine optimal vibrating grizzly feeder specifications, ensuring maximum performance in your specific operating environment while optimizing total ownership cost through appropriate equipment selection."
+    },
+    {
+      "question": "How do vibrating grizzly feeders compare to apron feeders?",
+      "answer": "Vibrating grizzly feeders and apron feeders differ in several key aspects: 1) Functionality - grizzly feeders combine feeding and pre-screening while apron feeders provide feeding only; 2) Capital cost - grizzly feeders typically have 25-35% lower initial cost; 3) Operating cost - grizzly feeders generally have lower power consumption per ton and reduced maintenance expense; 4) Material handling - apron feeders excel with extremely large materials (>1600mm) while grizzly feeders efficiently handle most mining applications; 5) Installation requirements - grizzly feeders require smaller footprint and lighter structural loads; 6) Pre-screening capability - grizzly feeders remove fines before crushing while apron feeders require separate screening equipment; 7) Material control - apron feeders may provide better control for very fine or dusty materials; 8) Wear components - grizzly bars typically have longer service life than apron pans in most applications; 9) Sticky material handling - high-amplitude vibration provides better release of sticky materials from grizzly surfaces; 10) Maintenance accessibility - bar designs typically provide easier access to wear components. The choice between these technologies primarily depends on material characteristics, loading methods, and whether pre-screening functionality provides sufficient operational benefits to justify the vibrating solution."
+    },
+    {
+      "question": "What safety features are included in VF Series grizzly feeders?",
+      "answer": "VF Series grizzly feeders incorporate comprehensive safety features including: 1) Heavy-duty motor guards preventing contact with rotating components; 2) Non-slip walkways and maintenance platforms with handrails ensuring safe access; 3) Emergency stop switches accessible from multiple locations; 4) Vibration isolation systems preventing excessive motion transfer to supporting structures; 5) Lockout/tagout provisions for maintenance procedures; 6) Belt alignment and slippage monitoring systems; 7) Motor thermal protection preventing overheating; 8) Dust control skirting minimizing airborne particulates; 9) Reinforced impact zones preventing structural failure from improper loading; 10) Vibration damping reducing noise levels; 11) Overload protection systems preventing motor damage; 12) Safety information signage with operational warnings; 13) Lifting lugs and handling points for safe transport and installation; 14) Grounding points for proper electrical grounding. These safety features comply with international mining equipment standards including ISO 21873 and MSHA regulations (where applicable), ensuring operator protection during normal operation and maintenance activities while minimizing production risks associated with equipment failure or improper operation."
+    },
+    {
+      "question": "How are vibrating grizzly feeders installed and commissioned?",
+      "answer": "The installation and commissioning process involves several key steps: 1) Foundation preparation according to engineering specifications, typically requiring reinforced concrete and proper anchor bolt positioning; 2) Installation of support structure with appropriate vibration isolation system; 3) Placement of the feeder unit using proper lifting equipment (feeder weights range from 2-15 tons depending on model); 4) Installation of vibration isolation springs or rubber mounts; 5) Leveling and alignment according to specified tolerances; 6) Installation and connection of vibration motors; 7) Installation of electrical control and protection systems; 8) Connection of dust suppression systems (if applicable); 9) Verification of all fastener torque specifications; 10) Initial no-load testing and vibration pattern verification; 11) Gradual introduction of material and observation of flow patterns; 12) Adjustment of amplitude for optimal material flow; 13) Verification of motor current draw and performance parameters; 14) Integration testing with connected upstream and downstream equipment; 15) Operator training and handover documentation. Our technical team provides comprehensive installation supervision and commissioning services to ensure proper setup and optimal performance from initial operation, typically requiring 3-5 days depending on site conditions and feeder size."
+    }
+  ],
+  "seo": {
+    "title": "Heavy Duty Vibrating Grizzly Feeder | Mining & Quarry Equipment | Zexin Mining",
+    "description": "Zexin Mining's VF Series Vibrating Grizzly Feeders deliver efficient material handling and separation with capacities up to 3500 t/h. Our robust feeders feature adjustable grizzly sections and variable settings for optimal mining and quarry operations.",
+    "keywords": "Vibrating Grizzly Feeder, Mining Feeder, Quarry Feeder, Heavy Duty Feeder, Screening Equipment, Primary Crusher Feeder, Industrial Feeder, Vibrating Equipment, Bulk Material Feeder, Mining Equipment, Aggregate Feeder, Stone Feeder, Ore Feeder, Construction Material Feeder, High Capacity Feeder, Adjustable Feeder, Reliable Feeder, Durable Feeder, Mining Machinery, Material Processing Equipment"
+  },
+  "relatedProducts": [
+    "vibratory-feeder",
+    "apron-feeder"
+  ],
+  "imageSrcAlt": "Grizzly Feeder | Zexin Mining"
+}

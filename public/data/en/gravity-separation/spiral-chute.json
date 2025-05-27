@@ -1,0 +1,299 @@
+{
+  "id": "spiral-chute",
+  "title": "Spiral Chute | High-Efficiency Gravity Concentrator",
+  "series": "5LL Series Glass Fiber Gravity Concentrator",
+  "imageSrc": "/images/products/gravity-separation/spiral-chute.jpg",
+  "productCategory": "Gravity Separation Equipment",
+  "subcategory": "gravity-separation",
+  "model": "5LL-1500",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "4-10 mtph (4.4-11 stph)"
+    },
+    {
+      "key": "Max. feed size",
+      "displayValue": "0.3-2.0 mm (0.012-0.079 in.)"
+    },
+    {
+      "key": "Motor power",
+      "displayValue": "Zero power requirement"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "ton",
+          "conversionFactor": 1.10231,
+          "label": "ton"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "mtph"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/gravity-separation/spiral-chute",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/gravity-separation/spiral-chute",
+    "zh": "/zh/products/ore-processing/gravity-separation/spiral-chute"
+  },
+  "overview": "The Spiral Chute is a highly efficient zero-power gravity separation equipment that achieves precise mineral concentration through the synergistic action of centrifugal force, gravity, and water flow. Manufactured with premium fiberglass materials, it offers exceptional advantages including corrosion resistance, lightweight construction, and extended service life. The 5LL Series is widely applied in the separation of iron ore, tungsten, tin, ilmenite, chromite, and other ferrous, non-ferrous, and rare metals, as well as placer gold recovery and coal washing processes. It is particularly suitable for processing fine materials with particle sizes ranging from 0.02 to 2.0 mm, delivering environmentally-friendly density-based separation with outstanding efficiency.",
+  "detailedDescription": "The 5LL Series fiberglass spiral chute introduces innovative zero-power technology that transforms gravity separation in mineral processing. This high-recovery spiral separator creates optimized mineral flow patterns through its mathematically designed spiral profile, addressing common challenges with fine particles while enhancing resource efficiency. Its balanced approach to density-based separation delivers consistent results across diverse materials, making it valuable equipment for operations processing gold, tin, tungsten, and iron ore without compromising environmental sustainability.",
+  "specifications": {
+    "title": "Spiral Chute Specifications",
+    "note": "Can be customized according to customer requirements",
+    "tableHeaders": [
+      "Model",
+      "Outer Diameter (mm)",
+      "Height (mm)",
+      "Spiral Turns",
+      "Feed Size (mm)",
+      "Processing Capacity (t/h)",
+      "Feed Concentration (%)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Outer Diameter (in.)",
+      "Height (in.)",
+      "Spiral Turns",
+      "Feed Size (in.)",
+      "Processing Capacity (stph)",
+      "Feed Concentration (%)"
+    ],
+    "tableData": [
+      [
+        "5LL-600",
+        "600",
+        "2200",
+        "5",
+        "0.3-0.02",
+        "1.5-2",
+        "25-35"
+      ],
+      [
+        "5LL-900",
+        "900",
+        "2800",
+        "5",
+        "0.3-0.045",
+        "3-5",
+        "25-35"
+      ],
+      [
+        "5LL-1200",
+        "1200",
+        "3500",
+        "5",
+        "0.3-1.2",
+        "3-8",
+        "25-35"
+      ],
+      [
+        "5LL-1500",
+        "1500",
+        "4200",
+        "5",
+        "0.3-2.0",
+        "4-10",
+        "25-35"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "5LL-600",
+        "23.6",
+        "86.6",
+        "5",
+        "0.012-0.0008",
+        "1.7-2.2",
+        "25-35"
+      ],
+      [
+        "5LL-900",
+        "35.4",
+        "110.2",
+        "5",
+        "0.012-0.0018",
+        "3.3-5.5",
+        "25-35"
+      ],
+      [
+        "5LL-1200",
+        "47.2",
+        "137.8",
+        "5",
+        "0.012-0.047",
+        "3.3-8.8",
+        "25-35"
+      ],
+      [
+        "5LL-1500",
+        "59.1",
+        "165.4",
+        "5",
+        "0.012-0.079",
+        "4.4-11.0",
+        "25-35"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "length",
+      "",
+      "length",
+      "capacity",
+      ""
+    ]
+  },
+  "features": [
+    {
+      "title": "Zero-Power Centrifugal Separation Technology",
+      "description": "Operates without any electrical input, relying solely on gravity and centrifugal forces to achieve efficient mineral separation, resulting in up to 100% operating cost savings compared to conventional powered separation equipment while maintaining excellent separation efficiency, particularly advantageous for remote locations."
+    },
+    {
+      "title": "Patented Spiral Profile Design",
+      "description": "Precisely engineered spiral profile with optimized trough angles and curvature creates ideal differential particle movement trajectories. The unique cross-section design maintains optimal pulp velocity throughout the separation process, achieving higher mineral recovery rates and separation precision."
+    },
+    {
+      "title": "High-Strength Fiberglass Construction",
+      "description": "Manufactured with premium fiberglass materials combined with specialized wear-resistant coating, providing up to 5 years of service life even under continuous high-intensity operation. Smooth surface design minimizes friction and prevents mineral buildup, ensuring consistently stable separation efficiency."
+    },
+    {
+      "title": "Modular Stacking Design",
+      "description": "Multiple separation units can be flexibly arranged in stacked configurations to maximize processing capacity while minimizing footprint. The modular design allows for easy expansion of processing capacity according to production requirements, adapting to mineral processing needs of different scales."
+    },
+    {
+      "title": "Precision Splitter System",
+      "description": "Discharge end equipped with high-precision splitters that can be fine-tuned according to specific mineral characteristics and processing requirements, enabling operators to precisely control separation results and maximize both concentrate grade and mineral recovery rates."
+    },
+    {
+      "title": "Ultra-Low Maintenance Requirements",
+      "description": "Innovative design eliminates traditionally high-maintenance moving parts and mechanical components. The simple powerless structure means minimal wear points and convenient cleaning maintenance, with routine maintenance limited to periodic inspections and splitter adjustments."
+    },
+    {
+      "title": "Multi-Mineral Adaptability",
+      "description": "Efficiently processes various density-based minerals, including iron ore, chromite, ilmenite, tungsten, tin, tantalum, placer gold, and other precious metals. Advanced specific gravity separation principles effectively handle minerals of different densities while maintaining stable separation performance and high recovery rates."
+    },
+    {
+      "title": "Green Processing Technology",
+      "description": "Purely physical gravity-based separation requires no chemical reagents, significantly reducing environmental impact and wastewater discharge. Water consumption is lower compared to traditional mineral processing equipment and can be recycled, improving sustainable utilization in water-sensitive regions, truly achieving environmentally friendly mineral processing."
+    }
+  ],
+  "applications": {
+    "title": "Application Areas",
+    "items": [
+      {
+        "title": "Metallic Mineral Concentration",
+        "description": "Efficiently separates various density-differentiated minerals including wolframite, cassiterite, iron ore, ilmenite, chromite, achieving dual improvement in concentrate grade and recovery rates. Multi-stage separation processes can be configured for different ore characteristics to meet high-precision separation requirements."
+      },
+      {
+        "title": "Placer Gold Recovery",
+        "description": "Specifically designed for placer gold deposit development, efficiently recovering fine gold particles from placer deposits and crushed ores, achieving 70-90% high recovery rates for gold particles as small as 0.1 mm, while requiring minimal infrastructure and investment costs, particularly suitable for small to medium-scale gold mining projects."
+      },
+      {
+        "title": "Non-metallic Mineral Purification",
+        "description": "Processes quartz sand, feldspar, mica, coal, and other non-metallic minerals through precise density-based separation, effectively improving product purity and removing impurities. Suitable for high-quality industrial raw material production and raw material purification in the building materials industry."
+      },
+      {
+        "title": "High-Efficiency Coal Washing",
+        "description": "Precisely separates coal from high-density impurities and gangue, significantly reducing ash content and improving the calorific value of the final product, while maintaining high throughput and stable performance. Particularly suitable for washing processes in small to medium-sized coal mines, reducing energy consumption and environmental impact."
+      },
+      {
+        "title": "Multi-Metallic Ore Pre-Concentration",
+        "description": "Functions as a pre-treatment stage in complex multi-metallic ore processing circuits, efficiently removing large amounts of waste rock to improve the efficiency of subsequent processing operations. Can be integrated with flotation, magnetic separation, and other processes to build complete mineral processing systems, optimizing overall process flow and economic benefits."
+      }
+    ]
+  },
+  "technicalAdvantages": null,
+  "faqs": [
+    {
+      "question": "How does the Spiral Chute achieve efficient separation without using any power?",
+      "answer": "The Spiral Chute utilizes natural physical forces - gravity, centrifugal force, and fluid dynamics principles to achieve precise separation. As the pulp flows down the spiral path, centrifugal force pushes material outward while gravity pulls downward. Minerals of different specific gravities form stratification under these two forces, with heavier minerals (such as gold, tin, tungsten) resisting the outward flow and concentrating on the inner side of the spiral, while lighter particles migrate to the outer edge. The specially designed spiral profile further enhances this separation effect, enabling efficient mineral concentration and separation without any power input."
+    },
+    {
+      "question": "What are the maintenance requirements and service life of the Spiral Chute?",
+      "answer": "The 5LL Series Spiral Chute, constructed with high-strength fiberglass materials and special wear-resistant coating, has extremely low maintenance requirements due to its simple design with no moving parts. Routine maintenance consists only of periodic visual inspection for surface wear, removal of potentially accumulated materials, and adjustment of splitter positions to optimize separation performance. The fiberglass construction offers excellent corrosion and wear resistance, providing up to 5 years of service life under normal operating conditions, significantly reducing maintenance frequency and replacement costs compared to traditional metal separators."
+    },
+    {
+      "question": "How can I optimize feed conditions to achieve the best separation results?",
+      "answer": "For optimal separation results, feed material should be pre-screened to remove oversized particles (>2mm) and properly classified. The feed pulp concentration should be maintained between 25-35% solids by weight. Feed rate should be controlled within the equipment's designed capacity range, and feed distribution should be even across the spiral width. Regular monitoring and adjustment of splitter positions based on visual observation of separation bands helps maintain optimal separation efficiency. Additionally, maintaining consistent feed characteristics and proper water addition at the feed point are crucial for achieving stable and efficient separation."
+    }
+  ],
+  "seo": {
+    "title": "Spiral Chute | High-Efficiency Gravity Concentrator | Zexin Mining",
+    "description": "Zexin Mining's 5LL Series Spiral Chute delivers efficient gravity separation with zero power consumption. Our innovative fiberglass design provides superior wear resistance and 5-year service life. Ideal for processing iron ore, tungsten, tin, gold, and coal.",
+    "keywords": "spiral chute,spiral concentrator,gravity separator,mineral processing equipment,gold recovery equipment,iron ore separator,tin ore separator,tungsten ore concentrator,coal washing equipment,mineral beneficiation equipment,mining spiral separator,gravity concentration equipment,mineral washing equipment,ore dressing equipment,spiral separator manufacturer,5LL spiral chute"
+  },
+  "relatedProducts": [
+    "shaking-table",
+    "centrifugal-separator",
+    "sawtooth-wave-jig",
+    "synchronous-counter-directional-jig",
+    "synchronous-counter-directional-jig-small"
+  ],
+  "imageSrcAlt": "Spiral Chute | Zexin Mining"
+}

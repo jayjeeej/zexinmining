@@ -1,0 +1,22 @@
+{
+  "id": "guangxi-lead-zinc",
+  "title": "Lead-Zinc Processing Plant in Guangxi",
+  "location": "Guangxi, China",
+  "year": "2017",
+  "category": "Lead-Zinc Ore",
+  "client": "Guangxi Mining Company",
+  "description": "A 1000 tons per day lead-zinc processing plant designed and constructed by Zexin Mining Equipment. The plant employs advanced beneficiation technology to achieve efficient separation of lead and zinc minerals, producing high-quality lead and zinc concentrates.",
+  "challenge": "The project faced several key challenges: significant variations in ore grade, complex intergrowth of lead and zinc minerals requiring efficient separation, and the need to achieve high recovery rates and concentrate grades. Additionally, ensuring stable and continuous operation of the processing plant was crucial.",
+  "solution": "We designed a comprehensive mineral processing flow:\n\n1. Crushing System: Implemented a two-stage closed-circuit crushing process to ensure product size control within 0-12mm.\n\n2. Grinding System: Utilized a two-stage closed-circuit grinding process with two parallel circuits. Primary grinding achieves 60% passing 200 mesh, while secondary grinding achieves 85% passing 200 mesh, creating ideal conditions for flotation.\n\n3. Flotation System: Adopted a lead-first zinc-second flotation process. Lead flotation uses one roughing, two scavenging, and two cleaning stages, while zinc flotation uses one roughing, three scavenging, and two cleaning stages. Efficient separation was achieved through optimized reagent regime and process design.",
+  "results": "The processing plant has been operating stably since commissioning, with all indicators meeting or exceeding design targets:\n\n- Lead concentrate grade: 60.00% with 91.00% recovery\n- Zinc concentrate grade: 45.00% with 86.00% recovery\n- Processing capacity maintained at 1000 tons per day\n- Equipment operation rate above 95%\n\nThe project has become a benchmark for lead-zinc processing in Guangxi, providing valuable reference for local mining development.",
+  "images": [
+    "/images/cases/guangxi-lead-zinc/lead-zinc-processing-plant.jpg",
+    "/images/cases/guangxi-lead-zinc/flotation-process.jpg",
+    "/images/cases/guangxi-lead-zinc/grinding-classification.jpg"
+  ],
+  "imagesAlt": [
+    "Lead Zinc Processing Plant | Zexin Mining",
+    "Flotation Process | Zexin Mining",
+    "Grinding Classification | Zexin Mining"
+  ]
+}

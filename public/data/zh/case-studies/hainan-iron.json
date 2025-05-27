@@ -1,0 +1,22 @@
+{
+  "id": "hainan-iron",
+  "title": "海南昌江新达200万吨铁矿选厂生产线改造项目",
+  "location": "中国海南省昌江县",
+  "year": "2021",
+  "category": "铁矿",
+  "client": "新达矿业",
+  "description": "这是一个针对海南省昌江县现有铁矿选厂的全面升级改造项目。该项目旨在提高精矿品位，同时解决空间有限的问题，满足严格的环保标准，并保持年产能200万吨。",
+  "challenge": "该项目面临多重挑战：原有工厂设计效率低下，精矿品位不足，可用于改造的空间严重受限，同时必须符合严格的环保法规。客户需要在显著提高产品质量和环保表现的同时保持生产能力。",
+  "solution": "我们设计了立体空间方案，采用多层次高低搭配的结构来克服空间限制。工艺流程包括两段破碎系统（粗破和中破，其中一段采用闭路循环），然后通过振动筛达到目标粒度。矿石被分为两个粒度段，分别通过不同的跳汰机进行处理，最后经过高效脱水系统。\n\n多层设计优化了重力流的使用，减少了能耗和运营成本。为满足环保要求，我们实施了水循环系统，水回收率超过90%，并在所有转运点和破碎站安装了抑尘技术。",
+  "results": "升级后的工厂成功满足了客户的所有要求。与原工艺相比，精矿品位提高了5-8%，同时保持了200万吨的设计年产能。空间高效的设计适合现有厂区占地面积，同时改善了物料流动和运营效率。环保表现优异，粉尘排放减少85%，通过循环利用，水消耗减少70%。该项目已成为该地区空间受限工厂改造的典范。",
+  "images": [
+    "/images/cases/hainan-iron/hainan-changjiang-iron-ore-processing-plant.jpg",
+    "/images/cases/hainan-iron/multi-level-plant-design-hainan-xinda.jpg",
+    "/images/cases/hainan-iron/jigging-circuit-iron-ore-beneficiation.jpg"
+  ],
+  "imagesAlt": [
+    "Hainan Changjiang Iron Ore Processing Plant | Zexin Mining",
+    "Multi Level Plant Design Hainan Xinda | Zexin Mining",
+    "Jigging Circuit Iron Ore Beneficiation | Zexin Mining"
+  ]
+}

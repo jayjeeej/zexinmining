@@ -1,0 +1,472 @@
+{
+  "id": "permanent-drum-magnetic-separator",
+  "title": "Permanent Drum Magnetic Separator",
+  "series": "CTB Series High-Intensity Permanent Magnetic Drum Separator",
+  "imageSrc": "/images/products/magnetic-separator/permanent-drum-magnetic-separator.jpg",
+  "productCategory": "Mineral Processing Equipment",
+  "subcategory": "magnetic-separator",
+  "model": "CTB9018",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "10-280 t/h (11-309 stph)"
+    },
+    {
+      "key": "Feed Size",
+      "displayValue": "<3 mm (<0.12 in.)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "1.5-11 kW (2-15 hp)"
+    }
+  ],
+  "href": "/en/products/ore-processing/magnetic-separator/permanent-drum-magnetic-separator",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/magnetic-separator/permanent-drum-magnetic-separator",
+    "zh": "/zh/products/ore-processing/magnetic-separator/permanent-drum-magnetic-separator"
+  },
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "overview": "Zexin Mining's CTB Series High-Intensity Permanent Magnetic Drum Separators deliver exceptional iron ore concentration performance with efficient magnetic particle recovery. Designed for continuous operation in demanding mining environments, these separators combine high magnetic intensity with precision engineering to maximize ferromagnetic material separation.",
+  "detailedDescription": "The CTB Series permanent drum magnetic separator introduces advanced magnetic field technology that transforms mineral beneficiation in iron ore processing. This system creates optimized particle separation through its powerful magnetic circuit design, addressing common recovery challenges while enhancing concentrate grade. Its balanced approach to magnetic separation delivers consistent results across varying feed conditions, making it valuable processing equipment that adapts to different ore characteristics without compromising operational efficiency.",
+  "specifications": {
+    "title": "Permanent Drum Magnetic Separator Specifications",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Drum diameter (mm)",
+      "Drum length (mm)",
+      "Rotation speed (RPM)",
+      "Feed size (mm)",
+      "Capacity (t/h)",
+      "Motor Power (kW)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Drum diameter (in.)",
+      "Drum length (in.)",
+      "Rotation speed (RPM)",
+      "Feed size (in.)",
+      "Capacity (stph)",
+      "Motor Power (hp)"
+    ],
+    "tableData": [
+      [
+        "CTB6012",
+        "600",
+        "1200",
+        "<35",
+        "2-0",
+        "10-20",
+        "1.5"
+      ],
+      [
+        "CTB6018",
+        "600",
+        "1800",
+        "<35",
+        "2-0",
+        "15-30",
+        "2.2"
+      ],
+      [
+        "CTB7518",
+        "750",
+        "1800",
+        "<35",
+        "2-0",
+        "20-45",
+        "2.2"
+      ],
+      [
+        "CTB9018",
+        "900",
+        "1800",
+        "<35",
+        "3-0",
+        "40-60",
+        "3"
+      ],
+      [
+        "CTB9021",
+        "900",
+        "2100",
+        "<35",
+        "3-0",
+        "45-60",
+        "3"
+      ],
+      [
+        "CTB9024",
+        "900",
+        "2400",
+        "<28",
+        "3-0",
+        "45-70",
+        "4"
+      ],
+      [
+        "CTB1018",
+        "1050",
+        "1800",
+        "<20",
+        "3-0",
+        "50-75",
+        "5.5"
+      ],
+      [
+        "CTB1021",
+        "1050",
+        "2100",
+        "<20",
+        "3-0",
+        "50-100",
+        "5.5"
+      ],
+      [
+        "CTB1024",
+        "1050",
+        "2400",
+        "<20",
+        "3-0",
+        "60-120",
+        "5.5"
+      ],
+      [
+        "CTB1218",
+        "1200",
+        "1800",
+        "<18",
+        "3-0",
+        "80-140",
+        "5.5"
+      ],
+      [
+        "CTB1224",
+        "1200",
+        "2400",
+        "<18",
+        "3-0",
+        "85-180",
+        "7.5"
+      ],
+      [
+        "CTB1230",
+        "1200",
+        "3000",
+        "<18",
+        "3-0",
+        "100-180",
+        "7.5"
+      ],
+      [
+        "CTB1530",
+        "1500",
+        "3000",
+        "<14",
+        "3-0",
+        "170-280",
+        "11"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "CTB6012",
+        "23.6",
+        "47.2",
+        "<35",
+        "0.08-0",
+        "11-22",
+        "2"
+      ],
+      [
+        "CTB6018",
+        "23.6",
+        "70.9",
+        "<35",
+        "0.08-0",
+        "17-33",
+        "3"
+      ],
+      [
+        "CTB7518",
+        "29.5",
+        "70.9",
+        "<35",
+        "0.08-0",
+        "22-50",
+        "3"
+      ],
+      [
+        "CTB9018",
+        "35.4",
+        "70.9",
+        "<35",
+        "0.12-0",
+        "44-66",
+        "4"
+      ],
+      [
+        "CTB9021",
+        "35.4",
+        "82.7",
+        "<35",
+        "0.12-0",
+        "50-66",
+        "4"
+      ],
+      [
+        "CTB9024",
+        "35.4",
+        "94.5",
+        "<28",
+        "0.12-0",
+        "50-77",
+        "5.4"
+      ],
+      [
+        "CTB1018",
+        "41.3",
+        "70.9",
+        "<20",
+        "0.12-0",
+        "55-83",
+        "7.4"
+      ],
+      [
+        "CTB1021",
+        "41.3",
+        "82.7",
+        "<20",
+        "0.12-0",
+        "55-110",
+        "7.4"
+      ],
+      [
+        "CTB1024",
+        "41.3",
+        "94.5",
+        "<20",
+        "0.12-0",
+        "66-132",
+        "7.4"
+      ],
+      [
+        "CTB1218",
+        "47.2",
+        "70.9",
+        "<18",
+        "0.12-0",
+        "88-154",
+        "7.4"
+      ],
+      [
+        "CTB1224",
+        "47.2",
+        "94.5",
+        "<18",
+        "0.12-0",
+        "94-198",
+        "10.1"
+      ],
+      [
+        "CTB1230",
+        "47.2",
+        "118.1",
+        "<18",
+        "0.12-0",
+        "110-198",
+        "10.1"
+      ],
+      [
+        "CTB1530",
+        "59.1",
+        "118.1",
+        "<14",
+        "0.12-0",
+        "187-309",
+        "14.8"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "length",
+      "",
+      "length",
+      "capacity",
+      "power"
+    ]
+  },
+  "features": [
+    {
+      "title": "High-Intensity Magnetic Field",
+      "description": "The CTB series utilizes premium-grade NdFeB permanent magnets that generate a magnetic field intensity up to 1.2T, enabling effective recovery of weakly magnetic materials with exceptional selectivity. This high field strength improves recovery rates by up to 30% compared to conventional magnetic systems while maintaining consistent performance without electricity."
+    },
+    {
+      "title": "Precision Drum Design",
+      "description": "Engineered with a specialized magnetic circuit arrangement that ensures uniform field distribution across the entire working surface. The optimized drum structure creates multiple magnetic zones with precisely calibrated field intensities, enabling selective recovery of particles with different magnetic susceptibilities and improving concentrate grade by up to 10%."
+    },
+    {
+      "title": "Adjustable Separation Parameters",
+      "description": "Easily configurable drum speed, feed rate, and splitter position allow operators to optimize separation performance for different ore characteristics. These adjustable parameters enable quick adaptation to variations in feed composition, ensuring consistent product quality and maximizing recovery efficiency across diverse operating conditions."
+    },
+    {
+      "title": "Maintenance-Friendly Design",
+      "description": "Self-cleaning drum surface with anti-clogging profile prevents material buildup even with wet or sticky feeds. The sealed bearing assembly requires minimal maintenance with extended lubrication intervals, reducing service requirements by up to 70% compared to electromagnetic alternatives while supporting continuous operation in demanding production environments."
+    },
+    {
+      "title": "Energy-Efficient Processing",
+      "description": "The permanent magnet design eliminates the need for electricity to generate the magnetic field, reducing operational power consumption by up to 60% compared to electromagnetic separators. This energy efficiency translates to significant cost savings over the equipment's lifetime while maintaining environmental sustainability in mineral processing operations."
+    },
+    {
+      "title": "Robust Construction",
+      "description": "Heavy-duty industrial frame with reinforced supports withstands continuous operation in harsh mining environments. The wear-resistant drum surface and premium components ensure a service life exceeding 15 years with proper maintenance, providing reliable performance and excellent return on investment for mining and processing facilities."
+    },
+    {
+      "title": "Versatile Application Range",
+      "description": "Effectively processes materials from 0-3mm with capacities ranging from 10-280 t/h depending on model selection. The equipment performs consistently across various mineral types including magnetite, hematite, limonite, and other ferrous materials, making it suitable for concentration, purification, and recycling applications across multiple industries."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Iron Ore Concentration",
+        "description": "Efficiently separates and concentrates ferromagnetic materials from iron ore, producing high-grade iron concentrates with improved Fe content for blast furnace and direct reduction processes."
+      },
+      {
+        "title": "Mineral Processing",
+        "description": "Effectively removes magnetic minerals from non-magnetic materials in beneficiation processes for various ores including manganese, chromium, and titanium, improving downstream processing efficiency."
+      },
+      {
+        "title": "Coal Washing",
+        "description": "Removes ferromagnetic impurities from coal feeds, reducing ash content and improving the quality of thermal coal for power generation and metallurgical applications."
+      },
+      {
+        "title": "Recycling Operations",
+        "description": "Separates ferrous materials from mixed waste streams and industrial byproducts, supporting metal recovery and recycling initiatives while reducing landfill requirements."
+      },
+      {
+        "title": "Ceramics Industry",
+        "description": "Removes iron-containing contaminants from feldspar, quartz, and kaolin, ensuring high-purity raw materials for ceramic production and enhancing product quality."
+      },
+      {
+        "title": "Environmental Protection",
+        "description": "Extracts magnetic materials from industrial wastewater and process streams, supporting environmental compliance while enabling recovery of valuable materials that would otherwise be lost."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does a permanent drum magnetic separator work?",
+      "answer": "The permanent drum magnetic separator utilizes high-intensity NdFeB magnets mounted in a fixed position inside a rotating non-magnetic drum. As material flows over the drum surface, magnetic particles are attracted to the drum and held against the rotation until they exit the magnetic field zone. The magnetic particles are then carried further around the drum and discharged separately from non-magnetic particles, which fall naturally under gravity. This process creates distinct streams of magnetic concentrate and non-magnetic tailings without requiring electricity to generate the magnetic field."
+    },
+    {
+      "question": "What are the advantages of permanent magnetic drums over electromagnetic separators?",
+      "answer": "Permanent magnetic drums offer several key advantages: 1) Significantly lower energy consumption, as no electricity is required to generate the magnetic field; 2) Consistent magnetic field strength without fluctuations or risk of power failure; 3) Lower maintenance costs with no cooling requirements or electromagnetic coil repairs; 4) Simplified operation without field current adjustments; 5) Higher safety profile without risks associated with electrical systems; 6) Lower operating temperatures improving longevity; 7) Lighter weight and more compact design. These benefits make permanent magnetic separators more economical over their operational lifetime despite a potentially higher initial investment."
+    },
+    {
+      "question": "What materials can be processed with the CTB series separators?",
+      "answer": "The CTB series effectively processes ferromagnetic and paramagnetic materials, including: 1) Iron ores such as magnetite, hematite, and limonite; 2) Manganese ores with magnetic properties; 3) Ilmenite and other titanium-bearing minerals; 4) Coal with magnetic impurities; 5) Industrial minerals requiring iron removal; 6) Recycling materials containing ferrous components. The separators handle dry or wet feed with particle sizes from 0-3mm and moisture content up to 15%, making them versatile for various mineral processing applications where magnetic susceptibility differences can be exploited."
+    },
+    {
+      "question": "How do I select the right model for my application?",
+      "answer": "Model selection depends on several factors: 1) Required processing capacity - match expected throughput with model specifications; 2) Material characteristics - consider particle size, magnetic susceptibility, and moisture content; 3) Feed composition - analyze the percentage of magnetic particles expected; 4) Desired recovery and grade targets; 5) Installation constraints - evaluate available space and existing plant configuration; 6) Operational conditions - consider ambient temperature and humidity. Our engineering team provides comprehensive material testing services to recommend the optimal model and configuration for your specific requirements, ensuring maximum performance and return on investment."
+    },
+    {
+      "question": "What maintenance procedures are recommended for permanent drum magnetic separators?",
+      "answer": "Recommended maintenance includes: 1) Daily visual inspection of the drum surface and discharge points; 2) Weekly checking of drive system components and belt tension; 3) Monthly lubrication of bearings according to the schedule; 4) Quarterly inspection of drum seals and magnetic system integrity; 5) Semi-annual cleaning of the drum surface if processing dry materials; 6) Annual comprehensive inspection of all mechanical components. The permanent magnets require no maintenance and retain their magnetic properties for 15-20 years under normal operating conditions. Most operations report maintenance requirements of approximately 2-4 hours monthly, significantly less than electromagnetic alternatives."
+    },
+    {
+      "question": "How does drum diameter affect separation performance?",
+      "answer": "Drum diameter influences separation performance in several ways: 1) Larger diameters provide greater magnetic field exposure time, improving recovery of weakly magnetic particles; 2) Increased diameter creates a larger working surface area, allowing for higher throughput capacity; 3) Larger drums generate more gradual magnetic force transitions, improving selectivity in some applications; 4) Different diameters are optimal for specific particle size ranges and magnetic susceptibilities. Generally, larger diameter drums (1050-1500mm) are preferred for finer materials and weakly magnetic ores, while smaller diameters (600-900mm) work effectively for strongly magnetic materials and coarser particles."
+    },
+    {
+      "question": "Can permanent drum magnetic separators handle wet processing?",
+      "answer": "Yes, CTB series separators effectively handle wet material processing with several features addressing moisture challenges: 1) Corrosion-resistant drum surfaces suitable for slurry applications; 2) Special sealing systems that protect internal magnetic components from moisture exposure; 3) Drainage systems to manage excess water; 4) Optimized drum profiles that resist material buildup in wet conditions. The equipment processes material with moisture content up to 15% without performance degradation and can be configured for full slurry applications with appropriate tank designs. For high-slurry applications above 15% moisture, we recommend specialized wet drum configurations with adapted feed and discharge systems."
+    },
+    {
+      "question": "What factors affect separation efficiency in permanent magnetic drum separators?",
+      "answer": "Key factors influencing separation efficiency include: 1) Magnetic field intensity and gradient - affects the selective capture of particles with different magnetic susceptibilities; 2) Drum rotation speed - impacts the balance between gravitational and magnetic forces; 3) Layer thickness on the drum - thinner layers typically yield better selectivity; 4) Feed rate consistency - uniform feed improves separation precision; 5) Particle size distribution - finer particles generally require stronger fields or slower drum speeds; 6) Moisture content - excessive moisture can increase viscous drag and affect separation; 7) Splitter position adjustment - critical for defining the cut point between magnetic and non-magnetic fractions; 8) Feed material liberation - proper grinding ensures magnetic minerals are sufficiently liberated from gangue."
+    },
+    {
+      "question": "What are the installation requirements for a CTB series magnetic separator?",
+      "answer": "Installation requirements include: 1) Stable foundation capable of supporting the operational weight (typically 1.5-2 times the equipment weight); 2) Overhead clearance for maintenance access (minimum 1.5m recommended); 3) Power supply for the drum drive motor (three-phase connection typical); 4) Proper feed distribution system to ensure even material presentation across the drum width; 5) Appropriate chute work for separated product streams; 6) Dust collection systems if processing dry materials; 7) Sufficient space around the equipment for operational access. Our technical team provides detailed installation guidelines and can review site plans to ensure optimal equipment placement and integration with existing processing circuits."
+    }
+  ],
+  "seo": {
+    "title": "High Intensity Permanent Drum Magnetic Separator | Mining Magnetic Separator | Zexin Mining",
+    "keywords": "permanent drum magnetic separator,dry drum magnetic separator,high intensity drum separator,industrial magnetic separator,mining magnetic drum separator,permanent magnet roll separator,magnetic drum separator price,magnetic separator for sale,magnetic drum separator manufacturer,magnetic ore separator,magnetic separation equipment,magnetic concentrator drum,magnetic separator specifications,magnetic drum separator design,magnetic separator efficiency,magnetic drum separator supplier,magnetic mineral separator,magnetic drum separator capacity",
+    "description": "Zexin Mining's permanent drum magnetic separator delivers superior iron ore concentration with high-intensity magnetic field technology. Our energy-efficient design ensures optimal recovery rates with minimal maintenance, making it ideal for mining operations processing various ferromagnetic materials."
+  },
+  "searchKeywords": [
+    "permanent drum magnetic separator",
+    "high intensity magnetic separator",
+    "iron ore magnetic separator",
+    "mining magnetic drum separator",
+    "magnetic drum concentrator",
+    "permanent magnet separator",
+    "dry magnetic separator",
+    "ferrous material separator",
+    "industrial magnetic drum",
+    "mineral processing equipment"
+  ],
+  "relatedProducts": [
+    "wet-high-intensity-magnetic-roll-separator",
+    "plate-high-intensity-magnetic-separator",
+    "triple-disc-belt-magnetic-separator",
+    "double-roll-permanent-magnetic-zircon-separator",
+    "four-roll-high-voltage-electrostatic-separator"
+  ],
+  "imageSrcAlt": "Permanent Drum Magnetic Separator | Zexin Mining"
+}

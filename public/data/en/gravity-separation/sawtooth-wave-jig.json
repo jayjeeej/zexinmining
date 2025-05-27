@@ -1,0 +1,306 @@
+{
+  "id": "sawtooth-wave-jig",
+  "title": "Sawtooth Wave Jig | Gravity Jig Concentrator",
+  "series": "JT Series Energy Efficient Mineral Separator",
+  "imageSrc": "/images/products/gravity-separation/sawtooth-wave-jig.jpg",
+  "productCategory": "Gravity Separation Equipment",
+  "subcategory": "gravity-separation",
+  "model": "STWJ-5",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "10-30 mtph (11-33 stph)"
+    },
+    {
+      "key": "Max. feed size",
+      "displayValue": "0-60 mm (0-2.4 in.)"
+    },
+    {
+      "key": "Motor power",
+      "displayValue": "11 kW (14.7 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "ton",
+          "conversionFactor": 1.10231,
+          "label": "ton"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "mtph"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/gravity-separation/sawtooth-wave-jig",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/gravity-separation/sawtooth-wave-jig",
+    "zh": "/zh/products/ore-processing/gravity-separation/sawtooth-wave-jig"
+  },
+  "overview": "The Sawtooth Wave Jig is a high-recovery gravity separator that utilizes a unique sawtooth waveform motion, particularly effective for small scale gold mining operations and tin ore processing. Its innovative design provides exceptional separation efficiency for fine particles and minerals with small density differences. With industry-leading recovery rates for precious metals such as gold, silver, platinum, tungsten, and tin, combined with energy efficient operation, this mineral jig separator is the ideal solution for mining operations seeking maximum mineral recovery with minimal environmental impact.",
+  "detailedDescription": "The STWJ Series gold jig separator introduces innovative sawtooth wave technology that transforms mineral concentration in gravity separation. This hydraulic jig concentrator creates optimized stratification patterns through its unique motion dynamics, addressing common challenges with fine particles while enhancing recovery rates. Its balanced approach to precise material separation delivers consistent results across diverse ore types, making it valuable equipment for small scale mining operations processing gold, tin, and tungsten without compromising energy efficiency.",
+  "specifications": {
+    "title": "High-Recovery Gravity Separator Specifications",
+    "note": "Can be customized according to customer requirements",
+    "tableHeaders": [
+      "Model",
+      "Stroke / Adjustment Range (mm)",
+      "Jigging Chamber Number",
+      "Section Type",
+      "Jigging Chamber Area (m²)",
+      "Frequency Range (cycles/min)",
+      "Feed Size (mm)",
+      "Processing Capacity (t/h)",
+      "Motor Power (kW)",
+      "Water Consumption (m³/h)",
+      "Weight (t)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Stroke / Adjustment Range (in.)",
+      "Jigging Chamber Number",
+      "Section Type",
+      "Jigging Chamber Area (ft²)",
+      "Frequency Range (cycles/min)",
+      "Feed Size (in.)",
+      "Processing Capacity (stph)",
+      "Motor Power (hp)",
+      "Water Consumption (m³/h)",
+      "Weight (ton)"
+    ],
+    "tableData": [
+      [
+        "STWJ-5",
+        "15-47",
+        "1",
+        "Sawtooth",
+        "5",
+        "60-156",
+        "0-60",
+        "10-30",
+        "11",
+        "100-150",
+        "2.5"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "STWJ-5",
+        "0.6-1.9",
+        "1",
+        "Sawtooth",
+        "53.8",
+        "60-156",
+        "0-2.4",
+        "11-33",
+        "14.7",
+        "100-150",
+        "2.8"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "",
+      "",
+      "area",
+      "",
+      "length",
+      "capacity",
+      "power",
+      "",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "High-Recovery Gravity Separation Technology",
+      "description": "Our patented sawtooth wave motion creates multiple precision stratification zones that enhance recovery rates by up to 40% compared to conventional gravity separators. This unique technology is particularly effective for recovering fine gold particles down to 0.1mm in size that would otherwise be lost to tailings in small scale gold mining operations."
+    },
+    {
+      "title": "Specialized Tin Ore Processing Capability",
+      "description": "Engineered specifically for effective tin ore processing with advanced stratification mechanics that achieve exceptional cassiterite recovery. The precision-controlled sawtooth wave pattern creates ideal separation conditions for tin minerals with subtle density differences from gangue materials, resulting in higher grade concentrates and improved recovery rates."
+    },
+    {
+      "title": "Energy Efficient Mineral Processing System",
+      "description": "This energy efficient mineral separator consumes up to 30% less power than conventional equipment while maintaining superior recovery rates. With operating costs as low as 0.4-1.1 kWh per ton processed, it delivers exceptional efficiency for operations with limited power infrastructure, making it perfect for remote mining locations."
+    },
+    {
+      "title": "Fine Particle Recovery Optimization",
+      "description": "Specifically engineered for materials with small density differences, the STWJ-5 excels at separating minerals in the critical 0.1-2mm range where traditional gravity separators fail. This mineral jig separator is ideal for processing complex ores containing fine gold and other valuable minerals that are typically difficult to recover."
+    },
+    {
+      "title": "Smart Maintenance Design for Field Operations",
+      "description": "Our modular construction allows for quick component replacement and minimal downtime in remote mining environments. Key wear parts utilize specialized alloys that extend service intervals by up to 40%, reducing maintenance costs and increasing operational availability - critical factors for small scale gold mining operations in developing regions."
+    },
+    {
+      "title": "Compact Footprint with High Processing Capacity",
+      "description": "With a processing capacity of 10-30 tph in a compact design (approximately 2.5m x 1.5m), this high-recovery gravity separator is perfect for small-scale mining operations with space constraints. Its minimal footprint allows installation in locations where larger equipment cannot fit, making efficient use of available space."
+    },
+    {
+      "title": "Patented Waveform Generation System",
+      "description": "Our proprietary hydraulic drive creates the optimal sawtooth wave pattern that maximizes mineral stratification for difficult-to-process ores. This precision-engineered system generates 60-156 cycles per minute with exact adjustment capabilities to optimize separation for different ore types and particle sizes found in various gold and tin deposits."
+    },
+    {
+      "title": "Advanced Bedding Material Technology",
+      "description": "Specialized composite bedding materials enhance fine gold and tin mineral recovery by creating ideal separation conditions. Our eco-friendly ragging material improves recovery rates for ultra-fine precious metal particles (0.1-0.5mm) by up to 25% compared to conventional bedding systems, delivering superior performance for valuable mineral retention."
+    },
+    {
+      "title": "Water Conservation System",
+      "description": "Integrated water management system reduces fresh water requirements by enabling 80-85% recirculation in closed circuits. This feature is particularly valuable for mining operations in water-scarce regions, decreasing environmental impact while maintaining optimal separation efficiency with water consumption as low as 3-5 cubic meters per ton processed."
+    }
+  ],
+  "applications": {
+    "title": "Application Areas",
+    "items": [
+      {
+        "title": "Small Scale Gold Mining",
+        "description": "Perfect for small scale gold mining operations, delivering exceptional recovery rates for fine and ultra-fine gold particles down to 0.1mm. The high-recovery gravity separator design minimizes gold losses while requiring minimal water and power resources, making it ideal for remote mining locations."
+      },
+      {
+        "title": "Tin Ore Processing",
+        "description": "Specialized tin ore processing jig that achieves superior separation efficiency for cassiterite and other tin-bearing minerals. The unique sawtooth wave motion creates ideal stratification conditions for tin minerals with subtle density differences from gangue materials."
+      },
+      {
+        "title": "Precious Metals Recovery",
+        "description": "Efficiently recovers precious metals including gold, silver, platinum and palladium with recovery rates up to 40% higher than conventional gravity separation methods. This mineral jig separator excels at capturing fine precious metal particles that would otherwise be lost."
+      },
+      {
+        "title": "Rare Metals Concentration",
+        "description": "Energy efficient mineral separator for tungsten, tantalum, niobium and other rare metals with exceptional grade improvement ratios. The precisely controlled sawtooth motion pattern enables effective separation of minerals with similar specific gravities."
+      },
+      {
+        "title": "Exploration and Small-Batch Processing",
+        "description": "Ideal for exploration projects and small-batch mineral processing with its adaptable design and quick setup. Provides reliable metallurgical data while producing marketable concentrate, combining analytical utility with immediate revenue generation."
+      }
+    ]
+  },
+  "technicalAdvantages": null,
+  "caseStudies": [
+    {
+      "title": "River Sand Tin Processing Plant in Loikaw, Myanmar",
+      "description": "A specialized tin processing plant in Myanmar employed our jigging technology to efficiently process river sand tin deposits. The challenging conditions with power shortages and remote location were addressed through our energy-efficient design.",
+      "results": "Excellent recovery rates with modular installation",
+      "imageSrc": "/images/cases/myanmar-tin/river-sand-tin-processing-plant-loikaw.jpg",
+      "href": "/en/cases/myanmar-tin"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What makes the Sawtooth Wave Jig different from conventional gravity separators?",
+      "answer": "The Sawtooth Wave Jig utilizes a unique sawtooth waveform motion pattern that creates multiple micro-stratification zones within the separation bed. This results in more precise separation of minerals, especially for fine particles and materials with small density differences that conventional gravity separators struggle to process effectively. The specialized motion pattern generates up to 40% higher recovery rates for precious metals compared to traditional equipment, making it ideal for operations where maximizing recovery is critical."
+    },
+    {
+      "question": "How effective is the Sawtooth Wave Jig for small scale gold mining operations?",
+      "answer": "The STWJ-5 is exceptionally effective for small scale gold mining operations, with customers reporting recovery increases of 25-40% compared to their previous equipment. Its compact design, low water and power requirements, and ability to recover fine gold particles down to 0.1mm make it perfectly suited for artisanal and small-scale mining. The equipment can be easily transported to remote locations and requires minimal infrastructure, while still delivering professional-grade separation performance that maximizes gold recovery and operation profitability."
+    },
+    {
+      "question": "What advantages does this mineral jig separator offer for tin ore processing?",
+      "answer": "For tin ore processing, our mineral jig separator offers several key advantages: 1) Superior separation efficiency for cassiterite with recovery rates typically 15-25% higher than spiral concentrators; 2) Effective processing of mixed particle sizes (0.1-60mm) in a single unit, eliminating the need for complex classification systems; 3) Ability to handle slimes and clay-rich ores that cause problems in conventional equipment; 4) Lower water consumption and power requirements compared to traditional tin processing methods; and 5) Simple operation and maintenance requirements making it suitable for both established operations and new developments in remote areas."
+    },
+    {
+      "question": "What particle size range is optimal for this high-recovery gravity separator?",
+      "answer": "The STWJ-5 high-recovery gravity separator is designed to efficiently process particles from 0.1mm to 60mm, with particularly outstanding performance in the challenging fine particle range (0.1-2mm) where many conventional separation technologies struggle. This wide operating range eliminates the need for extensive pre-classification of feed material, though optimal recovery is achieved when processing narrower size fractions. The equipment's adjustable stroke and frequency parameters allow precise tuning to maximize recovery for specific particle size distributions in your ore."
+    },
+    {
+      "question": "How energy efficient is the Sawtooth Wave Jig compared to other mineral separators?",
+      "answer": "The Sawtooth Wave Jig is an exceptionally energy efficient mineral separator, consuming up to 30% less power than conventional jigging equipment and up to 50% less than equivalent capacity spiral or centrifugal concentrators. With power requirements of only 11kW for processing 10-30 tons per hour, it delivers industry-leading energy efficiency of approximately 0.4-1.1 kWh per ton processed. The optimized hydraulic system also reduces water consumption by 20-25%, further enhancing operational efficiency and reducing environmental impact, particularly important for operations in water-scarce regions."
+    },
+    {
+      "question": "What is the expected return on investment period for the Sawtooth Wave Jig?",
+      "answer": "Most operations see a return on investment within 6-12 months when implementing the Sawtooth Wave Jig, primarily through increased recovery rates and reduced operating costs. For gold recovery applications, where recovery increases of 25-40% are common, ROI can be achieved in as little as 3-4 months at current gold prices. The actual ROI period varies based on the specific application, mineral values, and operational parameters, but the combination of improved recovery, lower energy consumption, and reduced water usage consistently delivers compelling economic benefits across all applications."
+    },
+    {
+      "question": "Can the Sawtooth Wave Jig be integrated into existing mineral processing circuits?",
+      "answer": "Yes, the compact design of the STWJ-5 makes it suitable for integration into existing mineral processing circuits. With a footprint of approximately 2.5m x 1.5m, it can be incorporated into most operations without major modifications to existing infrastructure. The system can function as a primary concentrator, scavenger for tailings streams, or cleaner for improving concentrate grades. Our engineering team provides comprehensive integration planning including flowsheet optimization, space utilization, water circuit integration, and control system compatibility to ensure maximum performance improvement with minimal disruption to ongoing operations."
+    },
+    {
+      "question": "How does the maintenance requirement compare to other gravity separation equipment?",
+      "answer": "The STWJ-5 features significantly reduced maintenance requirements compared to other gravity separation equipment. The robust construction and simplified drive mechanism minimize wear points, while specialized materials in high-wear areas extend component life by up to 300%. Routine maintenance primarily involves periodic inspection of drive components, checking and adjusting the motion mechanism, and cleaning of the water distribution system, typically requiring only 2-4 hours per month. Most parts are standardized and readily available, minimizing downtime for repairs and ensuring consistent performance throughout the equipment's service life."
+    },
+    {
+      "question": "What technical support is provided with the Sawtooth Wave Jig?",
+      "answer": "Comprehensive technical support is included with every Sawtooth Wave Jig. This includes initial ore testing and parameter optimization, detailed installation and commissioning guidance, thorough operator training, and ongoing operational support. Our technical team provides remote troubleshooting assistance, regular software updates for the control system, and process optimization recommendations based on operational data. Additionally, we maintain a global network of service technicians who can provide on-site support when needed, ensuring your equipment continues to deliver maximum performance throughout its operational life."
+    },
+    {
+      "question": "What water quality and infrastructure requirements are needed for optimal operation?",
+      "answer": "The Sawtooth Wave Jig is designed to operate effectively with minimal infrastructure requirements, making it suitable for remote locations. Water quality is not critical as the system includes basic filtration components, though extremely muddy water may require supplementary settling or filtration systems. Water consumption ranges from 100-150 cubic meters per hour, with approximately 80-85% recirculation possible in a closed circuit. Power requirements include standard three-phase supply (380-440V) with 11kW capacity. Foundation requirements are minimal, with a level concrete pad of sufficient load-bearing capacity typically adequate for installation."
+    }
+  ],
+  "seo": {
+    "keywords": "jig separator,gold jig separator,gravity jig concentrator,mineral jig machine,hydraulic jig separator,small scale jig concentrator,tin ore jigging machine,tungsten ore jig separator,mining jig machine,high recovery gravity jig,jig separator for alluvial gold,jig separator for fine gold recovery,diaphragm jig machine,gravity concentration jig,air pulsating jig concentrator,sawtooth wave jig",
+    "description": "Zexin Mining's Sawtooth Wave Jig achieves 40% higher gold recovery with 30% less energy consumption. Our hydraulic jig separator provides exceptional mineral concentration for gold, tin and tungsten ores, perfect for small scale mining operations with minimal water requirements.",
+    "title": "Sawtooth Wave Jig | Gold Jig Separator | High-Recovery Gravity Concentrator for Small Scale Mining"
+  },
+  "relatedProducts": [
+    "synchronous-counter-directional-jig",
+    "synchronous-counter-directional-jig-small",
+    "shaking-table",
+    "spiral-chute",
+    "centrifugal-separator"
+  ],
+  "imageSrcAlt": "Sawtooth Wave Jig | Zexin Mining"
+}

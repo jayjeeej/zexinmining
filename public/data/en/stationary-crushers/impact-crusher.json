@@ -1,0 +1,334 @@
+{
+  "id": "impact-crusher",
+  "title": "Impact Crusher",
+  "series": "ZPF Series High-Efficiency Impact Crusher",
+  "imageSrc": "/images/products/stationary-crushers/impact-crusher.jpg",
+  "productCategory": "Mining Crushing Equipment",
+  "subcategory": "stationary crushers",
+  "model": "ZPF-1010-1",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "30-180 t/h (33-198 stph)"
+    },
+    {
+      "key": "Feed Size",
+      "displayValue": "250-400 mm (9.84-15.75 in)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "75-160 kW (101-215 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.03937,
+          "label": "in"
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "st",
+          "conversionFactor": 0.9842,
+          "label": "short ton"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.1023,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.341,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/stationary-crushers/impact-crusher",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/stationary-crushers/impact-crusher",
+    "zh": "/zh/products/ore-processing/stationary-crushers/impact-crusher"
+  },
+  "overview": "Zexin Mining's ZPF Series Impact Crusher represents the pinnacle of medium and fine crushing technology, specifically engineered for efficient processing of medium-hardness materials. With innovative impact crushing technology and optimized rotor systems, it delivers exceptional crushing ratios and superior particle shape control while significantly reducing energy consumption. Particularly suitable for mining, cement, and aggregate production, the ZPF Series creates greater value for customers with its high productivity, superior cubic product formation, and low operating costs.",
+  "detailedDescription": "The ZPF Series horizontal shaft impact crusher introduces innovative material interaction principles that transform medium and fine crushing processes in aggregate production. This cubic stone crusher creates optimized particle geometries through its unique impact mechanics, addressing common challenges in construction material processing while enhancing product quality. Its intelligent approach to material fracturing delivers consistent results for mining operations, particularly valuable for those seeking energy-efficient crushing solutions with superior product shape characteristics.",
+  "specifications": {
+    "title": "ZPF Series Impact Crusher Technical Parameters",
+    "note": "Can be customized according to customer requirements",
+    "tableHeaders": [
+      "Model",
+      "Rotor Diameter (mm)",
+      "Rotor Length (mm)",
+      "Max. Feed Size (mm)",
+      "Production Capacity (t/h)",
+      "Motor Power (kW)",
+      "Weight (ton)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Rotor Diameter (in.)",
+      "Rotor Length (in.)",
+      "Max. Feed Size (in.)",
+      "Production Capacity (stph)",
+      "Motor Power (hp)",
+      "Weight (ton)"
+    ],
+    "tableData": [
+      [
+        "ZPF-1010-1",
+        "1000",
+        "1000",
+        "250",
+        "30-80",
+        "75",
+        "11.6"
+      ],
+      [
+        "ZPF-1210",
+        "1200",
+        "1000",
+        "300",
+        "40-90",
+        "90-132",
+        "14.5"
+      ],
+      [
+        "ZPF-1214",
+        "1200",
+        "1400",
+        "300",
+        "60-130",
+        "132",
+        "17.5"
+      ],
+      [
+        "ZPF-1315",
+        "1300",
+        "1500",
+        "400",
+        "110-180",
+        "160",
+        "21.5"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "ZPF-1010-1",
+        "39.4",
+        "39.4",
+        "9.8",
+        "33-88",
+        "101",
+        "11.6"
+      ],
+      [
+        "ZPF-1210",
+        "47.2",
+        "39.4",
+        "11.8",
+        "44-99",
+        "121-177",
+        "14.5"
+      ],
+      [
+        "ZPF-1214",
+        "47.2",
+        "55.1",
+        "11.8",
+        "66-143",
+        "177",
+        "17.5"
+      ],
+      [
+        "ZPF-1315",
+        "51.2",
+        "59.1",
+        "15.7",
+        "121-198",
+        "215",
+        "21.5"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "length",
+      "length",
+      "capacity",
+      "power",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "High Material Crushing Capability",
+      "description": "Can crush ores and rocks with compressive strength of up to 250MPa, providing versatility across a wide range of medium to hard materials in mining and quarrying applications."
+    },
+    {
+      "title": "Superior Crushing Ratio",
+      "description": "Large crushing ratio, close to 20, significantly simplifies the crushing process by reducing the number of crushing stages required, lowering overall plant complexity and investment costs."
+    },
+    {
+      "title": "Energy Efficiency",
+      "description": "Low energy consumption, usually about 1kW/t per unit output, substantially reduces production costs and carbon footprint compared to conventional crushing technologies."
+    },
+    {
+      "title": "Premium Product Shape",
+      "description": "The product particle size is cubic, with less than 8% of flakes, which significantly improves the quality of concrete and other construction applications requiring high-standard aggregates."
+    },
+    {
+      "title": "Selective Crushing Advantage",
+      "description": "It has the advantage of selective crushing, and can obtain more sand grade products, making it particularly valuable for operations requiring specific size distributions."
+    },
+    {
+      "title": "Excellent Non-Crushable Material Handling",
+      "description": "Features excellent pass iron performance, ensuring the main machine will not be damaged when non-breakable objects enter the crushing cavity, reducing maintenance costs and downtime."
+    },
+    {
+      "title": "Simple Maintenance Design",
+      "description": "Simple and reasonable structure of the whole product, making maintenance and repair operations straightforward, reducing technical expertise requirements and service time."
+    },
+    {
+      "title": "Vibration Control",
+      "description": "No significant unbalance vibration during operation, eliminating the need for heavy foundations, reducing installation costs and making it suitable for mobile applications or sites with limited foundation capabilities."
+    }
+  ],
+  "applications": {
+    "title": "Application Areas",
+    "items": [
+      {
+        "title": "Mining Industry",
+        "description": "Provides precise crushing solutions for various ores with compressive strength up to 250MPa such as limestone, dolomite, phosphate rock, and medium-hardness metal ores. Optimized crushing chamber design and precise discharge size control meet strict feed size requirements for different mineral processing technologies. ZPF impact crushers achieve crushing ratios close to 20:1, compared to traditional jaw crushers (4:1) and cone crushers (6:1), significantly simplifying crushing processes, reducing equipment investment, while providing better product shape and improving downstream mineral recovery rates."
+      },
+      {
+        "title": "Aggregate & Construction Materials",
+        "description": "Produces high-quality construction aggregates with cubic formation rates up to 90%, far exceeding traditional crushing equipment's 60-75%, meeting high-standard requirements for roads, bridges, and concrete engineering. ZPF series with blow bar configurations optimized for the construction materials industry reduces over-crushing phenomenon, increasing commercial aggregate yield while reducing dust generation. Special chamber design provides uniform product size distribution, improving screening efficiency by 25%, reducing circulating load, and enhancing overall production line efficiency."
+      },
+      {
+        "title": "Metallurgical Applications",
+        "description": "Enhances metallurgical ore crushing efficiency and quality control, particularly suitable for preparing sinter, pellets, and various metallurgical auxiliary materials. ZPF series provides high-quality raw materials with uniform particle size and regular shape for smelting processes, improving sintering quality and blast furnace utilization factors. Customized heat-resistant blow bar configurations can process high-temperature metallurgical slag (>150°C), enabling resource recycling, reducing enterprise raw material costs while minimizing environmental pollution."
+      },
+      {
+        "title": "Cement Production Lines",
+        "description": "Provides ideal secondary crushing equipment for cement production, processing limestone, clay, shale, and other cement raw materials. Optimized crushing ratio and discharge particle size perfectly match raw meal grinding requirements, improving mill efficiency by 20-30% and reducing energy consumption. Compact design integrates easily into existing production lines with 30% reduced footprint, while easy maintenance features reduce downtime, improving overall cement plant operational efficiency and capacity utilization."
+      },
+      {
+        "title": "Environmental & Recycling Processing",
+        "description": "Specialized configurations for processing construction waste, concrete blocks, asphalt pavement, and other recyclable materials, achieving efficient resource recycling. Special impact plate systems optimized for reinforced concrete effectively separate metal and non-metal components, increasing recovery value. Produced recycled aggregates meet secondary building material standards, usable for road bases, backfilling, and low-grade concrete, providing economical and environmentally friendly raw material sources for green building while reducing landfill requirements and environmental burden."
+      },
+      {
+        "title": "Material Limitations",
+        "description": "While the ZPF series is capable of processing materials with compressive strength up to 250MPa, consideration should be given to material abrasiveness. For highly abrasive materials, even within the acceptable hardness range, impact crushers may experience higher wear rates and consequently higher operating costs. Therefore, material characteristics beyond just hardness, such as abrasiveness, moisture content, and stickiness, should be carefully evaluated when selecting crushing equipment for your specific application."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What types of materials can the ZPF Series Impact Crusher process?",
+      "answer": "The ZPF Series is designed to process materials with compressive strength up to 250MPa. It is particularly suitable for processing limestone, dolomite, limestone, coal gangue, sandstone, gypsum, shale, and other non-metallic ores, as well as medium-hardness metal ores such as phosphate and copper ores. Impact crushers are not suitable for highly abrasive materials (like silica sand, granite) which cause rapid wear of blow bars and impact plates. Similarly, materials with high viscosity or moisture content exceeding 10% are not recommended for impact crushing as they cause material clogging and performance degradation."
+    },
+    {
+      "question": "What advantages does the ZPF Impact Crusher have compared to jaw crushers and cone crushers?",
+      "answer": "ZPF impact crushers offer significant advantages in several key areas: 1) Higher crushing ratio (close to 20:1), far exceeding jaw crushers (4:1) and standard cone crushers (6:1), achieving finer particle size in one processing stage; 2) Superior product shape, with cubic formation rates up to 90% and less than 8% flakes, particularly suitable for high-standard aggregate production; 3) Greater energy efficiency, with per-unit material energy consumption of about 1kW/t, substantially lower than conventional technologies; 4) Smaller footprint, 30-40% less than jaw+cone crusher combinations of equivalent capacity; 5) Simpler maintenance with a straightforward structure that reduces technical expertise requirements. However, for highly abrasive materials, impact crushers may have higher operating costs. Therefore, material characteristics are the key factor in crusher selection."
+    },
+    {
+      "question": "What is the recommended maintenance schedule for ZPF Series Impact Crushers?",
+      "answer": "Optimal performance requires a structured maintenance plan: 1) Per-shift inspection: blow bar wear condition, material flow situation, bearing temperature, and abnormal noise; 2) Weekly maintenance: check impact plate gap and wear, lubrication system status, fastener tightness, and drive belt tension; 3) Monthly maintenance: rotor dynamic balance check, motor and drive system inspection, comprehensive chamber inspection; 4) Quarterly overhaul: complete inspection of all wear parts and assessment of replacement needs. Blow bars require periodic rotation or replacement, with intervals depending on material: limestone (200-300 hours), sandstone (150-250 hours), ores (100-200 hours). The quick maintenance design of the ZPF series allows blow bar replacement within 2 hours, 60% less downtime than traditional designs. We recommend stocking sufficient wear parts (blow bars, impact plates, liners) to address planned and unplanned maintenance needs."
+    },
+    {
+      "question": "How can ZPF Impact Crusher performance and efficiency be optimized?",
+      "answer": "Performance optimization includes several key practices: 1) Material preprocessing: ensure feed moisture, stickiness, and particle size meet requirements, with pre-screening if necessary to remove fines; 2) Rotor speed adjustment: optimize rotor speed according to material hardness—lower speeds for softer materials reduce over-crushing, while appropriately increased speeds for harder materials enhance crushing efficiency; 3) Impact plate gap setting: adjust according to required product size, generally smaller gaps for finer products; 4) Blow bar selection and configuration: choose appropriate alloy composition and hardness based on material abrasiveness; 5) Uniform feeding: use professional feeding equipment to ensure material is evenly distributed across rotor width; 6) Load optimization: maintain operation at 75-85% of rated capacity for optimal energy efficiency; 7) Preventive maintenance: regularly rotate blow bars to ensure even wear, extending service life; 8) Vibration monitoring: use vibration monitoring systems to identify balance issues promptly. These optimization measures can increase capacity by 15-30% while reducing energy consumption by 10-20% and extending wear part life by 20-40%."
+    },
+    {
+      "question": "What key factors should be considered when selecting the appropriate ZPF Impact Crusher model?",
+      "answer": "Selection depends on several core factors: 1) Material characteristics: hardness, abrasiveness, moisture, and stickiness directly affect equipment selection and configuration; 2) Production requirements: required capacity, feed size, and target product size; 3) Installation environment: available space, foundation conditions, and existing equipment configuration; 4) Operating conditions: continuous operation time, ambient temperature, and maintenance resources; 5) Economic considerations: initial investment, expected operating costs, and return on investment requirements. ZPF series model naming (e.g., ZPF-1315) indicates rotor diameter of 1300mm and length of 1500mm, parameters that determine equipment processing capacity. Larger rotor diameter means larger feed size capability, while longer rotor length provides higher processing capacity. Our application engineers provide precise equipment selection recommendations based on actual material test results and production requirements, ensuring the most suitable ZPF model for your specific application."
+    },
+    {
+      "question": "What are the advantages of the innovative impact plate design in ZPF Impact Crushers?",
+      "answer": "The patented impact plate system of the ZPF series offers multiple advantages: 1) Material technology: special chrome-molybdenum alloy casting with hardness up to HRC60-62 while maintaining sufficient toughness, extending service life by 50%; 2) Geometric optimization: arc-shaped impact surfaces designed according to fluid dynamics principles, creating optimal particle impact angles, enhancing crushing effect while reducing wear; 3) Zoned design: impact plates divided into multiple independent areas that can be replaced individually according to wear conditions, saving 30-40% maintenance costs; 4) Quick adjustment: hydraulic-assisted adjustment system allows complete impact plate gap adjustment within 15 minutes, adapting to different product requirements without stopping; 5) Multi-stage crushing: optimized impact plate configuration forms multiple crushing zones, causing materials to undergo multiple crushing actions within the chamber, improving product shape and providing more uniform size distribution; 6) Modular structure: standardized impact plate unit design, reducing inventory SKU quantity and simplifying spare parts management. These innovations enable ZPF series to produce high-quality aggregates with up to 90% cubicity, far exceeding traditional crushing equipment's 60-75% cubicity rate, significantly improving end-product quality and market value."
+    },
+    {
+      "question": "How does the ZPF Series improve energy efficiency and cost control in ore processing?",
+      "answer": "The ZPF series enhances energy efficiency through multiple innovative designs: 1) Optimized rotor design: 15% lighter weight with increased strength, reducing startup energy consumption and inertial losses; 2) Efficient crushing path: computer-simulated optimized crushing chamber shape, reducing material circulation and excess energy consumption; 3) Precise dynamic balancing technology: reducing vibration losses, directing more energy to effective crushing; 4) Quality bearing system: reducing mechanical losses, improving transmission efficiency; 5) Intelligent control system: automatically adjusting parameters according to load, maintaining optimal operating conditions. These features combine to reduce unit material energy consumption by 35%, lowering energy consumption to 0.6-0.8kWh/ton for limestone and 0.9-1.2kWh/ton for medium-hard ores. For typical applications processing 100 tons/hour, annual electricity cost savings amount to approximately $23,000-38,000. Maintenance costs are also significantly reduced: wear parts life extended by 50%, quick replacement design reducing downtime losses, simplified inventory management lowering spare parts holding costs. Overall, the ZPF series can reduce total processing cost per ton of material by 15-25%, providing significant economic benefits for small and medium-sized mining operations."
+    },
+    {
+      "question": "What safety features are integrated into the ZPF Series Impact Crusher?",
+      "answer": "The ZPF series integrates comprehensive safety systems: 1) Overload protection: current monitoring system automatically detects abnormalities and triggers protection mechanisms, preventing motor and transmission system damage; 2) Non-crushable object detection: sensing systems identify metals and other non-crushable objects, providing timely warnings to prevent damage; 3) Vibration monitoring: real-time vibration sensors monitor operating status, automatically alarming and stopping when exceeding limits; 4) Guard design: all moving parts have protective devices preventing accidental contact; 5) Safety interlocks: maintenance doors equipped with electrical interlocks preventing equipment startup when open; 6) Emergency stop: multi-position emergency stop devices ensuring quick shutdown in any abnormal situation; 7) Dust control system: enclosed design with negative pressure dust removal, reducing dust hazards; 8) Low-noise technology: special acoustic design controls noise below 85 decibels, improving working environment; 9) Thermal protection: bearing temperature monitoring system preventing overheating damage; 10) Safety operating platform: equipment equipped with anti-slip operating platforms and guardrails ensuring maintenance personnel safety. These features comply with the latest international safety standards, providing comprehensive protection, reducing accident risk, while extending equipment service life."
+    },
+    {
+      "question": "What is the typical return on investment period for ZPF Series Impact Crushers?",
+      "answer": "Most applications achieve return on investment within 12-18 months: 1) Energy savings: 35% lower energy consumption compared to traditional crushing solutions, annual electricity cost savings of $23,000-38,000 (based on 100 tons/hour capacity); 2) Reduced maintenance costs: wear parts life extended by 50%, maintenance downtime reduced by 60%, annual maintenance cost savings of $15,000-30,000; 3) Product value increase: aggregate cubicity improved to 90%, increasing end-product price by 5-15%, adding $30,000-60,000 annual revenue; 4) Production efficiency improvement: single equipment capacity increased by 20-30%, reducing production line complexity, lowering labor costs; 5) Reduced footprint: 30% less space compared to multi-stage crushing processes with equivalent crushing ratios, reducing infrastructure investment. Market case studies show medium-sized production lines (100-150 tons/hour) processing limestone using ZPF impact crushers save or generate an additional $60,000-90,000 annually, with even more significant benefits when processing higher-value metal ores. Considering equipment service life typically exceeds 10 years, long-term return on investment is highly attractive, particularly suitable for small and medium-sized mining enterprises pursuing high efficiency and quick payback."
+    },
+    {
+      "question": "How does the ZPF Impact Crusher support green mining and environmental requirements?",
+      "answer": "The ZPF series supports green mining through multiple features: 1) Energy efficiency: 35% lower power consumption directly reduces carbon emissions, annually reducing approximately 200-400 tons of CO2 (based on 100 tons/hour capacity); 2) Noise control: special sound insulation design controls operating noise below 85 decibels, well below national standard requirements; 3) Dust minimization: enclosed design with efficient dust collection systems, reducing dust emissions by 90%, complying with the strictest environmental standards; 4) Resource efficient utilization: extending wear parts life by 50%, reducing resource consumption and waste generation; 5) Water resource protection: dry crushing requires no process water, eliminating water pollution risks; 6) High recovery rate: precise product control improves downstream mineral processing recovery by 5-15%, reducing tailings generation; 7) Construction waste processing capability: promoting building materials recycling, reducing landfill requirements; 8) Small footprint: reducing land use and ecological disturbance. The ZPF series meets and exceeds current national green mining certification standards, helping customers fulfill environmental responsibilities while achieving economic benefits, making it an ideal equipment choice for sustainable mining development."
+    },
+    {
+      "title": "Environmental Performance",
+      "description": "Integrated dust suppression system with high-pressure water spray eliminates up to 90% of dust emissions during operation, improving workplace conditions and reducing environmental impact. Advanced sound insulation design reduces operational noise levels to remain below 85dB, minimizing noise pollution to surrounding areas. Specially designed chamber can process high-temperature metallurgical slag (>150°C), enabling resource recycling, reducing enterprise raw material costs while minimizing environmental pollution."
+    }
+  ],
+  "seo": {
+    "title": "Impact Crusher | ZPF Series Medium & Fine Crushing Equipment",
+    "keywords": "impact crusher, horizontal shaft impact crusher, HSI crusher, cubic stone crusher, medium crushing equipment, mining crusher, aggregate production equipment, limestone crusher, construction material crusher, cement crusher, metallurgical crusher, eco-friendly crusher, energy-efficient crusher, low noise crusher, impact crusher manufacturer, impact crusher maintenance, impact crusher parts, impact crusher applications, impact crusher working principle",
+    "description": "Zexin Mining Equipment ZPF Impact Crusher delivers 35% higher energy efficiency and 40% better product cubicity. Ideal for small to medium mining operations processing limestone, ores, and construction materials with maximum recovery at minimum cost."
+  },
+  "relatedProducts": [
+    "jaw-crusher",
+    "hammer-crusher",
+    "hp-cone-crusher",
+    "cone-crusher",
+    "double-roller-crusher"
+  ],
+  "imageSrcAlt": "Impact Crusher | Zexin Mining"
+}

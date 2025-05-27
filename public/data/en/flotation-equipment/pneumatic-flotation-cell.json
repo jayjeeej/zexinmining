@@ -1,0 +1,433 @@
+{
+  "id": "pneumatic-flotation-cell",
+  "title": "Pneumatic Flotation Cell",
+  "series": "BF Series",
+  "imageSrc": "/images/products/flotation-equipment/pneumatic-flotation-cell.jpg",
+  "productCategory": "Mineral Processing Equipment",
+  "subcategory": "flotation equipment",
+  "meta": [
+    {
+      "key": "Effective Volume",
+      "displayValue": "2.2-38 m³ (77.7-1342 ft³)"
+    },
+    {
+      "key": "Processing Capacity",
+      "displayValue": "0.5-30 m³/min (17.7-1059.4 ft³/min)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "5.5-45 kW (7.4-60.3 HP)"
+    }
+  ],
+  "href": "/en/products/ore-processing/flotation-equipment/pneumatic-flotation-cell",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/flotation-equipment/pneumatic-flotation-cell",
+    "zh": "/zh/products/ore-processing/flotation-equipment/pneumatic-flotation-cell"
+  },
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "inches"
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "volume": [
+        {
+          "unit": "m³",
+          "conversionFactor": 1,
+          "label": "m³"
+        },
+        {
+          "unit": "ft³",
+          "conversionFactor": 35.3147,
+          "label": "ft³"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "m³/min",
+          "conversionFactor": 1,
+          "label": "m³/min"
+        },
+        {
+          "unit": "ft³/min",
+          "conversionFactor": 35.3147,
+          "label": "ft³/min"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "HP",
+          "conversionFactor": 1.34102,
+          "label": "HP"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "kg",
+          "conversionFactor": 1,
+          "label": "kg"
+        },
+        {
+          "unit": "lb",
+          "conversionFactor": 2.20462,
+          "label": "lb"
+        }
+      ],
+      "pressure": [
+        {
+          "unit": "kPa",
+          "conversionFactor": 1,
+          "label": "kPa"
+        },
+        {
+          "unit": "psi",
+          "conversionFactor": 0.145038,
+          "label": "psi"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Conversion",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "overview": "The Pneumatic Flotation Cell is an advanced mineral separation system that creates optimal froth conditions through controlled air injection. With high recovery rates for valuable minerals and adaptable aeration settings, this flotation equipment significantly improves efficiency in mineral processing operations for various metallic and non-metallic ores.",
+  "detailedDescription": "The BF Series Pneumatic Flotation Cell integrates precision-engineered aeration technology with optimized mixing capabilities to revolutionize mineral separation processes. This system creates exceptional mineral-bubble contact through its innovative impeller design, addressing traditional recovery challenges while enhancing selectivity. Its balanced approach to air distribution and turbulence management delivers consistent froth characteristics across varying ore conditions, making it valuable processing equipment that adapts to complex mineral compositions without compromising energy efficiency.",
+  "specifications": {
+    "title": "Technical Parameters",
+    "note": "Can be customized according to customer requirements",
+    "tableHeaders": [
+      "Model",
+      "Volume (m³)",
+      "Capacity (m³/min)",
+      "Impeller (mm)",
+      "Speed (r/min)",
+      "Pressure (kPa)",
+      "Air (m³/m².min)",
+      "Motor (kW)",
+      "Scraper (kW)",
+      "Weight (kg)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Volume (ft³)",
+      "Capacity (ft³/min)",
+      "Impeller (in)",
+      "Speed (r/min)",
+      "Pressure (psi)",
+      "Air (ft³/ft².min)",
+      "Motor (HP)",
+      "Scraper (HP)",
+      "Weight (lb)"
+    ],
+    "tableData": [
+      [
+        "BF-2.2",
+        "2.2",
+        "0.5-3",
+        "420",
+        "260",
+        "≤15",
+        "2-3",
+        "5.5",
+        "0.75",
+        "1750"
+      ],
+      [
+        "BF-4",
+        "4",
+        "0.5-4",
+        "500",
+        "220-230",
+        "≤17",
+        "3-6",
+        "7.5",
+        "0.75",
+        "2568"
+      ],
+      [
+        "BF-6",
+        "6",
+        "1.0-6",
+        "650",
+        "197",
+        "≤17",
+        "4-10",
+        "15",
+        "1.1",
+        "3570"
+      ],
+      [
+        "BF-8",
+        "8",
+        "1.0-8",
+        "650",
+        "180-190",
+        "≤21",
+        "4-10",
+        "15",
+        "1.1",
+        "4539"
+      ],
+      [
+        "BF-16",
+        "16",
+        "2.0-15",
+        "750",
+        "160-170",
+        "≤27",
+        "6-15",
+        "30",
+        "1.1",
+        "8131"
+      ],
+      [
+        "BF-24",
+        "24",
+        "7.0-20",
+        "830",
+        "154-159",
+        "≤29",
+        "8-18",
+        "37",
+        "1.1",
+        "9546"
+      ],
+      [
+        "BF-38",
+        "38",
+        "10.0-30",
+        "910",
+        "141",
+        "≤34",
+        "10-20",
+        "45",
+        "1.1",
+        "11107"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "BF-2.2",
+        "77.7",
+        "17.7-105.9",
+        "16.5",
+        "260",
+        "≤2.18",
+        "6.56-9.84",
+        "7.38",
+        "1.01",
+        "3858"
+      ],
+      [
+        "BF-4",
+        "141.3",
+        "17.7-141.3",
+        "19.7",
+        "220-230",
+        "≤2.47",
+        "9.84-19.68",
+        "10.06",
+        "1.01",
+        "5661"
+      ],
+      [
+        "BF-6",
+        "211.9",
+        "35.3-211.9",
+        "25.6",
+        "197",
+        "≤2.47",
+        "13.12-32.8",
+        "20.11",
+        "1.48",
+        "7870"
+      ],
+      [
+        "BF-8",
+        "282.5",
+        "35.3-282.5",
+        "25.6",
+        "180-190",
+        "≤3.05",
+        "13.12-32.8",
+        "20.11",
+        "1.48",
+        "10007"
+      ],
+      [
+        "BF-16",
+        "565.0",
+        "70.6-529.7",
+        "29.5",
+        "160-170",
+        "≤3.92",
+        "19.68-49.2",
+        "40.22",
+        "1.48",
+        "17925"
+      ],
+      [
+        "BF-24",
+        "847.5",
+        "247.2-706.3",
+        "32.7",
+        "154-159",
+        "≤4.21",
+        "26.24-59.04",
+        "49.60",
+        "1.48",
+        "21045"
+      ],
+      [
+        "BF-38",
+        "1342.0",
+        "353.1-1059.4",
+        "35.8",
+        "141",
+        "≤4.93",
+        "32.8-65.6",
+        "60.3",
+        "1.48",
+        "24487"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "volume",
+      "capacity",
+      "length",
+      "",
+      "pressure",
+      "area",
+      "power",
+      "power",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Precision-engineered Impeller-Stator System",
+      "description": "Patented impeller and stator design creates uniformly-sized fine bubbles, significantly enhancing mineral attachment efficiency with precise mineral-bubble contact, increasing recovery rates by 10-15%."
+    },
+    {
+      "title": "Uniform Air Distribution Technology",
+      "description": "Revolutionary air distribution system ensures consistent bubble density throughout the flotation cell, eliminating dead zones found in conventional machines while improving mineralization by 15% and reducing reagent consumption by 20%."
+    },
+    {
+      "title": "Adjustable Aeration Control System",
+      "description": "Intelligent aeration control allows fine-tuning of bubble generation parameters for optimal performance across various ore types, from sulfides to industrial minerals, adapting to changing feed conditions without mechanical modifications."
+    },
+    {
+      "title": "Advanced Froth Management",
+      "description": "Engineered froth crowder and launder design enhances froth stability and drainage, with adjustable froth depth control that maximizes concentrate grade while maintaining high recovery rates even with complex ores."
+    },
+    {
+      "title": "Energy-Efficient Drive System",
+      "description": "Innovative direct-drive mechanism with high-efficiency motors reduces power consumption by up to 30% compared to traditional flotation cells, maintaining equivalent or superior metallurgical performance at lower operational costs."
+    },
+    {
+      "title": "Modular Tank Configuration",
+      "description": "Flexible tank design allows for customized circuit arrangements supporting rougher, cleaner, and scavenger operations in a compact footprint, with rapid reconfiguration capabilities to accommodate changing processing requirements."
+    },
+    {
+      "title": "Reinforced Wear Components",
+      "description": "Enhanced wear-resistant components extend service life in abrasive mineral processing environments, reducing maintenance frequency and associated downtime costs."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "icon": "copper",
+        "title": "Base Metals Recovery",
+        "description": "Highly efficient in recovering copper, lead, zinc, and nickel from sulfide ores with superior selectivity and grade control."
+      },
+      {
+        "icon": "precious-metals",
+        "title": "Precious Metals Processing",
+        "description": "Specialized configuration for gold and silver flotation with optimized bubble size distribution for fine particle attachment."
+      },
+      {
+        "icon": "industrial-minerals",
+        "title": "Industrial Minerals",
+        "description": "Ideal for processing graphite, feldspar, fluorite and other industrial minerals requiring precise air control and gentle agitation."
+      },
+      {
+        "icon": "coal",
+        "title": "Coal Beneficiation",
+        "description": "Effective for coal flotation with adjustable aeration parameters to accommodate varying degrees of coal oxidation and mineral content."
+      },
+      {
+        "icon": "wastewater",
+        "title": "Effluent Treatment",
+        "description": "Applied in industrial wastewater treatment systems for removing suspended solids, oils and other contaminants through dissolved air flotation."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does a pneumatic flotation cell work?",
+      "answer": "Pneumatic flotation cells operate by injecting compressed air through a specially designed impeller-stator system into mineral slurry. The impeller disperses the air into fine bubbles while providing sufficient agitation. Hydrophobic mineral particles attach to these bubbles and rise to form a mineral-rich froth layer at the surface, which is then collected by scrapers, while hydrophilic gangue remains in the slurry."
+    },
+    {
+      "question": "What advantages do pneumatic flotation cells offer?",
+      "answer": "Pneumatic flotation cells provide several advantages: finer and more uniform bubble generation improving mineral recovery; better control of air distribution; lower energy consumption; higher processing capacity per unit volume; improved selectivity; and more consistent performance across varying ore types. These benefits typically result in 10-15% higher recovery rates and 20-30% lower operating costs."
+    },
+    {
+      "question": "Which minerals can be processed?",
+      "answer": "Pneumatic flotation cells are versatile and can process a wide range of minerals including sulfide ores (copper, lead, zinc, nickel), precious metal ores (gold, silver), industrial minerals (graphite, feldspar, fluorite), coal, and phosphates. With proper reagent regimes, they can effectively separate almost any mineral that responds to froth flotation principles."
+    },
+    {
+      "question": "What maintenance is required?",
+      "answer": "Regular maintenance includes inspection of impellers and stators for wear (typically every 3-6 months); checking and servicing of air distribution systems; maintenance of motors and drive components; inspection of seals and bearings; cleaning of froth removal mechanisms; and periodic calibration of air flow controllers. Preventative maintenance schedules should be established based on ore abrasiveness and operational hours."
+    },
+    {
+      "question": "How do I determine the right flotation cell size for my operation?",
+      "answer": "Selecting the appropriate flotation cell size depends on several factors: required processing capacity, residence time needed for adequate mineral recovery, feed characteristics (particle size, mineral composition), circuit configuration (number of cleaning stages), and space constraints. Laboratory and pilot plant testing is strongly recommended before final size decisions to determine optimal flotation parameters."
+    }
+  ],
+  "seo": {
+    "title": "Pneumatic Flotation Cell | High-Recovery Mineral Separation Equipment | Zexin Mining",
+    "description": "Zexin Mining's BF Series Pneumatic Flotation Cells deliver superior mineral recovery with advanced aeration technology. Our precision-engineered flotation equipment provides up to 15% higher recovery rates while reducing energy consumption by 30%. Ideal for processing base metals, precious metals, and industrial minerals.",
+    "keywords": "pneumatic flotation cell, air-inflation flotation machine, froth flotation unit, mineral flotation equipment, flotation cell for mining, mechanical agitation flotation machine, high-efficiency flotation machine, flotation equipment, dissolved air flotation, mineral processing flotation machine, industrial flotation cell, flotation tank, flotation column, flotation machine manufacturer"
+  },
+  "relatedProducts": [
+    "self-aspirated-flotation-cell",
+    "xfc-air-inflation-flotation-cell",
+    "coarse-flotation-cell"
+  ],
+  "imageSrcAlt": "Pneumatic Flotation Cell | Zexin Mining"
+}

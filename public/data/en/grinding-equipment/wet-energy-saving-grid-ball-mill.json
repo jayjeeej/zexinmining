@@ -1,0 +1,571 @@
+{
+  "id": "wet-energy-saving-grid-ball-mill",
+  "title": "Wet Energy-Saving Grid Ball Mill",
+  "series": "ZMQG Series Wet Energy-Saving Grid Ball Mill",
+  "imageSrc": "/images/products/grinding-equipment/wet-energy-saving-grid-ball-mill.jpg",
+  "productCategory": "Mineral Grinding Equipment",
+  "subcategory": "grinding-equipment",
+  "model": "ZMQG 1545",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "0.17~35 t/h (0.19~38.6 stph)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "22~210 kW (29.5~281.6 hp)"
+    },
+    {
+      "key": "Effective Volume",
+      "displayValue": "1.14~10.2 m³ (40.3~360.2 ft³)"
+    }
+  ],
+  "href": "/en/products/ore-processing/grinding-equipment/wet-energy-saving-grid-ball-mill",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/grinding-equipment/wet-energy-saving-grid-ball-mill",
+    "zh": "/zh/products/ore-processing/grinding-equipment/wet-energy-saving-grid-ball-mill"
+  },
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in"
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "short ton",
+          "conversionFactor": 1.10231,
+          "label": "short tons"
+        },
+        {
+          "unit": "kg",
+          "conversionFactor": 1,
+          "label": "kg"
+        },
+        {
+          "unit": "lb",
+          "conversionFactor": 2.20462,
+          "label": "lb"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "short ton/h",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "HP",
+          "conversionFactor": 1.34102,
+          "label": "HP"
+        }
+      ],
+      "volume": [
+        {
+          "unit": "m³",
+          "conversionFactor": 1,
+          "label": "m³"
+        },
+        {
+          "unit": "ft³",
+          "conversionFactor": 35.3147,
+          "label": "ft³"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "overview": "The ZMQG Series Wet Energy-Saving Grid Ball Mill is a high-efficiency, low-energy consumption wet grinding equipment suitable for metal and non-metal ore grinding operations. Its unique grid discharge structure and optimized internal design increase grinding efficiency by over 20% while reducing energy consumption by 30%, widely applied in mineral processing, cement, building materials, and other industrial wet grinding processes.",
+  "detailedDescription": "The ZMQG Series Wet Energy-Saving Grid Ball Mill introduces innovative grid discharge technology that transforms traditional ball mill production methods. This energy-saving mill creates an ideal grinding environment through its specialized cylinder structure design and optimized liner configuration, addressing common issues of high energy consumption and low efficiency in conventional ball mills. Its balanced engineering approach delivers consistent grinding results across varying material conditions, making it a valuable solution for mining, cement, and chemical industries seeking energy efficiency and high productivity without compromising performance.",
+  "specifications": {
+    "title": "Wet Energy-Saving Grid Ball Mill Technical Specifications",
+    "note": "Customization available upon request",
+    "tableHeaders": [
+      "Model",
+      "Cylinder Diameter (mm)",
+      "Cylinder Length (mm)",
+      "Motor Model",
+      "Motor Power (kW)",
+      "Length (mm)",
+      "Width (mm)",
+      "Height (mm)",
+      "Processing Capacity (t/h)",
+      "Effective Volume (m³)",
+      "Max Ball Loading (t)",
+      "Weight (kg)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Cylinder Diameter (in)",
+      "Cylinder Length (in)",
+      "Motor Model",
+      "Motor Power (HP)",
+      "Length (in)",
+      "Width (in)",
+      "Height (in)",
+      "Processing Capacity (stph)",
+      "Effective Volume (ft³)",
+      "Max Ball Loading (short tons)",
+      "Weight (lb)"
+    ],
+    "tableData": [
+      [
+        "ZMQG 1212",
+        "1200",
+        "1200",
+        "Y200L2-6",
+        "22",
+        "3512",
+        "2076",
+        "1620",
+        "0.17~4.1",
+        "1.14",
+        "2.4",
+        "9610"
+      ],
+      [
+        "ZMQG 1224",
+        "1200",
+        "2400",
+        "Y280M-8",
+        "45",
+        "5745",
+        "2352",
+        "1778",
+        "0.26~6.15",
+        "2.4",
+        "4.6",
+        "12692"
+      ],
+      [
+        "ZMQG 1240",
+        "1200",
+        "4000",
+        "JR117-8",
+        "80",
+        "7990",
+        "2210",
+        "2262",
+        "0.34~8.3",
+        "3.8",
+        "7.8",
+        "15932"
+      ],
+      [
+        "ZMQG 1515",
+        "1500",
+        "1500",
+        "Y280M-8",
+        "45",
+        "5740",
+        "3075",
+        "2280",
+        "1.4~4.5",
+        "2.2",
+        "5",
+        "17125"
+      ],
+      [
+        "ZMQG 1530",
+        "1500",
+        "3000",
+        "JR117-8",
+        "80",
+        "7253",
+        "3070",
+        "2280",
+        "2.8~9",
+        "5",
+        "10",
+        "21425"
+      ],
+      [
+        "ZMQG 1536",
+        "1500",
+        "3600",
+        "JR126-8",
+        "110",
+        "8595",
+        "3185",
+        "2280",
+        "3~11",
+        "5.4",
+        "11.4",
+        "24213"
+      ],
+      [
+        "ZMQG 1545",
+        "1500",
+        "4500",
+        "JR127-8",
+        "130",
+        "9680",
+        "3254",
+        "2370",
+        "3.5~12.5",
+        "7",
+        "12",
+        "27346"
+      ],
+      [
+        "ZMQG 1830",
+        "1800",
+        "3000",
+        "JR136-8",
+        "180",
+        "8250",
+        "3620",
+        "2785",
+        "4.5~27",
+        "6.65",
+        "14",
+        "31850"
+      ],
+      [
+        "ZMQG 1836",
+        "1800",
+        "3600",
+        "JR136-8",
+        "180",
+        "8866",
+        "3683",
+        "2785",
+        "4.5~29",
+        "8.2",
+        "13.8",
+        "35467"
+      ],
+      [
+        "ZMQG 1845",
+        "1800",
+        "4520",
+        "JR137-8",
+        "210",
+        "9808",
+        "3683",
+        "2785",
+        "5~35",
+        "10.2",
+        "19",
+        "38909"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "ZMQG 1212",
+        "47.2",
+        "47.2",
+        "Y200L2-6",
+        "29.5",
+        "138.3",
+        "81.7",
+        "63.8",
+        "0.19~4.5",
+        "40.3",
+        "2.6",
+        "21187.4"
+      ],
+      [
+        "ZMQG 1224",
+        "47.2",
+        "94.5",
+        "Y280M-8",
+        "60.3",
+        "226.2",
+        "92.6",
+        "70.0",
+        "0.29~6.8",
+        "84.8",
+        "5.1",
+        "27980.9"
+      ],
+      [
+        "ZMQG 1240",
+        "47.2",
+        "157.5",
+        "JR117-8",
+        "107.3",
+        "314.6",
+        "87.0",
+        "89.1",
+        "0.37~9.1",
+        "134.2",
+        "8.6",
+        "35125.3"
+      ],
+      [
+        "ZMQG 1515",
+        "59.1",
+        "59.1",
+        "Y280M-8",
+        "60.3",
+        "226.0",
+        "121.1",
+        "89.8",
+        "1.5~5.0",
+        "77.7",
+        "5.5",
+        "37755.4"
+      ],
+      [
+        "ZMQG 1530",
+        "59.1",
+        "118.1",
+        "JR117-8",
+        "107.3",
+        "285.6",
+        "120.9",
+        "89.8",
+        "3.1~9.9",
+        "176.6",
+        "11.0",
+        "47227.2"
+      ],
+      [
+        "ZMQG 1536",
+        "59.1",
+        "141.7",
+        "JR126-8",
+        "147.5",
+        "338.4",
+        "125.4",
+        "89.8",
+        "3.3~12.1",
+        "190.7",
+        "12.6",
+        "53381.3"
+      ],
+      [
+        "ZMQG 1545",
+        "59.1",
+        "177.2",
+        "JR127-8",
+        "174.3",
+        "381.1",
+        "128.1",
+        "93.3",
+        "3.9~13.8",
+        "247.2",
+        "13.2",
+        "60280.7"
+      ],
+      [
+        "ZMQG 1830",
+        "70.9",
+        "118.1",
+        "JR136-8",
+        "241.4",
+        "324.8",
+        "142.5",
+        "109.6",
+        "5.0~29.8",
+        "234.9",
+        "15.4",
+        "70219.2"
+      ],
+      [
+        "ZMQG 1836",
+        "70.9",
+        "141.7",
+        "JR136-8",
+        "241.4",
+        "349.1",
+        "145.0",
+        "109.6",
+        "5.0~32.0",
+        "289.6",
+        "15.2",
+        "78196.1"
+      ],
+      [
+        "ZMQG 1845",
+        "70.9",
+        "177.9",
+        "JR137-8",
+        "281.6",
+        "386.1",
+        "145.0",
+        "109.6",
+        "5.5~38.6",
+        "360.2",
+        "20.9",
+        "85779.0"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "length",
+      "",
+      "power",
+      "length",
+      "length",
+      "length",
+      "capacity",
+      "volume",
+      "weight",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Efficient Grid Discharge Structure",
+      "description": "The unique grid discharge structure ensures timely material discharge, preventing over-grinding and improving production efficiency by over 20%, particularly suitable for applications requiring controlled product fineness."
+    },
+    {
+      "title": "Low Energy Consumption Design",
+      "description": "Optimized cylinder internal structure and liner configuration significantly improve electrical energy utilization, reducing energy consumption by 30% compared to traditional wet ball mills and substantially lowering production costs, saving hundreds of thousands of kilowatt-hours annually."
+    },
+    {
+      "title": "Uniform and Stable Product Fineness",
+      "description": "The grid structure ensures materials meeting fineness requirements are discharged promptly, avoiding over-grinding. The ground products have uniform and stable particle size, providing consistent feed conditions for subsequent mineral processing operations."
+    },
+    {
+      "title": "Optimized Fill Ratio Design",
+      "description": "Scientific ball size distribution and filling rate design allows the grinding system to achieve optimal performance, further enhancing grinding efficiency while reducing steel ball and liner wear rate, extending service life."
+    },
+    {
+      "title": "High-Strength Cylinder Structure",
+      "description": "The main body is manufactured from high-strength steel plates with superior welding strength, subjected to rigorous non-destructive testing to ensure safety and reliability under long-term high-intensity operation conditions, with a service life exceeding 20 years."
+    },
+    {
+      "title": "Modular Easy-to-Remove Liners",
+      "description": "Features removable alloy wear-resistant liners with extended design life and convenient replacement, significantly reducing maintenance costs and downtime, increasing the ball mill's effective annual operating time by over 10%."
+    },
+    {
+      "title": "Intelligent Lubrication System",
+      "description": "Equipped with an intelligent monitoring lubrication system that monitors bearing temperature and lubricant conditions in real-time, preventing bearing overheating and damage, greatly enhancing equipment safety and continuous operation capability."
+    },
+    {
+      "title": "Environmentally Friendly Noise Reduction Design",
+      "description": "The cylinder incorporates noise reduction technology, operating with lower noise levels to reduce workplace noise pollution while decreasing vibration, improving equipment stability, and extending the service life of bearings and transmission components."
+    }
+  ],
+  "applications": {
+    "title": "Application Fields",
+    "items": [
+      {
+        "title": "Metal Ore Processing",
+        "description": "Suitable for coarse and fine grinding stages of iron, copper, gold, lead, zinc, and other metal ores, compatible with classification equipment to form closed-circuit grinding systems, improving separation efficiency and metal recovery rates."
+      },
+      {
+        "title": "Non-metallic Mineral Processing",
+        "description": "Used for wet grinding of feldspar, quartz, fluorite, and other non-metallic minerals, producing uniform particle size products suitable for fine processing fields with high product fineness requirements."
+      },
+      {
+        "title": "Cement Production",
+        "description": "Delivers excellent performance in cement clinker grinding with low energy consumption, high output, and reasonable particle size distribution, making it an ideal equipment for cement enterprises to reduce production costs."
+      },
+      {
+        "title": "Chemical Material Grinding",
+        "description": "Applicable to wet grinding of various chemical raw materials, pigments, pharmaceutical intermediates, and other materials, with controllable product fineness, minimal contamination, meeting high-standard production requirements."
+      },
+      {
+        "title": "Tailings Reprocessing",
+        "description": "Can be used for regrinding and reprocessing of mineral processing plant tailings, recovering valuable metals from tailings, improving resource utilization, realizing circular economy, and reducing environmental impact."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What advantages does the Wet Energy-Saving Grid Ball Mill have compared to conventional ball mills?",
+      "answer": "The Wet Energy-Saving Grid Ball Mill with its grid discharge structure offers three major advantages over conventional wet ball mills: first, faster discharge speed prevents over-grinding and improves production efficiency; second, energy consumption is reduced by approximately 30%, significantly saving electricity costs; third, grinding product fineness is more uniform and stable, particularly suitable for applications requiring precise grinding fineness control."
+    },
+    {
+      "question": "What is the maximum feed size that ZMQG series ball mills can process?",
+      "answer": "The ZMQG series Wet Energy-Saving Grid Ball Mills can typically process a maximum feed size of 25-30 mm, depending on material hardness and cylinder diameter. For optimal grinding results, the recommended feed size should not exceed 1/50 to 1/40 of the cylinder diameter. For particularly hard materials, feed size should be further reduced."
+    },
+    {
+      "question": "How should the ball charging scheme be designed for a Wet Energy-Saving Grid Ball Mill?",
+      "answer": "The ball charging scheme for Wet Energy-Saving Grid Ball Mills should be determined based on material characteristics, feed size, and required product fineness. Typically, a graded ball configuration is used with larger diameter balls (60-100mm) comprising 30-40% for coarse crushing, medium diameter balls (40-60mm) comprising 30-40% for medium crushing, and smaller diameter balls (25-40mm) comprising 20-30% for fine grinding. Our technical team can provide optimal ball charging schemes based on your specific process requirements."
+    },
+    {
+      "question": "What are the operating costs of a Wet Energy-Saving Grid Ball Mill?",
+      "answer": "The main operating costs of a Wet Energy-Saving Grid Ball Mill include electricity consumption, steel ball and liner wear, lubricant consumption, and maintenance expenses. Thanks to its energy-efficient design, electricity costs are approximately 30% lower than traditional ball mills. Steel ball consumption ranges between 0.3-0.6kg per ton of processed material, and liner service life is typically 8,000-12,000 hours. Overall operating costs are 15-25% lower than traditional wet ball mills, with an investment recovery period typically of 1-2 years."
+    },
+    {
+      "question": "What maintenance does a Wet Energy-Saving Grid Ball Mill require?",
+      "answer": "Routine maintenance includes regular inspection of the lubrication system, transmission device, and bearing temperature, replenishing lubricating oil, and checking cylinder sealing. Mid-term maintenance (approximately every 3-6 months) includes checking liner wear conditions, replacing liners as necessary, and inspecting and adjusting the transmission device. Major overhauls (approximately every 2-3 years) include comprehensive transmission system inspection, replacement of all liners and some steel balls, and checking cylinder structural integrity. Proper maintenance can significantly extend equipment service life."
+    },
+    {
+      "question": "How should I choose between a Wet Energy-Saving Grid Ball Mill and other grinding equipment?",
+      "answer": "Equipment selection requires consideration of multiple factors: for harder materials (Mohs hardness 5-9) requiring fine grinding (<200 mesh), the Wet Energy-Saving Grid Ball Mill is an ideal choice; for ultra-fine grinding applications (<400 mesh), consider pairing with a vertical mill; for softer materials (Mohs hardness <5), a rod mill might be more economical; for coarse grinding stages, autogenous or semi-autogenous mills might be more economical. Our engineers can provide professional equipment selection advice based on your specific process requirements."
+    },
+    {
+      "question": "What is the minimum economical processing scale for a Wet Energy-Saving Grid Ball Mill?",
+      "answer": "Wet Energy-Saving Grid Ball Mills come in various specifications with processing capacities ranging from 0.17 t/h to 35 t/h. For small mines or test production lines, the ZMQG 1212 model (processing capacity 0.17-4.1 t/h) represents the minimum economical scale. Considering labor, maintenance, and auxiliary equipment costs, projects with annual processing volumes below 5,000 tons may not be economical. Medium-sized mines typically select ZMQG 1530 or larger models to achieve better economic benefits."
+    },
+    {
+      "question": "How can I optimize the process parameters of a Wet Energy-Saving Grid Ball Mill?",
+      "answer": "Process parameter optimization primarily considers the following: maintaining a fill rate of 38-42% for optimal performance; grinding media to ore volume ratio of approximately 5:1; feed concentration typically 65-70% (solids content); rotation speed maintained at 70-75% of critical speed; appropriate liner shape and ball charging scheme; regular monitoring and adjustment of classification system efficiency. Through optimization of these parameters, production can be increased by 10-15% and unit energy consumption reduced by 8-12%. We provide free process parameter optimization services to help you achieve optimal production benefits."
+    },
+    {
+      "question": "What are the installation requirements for a Wet Energy-Saving Grid Ball Mill?",
+      "answer": "Installation requirements include: foundations must have sufficient load-bearing capacity, typically requiring C30 or higher strength concrete; foundation level error not exceeding 0.1mm/m; sufficient operating and maintenance space around the equipment; installation location should be close to power supply facilities to reduce power loss; consideration of water source and drainage facility convenience; configuration of necessary lifting and transport equipment for maintenance; consideration of anti-freezing measures if operating in low-temperature environments. We provide complete installation guidance and commissioning services to ensure proper equipment operation."
+    },
+    {
+      "question": "What is the relationship between energy consumption and capacity in a Wet Energy-Saving Grid Ball Mill?",
+      "answer": "The unit energy consumption (kWh/t) of a Wet Energy-Saving Grid Ball Mill has an inverse relationship with capacity, but it's not a simple linear relationship. Unit energy consumption is lowest when operating at 70-90% of design capacity; unit energy consumption increases significantly when capacity is below 50% or above 95%. For example, with the ZMQG 1545 model at a processing capacity of 8 t/h, unit energy consumption is approximately 16-18 kWh/t; at extremely low or high loads, unit energy consumption may increase by 30-40%. Therefore, maintaining operation within the optimal capacity range is key to energy efficiency."
+    }
+  ],
+  "seo": {
+    "keywords": "Wet Energy-Saving Grid Ball Mill,Energy-Efficient Wet Ball Mill,Grid Type Wet Ball Mill,Energy-Saving Grinding Mill,Wet Grinding Ball Mill,High-Efficiency Ball Mill,Grid Discharge Ball Mill,Wet Ball Mill for Mining,Energy-Saving Mining Mill,Wet Ball Mill Machine,Industrial Wet Ball Mill,Wet Grinding Equipment,Wet Ball Mill Manufacturer,Wet Ball Mill Price,Wet Ball Mill Capacity",
+    "description": "ZEXIN Mining's ZMQG Series Wet Energy-Saving Grid Ball Mill features innovative design reducing energy consumption by 30% while increasing grinding efficiency by 20%. Our energy-efficient ball mills offer stable operation and easy maintenance, ideal for small to medium mining and cement enterprises with quick ROI.",
+    "title": "Wet Energy-Saving Grid Ball Mill | High-Efficiency Low-Energy Grinding Equipment | ZEXIN Mining"
+  },
+  "relatedProducts": [
+    "dry-rod-mill",
+    "dry-ball-mill",
+    "wet-rod-mill",
+    "wet-overflow-ball-mill",
+    "wet-grid-ball-mill"
+  ],
+  "imageSrcAlt": "Wet Energy Saving Grid Ball Mill | Zexin Mining"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "guangxi-lead-zinc",
+  "title": "广西某铅锌矿选矿厂项目",
+  "location": "广西",
+  "year": "2017",
+  "category": "铅锌矿",
+  "client": "广西某矿业公司",
+  "description": "由泽鑫矿业设备设计建造的日处理1000吨铅锌矿选矿厂。该厂采用先进的选矿工艺，实现了铅锌矿物的高效分离，生产出高品质的铅精矿和锌精矿产品。",
+  "challenge": "项目面临的主要挑战包括：原矿品位波动大，铅锌矿物嵌布关系复杂，需要实现铅锌矿物的高效分离。同时，项目要求实现较高的选矿回收率和精矿品位，这对选矿工艺和设备选型提出了较高要求。此外，还需要确保选矿过程的稳定性和连续性。",
+  "solution": "我们设计了完整的选矿工艺流程：\n\n1. 破碎系统：采用两段一闭路破碎流程，确保破碎产品粒度控制在0-12mm范围内。\n\n2. 磨矿系统：采用两段两闭路磨矿流程，分两个系列并行处理。一段磨矿细度达到-200目60%，二段磨矿细度达到-200目85%，为后续浮选创造理想条件。\n\n3. 浮选系统：采用优先选铅再选锌的工艺流程。铅浮选采用一粗两扫两精流程，锌浮选采用一粗三扫两精流程，通过合理的药剂制度和流程设计，实现了铅锌矿物的高效分离。",
+  "results": "选矿厂投产后运行稳定，各项指标均达到或超过设计目标：\n\n- 铅精矿品位达到60.00%，回收率达到91.00%\n- 锌精矿品位达到45.00%，回收率达到86.00%\n- 选矿厂处理能力稳定达到1000吨/天\n- 设备运转率保持在95%以上\n\n该项目已成为广西地区铅锌矿选矿的标杆项目，为当地矿业发展提供了重要参考。",
+  "images": [
+    "/images/cases/guangxi-lead-zinc/lead-zinc-processing-plant.jpg",
+    "/images/cases/guangxi-lead-zinc/flotation-process.jpg",
+    "/images/cases/guangxi-lead-zinc/grinding-classification.jpg"
+  ],
+  "imagesAlt": [
+    "Lead Zinc Processing Plant | Zexin Mining",
+    "Flotation Process | Zexin Mining",
+    "Grinding Classification | Zexin Mining"
+  ]
+}

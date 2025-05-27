@@ -1,0 +1,22 @@
+{
+  "id": "myanmar-tin",
+  "title": "缅甸垒固河道沙锡选矿厂项目",
+  "location": "缅甸垒固",
+  "year": "2016",
+  "category": "锡矿",
+  "client": "缅甸矿业公司",
+  "description": "由泽鑫矿业设备为缅甸垒固地区设计建造的专业河道沙锡选矿厂。该厂专门处理具有显著矿物与废料比重差异的冲积型锡矿，实现了高回收率和优质产品。",
+  "challenge": "项目面临多重挑战：当地电力供应严重不足，基础设施落后导致交通不便，需要处理复杂的河道沙锡矿。偏远的地理位置和有限的技术支持进一步增加了项目实施难度。此外，河流流量和沙质成分的季节性变化要求选矿工艺具有较高的适应性。",
+  "solution": "针对锡矿物与废料之间显著的比重差异，我们设计了筛分-跳汰-摇床相结合的选矿流程。首先通过筛分工艺对原料进行分级，然后采用跳汰工艺去除大量废料，最后通过多级摇床进行精细分级和富集。这种工艺既保证了高回收率，又确保了精矿品位。\n\n为解决电力短缺问题，我们采用了节能设计，包括变频驱动和优化设备选型，并安装了备用电源系统确保稳定运行。针对运输困难，我们设计了模块化设备，便于拆解和运输到现场。",
+  "results": "选矿厂自投产以来运行良好，实现了优异的回收率和产品质量。创新的选矿流程在处理复杂河道沙锡矿方面表现出色，精矿品位持续满足客户要求。节能设计显著降低了电力消耗，模块化方案确保了安装和维护的顺利进行。该项目已成为缅甸地区在挑战性条件下可持续锡矿加工的典范。",
+  "images": [
+    "/images/cases/myanmar-tin/river-sand-tin-processing-plant-loikaw.jpg",
+    "/images/cases/myanmar-tin/jigging-shaking-table-process-tin.jpg",
+    "/images/cases/myanmar-tin/tin-concentrate-production-myanmar.jpg"
+  ],
+  "imagesAlt": [
+    "River Sand Tin Processing Plant Loikaw | Zexin Mining",
+    "Jigging Shaking Table Process Tin | Zexin Mining",
+    "Tin Concentrate Production Myanmar | Zexin Mining"
+  ]
+}

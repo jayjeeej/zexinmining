@@ -1,0 +1,22 @@
+{
+  "id": "south-africa-manganese",
+  "title": "南非150万吨锰矿加工生产线",
+  "location": "南非莫沙纳",
+  "year": "2019",
+  "category": "锰矿",
+  "client": "南非矿业公司",
+  "description": "泽鑫矿山设备为南非客户提供的年产150万吨锰矿生产线，从设计到安装调试全程参与，实现了高效稳定的锰矿加工。",
+  "challenge": "项目地区基础设施有限，且距离主要港口较远，物流运输困难。当地水资源有限，需要高效的水资源循环利用方案。客户对设备可靠性和产品质量有严格要求，同时希望实现较低的运营成本。",
+  "solution": "根据南非锰矿特性，设计了包括破碎、筛分、洗矿和分级等工序的加工流程。采用一段破碎、多级筛分和跳汰机重选工艺，充分适应粗粒度锰矿处理需求，确保产品粒度分布合理，满足冶炼要求。\n\n主要设备包括：颚式破碎机、振动筛、螺旋洗矿机、跳汰机、压滤机等。所有设备均采用高耐磨材料制造，以应对锰矿的高硬度和磨蚀性，确保生产线稳定运行。",
+  "results": "该加工厂自投产以来运行稳定，达到设计年产能150万吨。生产的锰精矿满足冶金用途的质量规格，粒度分布优化。水循环系统实现85%以上的水重复利用率，显著减少了水资源匮乏地区的淡水消耗。设备可靠性超出预期，停机时间最小化，有助于降低运营成本。",
+  "images": [
+    "/images/cases/south-africa-manganese/south-africa-manganese-processing-plant-zexin.jpg",
+    "/images/cases/south-africa-manganese/manganese-ore-beneficiation-line-africa.jpg",
+    "/images/cases/south-africa-manganese/jig-concentrator-manganese-separation-equipment.jpg"
+  ],
+  "imagesAlt": [
+    "South Africa Manganese Processing Plant Zexin | Zexin Mining",
+    "Manganese Ore Beneficiation Line Africa | Zexin Mining",
+    "Jig Concentrator Manganese Separation Equipment | Zexin Mining"
+  ]
+}

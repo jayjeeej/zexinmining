@@ -1,0 +1,64 @@
+{
+  "id": "gold",
+  "mineralName": "黄金",
+  "title": "金矿选矿工艺",
+  "processTitle": "金矿重选浮选联合工艺流程",
+  "processIntroduction": "泽鑫针对砂金矿和脉金矿实施重选加浮选的联合工艺。砂金矿重选一般分为碎散、筛分、脱泥、选别等过程，主要设备包括跳汰机、螺旋分选机、摇床、离心选矿机等。脉金矿采用重选与浮选联合工艺，在浮选或浸出前后回收单体解离的粗粒金，有效提高金的回收率、简化工艺流程。我们的联合工艺充分发挥重选和浮选各自的优势，实现更高效的金矿处理。",
+  "processSteps": [
+    {
+      "title": "破碎与磨矿",
+      "description": "原矿石经过破碎和磨矿处理，达到适合的粒度（通常为85%通过200目筛），确保金矿物得到充分解离，为后续提取工艺做准备。"
+    },
+    {
+      "title": "重力选矿",
+      "description": "对于含有粗粒金的矿石，使用跳汰机、摇床和离心机进行重力选矿，回收自由金。这一工艺通常可在后续处理前回收30-40%的金。"
+    },
+    {
+      "title": "浮选",
+      "description": "对于硫化物伴生金矿石，使用浮选法富集含金硫化物。添加黄药和二硫磷酸盐等捕收剂，选择性浮选含金矿物。"
+    },
+    {
+      "title": "氰化法提金",
+      "description": "金精矿或重选尾矿经过氰化处理，氰化钠溶液溶解金形成金氰化物络合物。通常采用炭浸法(CIL)或炭浆法(CIP)工艺。"
+    },
+    {
+      "title": "解吸电解",
+      "description": "使用热氢氧化钠和氰化物溶液从活性炭上解吸金，随后通过电解沉积金到阴极上。"
+    },
+    {
+      "title": "熔炼精炼",
+      "description": "最后一步是熔炼电解产物制成金合金锭，然后精炼至99.99%纯度。"
+    }
+  ],
+  "applicationsImage": "/images/products/mineral-processing-solutions/precious-metals/gold-beneficiation-process-flow.jpg",
+  "applications": [
+    {
+      "title": "砂金矿床",
+      "description": "砂金矿选矿一般分为碎散、筛分、脱泥、选别等过程。碎散与筛分使用圆筒筛、振动筛等设备将含金的泥团碎散并筛分出不含金的大块砾石。脱泥过程使用各种规格的脱泥斗去除干扰选别的细泥。砂金选别通常采用多种重选设备联合作业，包括溜槽、跳汰机、鼓动溜槽、螺旋分选机、摇床、离心选矿机和圆锥选矿机等。砂金矿选矿可通过采金船或固定洗选机组两种方式进行。"
+    },
+    {
+      "title": "脉金矿床",
+      "description": "脉金矿重选是在浮选或浸出前后回收单体解离的粗粒金的有效方法。多年实践证明：除铁器+跳汰机+摇床+斜管浓密箱的组合系统重选回收率高，流程畅通、运行可靠。跳汰机通常作为粗选设备安放于磨机分级设备之间，磨机排矿首先给至跳汰机，其分选出的重矿物给至摇床再选，轻矿物自流至分级机。最终的重选毛金品位可达40-45%，可直接冶炼成高纯度金锭。"
+    },
+    {
+      "title": "难处理金矿",
+      "description": "针对金被包裹在硫化矿物中的难处理金矿的先进加工技术。"
+    },
+    {
+      "title": "金银混合矿",
+      "description": "结合浮选和氰化法处理含金银的多金属矿石。"
+    }
+  ],
+  "relatedProducts": [
+    "vibratory-feeder",
+    "synchronous-counter-directional-jig-small",
+    "shaking-table",
+    "jaw-crusher",
+    "cone-crusher",
+    "inclined-vibrating-screen",
+    "hydrocyclone-separator",
+    "wet-overflow-ball-mill",
+    "dewatering-screen",
+    "pneumatic-flotation-cell"
+  ]
+} 

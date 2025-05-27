@@ -1,0 +1,308 @@
+{
+  "id": "apron-feeder",
+  "title": "Heavy Duty Apron Feeder",
+  "series": "BLG Series Chain Plate Feeders",
+  "imageSrc": "/images/products/feeding-equipment/apron-feeder.jpg",
+  "productCategory": "Mineral Processing Equipment",
+  "subcategory": "feeding-equipment",
+  "model": "BLG-0840",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "200-800 t/h (220-882 stph)"
+    },
+    {
+      "key": "Feed Size",
+      "displayValue": "≤500 mm (≤19.7 in.)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "7.5-18.5 kW (10.1-24.8 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "st/h",
+          "conversionFactor": 1.10231,
+          "label": "st/h"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "kg",
+          "conversionFactor": 1,
+          "label": "kg"
+        },
+        {
+          "unit": "lb",
+          "conversionFactor": 2.20462,
+          "label": "lb"
+        }
+      ],
+      "speed": [
+        {
+          "unit": "m/s",
+          "conversionFactor": 1,
+          "label": "m/s"
+        },
+        {
+          "unit": "ft/min",
+          "conversionFactor": 196.85,
+          "label": "ft/min"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/feeding-equipment/apron-feeder",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/feeding-equipment/apron-feeder",
+    "zh": "/zh/products/ore-processing/feeding-equipment/apron-feeder"
+  },
+  "overview": "Zexin Mining's BLG Series Chain Plate Feeders deliver exceptional material handling performance in demanding mining operations. Featuring robust steel plate construction and variable speed control, these durable feeders ensure reliable, uniform feeding of large, abrasive materials while maintaining consistent productivity in harsh environments for maximum efficiency.",
+  "detailedDescription": "The BLG Series Chain Plate Feeders utilize advanced engineering technology to revolutionize the handling of bulk materials in mining and cement industries. This robust system creates optimal material flow through high-strength steel plate construction, addressing common feeding challenges while enhancing production stability. Its balanced approach to controlled material transport provides consistent results under varying load conditions, making it essential processing equipment capable of adapting to different material characteristics without compromising operational reliability.",
+  "specifications": {
+    "title": "Chain Plate Feeder Specifications",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Plate Width (mm)",
+      "Plate Length (mm)",
+      "Max Feed Size (mm)",
+      "Motor Power (kW)",
+      "Capacity (t/h)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Plate Width (in.)",
+      "Plate Length (in.)",
+      "Max Feed Size (in.)",
+      "Motor Power (hp)",
+      "Capacity (st/h)"
+    ],
+    "tableData": [
+      [
+        "BLG-0840",
+        "800",
+        "4000",
+        "≤500",
+        "7.5",
+        "200-250"
+      ],
+      [
+        "BLG-1040",
+        "1000",
+        "4000",
+        "≤500",
+        "11",
+        "250-350"
+      ],
+      [
+        "BLG-1240",
+        "1200",
+        "4000",
+        "≤500",
+        "15",
+        "400-500"
+      ],
+      [
+        "BLG-1540",
+        "1500",
+        "4000",
+        "≤500",
+        "18.5",
+        "600-800"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "BLG-0840",
+        "31.5",
+        "157.5",
+        "≤19.7",
+        "10.1",
+        "220-276"
+      ],
+      [
+        "BLG-1040",
+        "39.4",
+        "157.5",
+        "≤19.7",
+        "14.8",
+        "276-386"
+      ],
+      [
+        "BLG-1240",
+        "47.2",
+        "157.5",
+        "≤19.7",
+        "20.1",
+        "441-551"
+      ],
+      [
+        "BLG-1540",
+        "59.1",
+        "157.5",
+        "≤19.7",
+        "24.8",
+        "661-882"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "length",
+      "length",
+      "power",
+      "capacity"
+    ]
+  },
+  "features": [
+    {
+      "title": "High Equipment Strength",
+      "description": "Utilizing standard tank chain transmission with high strength, great tensile force, no lubrication needed, minimal error, long service life, and maintenance-free operation. The loading plates are made of high wear-resistant alloy steel plates welded together."
+    },
+    {
+      "title": "Simple Installation and Maintenance",
+      "description": "Employs vertical cross reducer with floating suspension installation for convenient maintenance. Main shaft and sprocket connections use expansion sleeve keyless connections for good strength and easy disassembly and assembly."
+    },
+    {
+      "title": "Stable Operation",
+      "description": "Driven by frequency-controlled motors for smoother startup and adjustment, uniform and accurate feeding, with feed speed and main machine linkage achieving automatic feedback feeding. The tensioning device's buffer design reduces equipment vibration and impact."
+    },
+    {
+      "title": "Wide Application Range",
+      "description": "Large feeding particle size that can be directly installed under raw material silos. Capable of withstanding significant bin pressure, with strong environmental adaptability for normal operation under adverse conditions."
+    },
+    {
+      "title": "Precision Chain Drive System",
+      "description": "Features high-strength forged alloy steel chain assemblies and precision-designed sprockets, providing excellent tensile strength and impact resistance. Eliminates slippage while providing uniform tension, ensuring consistent material flow under extreme loads."
+    },
+    {
+      "title": "Variable Speed Control Technology",
+      "description": "Advanced frequency control drives precisely adjust material flow rates. Allows operators to optimize feeding parameters for downstream equipment needs and material characteristics, adapting to process changes without manual intervention."
+    },
+    {
+      "title": "Modular Component Architecture",
+      "description": "Modular design enables quick maintenance access and component replacement without complete system dismantling. Reduces downtime by 50% compared to conventional feeders, while providing flexibility for future upgrades or adaptation."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Primary Crushing Operations",
+        "description": "Provides controlled feeding of run-of-mine material to primary crushers in hard rock mining. Handles irregular ore up to 500mm while preventing shock loading to crushers, maintaining continuous processing capacities up to 800 t/h even with highly abrasive materials."
+      },
+      {
+        "title": "Cement Production",
+        "description": "Reliably extracts and transports limestone and raw materials from hoppers to processing equipment. The structure withstands abrasive cement materials, while variable speed control enables precise blending of different feed components for consistent quality."
+      },
+      {
+        "title": "Coal Handling Systems",
+        "description": "Efficiently extracts and transports coal from receiving bins to processing equipment in power generation and metallurgical applications. Prevents dust emissions while handling variations in material moisture and size, maintaining stable feed rates."
+      },
+      {
+        "title": "Aggregate Production",
+        "description": "Controls the flow of crushed stone, gravel, and sand from hoppers to downstream processing equipment in aggregate production facilities. Effectively handles wet, sticky materials and different bulk densities for consistent productivity."
+      },
+      {
+        "title": "Metallurgical Processing",
+        "description": "Precisely feeds ores and flux materials in metal smelting and refining operations. Variable speed technology enables accurate proportioning of different material streams, while withstanding thermal cycling and harsh process conditions."
+      },
+      {
+        "title": "Recycling Operations",
+        "description": "Processes mixed waste including construction debris, scrap metals, and industrial byproducts in recycling facilities. Withstands impacts from irregular objects while controlling material flow to sorting equipment, reducing downtime from material handling issues."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How do chain plate feeders work?",
+      "answer": "Chain plate feeders use a series of overlapping steel plates on heavy-duty chains that run over sprockets. When activated, the plates move along a continuous path, transporting material from hoppers to processing equipment. The overlapping design prevents spillage between plates, while side skirts confine material. Speed is controlled through variable frequency drives, providing reliability for large, heavy, or abrasive materials that would damage belt feeders."
+    },
+    {
+      "question": "What advantages do heavy-duty chain plate feeders offer compared to other feeding equipment?",
+      "answer": "Heavy-duty chain plate feeders provide: 1) Superior durability when handling large abrasive materials up to 500mm; 2) Excellent impact resistance; 3) Ability to extract material from hoppers while minimizing degradation; 4) Precise flow control through variable speed operation; 5) Reliable handling of wet, sticky, or irregular materials; 6) Minimized spillage through overlapping plate design; 7) Reduced maintenance in harsh environments; 8) Consistent feeding regardless of material characteristics; 9) Extended service life; 10) Greater reliability in critical applications."
+    },
+    {
+      "question": "What types of materials can the BLG Series chain plate feeders handle?",
+      "answer": "BLG Series chain plate feeders handle: 1) Run-of-mine ore and rock up to 500mm; 2) Crushed aggregates and construction materials; 3) Coal with varying moisture content; 4) Limestone, clay, and cement raw materials; 5) High specific gravity metallic ores; 6) Hot clinker and sintered materials; 7) Recycled construction debris; 8) Industrial minerals; 9) Sticky materials with high moisture content; 10) Abrasive materials that would quickly damage belt feeders."
+    },
+    {
+      "question": "What factors determine the appropriate chain plate feeder size for an application?",
+      "answer": "Key factors include: 1) Required capacity (200-800 t/h); 2) Maximum material size (up to 500mm); 3) Material bulk density and characteristics; 4) Feed rate control requirements; 5) Available installation space and hopper configuration; 6) Material impact conditions; 7) Operating environment; 8) Duty cycle; 9) Material abrasiveness; 10) Integration requirements with other equipment. Our engineering team provides comprehensive assessment services to determine optimal specifications based on these parameters."
+    },
+    {
+      "question": "What maintenance procedures are required for chain plate feeders?",
+      "answer": "Effective chain plate feeder maintenance includes: 1) Regular inspection of chain tension and adjustment as needed (typically monthly); 2) Lubrication of chain links, rollers, and bearings according to recommended schedules; 3) Checking drive components including motor, reducer, and transmission elements; 4) Inspecting steel plates for wear and replacing individual plates as needed; 5) Checking side skirts and sealing elements to prevent material spillage; 6) Inspecting support rollers and tracks for wear or misalignment; 7) Verifying sprocket condition and alignment; 8) Checking electrical systems including control components; 9) Monitoring structural integrity and fastener tightness. With proper maintenance, BLG Series chain plate feeders typically achieve service intervals of 4,000-5,000 operating hours between major maintenance activities."
+    },
+    {
+      "question": "How does variable speed control enhance chain plate feeder performance?",
+      "answer": "Variable speed control enhances chain plate feeder performance in multiple ways: 1) Precise adjustment of material flow rates to match downstream process requirements; 2) Ability to start gradually under load, reducing mechanical stress on drive components; 3) Prevention of shock loading to downstream equipment by maintaining consistent feed rates; 4) Improved energy efficiency by operating at optimal speeds for specific materials and capacities; 5) Ability to compensate for variations in material characteristics or hopper loading conditions; 6) Integration capability with automated control systems for responsive process optimization; 7) Reduced mechanical wear through operation at minimal effective speeds; 8) Enhanced operational flexibility when handling different materials or adjusting production rates; 9) Prevention of process bottlenecks through synchronized operation with other equipment; 10) Extended equipment life through elimination of shock loads during startup and speed transitions."
+    },
+    {
+      "question": "What are the main differences between chain plate and belt feeders?",
+      "answer": "Fundamental differences between plate and belt feeders include: 1) Material capability - plate feeders handle larger, heavier and more abrasive materials up to 500mm that would damage belts; 2) Impact resistance - steel plates withstand direct impacts from large materials that would puncture or tear belts; 3) Extraction capability - plate feeders effectively extract material from deep hoppers, while belt feeders have limited extraction ability; 4) Maintenance characteristics - plate feeders have longer service intervals in harsh conditions but higher component replacement costs; 5) Containment - overlapping steel plates prevent material spillage while belt feeders require additional sealing systems; 6) Temperature range - plate feeders can handle higher temperature materials like clinker; 7) Installation requirements - plate feeders typically require more robust structural support; 8) Drive power efficiency - belt feeders typically require less power for equivalent capacity in non-extreme applications; 9) Speed range - plate feeders typically operate at lower speeds while belt feeders operate at higher speeds."
+    },
+    {
+      "question": "What safety features are included in BLG Series chain plate feeders?",
+      "answer": "BLG Series chain plate feeders incorporate comprehensive safety features including: 1) Emergency stop systems accessible from multiple locations; 2) Safety guards covering all moving parts and pinch points; 3) Zero-speed sensors detecting unexpected movement or stoppage; 4) Overload protection systems preventing mechanical damage from material blockages; 5) Anti-rollback mechanisms preventing reverse movement when stopped under load; 6) Chain over-tension detection and alarm systems; 7) Motor thermal protection against overheating; 8) Lockable maintenance access points for safe servicing; 9) Operational status warning indicators; 10) Pull-cord emergency stop devices along the length of the feeder; 11) Integration with facility safety circuits and interlocks; 12) Dust control systems to maintain air quality. These safety features comply with international mining and industrial equipment standards while protecting personnel safety throughout all operational and maintenance phases."
+    },
+    {
+      "question": "How are chain plate feeders installed and commissioned?",
+      "answer": "The installation and commissioning process involves several key steps: 1) Site preparation according to engineering specifications, including foundation construction; 2) Positioning main frame components using appropriate lifting equipment; 3) Assembly of drive components including motor, reducer, and transmission elements; 4) Installation and tensioning of chain and plate assemblies; 5) Connection of lubrication systems and verification of proper operation; 6) Electrical connections and control system integration; 7) Installation of safety guards and emergency stop systems; 8) No-load testing and mechanical adjustments; 9) Progressive load testing using process materials; 10) Verification of all operating parameters including speed control, vibration levels, and temperatures; 11) Operator training and handover documentation. Our technical team provides comprehensive installation supervision and commissioning services to ensure proper setup and optimal performance from initial operation."
+    }
+  ],
+  "seo": {
+    "title": "Heavy Duty Chain Plate Feeder | Mining & Quarry Equipment | Zexin Mining",
+    "description": "Zexin Mining's BLG Series Chain Plate Feeders deliver reliable material handling with capacities up to 800 t/h. Our robust feeders feature heavy-duty construction and powerful drive systems for demanding mining operations.",
+    "keywords": "Chain Plate Feeder, Mining Feeder, Heavy Duty Feeder, Bulk Material Feeder, Underground Mining Equipment, Surface Mining Equipment, Primary Crusher Feeder, Industrial Feeder, Material Handling Equipment, Mining Equipment, Quarry Equipment, Cement Plant Equipment, Reliable Feeder, Durable Feeder, High Capacity Feeder, Variable Speed Feeder, Impact Resistant Feeder, Mining Machinery, Material Processing Equipment, Heavy Material Handling"
+  },
+  "relatedProducts": [
+    "vibratory-feeder",
+    "grizzly-feeder"
+  ],
+  "imageSrcAlt": "Apron Feeder | Zexin Mining"
+}

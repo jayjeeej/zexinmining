@@ -1,0 +1,57 @@
+{
+  "id": "silver",
+  "mineralName": "Silver Ore",
+  "title": "Silver Ore Beneficiation Process",
+  "processTitle": "Silver Ore Beneficiation Process Flow",
+  "processIntroduction": "To improve the recovery rate of independent silver ore flotation, Zexin has improved the silver ore beneficiation process in three ways: first, by targeting the coarse and fine grain size characteristics of silver minerals to achieve maximum liberation and improve silver recovery; second, by selecting neutral or weakly alkaline flotation pulp conditions and using sodium carbonate as a pulp regulator to enhance silver floatability; and third, by combining xanthate and dithiophosphate collectors to strengthen silver capturing ability. Silver ore beneficiation processes are mainly used to recover silver and associated metal minerals, with silver-bearing ores primarily classified into two categories: silver-gold ores and lead-zinc-copper associated ores.",
+  "processSteps": [
+    {
+      "title": "Crushing and Screening",
+      "description": "Raw ore undergoes multi-stage crushing and screening to reduce particle size from several hundred millimeters to 10-20 millimeters. Zexin employs high-performance jaw crushers for primary crushing and cone crushers for fine crushing, complemented by vibrating screens for closed-circuit screening. This combination ensures uniform crushing product size, establishing a foundation for subsequent grinding stages while reducing energy consumption and increasing processing capacity."
+    },
+    {
+      "title": "Stage Grinding",
+      "description": "Zexin's stage grinding process first conducts mixed roughing under coarse grinding conditions, with the resulting rough concentrate undergoing regrinding for further concentration. This method significantly reduces the amount of material requiring regrinding and achieves silver mineral liberation, obtaining high-grade and high-recovery concentrates while saving energy. Our ball mills and rod mills feature optimized designs with advanced liner structures and grinding media combinations, improving grinding efficiency by 15-20%."
+    },
+    {
+      "title": "Enhanced Flotation",
+      "description": "Zexin strictly implements precise reagent regimes during the roughing stage, controlling reagent dosage and prioritizing recovery of easily floatable minerals to reduce multiple cycles and unnecessary losses. We fully utilize the secondary enrichment effect of froth and reduce impurities in concentrate froth by carefully controlling wash water addition, achieving enhanced flotation performance. Zexin's flotation machines incorporate new impeller designs for uniform bubble dispersion and improved mineralization, increasing silver mineral recovery by 3-5 percentage points."
+    },
+    {
+      "title": "Stage Flotation",
+      "description": "Zexin employs stage separation methods to recover useful minerals of different particle sizes, improving concentrate indices. The silver ore flotation production line consists of multiple flotation cells forming a scientific flotation network, including roughing, scavenging, and multiple cleaning stages, supplemented by leaching agitation tanks, zinc dust replacement devices, and multi-layer washing thickeners. This process combination achieves silver recovery rates of 85-92% with significantly improved concentrate grades."
+    },
+    {
+      "title": "Leaching and Cementation",
+      "description": "For difficult-to-process silver ores, especially those with few silver sulfide minerals and high oxidation levels, Zexin provides cyanide leaching and zinc dust cementation processes. Under strict environmental measures, low-concentration sodium cyanide solution selectively leaches silver ions, which are then precipitated from solution by adding zinc dust. The entire system employs a fully closed-loop design to ensure cyanide is not discharged externally, while achieving recovery rates above 95%."
+    }
+  ],
+  "applicationsImage": "/images/products/mineral-processing-solutions/precious-metals/silver-beneficiation-process-flow.jpg",
+  "applications": [
+    {
+      "title": "Independent Silver Ore Processing",
+      "description": "Zexin's beneficiation technology demonstrates remarkable effectiveness in processing independent silver ores such as silver sulfides, silver chlorides, and silver bromides. Through multi-stage grinding and refined flotation reagent combinations, various forms of silver minerals can be effectively captured, achieving good separation results even in complex mineral co-occurrence situations. This specialized process is particularly suitable for economic development of low-grade independent silver ores, typically achieving silver recovery rates of 88-93%."
+    },
+    {
+      "title": "Gold-Silver Mixed Ore Treatment",
+      "description": "Zexin has developed special process flows to efficiently recover both precious metals from gold-silver mixed ores simultaneously. Through optimized flotation-leaching combined processes, sulfide minerals are first concentrated, then different forms of gold and silver minerals are treated using differentiated methods. This comprehensive technical approach significantly improves total gold and silver recovery rates and can flexibly adjust process parameters according to market conditions to produce gold-silver concentrate products of varying grade ratios."
+    },
+    {
+      "title": "Polymetallic Associated Silver Ore Beneficiation",
+      "description": "Zexin's staged flotation technology successfully solves complex beneficiation challenges in processing lead-zinc-copper associated silver ores. Through precisely controlled flotation conditions and reagent combinations, efficient separation or cooperative recovery of silver and base metals is achieved. This multi-stage flotation method enables optimal recovery of various valuable metals, improving associated silver recovery without affecting the beneficiation indices of primary base metals, significantly enhancing the comprehensive economic benefits of mining operations."
+    },
+    {
+      "title": "Oxidized Silver Ore Processing",
+      "description": "Zexin's innovative leaching-electrolysis process provides an economically viable solution for difficult-to-process oxidized silver ores. For oxidized silver minerals that are difficult to recover effectively through conventional flotation, we have developed environmentally friendly leaching agent formulations and efficient electrolytic precipitation systems that significantly improve direct silver recovery. This process employs a closed-loop design to minimize chemical reagent consumption and environmental impact, particularly suitable for silver resource development in heavily weathered tropical regions."
+    }
+  ],
+  "relatedProducts": [
+    "vibratory-feeder",
+    "jaw-crusher",
+    "cone-crusher",
+    "inclined-vibrating-screen",
+    "wet-overflow-ball-mill",
+    "submerged-spiral-classifier",
+    "pneumatic-flotation-cell"
+  ]
+} 

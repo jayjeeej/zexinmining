@@ -1,0 +1,51 @@
+{
+  "id": "tin",
+  "mineralName": "Tin Ore",
+  "title": "Tin Ore Beneficiation Process",
+  "processTitle": "Tin Ore Beneficiation Process Flow",
+  "processIntroduction": "Tin ore has a higher density than associated minerals, making gravity separation the primary beneficiation method. However, due to the presence of iron oxide minerals such as magnetite and hematite in the ore, which are difficult to separate from tin minerals using gravity separation or flotation alone, the process often combines gravity separation, magnetic separation, and flotation methods to achieve higher tin recovery rates and concentrate grades.",
+  "processSteps": [
+    {
+      "title": "Crushing and Screening",
+      "description": "The raw ore is crushed to below 20mm and screened into two particle sizes: 20-4mm and 4-0mm. This step ensures the ore reaches the required particle size for subsequent processing, improving beneficiation efficiency."
+    },
+    {
+      "title": "Pre-concentration",
+      "description": "The 20-4mm ore enters a gravity cyclone for pre-concentration, followed by rod milling and jigging. Jig tailings are screened with a 2mm vibrating screen to remove +2mm as waste tailings, while -2mm material enters a shaking table for separation. The pre-concentration stage effectively removes a large amount of gangue, significantly improving the efficiency and precision of subsequent beneficiation processes."
+    },
+    {
+      "title": "Flotation",
+      "description": "The jig and shaking table concentrates are ground separately and then undergo mixed flotation. Mixed flotation tailings are processed on a shaking table to produce qualified tin concentrate. The mixed flotation concentrate undergoes fine grinding for lead-zinc separation flotation, producing both lead-zinc concentrate and tin concentrate. The flotation process effectively separates different minerals, improving the purity and grade of the final product."
+    },
+    {
+      "title": "Gravity Separation",
+      "description": "Slime enters a Φ300mm cyclone, with overflow further processed through Φ125mm and Φ75mm hydraulic cyclones to remove fine slime. The underflow is thickened and floated for tin flotation. Gravity separation is a traditional method for processing tin ore, utilizing density differences for effective separation, particularly suitable for alluvial tin ore."
+    }
+  ],
+  "applicationsImage": "/images/products/mineral-processing-solutions/non-ferrous/tin-beneficiation-process-flow.jpg",
+  "applications": [
+    {
+      "title": "Tin Mining Operations",
+      "description": "Our gravity separation technology is particularly effective for processing alluvial tin deposits and primary rock tin ores with higher grades, achieving optimal recovery rates."
+    },
+    {
+      "title": "Rare Metals Recovery",
+      "description": "Applied in the extraction of rare metals such as niobium, tantalum, titanium, and zirconium from sand mines, maximizing resource utilization."
+    },
+    {
+      "title": "Weakly Magnetic Ore Processing",
+      "description": "Effectively separates weakly magnetic minerals including iron, manganese, and chromium ores, complementing magnetic separation techniques."
+    },
+    {
+      "title": "Low-Grade Ore Beneficiation",
+      "description": "Suitable for pre-concentration of low-grade ores, significantly improving the economics of processing operations."
+    }
+  ],
+  "relatedProducts": [
+    "sawtooth-wave-jig",
+    "self-aspirated-flotation-cell",
+    "shaking-table",
+    "permanent-drum-magnetic-separator",
+    "wet-energy-saving-grid-ball-mill"
+  ]
+}

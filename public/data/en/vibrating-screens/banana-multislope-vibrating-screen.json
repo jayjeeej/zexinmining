@@ -1,0 +1,392 @@
+{
+  "id": "banana-multislope-vibrating-screen",
+  "title": "Multi-slope Screen",
+  "series": "MSBS Series Multi-slope Banana Vibrating Screen",
+  "imageSrc": "/images/products/vibrating-screens/banana-multislope-vibrating-screen.jpg",
+  "productCategory": "Mineral Screen Equipment",
+  "subcategory": "vibrating-screens",
+  "model": "MSBS-2460",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "80-600 t/h (88-661 stph)"
+    },
+    {
+      "key": "Screening particle size",
+      "displayValue": "0.5-200 mm (0.02-7.87 in.)"
+    },
+    {
+      "key": "Motor power",
+      "displayValue": "15-45 kW (20-60 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "ton",
+          "conversionFactor": 1.10231,
+          "label": "ton"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "mtph"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/vibrating-screens/banana-multislope-vibrating-screen",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/vibrating-screens/banana-multislope-vibrating-screen",
+    "zh": "/zh/products/ore-processing/vibrating-screens/banana-multislope-vibrating-screen"
+  },
+  "overview": "The Multi-slope Banana Vibrating Screen (MSBS Series) from Zexin Mining represents the pinnacle of high-capacity screening technology, outperforming traditional linear and circular vibrating screens by up to 50%. Featuring a unique multi-deck banana screen design with variable angles, this heavy-duty vibrating screen delivers superior material stratification and throughput across diverse applications including iron ore, gold ore, copper ore, limestone, sand and gravel, coal, potash, sinter, fertilizer, and construction & demolition waste processing. Its robust construction and advanced vibration system ensure reliable operation in the most demanding mining and aggregate environments, significantly reducing maintenance requirements while maximizing production efficiency.",
+  "detailedDescription": "The MSBS Series introduces a paradigm shift in screening methodology, applying principles of progressive flow dynamics to the mineral separation process. This equipment transcends conventional screening limitations through its engineering philosophy that balances material acceleration with controlled residence time. The system's value derives from its unique approach to particle separation that addresses fundamental challenges in capacity optimization and blinding prevention. Its integration capabilities with existing circuits offer mining operations strategic advantages through minimal retrofit requirements and reduced implementation costs.",
+  "specifications": {
+    "title": "High-Capacity Multi-slope Screen Specifications",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Screen Size (m×m)",
+      "Decks",
+      "Feed End Slope (°)",
+      "Discharge End Slope (°)",
+      "Aperture Size (mm)",
+      "Capacity (t/h)",
+      "Motor Power (kW)",
+      "Vibration Frequency (rpm)",
+      "Amplitude (mm)",
+      "Weight (t)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Screen Size (ft×ft)",
+      "Decks",
+      "Feed End Slope (°)",
+      "Discharge End Slope (°)",
+      "Aperture Size (in.)",
+      "Capacity (stph)",
+      "Motor Power (hp)",
+      "Vibration Frequency (rpm)",
+      "Amplitude (in.)",
+      "Weight (ton)"
+    ],
+    "tableData": [
+      [
+        "MSBS-1836",
+        "1.8×3.6",
+        "2-3",
+        "35-45",
+        "5-10",
+        "0.5-80",
+        "80-200",
+        "15",
+        "900-1200",
+        "3-8",
+        "6.5"
+      ],
+      [
+        "MSBS-2048",
+        "2.0×4.8",
+        "2-3",
+        "35-45",
+        "5-10",
+        "0.5-80",
+        "150-300",
+        "22",
+        "900-1200",
+        "3-8",
+        "8.2"
+      ],
+      [
+        "MSBS-2460",
+        "2.4×6.0",
+        "2-3",
+        "35-45",
+        "5-10",
+        "0.5-80",
+        "200-400",
+        "30",
+        "900-1200",
+        "3-8",
+        "11.5"
+      ],
+      [
+        "MSBS-3060",
+        "3.0×6.0",
+        "2-3",
+        "35-45",
+        "5-10",
+        "0.5-80",
+        "300-500",
+        "37",
+        "900-1200",
+        "3-8",
+        "14.8"
+      ],
+      [
+        "MSBS-3672",
+        "3.6×7.2",
+        "2-3",
+        "35-45",
+        "5-10",
+        "0.5-80",
+        "400-600",
+        "45",
+        "900-1200",
+        "3-8",
+        "18.2"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "MSBS-1836",
+        "5.9×11.8",
+        "2-3",
+        "35-45",
+        "5-10",
+        "0.02-3.15",
+        "88-220",
+        "20",
+        "900-1200",
+        "0.12-0.31",
+        "7.2"
+      ],
+      [
+        "MSBS-2048",
+        "6.6×15.7",
+        "2-3",
+        "35-45",
+        "5-10",
+        "0.02-3.15",
+        "165-330",
+        "30",
+        "900-1200",
+        "0.12-0.31",
+        "9.0"
+      ],
+      [
+        "MSBS-2460",
+        "7.9×19.7",
+        "2-3",
+        "35-45",
+        "5-10",
+        "0.02-3.15",
+        "220-440",
+        "40",
+        "900-1200",
+        "0.12-0.31",
+        "12.7"
+      ],
+      [
+        "MSBS-3060",
+        "9.8×19.7",
+        "2-3",
+        "35-45",
+        "5-10",
+        "0.02-3.15",
+        "330-550",
+        "50",
+        "900-1200",
+        "0.12-0.31",
+        "16.3"
+      ],
+      [
+        "MSBS-3672",
+        "11.8×23.6",
+        "2-3",
+        "35-45",
+        "5-10",
+        "0.02-3.15",
+        "440-660",
+        "60",
+        "900-1200",
+        "0.12-0.31",
+        "20.1"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "",
+      "",
+      "",
+      "length",
+      "capacity",
+      "power",
+      "",
+      "length",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Advanced Multi-slope Deck Design",
+      "description": "Revolutionary banana-shaped screen with multiple slope angles (35-45° at feed end to 5-10° at discharge) accelerates material stratification and maximizes screening efficiency, outperforming conventional linear vibrating screens by up to 40%."
+    },
+    {
+      "title": "Dual-shaft High-frequency Excitation System",
+      "description": "Equipped with a precision dual-shaft high-frequency excitation system, it generates stable linear vibration trajectories with an amplitude range of 3-8mm and a frequency of up to 1200rpm, which can be precisely adjusted based on material characteristics. The high-frequency mining vibrating screen technology enhances the contact frequency between materials and the screen mesh, improving screening accuracy while reducing clogging issues and extending equipment lifespan."
+    },
+    {
+      "title": "Multi-deck Configuration",
+      "description": "Available in double and triple deck configurations for simultaneous classification of multiple size fractions, optimizing processing efficiency for iron ore, gold ore, copper ore, coal, limestone, and other materials."
+    },
+    {
+      "title": "Modular Design and Quick Installation",
+      "description": "The multi-slope vibrating screen adopts a modular design concept, with all components standardized for easy transport, installation, and maintenance. Major parts feature quick-release structures, enabling replacements without specialized tools and drastically reducing installation and maintenance time. New equipment can typically be installed and commissioned in just 2-3 days, making it ideal for remote mining areas and mobile screening stations requiring frequent relocation. It offers a flexible and efficient solution for small and medium-sized mines."
+    },
+    {
+      "title": "High-capacity Performance",
+      "description": "Processes up to 50% more material than conventional screens within the same footprint, making it ideal for high-throughput mining operations, aggregate production, and industrial mineral processing."
+    },
+    {
+      "title": "Anti-clogging Technology",
+      "description": "Specialized deck design with dual-shaft high-frequency exciter system prevents blinding and clogging when processing high-moisture or clay-rich materials, ensuring consistent performance in wet coal screening, sticky ore processing, and similar challenging applications."
+    },
+    {
+      "title": "Heavy-duty Construction",
+      "description": "Engineered with premium wear-resistant components and reinforced modular panels for extended service life in the harshest mining environments, significantly reducing maintenance requirements compared to conventional screens."
+    }
+  ],
+  "applications": {
+    "title": "Application Areas",
+    "items": [
+      {
+        "title": "Iron Ore & Metal Processing",
+        "description": "Unmatched performance in iron ore, gold ore, copper ore, nickel ore, and zinc ore screening applications, delivering precise size classification in both wet and dry processing circuits while handling higher throughput than conventional screens."
+      },
+      {
+        "title": "Coal & Industrial Mineral Processing",
+        "description": "Superior efficiency in coal screening, potash processing, and fertilizer production, with specialized anti-clogging design that maintains performance even with sticky materials and high moisture content typical in these applications."
+      },
+      {
+        "title": "Sand, Gravel & Aggregate Production",
+        "description": "High-capacity multi-deck screening for limestone, sand and gravel operations, delivering precise size classification for construction aggregates while reducing operational costs through increased throughput and reduced maintenance requirements."
+      },
+      {
+        "title": "Hot & Cold Sinter Processing",
+        "description": "Specially engineered for the demanding requirements of both hot and cold sinter screening applications, with heat-resistant components and robust construction that maintains efficiency in extreme temperature environments."
+      },
+      {
+        "title": "Construction & Demolition Waste Recycling",
+        "description": "Heavy-duty performance in recycling operations and asphalt production, efficiently handling variable feed materials and contaminants while maintaining precise separation for maximum material recovery and product quality."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does a banana vibrating screen differ from conventional linear and circular vibrating screens?",
+      "answer": "Banana vibrating screens feature a multi-slope deck design with steeper angles (35-45°) at the feed end that gradually transition to shallower angles (5-10°) at the discharge end. This unique configuration delivers up to 40% higher screening efficiency and 50% greater processing capacity compared to conventional linear and circular vibrating screens by optimizing material stratification and preventing blinding, particularly effective when handling wet, sticky materials that challenge traditional screens."
+    },
+    {
+      "question": "What makes multi-deck banana screens more efficient for material classification?",
+      "answer": "Multi-deck banana screens provide simultaneous classification of multiple size fractions in a single unit, maximizing operational efficiency. The banana-shaped profile creates an ideal material bed thickness throughout the screening process - thicker at the feed end for initial stratification and progressively thinner toward the discharge end for precise fine particle separation. This optimized material flow dramatically improves screening accuracy while increasing throughput by up to 50% compared to conventional vibrating screens."
+    },
+    {
+      "question": "Which materials and industries most benefit from using the MSBS Series vibrating screen?",
+      "answer": "The MSBS Series excels in processing iron ore, gold ore, copper ore, nickel ore, zinc ore, coal, potash, limestone, sand and gravel, fertilizer, hot and cold sinter, asphalt, and construction & demolition waste. Industries with challenging materials (high moisture, clay content) or requiring high-throughput screening see the most significant benefits, including mining operations, aggregate producers, recycling facilities, and industrial minerals processing plants where conventional screens struggle with blinding or limited capacity."
+    },
+    {
+      "question": "How does the MSBS Series handle high-moisture or sticky materials that typically cause screen blinding?",
+      "answer": "The MSBS Series combines several technologies to prevent blinding: the multi-slope design maintains optimal material bed depth, the dual-shaft high-frequency exciter delivers powerful, adjustable vibration patterns that constantly agitate material, and specialized anti-clogging screen media options resist material adhesion. These features work together to ensure efficient separation even with clay-rich ores, wet coal, or other difficult materials that cause conventional screens to blind and lose efficiency."
+    },
+    {
+      "question": "What maintenance advantages does the heavy-duty vibrating screen design offer compared to conventional screens?",
+      "answer": "The MSBS Series significantly reduces maintenance requirements and downtime through several design innovations: wear-resistant components extend service life in abrasive applications; the modular construction allows quick replacement of individual components rather than entire sections; the intelligent monitoring system provides early warning of potential issues before they cause failures; and the optimized vibration system reduces stress on structural components. These features combine to deliver lower total operating costs and higher equipment availability compared to conventional linear and circular vibrating screens."
+    },
+    {
+      "question": "What screen media options are available for the MSBS Series, and how do they affect performance?",
+      "answer": "The MSBS Series supports multiple screen media options including polyurethane panels, woven wire mesh, rubber panels, and perforated plates. While woven wire mesh offers higher open area percentage for increased capacity, polyurethane and rubber panels provide superior wear resistance and service life, especially for abrasive materials. Our application engineers can recommend the optimal media type based on your specific material characteristics, desired product specifications, and operational conditions to balance throughput, efficiency, and maintenance intervals."
+    },
+    {
+      "question": "What is the typical return on investment period for upgrading from conventional screens to the MSBS Series?",
+      "answer": "Most operations upgrading to the MSBS Series achieve ROI within 8-14 months through multiple cost savings: increased throughput (up to 50% higher capacity), reduced power consumption per ton processed (15-30% more efficient), extended screen media life (3-6 times longer between replacements), lower maintenance costs, and improved product quality. Small and medium mining operations typically report annual benefits exceeding $2 million from reduced operational costs and increased production capacity, while benefiting from the versatility to process challenging materials conventional screens cannot handle effectively."
+    },
+    {
+      "question": "How can operators optimize the vibration settings for different materials?",
+      "answer": "The MSBS Series features adjustable vibration parameters to optimize performance for specific materials. For coarser materials, a longer stroke (6-8mm) with lower frequency (900-1000 rpm) provides better stratification and conveyance. For finer materials, a shorter stroke (3-5mm) with higher frequency (1000-1200 rpm) improves screening accuracy and prevents blinding. The dual-shaft exciter system allows independent adjustment of amplitude, frequency, and acceleration force (typically 4-5G), which can be fine-tuned using the optional intelligent control system for real-time optimization based on material characteristics and moisture content."
+    },
+    {
+      "question": "What installation and space requirements should be considered when upgrading to an MSBS Series screen?",
+      "answer": "The MSBS Series is designed for seamless integration into existing operations, requiring approximately the same footprint as conventional screens while delivering higher capacity. Installation considerations include: adequate foundation support for dynamic loads (typically requiring 50% greater load capacity than static weight); vibration isolation systems to prevent transmission to surrounding structures; sufficient clearance for feed and discharge arrangements; and access space for maintenance. Our engineering team provides comprehensive installation planning and support, including 3D models for integration into plant layouts and retrofitting guidance for upgrading from older screening systems."
+    },
+    {
+      "question": "How does the anti-clogging technology specifically address screen blinding issues in high-moisture applications?",
+      "answer": "The MSBS Series incorporates multiple anti-clogging technologies to address screen blinding in high-moisture applications: the progressive multi-slope design maintains optimal material bed depth and prevents material buildup; the dual-shaft high-frequency exciter system provides aggressive, precisely controlled vibration patterns that continuously dislodge adhering particles; specialized screen media with tapered apertures and self-cleaning surfaces prevent material lodging; optional integrated spray systems apply controlled moisture to reduce surface tension in sticky materials; and the intelligent monitoring system detects blinding conditions and automatically adjusts vibration parameters to clear problematic areas before efficiency is compromised."
+    }
+  ],
+  "seo": {
+    "title": "Multi-slope Banana Vibrating Screen | High-efficiency Mining & Ore Processing",
+    "keywords": "banana vibrating screen,multi-slope vibrating screen,multi-deck banana screen,high-capacity vibrating screen,heavy-duty vibrating screen,vibrating screen for mining,vibrating screen for ore,vibrating screen for iron ore,vibrating screen for gold ore,vibrating screen for copper ore,vibrating screen for coal,vibrating screen for sand and gravel,vibrating screen for limestone,wet material screening,clay ore processing,energy-efficient screening,small mine equipment",
+    "description": "Zexin Mining's multi-slope banana vibrating screen delivers 50% higher efficiency with lower energy consumption. Ideal for small mines processing iron, gold, copper ores with high recovery rates even for wet, sticky materials."
+  },
+  "relatedProducts": [
+    "trommel-screen",
+    "bar-vibrating-screen",
+    "inclined-vibrating-screen",
+    "dewatering-screen",
+    "linear-vibrating-screen"
+  ],
+  "imageSrcAlt": "Banana Multislope Vibrating Screen | Zexin Mining"
+}

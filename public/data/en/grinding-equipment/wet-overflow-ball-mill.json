@@ -1,0 +1,578 @@
+{
+  "id": "wet-overflow-ball-mill",
+  "title": "Wet Overflow Ball Mill",
+  "series": "ZMQY Series Wet Overflow Ball Mill",
+  "imageSrc": "/images/products/grinding-equipment/overflow-ball-mill.jpg",
+  "productCategory": "Mineral Grinding Equipment",
+  "subcategory": "grinding-equipment",
+  "model": "ZMQY 2130",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "0.65~24 t/h (0.72~26.46 stph)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "18.5~310 kW (24.8~415.7 hp)"
+    },
+    {
+      "key": "Effective Volume",
+      "displayValue": "0.9~13.5 m³ (31.8~476.7 ft³)"
+    }
+  ],
+  "href": "/en/products/ore-processing/grinding-equipment/wet-overflow-ball-mill",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/grinding-equipment/wet-overflow-ball-mill",
+    "zh": "/zh/products/ore-processing/grinding-equipment/wet-overflow-ball-mill"
+  },
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "short ton",
+          "conversionFactor": 1.10231,
+          "label": "short tons"
+        },
+        {
+          "unit": "kg",
+          "conversionFactor": 1,
+          "label": "kg"
+        },
+        {
+          "unit": "lb",
+          "conversionFactor": 2.20462,
+          "label": "lb"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "short ton/h",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "HP",
+          "conversionFactor": 1.34102,
+          "label": "HP"
+        }
+      ],
+      "volume": [
+        {
+          "unit": "m³",
+          "conversionFactor": 1,
+          "label": "m³"
+        },
+        {
+          "unit": "ft³",
+          "conversionFactor": 35.3147,
+          "label": "ft³"
+        }
+      ],
+      "rotation": [
+        {
+          "unit": "r/min",
+          "conversionFactor": 1,
+          "label": "r/min"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "overview": "The ZMQY Series Wet Overflow Ball Mill is a high-efficiency grinding equipment designed for various mineral processing applications, featuring a simple structure and reliable operation. This overflow-type ball mill provides consistent grinding performance for gold, copper, iron, and other mineral ores, with excellent particle size control and low maintenance requirements.",
+  "detailedDescription": "The ZMQY Series Wet Overflow Ball Mill introduces classic overflow technology that remains the industry standard for mineral grinding operations worldwide. This reliable system creates homogeneous grinding performance through its streamlined internal design, addressing common challenges of mineral processing while ensuring smooth production flow. Its proven engineering approach delivers consistent particle size reduction across diverse ore types, making it valuable processing equipment for operations seeking reliability and simplicity without compromising on grinding quality.",
+  "specifications": {
+    "title": "ZMQY Series Wet Overflow Ball Mill Technical Specifications",
+    "note": "Customization available upon request",
+    "tableHeaders": [
+      "Model",
+      "Cylinder Diameter (mm)",
+      "Cylinder Length (mm)",
+      "Motor Model",
+      "Motor Power (kW)",
+      "Length (mm)",
+      "Width (mm)",
+      "Height (mm)",
+      "Processing Capacity (t/h)",
+      "Effective Volume (m³)",
+      "Max Ball Loading (t)",
+      "Weight (kg)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Cylinder Diameter (in)",
+      "Cylinder Length (in)",
+      "Motor Model",
+      "Motor Power (HP)",
+      "Length (in)",
+      "Width (in)",
+      "Height (in)",
+      "Processing Capacity (stph)",
+      "Effective Volume (ft³)",
+      "Max Ball Loading (short tons)",
+      "Weight (lb)"
+    ],
+    "tableData": [
+      [
+        "ZMQY 0918",
+        "900",
+        "1800",
+        "Y225M-8",
+        "22",
+        "5080",
+        "2300",
+        "2015",
+        "0.65~1.92",
+        "0.9",
+        "1.66",
+        "6078"
+      ],
+      [
+        "ZMQY 1212",
+        "1200",
+        "1200",
+        "Y225S-8",
+        "18.5",
+        "5788",
+        "2994",
+        "2540",
+        "0.8~2.4",
+        "1.14",
+        "2.4",
+        "11473"
+      ],
+      [
+        "ZMQY 1224",
+        "1200",
+        "2400",
+        "YR280S-8",
+        "55",
+        "6112",
+        "2794",
+        "2540",
+        "1.2~3.96",
+        "2.28",
+        "3.8",
+        "12308"
+      ],
+      [
+        "ZMQY 1515",
+        "1500",
+        "1500",
+        "JR115-8",
+        "60",
+        "5766",
+        "2945",
+        "2600",
+        "1.6~5",
+        "2.2",
+        "6.4",
+        "15424"
+      ],
+      [
+        "ZMQY 1530",
+        "1500",
+        "3000",
+        "JR125-8",
+        "95",
+        "7979",
+        "2945",
+        "2600",
+        "3.2~10",
+        "5",
+        "10",
+        "18690"
+      ],
+      [
+        "ZMQY 2122",
+        "2100",
+        "2200",
+        "JR128-8",
+        "155",
+        "8070",
+        "4840",
+        "3795",
+        "5~15",
+        "6.6",
+        "14",
+        "47800"
+      ],
+      [
+        "ZMQY 2130",
+        "2100",
+        "3000",
+        "JR137-8",
+        "210",
+        "8870",
+        "4840",
+        "3795",
+        "6.5~20",
+        "9",
+        "20",
+        "47220"
+      ],
+      [
+        "ZMQY 2136",
+        "2100",
+        "3600",
+        "JR137-8",
+        "210",
+        "9300",
+        "4840",
+        "3795",
+        "7.2~22",
+        "10.8",
+        "22",
+        "52010"
+      ],
+      [
+        "ZMQY 2145",
+        "2100",
+        "4500",
+        "JR148-6",
+        "310",
+        "11029",
+        "4738.6",
+        "3300",
+        "8~24",
+        "13.5",
+        "23.8",
+        "58305"
+      ],
+      [
+        "ZMQY 2430",
+        "2400",
+        "3000",
+        "JR1410-8",
+        "280",
+        "9710",
+        "4778",
+        "4120",
+        "7.5~22.5",
+        "12.1",
+        "23",
+        "65880"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "ZMQY 0918",
+        "35.4",
+        "70.9",
+        "Y225M-8",
+        "29.5",
+        "200.0",
+        "90.6",
+        "79.3",
+        "0.72~2.12",
+        "31.8",
+        "1.83",
+        "13399.2"
+      ],
+      [
+        "ZMQY 1212",
+        "47.2",
+        "47.2",
+        "Y225S-8",
+        "24.8",
+        "227.9",
+        "117.9",
+        "100.0",
+        "0.88~2.65",
+        "40.3",
+        "2.65",
+        "25294.9"
+      ],
+      [
+        "ZMQY 1224",
+        "47.2",
+        "94.5",
+        "YR280S-8",
+        "73.8",
+        "240.6",
+        "110.0",
+        "100.0",
+        "1.32~4.37",
+        "80.5",
+        "4.19",
+        "27136.2"
+      ],
+      [
+        "ZMQY 1515",
+        "59.1",
+        "59.1",
+        "JR115-8",
+        "80.5",
+        "227.0",
+        "115.9",
+        "102.4",
+        "1.76~5.51",
+        "77.7",
+        "7.06",
+        "34006.3"
+      ],
+      [
+        "ZMQY 1530",
+        "59.1",
+        "118.1",
+        "JR125-8",
+        "127.4",
+        "314.1",
+        "115.9",
+        "102.4",
+        "3.53~11.02",
+        "176.6",
+        "11.02",
+        "41204.7"
+      ],
+      [
+        "ZMQY 2122",
+        "82.7",
+        "86.6",
+        "JR128-8",
+        "207.9",
+        "317.7",
+        "190.6",
+        "149.4",
+        "5.51~16.53",
+        "233.0",
+        "15.43",
+        "105380.3"
+      ],
+      [
+        "ZMQY 2130",
+        "82.7",
+        "118.1",
+        "JR137-8",
+        "281.6",
+        "349.2",
+        "190.6",
+        "149.4",
+        "7.17~22.05",
+        "317.8",
+        "22.05",
+        "104102.8"
+      ],
+      [
+        "ZMQY 2136",
+        "82.7",
+        "141.7",
+        "JR137-8",
+        "281.6",
+        "366.1",
+        "190.6",
+        "149.4",
+        "7.94~24.25",
+        "381.4",
+        "24.25",
+        "114663.4"
+      ],
+      [
+        "ZMQY 2145",
+        "82.7",
+        "177.2",
+        "JR148-6",
+        "415.7",
+        "434.2",
+        "186.6",
+        "129.9",
+        "8.82~26.46",
+        "476.7",
+        "26.23",
+        "128559.0"
+      ],
+      [
+        "ZMQY 2430",
+        "94.5",
+        "118.1",
+        "JR1410-8",
+        "375.5",
+        "382.3",
+        "188.1",
+        "162.2",
+        "8.27~24.8",
+        "427.3",
+        "25.35",
+        "145242.4"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "length",
+      "",
+      "power",
+      "length",
+      "length",
+      "length",
+      "capacity",
+      "volume",
+      "weight",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Classic Overflow Discharge Design",
+      "description": "The overflow discharge structure provides simple and reliable material flow through the mill, ensuring continuous operation with minimal mechanical components to maintain. This proven design has been optimized for stable grinding performance across varying feed conditions, making it ideal for processing lines requiring dependable operation."
+    },
+    {
+      "title": "Versatile Grinding Performance",
+      "description": "The ZMQY series delivers excellent grinding results across a wide range of ores and minerals, from soft to medium-hard materials. The overflow design creates natural material circulation patterns that efficiently reduce particle size while providing consistent product fineness for downstream processing operations."
+    },
+    {
+      "title": "Optimized Ball Motion Pattern",
+      "description": "Specialized internal lifter design creates ideal cascading and cataracting motion of the grinding media, maximizing grinding efficiency while minimizing unnecessary ball-on-liner impact. This optimized ball motion ensures effective size reduction while extending liner life and reducing energy consumption."
+    },
+    {
+      "title": "Flexible Operation Parameters",
+      "description": "Adjustable operating parameters including mill speed, ball charge ratio, and slurry density allow operators to optimize performance for different ore types and grinding requirements. This flexibility enables processing various materials with a single equipment installation, maximizing return on investment."
+    },
+    {
+      "title": "High-Quality Component Construction",
+      "description": "The cylinder body is manufactured from high-grade steel plates with precise welding and rigorous stress relief treatment, ensuring structural integrity during long-term operation. Critical components including trunnions, bearings, and drive systems are sourced from leading manufacturers, guaranteeing reliability and longevity."
+    },
+    {
+      "title": "Easy Maintenance Access",
+      "description": "Large inspection doors and simplified internal structure allow for quick visual inspections and maintenance access. The standardized liner configuration simplifies replacement procedures, reducing downtime during routine maintenance and maximizing productive operation hours."
+    },
+    {
+      "title": "Superior Liner System",
+      "description": "High-chromium alloy or rubber composite liners with optimized profiles extend service life while maintaining efficient grinding action. The modular design allows for targeted replacement of high-wear sections, reducing maintenance costs and providing consistent grinding performance throughout the liner lifecycle."
+    },
+    {
+      "title": "Cost-Effective Processing Solution",
+      "description": "The ZMQY series offers an excellent balance of initial investment, operating costs, and grinding performance, making it an economical choice for mining operations. The proven technology minimizes commissioning time and operator training requirements, allowing for rapid production startup and consistent operation."
+    }
+  ],
+  "applications": {
+    "title": "Application Areas",
+    "items": [
+      {
+        "title": "Gold Ore Processing",
+        "description": "The ZMQY series wet overflow ball mill delivers reliable grinding performance for gold ore processing circuits, preparing material for gravity separation, flotation, or leaching. The overflow design minimizes gold particle trapping within the mill, improving overall recovery rates and reducing processing losses."
+      },
+      {
+        "title": "Base Metal Ore Grinding",
+        "description": "Provides consistent grinding for copper, lead, zinc, and other base metal ores, producing ideal particle size distribution for flotation separation. The wet grinding environment prevents oxidation of sulfide minerals during processing, protecting valuable mineral surfaces for better collector attachment and flotation performance."
+      },
+      {
+        "title": "Iron Ore Beneficiation",
+        "description": "Effectively grinds magnetite, hematite, and other iron ores to liberation size for magnetic separation or flotation. The robust design handles the high density and abrasiveness of iron ores while delivering reliable size reduction performance for consistent downstream separation efficiency."
+      },
+      {
+        "title": "Cement Production",
+        "description": "Wet grinding of cement materials when water availability is not a constraint, producing finely ground slurry for wet-process cement production. The overflow design ensures consistent fineness control, improving cement quality while maintaining energy-efficient operation in cement manufacturing facilities."
+      },
+      {
+        "title": "Chemical Industry Applications",
+        "description": "Provides reliable wet grinding for various chemical processing applications requiring consistent particle size reduction and material dispersion. The fully enclosed grinding environment prevents contamination while the overflow discharge ensures controlled retention time for optimal grinding results in chemical manufacturing processes."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is the difference between overflow ball mills and grid ball mills?",
+      "answer": "Overflow ball mills and grid ball mills differ primarily in their discharge mechanism. Overflow mills utilize a simple design where ground material naturally flows out when it reaches the discharge opening level, creating a natural classification effect as heavier particles tend to remain in the mill until sufficiently ground. Grid mills use a perforated discharge screen that accelerates material passage through the mill. Overflow mills typically have lower initial costs and simpler maintenance but may have longer material retention times and slightly higher energy consumption (10-15% more) than grid mills. They're often preferred for applications where grinding fineness is the priority over maximum energy efficiency."
+    },
+    {
+      "question": "What is the optimal feed size for the ZMQY wet overflow ball mill?",
+      "answer": "The optimal feed size for the ZMQY wet overflow ball mill depends on the model size, but generally should not exceed 25-30mm for most applications. For best grinding efficiency, we recommend feed material with 80% passing (P80) less than 20mm for models with diameter >2.1m, and less than 15mm for smaller models. Finer feed material (10-15mm) will maximize throughput and energy efficiency. Excessively coarse feed can cause premature liner damage and reduce grinding efficiency, while feed that already contains significant fines (>15% below target size) can reduce overall grinding capacity by occupying mill volume without contributing to production."
+    },
+    {
+      "question": "What is the optimal ball charge ratio for overflow ball mills?",
+      "answer": "The optimal ball charge ratio for ZMQY overflow ball mills typically ranges from 40-45% of the internal mill volume, slightly higher than grid-type mills. For new mill startups, we recommend a mixed ball charge with the following distribution: 30-35% large balls (80-100mm), 40-45% medium balls (60-80mm), and 20-30% small balls (40-60mm). For harder ores (Bond Work Index >14 kWh/t), increase the proportion of larger balls. For makeup charges during operation, typically add larger diameter balls (80-100mm) as grinding naturally creates a balanced size distribution over time. Regular monitoring of power draw and grinding performance will indicate when additional balls are needed to maintain optimal grinding efficiency."
+    },
+    {
+      "question": "How does slurry density affect overflow ball mill performance?",
+      "answer": "Slurry density significantly impacts overflow ball mill performance. The optimal solid content typically ranges from 65-75% by weight, depending on ore characteristics. Higher densities increase throughput capacity but may reduce grinding efficiency if the slurry becomes too viscous. Lower densities improve material flow but reduce retention time and grinding intensity. For ores with clay content or tendency to slime, reducing solids content to 60-65% may be necessary to maintain proper flow characteristics. The overflow discharge point naturally regulates slurry level inside the mill, making slurry density control one of the primary operating parameters for optimizing grinding performance, affecting both throughput capacity and product fineness."
+    },
+    {
+      "question": "What maintenance is required for the ZMQY wet overflow ball mill?",
+      "answer": "Maintenance for the ZMQY wet overflow ball mill includes: 1) Daily inspections of lubrication systems, drive components, feed arrangements, and discharge conditions; 2) Weekly monitoring of liner wear patterns, grinding media levels, and bearing temperatures; 3) Regular ball charge additions based on power draw measurements (typically weekly or bi-weekly); 4) Liner inspections every 2-3 months with replacement typically every 8,000-12,000 operating hours depending on material abrasiveness; 5) Drive system maintenance including gear oil changes and coupling inspections every 3-6 months; 6) Complete bearing inspection and lubrication system service annually. The overflow design with fewer internal components generally requires less maintenance than complex mill types, with liner replacement being the most significant regular maintenance activity."
+    },
+    {
+      "question": "How can I improve the energy efficiency of my overflow ball mill?",
+      "answer": "To improve energy efficiency of your overflow ball mill: 1) Optimize ball charge composition and filling level (40-45% of mill volume) based on ore characteristics; 2) Maintain proper slurry density - typically 70-75% solids for most ores; 3) Ensure feed size is properly controlled and not excessively coarse; 4) Operate at optimal mill speed - typically 70-75% of critical speed; 5) Implement closed-circuit grinding with efficient classification to prevent over-grinding; 6) Consider installing variable frequency drives for flexibility in operation parameters; 7) Regularly replace worn liners which can decrease efficiency by 5-10%; 8) Monitor and maintain proper bearing alignment and lubrication to reduce mechanical losses; 9) Consider high-efficiency lifting liners designed to optimize ball motion patterns. These measures can typically improve energy efficiency by 10-20% compared to non-optimized operations."
+    },
+    {
+      "question": "What are the advantages of wet grinding compared to dry grinding?",
+      "answer": "Wet grinding in overflow ball mills offers several advantages over dry grinding: 1) Higher grinding efficiency with 20-30% lower specific energy consumption; 2) Better dust control and improved working environment; 3) More effective fine grinding capability, particularly for materials requiring product sizes below 75 microns; 4) Superior particle size distribution control with fewer extremes in product size; 5) Lower operating temperatures, reducing potential for material degradation or mineral changes; 6) Easier materials handling and transportation via pumping systems; 7) Better compatibility with downstream wet processing operations like flotation or leaching; 8) Reduced noise levels compared to dry grinding. The main disadvantage is the need for water and water management systems, making wet grinding less suitable for water-scarce regions or when the downstream process requires dry material."
+    },
+    {
+      "question": "How does mill rotation speed affect grinding performance in overflow ball mills?",
+      "answer": "Mill rotation speed directly impacts grinding performance in overflow ball mills by determining the motion pattern of grinding media. The standard operating range is 70-78% of the critical speed (the theoretical speed at which balls would centrifuge against the mill wall). At lower speeds (65-70% of critical), cascading motion dominates, providing more gentle grinding suitable for soft materials or preventing over-grinding. At higher speeds (75-78% of critical), cataracting motion increases, creating more impact forces suitable for harder ores. Operating beyond 80% of critical speed increases energy consumption without proportional grinding improvement and accelerates liner wear. Modern practice often involves variable speed drives to adjust mill speed based on ore characteristics, ball charge level, and throughput requirements, potentially improving energy efficiency by 5-10%."
+    },
+    {
+      "question": "What factors should be considered when selecting between an overflow ball mill and other grinding technologies?",
+      "answer": "When selecting between an overflow ball mill and other grinding technologies, consider: 1) Ore hardness - overflow ball mills handle medium to hard ores (Bond Work Index 8-18 kWh/t) well, while very hard ores may benefit from SAG mills and soft ores from rod mills; 2) Target product size - overflow mills excel at producing material in the 75-300 micron range, while tower/vertical mills are better for ultra-fine grinding (<45 microns); 3) Throughput requirements - higher capacities might justify SAG/AG mills despite higher capital costs; 4) Energy availability and costs - if energy costs are high, more efficient technologies like high-pressure grinding rolls might be justified; 5) Capital budget constraints - overflow ball mills typically have lower initial investment than newer technologies; 6) Water availability - wet grinding requires water resources; 7) Operational simplicity requirements - overflow mills offer straightforward operation compared to more complex grinding technologies; 8) Available footprint - some alternative technologies offer smaller footprints for the same throughput."
+    },
+    {
+      "question": "How can ball mill blockages or grinding issues be diagnosed and resolved?",
+      "answer": "Ball mill blockages and grinding issues can be diagnosed and resolved by: 1) Monitoring power draw - abnormally high or fluctuating readings indicate potential overloading or material buildup; 2) Listening for unusual sounds - changes in the normal grinding sound can identify ball charge issues or foreign objects; 3) Inspecting discharge conditions - reduced flow or unusual material indicates potential blockages; 4) For blockages, first stop the mill and inspect the discharge trunnion for buildup or oversized materials; 5) Temporary reduction in feed rate and increase in dilution water can help clear minor blockages; 6) For serious blockages, the mill must be stopped, locked out, and entered for cleaning after proper safety procedures; 7) Preventative measures include proper feed size control, maintaining optimal slurry density, regular liner inspection, and installing tramp metal detection systems; 8) For persistent grinding efficiency issues, conduct a grinding circuit audit examining classification efficiency, ball charge composition, and operating parameters to identify optimization opportunities."
+    }
+  ],
+  "seo": {
+    "keywords": "Wet Overflow Ball Mill,Overflow Ball Mill for Mineral Processing,High Efficiency Overflow Ball Mill,Industrial Overflow Ball Grinding Mill,Overflow Ball Mill Price,Best Overflow Ball Mill for Gold Mining,Wet Grinding Ball Mill,Energy-Saving Overflow Ball Mill Design,Large Capacity Overflow Ball Mill,Steel Ball Ratio for Overflow Ball Mill,Overflow Ball Mill Maintenance,Low Noise Overflow Ball Mill,Overflow Ball Mill for Cement,Wet Ball Milling for Ore Processing,Overflow Ball Mill for Chemical Industry",
+    "description": "ZEXIN Mining's ZMQY Series Wet Overflow Ball Mill delivers reliable grinding performance for mineral processing operations. Our classic overflow design ensures simplified maintenance and consistent particle size reduction, ideal for gold mining, base metal processing, and cement production facilities seeking dependable equipment with proven technology.",
+    "title": "Wet Overflow Ball Mill | Reliable Mineral Grinding Equipment | ZEXIN Mining"
+  },
+  "relatedProducts": [
+    "wet-rod-mill",
+    "wet-energy-saving-grid-ball-mill",
+    "dry-ball-mill",
+    "wet-grid-ball-mill",
+    "dry-rod-mill"
+  ],
+  "imageSrcAlt": "Overflow Ball Mill | Zexin Mining"
+}

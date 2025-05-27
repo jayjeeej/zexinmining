@@ -1,0 +1,52 @@
+{
+  "id": "magnetite",
+  "mineralName": "Magnetite Ore",
+  "title": "Magnetite Ore Beneficiation Process",
+  "processTitle": "Magnetite Ore Beneficiation Process Flow",
+  "processIntroduction": "Magnetite ore beneficiation methods dominate iron ore separation processes. Zexin employs gravity separation, magnetic separation, flotation, and roasting-magnetic separation, as well as combined processes for treating weakly magnetic lean iron ores. For strongly magnetic iron ores, direct magnetic separation methods are applied. Our tailored approach ensures optimal recovery and grade for various magnetite ore types.",
+  "processSteps": [
+    {
+      "title": "Process Selection",
+      "description": "Zexin selects appropriate beneficiation methods based on the magnetic strength of the ore. Magnetic separation serves as the primary process method, complemented by gravity separation, flotation, and roasting-magnetic separation combined into integrated process flows. This methodical approach ensures systematic mineral separation with clear technical foundations, establishing optimal conditions for maximum recovery throughout the beneficiation process."
+    },
+    {
+      "title": "Strong Magnetic Iron Ore Processing",
+      "description": "This method is primarily used to beneficiate low-grade magnetite ores. Due to the strong magnetic properties and favorable grinding and separation characteristics, coarse-grained magnetite typically undergoes single-stage grinding, while finer-grained ores require multi-stage grinding processes. Zexin's advanced magnetic separation equipment efficiently separates magnetite from gangue materials, achieving high recovery rates while maintaining optimal concentrate grades."
+    },
+    {
+      "title": "Weak Magnetic Iron Ore Processing",
+      "description": "Weakly magnetic minerals undergo magnetic roasting treatment to enhance their magnetic properties, after which they can be beneficiated using methods suitable for strongly magnetic minerals. Zexin's specialized magnetic roasting technology transforms weakly magnetic iron minerals into strongly magnetic forms through controlled temperature and atmosphere conditions. This conversion enables efficient magnetic separation in subsequent processing stages, significantly improving recovery rates for these traditionally challenging ore types."
+    },
+    {
+      "title": "Fine Grinding Technology",
+      "description": "In the two-stage grinding, stage-wise separation, and single weak magnetic separation process, Zexin incorporates fine screening with regrinding and re-separation of oversize material. This advanced approach ensures timely separation of fine-grained minerals that have achieved liberation, reducing over-grinding phenomena and increasing processing capacity. The fine grinding technology can improve concentrate grades by approximately 2%, elevating typical concentrates from 61% to around 67% iron content."
+    }
+  ],
+  "applicationsImage": "/images/products/mineral-processing-solutions/ferrous/magnetite-beneficiation-process-flow.jpg",
+  "applications": [
+    {
+      "title": "High-Grade Magnetite Concentrate Production",
+      "description": "Our integrated magnetic separation technology achieves industry-leading recovery rates on magnetite deposits, producing premium-grade concentrates suitable for direct metallurgical processing. The system's adaptability handles variations in ore mineralogy and grain size distribution while maintaining consistent performance metrics, maximizing resource utilization and operational profitability even in challenging geological environments."
+    },
+    {
+      "title": "Low-Grade Magnetite Resource Valorization",
+      "description": "The high-efficiency magnetic separation capabilities of our process transform marginal magnetite deposits into economically viable resources. By employing multi-stage grinding and precision magnetic separation, operations can drastically reduce processing costs per ton of final concentrate. This approach has successfully revitalized numerous deposits previously classified as sub-economic, expanding global iron ore reserves while minimizing environmental footprint."
+    },
+    {
+      "title": "Weakly Magnetic Iron Ore Transformation",
+      "description": "Our specialized roasting-magnetic separation process effectively converts weakly magnetic iron minerals into strongly magnetic forms, enabling efficient recovery through conventional magnetic separation. This innovative approach unlocks value from complex iron ore bodies previously considered difficult to process, significantly expanding the viable resource base for iron production worldwide while delivering superior metallurgical performance."
+    },
+    {
+      "title": "Premium Concentrate Grade Enhancement",
+      "description": "Zexin's advanced fine grinding technology produces exceptionally high-grade magnetite concentrates meeting the most stringent specifications for premium steelmaking applications. By achieving optimal liberation of fine-grained magnetite particles without over-grinding, our process significantly enhances iron content in the final concentrate from typical levels of 61% to approximately 67%, commanding premium pricing in specialty markets while satisfying increasingly stringent quality requirements for modern steel production."
+    }
+  ],
+  "relatedProducts": [
+    "jaw-crusher",
+    "cone-crusher",
+    "hydrocyclone-separator",
+    "inclined-vibrating-screen",
+    "permanent-drum-magnetic-separator",
+    "wet-overflow-ball-mill"
+  ]
+}

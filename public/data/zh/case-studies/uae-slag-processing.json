@@ -1,0 +1,22 @@
+{
+  "id": "uae-slag-processing",
+  "title": "阿联酋铁炉渣选矿厂",
+  "location": "阿联酋阿布扎比工业区",
+  "year": "2024",
+  "category": "炉渣处理",
+  "client": "阿联酋钢铁工业公司",
+  "description": "泽鑫矿山设备2024年为阿联酋客户设计的铁炉渣选厂，该设施处理钢铁厂产生的炉渣，回收有价值的铁含量，并从非金属成分中生产建筑材料。",
+  "challenge": "项目地处沙漠地区，环境恶劣，面临夏季超过50°C的极端高温、频繁的沙尘暴和水资源极度匮乏等挑战。此外，项目必须符合严格的国际环保标准，对工业废物处理和空气质量控制有严格要求。",
+  "solution": "根据铁炉渣特性，我们设计了两段破碎工艺（其中一段闭路破碎），然后是筛分系统、跳汰选矿和脱水处理。破碎系统包括初级颚式破碎机和与振动筛形成闭路的二级圆锥破碎机，确保精确的粒度控制。多层振动筛用于高效分级破碎后的物料，然后送入跳汰机回收金属铁。最终产品通过高效脱水筛和压滤机进行脱水处理。\n\n为达到当地环保要求，我们在整个工厂采用了湿式除尘系统，有效控制粉尘排放，即使在沙漠地区的恶劣条件下也能维持良好效果。工厂还配备了综合水处理和回收系统，实现超过90%的水循环利用率，最大限度减少了水资源稀缺地区的淡水消耗。",
+  "results": "该炉渣处理厂年产能达到50万吨，同时符合所有环保法规要求。设施从炉渣中回收约15%的金属铁用于钢铁生产循环利用，同时从非金属成分中生产高质量的建筑骨料。湿式除尘系统在沙尘暴条件下也能有效保持空气质量达标。水循环系统减少了超过90%的淡水需求，使工厂在沙漠环境中实现可持续运营。该项目是在极具挑战性的环境条件下进行可持续工业废物管理的典范。",
+  "images": [
+    "/images/cases/uae-slag-processing/steel-slag-processing-plant-abu-dhabi-uae.jpg",
+    "/images/cases/uae-slag-processing/slag-processing-two-stage-crushing-circuit.jpg",
+    "/images/cases/uae-slag-processing/wet-dust-suppression-system-desert-conditions.jpg"
+  ],
+  "imagesAlt": [
+    "Steel Slag Processing Plant Abu Dhabi Uae | Zexin Mining",
+    "Slag Processing Two Stage Crushing Circuit | Zexin Mining",
+    "Wet Dust Suppression System Desert Conditions | Zexin Mining"
+  ]
+}

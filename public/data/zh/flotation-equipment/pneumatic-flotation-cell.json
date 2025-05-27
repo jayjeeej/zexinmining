@@ -1,0 +1,301 @@
+{
+  "id": "pneumatic-flotation-cell",
+  "title": "充气式浮选槽",
+  "series": "BF系列",
+  "imageSrc": "/images/products/flotation-equipment/pneumatic-flotation-cell.jpg",
+  "productCategory": "选矿设备",
+  "subcategory": "flotation equipment",
+  "model": "BF系列",
+  "meta": [
+    {
+      "key": "有效容积",
+      "displayValue": "2.2-38 立方米"
+    },
+    {
+      "key": "处理能力",
+      "displayValue": "0.5-30 立方米/分钟"
+    },
+    {
+      "key": "电机功率",
+      "displayValue": "5.5-45 千瓦"
+    }
+  ],
+  "href": "/zh/products/ore-processing/flotation-equipment/pneumatic-flotation-cell",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/flotation-equipment/pneumatic-flotation-cell",
+    "zh": "/zh/products/ore-processing/flotation-equipment/pneumatic-flotation-cell"
+  },
+  "unitConversion": {
+    "enabled": false,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "毫米"
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "平方米"
+        }
+      ],
+      "volume": [
+        {
+          "unit": "m³",
+          "conversionFactor": 1,
+          "label": "立方米"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "m³/min",
+          "conversionFactor": 1,
+          "label": "立方米/分钟"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "千瓦"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "kg",
+          "conversionFactor": 1,
+          "label": "千克"
+        }
+      ],
+      "pressure": [
+        {
+          "unit": "kPa",
+          "conversionFactor": 1,
+          "label": "千帕"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": false,
+      "position": "top-right",
+      "labels": {
+        "toggle": "单位转换",
+        "metric": "公制",
+        "imperial": "英制"
+      }
+    }
+  },
+  "overview": "充气式浮选槽是一种先进的矿物分离系统，通过控制空气注入创造最佳泡沫条件。具有高回收率和可调充气设置，该浮选设备显著提高了各种金属和非金属矿石的选矿作业效率。",
+  "detailedDescription": "BF系列充气式浮选槽集精密工程化充气技术与优化搅拌能力于一体，彻底革新了矿物分离工艺。该系统通过创新的叶轮设计实现卓越的矿物-气泡接触，解决传统回收难题的同时提高了选择性。其平衡的空气分布和湍流管理方法可在不同矿石条件下提供稳定的泡沫特性，是一种能够适应复杂矿物成分而不影响能源效率的宝贵加工设备。",
+  "specifications": {
+    "title": "技术参数",
+    "note": "可按照客户需求进行定制",
+    "tableHeaders": [
+      "型号",
+      "有效容积 (立方米)",
+      "处理能力 (立方米/分钟)",
+      "叶轮直径 (毫米)",
+      "叶轮转数 (转/分钟)",
+      "鼓风机风压 (千帕)",
+      "最大充气量 (立方米/平方米.分钟)",
+      "搅拌电机功率 (千瓦)",
+      "刮板电机功率 (千瓦)",
+      "单槽重量 (千克)"
+    ],
+    "tableData": [
+      [
+        "BF-2.2",
+        "2.2",
+        "0.5-3",
+        "420",
+        "260",
+        "≥15",
+        "2-3",
+        "5.5",
+        "0.75",
+        "1750"
+      ],
+      [
+        "BF-4",
+        "4",
+        "0.5-4",
+        "500",
+        "220-230",
+        "≥17",
+        "3-6",
+        "7.5",
+        "0.75",
+        "2568"
+      ],
+      [
+        "BF-6",
+        "6",
+        "1.0-6",
+        "650",
+        "197",
+        "≥27",
+        "4-10",
+        "15",
+        "1.1",
+        "3570"
+      ],
+      [
+        "BF-8",
+        "8",
+        "1.0-8",
+        "650",
+        "180-190",
+        "≥21",
+        "4-10",
+        "15",
+        "1.1",
+        "4539"
+      ],
+      [
+        "BF-16",
+        "16",
+        "2.0-15",
+        "750",
+        "160-170",
+        "≥27",
+        "6-15",
+        "30",
+        "1.1",
+        "8131"
+      ],
+      [
+        "BF-24",
+        "24",
+        "7.0-20",
+        "830",
+        "154-159",
+        "≥29",
+        "8-18",
+        "37",
+        "1.1",
+        "9546"
+      ],
+      [
+        "BF-38",
+        "38",
+        "10.0-30",
+        "910",
+        "141",
+        "≥34",
+        "10-20",
+        "45",
+        "1.1",
+        "11107"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "volume",
+      "capacity",
+      "length",
+      "",
+      "pressure",
+      "area",
+      "power",
+      "power",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "精密叶轮系统",
+      "description": "精密工程化叶轮和定子系统产生细微气泡，实现最佳矿物附着"
+    },
+    {
+      "title": "高回收率",
+      "description": "均匀空气分布技术与传统浮选机相比提高15%的矿物回收率"
+    },
+    {
+      "title": "通用适应性",
+      "description": "可调充气参数，适用于从硫化物到工业矿物的各种矿石处理"
+    },
+    {
+      "title": "先进泡沫控制",
+      "description": "先进泡沫控制系统在最小化试剂消耗的同时提高品位回收性能"
+    },
+    {
+      "title": "节能设计",
+      "description": "节能设计在保持处理能力的同时将功耗降低高达30%"
+    },
+    {
+      "title": "模块化配置",
+      "description": "模块化配置支持灵活的电路设计，多槽用于粗选、精选和扫选"
+    },
+    {
+      "title": "耐磨设计",
+      "description": "强化耐磨部件延长在磨蚀性矿物加工环境中的使用寿命"
+    }
+  ],
+  "applications": {
+    "title": "应用领域",
+    "items": [
+      {
+        "icon": "copper",
+        "title": "基本金属回收",
+        "description": "在从硫化矿石中回收铜、铅、锌和镍方面非常高效，具有优越的选择性和品位控制。"
+      },
+      {
+        "icon": "precious-metals",
+        "title": "贵金属加工",
+        "description": "针对金和银浮选的专用配置，优化的气泡尺寸分布用于细粒附着。"
+      },
+      {
+        "icon": "industrial-minerals",
+        "title": "工业矿物",
+        "description": "非常适合加工石墨、长石、萤石和其他需要精确空气控制和温和搅拌的工业矿物。"
+      },
+      {
+        "icon": "coal",
+        "title": "煤炭选矿",
+        "description": "高效进行煤炭浮选，可调充气参数以适应不同程度的煤炭氧化和矿物含量。"
+      },
+      {
+        "icon": "wastewater",
+        "title": "废水处理",
+        "description": "应用于工业废水处理系统，通过溶气浮选去除悬浮固体、油类和其他污染物。"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "充气式浮选槽如何工作？",
+      "answer": "充气式浮选槽通过将压缩空气通过专门设计的叶轮-定子系统注入矿浆而运行。叶轮将空气分散成细小气泡，同时提供足够的搅拌。疏水性矿物颗粒附着在这些气泡上并上升形成表面矿物丰富的泡沫层，然后由刮板收集，而亲水性脉石留在矿浆中。"
+    },
+    {
+      "question": "充气式浮选槽相比传统浮选机有哪些优势？",
+      "answer": "充气式浮选槽提供几个优势：更细更均匀的气泡生成，提高矿物回收率；更好的空气分布控制；更低的能耗；每单位体积更高的处理能力；改进的选择性；以及在不同矿石类型中更一致的性能。这些好处通常导致10-15%的更高回收率和20-30%的更低运营成本。"
+    },
+    {
+      "question": "哪些矿物可以使用充气式浮选槽处理？",
+      "answer": "充气式浮选槽用途广泛，可以处理各种矿物，包括硫化矿（铜、铅、锌、镍）、贵金属矿（金、银）、工业矿物（石墨、长石、萤石）、煤炭和磷酸盐。通过适当的试剂制度，它们可以有效分离几乎任何响应泡沫浮选原理的矿物。"
+    },
+    {
+      "question": "充气式浮选槽需要什么维护？",
+      "answer": "常规维护包括检查叶轮和定子的磨损情况（通常每3-6个月）；检查和维修空气分配系统；电机和传动部件的维护；密封和轴承的检查；泡沫去除机构的清洁；以及空气流量控制器的定期校准。应根据矿石磨蚀性和运行时间建立预防性维护计划。"
+    },
+    {
+      "question": "如何确定适合我的操作的浮选槽尺寸？",
+      "answer": "选择合适的浮选槽尺寸取决于几个因素：所需的处理能力、充分矿物回收所需的停留时间、给料特性（粒度、矿物成分）、电路配置（清洗阶段数量）和空间限制。强烈建议在最终尺寸决定前进行实验室和中试工厂测试，以确定最佳浮选参数。"
+    }
+  ],
+  "seo": {
+    "keywords": "充气式浮选槽,充气式浮选机,浮选机,矿用浮选机,机械搅拌浮选机,高效浮选机,浮选设备,气浮机,选矿浮选机,工业浮选机,浮选槽,浮选柱,浮选机厂家",
+    "description": "泽鑫矿山BF系列充气式浮选槽采用先进充气技术，实现卓越矿物回收率。我们精密工程化浮选设备提供高达15%的更高回收率，同时降低30%能耗。非常适合处理基本金属、贵金属和工业矿物。",
+    "title": "充气式浮选机 | 高效矿用浮选设备 | 泽鑫矿山设备"
+  },
+  "relatedProducts": [
+    "self-aspirated-flotation-cell",
+    "xfc-air-inflation-flotation-cell",
+    "coarse-flotation-cell"
+  ],
+  "imageSrcAlt": "Pneumatic Flotation Cell | Zexin Mining"
+}

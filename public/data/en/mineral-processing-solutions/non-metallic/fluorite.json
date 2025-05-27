@@ -1,0 +1,53 @@
+{
+  "id": "fluorite",
+  "mineralName": "Fluorite",
+  "title": "Fluorite Beneficiation Process",
+  "processTitle": "Fluorite Beneficiation Process Flow",
+  "processIntroduction": "Fluorite ore processing employs various beneficiation methods due to the complex mineral composition and similar properties between valuable minerals and gangue. Zexin typically implements combined processes involving flotation, gravity separation, and magnetic separation. For coarser fluorite ores, gravity separation using jigging equipment is employed, while flotation is the primary method for fine-grained fluorite and complex ores. Our fluorite beneficiation process is particularly suitable for complex ores with high clay content, intergrown impurity minerals, and fine-grained valuable minerals.",
+  "processSteps": [
+    {
+      "title": "Combined Processing Method",
+      "description": "Due to the complex composition of fluorite ores and the similar properties between valuable minerals and gangue minerals, Zexin typically employs a combined approach utilizing flotation with gravity and magnetic separation. This integrated methodology allows for effective processing of various fluorite ore types, from coarse-grained to complex fine-grained deposits. The specific combination of techniques is customized based on detailed mineralogical analysis, ensuring optimal recovery and grade for each unique ore body."
+    },
+    {
+      "title": "Fluorite and Barite Separation",
+      "description": "For ores containing both fluorite and barite, Zexin employs a strategy of collective flotation followed by selective separation. Initially, oleic acid is used as a collector to obtain a mixed concentrate containing both minerals. The mixed concentrate is then subjected to either direct or reverse flotation to produce high-grade fluorite concentrate. This approach maximizes recovery while effectively managing complex mineral associations common in many fluorite deposits."
+    },
+    {
+      "title": "Fluorite and Quartz Separation",
+      "description": "When separating fluorite from quartz, Zexin uses fatty acids as collectors for fluorite while employing sodium silicate to depress quartz. The dosage of sodium silicate is carefully controlled, as small amounts can activate fluorite while providing insufficient depression of quartz, while excessive amounts can depress fluorite itself. To enhance the depressing effect of sodium silicate on quartz, certain polyvalent metal ions are sometimes added, which also effectively depress calcite, further improving concentrate quality."
+    },
+    {
+      "title": "Fluorite and Sulfide Mineral Separation",
+      "description": "For fluorite ores containing sulfide minerals, Zexin first employs xanthate collectors to float the sulfide minerals. After removing the sulfides, fatty acid collectors are added to float the fluorite. Additionally, small amounts of sulfide mineral depressants may be added during fluorite flotation to suppress any remaining sulfide minerals, ensuring high-grade fluorite concentrate. This sequential approach ensures effective separation of fluorite from sulfide impurities, critical for meeting high-purity product specifications."
+    }
+  ],
+  "applicationsImage": "/images/products/mineral-processing-solutions/non-metallic/fluorite-beneficiation-process-flow.jpg",
+  "applications": [
+    {
+      "title": "High Clay Content Fluorite Ore Processing",
+      "description": "Our specialized flotation technology effectively processes fluorite ores with high clay content, a common challenge in many deposits. The process incorporates advanced desliming circuits, specially formulated reagent regimes, and optimized flotation cell configurations to manage clay interference while maintaining high recovery rates. This tailored approach prevents common issues such as poor selectivity, excessive reagent consumption, and concentrate contamination, enabling successful beneficiation of clay-rich fluorite resources that would otherwise be considered difficult to process using conventional methods."
+    },
+    {
+      "title": "Intergrown Impurity Mineral Separation",
+      "description": "Zexin's advanced processing technology excels at separating fluorite from closely intergrown impurity minerals through precisely controlled grinding and selective flotation techniques. Our process combines optimized particle size reduction, specialized reagent combinations, and carefully designed flotation circuits to effectively liberate and separate fluorite from complex mineral associations. This sophisticated approach enables the processing of fluorite ores with challenging mineralogical characteristics, producing high-quality concentrates while maintaining maximum recovery from deposits previously considered marginally economic."
+    },
+    {
+      "title": "Fine-Grained Fluorite Beneficiation",
+      "description": "Our innovative beneficiation technology addresses the challenges of processing fine-grained fluorite ores through specialized flotation techniques, optimized reagent systems, and precisely controlled processing parameters. The system incorporates advanced cell designs, custom collector formulations, and carefully managed hydrodynamics to effectively float fine fluorite particles while minimizing entrainment of unwanted minerals. This specialized approach transforms fine-grained fluorite resources with complex mineral characteristics into high-value concentrates that meet rigorous industry specifications."
+    },
+    {
+      "title": "Complex Refractory Fluorite Ore",
+      "description": "Zexin's integrated beneficiation approach successfully processes complex refractory fluorite ores characterized by challenging combinations of high clay content, intergrown impurity minerals, and fine-grained valuable components. Our comprehensive processing solution incorporates multiple stages of optimization, including specialized pre-treatment techniques, selective flotation circuits, and advanced separation technologies. This multi-faceted methodology has successfully transformed numerous difficult-to-process fluorite deposits into viable commercial operations, expanding global fluorite reserves while maintaining high recovery rates and consistent product quality."
+    }
+  ],
+  "relatedProducts": [
+    "vibratory-feeder",
+    "jaw-crusher",
+    "cone-crusher",
+    "inclined-vibrating-screen",
+    "pneumatic-flotation-cell",
+    "wet-overflow-ball-mill",
+    "high-weir-spiral-classifier"
+  ]
+}

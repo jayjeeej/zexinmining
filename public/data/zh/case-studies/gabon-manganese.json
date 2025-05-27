@@ -1,0 +1,22 @@
+{
+  "id": "gabon-manganese",
+  "title": "加蓬塔塔集团200万吨锰矿加工厂",
+  "location": "加蓬佛朗斯维尔",
+  "year": "2020",
+  "category": "锰矿",
+  "client": "印度塔塔集团",
+  "description": "泽鑫矿山设备为塔塔集团在加蓬设计并建设的大型锰矿加工厂，年产能200万吨。项目优化了含杂质较多的锰矿资源的选矿工艺，提供符合冶金工业标准的优质锰精矿。",
+  "challenge": "当地基础设施落后，气候湿热多雨，为项目建设和设备运行带来挑战。同时，项目业主要求严格的环保标准，尾矿处理和水资源利用需要创新解决方案。",
+  "solution": "由于原矿品味较好而且嵌布粒度较粗，非常适合重选回收，我们设计了包括破碎、筛分、清洗、跳汰重选等工序的加工流程。破碎后的物料经筛分分级，再通过清洗工艺去除黏土和细泥，然后采用跳汰机重选工艺高效处理粗粒度锰矿，实现品位提升和杂质去除，确保最终产品满足冶金工业的严格要求。\n\n采用高效浓密和压滤技术处理尾矿，实现尾矿干堆。设计了雨水收集系统和水处理系统，使生产用水实现95%的循环利用率，大幅减少对当地淡水资源的消耗。",
+  "results": "该加工厂自投产以来运行高效，达到设计年产能200万吨。生产的锰精矿品位优化、杂质降低，满足冶金行业严格的质量规范。环境表现突出，干堆尾矿技术最大限度减少环境影响，水循环系统实现了95%的预期水回用率。该工厂已成为中非地区可持续采矿实践的标杆项目。",
+  "images": [
+    "/images/cases/gabon-manganese/gabon-tata-group-manganese-processing-plant.jpg",
+    "/images/cases/gabon-manganese/manganese-beneficiation-plant-franceville-gabon.jpg",
+    "/images/cases/gabon-manganese/two-stage-washing-jigging-process-manganese.jpg"
+  ],
+  "imagesAlt": [
+    "Gabon Tata Group Manganese Processing Plant | Zexin Mining",
+    "Manganese Beneficiation Plant Franceville Gabon | Zexin Mining",
+    "Two Stage Washing Jigging Process Manganese | Zexin Mining"
+  ]
+}

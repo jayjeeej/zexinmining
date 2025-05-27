@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "title": "Welcome to the Zexin Group",
+    "subtitle": "We apply our expert minds and collaborative ways of working with customers to build more resilient and stronger businesses.",
+    "cta": "View our offerings"
+  },
+  "epcmo": {
+    "title": "EPCMO Comprehensive Services",
+    "heading": "One-stop Mining Project Solutions",
+    "description": "We provide end-to-end professional services from engineering design, procurement, and construction to management and operations, creating lasting value and operational excellence for global mining clients through our rich experience and advanced technologies.",
+    "link": "Learn more"
+  },
+  "latestNews": {
+    "title": "Latest news",
+    "allNewsLink": "All news and press releases",
+    "newsItems": {
+      "newsType": "Press release"
+    }
+  },
+  "navigation": {
+    "products": "Products & Services",
+    "solutions": "Our Solutions",
+    "investors": "Investors",
+    "careers": "Careers",
+    "news": "News & Media",
+    "about": "About us",
+    "contact": "Contact"
+  },
+  "footer": {
+    "dataPrivacy": "Data privacy",
+    "accessibility": "Accessibility statement",
+    "legal": "Legal notice"
+  },
+  "share": {
+    "label": "Share:",
+    "shareOn": "Share on"
+  }
+} 

@@ -1,0 +1,22 @@
+{
+  "id": "hainan-iron",
+  "title": "2 Million Tons Iron Ore Processing Plant Upgrade for Xinda Mining in Hainan",
+  "location": "Changjiang, Hainan, China",
+  "year": "2021",
+  "category": "Iron Ore",
+  "client": "Xinda Mining",
+  "description": "A comprehensive upgrade and renovation project for an existing iron ore processing plant in Changjiang County, Hainan Province. The project aimed to improve concentrate grade while addressing space limitations and meeting stringent environmental standards, all while maintaining the annual production capacity of 2 million tons.",
+  "challenge": "The project presented multiple challenges: the original plant design was inefficient with inadequate concentrate grade, the available space for renovation was severely limited, and strict environmental regulations had to be met. The client needed to maintain production capacity while significantly improving quality and environmental performance.",
+  "solution": "We designed a three-dimensional spatial solution with multiple elevation levels to overcome space constraints. The process flow included a two-stage crushing system (coarse and medium crushing with one closed-circuit operation) followed by vibration screening to achieve target particle size. The ore was then classified into two size fractions that were processed through different jigging circuits, followed by an efficient dewatering system.\n\nThe multi-level design optimized the use of gravity flow, reducing power consumption and operational costs. To meet environmental requirements, we implemented a water recycling system with over 90% water recovery rate and dust suppression technology at all transfer points and crushing stations.",
+  "results": "The upgraded plant successfully addressed all client requirements. The concentrate grade increased by 5-8% compared to the original process, while maintaining the designed annual capacity of 2 million tons. The space-efficient design fit within the existing plant footprint while improving material flow and operational efficiency. Environmental performance has been excellent, with dust emissions reduced by 85% and water consumption decreased by 70% through recycling. The project has become a model for space-constrained plant renovations in the region.",
+  "images": [
+    "/images/cases/hainan-iron/hainan-changjiang-iron-ore-processing-plant.jpg",
+    "/images/cases/hainan-iron/multi-level-plant-design-hainan-xinda.jpg",
+    "/images/cases/hainan-iron/jigging-circuit-iron-ore-beneficiation.jpg"
+  ],
+  "imagesAlt": [
+    "Hainan Changjiang Iron Ore Processing Plant | Zexin Mining",
+    "Multi Level Plant Design Hainan Xinda | Zexin Mining",
+    "Jigging Circuit Iron Ore Beneficiation | Zexin Mining"
+  ]
+}

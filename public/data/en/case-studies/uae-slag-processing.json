@@ -1,0 +1,22 @@
+{
+  "id": "uae-slag-processing",
+  "title": "Iron Slag Processing Plant in UAE",
+  "location": "Industrial Zone, Abu Dhabi, UAE",
+  "year": "2024",
+  "category": "Slag Processing",
+  "client": "Emirates Steel Industries",
+  "description": "A specialized iron slag processing plant designed by Zexin Mining Equipment for a UAE client in 2024. The facility processes steel mill slag to recover valuable iron content and produces construction materials from the non-metallic components.",
+  "challenge": "The project faced numerous challenges due to its location in a desert region with harsh environmental conditions, including extreme high temperatures exceeding 50°C in summer, frequent sandstorms, and severe water scarcity. Additionally, the project had to comply with strict international environmental standards for industrial waste processing and air quality control.",
+  "solution": "Based on the characteristics of iron slag, we designed a comprehensive processing flow with two-stage crushing (one stage in closed circuit) followed by a screening system, jig concentration, and dewatering processes. The crushing circuit included primary jaw crushers and secondary cone crushers in closed circuit with vibrating screens to ensure precise particle size control. Multi-deck vibrating screens were employed for efficient classification of the crushed material before feeding to the jig concentrators that recovered the metallic iron. The final products underwent dewatering through high-efficiency dewatering screens and filter presses.\n\nTo meet local environmental requirements, we implemented a wet dust suppression system throughout the plant, effectively controlling dust emissions even in challenging desert conditions. The plant was also equipped with a comprehensive water treatment and recycling system that achieved over 90% water reuse, minimizing freshwater consumption in the water-scarce region.",
+  "results": "The slag processing plant has successfully achieved a production capacity of 500,000 tons per year while maintaining compliance with all environmental regulations. The facility recovers approximately 15% metallic iron from the slag for recycling back into the steelmaking process, while producing high-quality construction aggregates from the non-metallic components. The wet dust suppression system has proven effective in maintaining air quality standards even during sandstorm conditions. The water recycling system has reduced freshwater requirements by over 90%, making the operation sustainable in the desert environment. The project serves as an excellent example of sustainable industrial waste management in challenging environmental conditions.",
+  "images": [
+    "/images/cases/uae-slag-processing/steel-slag-processing-plant-abu-dhabi-uae.jpg",
+    "/images/cases/uae-slag-processing/slag-processing-two-stage-crushing-circuit.jpg",
+    "/images/cases/uae-slag-processing/wet-dust-suppression-system-desert-conditions.jpg"
+  ],
+  "imagesAlt": [
+    "Steel Slag Processing Plant Abu Dhabi Uae | Zexin Mining",
+    "Slag Processing Two Stage Crushing Circuit | Zexin Mining",
+    "Wet Dust Suppression System Desert Conditions | Zexin Mining"
+  ]
+}

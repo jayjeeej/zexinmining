@@ -1,0 +1,64 @@
+{
+    "id": "gold",
+    "mineralName": "Gold",
+    "title": "Gold Beneficiation Process",
+    "processTitle": "Combined Gravity-Flotation Gold Beneficiation Process Flow",
+    "processIntroduction": "Zexin implements specialized combined gravity separation and flotation techniques for both placer gold and vein gold deposits. For placer gold, the process includes disintegration, screening, desliming, and separation operations using equipment such as jigs, shaking tables and centrifugal separators. For vein gold, we use a combined approach of gravity separation and flotation, effectively recovering liberated coarse gold particles before or after leaching. This combined process significantly improves overall gold recovery by leveraging the advantages of both methods for more efficient gold ore processing.",
+    "processSteps": [
+      {
+        "title": "Crushing and Grinding",
+        "description": "Raw gold ore is crushed and ground to a suitable particle size (usually 85% passing 200 mesh) to ensure adequate liberation of gold minerals for subsequent extraction processes."
+      },
+      {
+        "title": "Gravity Separation",
+        "description": "For ores containing coarse gold particles, gravity separation using jigs, shaking tables, and centrifugal concentrators is applied to recover free gold. This process typically recovers 30-40% of gold prior to further processing."
+      },
+      {
+        "title": "Flotation",
+        "description": "For sulfide-associated gold ores, flotation is used to concentrate gold-bearing sulfides. Collectors like xanthates and dithiophosphates are added to selectively float gold-bearing minerals."
+      },
+      {
+        "title": "Cyanidation",
+        "description": "The gold concentrate or gravity tailings undergo cyanidation, where sodium cyanide solution dissolves gold to form gold-cyanide complexes. Carbon-in-leach (CIL) or carbon-in-pulp (CIP) methods are commonly employed."
+      },
+      {
+        "title": "Desorption and Electrowinning",
+        "description": "Gold is stripped from carbon using a hot solution of sodium hydroxide and cyanide, followed by electrowinning to deposit gold onto cathodes."
+      },
+      {
+        "title": "Smelting and Refining",
+        "description": "The final step involves smelting the electrowinning product to produce gold doré bars, which are then refined to 99.99% purity."
+      }
+    ],
+    "applicationsImage": "/images/products/mineral-processing-solutions/precious-metals/gold-beneficiation-process-flow.jpg",
+    "applications": [
+      {
+        "title": "Placer Gold Deposits",
+        "description": "Solutions for processing free gold from placer deposits using specialized gravity separation methods, including sluice boxes, jigs, pulsating sluices, spiral separators, shaking tables, centrifugal concentrators, and cone concentrators. Processing can be done via dredging operations or fixed washing plants."
+      },
+      {
+        "title": "Vein Gold Deposits",
+        "description": "Advanced gravity separation techniques for recovering liberated coarse gold particles before or after flotation or leaching. The typical configuration combines magnetic removal, jigging, and shaking table operations with thickening, achieving concentrate grades of 40-45% gold that can be directly smelted into high-purity gold bars."
+      },
+      {
+        "title": "Refractory Gold Ores",
+        "description": "Advanced processing technologies for gold ores where gold is encapsulated in sulfide minerals."
+      },
+      {
+        "title": "Gold-Silver Mixed Ores",
+        "description": "Combined flotation and cyanidation to process polymetallic ores containing both gold and silver."
+      }
+    ],
+    "relatedProducts": [
+      "vibratory-feeder",
+      "synchronous-counter-directional-jig-small",
+      "shaking-table",
+      "jaw-crusher",
+      "cone-crusher",
+      "inclined-vibrating-screen",
+      "hydrocyclone-separator",
+      "wet-overflow-ball-mill",
+      "dewatering-screen",
+      "pneumatic-flotation-cell"
+    ]
+  }

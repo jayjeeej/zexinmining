@@ -1,0 +1,25 @@
+/* ZexinSansText 字体定义 */
+@font-face {
+  font-family: 'ZexinSansText';
+  src: url('/fonts/zexinSansText-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ZexinSansText';
+  src: url('/fonts/zexinSansText-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ZexinSansHeadline 字体定义 */
+@font-face {
+  font-family: 'ZexinSansHeadline';
+  src: url('/fonts/zexinSansHeadline-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+} 

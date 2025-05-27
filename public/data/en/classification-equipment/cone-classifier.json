@@ -1,0 +1,374 @@
+{
+  "id": "cone-classifier",
+  "title": "Mineral Processing Cone Classifier",
+  "series": "FD Series High-Efficiency Cone Classifier",
+  "imageSrc": "/images/products/classification-equipment/cone-classifier.jpg",
+  "productCategory": "Mineral Desliming Equipment",
+  "subcategory": "classification-equipment",
+  "model": "FD2000",
+  "meta": [
+    {
+      "key": "Settling area",
+      "displayValue": "0.75-7 m²"
+    },
+    {
+      "key": "Processing capacity",
+      "displayValue": "2-2.16 t/m² h"
+    },
+    {
+      "key": "Desliming efficiency",
+      "displayValue": "33-45%"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in"
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "volume": [
+        {
+          "unit": "m³",
+          "conversionFactor": 1,
+          "label": "m³"
+        },
+        {
+          "unit": "ft³",
+          "conversionFactor": 35.3147,
+          "label": "ft³"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "kg",
+          "conversionFactor": 1,
+          "label": "kg"
+        },
+        {
+          "unit": "lb",
+          "conversionFactor": 2.20462,
+          "label": "lb"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/m² h",
+          "conversionFactor": 1,
+          "label": "t/m² h"
+        },
+        {
+          "unit": "ton/ft² h",
+          "conversionFactor": 0.092903,
+          "label": "ton/ft² h"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Toggle Units",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/classification-equipment/cone-classifier",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/classification-equipment/cone-classifier",
+    "zh": "/zh/products/ore-processing/classification-equipment/cone-classifier"
+  },
+  "overview": "FD Series Cone Classifier is an advanced desliming equipment designed for efficient separation of fine particles from mineral slurries. Its conical structure and optimized hydraulic design deliver superior desliming performance, making it ideal for various mineral processing applications.",
+  "detailedDescription": "The FD Series Cone Classifier introduces innovative desliming technology that transforms fine particle separation in mineral processing operations. This system creates exceptional settling efficiency through its conical design, addressing common classification challenges while enhancing recovery of valuable minerals. Its balanced approach to slurry processing delivers consistent results across varying ore conditions, making it valuable desliming equipment that adapts to diverse processing requirements without compromising separation precision or throughput capacity.",
+  "specifications": {
+    "title": "FD Series Cone Classifier Technical Parameters",
+    "note": "Parameters can be customized according to specific requirements",
+    "tableHeaders": [
+      "Model",
+      "Diameter (mm)",
+      "Settling Area (m²)",
+      "Volume (m³)",
+      "Discharge Pipe Diameter (mm)",
+      "Discharge Concentration (%)",
+      "Feed Particle Size (mm)",
+      "Processing Capacity (t/m² h)",
+      "Feed Pipe (mm)",
+      "Desliming Efficiency (%)",
+      "Weight (kg)"
+    ],
+    "tableData": [
+      [
+        "FD1000",
+        "1000",
+        "0.75",
+        "0.27",
+        "25",
+        "40-60",
+        "<2.0",
+        "1.5-0mm: 2-2.16\n0.074-0mm: 0.19-0.25",
+        "120",
+        "33-45",
+        "500"
+      ],
+      [
+        "FD1500",
+        "1500",
+        "2",
+        "0.83",
+        "40",
+        "40-60",
+        "<2.0",
+        "1.5-0mm: 2-2.16\n0.074-0mm: 0.19-0.25",
+        "150",
+        "33-45",
+        "980"
+      ],
+      [
+        "FD2000",
+        "2000",
+        "3",
+        "2.27",
+        "50",
+        "40-60",
+        "<2.0",
+        "1.5-0mm: 2-2.16\n0.074-0mm: 0.19-0.25",
+        "150",
+        "33-45",
+        "1483"
+      ],
+      [
+        "FD2500",
+        "2500",
+        "4.9",
+        "4",
+        "60",
+        "40-60",
+        "<2.0",
+        "1.5-0mm: 2-2.16\n0.074-0mm: 0.19-0.25",
+        "150",
+        "33-45",
+        "1850"
+      ],
+      [
+        "FD3000",
+        "3000",
+        "7",
+        "7",
+        "70",
+        "40-60",
+        "<2.0",
+        "1.5-0mm: 2-2.16\n0.074-0mm: 0.19-0.25",
+        "150",
+        "33-45",
+        "2100"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "area",
+      "volume",
+      "length",
+      "",
+      "length",
+      "capacity",
+      "length",
+      "",
+      "weight"
+    ],
+    "imperialTableHeaders": [
+      "Model",
+      "Diameter (in)",
+      "Settling Area (ft²)",
+      "Volume (ft³)",
+      "Discharge Pipe Diameter (in)",
+      "Discharge Concentration (%)",
+      "Feed Particle Size (in)",
+      "Processing Capacity (ton/ft² h)",
+      "Feed Pipe (in)",
+      "Desliming Efficiency (%)",
+      "Weight (lb)"
+    ],
+    "imperialTableData": [
+      [
+        "FD1000",
+        "39.37",
+        "8.07",
+        "9.53",
+        "0.98",
+        "40-60",
+        "<0.08",
+        "1.5-0in: 0.19-0.20\n0.074-0in: 0.018-0.023",
+        "4.72",
+        "33-45",
+        "1102"
+      ],
+      [
+        "FD1500",
+        "59.06",
+        "21.53",
+        "29.31",
+        "1.57",
+        "40-60",
+        "<0.08",
+        "1.5-0in: 0.19-0.20\n0.074-0in: 0.018-0.023",
+        "5.91",
+        "33-45",
+        "2161"
+      ],
+      [
+        "FD2000",
+        "78.74",
+        "32.29",
+        "80.16",
+        "1.97",
+        "40-60",
+        "<0.08",
+        "1.5-0in: 0.19-0.20\n0.074-0in: 0.018-0.023",
+        "5.91",
+        "33-45",
+        "3269"
+      ],
+      [
+        "FD2500",
+        "98.43",
+        "52.74",
+        "141.26",
+        "2.36",
+        "40-60",
+        "<0.08",
+        "1.5-0in: 0.19-0.20\n0.074-0in: 0.018-0.023",
+        "5.91",
+        "33-45",
+        "4079"
+      ],
+      [
+        "FD3000",
+        "118.11",
+        "75.35",
+        "247.20",
+        "2.76",
+        "40-60",
+        "<0.08",
+        "1.5-0in: 0.19-0.20\n0.074-0in: 0.018-0.023",
+        "5.91",
+        "33-45",
+        "4630"
+      ]
+    ]
+  },
+  "features": [
+    {
+      "title": "Optimized Conical Design",
+      "description": "Our proprietary conical structure creates ideal settling conditions through precisely engineered hydraulic flow patterns. This design maximizes separation efficiency while preventing short-circuiting, resulting in superior control of particle size distribution in overflow and underflow streams."
+    },
+    {
+      "title": "High Desliming Efficiency",
+      "description": "Achieves desliming efficiency of 33-45% while maintaining high throughput, effectively removing fine clay particles and slimes that can interfere with downstream processing. This significantly improves recovery rates and concentrate quality in subsequent beneficiation stages."
+    },
+    {
+      "title": "Flexible Processing Capacity",
+      "description": "With settling areas ranging from 0.75 to 7 square meters and processing capacities from 2 to 2.16 t/m² h for coarse materials, our cone classifiers can handle operations from small plants to large industrial complexes with exceptional reliability."
+    },
+    {
+      "title": "Consistent Discharge Concentration",
+      "description": "Maintains stable underflow density in the 40-60% solids range, providing optimal feed consistency for downstream processes such as grinding circuits and flotation cells, while ensuring efficient operation without plugging or dilution issues."
+    },
+    {
+      "title": "Precise Control of Separation",
+      "description": "Dedicated discharge configuration enables excellent control over the separation process, optimizing valuable mineral recovery while effectively removing unwanted fine particles. Adjustable parameters allow fine-tuning for various ore types."
+    },
+    {
+      "title": "Durable Construction",
+      "description": "Manufactured from high-quality wear-resistant materials, our cone classifiers are designed to provide extended service life in harsh mining environments, reducing maintenance requirements and operational downtime."
+    },
+    {
+      "title": "Energy-Efficient Operation",
+      "description": "Our optimized design minimizes energy consumption while maintaining excellent desliming performance, reducing operational costs throughout the processing circuit. The gravity-based separation principle requires minimal external energy input."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Gold Mining",
+        "description": "Efficient desliming and classification of gold-bearing ores, providing precise particle size control for subsequent processing stages to achieve optimal recovery rates while meeting high throughput requirements."
+      },
+      {
+        "title": "Grinding Circuits",
+        "description": "Serves as an integral component in grinding circuits, efficiently separating fine particles from coarse material for regrinding, improving grinding efficiency and reducing energy consumption."
+      },
+      {
+        "title": "Flotation Feed Preparation",
+        "description": "Provides optimal particle size distribution for flotation processes by removing fine slimes that can consume reagents and reduce selectivity, significantly improving flotation performance and concentrate grade."
+      },
+      {
+        "title": "Tailings Treatment",
+        "description": "Efficiently processes mine tailings, recovering valuable minerals and preparing tailings for disposal or recycling, reducing environmental impact and recovering additional value from waste streams."
+      },
+      {
+        "title": "Fine Particle Processing",
+        "description": "Specializes in handling applications where precise classification of fine particles is crucial for product quality and recovery rates, particularly effective for particles below 2 mm."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What factors determine the separation efficiency of a cone classifier?",
+      "answer": "Cone classifier separation efficiency is influenced by several key factors: feed particle size distribution, feed solids concentration, settling area, residence time, feed flow rate, classifier geometry (diameter, cone angle), and material characteristics. These parameters need to be carefully considered and adjusted according to specific application requirements to achieve optimal performance."
+    },
+    {
+      "question": "How do I select the appropriate cone classifier size for my operation?",
+      "answer": "Selection depends on multiple factors: required processing capacity (t/h), target cut point, feed material characteristics, settling area requirements, and space constraints. Key specifications include the classifier diameter, settling area, and volume. Our engineering team can help determine the optimal model based on your specific processing needs and material analysis."
+    },
+    {
+      "question": "What maintenance does a cone classifier require?",
+      "answer": "Regular maintenance includes inspecting wear components (especially discharge pipes and valves), monitoring discharge concentration and flow rates, checking for abnormal buildup or blockages, and cleaning feed distribution systems to prevent plugging. Maintenance frequency depends on material abrasiveness and operating conditions, with inspections typically recommended every 2-4 weeks."
+    },
+    {
+      "question": "Can cone classifiers handle different types of minerals?",
+      "answer": "Yes, our cone classifiers are designed to process various minerals with different density and hardness characteristics. They effectively handle metallic ores (gold, copper, iron), non-metallic minerals, and industrial minerals. The adjustable operating parameters allow customization according to specific material properties."
+    },
+    {
+      "question": "How does a cone classifier differ from a hydrocyclone?",
+      "answer": "While both separate particles based on settling principles, cone classifiers operate at lower velocities and pressures than hydrocyclones, making them suitable for more fragile materials and coarser separations. Cone classifiers typically have larger residence times, more consistent underflow densities, and are less prone to wear, while hydrocyclones offer higher throughput rates and finer separation points."
+    },
+    {
+      "question": "How does discharge concentration affect classification performance?",
+      "answer": "Discharge concentration directly impacts classification efficiency. Higher concentrations (50-60%) typically result in sharper separations but may increase the risk of coarse particles reporting to overflow. Lower concentrations (40-50%) provide more dilute underflow with potentially higher recovery of fines but may compromise separation sharpness. Optimal concentration depends on the desired cut point and material characteristics."
+    }
+  ],
+  "seo": {
+    "title": "High-Efficiency Cone Classifier | Gold Processing Desliming Equipment | Zexin Mining",
+    "description": "Zexin Mining's FD Series Cone Classifiers deliver 33-45% desliming efficiency for gold ore & flotation feed preparation. Our conical classifiers handle 2-2.16 t/m²h with settling areas up to 7m², maximizing mineral recovery while minimizing reagent consumption in downstream processes.",
+    "keywords": "cone classifier,mineral processing cone classifier,ore dressing cone classifier,desliming classifier,conical classifier,hydrocyclone classifier,grinding circuit classifier,flotation feed classifier,gold ore desliming equipment,fine particle classifier,slurry classifier,dewatering classifier,high-efficiency desliming equipment,mineral slurry separator,tailings treatment equipment,mining classification equipment"
+  },
+  "relatedProducts": [
+    "hydrocyclone-separator",
+    "high-weir-spiral-classifier",
+    "submerged-spiral-classifier"
+  ],
+  "imageSrcAlt": "Cone Classifier | Zexin Mining"
+}

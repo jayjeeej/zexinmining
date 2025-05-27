@@ -1,0 +1,552 @@
+{
+  "id": "linear-vibrating-screen",
+  "title": "Linear Vibrating Screen",
+  "series": "ZDS/ZKR Series High-Efficiency Linear Vibrating Screens",
+  "imageSrc": "/images/products/vibrating-screens/linear-vibrating-screen.jpg",
+  "productCategory": "Mineral Processing Equipment",
+  "subcategory": "vibrating-screens",
+  "model": "ZKR3060H",
+  "meta": [
+    {
+      "key": "Processing capacity",
+      "displayValue": "100-800 t/h (110-880 stph)"
+    },
+    {
+      "key": "Screening particle size",
+      "displayValue": "0.5-100 mm (0.02-4 in.)"
+    },
+    {
+      "key": "Motor power",
+      "displayValue": "2×3.2-2×45 kW (4.3-120.5 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "kg",
+          "conversionFactor": 1,
+          "label": "kg"
+        },
+        {
+          "unit": "lb",
+          "conversionFactor": 2.20462,
+          "label": "lb"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/vibrating-screens/linear-vibrating-screen",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/vibrating-screens/linear-vibrating-screen",
+    "zh": "/zh/products/ore-processing/vibrating-screens/linear-vibrating-screen"
+  },
+  "overview": "Zexin Mining's ZDS/ZKR Series Linear Vibrating Screens deliver exceptional screening performance for mineral processing applications. Featuring robust construction, adjustable amplitude, and consistent linear motion trajectory, these screens provide high efficiency and precision for materials ranging from fine particles to large aggregates while maintaining reliable operation in demanding mining environments.",
+  "detailedDescription": "The ZDS/ZKR Series Linear Vibrating Screen represents a strategic advancement in mineral classification technology. This equipment embodies a balanced engineering approach that prioritizes operational versatility across diverse mining conditions. Its design philosophy emphasizes adaptability to fluctuating feed characteristics while maintaining processing consistency. The system's innovative configuration addresses the fundamental material separation challenges in modern mining operations, creating long-term value through its ability to integrate seamlessly with various processing circuits while minimizing maintenance requirements.",
+  "specifications": {
+    "title": "ZDS/ZKR Series Linear Vibrating Screen Technical Parameters",
+    "note": "Parameters can be customized according to specific requirements",
+    "tableHeaders": [
+      "Model",
+      "Screen Width (mm)",
+      "Screen Length (mm)",
+      "Inclination Angle (°)",
+      "Double Amplitude (mm)",
+      "Power (kW)",
+      "Weight (kg)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Screen Width (in.)",
+      "Screen Length (in.)",
+      "Inclination Angle (°)",
+      "Double Amplitude (in.)",
+      "Power (hp)",
+      "Weight (lb)"
+    ],
+    "tableData": [
+      [
+        "ZDS1230",
+        "1200",
+        "3000",
+        "0(-5、+5)",
+        "6.0-10.0",
+        "2×3.2",
+        "2693"
+      ],
+      [
+        "ZDS1437",
+        "1400",
+        "3750",
+        "0(-5、+5)",
+        "6.0-10.0",
+        "2×3.7",
+        "3210"
+      ],
+      [
+        "ZDS1645",
+        "1600",
+        "4500",
+        "0(-5、+5)",
+        "6.0-10.0",
+        "2×5.5",
+        "4550"
+      ],
+      [
+        "ZKR1845H",
+        "1800",
+        "4500",
+        "0(-5、+5)",
+        "6.0-10.0",
+        "2×11",
+        "5436"
+      ],
+      [
+        "ZKR2045H",
+        "2000",
+        "4500",
+        "0(-5、+5)",
+        "6.0-10.0",
+        "2×11",
+        "5969"
+      ],
+      [
+        "ZKR2460H",
+        "2400",
+        "6000",
+        "0(-5、+5)",
+        "6.0-10.0",
+        "2×15",
+        "9235"
+      ],
+      [
+        "ZKR3060H",
+        "3000",
+        "6000",
+        "0(-5、+5)",
+        "6.0-10.0",
+        "2×22",
+        "11562"
+      ],
+      [
+        "ZKR3075H",
+        "3000",
+        "7200",
+        "0(-5、+5)",
+        "6.0-10.0",
+        "2×22",
+        "13000"
+      ],
+      [
+        "ZKR3660H",
+        "3600",
+        "6000",
+        "0(-5、+5)",
+        "6.0-10.0",
+        "2×22",
+        "14390"
+      ],
+      [
+        "ZKR3675H",
+        "3600",
+        "7500",
+        "0(-5、+5)",
+        "6.0-10.0",
+        "2×30",
+        "19500"
+      ],
+      [
+        "2ZKR1645H",
+        "1600",
+        "4500",
+        "0(-5、+5)",
+        "6.0-10.0",
+        "2×15",
+        "8654"
+      ],
+      [
+        "2ZKR1845H",
+        "1800",
+        "4500",
+        "0(-5、+5)",
+        "6.0-10.0",
+        "2×15",
+        "8865"
+      ],
+      [
+        "2ZKR2052H",
+        "2000",
+        "5250",
+        "0(-5、+5)",
+        "6.0-10.0",
+        "2×22",
+        "10128"
+      ],
+      [
+        "2ZKR2460H",
+        "2400",
+        "6000",
+        "0(-5、+5)",
+        "6.0-10.0",
+        "2×22",
+        "13560"
+      ],
+      [
+        "2ZKR3060H",
+        "3000",
+        "6000",
+        "0(-5、+5)",
+        "6.0-9.0",
+        "2×30",
+        "18253"
+      ],
+      [
+        "2ZKR3675H",
+        "3600",
+        "7200",
+        "0(-5、+5)",
+        "6.0-9.0",
+        "2×45",
+        "26200"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "ZDS1230",
+        "47.2",
+        "118.1",
+        "0(-5、+5)",
+        "0.24-0.39",
+        "2×4.3",
+        "5936"
+      ],
+      [
+        "ZDS1437",
+        "55.1",
+        "147.6",
+        "0(-5、+5)",
+        "0.24-0.39",
+        "2×5.0",
+        "7077"
+      ],
+      [
+        "ZDS1645",
+        "63.0",
+        "177.2",
+        "0(-5、+5)",
+        "0.24-0.39",
+        "2×7.4",
+        "10031"
+      ],
+      [
+        "ZKR1845H",
+        "70.9",
+        "177.2",
+        "0(-5、+5)",
+        "0.24-0.39",
+        "2×14.8",
+        "11983"
+      ],
+      [
+        "ZKR2045H",
+        "78.7",
+        "177.2",
+        "0(-5、+5)",
+        "0.24-0.39",
+        "2×14.8",
+        "13159"
+      ],
+      [
+        "ZKR2460H",
+        "94.5",
+        "236.2",
+        "0(-5、+5)",
+        "0.24-0.39",
+        "2×20.1",
+        "20359"
+      ],
+      [
+        "ZKR3060H",
+        "118.1",
+        "236.2",
+        "0(-5、+5)",
+        "0.24-0.39",
+        "2×29.5",
+        "25490"
+      ],
+      [
+        "ZKR3075H",
+        "118.1",
+        "283.5",
+        "0(-5、+5)",
+        "0.24-0.39",
+        "2×29.5",
+        "28660"
+      ],
+      [
+        "ZKR3660H",
+        "141.7",
+        "236.2",
+        "0(-5、+5)",
+        "0.24-0.39",
+        "2×29.5",
+        "31725"
+      ],
+      [
+        "ZKR3675H",
+        "141.7",
+        "295.3",
+        "0(-5、+5)",
+        "0.24-0.39",
+        "2×40.2",
+        "42990"
+      ],
+      [
+        "2ZKR1645H",
+        "63.0",
+        "177.2",
+        "0(-5、+5)",
+        "0.24-0.39",
+        "2×20.1",
+        "19079"
+      ],
+      [
+        "2ZKR1845H",
+        "70.9",
+        "177.2",
+        "0(-5、+5)",
+        "0.24-0.39",
+        "2×20.1",
+        "19544"
+      ],
+      [
+        "2ZKR2052H",
+        "78.7",
+        "206.7",
+        "0(-5、+5)",
+        "0.24-0.39",
+        "2×29.5",
+        "22328"
+      ],
+      [
+        "2ZKR2460H",
+        "94.5",
+        "236.2",
+        "0(-5、+5)",
+        "0.24-0.39",
+        "2×29.5",
+        "29895"
+      ],
+      [
+        "2ZKR3060H",
+        "118.1",
+        "236.2",
+        "0(-5、+5)",
+        "0.24-0.35",
+        "2×40.2",
+        "40241"
+      ],
+      [
+        "2ZKR3675H",
+        "141.7",
+        "283.5",
+        "0(-5、+5)",
+        "0.24-0.35",
+        "2×60.3",
+        "57761"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "length",
+      "",
+      "length",
+      "power",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Precision Linear Motion Trajectory",
+      "description": "Our vibration mechanism generates a consistent linear motion trajectory with adjustable amplitude ranging from 6.0-10.0 mm. This precisely controlled movement ensures optimal material stratification and accurate particle separation, significantly improving screening efficiency compared to conventional designs. The system maintains stable performance even under varying load conditions."
+    },
+    {
+      "title": "Robust Heavy-Duty Construction",
+      "description": "Engineered with high-strength, low-alloy steel and reinforced at critical stress points, our linear vibrating screens withstand the most demanding mining applications. The heavy-duty design features optimal weight distribution, vibration isolation systems, and premium-grade components that deliver exceptional reliability with a service life up to 50% longer than industry standard equipment."
+    },
+    {
+      "title": "Multi-Layer Screening Capability",
+      "description": "Available in single, double or triple-deck configurations, our screens can simultaneously classify materials into multiple size fractions in a single pass. Each deck features independent tensioning systems and optimized inclination angles, allowing precise control over particle size distribution. This versatility makes our equipment ideal for complex ore processing operations requiring multiple product specifications."
+    },
+    {
+      "title": "Adjustable Operating Parameters",
+      "description": "Our linear vibrating screens feature easily adjustable operating parameters including amplitude, inclination angle (±5°), and screening media options. This adaptability allows operators to optimize performance for specific material characteristics and production requirements, maximizing throughput and screening precision while minimizing energy consumption and wear on components."
+    },
+    {
+      "title": "Advanced Anti-Clogging Design",
+      "description": "Incorporating innovative anti-clogging features including self-cleaning screen media, specialized deck surface treatments, and optimized motion patterns to prevent material adhesion. These features are particularly effective when processing wet, sticky, or fine materials that typically challenge conventional screens, maintaining consistent performance even in difficult applications."
+    },
+    {
+      "title": "High-Efficiency Vibration System",
+      "description": "Powered by dual vibration motors or exciter mechanisms that synchronize perfectly to generate powerful linear motion while consuming minimal energy. Our design optimizes power transmission efficiency, resulting in 15-25% lower energy consumption compared to conventional vibrating screens. The precision-balanced system also reduces structural stress, extending the equipment's service life."
+    },
+    {
+      "title": "Quick-Change Screen Media",
+      "description": "Featuring our innovative quick-change screen media system that allows complete deck changes in as little as half the time required for conventional screens. This modular design minimizes maintenance downtime and increases overall plant availability, with screen panels that can be replaced individually without disturbing adjacent sections, reducing maintenance costs and operational interruptions."
+    },
+    {
+      "title": "Comprehensive Size Range",
+      "description": "Available in screen widths from 1200mm to 3600mm and lengths from 3000mm to 7500mm, our product line accommodates processing requirements from small operations to large mining facilities. The extensive model range allows precise equipment selection based on capacity needs, material characteristics, and space constraints, ensuring optimal performance and investment efficiency."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "icon": "🏭",
+        "title": "Iron Ore Processing",
+        "description": "Our heavy-duty linear vibrating screens excel in iron ore beneficiation operations, efficiently handling high-density materials while providing precise particle classification. The robust construction withstands abrasive iron ore while maintaining consistent separation efficiency, improving downstream processing performance and final product quality in both wet and dry applications."
+      },
+      {
+        "icon": "💎",
+        "title": "Precious Metal Mining",
+        "description": "In gold, silver, and platinum group metal operations, our fine-screening linear vibrating screens provide the precision necessary for optimal recovery. The adjustable parameters allow fine-tuning for various ore types, while the multi-deck capability enables simultaneous production of different size fractions, maximizing valuable mineral recovery and improving process economics."
+      },
+      {
+        "icon": "🪨",
+        "title": "Aggregate Production",
+        "description": "For quarrying and aggregate operations, our large-capacity linear vibrating screens deliver exceptional throughput with precise sizing control. The durable design handles the continuous high-volume demands of aggregate production, producing consistent product sizes that meet strict specification requirements for construction materials, concrete aggregates, and asphalt production."
+      },
+      {
+        "icon": "⚒️",
+        "title": "Base Metal Processing",
+        "description": "In copper, lead, zinc, and nickel processing, our versatile linear screens efficiently separate materials at various stages of the comminution circuit. The robust construction handles the demands of 24/7 operation in primary base metal processing, while the precision screening action improves liberation and concentration processes, enhancing overall recovery rates."
+      },
+      {
+        "icon": "♨️",
+        "title": "Coal Processing",
+        "description": "Our specialized linear vibrating screens for coal applications feature explosion-proof designs and wear-resistant components suitable for both wet and dry coal processing. The efficient screening action effectively removes undersize material prior to washing or crushing, improving plant efficiency, reducing equipment wear, and enhancing final product consistency."
+      },
+      {
+        "icon": "🧪",
+        "title": "Industrial Minerals",
+        "description": "For limestone, phosphate, potash, and other industrial minerals, our linear vibrating screens provide the careful handling and precise separation required for high-value products. The adjustable parameters allow optimization for different material types and moisture contents, delivering consistent product quality that meets strict chemical and physical specifications."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What are the key advantages of linear vibrating screens over other screen types?",
+      "answer": "Linear vibrating screens offer several distinct advantages: 1) Precise particle classification due to consistent linear motion trajectory; 2) Higher screening efficiency for difficult-to-screen materials; 3) Lower headroom requirements compared to inclined screens; 4) Reduced screen blinding and plugging; 5) Better control of material retention time; 6) More efficient handling of wet or sticky materials; 7) Lower maintenance costs with simpler mechanical design; 8) Reduced power consumption per ton processed; 9) More uniform wear pattern on screen media; and 10) Greater flexibility in multi-deck arrangements for producing multiple product sizes simultaneously."
+    },
+    {
+      "question": "What materials can be processed with your linear vibrating screens?",
+      "answer": "Our ZDS/ZKR Series linear vibrating screens effectively process a wide range of materials including: metallic ores (iron, copper, gold, silver, zinc, lead); coal and lignite; limestone and other aggregates; sand and gravel; industrial minerals (phosphate, potash, salt); recycled materials; and various chemical products. The screens handle materials with particle sizes ranging from 0.5mm to 100mm, with throughput capacities from 50 to 800 tons per hour depending on model and application. The equipment is equally effective in wet or dry screening applications, with optional features available for specialized material handling requirements."
+    },
+    {
+      "question": "How do I select the correct screen size for my application?",
+      "answer": "Selecting the optimal linear vibrating screen involves analyzing several factors: 1) Required throughput capacity (t/h); 2) Feed material characteristics (bulk density, moisture content, shape, stickiness); 3) Desired separation size and precision; 4) Number of fractions needed; 5) Available installation space; and 6) Upstream and downstream process requirements. Our engineering team conducts detailed material testing and process analyses to recommend the ideal screen dimensions, deck configuration, and operating parameters. Generally, we recommend selecting a screen with 20-30% capacity margin above your requirements to accommodate variations in feed conditions and ensure consistent performance."
+    },
+    {
+      "question": "What maintenance is required for linear vibrating screens?",
+      "answer": "Proper maintenance ensures optimal performance and longevity. Key maintenance activities include: 1) Daily visual inspections of screen media, structural integrity, and material flow patterns; 2) Weekly checks of vibration motors, bearings, and V-belt condition; 3) Monthly inspection of support springs, vibration isolators, and fasteners; 4) Quarterly lubrication of bearings and mechanical components according to schedule; 5) Bi-annual comprehensive inspection of structural elements, drive components, and electrical systems. Most wear occurs on screen media, which typically requires replacement every 3-12 months depending on material characteristics. We provide detailed maintenance manuals, spare parts packages, and service contracts to maximize equipment availability."
+    },
+    {
+      "question": "How can screen blinding and plugging be prevented?",
+      "answer": "We address screen blinding and plugging through multiple approaches: 1) Optimized screen media selection matched to specific material characteristics; 2) Anti-blinding devices including ball trays, vibration boosters, and ultrasonic systems; 3) Specialized screen surface treatments that reduce material adhesion; 4) Properly calibrated vibration parameters (amplitude and frequency) to optimize particle movement; 5) Controlled material bed depth to prevent overloading; 6) Optional spray systems for wet applications to prevent material buildup; 7) Self-cleaning screen designs with specialized wire profiles or aperture shapes; and 8) Correct deck slope angles to maintain proper material flow. For particularly challenging applications, our engineers can develop customized anti-blinding solutions based on specific material testing."
+    },
+    {
+      "question": "What factors affect the screening efficiency of linear vibrating screens?",
+      "answer": "Screening efficiency is influenced by several key factors: 1) Feed material properties (particle size distribution, moisture content, shape, density); 2) Vibration parameters (amplitude, frequency, motion pattern); 3) Screen media selection (aperture size, open area percentage, material type); 4) Bed depth on the screen surface; 5) Material feed rate and distribution across the width; 6) Screen inclination angle; 7) Deck configuration and number of decks; 8) Condition of screen media (wear, blinding, tensioning); 9) Ambient conditions (temperature, humidity); and 10) Material residence time on the deck. Our engineers optimize these parameters based on specific application requirements, typically achieving screening efficiencies of 85-95% in properly designed installations."
+    },
+    {
+      "question": "What screen media options are available for linear vibrating screens?",
+      "answer": "We offer a comprehensive range of screen media options to match specific application requirements: 1) Woven wire mesh in various materials (carbon steel, stainless steel, manganese steel) and wire configurations; 2) Polyurethane and rubber panels with multiple aperture designs for extended wear life; 3) Self-cleaning wire profiles for sticky materials; 4) Hybrid screens combining metal and polymer components; 5) Perforated plate screens for heavy-duty applications; 6) Wedge wire panels for fine separation; 7) Anti-blinding systems integrated with screen media; and 8) Quick-change modular systems for reduced maintenance time. Media selection considers separation size, material characteristics, desired efficiency, and operational conditions. Our technical team provides guidance on optimal media selection based on your specific requirements."
+    },
+    {
+      "question": "Can the ZDS/ZKR Series linear vibrating screens handle wet or sticky materials?",
+      "answer": "Yes, our linear vibrating screens are specifically designed to handle wet and sticky materials effectively. Key features for these challenging applications include: 1) Optimized vibration parameters that enhance material movement and prevent adhesion; 2) Specialized anti-clogging screen media designs; 3) Steeper deck angles to accelerate material flow; 4) Optional integrated spray systems for material conditioning; 5) Self-cleaning mechanisms that actively prevent blinding; 6) Materials of construction selected for resistance to buildup and corrosion; and 7) Robust drive systems that maintain consistent performance even with variable material loads. For materials with extremely high moisture content or adhesion properties, we can provide customized solutions including special surface treatments, enhanced vibration characteristics, or specialized screen media configurations."
+    },
+    {
+      "question": "What is the typical lifespan of a linear vibrating screen?",
+      "answer": "With proper maintenance and operation, our ZDS/ZKR Series linear vibrating screens have an expected service life of 15-20 years for the main structure and frame components. Vibration motors typically operate for 5-7 years before requiring major overhaul, while screen media life varies from 3 months to 2 years depending on material abrasiveness and operating conditions. Factors affecting equipment longevity include: 1) Material characteristics (especially abrasiveness); 2) Operating hours and throughput; 3) Maintenance practices and frequency; 4) Environmental conditions; and 5) Whether the equipment is operated within its design parameters. We offer comprehensive service packages and preventive maintenance programs to maximize equipment lifespan and protect your investment."
+    },
+    {
+      "question": "How do environmental conditions affect the performance of linear vibrating screens?",
+      "answer": "Environmental conditions can significantly impact performance and require specific design considerations: 1) High temperature environments (>40°C) may require special lubricants, enhanced cooling systems, and heat-resistant components; 2) Cold weather operation (<0°C) necessitates low-temperature steel grades, special startup procedures, and freeze protection measures; 3) High humidity areas benefit from corrosion-resistant materials, sealed electrical components, and specialized surface treatments; 4) Corrosive environments (chemical exposure, saltwater proximity) require stainless steel components, specialized coatings, and sealed bearings; 5) High-altitude installations need motor derating and specialized cooling systems. Our engineering team evaluates site-specific conditions during the equipment selection process to ensure optimal performance and durability regardless of environmental challenges."
+    }
+  ],
+  "seo": {
+    "title": "Linear Vibrating Screen | High-Efficiency Mineral Screening Equipment | Zexin Mining",
+    "description": "Zexin Mining's ZDS/ZKR Series Linear Vibrating Screens deliver superior screening efficiency for mineral processing and quarry operations. Our heavy-duty, adjustable screens handle capacities up to 800 t/h with custom configurations for optimal material separation across diverse applications.",
+    "keywords": "linear vibrating screen,high-efficiency vibrating screen,ore processing screen,quarry vibrating screen,mining screening equipment,heavy-duty linear screen,multi-layer vibrating screen,adjustable amplitude screen,fine screening equipment,large-capacity vibrating screen,mineral processing screen,stone crushing screen,durable vibrating screen,linear motion screen,ZDS vibrating screen,ZKR screening machine,fine particles separator,coarse material classifier,energy-saving screening equipment,custom linear screen"
+  },
+  "relatedProducts": [
+    "banana-multislope-vibrating-screen",
+    "inclined-vibrating-screen",
+    "dewatering-screen",
+    "bar-vibrating-screen",
+    "trommel-screen"
+  ],
+  "imageSrcAlt": "Linear Vibrating Screen | Zexin Mining"
+}

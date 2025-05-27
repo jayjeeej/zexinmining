@@ -1,0 +1,283 @@
+{
+  "id": "four-roll-high-voltage-electrostatic-separator",
+  "title": "Four-Roll High Voltage Electrostatic Separator",
+  "series": "DXJ Series Variable Frequency Electrostatic Separator",
+  "imageSrc": "/images/products/magnetic-separator/four-roll-high-voltage-electrostatic-separator.jpg",
+  "productCategory": "Mineral Processing Equipment",
+  "subcategory": "magnetic-separator",
+  "model": "DXJ-2000",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "5-8 t/h (5.5-8.8 stph)"
+    },
+    {
+      "key": "Feed Size",
+      "displayValue": "0.1~3 mm (0.004~0.12 in.)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "1.1 kW (1.5 hp)"
+    }
+  ],
+  "href": "/en/products/ore-processing/magnetic-separator/four-roll-high-voltage-electrostatic-separator",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/magnetic-separator/four-roll-high-voltage-electrostatic-separator",
+    "zh": "/zh/products/ore-processing/magnetic-separator/four-roll-high-voltage-electrostatic-separator"
+  },
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "kg",
+          "conversionFactor": 1,
+          "label": "kg"
+        },
+        {
+          "unit": "lb",
+          "conversionFactor": 2.20462,
+          "label": "lb"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "overview": "Zexin Mining's DXJ Series Four-Roll High Voltage Electrostatic Separators deliver exceptional separation performance for non-conductive and conductive minerals. With four precision-engineered rollers and variable frequency control, these separators provide superior efficiency in processing minerals like quartz, feldspar, zircon sand, and rutile, ensuring maximum recovery and product purity.",
+  "detailedDescription": "The DXJ Series four-roll high voltage electrostatic separator introduces advanced variable frequency technology that transforms mineral beneficiation in non-metallic mineral processing. This system creates optimized particle separation through its powerful electric field distribution, addressing common recovery challenges while enhancing product purity. Its balanced approach to electrostatic separation delivers consistent results across varying feed conditions, making it valuable processing equipment that adapts to different mineral characteristics without compromising operational efficiency.",
+  "specifications": {
+    "title": "Four-Roll High Voltage Electrostatic Separator Specifications",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Number of Rollers",
+      "Roller Diameter (mm)",
+      "Roller Length (mm)",
+      "Rotation Speed (RPM)",
+      "Feed Size (mm)",
+      "Capacity (t/h)",
+      "Motor Power (kW)",
+      "Dimensions (mm)",
+      "Weight (kg)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Number of Rollers",
+      "Roller Diameter (in.)",
+      "Roller Length (in.)",
+      "Rotation Speed (RPM)",
+      "Feed Size (in.)",
+      "Capacity (stph)",
+      "Motor Power (hp)",
+      "Dimensions (in.)",
+      "Weight (lb)"
+    ],
+    "tableData": [
+      [
+        "DXJ-2000",
+        "4",
+        "180",
+        "2000",
+        "0-1450",
+        "0.1-3",
+        "5-8",
+        "1.1",
+        "3010×1480×3730",
+        "625"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "DXJ-2000",
+        "4",
+        "7.1",
+        "78.7",
+        "0-1450",
+        "0.004-0.12",
+        "5.5-8.8",
+        "1.5",
+        "118.5×58.3×146.9",
+        "1378"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "",
+      "length",
+      "length",
+      "",
+      "length",
+      "capacity",
+      "power",
+      "length",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Multi-Roller Design",
+      "description": "The DXJ series utilizes a precision-engineered four-roller configuration that maximizes separation efficiency and processing capacity. This advanced design creates multiple separation zones within a single unit, enabling the sequential processing of minerals for improved product grades. The four-roller system increases throughput by up to 40% compared to conventional two-roller separators while maintaining exceptional separation precision."
+    },
+    {
+      "title": "Variable Frequency Control System",
+      "description": "Equipped with advanced variable frequency drive technology that allows precise control of roller speed from 0 to 1450 RPM. This intelligent speed regulation system enables operators to optimize separation parameters based on specific mineral properties, ensuring maximum recovery and grade across diverse materials while adapting instantly to feed variations without interrupting the process."
+    },
+    {
+      "title": "High-Precision Electric Field",
+      "description": "Incorporates specialized electrode arrangements that generate a uniform high-voltage electric field with adjustable intensity up to 30kV. The optimized field geometry creates ideal conditions for particle charging and separation, enabling effective processing of materials with subtle conductivity differences and improving separation efficiency by up to 25% compared to conventional electrostatic systems."
+    },
+    {
+      "title": "Integrated Anti-Dust System",
+      "description": "Features a proprietary dust management system that prevents dust accumulation on critical components and ensures consistent electrical field performance. This self-cleaning mechanism maintains optimal operating conditions even during extended processing campaigns, eliminating production interruptions and quality fluctuations while reducing maintenance requirements by up to 60%."
+    },
+    {
+      "title": "Advanced Feeding Mechanism",
+      "description": "Engineered with a specialized vibrating feeder that delivers precisely controlled material distribution across the full working width of all four rollers. This uniform presentation of particles to the electric field maximizes separation efficiency and product consistency while preventing overloading and ensuring each roller operates at optimal capacity for materials between 0.1-3mm."
+    },
+    {
+      "title": "Modular Construction",
+      "description": "Designed with a modular architecture that facilitates quick maintenance access and component replacement without complete system disassembly. The standardized modular approach reduces downtime during service intervals by up to 70% compared to conventional designs, while providing flexibility for future upgrades and customizations to address evolving processing requirements."
+    },
+    {
+      "title": "Comprehensive Control Interface",
+      "description": "Equipped with an intuitive digital control system that allows real-time monitoring and adjustment of all critical operating parameters including voltage intensity, roller speed, and feed rate. The intelligent control interface includes automated safety protocols and performance optimization algorithms, enabling both manual and programmatic operation while maintaining detailed process records for quality assurance and optimization."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Quartz Purification",
+        "description": "Efficiently removes contaminants from quartz sand, producing high-purity material for glass, ceramics, and silicon industries. The electrostatic separation process effectively eliminates iron minerals, titanium-bearing impurities, and other conductive particles, resulting in premium-grade silica products."
+      },
+      {
+        "title": "Feldspar Processing",
+        "description": "Separates feldspar from quartz in feldspathic materials, improving the quality and value of both minerals. The precise electric field control enables selective segregation based on subtle conductivity differences, resulting in high-grade feldspar concentrates for ceramic and glass manufacturing."
+      },
+      {
+        "title": "Rare Mineral Recovery",
+        "description": "Effectively concentrates valuable heavy minerals including rutile, ilmenite, zircon, and monazite from mineral sands. The four-roll design enables multi-stage separation within a single unit, maximizing recovery of these high-value minerals while maintaining exceptional grade control."
+      },
+      {
+        "title": "Tantalum-Niobium Processing",
+        "description": "Precisely separates tantalum and niobium minerals from associated gangue, producing high-grade concentrates for electronic and specialty alloy applications. The adjustable electric field parameters allow optimization for these valuable technology metals with varying conductivity properties."
+      },
+      {
+        "title": "Industrial Mineral Beneficiation",
+        "description": "Upgrades various industrial minerals including kaolin, wollastonite, and mica by removing conductive impurities and producing premium products for specialty applications. The variable frequency control enables processing adaptation for diverse mineral types with different physical and electrical characteristics."
+      },
+      {
+        "title": "Recycling Operations",
+        "description": "Separates mixed materials in electronic waste, plastics, and industrial byproducts based on conductivity differences. The sophisticated electric field technology enables recovery of valuable components while removing contaminants, supporting circular economy initiatives and reducing waste disposal requirements."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does a four-roll high voltage electrostatic separator work?",
+      "answer": "The four-roll high voltage electrostatic separator operates based on the principle of different electrical conductivities among minerals. The system generates a high-voltage electric field between specialized electrodes and precision-engineered rotating rollers. As material passes through this field, conductive particles become charged and are either attracted to or repelled from the rollers depending on the field configuration. Non-conductive particles follow a different trajectory due to their inability to quickly transfer electrical charge. The four sequential rollers create multiple separation stages within a single machine, allowing for progressive refinement of the separation. Each roller can be individually adjusted for speed and field intensity, enabling optimization for different mineral characteristics and producing distinct streams of conductive and non-conductive products with high efficiency."
+    },
+    {
+      "question": "What advantages does a four-roll design offer compared to traditional electrostatic separators?",
+      "answer": "The four-roll design provides several significant advantages: 1) Enhanced separation efficiency through multi-stage processing within a single unit; 2) Increased throughput capacity of up to 40% while maintaining high separation precision; 3) Improved flexibility with individually adjustable parameters for each roller; 4) Higher recovery rates for minerals with subtle conductivity differences; 5) Reduced floor space requirements compared to multiple single-roll units; 6) Lower energy consumption per ton of processed material; 7) Ability to perform different separation functions in sequence (roughing, cleaning, scavenging); 8) More consistent performance with feed variations due to the progressive separation approach. These benefits make four-roll separators particularly valuable for complex mineral processing applications requiring high precision and efficiency."
+    },
+    {
+      "question": "What materials can be processed with the DXJ series separators?",
+      "answer": "The DXJ series effectively separates materials based on conductivity differences, including: 1) Silica minerals such as quartz and high-purity silica sand; 2) Feldspar and feldspathic minerals; 3) Heavy mineral sands containing rutile, ilmenite, zircon, and monazite; 4) Tantalum and niobium ores; 5) Industrial minerals including kaolin, mica, and wollastonite; 6) Metal-bearing mineral concentrates requiring further upgrading; 7) Recycled materials such as electronic waste and mixed plastics. The separators handle dry materials with particle sizes between 0.1-3mm and moisture content below 0.5%, making them versatile for numerous mineral processing applications where electrical conductivity differences can be exploited for separation."
+    },
+    {
+      "question": "How does variable frequency control improve separation performance?",
+      "answer": "Variable frequency control enhances separation performance in multiple ways: 1) Precise optimization of roller speed (0-1450 RPM) to match specific material characteristics; 2) Ability to adjust residence time in the electric field for different minerals; 3) Fine-tuning of separation dynamics to maximize both recovery and grade; 4) Real-time adaptation to feed variations without process interruption; 5) Balanced distribution of material across all four rollers through synchronized speed control; 6) Energy efficiency through optimized motor operation at ideal speeds; 7) Extended equipment life through soft-start capabilities and reduced mechanical stress; 8) Ability to process a wider range of materials with different physical properties. This advanced control technology allows operators to identify and maintain optimal separation conditions for each specific mineral application."
+    },
+    {
+      "question": "What maintenance procedures are recommended for four-roll electrostatic separators?",
+      "answer": "Recommended maintenance includes: 1) Daily inspection of electrode systems and roller surfaces for material buildup; 2) Regular cleaning of ionizing electrodes to maintain optimal field performance; 3) Weekly verification of electrical insulation integrity and connection security; 4) Bi-weekly inspection of roller bearings and drive components; 5) Monthly lubrication of mechanical systems according to the schedule; 6) Quarterly calibration of voltage generation systems and control electronics; 7) Semi-annual comprehensive inspection of all components including safety systems. Most operations report maintenance requirements of approximately 4-6 hours monthly, with electrode systems requiring the most attention. Proper maintenance ensures consistent separation performance and extends equipment life while maintaining safe operating conditions."
+    },
+    {
+      "question": "How does feed material preparation affect electrostatic separation efficiency?",
+      "answer": "Feed preparation critically impacts separation efficiency through several factors: 1) Moisture content must be below 0.5% as excess moisture interferes with particle charging and electric field formation; 2) Particle size distribution should be controlled within 0.1-3mm for optimal separation; 3) Surface contamination, particularly oils or chemical residues, can alter conductivity properties and impair separation; 4) Material temperature affects conductivity and charge retention characteristics; 5) Consistent feed rate and even distribution across rollers is essential for stable performance; 6) Pre-classification of feed improves efficiency by presenting similarly sized particles to the electric field; 7) Dust removal prior to separation prevents field distortion and electrode fouling; 8) Proper drying and conditioning of materials enhances conductivity differences between minerals. Investing in appropriate feed preparation systems typically improves overall recovery and grade by 15-25%."
+    },
+    {
+      "question": "What factors influence the selection of voltage settings?",
+      "answer": "Voltage setting selection depends on multiple considerations: 1) Specific conductivity characteristics of target minerals being separated; 2) Particle size distribution - finer particles generally require higher field intensity; 3) Temperature and humidity of the processing environment; 4) Mineral liberation degree - complex intergrowths may require different settings than well-liberated particles; 5) Desired balance between recovery rate and concentrate grade; 6) Feed rate and bed thickness on the roller surface; 7) Distance between electrodes and roller surfaces; 8) Sequential processing considerations when using multiple rollers in series. Optimal voltage settings are typically determined through systematic testing of the specific material, beginning at lower settings (10-15kV) and gradually increasing while monitoring separation performance. Our technical team provides comprehensive material testing services to determine ideal voltage parameters for each application."
+    },
+    {
+      "question": "Can the DXJ series handle materials with variable conductivity properties?",
+      "answer": "Yes, the DXJ series is specifically designed to handle materials with variable conductivity through several adaptive features: 1) Independent control of each roller's electric field intensity and rotation speed; 2) Progressive processing approach that allows initial separation followed by refinement; 3) Adjustable electrode position and configuration to modify field geometry; 4) Variable feed rate control to optimize residence time in the separation zone; 5) Multiple product collection points that can be adjusted based on performance monitoring; 6) Programmable separation sequences for complex mineral assemblages; 7) Real-time monitoring systems that detect performance variations; 8) Ability to create custom separation programs for different material types. These adaptability features make the four-roll system particularly effective for processing natural mineral deposits with inherent variability or mixed materials with different conductivity characteristics."
+    },
+    {
+      "question": "What safety systems are incorporated into DXJ series separators?",
+      "answer": "The DXJ series incorporates comprehensive safety systems including: 1) Automatic high-voltage shutdown during access door opening or emergency conditions; 2) Continuous insulation monitoring with fault detection and alarming; 3) Redundant grounding systems for all conductive components; 4) Isolated high-voltage generation and distribution systems; 5) Emergency stop functions accessible from multiple locations; 6) Visual and audible indicators for operational status and hazardous conditions; 7) Voltage ramp-up protocols that prevent sudden field generation; 8) Enclosed design with interlocked access panels; 9) Continuous monitoring of environmental conditions including humidity; 10) Automatic system diagnostics with fault identification and logging. These safety features comply with international electrical safety standards while protecting both operators and equipment during all phases of operation, maintenance, and servicing."
+    }
+  ],
+  "seo": {
+    "title": "Four-Roll High Voltage Electrostatic Separator | Precision Mineral Beneficiation | Zexin Mining",
+    "keywords": "four-roll high voltage electrostatic separator,variable frequency electrostatic separator,electrostatic mineral separator,quartz purification equipment,feldspar processing separator,high voltage mineral beneficiation,multi-roll electric separator,modular electrostatic separator,rare mineral recovery,industrial mineral separator,precision e-separator,high-efficiency mineral sorter,non-metallic mineral processor,advanced electric field separator,mineral beneficiation equipment,automated electrostatic separator,mining e-separator,multi-stage separation technology,Zexin mineral processor,electrostatic beneficiation",
+    "description": "Zexin Mining's four-roll high voltage electrostatic separator achieves 99% recovery rates for non-metallic minerals. Our precision-engineered design with variable frequency control delivers 40% higher throughput, optimized for quartz and feldspar processing with 60% reduced maintenance costs."
+  },
+  "searchKeywords": [
+    "four-roll high voltage electrostatic separator",
+    "variable frequency electrostatic separator",
+    "high voltage roll separator",
+    "quartz purification equipment",
+    "feldspar processing separator",
+    "mineral e-separator",
+    "rare mineral electrostatic separator",
+    "industrial electrostatic equipment",
+    "four-roll e-separator",
+    "high-efficiency mineral separator"
+  ],
+  "relatedProducts": [
+    "permanent-drum-magnetic-separator",
+    "wet-high-intensity-magnetic-roll-separator",
+    "plate-high-intensity-magnetic-separator",
+    "triple-disc-belt-magnetic-separator",
+    "double-roll-permanent-magnetic-zircon-separator"
+  ],
+  "imageSrcAlt": "Four Roll High Voltage Electrostatic Separator | Zexin Mining"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "tin",
+  "mineralName": "锡矿",
+  "title": "锡矿选矿工艺",
+  "processTitle": "锡矿选矿工艺流程",
+  "processIntroduction": "锡矿石因密度比共生矿物大，选矿技术主要采用重选法。但由于矿物中常含有磁铁矿、赤铁矿等氧化铁矿物，这些矿物通过单一的重选或浮选难以与锡矿石完全分离，因此工艺流程往往结合重选、磁选和浮选方法，以实现更高的锡回收率和精矿品位。",
+  "processSteps": [
+    {
+      "title": "破碎筛分",
+      "description": "将原矿破碎至20mm以下，并经筛分分成20～4mm和4～0mm两个粒级。这一步骤确保矿石达到后续处理所需的粒度，提高选矿效率。"
+    },
+    {
+      "title": "预选",
+      "description": "将20～4mm矿石进入重力质旋流器预选，再经一段棒磨后采用跳汰机预选。跳汰尾矿用2mm振筛筛除+2mm作为废弃尾矿，-2mm进入摇床选别。预选阶段可有效去除大量脉石，显著提高后续选矿过程的效率和精度。"
+    },
+    {
+      "title": "浮选",
+      "description": "将跳汰和摇床精矿分别进行磨矿后，在进行混合浮选。混合浮选尾矿进行摇床选别产出合格锡精矿。混合浮选精矿再经细磨进行铅锌分离浮选，并分别产出铅锌精矿和锡精矿。浮选工艺能有效分离不同矿物，提高最终产品的纯度和品位。"
+    },
+    {
+      "title": "重选",
+      "description": "矿泥进入Φ300mm旋流器，溢流再经Φ125mm和Φ75mm水力旋流器细化脱除细泥，沉砂经浓缩、浮选后进行锡石浮选。重选工序是处理锡矿的传统方法，利用密度差异实现有效分选，特别适合处理砂锡矿。"
+    }
+  ],
+  "applicationsImage": "/images/products/mineral-processing-solutions/non-ferrous/tin-beneficiation-process-flow.jpg",
+  "applications": [
+    {
+      "title": "锡矿开采作业",
+      "description": "我们的重力选矿技术特别适用于处理高品位砂锡矿床和原生岩锡矿石，实现最佳回收率。"
+    },
+    {
+      "title": "稀有金属回收",
+      "description": "用于从砂矿中提取铌、钽、钛和锆等稀有金属，最大限度地实现资源利用。"
+    },
+    {
+      "title": "弱磁性矿物处理",
+      "description": "有效分离弱磁性矿物，包括铁、锰和铬矿石，与磁选技术相辅相成。"
+    },
+    {
+      "title": "低品位矿石选矿",
+      "description": "适用于低品位矿石的预选，显著提高选矿作业的经济效益。"
+    }
+  ],
+  "relatedProducts": [
+    "sawtooth-wave-jig",
+    "self-aspirated-flotation-cell",
+    "shaking-table",
+    "permanent-drum-magnetic-separator",
+    "wet-energy-saving-grid-ball-mill"
+  ]
+}

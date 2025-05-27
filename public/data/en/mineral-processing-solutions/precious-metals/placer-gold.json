@@ -1,0 +1,56 @@
+{
+  "id": "placer-gold",
+  "mineralName": "Placer Gold",
+  "title": "Placer Gold Beneficiation Process",
+  "processTitle": "Placer Gold Beneficiation Process Flow",
+  "processIntroduction": "The primary objective of placer gold beneficiation is to maximize the recovery of gold and various associated heavy minerals from gangue materials. Zexin implements combined processes involving gravity separation, amalgamation, magnetic separation, and electrostatic separation to achieve optimal results. Our placer gold beneficiation process is particularly suitable for beach placer deposits, riverine placers, and alluvial deposits. The processing typically includes crushing, screening, desliming, and separation operations.",
+  "processSteps": [
+    {
+      "title": "Placer Gold Ore Washing",
+      "description": "Many placer gold ores contain clay agglomerates, some exceeding 100mm in diameter. If these agglomerates are not properly disintegrated, they can be discharged with waste rock during screening, resulting in gold losses. Zexin employs specialized washing equipment to effectively break down these clay-bound aggregates, ensuring maximum gold liberation before subsequent processing. Vibrating screens and trommel screens are commonly used as screening equipment due to their long service life and high processing capacity."
+    },
+    {
+      "title": "Placer Gold Separation",
+      "description": "Practical experience has proven that gravity separation is the most effective and economical method for processing placer gold ore. Due to the varying particle size distribution of gold in different placer deposits and the different effective size limits of various processing equipment, Zexin implements a rational placer gold separation process that combines several gravity separation devices working in sequence. This integrated approach ensures optimal recovery across the entire particle size range present in the ore."
+    },
+    {
+      "title": "Jigging and Shaking Table Gravity Separation",
+      "description": "Zexin's jigging machines feature conical slide valves that reduce failure rates by 80% and consume less energy while meeting the separation requirements of different materials, increasing processing capacity by over 35%. Additionally, Zexin jigs incorporate advanced variable frequency drive technology for ease of operation and management, with a smaller footprint and higher processing capacity per unit area. Zexin has also improved traditional 6S shaking tables by adopting a cam-lever head design, allowing stroke adjustment by changing the position of the sliding head on the rocker arm, while frequency is adjusted through the smooth motor pulley. These innovations result in easier stroke adjustment, smoother table operation, compact structure, and lower energy consumption."
+    },
+    {
+      "title": "Process Advantages",
+      "description": "Zexin's placer gold beneficiation process features a simple flowsheet with low equipment costs and ease of operation. Moreover, the process is environmentally friendly, allowing direct discharge of tailings, which significantly reduces the civil construction investment for the entire processing plant. The modular design of our equipment enables rapid deployment and flexibility to accommodate seasonal operations or varying deposit characteristics, making it ideal for both small-scale and large-scale placer gold operations."
+    }
+  ],
+  "applicationsImage": "/images/products/mineral-processing-solutions/precious-metals/placer-gold-beneficiation-process-flow.jpg",
+  "applications": [
+    {
+      "title": "Beach Placer Gold Processing",
+      "description": "Our specialized gravity separation technology effectively processes beach placer deposits, which typically contain fine-grained gold particles along with heavy minerals such as ilmenite, rutile, and zircon. The process incorporates advanced pre-concentration techniques, specialized washing systems, and optimized gravity separation circuits to manage the challenges of salt water corrosion and fine particle recovery. This tailored approach enables the successful processing of coastal placer resources, often recovering valuable heavy mineral co-products alongside gold."
+    },
+    {
+      "title": "Riverine Placer Gold Recovery",
+      "description": "Zexin's advanced processing technology excels at recovering gold from riverine placer deposits, where gold particles are typically larger and more irregular than in other placer environments. Our process combines optimized screening, efficient clay disaggregation, and carefully designed gravity separation circuits to effectively capture gold across all size fractions. This sophisticated approach enables the processing of complex riverine deposits, producing high-recovery results while maintaining efficient water management and environmental protection measures."
+    },
+    {
+      "title": "Alluvial Gold Beneficiation",
+      "description": "Our innovative beneficiation technology addresses the challenges of processing alluvial gold deposits through specialized gravity separation techniques, optimized equipment configurations, and precisely controlled processing parameters. The system incorporates advanced jig designs, custom shaking table configurations, and carefully managed water flows to effectively recover fine and coarse gold particles while minimizing losses. This specialized approach transforms alluvial resources with complex particle size distributions into high-value gold concentrates while managing clay content and oversize material efficiently."
+    },
+    {
+      "title": "Complex Placer Deposit Processing",
+      "description": "Zexin's integrated beneficiation approach successfully processes complex placer deposits characterized by challenging combinations of varying gold particle sizes, clay content, and associated heavy minerals. Our comprehensive processing solution incorporates multiple stages of optimization, including specialized washing techniques, selective gravity circuits, and advanced separation technologies. This multi-faceted methodology has successfully transformed numerous difficult-to-process placer deposits into viable commercial operations, maximizing gold recovery while facilitating the co-recovery of valuable associated minerals."
+    }
+  ],
+  "relatedProducts": [
+    "vibratory-feeder",
+    "synchronous-counter-directional-jig-small",
+    "shaking-table",
+    "jaw-crusher",
+    "cone-crusher",
+    "inclined-vibrating-screen",
+    "hydrocyclone-separator",
+    "wet-overflow-ball-mill",
+    "dewatering-screen",
+    "pneumatic-flotation-cell"
+  ]
+}

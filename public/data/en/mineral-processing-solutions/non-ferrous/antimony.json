@@ -1,0 +1,51 @@
+{
+  "id": "antimony",
+  "mineralName": "Antimony Ore",
+  "title": "Antimony Ore Beneficiation Process",
+  "processTitle": "Antimony Ore Beneficiation Process Flow",
+  "processIntroduction": "Antimony ore has a specific gravity (4.5-5.4) significantly higher than associated gangue minerals (2.5-2.8), making gravity separation highly efficient. This method offers advantages of high efficiency, energy conservation, and environmental protection, while enabling pre-concentration of low-grade ores. The gravity-separated antimony concentrates are then further purified through flotation. Therefore, Zexin typically employs a combined gravity-flotation process for antimony ore beneficiation, achieving optimal recovery rates and concentrate grades.",
+  "processSteps": [
+    {
+      "title": "Pre-selection Preparation",
+      "description": "The raw antimony ore undergoes multi-stage crushing to reduce particle size below 30mm. The crushed material is then classified into three size fractions: 8-30mm, 2-8mm, and 0-2mm through high-efficiency vibrating screens. This critical preparation step maximizes the efficiency of subsequent gravity separation processes while minimizing overgrinding, establishing optimal conditions for maximum recovery and grade throughout the beneficiation process."
+    },
+    {
+      "title": "Gravity Separation",
+      "description": "The three size fractions are directed to Zexin's specialized jigging equipment: large box-type jigs for coarse material, medium-sized jigs for intermediate sizes, and oscillating table jigs for finer fractions. This stage leverages the significant density differential between antimony minerals (SG 4.5-5.4) and gangue (SG 2.5-2.8), efficiently producing a pre-concentrated product that advances to the gravity concentrate collection area. The process achieves 60-75% waste rejection while maintaining 85-95% antimony recovery."
+    },
+    {
+      "title": "Flotation Enhancement",
+      "description": "Following gravity separation, tailings undergo precision grinding (80% passing -74μm), classification, reagent conditioning, and selective flotation. The circuit employs a one-rougher, three-cleaner, two-scavenger configuration to produce high-grade (55-65% Sb) antimony concentrate powder. Flotation tailings are further processed through shaking tables to recover fine oxidized antimony particles, achieving overall flotation recovery rates of 92-97%. This integrated approach effectively processes both sulfide and oxide antimony minerals with outstanding metallurgical performance."
+    },
+    {
+      "title": "Manual Sorting",
+      "description": "For coarse, high-grade antimony-bearing material, Zexin incorporates a strategic manual sorting stage within the crushing circuit. Experienced operators visually identify and hand-select high-grade antimony chunks, which are separated for direct processing. The remaining material re-enters the gravity separation circuit. This supplementary step significantly enhances both the final concentrate grade and overall recovery efficiency, particularly effective for ores with visible high-grade components."
+    }
+  ],
+  "applicationsImage": "/images/products/mineral-processing-solutions/non-ferrous/antimony-beneficiation-process-flow.jpg",
+  "applications": [
+    {
+      "title": "Primary Stibnite Ore Beneficiation",
+      "description": "Our integrated gravity-flotation technology achieves industry-leading recovery rates of 92-97% on primary stibnite deposits, producing premium-grade concentrates (>60% Sb) suitable for direct metallurgical processing. The system's adaptability handles variations in ore mineralogy and grain size distribution while maintaining consistent performance metrics, maximizing resource utilization and operational profitability even in challenging geological environments."
+    },
+    {
+      "title": "Low-Grade Antimony Resource Valorization",
+      "description": "The high-efficiency pre-concentration capabilities of our process transform marginal antimony deposits (<1% Sb) into economically viable resources. By rejecting 65-80% of the mass as waste rock early in the process while recovering >85% of antimony values, operations can drastically reduce processing costs per ton of final concentrate. This approach has successfully revitalized numerous deposits previously classified as sub-economic, expanding global antimony reserves while minimizing environmental footprint."
+    },
+    {
+      "title": "Complex Polymetallic Antimony Ore Processing",
+      "description": "Our advanced process effectively handles complex antimony ores containing challenging minerals such as arsenopyrite, galena, pyrite, and various oxide components. The selective separation capabilities enable the production of distinct antimony, lead, zinc, and precious metal concentrates from complex assemblages, maximizing overall value recovery through differential gravity separation followed by sequential selective flotation with specialized reagent schemes tailored to each deposit's unique characteristics."
+    },
+    {
+      "title": "High-Purity Antimony Concentrate Production",
+      "description": "For applications requiring exceptional purity, our enhanced processing technology produces antimony concentrates meeting the most stringent specifications for flame retardants, battery materials, and semiconductor applications. The multi-stage cleaning process effectively removes deleterious elements such as arsenic, lead, and mercury to below threshold limits, commanding premium pricing in specialty markets while satisfying increasingly stringent environmental and regulatory requirements for modern industrial applications."
+    }
+  ],
+  "relatedProducts": [
+    "sawtooth-wave-jig",
+    "xfc-air-inflation-flotation-cell",
+    "jaw-crusher",
+    "permanent-drum-magnetic-separator",
+    "inclined-vibrating-screen"
+  ]
+}

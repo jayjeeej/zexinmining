@@ -1,0 +1,395 @@
+{
+  "id": "plate-high-intensity-magnetic-separator",
+  "title": "Plate High Intensity Magnetic Separator",
+  "series": "HYQC Series High-Gradient Wet Magnetic Separator",
+  "imageSrc": "/images/products/magnetic-separator/plate-high-intensity-magnetic-separator.jpg",
+  "productCategory": "Mineral Processing Equipment",
+  "subcategory": "magnetic-separator",
+  "model": "HYQC1020",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "4-40 t/h (4.4-44 stph)"
+    },
+    {
+      "key": "Feed Size",
+      "displayValue": "< 3 mm (< 0.12 in.)"
+    },
+    {
+      "key": "Motor Power",
+      "displayValue": "1.1-5.5 kW (1.5-7.4 hp)"
+    }
+  ],
+  "href": "/en/products/ore-processing/magnetic-separator/plate-high-intensity-magnetic-separator",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/magnetic-separator/plate-high-intensity-magnetic-separator",
+    "zh": "/zh/products/ore-processing/magnetic-separator/plate-high-intensity-magnetic-separator"
+  },
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "t/h"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "overview": "Zexin Mining's HYQC Series Plate-Type High Intensity Magnetic Separators deliver exceptional separation performance for weakly magnetic minerals. Specifically designed for processing fine particles in slurry form, this advanced wet magnetic separation equipment generates a powerful high-gradient magnetic field that effectively captures paramagnetic materials with remarkable selectivity and recovery rates.",
+  "detailedDescription": "The HYQC Series plate-type high intensity magnetic separator introduces innovative high-gradient magnetic field technology that transforms the beneficiation of weakly magnetic minerals. This wet magnetic separation system creates optimized particle capture through its powerful electromagnetic design and specialized matrix configuration, addressing common recovery challenges while enhancing mineral concentrate grades. Its balanced approach to magnetic separation delivers consistent results across varying ore conditions, making it valuable processing equipment that adapts to different mineral characteristics without compromising operational efficiency.",
+  "specifications": {
+    "title": "Plate Type High Intensity Magnetic Separator Specifications",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Magnetic Separation Area (mm)",
+      "Processing Capacity (t/h)",
+      "Pulp Concentration (%)",
+      "Motor Power (kW)",
+      "Dimensions (mm)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Magnetic Separation Area (in.)",
+      "Processing Capacity (stph)",
+      "Pulp Concentration (%)",
+      "Motor Power (hp)",
+      "Dimensions (in.)"
+    ],
+    "tableData": [
+      [
+        "HYQC515",
+        "500×1500",
+        "4-8",
+        "10-30",
+        "1.1",
+        "2600×1000×1200"
+      ],
+      [
+        "HYQC520",
+        "500×2000",
+        "5-8",
+        "10-30",
+        "1.1",
+        "3100×1000×1200"
+      ],
+      [
+        "HYQC815",
+        "800×1500",
+        "8-10",
+        "10-30",
+        "1.5",
+        "2900×1200×1450"
+      ],
+      [
+        "HYQC820",
+        "800×2000",
+        "8-12",
+        "10-30",
+        "1.5",
+        "3400×1200×1450"
+      ],
+      [
+        "HYQC1020",
+        "1000×2000",
+        "12-15",
+        "10-30",
+        "2.2",
+        "3400×1400×1450"
+      ],
+      [
+        "HYQC1520",
+        "1500×2000",
+        "20-25",
+        "10-30",
+        "3",
+        "4000×1960×1600"
+      ],
+      [
+        "HYQC1820",
+        "1800×2000",
+        "25-30",
+        "10-30",
+        "3",
+        "4000×2300×1600"
+      ],
+      [
+        "HYQC2025",
+        "2000×2500",
+        "30-35",
+        "10-30",
+        "4",
+        "4500×2500×1700"
+      ],
+      [
+        "HYQC2030",
+        "2000×3000",
+        "32-35",
+        "10-30",
+        "4",
+        "5000×2500×2000"
+      ],
+      [
+        "HYQC2530",
+        "2500×3000",
+        "38-40",
+        "10-30",
+        "5.5",
+        "5000×3000×2000"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "HYQC515",
+        "19.7×59.1",
+        "4.4-8.8",
+        "10-30",
+        "1.5",
+        "102.4×39.4×47.2"
+      ],
+      [
+        "HYQC520",
+        "19.7×78.7",
+        "5.5-8.8",
+        "10-30",
+        "1.5",
+        "122.0×39.4×47.2"
+      ],
+      [
+        "HYQC815",
+        "31.5×59.1",
+        "8.8-11.0",
+        "10-30",
+        "2.0",
+        "114.2×47.2×57.1"
+      ],
+      [
+        "HYQC820",
+        "31.5×78.7",
+        "8.8-13.2",
+        "10-30",
+        "2.0",
+        "133.9×47.2×57.1"
+      ],
+      [
+        "HYQC1020",
+        "39.4×78.7",
+        "13.2-16.5",
+        "10-30",
+        "3.0",
+        "133.9×55.1×57.1"
+      ],
+      [
+        "HYQC1520",
+        "59.1×78.7",
+        "22.0-27.6",
+        "10-30",
+        "4.0",
+        "157.5×77.2×63.0"
+      ],
+      [
+        "HYQC1820",
+        "70.9×78.7",
+        "27.6-33.1",
+        "10-30",
+        "4.0",
+        "157.5×90.6×63.0"
+      ],
+      [
+        "HYQC2025",
+        "78.7×98.4",
+        "33.1-38.6",
+        "10-30",
+        "5.4",
+        "177.2×98.4×66.9"
+      ],
+      [
+        "HYQC2030",
+        "78.7×118.1",
+        "35.3-38.6",
+        "10-30",
+        "5.4",
+        "196.9×98.4×78.7"
+      ],
+      [
+        "HYQC2530",
+        "98.4×118.1",
+        "41.9-44.1",
+        "10-30",
+        "7.4",
+        "196.9×118.1×78.7"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "capacity",
+      "",
+      "power",
+      "length"
+    ]
+  },
+  "features": [
+    {
+      "title": "High-Gradient Magnetic Field",
+      "description": "The HYQC series generates powerful magnetic field gradients up to 15,000 gauss with specialized plate-type electromagnetic configurations and magnetized matrix elements. This superior field strength enables effective recovery of weakly magnetic minerals with magnetic susceptibility as low as 10⁻⁶ emu/g, improving recovery rates by up to 35% compared to conventional magnetic separators while maintaining precise selectivity."
+    },
+    {
+      "title": "Optimized Matrix Design",
+      "description": "Engineered with a proprietary grooved plate configuration and specialized matrix material that creates thousands of high-gradient capture points throughout the separation zone. This advanced matrix design maximizes the effective separation area and magnetic field gradient, enabling selective recovery of fine paramagnetic particles and improving concentrate grades by up to 15% for various weakly magnetic minerals."
+    },
+    {
+      "title": "Precision Process Control",
+      "description": "Comprehensive control system allows operators to precisely adjust electromagnetic field intensity, slurry flow rate, and pulse frequency to optimize separation performance for different mineral characteristics. These adjustable parameters enable quick adaptation to variations in feed composition, ensuring consistent product quality and maximizing recovery efficiency across diverse ore types."
+    },
+    {
+      "title": "Efficient Wet Processing",
+      "description": "Specialized wet processing design with optimized slurry channels and distribution systems ensures uniform material presentation to the magnetic field. The controlled flow patterns prevent channeling and enhance particle-field interaction, providing superior separation of fine particles (< 2mm) with moisture content up to 30% while maintaining high throughput and recovery efficiency."
+    },
+    {
+      "title": "Automated Discharge System",
+      "description": "Innovative pulse-cycle discharge mechanism automatically removes captured magnetic particles from the matrix without interrupting the separation process. This continuous operation feature increases throughput by up to 40% compared to manual cleaning systems, while reducing operational labor requirements and ensuring consistent separation performance throughout extended production runs."
+    },
+    {
+      "title": "Durable Industrial Construction",
+      "description": "Heavy-duty stainless steel construction with corrosion-resistant components withstands continuous operation in aggressive slurry environments. The wear-resistant matrix elements and precision-engineered flow channels ensure a service life exceeding 10 years with proper maintenance, providing reliable performance and excellent return on investment for mineral processing operations."
+    },
+    {
+      "title": "Versatile Application Range",
+      "description": "Effectively processes weakly magnetic minerals including hematite, limonite, ilmenite, manganese ore, tungsten ore, chromite, and rare earth minerals with capacities ranging from 4-40 t/h depending on model selection. The equipment maintains consistent performance across various mineral types and particle sizes, making it suitable for concentration, purification, and beneficiation applications across multiple mining sectors."
+    }
+  ],
+  "applications": {
+    "title": "Applications",
+    "items": [
+      {
+        "title": "Weakly Magnetic Iron Ore Processing",
+        "description": "Efficiently separates and concentrates weakly magnetic iron minerals such as hematite, limonite, and siderite, producing high-grade iron concentrates for downstream metallurgical processes while effectively removing silicate and carbonate gangue minerals."
+      },
+      {
+        "title": "Manganese Ore Beneficiation",
+        "description": "Effectively concentrates manganese minerals from complex ore bodies, significantly upgrading Mn content while rejecting non-magnetic gangue, producing marketable manganese concentrate for ferroalloy production and battery manufacturing."
+      },
+      {
+        "title": "Titanium Mineral Processing",
+        "description": "Separates ilmenite, titaniferous magnetite, and rutile from beach sands and ore deposits, enabling the production of high-quality titanium mineral concentrates for pigment production, metal manufacturing, and advanced materials applications."
+      },
+      {
+        "title": "Rare Earth Element Concentration",
+        "description": "Captures and concentrates paramagnetic rare earth minerals from complex ore bodies, providing critical material separation for high-tech industries including electronics, renewable energy, and advanced manufacturing sectors."
+      },
+      {
+        "title": "Industrial Mineral Purification",
+        "description": "Removes iron-bearing contaminants from industrial minerals such as kaolin, feldspar, quartz, and talc, ensuring high-purity raw materials for ceramics, glass, and advanced material manufacturing while improving product quality and value."
+      },
+      {
+        "title": "Wastewater Treatment",
+        "description": "Extracts fine magnetic particles and contaminants from industrial process water and effluent streams, supporting environmental compliance while enabling recovery of valuable materials that would otherwise be lost, particularly in mining, metallurgical, and chemical processing operations."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does a plate-type high intensity magnetic separator work?",
+      "answer": "The plate-type high intensity magnetic separator operates using electromagnetically-energized plates with specialized matrix elements that create strong magnetic field gradients. As mineral slurry flows through the separation chamber, paramagnetic particles are attracted to and captured by the magnetized matrix, while non-magnetic particles pass through unaffected. The matrix configuration creates thousands of high-gradient collection points where weakly magnetic particles concentrate. During the discharge cycle, the magnetic field is temporarily reduced or eliminated, and water flushing removes the captured particles, producing distinct magnetic concentrate and non-magnetic tailings streams. This cycle of capture and discharge continues automatically, allowing for continuous processing of mineral slurries."
+    },
+    {
+      "question": "What advantages do plate-type separators offer compared to other magnetic separation technologies?",
+      "answer": "Plate-type separators provide several key advantages: 1) Superior recovery of weakly magnetic minerals with very low magnetic susceptibility (down to 10⁻⁶ emu/g) that conventional separators cannot effectively capture; 2) Excellent separation efficiency for fine particles below 2mm; 3) Higher grade concentrates due to selective magnetic field gradients; 4) Better processing of complex mineral assemblages with variable magnetic properties; 5) More efficient slurry handling with less clogging compared to drum-type wet separators; 6) More compact design requiring less floor space than comparable capacity equipment; 7) Lower water consumption through optimized slurry handling; 8) Greater flexibility in adjusting separation parameters to match different ore characteristics. These benefits make plate-type technology the preferred choice for demanding applications involving weakly magnetic minerals."
+    },
+    {
+      "question": "What materials can be processed with the HYQC series separators?",
+      "answer": "The HYQC series effectively processes weakly magnetic and paramagnetic materials, including: 1) Iron ores such as hematite, limonite, and siderite; 2) Manganese ores including pyrolusite and psilomelane; 3) Titanium-bearing minerals like ilmenite and titaniferous magnetite; 4) Tungsten minerals such as wolframite; 5) Chromite ore; 6) Garnet and other abrasive minerals; 7) Rare earth minerals with paramagnetic properties; 8) Various industrial minerals requiring iron removal; 9) Contaminated mineral slurries and process streams. The separators handle wet feed with particle sizes under 2mm and pulp concentrations between 10-30%, making them versatile for numerous mineral processing applications where magnetic susceptibility differences can be exploited."
+    },
+    {
+      "question": "How do I select the right model for my application?",
+      "answer": "Model selection depends on several factors: 1) Required processing capacity - match expected throughput with model specifications; 2) Feed characteristics - consider particle size distribution, magnetic susceptibility, and mineralogical complexity; 3) Pulp properties - analyze solid content, viscosity, and flow behavior; 4) Desired recovery and grade targets; 5) Space constraints - evaluate available installation area and height requirements; 6) Power availability - consider electrical infrastructure limitations; 7) Process integration requirements - examine how the separator will connect with existing circuits. Our engineering team provides comprehensive material testing services to determine magnetic response characteristics and recommend the optimal model and configuration for your specific mineral processing requirements."
+    },
+    {
+      "question": "What maintenance procedures are recommended for plate-type high intensity magnetic separators?",
+      "answer": "Recommended maintenance includes: 1) Daily inspection of slurry feed and discharge systems for proper operation; 2) Weekly checking of electromagnetic coils for temperature and cooling water flow; 3) Bi-weekly inspection of matrix elements for wear or damage; 4) Monthly lubrication of moving components according to schedule; 5) Quarterly cleaning of cooling water passages to prevent scale buildup; 6) Semi-annual inspection of electrical systems and controls; 7) Annual comprehensive inspection of all components including power supply systems. The matrix elements require periodic inspection and replacement based on wear patterns, typically every 12-24 months depending on material abrasiveness. Most operations report maintenance requirements of approximately 4-8 hours monthly to maintain optimal performance."
+    },
+    {
+      "question": "How does pulp concentration affect separation performance?",
+      "answer": "Pulp concentration influences separation performance in several significant ways: 1) Higher concentrations (>25%) increase throughput capacity but may reduce recovery efficiency for very weakly magnetic minerals; 2) Lower concentrations (<15%) enhance separation precision and recovery of fine weakly magnetic particles but reduce overall throughput; 3) Optimal concentration ranges (15-25%) balance throughput with recovery efficiency for most applications; 4) Excessive concentrations can cause increased viscosity, particle interference, and reduced particle-field interaction; 5) Insufficient concentration wastes energy and water while reducing production efficiency. Generally, maintaining pulp concentration within the 10-30% range provides the best combination of separation efficiency and operating economics, with specific optimal values determined by mineral characteristics and production requirements."
+    },
+    {
+      "question": "Can plate-type magnetic separators handle materials with high clay content?",
+      "answer": "Yes, HYQC series separators can process materials with moderate clay content when properly configured, but several considerations apply: 1) Pre-conditioning treatments such as attrition scrubbing or desliming may be necessary for materials with excessive clay content; 2) Specialized matrix designs with wider flow channels are available for clay-bearing materials; 3) Lower pulp densities (10-15%) are typically recommended to maintain proper flow characteristics; 4) Pulse frequency and water flush rates should be optimized to prevent clay accumulation on matrix elements; 5) Additional water sprays at strategic points can help prevent blockages; 6) More frequent cleaning cycles may be programmed to prevent matrix saturation. For materials with extremely high clay content (>10%), a pre-treatment circuit to remove the finest clay fraction before magnetic separation is strongly recommended for optimal performance."
+    },
+    {
+      "question": "What factors affect the magnetic field strength and recovery efficiency?",
+      "answer": "Key factors influencing magnetic field strength and recovery efficiency include: 1) Applied current to the electromagnetic coils - directly controls overall field intensity; 2) Matrix design and material - determines field gradient characteristics critical for capturing weakly magnetic particles; 3) Matrix spacing and density - affects field concentration and particle capture mechanisms; 4) Slurry flow rate - impacts residence time in the magnetic field zone; 5) Particle size distribution - finer particles generally require stronger fields but may experience competing forces; 6) Mineralogical liberation - proper grinding ensures magnetic minerals are sufficiently freed from gangue; 7) Competing minerals with similar magnetic susceptibility - may cause selective recovery challenges; 8) Temperature - excessive heat can reduce electromagnetic efficiency; 9) Cooling system effectiveness - maintains optimal coil temperature for consistent performance."
+    },
+    {
+      "question": "What are the installation requirements for a HYQC series magnetic separator?",
+      "answer": "Installation requirements include: 1) Reinforced concrete foundation capable of supporting operational weight (typically 1.2-1.5 times the equipment weight); 2) Adequate overhead clearance for maintenance access (minimum 2m recommended above the unit); 3) Three-phase power supply with appropriate capacity for the electromagnetic system; 4) Clean cooling water supply and return system (approximately 3-5 m³/h depending on model size); 5) Process water supply for matrix cleaning and slurry conditioning; 6) Feed preparation system including proper sizing and conditioning equipment; 7) Slurry distribution and collection systems with appropriate pumps and piping; 8) Suitable facilities for handling and storing magnetic concentrate and non-magnetic tailings. Our technical team provides detailed installation guidelines and can assist with site planning to ensure optimal equipment placement and integration with existing mineral processing circuits."
+    }
+  ],
+  "seo": {
+    "title": "High Intensity Wet Magnetic Separator | Plate Type Separator | Zexin Mining",
+    "keywords": "plate magnetic separator,high intensity magnetic separator,wet high intensity magnetic separator,WHIMS,plate type magnetic separator,high gradient magnetic separator,wet magnetic separator,industrial magnetic separator,mining magnetic separator,magnetic separation equipment,high intensity wet magnetic separator,plate magnet separator,magnetic ore separator,slurry magnetic separator,mineral processing magnetic separator,high power magnetic separator,magnetic concentrator,non-ferrous magnetic separator,laboratory magnetic separator,magnetic separator for sale",
+    "description": "Zexin Mining's plate-type high intensity wet magnetic separator delivers superior recovery of weakly magnetic minerals with advanced high-gradient technology. Our efficient WHIMS equipment ensures optimal concentration of hematite, ilmenite, manganese, and other paramagnetic materials with minimal maintenance."
+  },
+  "searchKeywords": [
+    "plate type magnetic separator",
+    "wet high intensity magnetic separator",
+    "WHIMS",
+    "high gradient magnetic separator",
+    "weakly magnetic mineral separator",
+    "hematite magnetic separator",
+    "manganese ore magnetic separator",
+    "ilmenite beneficiation equipment",
+    "wet magnetic concentration",
+    "mineral processing equipment"
+  ],
+  "relatedProducts": [
+    "permanent-drum-magnetic-separator",
+    "wet-high-intensity-magnetic-roll-separator",
+    "triple-disc-belt-magnetic-separator",
+    "double-roll-permanent-magnetic-zircon-separator",
+    "four-roll-high-voltage-electrostatic-separator"
+  ],
+  "imageSrcAlt": "Plate High Intensity Magnetic Separator | Zexin Mining"
+}

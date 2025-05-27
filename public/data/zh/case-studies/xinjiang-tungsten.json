@@ -1,0 +1,22 @@
+{
+  "id": "xinjiang-tungsten",
+  "title": "新疆100吨/日钨矿选矿厂",
+  "location": "中国新疆",
+  "year": "2023",
+  "category": "钨矿选矿",
+  "client": "某矿业公司",
+  "description": "泽鑫矿山设备设计建造的100吨/日钨矿选矿厂，处理WO3品位约7%的钨矿石，采用全重选工艺流程。",
+  "challenge": "该项目面临多项技术挑战：处理矿物组成复杂的钨矿石，实现钨矿物的有效解离，以及实施有效的水资源循环利用和尾矿管理。原矿给料粒度上限200mm，中等硬度，含泥含水均小于6%。",
+  "solution": "选矿厂采用多段破碎和重选工艺流程。破碎系统使用颚式破碎机将矿石破碎至25mm。磨矿系统采用棒磨机配合跳汰机优先回收粗粒钨矿。工艺流程包括连续水力分级、螺旋溜槽粗选和摇床精选。工厂配备闭路水循环系统和尾矿脱水系统。",
+  "results": "选矿厂成功实现100吨/日的设计产能。钨精矿产品达到质量要求，水分含量低于3%。尾矿经脱水后水分含量控制在15-20%，适合储存和运输。水循环系统确保了资源的高效利用和环境合规。",
+  "images": [
+    "/images/cases/xinjiang-tungsten/tungsten-processing-plant-xinjiang.jpg",
+    "/images/cases/xinjiang-tungsten/tungsten-gravity-separation-process.jpg",
+    "/images/cases/xinjiang-tungsten/tungsten-jigging-and-shaking-table.jpg"
+  ],
+  "imagesAlt": [
+    "Tungsten Processing Plant Xinjiang | Zexin Mining",
+    "Tungsten Gravity Separation Process | Zexin Mining",
+    "Tungsten Jigging And Shaking Table | Zexin Mining"
+  ]
+}

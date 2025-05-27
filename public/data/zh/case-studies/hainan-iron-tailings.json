@@ -1,0 +1,22 @@
+{
+  "id": "hainan-iron-tailings",
+  "title": "海南昌江铁尾矿综合利用选矿EPC项目",
+  "location": "中国海南昌江",
+  "year": "2022",
+  "category": "铁矿",
+  "client": "某国有大型钢铁企业",
+  "description": "该项目是国家重点大型铁矿资源综合利用项目，位于海南省昌江县，日处理铁尾矿量1万吨，原矿品位10-20度。泽鑫矿山设备提供了从设计到安装调试的全流程服务，项目采用粗破、中破、筛分、跳汰等工艺流程，实现了低品位尾矿的高效回收利用。",
+  "challenge": "项目面临的主要挑战包括低品位尾矿处理难度大，传统工艺回收率低。场地空间有限，工艺流程布局需要高度优化。当地环保要求严格，需要在生产效率和环保之间取得平衡。",
+  "solution": "我们采用了创新的工艺路线，包括优化的破碎筛分系统，提高物料分级效率，多级跳汰工艺提高铁矿物回收率。我们设计了紧凑型厂区布局，实现物料流短路径传输，配置高效除尘、水处理系统满足环保要求，并实施智能化控制系统实现全流程自动化控制。",
+  "results": "项目投产后实现了预期目标。尾矿资源综合利用率提高25%，年产铁精矿约40万吨，产品品位提升至60%以上，达到钢铁生产要求。水资源循环利用率达95%，粉尘排放低于国家标准。项目为业主创造显著经济效益，同时减少了尾矿堆存的环境压力。",
+  "images": [
+    "/images/cases/hainan-iron-tailings/hainan-iron-tailings-processing-plant-zexin-mining.jpg",
+    "/images/cases/hainan-iron-tailings/hainan-tailings-treatment-facility-equipment.jpg",
+    "/images/cases/hainan-iron-tailings/iron-tailings-recovery-process-china.jpg"
+  ],
+  "imagesAlt": [
+    "Hainan Iron Tailings Processing Plant Zexin Mining | Zexin Mining",
+    "Hainan Tailings Treatment Facility Equipment | Zexin Mining",
+    "Iron Tailings Recovery Process China | Zexin Mining"
+  ]
+}

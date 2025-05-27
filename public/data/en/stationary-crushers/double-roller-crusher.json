@@ -1,0 +1,389 @@
+{
+  "id": "double-roller-crusher",
+  "title": "Double Roller Crusher",
+  "series": "2PG Series High-efficiency Double Roller Crusher",
+  "imageSrc": "/images/products/stationary-crushers/double-roller-crusher.jpg",
+  "productCategory": "Mining Crushing Equipment",
+  "subcategory": "stationary-crushers",
+  "model": "2PG1200×800",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "2-140 t/h (2.2-154 stph)"
+    },
+    {
+      "key": "Feed size",
+      "displayValue": "20-100 mm (0.8-3.9 in.)"
+    },
+    {
+      "key": "Motor power",
+      "displayValue": "≤15-110 kW (≤20-147 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "ton",
+          "conversionFactor": 1.10231,
+          "label": "ton"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "mtph"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/stationary-crushers/double-roller-crusher",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/stationary-crushers/double-roller-crusher",
+    "zh": "/zh/products/ore-processing/stationary-crushers/double-roller-crusher"
+  },
+  "overview": "The 2PG Series Double Roller Crusher from Zexin Mining represents advanced medium and fine crushing technology designed for materials of medium-low hardness. Featuring a dual roller compression design, this versatile crusher delivers exceptional output uniformity with minimal over-crushing while ensuring energy efficiency and stable operation. Perfect for coal processing, limestone production, clay materials, and refractory applications, the 2PG Series combines simple structure with reliable performance to maximize productivity while minimizing operational costs.",
+  "detailedDescription": "The 2PG Series double roller crusher introduces innovative dual-compression technology that transforms medium and fine crushing in material processing. This high-efficiency roll crusher creates uniform sized products through its precision gap control system, addressing common challenges with coal, limestone and clay while enhancing product quality. Its balanced approach to selective crushing delivers consistent results across diverse applications, making it valuable equipment for operations requiring precise sizing without compromising throughput or energy efficiency.",
+  "specifications": {
+    "title": "2PG Series Double Roller Crusher Specifications",
+    "note": "Custom configurations available upon request.",
+    "tableHeaders": [
+      "Model",
+      "Roll diameter(mm)",
+      "Roll length(mm)",
+      "Max feed size (mm)",
+      "Discharge size(mm)",
+      "Capacity(t/h)",
+      "Motor(kw)",
+      "Weight exclude motors(KG)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Roll diameter (in.)",
+      "Roll length (in.)",
+      "Max feed size (in.)",
+      "Discharge size (in.)",
+      "Capacity (stph)",
+      "Motor (hp)",
+      "Weight exclude motors (lb)"
+    ],
+    "tableData": [
+      [
+        "2PG-400x250",
+        "400",
+        "250",
+        "20-40",
+        "2-8",
+        "2-10",
+        "≤15",
+        "≤1430"
+      ],
+      [
+        "2PG-600x400",
+        "600",
+        "400",
+        "20-70",
+        "3-30",
+        "4-30",
+        "≤37",
+        "≤3600"
+      ],
+      [
+        "2PG-750x500",
+        "750",
+        "500",
+        "25-95",
+        "3-40",
+        "6-80",
+        "≤45",
+        "≤7650"
+      ],
+      [
+        "2PG-900x900",
+        "900",
+        "900",
+        "25-95",
+        "3-40",
+        "10-90",
+        "≤75",
+        "≤18400"
+      ],
+      [
+        "2PG-1000x800",
+        "1000",
+        "800",
+        "25-95",
+        "3-40",
+        "15-100",
+        "≤90",
+        "≤25200"
+      ],
+      [
+        "2PG-1200x800",
+        "1200",
+        "800",
+        "40-100",
+        "4-40",
+        "20-120",
+        "≤110",
+        "≤25900"
+      ],
+      [
+        "2PG-1200x1000",
+        "1200",
+        "1000",
+        "40-100",
+        "4-40",
+        "30-140",
+        "≤110",
+        "≤51000"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "2PG-400x250",
+        "15.7",
+        "9.8",
+        "0.8-1.6",
+        "0.08-0.31",
+        "2.2-11",
+        "≤20",
+        "≤3153"
+      ],
+      [
+        "2PG-600x400",
+        "23.6",
+        "15.7",
+        "0.8-2.8",
+        "0.12-1.18",
+        "4.4-33",
+        "≤50",
+        "≤7937"
+      ],
+      [
+        "2PG-750x500",
+        "29.5",
+        "19.7",
+        "1.0-3.7",
+        "0.12-1.57",
+        "6.6-88",
+        "≤60",
+        "≤16865"
+      ],
+      [
+        "2PG-900x900",
+        "35.4",
+        "35.4",
+        "1.0-3.7",
+        "0.12-1.57",
+        "11-99",
+        "≤101",
+        "≤40565"
+      ],
+      [
+        "2PG-1000x800",
+        "39.4",
+        "31.5",
+        "1.0-3.7",
+        "0.12-1.57",
+        "16.5-110",
+        "≤121",
+        "≤55556"
+      ],
+      [
+        "2PG-1200x800",
+        "47.2",
+        "31.5",
+        "1.6-3.9",
+        "0.16-1.57",
+        "22-132",
+        "≤147",
+        "≤57099"
+      ],
+      [
+        "2PG-1200x1000",
+        "47.2",
+        "39.4",
+        "1.6-3.9",
+        "0.16-1.57",
+        "33-154",
+        "≤147",
+        "≤112435"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "length",
+      "length",
+      "length",
+      "capacity",
+      "power",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Precision Gap Adjustment System",
+      "description": "Hydraulic adjustment mechanism allows precise gap control between rollers (2-40mm), providing exceptional product size consistency with variation less than ±5%. Operators can make rapid adjustments while monitoring production, reducing downtime and maximizing throughput for coal, limestone, and clay material processing."
+    },
+    {
+      "title": "Wear-resistant Roller Materials",
+      "description": "Premium alloy steel rollers with specialized heat treatment and surface hardening (HRC58-62) deliver exceptional durability, extending service life by 50-80% compared to standard components. The precision-machined tooth profiles maintain optimal crushing efficiency throughout the wear cycle, significantly reducing maintenance frequency and operational costs."
+    },
+    {
+      "title": "Comprehensive Overload Protection",
+      "description": "Advanced spring-hydraulic protection system instantly responds to uncrushable objects, automatically adjusting roller spacing to prevent catastrophic equipment damage. The intelligent safeguard mechanism requires no manual reset, allowing continuous operation in demanding mining applications while protecting critical drivetrain components."
+    },
+    {
+      "title": "Dual-motor Synchronized Drive",
+      "description": "Independent motor drives with electronic synchronization ensure perfectly balanced roller operation, eliminating torsional stress and vibration that commonly affect single-drive systems. This configuration reduces energy consumption by 15-20% while extending bearing and gearbox life, particularly beneficial for continuous high-capacity operations."
+    },
+    {
+      "title": "Superior Dust Containment Design",
+      "description": "Multi-stage sealing system with labyrinth design and pressure-compensated seals prevents fine dust escape, maintaining a cleaner working environment while minimizing material loss. This environmentally conscious design reduces airborne particulates by up to 85% compared to conventional crushers, improving workplace safety and reducing cleanup requirements."
+    },
+    {
+      "title": "Simplified Maintenance Access",
+      "description": "Modular construction with split-frame design allows quick access to wear components without complete disassembly. Maintenance personnel can inspect and replace roller segments in half the time required for conventional designs, with convenient access points that enable single-side maintenance for installations with limited space."
+    }
+  ],
+  "applications": {
+    "title": "Application Areas",
+    "items": [
+      {
+        "title": "Coal Processing",
+        "description": "Exceptional performance in coal crushing with specialized toothed roller configurations for different coal types, including anthracite, bituminous, and lignite. The controlled compression crushing action produces consistent product sizes with minimal fines generation, achieving throughput rates up to 600 t/h while maintaining precise particle size distribution. Particularly effective for power plant feed preparation and coking coal applications requiring minimal degradation."
+      },
+      {
+        "title": "Limestone & Building Materials",
+        "description": "Optimized for limestone, chalk, and medium-hardness minerals with hardened rollers that resist abrasive wear. Produces high-quality aggregates with excellent particle shape and consistent gradation for cement production, construction materials, and road building applications. The adjustable gap setting allows quick transitions between different product specifications without equipment modifications, ideal for operations producing multiple material grades."
+      },
+      {
+        "title": "Clay & Ceramic Material Processing",
+        "description": "Engineered specifically for clay, shale, and ceramic raw materials with custom roller surfaces that prevent material buildup and clogging. Delivers precise particle size reduction with minimal moisture transfer, preserving material characteristics essential for high-quality ceramic production. The controlled crushing action prevents overgrinding, maintaining optimal particle shape for downstream forming processes in brick, tile, and pottery manufacturing."
+      },
+      {
+        "title": "Refractory Materials",
+        "description": "Specialized configuration for processing refractory materials including fireclay, bauxite, and dolomite with precise gap control that maintains critical particle size distribution. The temperature-resistant components handle pre-heated materials up to 150°C, while the gentle crushing action preserves material structure and characteristics. Particularly valuable for high-value refractory production where material integrity and consistent sizing directly impact final product quality."
+      },
+      {
+        "title": "Salt & Chemical Processing",
+        "description": "Purpose-configured for salt, gypsum, and similar crystalline materials with corrosion-resistant components and specialized smooth roller surfaces. The controlled compression prevents excessive fines generation while delivering consistent sizing critical for chemical processing applications. The sealed design prevents moisture ingress and material escape, particularly important for hygroscopic materials and regulated chemical substances requiring controlled processing environments."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What types of materials can be efficiently processed with the 2PG Series Double Roller Crusher?",
+      "answer": "The 2PG Series is specifically designed for materials with Mohs hardness below 7 and compression strength up to 150 MPa. It efficiently processes coal (all types), limestone, gypsum, salt, clay, shale, and similar medium-soft materials. The crusher particularly excels with brittle, layered, or fibrous materials that benefit from the compressive crushing action rather than impact. Materials with moisture content up to 15% can be effectively processed without clogging issues, as it's less sensitive to wet and sticky materials compared to other crusher types. The versatile design allows for larger feed sizes, making it an optimal primary crusher for soft and medium hard rocks. It's not recommended for highly abrasive materials or extremely hard minerals exceeding 150 MPa, as these require specialized crushing solutions."
+    },
+    {
+      "question": "How does the double roller crusher compare to hammer crushers and jaw crushers?",
+      "answer": "The double roller crusher offers distinct advantages in specific applications: 1) More precise product size control with minimal overgrinding compared to hammer crushers; 2) Lower power consumption per ton (15-25% less than hammer crushers); 3) Significantly less dust and noise generation; 4) Better performance with layered or brittle materials; 5) Lower headroom requirements for installation. However, jaw crushers handle harder materials and larger feed sizes, while hammer crushers achieve higher reduction ratios. The double roller crusher is preferred when product size consistency, energy efficiency, and gentle crushing action are priorities, especially for coal, limestone, and clay materials where maintaining particle structure is important for downstream processes."
+    },
+    {
+      "question": "What maintenance schedule is recommended for the 2PG Series Double Roller Crusher?",
+      "answer": "Optimal performance requires a structured maintenance program: 1) Daily inspection of roller surfaces, gap settings, and material buildup; 2) Weekly lubrication of bearings and drive components according to the lubrication chart; 3) Monthly inspection of seals, hydraulic system pressure, and alignment verification; 4) Quarterly comprehensive inspection and preventive component replacement. Roller inspection or replacement interval varies by material: limestone (500-800 hours), coal (800-1200 hours), and clay (300-600 hours). The simplified access design allows roller inspection without complete disassembly, reducing maintenance downtime by up to 60% compared to traditional designs. We recommend stocking commonly replaced wear parts to minimize operational interruptions during scheduled maintenance."
+    },
+    {
+      "question": "How can I optimize the double roller crusher performance for different materials?",
+      "answer": "Performance optimization involves several key adjustments: 1) Set the proper gap distance based on desired product size and material characteristics (typically 1/10 to 1/6 of roller diameter for optimal efficiency); 2) Select appropriate roller surface patterns (smooth, corrugated, or toothed) based on material properties - toothed for coal and soft materials, corrugated for medium-hard materials, and smooth for brittle materials; 3) Maintain consistent feed distribution across the entire roller width for uniform wear and maximum throughput; 4) Adjust feed rate to maintain 70-80% of maximum capacity for optimal energy efficiency; 5) Consider material moisture content - slightly dampen very dry materials to reduce dust and improve compression; 6) Monitor power draw to prevent overloading; 7) Maintain proper tensioning on drive systems. These adjustments can increase throughput by 10-20% while reducing specific energy consumption."
+    },
+    {
+      "question": "What factors should be considered when selecting the right double roller crusher model?",
+      "answer": "Selection depends on several application-specific factors: 1) Material properties - hardness, abrasiveness, moisture content, and crushing characteristics; 2) Production requirements - desired capacity, feed size, and target product size; 3) Installation constraints - available space, headroom limitations, and foundation capabilities; 4) Operational considerations - continuous vs. intermittent operation, dust containment requirements, and noise restrictions; 5) Economic factors - initial investment, operational costs, and expected return on investment. The roller diameter primarily determines the maximum feed size (approximately 1/20 to 1/15 of roller diameter), while roller length determines capacity. For optimal production capacity, factors to consider include: compressive strength of crushed material (≤120 MPa), surface moisture (≤2%), material density (around 1.6 t/m³), and continuous, even feeding across the full roll length. With these conditions met, the qualification rate of discharge particle size should reach ≥80%."
+    },
+    {
+      "question": "What advantages does the 2PG Series offer for coal processing applications?",
+      "answer": "The 2PG Series delivers multiple benefits specifically for coal processing: 1) Controlled compression crushing that preserves coal structure and reduces fines generation by 25-40% compared to impact crushers; 2) Adjustable gap settings allowing rapid response to changing coal characteristics or quality requirements; 3) Effective handling of wet or slightly sticky coal with specialized tooth designs that prevent material buildup; 4) Lower power consumption per ton, typically 0.3-0.6 kWh/t depending on coal type; 5) Reduced dust generation through gentle crushing action and effective sealing, improving environmental compliance; 6) Precise product sizing critical for power generation efficiency and coking coal applications; 7) Ability to handle foreign materials through overload protection systems without catastrophic failure; 8) Lower maintenance costs with replaceable wear segments rather than complete roller replacement. These benefits make it particularly valuable for both mining operations and power plants requiring consistent coal sizing."
+    },
+    {
+      "question": "How does the hydraulic adjustment system work, and what maintenance does it require?",
+      "answer": "The hydraulic adjustment system utilizes precision hydraulic cylinders to position the movable roller, maintaining exact gap settings under varying load conditions. In case of overload incidents, the system reacts by retracting one roll and letting tramp metal or overloading material pass through the gap. This dramatically reduces the need for personnel to enter the crushing chamber, ensuring greater operator safety and reducing downtime. The system includes: 1) Dual-acting hydraulic cylinders with position feedback; 2) Accumulator-based pressure compensation that maintains consistent crushing force; 3) Overload relief valves that automatically protect against uncrushable objects; 4) Digital control interface for precise gap adjustments. Maintenance requirements include: 1) Monthly hydraulic fluid level and quality checks; 2) Quarterly inspection of seals and connections for leakage; 3) Annual hydraulic oil replacement and system flushing; 4) Biennial replacement of accumulator bladders and pressure sensors. When properly maintained, the hydraulic system typically provides 5+ years of reliable operation before requiring major overhaul."
+    },
+    {
+      "question": "What customization options are available for the 2PG Series Double Roller Crusher?",
+      "answer": "The 2PG Series offers extensive customization: 1) Roller surface patterns including smooth, corrugated, toothed, and hybrid designs optimized for specific materials; 2) Wear-resistant materials ranging from standard alloy steel to tungsten carbide inserts for highly abrasive applications; 3) Drive arrangements including direct-coupled, V-belt drive options to match specific operational requirements; 4) Feed and discharge arrangements tailored to existing plant layouts; 5) Control systems ranging from basic manual controls to fully automated operation with remote adjustment capability; 6) Dust containment systems from standard seals to negative pressure enclosures for hazardous materials; 7) Special corrosion-resistant materials for chemical processing applications; 8) High-temperature modifications for pre-heated materials; 9) Custom roller width-to-diameter ratios for specific capacity and sizing requirements. The same specification double roll crusher can form a series of products with different production capacity to meet the requirements of different users according to the standard discharge size range."
+    },
+    {
+      "question": "How does the double roller crusher contribute to energy efficiency and sustainability in processing operations?",
+      "answer": "The 2PG Series delivers significant sustainability benefits: 1) Energy efficiency - 15-25% lower specific power consumption (kWh/ton) compared to equivalent capacity hammer or impact crushers through direct compression rather than impact crushing; 2) Reduced dust generation - up to 85% less airborne particulates through controlled compression and effective sealing; 3) Lower noise emissions - typically 78-85dB compared to 95-105dB for impact crushers; 4) Extended component life - precision-engineered wear components last 50-80% longer, reducing resource consumption and waste generation; 5) Precise material sizing - minimizes overgrinding and reduces energy consumption in downstream processes; 6) Smaller installation footprint - compact design requires less construction material and space; 7) Lower water usage - dry processing eliminates need for water in dust suppression. These factors combine to reduce the overall environmental footprint while improving operational economics, supporting both sustainability goals and regulatory compliance for modern processing operations."
+    },
+    {
+      "question": "What safety features are incorporated into the 2PG Series Double Roller Crusher?",
+      "answer": "The 2PG Series prioritizes safety with multiple integrated systems: 1) Automated gap adjustment system that instantly responds to uncrushable materials without operator intervention, dramatically reducing the need for personnel to enter the crushing chamber; 2) Emergency stop systems accessible from all sides of the equipment; 3) Enclosed drive components with interlocked guards preventing access during operation; 4) Anti-runback devices preventing material ejection during power loss; 5) Vibration monitoring with automatic shutdown for abnormal operation detection; 6) Temperature sensors on critical bearings with warning and shutdown thresholds; 7) Zero-speed sensors confirming complete stoppage before guard interlocks release; 8) Maintenance lockout points built into electrical and hydraulic systems; 9) Noise suppression design keeping operation below 85dB at 1m distance. These safety features meet or exceed international standards, providing comprehensive protection for personnel while maintaining operational reliability."
+    }
+  ],
+  "seo": {
+    "title": "Double Roller Crusher | Medium-hard Material Processing Equipment",
+    "keywords": "double roller crusher,toothed roll crusher,smooth roll crusher,high-efficiency roll crusher,mining roll crusher,coal crusher,limestone crusher,medium-hard material crusher,fine crusher,secondary crusher,tertiary crusher,clay material crusher,refractory material crusher,energy-efficient crusher,selective crushing equipment,hydraulic gap adjustment,crusher with overload protection,low dust emission crusher,coal sizing equipment,uniform particle size crusher",
+    "description": "Zexin Mining's double roller crusher delivers 15% higher energy efficiency with precise size control. Ideal for small mines processing coal, limestone & clay materials with minimal fines generation."
+  },
+  "relatedProducts": [
+    "jaw-crusher",
+    "impact-crusher",
+    "hammer-crusher",
+    "hp-cone-crusher",
+    "cone-crusher"
+  ],
+  "imageSrcAlt": "Double Roller Crusher | Zexin Mining"
+}

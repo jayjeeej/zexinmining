@@ -1,0 +1,430 @@
+{
+  "id": "jaw-crusher",
+  "title": "Jaw Crusher",
+  "series": "ZPE Series High-Efficiency Jaw Crusher",
+  "imageSrc": "/images/products/stationary-crushers/jaw-crusher.jpg",
+  "productCategory": "Mining Crushing Equipment",
+  "subcategory": "stationary-crushers",
+  "model": "ZPE600×900",
+  "meta": [
+    {
+      "key": "Capacity",
+      "displayValue": "1-450 t/h (1.1-496 stph)"
+    },
+    {
+      "key": "Feed size",
+      "displayValue": "80-750 mm (3.1-29.5 in.)"
+    },
+    {
+      "key": "Motor power",
+      "displayValue": "5.5-110 kW (7.4-147.6 hp)"
+    }
+  ],
+  "unitConversion": {
+    "enabled": true,
+    "units": {
+      "length": [
+        {
+          "unit": "mm",
+          "conversionFactor": 1,
+          "label": "mm"
+        },
+        {
+          "unit": "in",
+          "conversionFactor": 0.0393701,
+          "label": "in."
+        }
+      ],
+      "area": [
+        {
+          "unit": "m²",
+          "conversionFactor": 1,
+          "label": "m²"
+        },
+        {
+          "unit": "ft²",
+          "conversionFactor": 10.7639,
+          "label": "ft²"
+        }
+      ],
+      "weight": [
+        {
+          "unit": "t",
+          "conversionFactor": 1,
+          "label": "t"
+        },
+        {
+          "unit": "ton",
+          "conversionFactor": 1.10231,
+          "label": "ton"
+        }
+      ],
+      "capacity": [
+        {
+          "unit": "t/h",
+          "conversionFactor": 1,
+          "label": "mtph"
+        },
+        {
+          "unit": "stph",
+          "conversionFactor": 1.10231,
+          "label": "stph"
+        }
+      ],
+      "power": [
+        {
+          "unit": "kW",
+          "conversionFactor": 1,
+          "label": "kW"
+        },
+        {
+          "unit": "hp",
+          "conversionFactor": 1.34102,
+          "label": "hp"
+        }
+      ]
+    },
+    "defaultUnit": "metric",
+    "uiConfig": {
+      "showUnitToggle": true,
+      "position": "top-right",
+      "labels": {
+        "toggle": "Unit Toggle",
+        "metric": "Metric",
+        "imperial": "Imperial"
+      }
+    }
+  },
+  "href": "/en/products/ore-processing/stationary-crushers/jaw-crusher",
+  "alternateLinks": {
+    "en": "/en/products/ore-processing/stationary-crushers/jaw-crusher",
+    "zh": "/zh/products/ore-processing/stationary-crushers/jaw-crusher"
+  },
+  "overview": "The ZPE Series Jaw Crusher from Zexin Mining represents the pinnacle of primary crushing technology, designed for the most demanding mining and aggregate production applications. With its robust construction and optimized crushing chamber, this versatile crusher delivers exceptional reduction ratios and throughput capacity while ensuring reliable operation even with the hardest materials. Perfect for limestone, granite, river pebbles, and various ores, the ZPE Series combines proven toggle-plate technology with modern efficiency features to maximize productivity while minimizing operational costs in quarries and mines of all sizes.",
+  "detailedDescription": "The ZPE Series primary jaw crusher introduces innovative crushing geometry that transforms coarse crushing processes in mining and aggregate production. This durable crusher establishes new standards for industrial crushing equipment through its unique chamber design, addressing common challenges with hard rock materials while enhancing operational flexibility. Its balanced approach to primary crushing delivers consistent results across varying feed conditions, making it valuable for small mines seeking reliable crushing performance without excessive capital investment.",
+  "specifications": {
+    "title": "ZPE Series Jaw Crusher Technical Parameters",
+    "note": "Custom configurations available upon request. Contact us for specific application requirements.",
+    "tableHeaders": [
+      "Model",
+      "Feed Opening (mm)",
+      "Max Feed Size (mm)",
+      "Discharge Range (mm)",
+      "Capacity (t/h)",
+      "Motor Power (kW)",
+      "Weight (t)"
+    ],
+    "tableHeadersImperial": [
+      "Model",
+      "Feed Opening (in.)",
+      "Max Feed Size (in.)",
+      "Discharge Range (in.)",
+      "Capacity (stph)",
+      "Motor Power (hp)",
+      "Weight (ton)"
+    ],
+    "tableData": [
+      [
+        "ZPE100×150",
+        "100×150",
+        "80",
+        "10-30",
+        "1-3",
+        "5.5",
+        "0.8"
+      ],
+      [
+        "ZPE150×250",
+        "150×250",
+        "120",
+        "10-40",
+        "5-12",
+        "15",
+        "1.5"
+      ],
+      [
+        "ZPE250×400",
+        "250×400",
+        "210",
+        "20-60",
+        "10-35",
+        "22",
+        "2.8"
+      ],
+      [
+        "ZPE250×750",
+        "250×750",
+        "210",
+        "20-70",
+        "15-50",
+        "30",
+        "5.8"
+      ],
+      [
+        "ZPE250×1200",
+        "250×1200",
+        "210",
+        "20-80",
+        "20-80",
+        "45",
+        "7.5"
+      ],
+      [
+        "ZPE400×600",
+        "400×600",
+        "340",
+        "40-100",
+        "20-60",
+        "30",
+        "6.5"
+      ],
+      [
+        "ZPE500×750",
+        "500×750",
+        "425",
+        "50-100",
+        "45-100",
+        "55",
+        "10.3"
+      ],
+      [
+        "ZPE600×900",
+        "600×900",
+        "500",
+        "65-160",
+        "60-130",
+        "75",
+        "16.5"
+      ],
+      [
+        "ZPE750×1060",
+        "750×1060",
+        "630",
+        "80-180",
+        "110-320",
+        "90",
+        "28"
+      ],
+      [
+        "ZPE900×1200",
+        "900×1200",
+        "750",
+        "95-225",
+        "220-450",
+        "110",
+        "52"
+      ]
+    ],
+    "tableDataImperial": [
+      [
+        "ZPE100×150",
+        "3.9×5.9",
+        "3.1",
+        "0.4-1.2",
+        "1.1-3.3",
+        "7.4",
+        "0.9"
+      ],
+      [
+        "ZPE150×250",
+        "5.9×9.8",
+        "4.7",
+        "0.4-1.6",
+        "5.5-13.2",
+        "20.1",
+        "1.7"
+      ],
+      [
+        "ZPE250×400",
+        "9.8×15.7",
+        "8.3",
+        "0.8-2.4",
+        "11-38.6",
+        "29.5",
+        "3.1"
+      ],
+      [
+        "ZPE250×750",
+        "9.8×29.5",
+        "8.3",
+        "0.8-2.8",
+        "16.5-55.1",
+        "40.2",
+        "6.4"
+      ],
+      [
+        "ZPE250×1200",
+        "9.8×47.2",
+        "8.3",
+        "0.8-3.1",
+        "22-88.2",
+        "60.3",
+        "8.3"
+      ],
+      [
+        "ZPE400×600",
+        "15.7×23.6",
+        "13.4",
+        "1.6-3.9",
+        "22-66.1",
+        "40.2",
+        "7.2"
+      ],
+      [
+        "ZPE500×750",
+        "19.7×29.5",
+        "16.7",
+        "2-3.9",
+        "49.6-110.2",
+        "73.8",
+        "11.4"
+      ],
+      [
+        "ZPE600×900",
+        "23.6×35.4",
+        "19.7",
+        "2.6-6.3",
+        "66.1-143.3",
+        "100.6",
+        "18.2"
+      ],
+      [
+        "ZPE750×1060",
+        "29.5×41.7",
+        "24.8",
+        "3.1-7.1",
+        "121.3-352.7",
+        "120.7",
+        "30.9"
+      ],
+      [
+        "ZPE900×1200",
+        "35.4×47.2",
+        "29.5",
+        "3.7-8.9",
+        "242.5-496.0",
+        "147.5",
+        "57.3"
+      ]
+    ],
+    "unitTypes": [
+      "",
+      "length",
+      "length",
+      "length",
+      "capacity",
+      "power",
+      "weight"
+    ]
+  },
+  "features": [
+    {
+      "title": "Deep Crushing Chamber Design",
+      "description": "Optimized V-shaped crushing cavity with curved jaw plates creates a three-stage crushing zone, ensuring materials are crushed multiple times before discharge. This design increases throughput by 15-25% while improving product shape and reducing dust generation. The deep chamber prevents material ejection and allows for higher reduction ratios (up to 8:1) compared to standard jaw crushers (4:1)."
+    },
+    {
+      "title": "Heavy-Duty Manganese Steel Jaw Plates",
+      "description": "Premium high-manganese steel (Mn18Cr2) jaw plates with specialized heat treatment achieve optimal hardness (HRC48-52) and toughness balance. The reversible tooth design and progressive tooth profile maximize service life (up to 1,500-2,000 hours for typical limestone) while maintaining crushing efficiency throughout the wear cycle, reducing maintenance frequency and operational costs by up to 30%."
+    },
+    {
+      "title": "Advanced Hydraulic Adjustment System",
+      "description": "Precision hydraulic gap adjustment mechanism allows operators to safely modify discharge settings under load conditions without stopping production. The system provides 5-300mm discharge setting range with +/-5mm accuracy, enabling rapid product size changes and optimization. Includes integrated automatic compensation for wear, maintaining consistent product sizing even as jaw plates wear throughout their service life."
+    },
+    {
+      "title": "Oversized Eccentric Shaft Assembly",
+      "description": "Forged alloy steel eccentric shaft (42CrMo) with 30% larger diameter than conventional designs, combined with spherical roller bearings offering 200% greater load capacity. This robust configuration ensures reliable operation even under severe shock loads, with proven durability in demanding mining applications processing hard rock materials like granite and basalt at maximum capacity."
+    },
+    {
+      "title": "Reinforced Single-Toggle Mechanism",
+      "description": "Advanced single-toggle design with optimized kinematics delivers 15% higher crushing force while consuming 12-18% less energy than comparable jaw crushers. The simplified mechanism reduces moving parts by 40%, dramatically improving reliability and decreasing maintenance requirements. Premium spherical plain bearings allow slight misalignment without damage, extending component life in dusty environments."
+    },
+    {
+      "title": "Intelligent Protection Systems",
+      "description": "Comprehensive safety features include hydraulic overload protection that instantly responds to uncrushable objects, spring tension systems that absorb impact loads, and automated lubrication systems monitoring critical bearing temperatures. The integrated flywheel design stores energy for consistent operation through material surges while providing inertial force that improves crushing efficiency for hard materials."
+    },
+    {
+      "title": "Modular Frame Construction",
+      "description": "Heavy-duty welded steel frame with integrated stress-relieving process eliminates structural weak points, while the modular design allows for easy transportation and installation even at remote mining sites. The split frame configuration provides rapid access to all wear components, reducing jaw plate replacement time by 40% compared to conventional designs and facilitating easier maintenance in confined spaces."
+    }
+  ],
+  "applications": {
+    "title": "Application Areas",
+    "items": [
+      {
+        "title": "Mining Operations",
+        "description": "Engineered for demanding underground and open-pit mining environments, processing various ores including gold, copper, iron, lead, zinc, and manganese. The robust construction withstands the harshest conditions while delivering reliable primary crushing at capacities up to 300 t/h, forming the critical first stage in mineral processing circuits. Specialized configurations available for specific ore types, with customized jaw profiles optimized for different mineral hardness and abrasiveness profiles."
+      },
+      {
+        "title": "Construction Materials",
+        "description": "Optimized for crushing limestone, gypsum, and other materials essential for building materials manufacturing with specialized tooth profiles that maintain ideal gradation while minimizing fines generation. The large feed opening accommodates blocks up to 750mm while producing precisely sized output for downstream processes. Energy-efficient operation reduces processing costs by up to 15%, with minimal dust generation and high availability crucial for continuous production operations."
+      },
+      {
+        "title": "Granite & Hard Rock Processing",
+        "description": "Specifically configured for high-strength materials (>250MPa compression strength) like granite, basalt, and quartzite with reinforced frame components and premium wear materials. The deep crushing chamber and optimized jaw geometry effectively process these challenging materials with minimal wear and maximum throughput. Produces high-quality aggregates with excellent shape for construction applications, road base, and concrete production while maintaining consistent size distribution essential for demanding specifications."
+      },
+      {
+        "title": "Highway Construction",
+        "description": "Tailored configurations for processing road base materials, with specialized wear-resistant jaw plates (>2000 hours service life). Precise discharge setting control produces commercial aggregates meeting strict size distribution requirements for infrastructure projects. The curved jaw design optimizes product shape, creating cubical aggregates preferred for asphalt and concrete applications, while minimal fines generation maximizes saleable product yield and reduces waste material."
+      },
+      {
+        "title": "Waste Recycling",
+        "description": "Specialized configurations for processing recycled concrete, asphalt, and construction demolition waste with reinforced jaw plates capable of handling embedded rebar and other tramp metal. The hydraulic overload protection system prevents equipment damage when encountering uncrushable objects common in recycling applications. Produces quality recycled aggregates suitable for road base, backfill, and secondary construction products, supporting circular economy initiatives while reducing landfill requirements."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What types of materials can be processed with the ZPE Series Jaw Crusher?",
+      "answer": "The ZPE Series is designed to process a wide range of materials with compressive strength up to 320MPa. It efficiently handles hard and abrasive materials including granite, basalt, river pebbles, and various ores (iron, copper, gold, etc.), as well as medium-hard materials like limestone, dolomite, and sandstone. The ZPE models excel at primary (coarse) crushing with feed sizes up to 750mm. The crusher is not recommended for extremely abrasive materials (>18% silica content) without special jaw configurations, or for sticky clays with high moisture content (>15%), as these require specialized crushing solutions."
+    },
+    {
+      "question": "How does the ZPE jaw crusher compare with impact crushers and cone crushers?",
+      "answer": "The ZPE jaw crusher offers distinct advantages in certain applications: 1) Greater ability to process hard, abrasive materials (up to 320MPa compression strength compared to 200MPa for typical impact crushers); 2) Lower operating costs for hard materials; 3) Larger feed size acceptance (up to 750mm); 4) Simpler maintenance requirements with fewer wearing parts; 5) Higher resistance to damage from uncrushable materials. However, impact crushers typically produce better-shaped products and higher reduction ratios, while cone crushers excel at producing finer, more cubical products with tighter size distribution. The jaw crusher is generally preferred as the primary crusher in processing circuits where material hardness, feed size, and operating costs are primary concerns, often working in conjunction with cone or impact crushers for secondary and tertiary stages."
+    },
+    {
+      "question": "What is the recommended maintenance schedule for the ZPE Series Jaw Crusher?",
+      "answer": "Optimal performance requires a structured maintenance program: 1) Daily inspection of jaw plates, toggle plate, bearings, and drive belts; 2) Weekly lubrication of all grease points, checking fastener tightness, and cleaning of dust accumulation; 3) Monthly verification of jaw plate wear patterns, discharge setting, and bearing temperatures; 4) Quarterly comprehensive inspection including toggle system alignment and wear measurement. Jaw plate rotation or replacement intervals vary by material: limestone (800-1,200 hours), granite (400-700 hours), and river pebbles (300-500 hours). The simplified maintenance design allows jaw plate replacement in 4-6 hours, and toggle plate replacement in 1-2 hours, minimizing downtime. We recommend keeping essential wear parts (jaw plates, toggle plates, bearings) in stock to minimize operational interruptions during scheduled maintenance."
+    },
+    {
+      "question": "How can I optimize the ZPE jaw crusher performance for different materials?",
+      "answer": "Performance optimization involves several key practices: 1) Select appropriate jaw plates (standard for general use, toothed for sticky materials, wavy for harder materials) based on feed properties; 2) Set proper closed-side setting (CSS) based on desired product size and material characteristics; 3) Maintain consistent and properly sized feed with even distribution across the chamber width; 4) Operate at 75-85% of rated capacity for optimal energy efficiency and product quality; 5) Install the proper drive system and flywheel configuration based on material hardness; 6) Ensure proper tension on V-belts; 7) Maintain clean, well-lubricated bearings and pivot points; 8) Consider pre-screening to remove fines before crushing. These practices can increase throughput by 10-25% while improving product quality and reducing energy consumption by 8-15% compared to sub-optimal configurations."
+    },
+    {
+      "question": "What factors should be considered when selecting the right ZPE model for specific applications?",
+      "answer": "Selection depends on several application-specific factors: 1) Material properties - hardness, abrasiveness, moisture content, and cohesiveness; 2) Production requirements - desired capacity, feed size, and target product size; 3) Installation constraints - available space, foundation requirements, and existing plant configuration; 4) Operational considerations - continuous vs. intermittent operation, maintenance capabilities, and spare parts availability; 5) Economic factors - initial investment, operating costs, and expected return on investment. The model number (e.g., ZPE600×900) indicates the feed opening dimensions in millimeters (width × length), which determines the maximum feed size (approximately 85% of the smaller dimension) and influences throughput capacity. Our application engineers provide comprehensive material testing and equipment selection services to ensure the optimal ZPE model for your specific requirements."
+    },
+    {
+      "question": "What are the advantages of the ZPE hydraulic adjustment and safety systems?",
+      "answer": "The ZPE Series incorporates several hydraulic systems offering significant advantages: 1) Hydraulic gap adjustment - allows safe, precise discharge setting changes under load conditions without stopping production, saving 1-2 hours per adjustment compared to mechanical systems; 2) Hydraulic overload protection - automatically detects uncrushable objects and temporarily increases the discharge opening, preventing catastrophic damage from tramp metal or excessive material loading; 3) Hydraulic toggle tension system - maintains optimal crushing pressure while absorbing shock loads, extending component life; 4) Automated wear compensation - gradually adjusts the discharge setting to maintain consistent product sizing as jaw plates wear; 5) Integrated safety interlocks - prevent operation during maintenance procedures. These systems reduce downtime by up to 30%, extend component life by 20-40%, and significantly improve operational safety, particularly valuable in remote mining operations where maintenance resources may be limited."
+    },
+    {
+      "question": "How does the ZPE Series contribute to energy efficiency in crushing operations?",
+      "answer": "The ZPE Series delivers energy efficiency through multiple design innovations: 1) Optimized kinematics in the toggle system reducing power requirements by 12-18% compared to conventional designs; 2) Deep crushing chamber with curved jaw plates improving material flow and reducing recirculation; 3) Premium bearings and drive components minimizing mechanical losses; 4) Balanced flywheel design storing energy during unloaded cycles; 5) Improved jaw profiles creating more efficient nipping action on particles; 6) Precise CSS control preventing over-crushing; 7) Automated control systems maintaining optimal feed rates. These features combine to reduce specific energy consumption to 0.5-0.8 kWh/ton for limestone and 0.8-1.3 kWh/ton for harder materials like granite, representing 15-25% savings over previous generation crushers. For a typical operation processing 200 t/h, this can translate to annual energy cost savings of $40,000-$70,000 while reducing carbon emissions."
+    },
+    {
+      "question": "What customization options are available for the ZPE Series Jaw Crusher?",
+      "answer": "The ZPE Series offers extensive customization: 1) Jaw plate designs including standard, wavy, toothed, and specialized profiles optimized for specific materials; 2) Alloy compositions ranging from standard manganese steel to premium chrome-moly alloys for extreme applications; 3) Drive systems including direct-coupled, V-belt, or hydraulic options; 4) Feed and discharge arrangements tailored to existing plant layouts; 5) Control systems from basic manual operation to fully automated monitoring with remote adjustment capability; 6) Dust containment from standard rubber curtains to enclosed negative-pressure systems; 7) Climate adaptations for extreme environments (-40°C to +50°C); 8) Specialized frames for mobile installations or height-restricted applications; 9) Custom hopper and feeder integrations. Our engineering team works directly with customers to develop application-specific configurations that optimize performance for unique operational requirements while ensuring compatibility with existing infrastructure."
+    },
+    {
+      "question": "How does the ZPE Series Jaw Crusher contribute to sustainability in mining and aggregate operations?",
+      "answer": "The ZPE Series supports sustainability through multiple features: 1) Energy efficiency - reduced power consumption decreases carbon footprint and operating costs; 2) Extended component life - premium materials and optimized designs reduce resource consumption and waste generation; 3) Precise product sizing - minimizes over-processing in downstream operations; 4) Effective dust containment - reduces environmental impact and improves workplace safety; 5) Reduced noise emissions - typically 85-90dB compared to 95-100dB for older designs; 6) Compatibility with recycled materials - supports circular economy initiatives; 7) Lower water usage - dry processing eliminates process water requirements; 8) Smaller installation footprint - reduces land use and construction material requirements; 9) Mobile deployment options - enabling site rehabilitation through temporary installations. These factors combine to support modern sustainability goals while improving operational economics, with typical reductions in carbon emissions of 15-25% per ton processed compared to previous generation equipment."
+    },
+    {
+      "question": "What are the installation and commissioning requirements for ZPE Series crushers?",
+      "answer": "Successful installation requires careful planning: 1) Foundation - properly designed reinforced concrete pad with anchor bolts, sized according to model specifications (typically 3× crusher weight capacity); 2) Accessibility - minimum clearance of 1m around all sides for maintenance, with overhead clearance for liner replacement; 3) Feed arrangement - properly designed hopper with grizzly feeder to regulate material flow and remove undersize particles; 4) Dust control - extraction points or suppression systems at transfer points; 5) Power supply - appropriate starter panel with overload protection, typically requiring 30-50% starting torque margin; 6) Discharge system - properly sized conveyor or chute to prevent material buildup. Commissioning includes verified level installation, drive alignment, lubrication system priming, and a standardized start-up procedure with incremental loading. Our technical team provides comprehensive installation guidelines and on-site commissioning supervision to ensure optimal performance from day one, typically requiring 3-5 days for complete setup and verification."
+    }
+  ],
+  "seo": {
+    "title": "Jaw Crusher | ZPE Primary Rock Crushing Equipment",
+    "keywords": "jaw crusher, ZPE jaw crusher, primary jaw crusher, hydraulic jaw crusher, high-efficiency jaw crusher, coarse jaw crusher, mining jaw crusher, limestone jaw crusher, granite jaw crusher, river pebble jaw crusher, coal jaw crusher, rock jaw crusher, industrial jaw crusher, crushing equipment, stone crusher, aggregate crusher, primary crusher, crusher manufacturer, durable crusher",
+    "description": "Zexin Mining's ZPE jaw crushers deliver 15% higher energy efficiency and 30% increased durability. Ideal for small mines processing limestone, granite and ores with optimal recovery rates."
+  },
+  "relatedProducts": [
+    "impact-crusher",
+    "hammer-crusher",
+    "hp-cone-crusher",
+    "cone-crusher",
+    "double-roller-crusher"
+  ],
+  "imageSrcAlt": "Jaw Crusher | Zexin Mining"
+}
