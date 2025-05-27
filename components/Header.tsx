@@ -456,7 +456,7 @@ SearchForm.displayName = 'SearchForm';
 // Logo组件分离，避免搜索输入时重新渲染
 const LogoComponent = React.memo(({ logo }: { logo: HeaderLogo }) => (
   <div className="flex items-center shrink-0" data-header-logo="">
-    <a href={logo.url} className="shrink-0">
+    <Link href={logo.url} className="shrink-0">
       <img 
         src={logo.src}
         alt={logo.alt}
@@ -465,7 +465,7 @@ const LogoComponent = React.memo(({ logo }: { logo: HeaderLogo }) => (
         className="h-10 sm:h-12 lg:h-[48px] w-auto shrink-0"
         style={{ objectFit: 'contain' }}
       />
-    </a>
+    </Link>
   </div>
 ));
 
@@ -1070,7 +1070,7 @@ export default function Header({ logo, items }: HeaderProps) {
           <div className="flex h-full items-center justify-between border-b border-gray-100 py-3 lg:py-0">
             {/* Logo */}
             <div className="flex items-center shrink-0" data-header-logo="">
-              <a 
+              <Link 
                 href={logo.url} 
                 className="shrink-0"
               >
@@ -1082,7 +1082,7 @@ export default function Header({ logo, items }: HeaderProps) {
                   className="h-10 sm:h-12 lg:h-[48px] w-auto shrink-0"
                   style={{ objectFit: 'contain' }}
                 />
-              </a>
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
