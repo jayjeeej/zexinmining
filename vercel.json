@@ -3,5 +3,18 @@
   "buildCommand": "next build",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/en/(.*)",
+      "dest": "/en/$1"
+    },
+    {
+      "src": "/zh/(.*)",
+      "dest": "/zh/$1"
+    }
+  ]
 } 
