@@ -2,8 +2,9 @@ const createNextIntlPlugin = require('next-intl/plugin');
 const fs = require('fs');
 const path = require('path');
 
-// 创建特定路由占位符
+// 创建特定路由占位符函数，将在webpack配置中调用
 function createRoutePlaceholders() {
+  console.log('创建路由占位符...');
   const routes = [
     'app/en/about',
     'app/zh/about',
@@ -26,8 +27,6 @@ const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // 在构建前创建必要的目录
-  onBuildStart: createRoutePlaceholders,
   output: 'standalone', // 确保使用standalone输出模式
   eslint: {
     // Warning: This allows production builds to successfully complete even if
@@ -169,8 +168,12 @@ const nextConfig = {
       beforeFiles: [
         // 确保/en/about和/zh/about路由正确处理
         {
-          source: '/:locale(en|zh)/about',
-          destination: '/:locale/about',
+          source: '/en/about',
+          destination: '/en/about',
+        },
+        {
+          source: '/zh/about',
+          destination: '/zh/about',
         },
         // 处理其他语言相关路由
         {
@@ -181,7 +184,20 @@ const nextConfig = {
     };
   },
   // 配置代码分割策略
-  webpack: (config, { isServer }) => {
+  webpack: (config, { dev, isServer }) => {
+    // 在webpack构建完成后运行
+    if (isServer && !dev) {
+      // 仅在服务端构建时创建路由占位符
+      config.plugins.push({
+        apply: (compiler) => {
+          compiler.hooks.afterEmit.tap('CreateRoutePlaceholders', (compilation) => {
+            // 构建完成后创建路由占位符
+            createRoutePlaceholders();
+          });
+        }
+      });
+    }
+    
     // 修改代码分割的大小阈值，创建更多小块
     config.optimization.splitChunks = {
       chunks: 'all',

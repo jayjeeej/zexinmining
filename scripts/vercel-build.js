@@ -32,72 +32,133 @@ const specialRoutes = [
 // 确保这些目录存在
 specialRoutes.forEach(ensureDirectoryExists);
 
-// 创建一个标记文件，表示此路由应该由Vercel处理
-const createRouteMarker = (dirPath) => {
-  const markerPath = path.join(dirPath, '.vercel_route_marker');
-  fs.writeFileSync(markerPath, '// This file helps Vercel identify this as a valid route', 'utf8');
-  console.log(`创建路由标记: ${markerPath}`);
-};
-
-// 为每个特殊路由创建标记
-specialRoutes.forEach(createRouteMarker);
-
-// 创建Lambda函数占位符
-// 这将创建一个简单的函数文件，确保Vercel能识别这个路由
-const createLambdaPlaceholder = (dirPath, locale, pageName) => {
-  const lambdaPath = path.join(dirPath, 'page.js');
-  
-  if (!fs.existsSync(lambdaPath)) {
-    const placeholderContent = `
-// 自动生成的Lambda函数占位符
-// 用于解决Vercel找不到路由的问题
-module.exports = {
-  default: function(req, res) {
-    // 重定向到正确的路由
-    res.setHeader('Location', '/${locale}/${pageName}');
-    res.statusCode = 307; // 临时重定向
-    res.end();
-  }
-};`;
+// 在App Router目录创建特定的静态页面占位文件
+// 这可以帮助Vercel正确识别这些路径
+const createStaticPageFile = (dirPath, locale) => {
+  // 创建page.html文件
+  const htmlPath = path.join(dirPath, 'page.html');
+  if (!fs.existsSync(htmlPath)) {
+    const pageContent = `
+<!DOCTYPE html>
+<html lang="${locale}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${locale === 'zh' ? '关于我们' : 'About Us'} | Zexin Mining</title>
+  <meta name="description" content="Static placeholder for ${locale === 'zh' ? '关于我们' : 'About Us'} page">
+  <meta http-equiv="refresh" content="0;url=/${locale}/about">
+</head>
+<body>
+  <p>Redirecting to <a href="/${locale}/about">/${locale}/about</a></p>
+</body>
+</html>`;
     
-    fs.writeFileSync(lambdaPath, placeholderContent, 'utf8');
-    console.log(`创建Lambda函数占位符: ${lambdaPath}`);
-  }
-};
-
-// 为特殊路由创建Lambda函数占位符
-createLambdaPlaceholder(path.join(buildDir, 'server/pages/en/about'), 'en', 'about');
-createLambdaPlaceholder(path.join(buildDir, 'server/pages/zh/about'), 'zh', 'about');
-
-// 复制国际化路由配置
-try {
-  // 复制中间件文件到构建目录，确保国际化路由正常工作
-  const middlewarePath = path.join(process.cwd(), 'middleware.js');
-  const middlewareDistPath = path.join(buildDir, 'server', 'middleware.js');
-  
-  if (fs.existsSync(middlewarePath) && !fs.existsSync(middlewareDistPath)) {
-    fs.copyFileSync(middlewarePath, middlewareDistPath);
-    console.log(`复制中间件文件到: ${middlewareDistPath}`);
+    fs.writeFileSync(htmlPath, pageContent, 'utf8');
+    console.log(`创建静态页面文件: ${htmlPath}`);
   }
   
-  // 确保i18n配置也被复制
-  const i18nDir = path.join(process.cwd(), 'i18n');
-  const i18nDistDir = path.join(buildDir, 'server', 'i18n');
-  
-  if (fs.existsSync(i18nDir) && !fs.existsSync(i18nDistDir)) {
-    ensureDirectoryExists(i18nDistDir);
-    // 复制i18n目录下的文件
-    fs.readdirSync(i18nDir).forEach(file => {
-      const srcPath = path.join(i18nDir, file);
-      const destPath = path.join(i18nDistDir, file);
-      if (fs.statSync(srcPath).isFile()) {
-        fs.copyFileSync(srcPath, destPath);
-        console.log(`复制i18n文件: ${destPath}`);
-      }
-    });
-  }
-} catch (err) {
-  console.warn(`警告: 复制国际化配置文件时出错: ${err.message}`);
+  // 创建route.js文件来处理服务端请求
+  const routePath = path.join(dirPath, 'route.js');
+  if (!fs.existsSync(routePath)) {
+    const routeContent = `
+// 自动生成的路由处理程序
+export function GET(request) {
+  return new Response(null, {
+    status: 307,
+    headers: {
+      'Location': '/${locale}/about'
+    }
+  });
 }
 
-console.log('Vercel构建钩子完成!'); 
+export const dynamic = 'force-static';
+export const revalidate = 3600;
+`;
+    
+    fs.writeFileSync(routePath, routeContent, 'utf8');
+    console.log(`创建路由处理文件: ${routePath}`);
+  }
+};
+
+// 为App Router目录创建静态页面文件
+createStaticPageFile(path.join(buildDir, 'server/app/en/about'), 'en');
+createStaticPageFile(path.join(buildDir, 'server/app/zh/about'), 'zh');
+
+// 在旧的Pages Router目录创建路由处理程序
+const createPagesRouteHandler = (dirPath, locale) => {
+  const indexPath = path.join(dirPath, 'index.js');
+  if (!fs.existsSync(indexPath)) {
+    const handlerContent = `
+// 自动生成的Pages Router处理程序
+export default function AboutPage(req, res) {
+  res.statusCode = 307;
+  res.setHeader('Location', '/${locale}/about');
+  res.end();
+}
+
+// 确保这是一个静态页面
+export const config = {
+  runtime: 'edge',
+};
+`;
+    
+    fs.writeFileSync(indexPath, handlerContent, 'utf8');
+    console.log(`创建Pages路由处理文件: ${indexPath}`);
+  }
+};
+
+// 为Pages Router目录创建路由处理程序
+createPagesRouteHandler(path.join(buildDir, 'server/pages/en/about'), 'en');
+createPagesRouteHandler(path.join(buildDir, 'server/pages/zh/about'), 'zh');
+
+// 复制中间件配置
+try {
+  const middlewareSource = path.join(process.cwd(), 'middleware.ts');
+  const middlewareJS = path.join(process.cwd(), 'middleware.js');
+  const middlewareDest = path.join(buildDir, 'server/middleware.js');
+  
+  // 先尝试TS文件，再尝试JS文件
+  if (fs.existsSync(middlewareSource)) {
+    console.log(`从${middlewareSource}复制中间件`);
+    fs.copyFileSync(middlewareSource, middlewareDest);
+  } else if (fs.existsSync(middlewareJS)) {
+    console.log(`从${middlewareJS}复制中间件`);
+    fs.copyFileSync(middlewareJS, middlewareDest);
+  } else {
+    console.log('未找到中间件文件');
+  }
+} catch (err) {
+  console.error(`复制中间件时出错: ${err.message}`);
+}
+
+console.log('Vercel构建钩子完成!');
+
+// 显示构建输出目录的结构，方便调试
+console.log('\n检查重要目录结构:');
+const checkDirectory = (dir, level = 0) => {
+  if (level > 3) return; // 限制递归深度
+  if (!fs.existsSync(dir)) return;
+  
+  const indent = '  '.repeat(level);
+  const files = fs.readdirSync(dir);
+  
+  files.forEach(file => {
+    const fullPath = path.join(dir, file);
+    const stats = fs.statSync(fullPath);
+    if (stats.isDirectory()) {
+      console.log(`${indent}[目录] ${file}/`);
+      checkDirectory(fullPath, level + 1);
+    } else {
+      console.log(`${indent}[文件] ${file} (${stats.size}字节)`);
+    }
+  });
+};
+
+// 检查关键目录
+[
+  path.join(buildDir, 'server/app/en/about'),
+  path.join(buildDir, 'server/app/zh/about')
+].forEach(dir => {
+  console.log(`\n检查目录: ${dir}`);
+  checkDirectory(dir);
+}); 

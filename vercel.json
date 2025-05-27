@@ -3,9 +3,5 @@
   "buildCommand": "next build",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "cleanUrls": true,
-  "rewrites": [
-    { "source": "/en/about", "destination": "/en/about" },
-    { "source": "/zh/about", "destination": "/zh/about" }
-  ]
+  "cleanUrls": true
 } 
