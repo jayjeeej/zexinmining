@@ -20,4 +20,11 @@
 
 - 修改构建脚本以删除客户端和服务器端的所有缓存文件
 - 增加查找和删除所有大型.pack文件的命令
-- 确保删除超过20MB的所有文件 
+- 确保删除超过20MB的所有文件
+
+[Cursor] 更改构建配置以解决Cloudflare Pages文件大小限制问题
+
+- 创建专用清理缓存脚本 (scripts/clean-cache.js)
+- 修改package.json将缓存清理集成到构建流程中
+- 更新Next.js配置使用静态导出模式 (output: 'export')
+- 禁用webpack缓存以防止生成大型.pack文件 

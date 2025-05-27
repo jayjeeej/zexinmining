@@ -142,6 +142,9 @@ const nextConfig = {
   },
   // 配置代码分割策略
   webpack: (config, { isServer }) => {
+    // 禁用缓存，避免生成大型缓存文件
+    config.cache = false;
+    
     // 修改代码分割的大小阈值，创建更小的块
     config.optimization.splitChunks = {
       chunks: 'all',
@@ -182,6 +185,7 @@ const nextConfig = {
           },
           mangle: true,
         },
+        exclude: /\/node_modules/,
       }),
     ];
     
@@ -200,8 +204,9 @@ const nextConfig = {
     
     return config;
   },
-  // 禁用输出追踪，减少构建大小
-  output: 'standalone',
+  // 使用输出模式作为静态站点，避免大型服务器端缓存文件
+  output: 'export',
+  distDir: 'out',
 }
 
 module.exports = withNextIntl(nextConfig) 
