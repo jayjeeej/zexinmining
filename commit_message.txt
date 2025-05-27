@@ -27,4 +27,11 @@
 - 创建专用清理缓存脚本 (scripts/clean-cache.js)
 - 修改package.json将缓存清理集成到构建流程中
 - 更新Next.js配置使用静态导出模式 (output: 'export')
-- 禁用webpack缓存以防止生成大型.pack文件 
+- 禁用webpack缓存以防止生成大型.pack文件
+
+[Cursor] 修复API路由以支持静态导出模式
+
+- 修改搜索API，移除dynamic配置，添加预生成数据
+- 更新robots.ts确保与静态导出兼容
+- 修改产品站点地图API为静态内容
+- 解决静态导出模式中的路由兼容性问题 

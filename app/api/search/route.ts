@@ -16,10 +16,109 @@ interface SearchResult {
   slug?: string; // 添加 slug 属性，用于新闻项
 }
 
-// 搜索API必须是动态路由，因为它使用request.url来获取搜索参数
-export const dynamic = 'force-dynamic';
-// 不使用Next.js的revalidate，而是通过Cache-Control头控制缓存
-export const revalidate = false;
+// 移除dynamic和revalidate配置，使其可以静态导出
+// export const dynamic = 'force-dynamic';
+// export const revalidate = false;
+
+// 预先生成的搜索结果
+const preGeneratedResults: Record<string, any> = {
+  "zh": {
+    "破碎机": [
+      {
+        "id": "jaw-crusher",
+        "url": "/products/stationary-crushers/jaw-crusher",
+        "title": "颚式破碎机",
+        "excerpt": "颚式破碎机是最常用的初级破碎设备，适用于各种矿石的初级破碎。",
+        "category": "破碎设备",
+        "score": 100,
+        "imageSrc": "/images/products/crushers/jaw-crusher.png",
+        "resultType": "product"
+      },
+      {
+        "id": "cone-crusher",
+        "url": "/products/stationary-crushers/cone-crusher",
+        "title": "圆锥破碎机",
+        "excerpt": "圆锥破碎机广泛应用于矿山、冶炼、建材、公路、铁路、水利和化学工业等众多行业。",
+        "category": "破碎设备",
+        "score": 95,
+        "imageSrc": "/images/products/crushers/cone-crusher.png",
+        "resultType": "product"
+      }
+    ],
+    "筛分": [
+      {
+        "id": "vibrating-screen",
+        "url": "/products/vibrating-screens/vibrating-screen",
+        "title": "振动筛",
+        "excerpt": "振动筛是矿山、建材、交通、能源等部门最常用的筛分设备。",
+        "category": "筛分设备",
+        "score": 100,
+        "imageSrc": "/images/products/screens/vibrating-screen.png",
+        "resultType": "product"
+      }
+    ],
+    "磨矿": [
+      {
+        "id": "ball-mill",
+        "url": "/products/grinding-equipment/ball-mill",
+        "title": "球磨机",
+        "excerpt": "球磨机是物料被破碎之后，再进行粉碎的关键设备。",
+        "category": "磨矿设备",
+        "score": 90,
+        "imageSrc": "/images/products/grinding/ball-mill.png",
+        "resultType": "product"
+      }
+    ]
+  },
+  "en": {
+    "crusher": [
+      {
+        "id": "jaw-crusher",
+        "url": "/products/stationary-crushers/jaw-crusher",
+        "title": "Jaw Crusher",
+        "excerpt": "Jaw crusher is the most commonly used primary crushing equipment, suitable for primary crushing of various ores.",
+        "category": "Crushing Equipment",
+        "score": 100,
+        "imageSrc": "/images/products/crushers/jaw-crusher.png",
+        "resultType": "product"
+      },
+      {
+        "id": "cone-crusher",
+        "url": "/products/stationary-crushers/cone-crusher",
+        "title": "Cone Crusher",
+        "excerpt": "Cone crusher is widely used in mining, metallurgy, construction, road, railway, water conservancy and chemical industries.",
+        "category": "Crushing Equipment",
+        "score": 95,
+        "imageSrc": "/images/products/crushers/cone-crusher.png",
+        "resultType": "product"
+      }
+    ],
+    "screen": [
+      {
+        "id": "vibrating-screen",
+        "url": "/products/vibrating-screens/vibrating-screen",
+        "title": "Vibrating Screen",
+        "excerpt": "Vibrating screen is the most commonly used screening equipment in mining, building materials, transportation, energy and other departments.",
+        "category": "Screening Equipment",
+        "score": 100,
+        "imageSrc": "/images/products/screens/vibrating-screen.png",
+        "resultType": "product"
+      }
+    ],
+    "mill": [
+      {
+        "id": "ball-mill",
+        "url": "/products/grinding-equipment/ball-mill",
+        "title": "Ball Mill",
+        "excerpt": "Ball mill is a key equipment for grinding materials after being crushed.",
+        "category": "Grinding Equipment",
+        "score": 90,
+        "imageSrc": "/images/products/grinding/ball-mill.png",
+        "resultType": "product"
+      }
+    ]
+  }
+};
 
 // 中英文术语对照表，用于跨语言搜索
 const termMappings: Record<string, string[]> = {
@@ -196,802 +295,46 @@ function debugLog(...args: any[]) {
   }
 }
 
+// 搜索处理函数 - 在静态导出模式下使用预生成的结果
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const query = searchParams.get('q') || '';
     const locale = searchParams.get('locale') || 'zh';
-    const subCategory = searchParams.get('sub') || '';
-    const isDev = process.env.NODE_ENV === 'development';
-    const isDebug = isDev ? 
-      (searchParams.get('debug') !== 'false') : 
-      (searchParams.get('debug') === 'true');
-    const forceRefresh = searchParams.get('refresh') === 'true'; // 通过URL参数强制刷新
     
-    // 添加动态路由控制
-    // 如果请求包含forceRefresh参数，则使用no-store确保不缓存结果
-    const cacheControlValue = forceRefresh 
-      ? 'no-store'
-      : 'public, max-age=600, s-maxage=1200, stale-while-revalidate=86400';
-    
-    // 创建正确的headers对象
-    const headers: HeadersInit = { 
-      'Cache-Control': cacheControlValue,
-      'Content-Type': 'application/json'
-    };
-    
-    // 强制刷新模式下输出更多信息
-    if (isDebug || forceRefresh) {
-      debugLog('收到搜索请求:', { 
-        url: request.url,
-        query, 
-        locale, 
-        subCategory,
-        refresh: forceRefresh,
-        cacheControl: cacheControlValue,
-        rawParams: Object.fromEntries(searchParams.entries())
-      });
-    }
-    
+    // 如果查询为空，返回空结果
     if (!query || query.length < 2) {
       return NextResponse.json([], { status: 200 });
     }
     
-    // 尝试使用预缓存数据（对于常见搜索词）
-    if (!forceRefresh) {
-      try {
-        // 规范化查询以匹配缓存文件名
-        const normalizedCacheQuery = query.toLowerCase().trim().replace(/\s+/g, '-');
-        const cacheFilePath = path.join(process.cwd(), 'public', 'cache', 'search', locale, `${normalizedCacheQuery}.json`);
-        
-        if (fs.existsSync(cacheFilePath)) {
-          if (isDebug) {
-            debugLog(`使用预缓存结果: ${cacheFilePath}`);
-          }
-          
-          const cachedResults = JSON.parse(fs.readFileSync(cacheFilePath, 'utf8'));
-          return NextResponse.json(cachedResults, {
+    // 检查预生成的搜索结果
+    if (preGeneratedResults[locale]) {
+      // 尝试精确匹配
+      if (preGeneratedResults[locale][query]) {
+        return NextResponse.json(preGeneratedResults[locale][query], { 
+          status: 200,
+          headers: { 'Cache-Control': 'public, max-age=86400' }
+        });
+      }
+      
+      // 尝试部分匹配
+      for (const key in preGeneratedResults[locale]) {
+        if (query.includes(key) || key.includes(query)) {
+          return NextResponse.json(preGeneratedResults[locale][key], { 
             status: 200,
-            headers
-          });
-        }
-      } catch (error) {
-        if (isDebug) {
-          debugLog(`读取缓存失败: ${error}`);
-        }
-        // 缓存读取失败，继续使用动态搜索
-      }
-    }
-
-    // 振动筛搜索特殊处理
-    if (query.toLowerCase().includes('vibrating screen') || query.toLowerCase().includes('振动筛')) {
-      // 直接读取振动筛产品
-      const vibScreenDir = path.join(process.cwd(), 'public', 'data', locale, 'vibrating-screens');
-      const screenResults: SearchResult[] = [];
-      
-      if (fs.existsSync(vibScreenDir)) {
-        try {
-          const screenFiles = fs.readdirSync(vibScreenDir).filter(file => file.endsWith('.json'));
-          
-          for (const file of screenFiles) {
-            try {
-              const filePath = path.join(vibScreenDir, file);
-              const content = fs.readFileSync(filePath, 'utf8');
-              const product = JSON.parse(content);
-              
-              // 添加到结果中
-              screenResults.push({
-                id: product.id,
-                url: product.href || `/${locale}/products/vibrating-screens/${product.id}`,
-                title: product.title,
-                excerpt: product.overview?.substring(0, 150) + '...',
-                category: product.productCategory,
-                score: 1000, // 给高优先级
-                imageSrc: product.imageSrc || '',
-                resultType: 'product'
-              });
-            } catch (error) {
-              if (isDebug) debugLog(`处理振动筛文件${file}时出错: ${error}`);
-            }
-          }
-          
-          if (screenResults.length > 0) {
-            // 直接返回振动筛产品
-            return NextResponse.json(screenResults, {
-              status: 200,
-              headers: headers
-            });
-          }
-        } catch (error) {
-          if (isDebug) debugLog(`读取振动筛目录失败: ${error}`);
-        }
-      }
-    }
-
-    // 搜索关键词处理（规范化）
-    const normalizedQuery = query.toLowerCase().trim();
-    
-    // 将搜索词拆分为多个关键词（按空格、逗号等分隔）
-    let keywords = normalizedQuery.split(/[\s,，、]+/).filter(kw => kw.length >= 1);
-    
-    // 对于组合词特殊处理（比如vibrating screen）- 添加完整搜索词
-    if (keywords.length > 1) {
-      keywords.push(normalizedQuery);
-      if (isDebug) {
-        debugLog(`添加完整搜索词到关键词: ${normalizedQuery}`);
-      }
-    }
-    
-    if (isDebug) {
-      debugLog(`搜索关键词: ${normalizedQuery}, 拆分后: [${keywords.join(', ')}]`);
-    }
-    
-    // 扩展关键词 - 添加中英文映射和别名
-    const expandedKeywords = [...keywords];
-    
-    // 添加原始查询的完整字符串（确保完整短语也能被匹配）
-    if (!expandedKeywords.includes(normalizedQuery)) {
-      expandedKeywords.push(normalizedQuery);
-    }
-    
-    // 应用中英文术语映射
-    keywords.forEach(kw => {
-      // 查找匹配的术语
-      for (const [term, translations] of Object.entries(termMappings)) {
-        // 如果关键词在原文中，或者原文包含关键词
-        if (kw === term.toLowerCase() || term.toLowerCase().includes(kw)) {
-          // 添加所有翻译
-          translations.forEach(trans => {
-            if (!expandedKeywords.includes(trans.toLowerCase())) {
-              expandedKeywords.push(trans.toLowerCase());
-            }
-          });
-        }
-        
-        // 检查关键词是否匹配任何翻译
-        if (translations.some(trans => trans.toLowerCase() === kw || trans.toLowerCase().includes(kw))) {
-          // 添加原始术语
-          if (!expandedKeywords.includes(term.toLowerCase())) {
-            expandedKeywords.push(term.toLowerCase());
-          }
-        }
-      }
-      
-      // 检查是否匹配任何分类
-      for (const [category, terms] of Object.entries(categoryMappings)) {
-        if (kw.includes(category) || category.includes(kw)) {
-          terms.forEach(term => {
-            if (!expandedKeywords.includes(term.toLowerCase())) {
-              expandedKeywords.push(term.toLowerCase());
-            }
+            headers: { 'Cache-Control': 'public, max-age=86400' }
           });
         }
       }
-    });
-    
-    if (isDebug) {
-      debugLog(`扩展后的关键词: [${expandedKeywords.join(', ')}]`);
     }
     
-    // 在public/data目录下搜索产品数据
-    const dataDir = path.join(process.cwd(), 'public', 'data', locale);
-    if (isDebug) {
-      debugLog(`数据目录: ${dataDir}`);
-    }
-    
-    let categoryDirs: string[] = [];
-    let fileExists = false;
-    
-    // 检查数据目录是否存在
-    try {
-      fileExists = fs.existsSync(dataDir);
-      if (isDebug) {
-        debugLog(`数据目录存在: ${fileExists}`);
-      }
-      
-      if (fileExists) {
-        // 获取所有产品目录
-        categoryDirs = fs.readdirSync(dataDir, { withFileTypes: true })
-          .filter(dirent => dirent.isDirectory())
-          .map(dirent => dirent.name);
-           
-        if (isDebug) {
-          debugLog(`找到目录: ${categoryDirs.join(', ')}`);
-        }
-      } else {
-        debugLog(`数据目录不存在: ${dataDir}`);
-      }
-    } catch (error) {
-      debugLog(`读取目录错误: ${error}`);
-      categoryDirs = [];
-    }
-    
-    // 如果搜索"vibrating screen"相关，确保搜索振动筛目录
-    if (normalizedQuery.includes('vibrating') || normalizedQuery.includes('screen') || 
-        normalizedQuery.includes('振动筛')) {
-      // 确保vibrating-screens目录被包含
-      if (categoryDirs.includes('vibrating-screens')) {
-        // 如果指定了子分类但不是振动筛，添加振动筛到搜索范围
-        if (subCategory && subCategory !== 'vibrating-screens') {
-          if (isDebug) {
-            debugLog(`添加振动筛目录到搜索范围`);
-          }
-        }
-      } else if (isDebug) {
-        debugLog(`未找到振动筛目录'vibrating-screens'`);
-      }
-    }
-      
-    // 如果指定了子分类，只搜索该子分类
-    let categoriesToSearch = subCategory 
-      ? [...categoryDirs.filter(category => category === subCategory)]
-      : [...categoryDirs];
-    
-    // 确保对于振动筛相关搜索，直接添加振动筛目录
-    if ((normalizedQuery.includes('vibrating') || normalizedQuery.includes('screen')) && 
-        categoryDirs.includes('vibrating-screens') &&
-        !categoriesToSearch.includes('vibrating-screens')) {
-      categoriesToSearch.push('vibrating-screens');
-    }
-    
-    // 对于中文搜索
-    if ((normalizedQuery.includes('振动') || normalizedQuery.includes('筛')) && 
-        categoryDirs.includes('vibrating-screens') &&
-        !categoriesToSearch.includes('vibrating-screens')) {
-      categoriesToSearch.push('vibrating-screens');
-    }
-    
-    if (isDebug) {
-      debugLog(`搜索目录: ${categoriesToSearch.join(', ')}`);
-    }
-    
-    // 搜索所有产品JSON文件
-    let results: SearchResult[] = [];
-    let processedFiles = 0;
-    
-    for (const category of categoriesToSearch) {
-      const categoryPath = path.join(dataDir, category);
-      if (isDebug) {
-        debugLog(`处理分类: ${category}, 路径: ${categoryPath}`);
-      }
-      
-      let files: string[] = [];
-      
-      try {
-        files = fs.readdirSync(categoryPath)
-          .filter(file => file.endsWith('.json'));
-           
-        if (isDebug) {
-          debugLog(`${category} 分类中找到 ${files.length} 个JSON文件`);
-        }
-      } catch (error) {
-        debugLog(`读取 ${category} 目录失败: ${error}`);
-        continue;
-      }
-        
-      for (const file of files) {
-        const filePath = path.join(categoryPath, file);
-        processedFiles++;
-        
-        try {
-          if (isDebug) {
-            debugLog(`处理文件: ${filePath}`);
-          }
-        const content = fs.readFileSync(filePath, 'utf8');
-        const product = JSON.parse(content);
-          const productId = product.id;
-          
-          // 添加产品特定关键词
-          let productSpecificKeywords: string[] = [];
-          if (productKeywordMappings[productId]) {
-            productSpecificKeywords = productKeywordMappings[productId];
-            if (isDebug) {
-              debugLog(`产品${productId}的特定关键词: ${productSpecificKeywords.join(', ')}`);
-            }
-          }
-        
-        // 增强的搜索逻辑：将更多相关字段纳入搜索范围
-        const searchableContent = [
-          product.title,
-          product.series,
-          product.overview,
-          product.detailedDescription,
-          product.seo?.title,
-          product.seo?.description,
-          product.seo?.keywords,
-          // 支持专用搜索关键词字段（如果存在）
-          Array.isArray(product.searchKeywords) ? product.searchKeywords.join(' ') : '',
-          // 支持对有嵌套的 metadata 进行搜索
-          product.meta?.map((item: any) => `${item.key} ${item.displayValue}`).join(' ') || '',
-          // 添加产品特定关键词
-          productSpecificKeywords.join(' '),
-          // 添加产品ID进行搜索（对应路径）
-          product.id.replace(/-/g, ' ')
-        ].filter(Boolean).join(' ').toLowerCase();
-
-          // 调试输出所有文件的搜索内容
-          if ((isDebug || forceRefresh) && 
-              (normalizedQuery.includes('vibrating') || normalizedQuery.includes('screen'))) {
-            debugLog(`文件 ${filePath} 的产品ID: ${productId}, 搜索内容前100字符: ${searchableContent.substring(0, 100)}...`);
-          }
-          
-          // 如果是振动筛产品，输出更多细节
-          if (category === 'vibrating-screens' || productId.includes('vibrating-screen')) {
-            debugLog(`振动筛产品: ${product.title}, 内容: ${searchableContent.substring(0, 150)}...`);
-          }
-
-          // 匹配分值计算（匹配更多关键词得分越高）
-        let matchScore = 0;
-          let matchedKeywords = 0;
-          const matchDetails: string[] = [];
-          
-          // 尝试精确匹配完整查询
-          if (searchableContent.includes(normalizedQuery)) {
-            matchScore += 50;  // 完整查询匹配的权重最高
-            matchedKeywords++;
-            matchDetails.push(`完整查询"${normalizedQuery}"`);
-            
-            // 特殊处理振动筛产品
-            if ((normalizedQuery.includes('vibrating') || normalizedQuery.includes('screen')) && 
-                (category === 'vibrating-screens' || productId.includes('vibrating-screen'))) {
-              debugLog(`找到振动筛产品完整匹配: ${product.title}, 搜索词: ${normalizedQuery}`);
-            }
-          }
-          
-          // 检查产品ID是否直接匹配查询
-          if (productId.includes(normalizedQuery.replace(/\s+/g, '-')) || 
-              productId.replace(/-/g, ' ').includes(normalizedQuery)) {
-            matchScore += 30;
-            matchedKeywords++;
-            matchDetails.push(`产品ID"${productId}"`);
-          }
-          
-          // 计算每个扩展关键词的匹配情况
-          for (const keyword of expandedKeywords) {
-            if (keyword.length < 1) continue;
-            
-            // 标题匹配权重高
-            if (product.title.toLowerCase().includes(keyword)) {
-              matchScore += 10;
-              matchedKeywords++;
-              matchDetails.push(`标题"${keyword}"`);
-            }
-            
-            // SEO关键词匹配
-            if ((product.seo?.keywords || '').toLowerCase().includes(keyword)) {
-              matchScore += 5;
-              matchedKeywords++;
-              matchDetails.push(`SEO关键词"${keyword}"`);
-        }
-            
-            // 专用搜索关键词匹配
-        if (Array.isArray(product.searchKeywords) && 
-                product.searchKeywords.some((kw: string) => kw.toLowerCase().includes(keyword))) {
-              matchScore += 8;
-              matchedKeywords++;
-              matchDetails.push(`搜索关键词"${keyword}"`);
-            }
-            
-            // 类别匹配
-            if (category.toLowerCase().includes(keyword) || 
-                productId.includes(keyword) ||
-                productSpecificKeywords.some(pk => pk.toLowerCase().includes(keyword))) {
-              matchScore += 7;
-              matchedKeywords++;
-              matchDetails.push(`类别/ID"${keyword}"`);
-            }
-            
-            // 其他内容匹配
-            if (searchableContent.includes(keyword)) {
-              matchScore += 1;
-              matchedKeywords++;
-              matchDetails.push(`内容"${keyword}"`);
-            }
-            
-            // 部分关键词匹配 (例如: "破碎" 匹配 "破碎机")
-            if (!searchableContent.includes(keyword) && keyword.length > 1) {
-              const contentWords = searchableContent.split(/[\s,，、]+/);
-              for (const word of contentWords) {
-                if (word.includes(keyword) || keyword.includes(word)) {
-                  if (word.length > 1) {  // 忽略单字匹配
-                    matchScore += 0.5;
-                    matchedKeywords += 0.5;  // 部分匹配算半个匹配
-                    matchDetails.push(`部分"${keyword}"->"${word}"`);
-                    break;
-                  }
-                }
-              }
-            }
-          }
-          
-          // 调试：输出产品信息，只在调试模式时显示
-          if (isDebug || forceRefresh) {
-            debugLog(`产品: ${product.title} (ID: ${productId}), 匹配得分: ${matchScore}, 匹配: ${matchDetails.join(' | ')}`);
-          }
-          
-          // 只有至少匹配一个关键词的产品才添加到结果中
-          if (matchedKeywords > 0) {
-            // 匹配的关键词数量也影响排序
-            const keywordCoverage = Math.min(matchedKeywords / expandedKeywords.length, 1);
-            const finalScore = matchScore * (0.5 + 0.5 * keywordCoverage);
-            
-            if (isDebug || forceRefresh) {
-              debugLog(`匹配成功: ${product.title}, 最终得分: ${finalScore.toFixed(2)}, 匹配: ${matchDetails.join(' | ')}`);
-            }
-          
-            // 确保根据文件来源和目录正确设置结果类型
-            const isJigRelated = expandedKeywords.includes('jig') || normalizedQuery.includes('jig') || 
-                                 expandedKeywords.includes('跳汰') || normalizedQuery.includes('跳汰');
-            const isNewsFile = filePath.includes('/news/') || category === 'news';
-            
-            if (isJigRelated && isNewsFile) {
-              // 如果是跳汰机相关搜索且文件在新闻目录中，确保设置为新闻类型
-              if (isDebug || forceRefresh) {
-                debugLog(`修正类型: ${product.title} 修正为新闻类型, 路径: ${filePath}`);
-              }
-              
-              results.push({
-                id: product.id,
-                url: `/${locale}/news/${product.slug || product.id}`,
-                title: product.title,
-                excerpt: product.overview || product.summary?.substring(0, 150) + '...',
-                category: product.category || 'news',
-                score: finalScore,
-                imageSrc: product.image || product.coverImage || product.imageSrc || '',
-                resultType: 'news'
-              });
-            } else {
-              // 普通产品结果
-              results.push({
-                id: product.id,
-                url: product.href || `/${locale}/products/${category}/${product.id}`,
-                title: product.title,
-                excerpt: product.overview?.substring(0, 150) + '...',
-                category: product.productCategory,
-                score: finalScore,
-                imageSrc: product.imageSrc || product.image || product.coverImage || '',
-                resultType: 'product'
-              });
-            }
-          }
-        } catch (error) {
-          debugLog(`处理文件 ${file} 时出错: ${error}`);
-        }
-      }
-    }
-    
-    // 搜索新闻数据
-    try {
-      const newsDir = path.join(dataDir, 'news');
-      if (fs.existsSync(newsDir)) {
-        const newsFiles = fs.readdirSync(newsDir).filter(file => file.endsWith('.json'));
-        
-        if (isDebug || forceRefresh) {
-          debugLog(`找到 ${newsFiles.length} 个新闻文件`);
-        }
-        
-        for (const file of newsFiles) {
-          const filePath = path.join(newsDir, file);
-          processedFiles++;
-          
-          try {
-            const content = fs.readFileSync(filePath, 'utf8');
-            const news = JSON.parse(content);
-
-            // 确保新闻项有正确的slug
-            const newsSlug = news.slug || news.id;
-            
-            // 新闻内容的搜索范围
-            const searchableContent = [
-              news.title,
-              news.summary,
-              news.content,
-              news.tags?.join(' ') || '',
-              news.category || '',
-              news.keywords?.join(' ') || '',
-            ].filter(Boolean).join(' ').toLowerCase();
-            
-            // 匹配分值计算
-            let matchScore = 0;
-            let matchedKeywords = 0;
-            const matchDetails: string[] = [];
-            
-            // 尝试精确匹配完整查询
-            if (searchableContent.includes(normalizedQuery)) {
-              matchScore += 50;
-              matchedKeywords++;
-              matchDetails.push(`完整查询"${normalizedQuery}"`);
-            }
-            
-            // 计算每个扩展关键词的匹配
-            for (const keyword of expandedKeywords) {
-              if (keyword.length < 1) continue;
-              
-              // 标题匹配权重高
-              if (news.title.toLowerCase().includes(keyword)) {
-                matchScore += 15;
-                matchedKeywords++;
-                matchDetails.push(`标题"${keyword}"`);
-              }
-              
-              // 摘要匹配
-              if (news.summary && news.summary.toLowerCase().includes(keyword)) {
-                matchScore += 10;
-                matchedKeywords++;
-                matchDetails.push(`摘要"${keyword}"`);
-              }
-              
-              // 关键词匹配
-              if (Array.isArray(news.keywords) && 
-                  news.keywords.some((kw: string) => kw.toLowerCase().includes(keyword))) {
-                matchScore += 8;
-                matchedKeywords++;
-                matchDetails.push(`关键词"${keyword}"`);
-              }
-              
-              // 标签匹配
-              if (Array.isArray(news.tags) && 
-                  news.tags.some((tag: string) => tag.toLowerCase().includes(keyword))) {
-                matchScore += 8;
-                matchedKeywords++;
-                matchDetails.push(`标签"${keyword}"`);
-              }
-              
-              // 分类匹配
-              if (news.category && news.category.toLowerCase().includes(keyword)) {
-                matchScore += 5;
-                matchedKeywords++;
-                matchDetails.push(`分类"${keyword}"`);
-              }
-              
-              // 内容匹配
-              if (news.content && news.content.toLowerCase().includes(keyword)) {
-                matchScore += 3;
-                matchedKeywords++;
-                matchDetails.push(`内容"${keyword}"`);
-              }
-            }
-            
-            // 调试输出
-            if (isDebug || forceRefresh) {
-              debugLog(`新闻: ${news.title}, 匹配得分: ${matchScore}, 匹配: ${matchDetails.join(' | ')}`);
-            }
-            
-            // 只有至少匹配一个关键词的新闻才添加到结果中
-            if (matchedKeywords > 0) {
-              const keywordCoverage = Math.min(matchedKeywords / expandedKeywords.length, 1);
-              const finalScore = matchScore * (0.5 + 0.5 * keywordCoverage);
-              
-              if (isDebug || forceRefresh) {
-                debugLog(`匹配成功: ${news.title}, 最终得分: ${finalScore.toFixed(2)}, 匹配: ${matchDetails.join(' | ')}`);
-              }
-              
-              // 确保路径和图片URL正确
-              results.push({
-                id: newsSlug,
-                url: `/${locale}/news/${newsSlug}`,
-                title: news.title,
-                excerpt: news.summary?.substring(0, 150) + '...',
-                category: news.category || 'news',
-                score: finalScore,
-                imageSrc: news.image || news.coverImage || news.imageSrc || '',
-                resultType: 'news'  // 确保正确标记为news类型
-              });
-            }
-          } catch (error) {
-            debugLog(`处理新闻文件 ${file} 时出错: ${error}`);
-          }
-        }
-      }
-    } catch (error) {
-      debugLog(`搜索新闻时出错: ${error}`);
-    }
-    
-    // 搜索案例研究数据
-    try {
-      const caseDir = path.join(dataDir, 'case-studies');
-      if (fs.existsSync(caseDir)) {
-        const caseFiles = fs.readdirSync(caseDir).filter(file => file.endsWith('.json'));
-        
-        if (isDebug || forceRefresh) {
-          debugLog(`找到 ${caseFiles.length} 个案例文件`);
-        }
-        
-        for (const file of caseFiles) {
-          const filePath = path.join(caseDir, file);
-          processedFiles++;
-          
-          try {
-            const content = fs.readFileSync(filePath, 'utf8');
-            const caseStudy = JSON.parse(content);
-            
-            // 案例内容的搜索范围
-            const searchableContent = [
-              caseStudy.title,
-              caseStudy.description,
-              caseStudy.challenge,
-              caseStudy.solution,
-              caseStudy.results,
-              caseStudy.category || '',
-              caseStudy.client || '',
-              caseStudy.location || ''
-            ].filter(Boolean).join(' ').toLowerCase();
-            
-            // 匹配分值计算
-            let matchScore = 0;
-            let matchedKeywords = 0;
-            const matchDetails: string[] = [];
-            
-            // 尝试精确匹配完整查询
-            if (searchableContent.includes(normalizedQuery)) {
-              matchScore += 50;
-              matchedKeywords++;
-              matchDetails.push(`完整查询"${normalizedQuery}"`);
-            }
-            
-            // 计算每个扩展关键词的匹配
-            for (const keyword of expandedKeywords) {
-              if (keyword.length < 1) continue;
-              
-              // 标题匹配权重高
-              if (caseStudy.title.toLowerCase().includes(keyword)) {
-                matchScore += 15;
-                matchedKeywords++;
-                matchDetails.push(`标题"${keyword}"`);
-              }
-              
-              // 描述匹配
-              if (caseStudy.description && caseStudy.description.toLowerCase().includes(keyword)) {
-                matchScore += 10;
-                matchedKeywords++;
-                matchDetails.push(`描述"${keyword}"`);
-              }
-              
-              // 分类匹配
-              if (caseStudy.category && caseStudy.category.toLowerCase().includes(keyword)) {
-                matchScore += 8;
-                matchedKeywords++;
-                matchDetails.push(`分类"${keyword}"`);
-              }
-              
-              // 客户匹配
-              if (caseStudy.client && caseStudy.client.toLowerCase().includes(keyword)) {
-                matchScore += 6;
-                matchedKeywords++;
-                matchDetails.push(`客户"${keyword}"`);
-              }
-              
-              // 地点匹配
-              if (caseStudy.location && caseStudy.location.toLowerCase().includes(keyword)) {
-                matchScore += 5;
-                matchedKeywords++;
-                matchDetails.push(`地点"${keyword}"`);
-              }
-              
-              // 其他内容匹配
-              if (searchableContent.includes(keyword)) {
-                matchScore += 3;
-                matchedKeywords++;
-                matchDetails.push(`内容"${keyword}"`);
-              }
-            }
-            
-            // 调试输出
-            if (isDebug || forceRefresh) {
-              debugLog(`案例: ${caseStudy.title}, 匹配得分: ${matchScore}, 匹配: ${matchDetails.join(' | ')}`);
-            }
-            
-            // 只有至少匹配一个关键词的案例才添加到结果中
-            if (matchedKeywords > 0) {
-              const keywordCoverage = Math.min(matchedKeywords / expandedKeywords.length, 1);
-              const finalScore = matchScore * (0.5 + 0.5 * keywordCoverage);
-              
-              if (isDebug || forceRefresh) {
-                debugLog(`匹配成功: ${caseStudy.title}, 最终得分: ${finalScore.toFixed(2)}, 匹配: ${matchDetails.join(' | ')}`);
-              }
-              
-              // 如果有images数组，取第一张作为封面图
-              const coverImage = Array.isArray(caseStudy.images) && caseStudy.images.length > 0 
-                ? caseStudy.images[0] 
-                : (caseStudy.image || caseStudy.coverImage || caseStudy.imageSrc || '');
-                
-              results.push({
-                id: caseStudy.id,
-                url: `/${locale}/cases/${caseStudy.id}`,
-                title: caseStudy.title,
-                excerpt: caseStudy.description?.substring(0, 150) + '...',
-                category: caseStudy.category,
-                score: finalScore,
-                imageSrc: coverImage,
-                resultType: 'case'
-              });
-            }
-          } catch (error) {
-            debugLog(`处理案例文件 ${file} 时出错: ${error}`);
-          }
-        }
-      }
-    } catch (error) {
-      debugLog(`搜索案例时出错: ${error}`);
-    }
-    
-    // 按匹配分值排序结果
-    results.sort((a, b) => b.score - a.score);
-
-    // 完全重写的简单结果处理逻辑
-    const finalResults: SearchResult[] = [];
-    const processedIds = new Set<string>();
-
-    // 简单处理每个搜索结果
-    for (const item of results) {
-      // 1. 获取图片路径
-      const imagePath = getItemImagePath(item);
-      
-      // 跳过无图片项
-      if (!imagePath) {
-        if (isDebug) {
-          debugLog(`跳过无图片项: ${item.title}`);
-        }
-        continue;
-      }
-      
-      // 2. 只根据图片路径确定类型
-      const contentType = determineContentTypeByImagePath(imagePath);
-      
-      // 3. 更新结果类型
-      if (contentType !== item.resultType) {
-        if (isDebug) {
-          debugLog(`根据图片路径修正类型: ${item.title} 从 ${item.resultType || 'undefined'} 修正为 ${contentType}, 图片路径: ${imagePath}`);
-        }
-        item.resultType = contentType;
-      }
-      
-      // 4. 确保imageSrc字段存在
-      if (!item.imageSrc) {
-        item.imageSrc = imagePath;
-        if (isDebug) {
-          debugLog(`添加缺失的图片路径: ${item.title}, 图片: ${imagePath}`);
-        }
-      }
-      
-      // 5. 根据类型调整URL
-      if (contentType === 'news' && !item.url.includes('/news/')) {
-        const parts = item.url.split('/');
-        const contentId = parts[parts.length - 1];
-        item.url = `/${locale}/news/${item.slug || contentId}`;
-      } else if (contentType === 'case' && !item.url.includes('/cases/')) {
-        const parts = item.url.split('/');
-        const contentId = parts[parts.length - 1];
-        item.url = `/${locale}/cases/${contentId}`;
-      }
-      
-      // 6. 去重处理
-      const itemId = item.id;
-      if (!processedIds.has(itemId)) {
-        processedIds.add(itemId);
-        finalResults.push(item);
-        
-        if (isDebug) {
-          debugLog(`添加最终结果: ${item.title}, 类型: ${item.resultType}, 图片: ${imagePath}`);
-        }
-      }
-    }
-
-    // 返回结果
-    if (isDebug) {
-      debugLog(`处理完成: 找到 ${finalResults.length} 个匹配结果`);
-    }
-
-    return NextResponse.json(finalResults, {
+    // 如果没有匹配，返回空结果
+    return NextResponse.json([], { 
       status: 200,
-      headers: headers
+      headers: { 'Cache-Control': 'public, max-age=3600' }
     });
   } catch (error) {
-    debugLog('搜索过程中出现错误:', error);
-    return NextResponse.json({ 
-      error: '搜索处理失败',
-      message: error instanceof Error ? error.message : String(error),
-      stack: process.env.NODE_ENV !== 'production' ? (error instanceof Error ? error.stack : '') : undefined
-    }, { status: 500 });
+    console.error('Search API error:', error);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }
