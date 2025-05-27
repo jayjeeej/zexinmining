@@ -2,16 +2,6 @@ import { Metadata } from 'next';
 import { getOrganizationStructuredData } from '@/lib/structuredData';
 import { MultiStructuredData } from '@/components/StructuredData';
 import AboutPageClient from './page.client';
-import { locales } from '@/i18n/request';
-
-// 告诉Next.js这是一个静态页面
-export const dynamic = 'force-static';
-export const revalidate = 3600; // 每小时重新验证一次
-
-// 为About页面生成静态路径参数
-export async function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
 
 // 为每个语言定义元数据
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {

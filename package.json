@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/add-alt-attributes.js && next build && node scripts/vercel-build.js",
+    "build": "node scripts/add-alt-attributes.js && next build",
     "postbuild": "next-sitemap && node scripts/generate-sitemaps.js && node scripts/generate-server-sitemap.js && node scripts/generate-search-cache.js",
     "verify-build": "node scripts/verify-build.js",
     "start": "next start",

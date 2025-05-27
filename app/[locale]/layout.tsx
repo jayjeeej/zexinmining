@@ -2,10 +2,6 @@ import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import ClientCookieConsent from '@/components/ClientCookieConsent';
 
-// 强制使用静态生成
-export const dynamic = 'force-static';
-export const revalidate = 3600; // 每小时重新验证
-
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'zh' }];
 }

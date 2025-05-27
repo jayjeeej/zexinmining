@@ -13,6 +13,6 @@ export default createMiddleware({
 });
 
 export const config = {
-  // 明确包含重要路径
+  // 匹配所有路径，除了 /api, /_next, /public 等系统路径
   matcher: ['/((?!api|_next|.*\\..*).*)']
 }; 

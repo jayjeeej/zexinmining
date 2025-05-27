@@ -1,33 +1,9 @@
 const createNextIntlPlugin = require('next-intl/plugin');
-const fs = require('fs');
-const path = require('path');
-
-// 创建特定路由占位符函数，将在webpack配置中调用
-function createRoutePlaceholders() {
-  console.log('创建路由占位符...');
-  const routes = [
-    'app/en/about',
-    'app/zh/about',
-  ];
-  
-  routes.forEach(route => {
-    const routePath = path.join(process.cwd(), '.next/server', route);
-    try {
-      fs.mkdirSync(routePath, { recursive: true });
-      console.log(`创建路由目录: ${routePath}`);
-    } catch (err) {
-      if (err.code !== 'EEXIST') {
-        console.error(`创建目录失败: ${err}`);
-      }
-    }
-  });
-}
 
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone', // 确保使用standalone输出模式
   eslint: {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
@@ -135,18 +111,6 @@ const nextConfig = {
   // 修复的HTTP到HTTPS重定向（避免循环重定向）
   async redirects() {
     return [
-      // 将动态路由重定向到静态路由
-      {
-        source: '/:locale(en|zh)/about',
-        has: [
-          {
-            type: 'host',
-            value: '(.*)zexinmining.com(.*)',
-          },
-        ],
-        permanent: true,
-        destination: '/:locale/about',
-      },
       // HTTP 到 HTTPS 重定向（仅当请求是HTTP时）
       {
         source: '/:path*',
@@ -174,37 +138,8 @@ const nextConfig = {
       }
     ]
   },
-  // 添加rewrites配置处理动态路由
-  async rewrites() {
-    return {
-      beforeFiles: [
-        // 确保/en/about和/zh/about路由正确处理
-        {
-          source: '/en/about',
-          destination: '/en/about',
-        },
-        {
-          source: '/zh/about',
-          destination: '/zh/about',
-        }
-      ]
-    };
-  },
   // 配置代码分割策略
-  webpack: (config, { dev, isServer }) => {
-    // 在webpack构建完成后运行
-    if (isServer && !dev) {
-      // 仅在服务端构建时创建路由占位符
-      config.plugins.push({
-        apply: (compiler) => {
-          compiler.hooks.afterEmit.tap('CreateRoutePlaceholders', (compilation) => {
-            // 构建完成后创建路由占位符
-            createRoutePlaceholders();
-          });
-        }
-      });
-    }
-    
+  webpack: (config, { isServer }) => {
     // 修改代码分割的大小阈值，创建更多小块
     config.optimization.splitChunks = {
       chunks: 'all',
