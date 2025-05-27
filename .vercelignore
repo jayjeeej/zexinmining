@@ -1,0 +1,11 @@
+.git
+.github
+node_modules
+.next
+.env*.local
+.vercel
+README.md
+CHANGELOG.md
+.vscode
+.cursor
+.cursorrules 

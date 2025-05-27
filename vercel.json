@@ -3,5 +3,10 @@
   "buildCommand": "next build",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "routes": [
+    { "src": "/en/about", "dest": "/en/about" },
+    { "src": "/zh/about", "dest": "/zh/about" },
+    { "src": "/:locale/:path*", "dest": "/$locale/$path*" }
+  ]
 } 

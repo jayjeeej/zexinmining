@@ -2,6 +2,12 @@ import { Metadata } from 'next';
 import { getOrganizationStructuredData } from '@/lib/structuredData';
 import { MultiStructuredData } from '@/components/StructuredData';
 import AboutPageClient from './page.client';
+import { locales } from '@/i18n/request';
+
+// 为About页面生成静态路径参数
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 // 为每个语言定义元数据
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {

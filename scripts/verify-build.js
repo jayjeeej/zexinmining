@@ -20,6 +20,49 @@ if (!fs.existsSync(buildDir)) {
   process.exit(1);
 }
 
+// 检查重要路由是否已经生成
+const importantRoutes = [
+  '.next/server/app/en/page.html',
+  '.next/server/app/zh/page.html',
+  '.next/server/app/en/about/page.html',
+  '.next/server/app/zh/about/page.html'
+];
+
+const missingRoutes = importantRoutes.filter(route => {
+  const exists = fs.existsSync(path.join(process.cwd(), route));
+  if (!exists) {
+    console.log(`Missing route: ${route}`);
+  } else {
+    console.log(`Found route: ${route}`);
+  }
+  return !exists;
+});
+
+if (missingRoutes.length > 0) {
+  console.warn('Warning: Some important routes are missing from the build.');
+  console.warn('You might want to check your route configuration.');
+} else {
+  console.log('All important routes are present in the build.');
+}
+
+// 检查serverless函数是否被正确生成
+const lambdaDir = path.join(process.cwd(), '.next/server/pages');
+if (fs.existsSync(lambdaDir)) {
+  const lambdaFiles = fs.readdirSync(lambdaDir);
+  console.log('Found lambda functions:', lambdaFiles);
+} else {
+  console.log('No lambda functions directory found.');
+}
+
+// 输出Next.js构建信息
+const buildManifest = path.join(process.cwd(), '.next/build-manifest.json');
+if (fs.existsSync(buildManifest)) {
+  const manifest = JSON.parse(fs.readFileSync(buildManifest, 'utf8'));
+  console.log('Build manifest pages:', Object.keys(manifest.pages));
+} else {
+  console.log('Build manifest not found.');
+}
+
 // 检查路由配置
 console.log(`${colors.blue}检查国际化路由配置...${colors.reset}`);
 

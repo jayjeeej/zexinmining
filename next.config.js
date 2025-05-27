@@ -4,6 +4,7 @@ const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone', // 确保使用standalone输出模式
   eslint: {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
