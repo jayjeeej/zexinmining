@@ -1,0 +1,911 @@
+[
+  {
+    "id": "wheel-bucket-sand-washer",
+    "url": "/en/products/ore-processing/washing-equipment/wheel-bucket-sand-washer",
+    "title": "Wheel Bucket Sand Washer",
+    "excerpt": "Zexin Mining's XS Series Wheel Bucket Sand Washers deliver exceptional cleaning performance for sand, gravel and other aggregates through innovative bucket wheel technology. With high processing capac",
+    "category": "Mineral Processing Equipment",
+    "imageSrc": "/images/products/washing-equipment/wheel-bucket-sand-washer.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "twin-shaft-log-washer",
+    "url": "/en/products/ore-processing/washing-equipment/twin-shaft-log-washer",
+    "title": "Twin Shaft Log Washer",
+    "excerpt": "Zexin Mining's ZX Series Twin Shaft Log Washers provide superior clay removal and material scrubbing through counter-rotating shafts with specially designed paddles. These robust machines efficiently ",
+    "category": "Mineral Processing Equipment",
+    "imageSrc": "/images/products/washing-equipment/twin-shaft-log-washer.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "spiral-washer",
+    "url": "/en/products/ore-processing/washing-equipment/spiral-washer",
+    "title": "Single Shaft Screw Washer",
+    "excerpt": "Zexin Mining's FG Series Single Shaft Screw Washer provides efficient mineral cleaning through spiral blade agitation, removing surface impurities while preserving material integrity. With simple stru",
+    "category": "Mineral Processing Equipment",
+    "imageSrc": "/images/products/washing-equipment/spiral-washer.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "trommel-screen",
+    "url": "/en/products/ore-processing/vibrating-screens/trommel-screen",
+    "title": "Trommel Screen",
+    "excerpt": "Zexin Mining's GT Series Trommel Screen represents advanced rotary screening technology, featuring a slow-rotating drum (3-6rpm) with integrated spiral lifting system. This heavy-duty screening soluti",
+    "category": "Mineral Screen Equipment",
+    "imageSrc": "/images/products/vibrating-screens/trommel-screen.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "linear-vibrating-screen",
+    "url": "/en/products/ore-processing/vibrating-screens/linear-vibrating-screen",
+    "title": "Linear Vibrating Screen",
+    "excerpt": "Zexin Mining's ZDS/ZKR Series Linear Vibrating Screens deliver exceptional screening performance for mineral processing applications. Featuring robust construction, adjustable amplitude, and consisten",
+    "category": "Mineral Processing Equipment",
+    "imageSrc": "/images/products/vibrating-screens/linear-vibrating-screen.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "inclined-vibrating-screen",
+    "url": "/en/products/ore-processing/vibrating-screens/inclined-vibrating-screen",
+    "title": "Inclined Vibrating Screen",
+    "excerpt": "The YA Series Inclined Vibrating Screen from Zexin Mining delivers exceptional screening performance with its proven circular motion technology. Ideal for mineral processing in small to medium operati",
+    "category": "Mineral Screen Equipment",
+    "imageSrc": "/images/products/vibrating-screens/inclined-vibrating-screen.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "dewatering-screen",
+    "url": "/en/products/ore-processing/vibrating-screens/dewatering-screen",
+    "title": "Dewatering Screen",
+    "excerpt": "Zexin Mining's DWS Series High-Efficiency Dewatering Screen provides exceptional dewatering performance for fine particles while maximizing recovery rates. Designed for small to medium-sized mining op",
+    "category": "Mineral Screen Equipment",
+    "imageSrc": "/images/products/vibrating-screens/dewatering-screen.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "bar-vibrating-screen",
+    "url": "/en/products/ore-processing/vibrating-screens/bar-vibrating-screen",
+    "title": "Grizzly Screen",
+    "excerpt": "Zexin Mining's ZGS Series Heavy-duty Grizzly Screen specializes in coarse material separation for primary screening applications. Designed with reinforced bar structure for exceptional durability, it ",
+    "category": "Mineral Screen Equipment",
+    "imageSrc": "/images/products/vibrating-screens/bar-vibrating-screen.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "banana-multislope-vibrating-screen",
+    "url": "/en/products/ore-processing/vibrating-screens/banana-multislope-vibrating-screen",
+    "title": "Multi-slope Screen",
+    "excerpt": "The Multi-slope Banana Vibrating Screen (MSBS Series) from Zexin Mining represents the pinnacle of high-capacity screening technology, outperforming traditional linear and circular vibrating screens b",
+    "category": "Mineral Screen Equipment",
+    "imageSrc": "/images/products/vibrating-screens/banana-multislope-vibrating-screen.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "jaw-crusher",
+    "url": "/en/products/ore-processing/stationary-crushers/jaw-crusher",
+    "title": "Jaw Crusher",
+    "excerpt": "The ZPE Series Jaw Crusher from Zexin Mining represents the pinnacle of primary crushing technology, designed for the most demanding mining and aggregate production applications. With its robust const",
+    "category": "Mining Crushing Equipment",
+    "imageSrc": "/images/products/stationary-crushers/jaw-crusher.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "impact-crusher",
+    "url": "/en/products/ore-processing/stationary-crushers/impact-crusher",
+    "title": "Impact Crusher",
+    "excerpt": "Zexin Mining's ZPF Series Impact Crusher represents the pinnacle of medium and fine crushing technology, specifically engineered for efficient processing of medium-hardness materials. With innovative ",
+    "category": "Mining Crushing Equipment",
+    "imageSrc": "/images/products/stationary-crushers/impact-crusher.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "hp-cone-crusher",
+    "url": "/en/products/ore-processing/stationary-crushers/hp-cone-crusher",
+    "title": "HP Series Hydraulic Cone Crusher",
+    "excerpt": "Zexin Mining's HP Series Hydraulic Cone Crusher employs advanced crushing technology for efficient processing of hard rock materials with high capacity, low energy consumption, superior particle shape",
+    "category": "Mining Crushing Equipment",
+    "imageSrc": "/images/products/stationary-crushers/hp-cone-crusher.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "hammer-crusher",
+    "url": "/en/products/ore-processing/stationary-crushers/hammer-crusher",
+    "title": "Hammer Crusher",
+    "excerpt": "The ZPC Series High-efficiency Hammer Crusher from Zexin Mining represents advanced crushing technology designed specifically for brittle materials of low to medium hardness. Achieving exceptional cru",
+    "category": "Mining Crushing Equipment",
+    "imageSrc": "/images/products/stationary-crushers/hammer-crusher.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "double-roller-crusher",
+    "url": "/en/products/ore-processing/stationary-crushers/double-roller-crusher",
+    "title": "Double Roller Crusher",
+    "excerpt": "The 2PG Series Double Roller Crusher from Zexin Mining represents advanced medium and fine crushing technology designed for materials of medium-low hardness. Featuring a dual roller compression design",
+    "category": "Mining Crushing Equipment",
+    "imageSrc": "/images/products/stationary-crushers/double-roller-crusher.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "cone-crusher",
+    "url": "/en/products/ore-processing/stationary-crushers/cone-crusher",
+    "title": "Cone Crusher",
+    "excerpt": "The ZYP Series Hydraulic Cone Crusher from Zexin Mining represents advanced secondary and tertiary crushing technology, combining exceptional performance with versatility for demanding applications. F",
+    "category": "Mining Crushing Equipment",
+    "imageSrc": "/images/products/stationary-crushers/cone-crusher.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "wolframite-beneficiation-processes-2023",
+    "url": "/en/news/wolframite-beneficiation-processes",
+    "title": "Maximizing Tungsten Recovery: Advanced Technologies in Wolframite Processing",
+    "excerpt": "This comprehensive analysis explores cutting-edge technologies and methodologies in wolframite ore processing, focusing on innovative approaches to grinding, separation techniques, and slime recovery ",
+    "category": "technical",
+    "imageSrc": "/images/news/wolframite-beneficiation-process.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "vietnam-customer-visit-equipment-inspection-2025",
+    "url": "/en/news/vietnam-customer-visit-equipment-inspection-2025",
+    "title": "Vietnamese Delegation Praises Equipment Quality During Factory Inspection",
+    "excerpt": "A delegation of Vietnamese customers visited Zexin Mining's production facility to inspect the manufacturing progress of mud-rock separators and plate feeders. Impressed by the quality standards and c",
+    "category": "company",
+    "imageSrc": "/images/news/vietnam-delegation-visit-2025.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "vein-gold-ore-processing-technology-2023",
+    "url": "/en/news/vein-gold-ore-processing-technology",
+    "title": "Optimizing Vein Gold Ore Recovery: Comparative Analysis of Combined Processing Technologies",
+    "excerpt": "This article examines advanced processing technologies for vein gold ore, analyzing three combined methods—gravity-cyanidation, gravity-flotation, and flotation-gravity—to maximize recovery rates and ",
+    "category": "technical",
+    "imageSrc": "/images/news/vein-gold-ore-beneficiation-process.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "vanadium-titanium-magnetite-valuable-elements-recovery-2025",
+    "url": "/en/news/vanadium-titanium-magnetite-valuable-elements-recovery-2025",
+    "title": "Innovative Breakthroughs and Industrial Applications in Multi-element Separation and Enrichment of Vanadium-Titanium Magnetite",
+    "excerpt": "This article explores efficient separation technologies for vanadium-titanium magnetite as a strategic composite resource, analyzing innovative processes from pre-concentration and staged grinding to ",
+    "category": "technical",
+    "imageSrc": "/images/news/vanadium-titanium-magnetite-valuable-elements-recovery.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "tin-ore-processing-technologies-2025",
+    "url": "/en/news/tin-ore-processing-technologies",
+    "title": "Comprehensive Guide to Tin Ore Beneficiation: Four Processing Methods and Equipment Selection",
+    "excerpt": "This article provides a systematic analysis of four key tin ore processing technologies—gravity concentration, flotation, magnetic separation, and chemical methods—detailing their technical characteri",
+    "category": "technical",
+    "imageSrc": "/images/news/tin-ore-beneficiation-process.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "tantalum-niobium-gravity-separation-2024",
+    "url": "/en/news/tantalum-niobium-gravity-separation-techniques",
+    "title": "Gravity Separation Methods in Tantalum-Niobium Ore Processing: Applications and Technological Breakthroughs",
+    "excerpt": "In-depth analysis of gravity separation techniques for tantalum-niobium ores, examining current applications, technical advantages, and innovative developments in combined separation methods to enhanc",
+    "category": "technical",
+    "imageSrc": "/images/news/gravity-separation-tantalum.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "tantalum-niobium-beneficiation-2024",
+    "url": "/en/news/tantalum-niobium-beneficiation-innovation",
+    "title": "Advanced Processing Techniques for Tantalum-Niobium Ores: A Comprehensive Guide",
+    "excerpt": "Detailed analysis of modern tantalum-niobium ore processing techniques, covering each stage from raw ore preparation to concentrate purification and future trends.",
+    "category": "technical",
+    "imageSrc": "/images/news/tantalum-niobium-process.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "spiral-classifier-importance-applications-2024",
+    "url": "/en/news/spiral-classifier-importance-applications-2024",
+    "title": "Critical Role and Technical Applications of Spiral Classifiers in Mineral Processing",
+    "excerpt": "An in-depth analysis of spiral classifiers' core functions in modern mineral processing, examining their advantages in particle classification, dewatering, desliming, and density separation, with deta",
+    "category": "product",
+    "imageSrc": "/images/news/spiral-classifier-applications.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "siderite-beneficiation-methods-2023",
+    "url": "/en/news/siderite-beneficiation-methods-2023",
+    "title": "Four Efficient Beneficiation Technologies for Low-Grade Siderite Ore: Technical Analysis and Applications",
+    "excerpt": "A comprehensive analysis of four mainstream beneficiation technologies for low-iron content siderite: gravity separation, high-intensity magnetic separation, flotation, and magnetizing roasting-magnet",
+    "category": "technical",
+    "imageSrc": "/images/news/siderite-beneficiation-methods.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "screening-equipment-selection-guide-2024",
+    "url": "/en/news/screening-equipment-selection-guide",
+    "title": "Comprehensive Comparison and Application Selection Guide for Mining Screening Equipment",
+    "excerpt": "Detailed analysis of various screening equipment's working principles, technical characteristics, and application advantages, providing professional selection recommendations for different stages of a",
+    "category": "product",
+    "imageSrc": "/images/news/selection-guide-for-mining-screening-equipment.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "rare-earth-gravity-separation-2024",
+    "url": "/en/news/rare-earth-gravity-separation-technologies",
+    "title": "Advanced Gravity Separation Technologies for Rare Earth Minerals: Zexin Mining's Expert Analysis",
+    "excerpt": "An in-depth exploration of gravity separation methods for rare earth minerals, including innovative equipment and processing techniques developed by Zexin Mining to maximize recovery of these strategi",
+    "category": "technical",
+    "imageSrc": "/images/news/rare-earth-gravity-separation-zexin.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "pyrite-beneficiation-methods-2024",
+    "url": "/en/news/pyrite-ore-beneficiation-technologies",
+    "title": "Advanced Pyrite Beneficiation Technologies: Strategic Selection Guide for Optimal Recovery",
+    "excerpt": "Comprehensive analysis of pyrite ore processing methods featuring gravity separation, flotation, and combined techniques, with detailed insights on workflow optimization for different ore characterist",
+    "category": "technical",
+    "imageSrc": "/images/news/pyrite-beneficiation-technology-zexin.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "mining-jig-technology-2024",
+    "url": "/en/news/mining-jig-technology-analysis",
+    "title": "Comprehensive Analysis of Mining Jigs: Classifications, Principles and Industrial Applications",
+    "excerpt": "An in-depth examination of various mining jig technologies, working principles, and structural characteristics, exploring their applications in mineral separation and providing comprehensive guidance ",
+    "category": "product",
+    "imageSrc": "/images/news/comprehensive-analysis-of-mining-jigs.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "mineral-processing-methods-2024",
+    "url": "/en/news/mineral-processing-methods-comprehensive-guide",
+    "title": "Modern Mineral Processing Technologies: Five Key Methods for Enhanced Resource Recovery",
+    "excerpt": "Comprehensive analysis of five mainstream mineral processing technologies, their principles, applications, and latest developments to help mining enterprises optimize workflows, increase concentrate g",
+    "category": "technical",
+    "imageSrc": "/images/news/mineral-processing-methods.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "mineral-processing-experiments-2024",
+    "url": "/en/news/importance-of-mineral-processing-experiments",
+    "title": "The Key to Improving Mineral Recovery: Importance and Process of Professional Mineral Processing Experiments",
+    "excerpt": "An in-depth analysis of the importance of mineral processing experiments in mine development, a comprehensive introduction from experimental preparation to results analysis, and how to improve mineral",
+    "category": "company",
+    "imageSrc": "/images/news/mineral-processing-experiments.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "mineral-processing-equipment-essentials-2025",
+    "url": "/en/news/mineral-processing-equipment-essentials-2025",
+    "title": "Essential Equipment Configuration for Modern Mineral Processing Plants: A Comprehensive Guide to Four Key Process Stages",
+    "excerpt": "A systematic analysis of critical equipment configurations across the four main processing stages in modern mineral processing plants, from crushing and grinding to separation and dewatering, providin",
+    "category": "technical",
+    "imageSrc": "/images/news/mineral-processing-plant-equipment.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "metal-mine-extraction-method-selection-2025",
+    "url": "/en/news/metal-mine-extraction-method-selection-2025",
+    "title": "Scientific Selection Strategies and Key Influencing Factors for Metal Mine Extraction Methods",
+    "excerpt": "This article comprehensively analyzes the scientific decision-making process for selecting metal mine extraction methods, systematically examining key influencing factors from orebody geological condi",
+    "category": "technical",
+    "imageSrc": "/images/news/metal-mine-extraction-method-selection.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "manganese-processing-2023",
+    "url": "/en/news/manganese-ore-processing-technologies",
+    "title": "Manganese Resource Processing and Metallurgical Applications: From Raw Material to Final Products",
+    "excerpt": "Comprehensive analysis of manganese's crucial role in metallurgical industries, including deoxidation and desulfurization processes, alloy preparation, and advanced processing technologies that transf",
+    "category": "technical",
+    "imageSrc": "/images/news/manganese-processing-techniques-zexin.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "manganese-oxide-beneficiation-2024",
+    "url": "/en/news/manganese-oxide-beneficiation-techniques",
+    "title": "Advanced Beneficiation Techniques for Manganese Oxide Ores",
+    "excerpt": "As high-grade carbonate manganese resources decline, oxide manganese ores have become increasingly important. Explore Zexin Mining's analysis of single and combined beneficiation methods for processin",
+    "category": "technical",
+    "imageSrc": "/images/news/manganese-oxide-processing-techniques-zexin.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "manganese-ore-processing-2024",
+    "url": "/en/news/manganese-ore-processing-techniques",
+    "title": "Innovations in Manganese Ore Processing Technology: Integration of Traditional and Emerging Techniques",
+    "excerpt": "Exploring the latest advancements in manganese ore processing, from traditional physical beneficiation to chemical enrichment methods, and the strategic value of manganese in steel and new energy sect",
+    "category": "technical",
+    "imageSrc": "/images/news/manganese-ore-processing-techniques.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "manganese-deposits-2024",
+    "url": "/en/news/manganese-deposit-types-geological-features",
+    "title": "Global Manganese Deposit Classification: Genesis, Distribution and Economic Significance",
+    "excerpt": "Explore the geological origins and characteristics of major manganese deposit types worldwide, including sedimentary, metamorphic, and weathering deposits, with insights into their mineralization patt",
+    "category": "technical",
+    "imageSrc": "/images/news/manganese-deposit-types-zexin.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "magnetic-separator-flow-types-2024",
+    "url": "/en/news/magnetic-separator-flow-types-comparison",
+    "title": "Technical Comparison and Application Analysis of Three Flow Modes in Permanent Magnetic Drum Separators",
+    "excerpt": "In-depth analysis of concurrent, counter-current, and semi-counter-current flow modes in permanent magnetic drum separators, examining their technical characteristics, suitable ore types, and industri",
+    "category": "product",
+    "imageSrc": "/images/news/magnetic-separator-flow-types-comparison.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "jig-optimization-factors-2024",
+    "url": "/en/news/jig-optimization-factors-analysis",
+    "title": "Key Factors Analysis and Control Strategies for Optimizing Mining Jig Performance",
+    "excerpt": "In-depth analysis of key process parameters and operational factors affecting jig separation efficiency, exploring optimization strategies for stroke characteristics, water systems, bed management, an",
+    "category": "product",
+    "imageSrc": "/images/news/key-factors-analysis-and-control-strategies-for-optimizing-mining-Jig performance.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "jaw-crusher-comparison-2024",
+    "url": "/en/news/jaw-crusher-comparison-features-applications",
+    "title": "Advanced Jaw Crusher Series for High-Capacity Operations: Comparing PE, HD, and CJ Models",
+    "excerpt": "An in-depth analysis of leading high-capacity jaw crusher technologies, performance specifications, and operational advantages to help mining and aggregate producers select the optimal crushing equipm",
+    "category": "product",
+    "imageSrc": "/images/news/jaw-crusher-comparison.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "iron-tailings-reprocessing-2023",
+    "url": "/en/news/iron-tailings-reprocessing-technology",
+    "title": "Efficient Iron Tailings Reprocessing: Technical Solutions for Enhanced Recovery and Resource Utilization",
+    "excerpt": "As high-grade iron ore resources decline, tailings reprocessing technologies have become an industry focus. This article analyzes magnetic separation, gravity concentration, flotation, and combined pr",
+    "category": "technical",
+    "imageSrc": "/images/news/iron-tailings-reprocessing.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "iron-ore-magnetic-separators-guide-2024",
+    "url": "/en/news/iron-ore-magnetic-separators-guide-2024",
+    "title": "Advanced Iron Ore Processing: Comprehensive Analysis of Four Major Magnetic Separator Types",
+    "excerpt": "An in-depth exploration of ring, drum, column, and roller magnetic separators used in iron ore processing, detailing their operating principles, technical characteristics, and optimal application scen",
+    "category": "product",
+    "imageSrc": "/images/news/magnetic-separator-types.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "iron-ore-gravity-separation-2025",
+    "url": "/en/news/iron-ore-gravity-separation-techniques",
+    "title": "Optimizing Iron Ore Gravity Separation: Innovative Methods for Enhanced Efficiency and Recovery Rates",
+    "excerpt": "As iron ore grades continue to decline, the industry has introduced a series of innovative methods to optimize gravity separation processes, significantly improving mineral processing efficiency and c",
+    "category": "technical",
+    "imageSrc": "/images/news/iron-ore-gravity-separation-efficiency.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "hydrocyclone-troubleshooting-guide-2024",
+    "url": "/en/news/hydrocyclone-troubleshooting-guide-2024",
+    "title": "Five Critical Hydrocyclone Issues and Their Solutions: A Practical Guide to Optimizing Classification Efficiency",
+    "excerpt": "This article analyzes five common operational issues in hydrocyclones including feed pressure fluctuations, blockages, underflow abnormalities, overflow irregularities, and discharge pattern problems,",
+    "category": "product",
+    "imageSrc": "/images/news/hydrocyclone-troubleshooting-guide.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "hematite-beneficiation-process-2024",
+    "url": "/en/news/high-sulfur-hematite-ore-beneficiation",
+    "title": "Advanced Beneficiation Technology for High-Sulfur, High-Clay Hematite Ores: Research and Case Studies",
+    "excerpt": "Addressing the depletion of high-grade iron resources, this paper analyzes technological challenges in processing high-sulfur, high-clay hematite ores and presents an innovative combined process of de",
+    "category": "technical",
+    "imageSrc": "/images/news/hematite-beneficiation-zexin.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "gravity-separation-gold-processing-2024",
+    "url": "/en/news/gravity-separation-gold-processing-techniques",
+    "title": "Comprehensive Analysis of Gravity Separation Methods in Gold Ore Processing",
+    "excerpt": "An in-depth exploration of gravity separation techniques in gold ore processing, including jigging, shaking table, sluice, and combined gravity separation methods, with analysis of their applications,",
+    "category": "technical",
+    "imageSrc": "/images/news/gravity-separation-gold-processing.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "gold-tailings-recovery-2024",
+    "url": "/en/news/gold-tailings-recovery-gravity-separation",
+    "title": "Resource Optimization: Zexin Mining's Breakthrough in Gravity Concentration for Gold Tailings Utilization",
+    "excerpt": "In-depth analysis of advanced gravity concentration methods for efficient recovery of valuable metals from gold tailings, achieving both economic returns and environmental sustainability.",
+    "category": "technical",
+    "imageSrc": "/images/news/gold-tailings-recovery-zexin.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "gold-ore-processing-technology-2025",
+    "url": "/en/news/gold-ore-processing-technology",
+    "title": "Comprehensive Gold Ore Processing: Four-Stage Workflow for Optimal Recovery Rates",
+    "excerpt": "This article provides an in-depth analysis of the four critical stages in gold ore processing—crushing, grinding-classification, separation, and dewatering—detailing equipment selection strategies and",
+    "category": "technical",
+    "imageSrc": "/images/news/gold-ore-beneficiation-process.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "gold-flotation-process-2023",
+    "url": "/en/news/gold-flotation-process-techniques",
+    "title": "Optimizing Gold Recovery: Advanced Flotation Techniques for Efficient Mineral Processing",
+    "excerpt": "Explore the comprehensive gold flotation process workflow from crushing to dewatering, with technical insights on equipment selection and process optimization for maximum gold recovery efficiency.",
+    "category": "technical",
+    "imageSrc": "/images/news/gold-flotation-process-zexin.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "fluorite-separation-techniques-2024",
+    "url": "/en/news/fluorite-separation-techniques-2024",
+    "title": "Breakthrough in Fluorite Beneficiation: Advanced Separation Processes for Complex Mineral Assemblages",
+    "excerpt": "A detailed analysis of efficient separation technologies for fluorite from similar minerals like calcite and barite, featuring optimized flotation processes, reagent combinations, and innovative multi",
+    "category": "technical",
+    "imageSrc": "/images/news/fluorite-processing-technology.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "flotation-tank-troubleshooting-2024",
+    "url": "/en/news/flotation-tank-troubleshooting-guide",
+    "title": "Flotation Equipment Tank Issues: Analysis of 8 Common Problems and Solutions",
+    "excerpt": "This article provides an in-depth analysis of 8 common flotation machine tank problems and their solutions, helping mining enterprises improve equipment management efficiency and mineral processing st",
+    "category": "product",
+    "imageSrc": "/images/news/flotation-tank-8-ccommon-problems-and-solutions.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "flotation-process-technology-2024",
+    "url": "/en/news/flotation-process-technology-2024",
+    "title": "Applications and Technical Process Analysis of Flotation in Modern Mineral Processing",
+    "excerpt": "A comprehensive exploration of froth flotation's central role in mineral processing, systematic analysis of seven major flotation process flows with their characteristics and applicable conditions, an",
+    "category": "technical",
+    "imageSrc": "/images/news/flotation-technology-overview.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "flotation-optimization-2023",
+    "url": "/en/news/flotation-optimization-techniques",
+    "title": "Key Factors Driving Efficient Flotation: Zexin Mining's Technical Insights",
+    "excerpt": "Explore the critical factors that influence flotation efficiency in mineral processing, from chemical reagents to operational parameters, backed by Zexin Mining's technical expertise.",
+    "category": "technical",
+    "imageSrc": "/images/news/mineral-flotation-efficiency-factors-zexin.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "crusher-equipment-principles-2024",
+    "url": "/en/news/crusher-equipment-principles-comparison",
+    "title": "Comprehensive Guide to 7 Main Crusher Types: Working Principles and Comparative Analysis",
+    "excerpt": "This article provides a detailed analysis of 7 mainstream crushing equipment types with animated illustrations, examining their working principles, applications, advantages and limitations to help you",
+    "category": "product",
+    "imageSrc": "/images/news/comprehensive-guide-to-main-crusher-types.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "copper-flotation-technologies-2024",
+    "url": "/en/news/copper-flotation-technologies-2024",
+    "title": "Comprehensive Guide to Copper Flotation Technologies: From Process Design to Operational Optimization",
+    "excerpt": "This article provides a systematic analysis of core copper flotation technologies, detailing processing strategies for single sulfide, polymetallic sulfide, and oxide-sulfide copper minerals, with in-",
+    "category": "technical",
+    "imageSrc": "/images/news/copper-flotation-process.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "clay-mineral-washing-equipment-applications-2024",
+    "url": "/en/news/clay-mineral-washing-equipment-applications-2024",
+    "title": "Innovative Applications and Efficiency Analysis of Washing Equipment in Clay Mineral Processing",
+    "excerpt": "A comprehensive analysis of washing equipment technologies in clay mineral processing, providing in-depth insights into drum washers, log washers, and spiral washers with their technical characteristi",
+    "category": "product",
+    "imageSrc": "/images/news/mineral-washing-equipment-applications.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "classifier-equipment-comparison-2024",
+    "url": "/en/news/classifier-equipment-comparison-guide-2024",
+    "title": "Classification Equipment Selection Guide: Comprehensive Comparison Between Spiral Classifiers and Hydrocyclones",
+    "excerpt": "An in-depth comparison of spiral classifiers and hydrocyclones across five dimensions: processing capability, space utilization, classification efficiency, operational complexity, and cost considerati",
+    "category": "product",
+    "imageSrc": "/images/news/classification-equipment-selection-guide.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "chromite-properties-applications-beneficiation-2025",
+    "url": "/en/news/chromite-properties-applications-beneficiation-2025",
+    "title": "Industrial Value and Advanced Beneficiation Technologies of Chromite Resources",
+    "excerpt": "A comprehensive analysis of chromite ore's mineralogical characteristics, strategic industrial value, and four major beneficiation technologies, exploring the technical advantages and key points of gr",
+    "category": "technical",
+    "imageSrc": "/images/news/chromite-beneficiation-technologies.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "carbonaceous-gold-gravity-separation-2023",
+    "url": "/en/news/carbonaceous-gold-gravity-separation-optimization",
+    "title": "Efficient Gravity Separation Techniques for Carbonaceous Gold Ores: Parameter Optimization and Process Innovation",
+    "excerpt": "In-depth analysis of key factors affecting gravity separation efficiency of carbonaceous gold ores, from ore characteristics to equipment parameter selection and operational controls, exploring system",
+    "category": "technical",
+    "imageSrc": "/images/news/carbonaceous-gold-gravity-separation-technology.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "carbon-interference-reduction-2023",
+    "url": "/en/news/carbon-interference-reduction-gravity-separation",
+    "title": "Breakthroughs in Carbonaceous Gold Ore Gravity Separation: Innovative Methods to Reduce Carbon Interference",
+    "excerpt": "An in-depth exploration of carbon interference mechanisms in gold ore gravity separation and effective mitigation strategies, from pretreatment technologies to process optimization, equipment paramete",
+    "category": "technical",
+    "imageSrc": "/images/news/carbon-interference-reduction-techniques.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "barite-gravity-separation-process-2023",
+    "url": "/en/news/barite-gravity-separation-process",
+    "title": "Advanced Barite Gravity Separation: A Comprehensive Analysis of Five Key Processing Stages",
+    "excerpt": "This article provides an in-depth examination of barite gravity separation technology, analyzing the five critical stages from crushing to dewatering that optimize concentrate quality and operational ",
+    "category": "technical",
+    "imageSrc": "/images/news/barite-separation-process.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "ball-mill-energy-saving-factors-2024",
+    "url": "/en/news/ball-mill-energy-saving-factors",
+    "title": "Optimizing Ball Mill Energy Efficiency: Five Critical Factors Analyzed",
+    "excerpt": "This article provides an in-depth analysis of five key factors affecting ball mill energy consumption, offering practical technical guidance for mineral processing enterprises to achieve energy conser",
+    "category": "product",
+    "imageSrc": "/images/news/optimizing-ball-mill-energy-efficiency.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "advanced-silver-recovery-flotation-methods-2025",
+    "url": "/en/news/advanced-silver-recovery-flotation-methods-2025",
+    "title": "Efficient Recovery of Associated Silver from Lead-Zinc Sulfide Ores: Comparative Analysis of Eight Advanced Flotation Technologies",
+    "excerpt": "This article provides a comprehensive analysis of silver recovery technologies from lead-zinc sulfide ores, systematically reviewing the technical characteristics, application conditions, and advantag",
+    "category": "technical",
+    "imageSrc": "/images/news/silver-recovery-flotation-methods.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "advanced-fluorite-ore-beneficiation-technologies-2025",
+    "url": "/en/news/advanced-fluorite-ore-beneficiation-technologies-2025",
+    "title": "Efficient Beneficiation Technologies for Associated Fluorite Ores: Technical Solutions and Practical Applications for Different Co-existence Types",
+    "excerpt": "This article provides an in-depth analysis of the technical challenges in beneficiating associated fluorite ores, systematically introducing flotation process flows, reagent system optimization, and k",
+    "category": "technical",
+    "imageSrc": "/images/news/benefication-techniques-for-associated-fluorite-ores.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "wet-high-intensity-magnetic-roll-separator",
+    "url": "/en/products/ore-processing/magnetic-separator/wet-high-intensity-magnetic-roll-separator",
+    "title": "Wet High Intensity Magnetic Roll Separator",
+    "excerpt": "Zexin Mining's HYG Series Wet High Intensity Magnetic Roll Separators deliver exceptional separation performance for weakly magnetic minerals with magnetic field strengths up to 13,500 Gauss. Engineer",
+    "category": "Mineral Processing Equipment",
+    "imageSrc": "/images/products/magnetic-separator/wet-high-intensity-magnetic-roll-separator.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "triple-disc-belt-magnetic-separator",
+    "url": "/en/products/ore-processing/magnetic-separator/triple-disc-belt-magnetic-separator",
+    "title": "Triple Disc Belt Magnetic Separator",
+    "excerpt": "Zexin Mining's CP Series Triple Disc Belt Magnetic Separator delivers exceptional precision for processing fine-grained magnetic minerals with weak magnetic properties. This advanced belt-type separat",
+    "category": "Mineral Processing Equipment",
+    "imageSrc": "/images/products/magnetic-separator/triple-disc-belt-magnetic-separator.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "plate-high-intensity-magnetic-separator",
+    "url": "/en/products/ore-processing/magnetic-separator/plate-high-intensity-magnetic-separator",
+    "title": "Plate High Intensity Magnetic Separator",
+    "excerpt": "Zexin Mining's HYQC Series Plate-Type High Intensity Magnetic Separators deliver exceptional separation performance for weakly magnetic minerals. Specifically designed for processing fine particles in",
+    "category": "Mineral Processing Equipment",
+    "imageSrc": "/images/products/magnetic-separator/plate-high-intensity-magnetic-separator.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "permanent-drum-magnetic-separator",
+    "url": "/en/products/ore-processing/magnetic-separator/permanent-drum-magnetic-separator",
+    "title": "Permanent Drum Magnetic Separator",
+    "excerpt": "Zexin Mining's CTB Series High-Intensity Permanent Magnetic Drum Separators deliver exceptional iron ore concentration performance with efficient magnetic particle recovery. Designed for continuous op",
+    "category": "Mineral Processing Equipment",
+    "imageSrc": "/images/products/magnetic-separator/permanent-drum-magnetic-separator.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "four-roll-high-voltage-electrostatic-separator",
+    "url": "/en/products/ore-processing/magnetic-separator/four-roll-high-voltage-electrostatic-separator",
+    "title": "Four-Roll High Voltage Electrostatic Separator",
+    "excerpt": "Zexin Mining's DXJ Series Four-Roll High Voltage Electrostatic Separators deliver exceptional separation performance for non-conductive and conductive minerals. With four precision-engineered rollers ",
+    "category": "Mineral Processing Equipment",
+    "imageSrc": "/images/products/magnetic-separator/four-roll-high-voltage-electrostatic-separator.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "double-roll-permanent-magnetic-zircon-separator",
+    "url": "/en/products/ore-processing/magnetic-separator/double-roll-permanent-magnetic-zircon-separator",
+    "title": "Double Roll Permanent Magnetic Zircon Separator",
+    "excerpt": "Zexin Mining's Double Roll Permanent Magnetic Zircon Separator delivers superior dry magnetic separation for weakly magnetic minerals. With two precision-engineered magnetic rollers arranged verticall",
+    "category": "Mineral Processing Equipment",
+    "imageSrc": "/images/products/magnetic-separator/double-roll-permanent-magnetic-zircon-separator.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "wet-rod-mill",
+    "url": "/en/products/ore-processing/grinding-equipment/wet-rod-mill",
+    "title": "Wet Rod Mill",
+    "excerpt": "The MBY Series Wet Rod Mill is a high-efficiency grinding equipment primarily used for primary grinding or pre-grinding operations in mineral processing. Its unique rod grinding media design produces ",
+    "category": "Mineral Grinding Equipment",
+    "imageSrc": "/images/products/grinding-equipment/wet-rod-mill.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "wet-overflow-ball-mill",
+    "url": "/en/products/ore-processing/grinding-equipment/wet-overflow-ball-mill",
+    "title": "Wet Overflow Ball Mill",
+    "excerpt": "The ZMQY Series Wet Overflow Ball Mill is a high-efficiency grinding equipment designed for various mineral processing applications, featuring a simple structure and reliable operation. This overflow-",
+    "category": "Mineral Grinding Equipment",
+    "imageSrc": "/images/products/grinding-equipment/overflow-ball-mill.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "wet-grid-ball-mill",
+    "url": "/en/products/ore-processing/grinding-equipment/wet-grid-ball-mill",
+    "title": "Wet Grid Ball Mill",
+    "excerpt": "The ZMGQ Series Wet Grid Ball Mill represents Zexin Mining's advanced grinding technology, delivering superior fine grinding performance with 15-25% reduced energy consumption. This grid-type ball mil",
+    "category": "Mineral Grinding Equipment",
+    "imageSrc": "/images/products/grinding-equipment/wet-grid-ball-mill.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "wet-energy-saving-grid-ball-mill",
+    "url": "/en/products/ore-processing/grinding-equipment/wet-energy-saving-grid-ball-mill",
+    "title": "Wet Energy-Saving Grid Ball Mill",
+    "excerpt": "The ZMQG Series Wet Energy-Saving Grid Ball Mill is a high-efficiency, low-energy consumption wet grinding equipment suitable for metal and non-metal ore grinding operations. Its unique grid discharge",
+    "category": "Mineral Grinding Equipment",
+    "imageSrc": "/images/products/grinding-equipment/wet-energy-saving-grid-ball-mill.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "dry-rod-mill",
+    "url": "/en/products/ore-processing/grinding-equipment/dry-rod-mill",
+    "title": "Dry Rod Mill",
+    "excerpt": "Zexin Mining's MBS Series Dry Rod Mill delivers superior grinding performance with 20-30% lower energy consumption compared to standard dry ball mills. Specifically engineered for small to medium mini",
+    "category": "Mineral Grinding Equipment",
+    "imageSrc": "/images/products/grinding-equipment/dry-rod-mill.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "dry-ball-mill",
+    "url": "/en/products/ore-processing/grinding-equipment/dry-ball-mill",
+    "title": "Dry Ball Mill",
+    "excerpt": "Zexin Mining's ZDBM Series Dry Ball Mill delivers superior grinding performance for small to medium mining operations with feed sizes up to 25mm. Utilizing optimized ball media design, this energy-eff",
+    "category": "Mineral Grinding Equipment",
+    "imageSrc": "/images/products/grinding-equipment/dry-ball-mill.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "synchronous-counter-directional-jig",
+    "url": "/en/products/ore-processing/gravity-separation/synchronous-counter-directional-jig",
+    "title": "Heavy Duty Composite Jig Separator",
+    "excerpt": "The SCDJM Series Industrial Composite Jig Separator is a high-efficiency density-based mineral separator utilizing patented dual-pulse technology to create powerful vertical water pulsations for optim",
+    "category": "Gravity Separation Equipment",
+    "imageSrc": "/images/products/gravity-separation/synchronous-counter-directional-jig.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "synchronous-counter-directional-jig-small",
+    "url": "/en/products/ore-processing/gravity-separation/synchronous-counter-directional-jig-small",
+    "title": "Composite Jig Separator",
+    "excerpt": "The SCDJM Series Small-Scale Composite Jig Separator is a high-efficiency gravity concentration equipment designed for small to medium-scale mineral processing operations. Utilizing innovative dual-pu",
+    "category": "Gravity Separation Equipment",
+    "imageSrc": "/images/products/gravity-separation/synchronous-counter-directional-jig-small.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "spiral-chute",
+    "url": "/en/products/ore-processing/gravity-separation/spiral-chute",
+    "title": "Spiral Chute | High-Efficiency Gravity Concentrator",
+    "excerpt": "The Spiral Chute is a highly efficient zero-power gravity separation equipment that achieves precise mineral concentration through the synergistic action of centrifugal force, gravity, and water flow.",
+    "category": "Gravity Separation Equipment",
+    "imageSrc": "/images/products/gravity-separation/spiral-chute.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "shaking-table",
+    "url": "/en/products/ore-processing/gravity-separation/shaking-table",
+    "title": "Shaking Table",
+    "excerpt": "The shaking table is an efficient gravity separation equipment that separates minerals of different weights and densities through the reciprocating motion of the deck and the washing action of water. ",
+    "category": "Gravity Separation Equipment",
+    "imageSrc": "/images/products/gravity-separation/shaking-table.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "sawtooth-wave-jig",
+    "url": "/en/products/ore-processing/gravity-separation/sawtooth-wave-jig",
+    "title": "Sawtooth Wave Jig | Gravity Jig Concentrator",
+    "excerpt": "The Sawtooth Wave Jig is a high-recovery gravity separator that utilizes a unique sawtooth waveform motion, particularly effective for small scale gold mining operations and tin ore processing. Its in",
+    "category": "Gravity Separation Equipment",
+    "imageSrc": "/images/products/gravity-separation/sawtooth-wave-jig.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "centrifugal-separator",
+    "url": "/en/products/ore-processing/gravity-separation/centrifugal-separator",
+    "title": "STLB Series Enhanced Gravity Concentrator",
+    "excerpt": "The STLB Series enhanced gravity concentrator employs advanced centrifugal concentration technology, specifically engineered for efficient recovery of free gold and precious metals. Through high-G for",
+    "category": "Gravity Separation Equipment",
+    "imageSrc": "/images/products/gravity-separation/centrifugal-separator.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "xfc-air-inflation-flotation-cell",
+    "url": "/en/products/ore-processing/flotation-equipment/xfc-air-inflation-flotation-cell",
+    "title": "XFC Air Inflation Flotation Cell",
+    "excerpt": "The XFC Air Inflation Flotation Cell is a high-efficiency pneumatic flotation equipment that adopts an advanced impeller-stator system design, achieving efficient mixing and mineralization of slurry a",
+    "category": "Mineral Processing Equipment",
+    "imageSrc": "/images/products/flotation-equipment/xfc-air-inflation-flotation-cell.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "self-aspirated-flotation-cell",
+    "url": "/en/products/ore-processing/flotation-equipment/self-aspirated-flotation-cell",
+    "title": "Self-Aspirated Flotation Cell",
+    "excerpt": "The Self-Aspirated Flotation Cell is an advanced mineral separation device that automatically draws in air through specially designed impeller systems, providing efficient mineral separation without e",
+    "category": "Mineral Processing Equipment",
+    "imageSrc": "/images/products/flotation-equipment/self-aspirated-flotation-cell.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "pneumatic-flotation-cell",
+    "url": "/en/products/ore-processing/flotation-equipment/pneumatic-flotation-cell",
+    "title": "Pneumatic Flotation Cell",
+    "excerpt": "The Pneumatic Flotation Cell is an advanced mineral separation system that creates optimal froth conditions through controlled air injection. With high recovery rates for valuable minerals and adaptab",
+    "category": "Mineral Processing Equipment",
+    "imageSrc": "/images/products/flotation-equipment/pneumatic-flotation-cell.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "coarse-flotation-cell",
+    "url": "/en/products/ore-processing/flotation-equipment/coarse-flotation-cell",
+    "title": "Coarse Flotation Cell",
+    "excerpt": "The Coarse Flotation Cell is a high-efficiency flotation equipment specially designed for processing coarse and heavy mineral particles. It adopts a dual-tank structure (suction tank and direct flow t",
+    "category": "Mineral Processing Equipment",
+    "imageSrc": "/images/products/flotation-equipment/coarse-flotation-cell.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "vibratory-feeder",
+    "url": "/en/products/ore-processing/feeding-equipment/vibratory-feeder",
+    "title": "Vibratory Feeder",
+    "excerpt": "Zexin Mining's ZG Series Vibratory Feeders deliver exceptional material handling performance in demanding mining operations. With dual vibration motor design and robust trough construction, these high",
+    "category": "Mineral Processing Equipment",
+    "imageSrc": "/images/products/feeding-equipment/vibratory-feeder.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "grizzly-feeder",
+    "url": "/en/products/ore-processing/feeding-equipment/grizzly-feeder",
+    "title": "Vibrating Grizzly Feeder",
+    "excerpt": "Zexin Mining's VF Series Grizzly Feeders provide excellent material handling and primary screening capabilities in demanding mining operations. Featuring dual vibrating motor drives and robust grizzly",
+    "category": "Mineral Processing Equipment",
+    "imageSrc": "/images/products/feeding-equipment/grizzly-feeder.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "apron-feeder",
+    "url": "/en/products/ore-processing/feeding-equipment/apron-feeder",
+    "title": "Heavy Duty Apron Feeder",
+    "excerpt": "Zexin Mining's BLG Series Chain Plate Feeders deliver exceptional material handling performance in demanding mining operations. Featuring robust steel plate construction and variable speed control, th",
+    "category": "Mineral Processing Equipment",
+    "imageSrc": "/images/products/feeding-equipment/apron-feeder.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "submerged-spiral-classifier",
+    "url": "/en/products/ore-processing/classification-equipment/submerged-spiral-classifier",
+    "title": "Submerged Spiral Classifier",
+    "excerpt": "The FLC/2FLC Series Submerged Spiral Classifier is an efficient mineral processing equipment designed for precise particle size separation and sand washing in mining operations. With robust spiral des",
+    "category": "Mineral Desliming Equipment",
+    "imageSrc": "/images/products/classification-equipment/submerged-spiral-classifier.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "hydrocyclone-separator",
+    "url": "/en/products/ore-processing/classification-equipment/hydrocyclone-separator",
+    "title": "Mining Hydrocyclone Separator",
+    "excerpt": "The FX Series Mining Hydrocyclone Separator is an advanced classification equipment designed for efficient particle separation in mineral processing operations. Featuring optimized vortex design and w",
+    "category": "Mineral Desliming Equipment",
+    "imageSrc": "/images/products/classification-equipment/hydrocyclone-separator.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "high-weir-spiral-classifier",
+    "url": "/en/products/ore-processing/classification-equipment/high-weir-spiral-classifier",
+    "title": "High Weir Spiral Classifier",
+    "excerpt": "The FLG/2FLG Series High Weir Spiral Classifier is a precision mineral processing equipment designed for efficient particle size separation and solid-liquid classification. With its elevated weir desi",
+    "category": "Mineral Desliming Equipment",
+    "imageSrc": "/images/products/classification-equipment/high-weir-spiral-classifier.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "cone-classifier",
+    "url": "/en/products/ore-processing/classification-equipment/cone-classifier",
+    "title": "Mineral Processing Cone Classifier",
+    "excerpt": "FD Series Cone Classifier is an advanced desliming equipment designed for efficient separation of fine particles from mineral slurries. Its conical structure and optimized hydraulic design deliver sup",
+    "category": "Mineral Desliming Equipment",
+    "imageSrc": "/images/products/classification-equipment/cone-classifier.jpg",
+    "resultType": "product"
+  },
+  {
+    "id": "xinjiang-tungsten",
+    "url": "/en/cases/xinjiang-tungsten",
+    "title": "100t/d Tungsten Processing Plant in Xinjiang",
+    "excerpt": "A 100t/d tungsten processing plant designed and built by Zexin Mining Equipment. The plant processes tungsten ore with approximately 7% WO3 grade, featuring a comprehensive gravity separation process.",
+    "category": "Tungsten Processing",
+    "imageSrc": "/images/cases/xinjiang-tungsten/tungsten-processing-plant-xinjiang.jpg",
+    "resultType": "case"
+  },
+  {
+    "id": "uae-slag-processing",
+    "url": "/en/cases/uae-slag-processing",
+    "title": "Iron Slag Processing Plant in UAE",
+    "excerpt": "A specialized iron slag processing plant designed by Zexin Mining Equipment for a UAE client in 2024. The facility processes steel mill slag to recover valuable iron content and produces construction ",
+    "category": "Slag Processing",
+    "imageSrc": "/images/cases/uae-slag-processing/steel-slag-processing-plant-abu-dhabi-uae.jpg",
+    "resultType": "case"
+  },
+  {
+    "id": "south-africa-manganese",
+    "url": "/en/cases/south-africa-manganese",
+    "title": "1.5 Million Tons Manganese Processing Plant in South Africa",
+    "excerpt": "A high-efficiency manganese ore processing line with annual capacity of 1.5 million tons, designed and commissioned by Zexin Mining Equipment in South Africa's rich manganese deposit region.",
+    "category": "Manganese Ore",
+    "imageSrc": "/images/cases/south-africa-manganese/south-africa-manganese-processing-plant-zexin.jpg",
+    "resultType": "case"
+  },
+  {
+    "id": "myanmar-tin",
+    "url": "/en/cases/myanmar-tin",
+    "title": "River Sand Tin Processing Plant in Loikaw, Myanmar",
+    "excerpt": "A specialized tin processing plant designed and constructed by Zexin Mining Equipment for processing river sand tin deposits in Loikaw, Myanmar. The plant was designed to efficiently process alluvial ",
+    "category": "Tin Ore",
+    "imageSrc": "/images/cases/myanmar-tin/river-sand-tin-processing-plant-loikaw.jpg",
+    "resultType": "case"
+  },
+  {
+    "id": "hainan-iron",
+    "url": "/en/cases/hainan-iron",
+    "title": "2 Million Tons Iron Ore Processing Plant Upgrade for Xinda Mining in Hainan",
+    "excerpt": "A comprehensive upgrade and renovation project for an existing iron ore processing plant in Changjiang County, Hainan Province. The project aimed to improve concentrate grade while addressing space li",
+    "category": "Iron Ore",
+    "imageSrc": "/images/cases/hainan-iron/hainan-changjiang-iron-ore-processing-plant.jpg",
+    "resultType": "case"
+  },
+  {
+    "id": "hainan-iron-tailings",
+    "url": "/en/cases/hainan-iron-tailings",
+    "title": "Hainan Changjiang Iron Tailings Comprehensive Utilization EPC Project",
+    "excerpt": "Located in Changjiang County, Hainan Province, this national key project processes 10,000 tons of iron tailings daily with original ore grade of 10-20 degrees. Zexin Mining Equipment provided comprehe",
+    "category": "Iron Ore",
+    "imageSrc": "/images/cases/hainan-iron-tailings/hainan-iron-tailings-processing-plant-zexin-mining.jpg",
+    "resultType": "case"
+  },
+  {
+    "id": "guilin-yongfu-polymetallic",
+    "url": "/en/cases/guilin-yongfu-polymetallic",
+    "title": "300t/d Lead-Zinc-Copper Polymetallic Processing Plant in Yongfu, Guilin",
+    "excerpt": "A 300t/d lead-zinc-copper polymetallic processing plant designed and built by Zexin Mining Equipment for a mining company in Yongfu, Guilin. This project involved the revitalization of an old mine sit",
+    "category": "Polymetallic Ore Processing",
+    "imageSrc": "/images/cases/guilin-yongfu-polymetallic/yongfu-lead-zinc-copper-processing-plant-guilin.jpg",
+    "resultType": "case"
+  },
+  {
+    "id": "guangxi-lead-zinc",
+    "url": "/en/cases/guangxi-lead-zinc",
+    "title": "Lead-Zinc Processing Plant in Guangxi",
+    "excerpt": "A 1000 tons per day lead-zinc processing plant designed and constructed by Zexin Mining Equipment. The plant employs advanced beneficiation technology to achieve efficient separation of lead and zinc ",
+    "category": "Lead-Zinc Ore",
+    "imageSrc": "/images/cases/guangxi-lead-zinc/lead-zinc-processing-plant.jpg",
+    "resultType": "case"
+  },
+  {
+    "id": "gabon-manganese",
+    "url": "/en/cases/gabon-manganese",
+    "title": "2 Million Tons Manganese Processing Plant for Tata Group in Gabon",
+    "excerpt": "A large-scale manganese ore processing plant designed and constructed by Zexin Mining Equipment for Tata Group in Gabon, with an annual capacity of 2 million tons. The project optimized the beneficiat",
+    "category": "Manganese Ore",
+    "imageSrc": "/images/cases/gabon-manganese/gabon-tata-group-manganese-processing-plant.jpg",
+    "resultType": "case"
+  }
+]

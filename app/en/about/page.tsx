@@ -24,15 +24,15 @@ export const metadata: Metadata = {
       'en-US': 'https://www.zexinmining.com/en/about'
     }
   },
-  openGraph: {
+    openGraph: {
     title: 'About Zexin Mining Equipment',
     description: 'Zexin Mining Equipment is a leading mining equipment manufacturer and service provider dedicated to delivering innovative mining solutions to our clients.',
     url: 'https://www.zexinmining.com/en/about',
     siteName: 'Zexin Mining Equipment',
     locale: 'en',
-    type: 'website',
-  }
-};
+      type: 'website',
+    }
+  };
 
 // 使用普通函数而非async函数，避免被视为服务器组件
 export default function AboutPage() {

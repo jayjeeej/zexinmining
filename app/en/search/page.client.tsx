@@ -24,6 +24,17 @@ interface SearchResult {
   resultType?: 'product' | 'news' | 'case';  // 添加结果类型字段
 }
 
+// 添加搜索索引接口
+interface SearchIndex {
+  id: string;
+  url: string;
+  title: string;
+  excerpt: string;
+  category?: string;
+  imageSrc: string;
+  resultType: string;  // 静态索引中的resultType是string类型
+}
+
 interface SearchResultsClientProps {
   locale: string;
   query: string;
@@ -201,18 +212,114 @@ export default function SearchResultsClient({ locale, query }: SearchResultsClie
       
       setIsLoading(true);
       try {
-        const response = await fetch(`/api/search?q=${encodeURIComponent(query)}&locale=${locale}`);
-        const data = await response.json();
+        // 替换API调用为直接加载静态索引文件
+        const indexUrl = `/data/search-index-${locale}.json`;
+        const response = await fetch(indexUrl);
         
-        // 应用额外的前端去重处理
-        const dedupedResults = performLocalDeduplication(data);
+        if (!response.ok) {
+          throw new Error(`Failed to load search index: ${response.status}`);
+        }
+        
+        const searchIndex = await response.json() as SearchIndex[];
+        
+        // 客户端搜索逻辑实现
+        const normalizedQuery = query.toLowerCase().trim();
+        
+        // 简化分词，只按空格分割
+        const keywords = normalizedQuery.split(' ').filter(kw => kw.length >= 1);
+        
+        console.log(`Search keywords: "${normalizedQuery}", parsed:`, keywords);
+        
+        // 改进匹配逻辑 - 严格匹配标题
+        const matchedResults = searchIndex.filter(item => {
+          if (!item.title) return false;
+          
+          const titleLower = item.title.toLowerCase();
+          const excerptLower = item.excerpt ? item.excerpt.toLowerCase() : '';
+          
+          // 判断是否是英文查询
+          const isEnglishQuery = /^[a-zA-Z\s]+$/.test(normalizedQuery);
+          
+          if (isEnglishQuery) {
+            // 英文查询: 对每个单词进行更严格的单词边界检查
+            // 将标题按空格分割
+            const titleWords = titleLower.split(' ');
+            
+            // 检查查询词是否作为完整单词出现
+            const hasExactWordMatch = keywords.some(keyword => 
+              titleWords.includes(keyword)
+            );
+            
+            // 检查完整查询词是否出现在标题中
+            const hasFullQueryInTitle = titleLower.includes(normalizedQuery);
+            
+            // 对于英文搜索，要求至少有一个关键词与标题中的单词完全匹配
+            // 或者标题中包含完整的查询词
+            return hasExactWordMatch || hasFullQueryInTitle;
+          } else {
+            // 1. 检查标题是否包含完整搜索词
+            const hasFullQueryInTitle = titleLower.includes(normalizedQuery);
+            
+            // 2. 或者检查标题是否包含所有关键词
+            let hasAllKeywordsInTitle = true;
+            for (const keyword of keywords) {
+              if (!titleLower.includes(keyword)) {
+                hasAllKeywordsInTitle = false;
+                break;
+              }
+            }
+            
+            // 只有标题匹配才返回结果
+            return hasFullQueryInTitle || hasAllKeywordsInTitle;
+          }
+        });
+        
+        // 添加分数信息并优化排序
+        const searchResults: SearchResult[] = matchedResults.map(item => {
+          const titleLower = item.title.toLowerCase();
+          const excerptLower = item.excerpt ? item.excerpt.toLowerCase() : '';
+          
+          // 计算匹配分数
+          let score = 0;
+          
+          // 标题精确匹配得分最高
+          if (titleLower === normalizedQuery) {
+            score = 100; // 完全匹配
+          }
+          // 标题包含完整查询字符串
+          else if (titleLower.includes(normalizedQuery)) {
+            score = 80;
+          }
+          // 标题包含所有关键词
+          else {
+            let keywordMatchCount = 0;
+            for (const keyword of keywords) {
+              if (titleLower.includes(keyword)) {
+                keywordMatchCount++;
+              }
+            }
+            // 根据匹配的关键词比例计算得分
+            score = Math.floor(50 * (keywordMatchCount / keywords.length));
+          }
+          
+          return {
+            ...item,
+            score,
+            resultType: (item.resultType === 'product' || item.resultType === 'news' || item.resultType === 'case') 
+              ? item.resultType as 'product' | 'news' | 'case' 
+              : undefined
+          };
+        }).sort((a, b) => b.score - a.score); // 按得分降序排序
+        
+        // 应用前端去重处理
+        const dedupedResults = performLocalDeduplication(searchResults);
         
         setResults(dedupedResults);
         
         // 保存新获取的状态
         setTimeout(saveStateToHistory, 300);
       } catch (error) {
-        console.error('搜索失败:', error);
+        console.error('Search failed:', error);
         setResults([]);
       } finally {
         setIsLoading(false);
@@ -612,35 +719,62 @@ export default function SearchResultsClient({ locale, query }: SearchResultsClie
         ) : results.length > 0 ? (
           <>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {displayedResults.map((result, index) => (
-                <Link 
-                  href={result.url} 
-                  key={`${result.id}-${index}`}
-                  className="product-card block rounded-xs pb-6 bg-white"
-                >
-                  {result.imageSrc && (
-                    <div className="mb-2 overflow-hidden">
-                      <div className="relative h-64 overflow-hidden bg-gray-50">
-                        <OptimizedImage
-                          src={result.imageSrc}
-                          alt={result.title}
-                          className="w-full h-full object-cover"
-                          objectFit="cover"
-                          unoptimized={true}
-                        />
+              {displayedResults.map((result, index) => {
+                // 确保结果有效URL
+                let url = result.url || '';
+                
+                // 确保以 /locale/ 开头
+                if (!url.startsWith(`/${locale}/`)) {
+                  url = `/${locale}/${url.replace(/^\//, '')}`;
+                }
+                
+                // 确保路径规范化
+                url = url.replace(/\/+/g, '/');
+                
+                // 移除任何可能的.json扩展名
+                url = url.replace(/\.json(\/|$)/g, '$1');
+                
+                // 修复重复路径片段
+                const urlParts = url.split('/');
+                const lastPart = urlParts[urlParts.length - 1];
+                const secondLastPart = urlParts[urlParts.length - 2];
+                
+                // 如果最后两部分重复，删除最后一部分
+                if (lastPart === secondLastPart) {
+                  urlParts.pop();
+                  url = urlParts.join('/');
+                }
+                
+                return (
+                  <Link 
+                    href={url} 
+                    key={`${result.id}-${index}`}
+                    className="product-card block rounded-xs pb-6 bg-white"
+                  >
+                    {result.imageSrc && (
+                      <div className="mb-2 overflow-hidden">
+                        <div className="relative h-64 overflow-hidden bg-gray-50">
+                          <OptimizedImage
+                            src={result.imageSrc}
+                            alt={result.title}
+                            className="w-full h-full object-cover"
+                            objectFit="cover"
+                            unoptimized={true}
+                          />
+                        </div>
                       </div>
-                    </div>
-                  )}
-                  <div className="px-4">
-                    {result.category && (
-                      <p className="text-xs text-gray-400 mb-1">{result.category}</p>
                     )}
-                    <h2 className="text-base font-medium text-black transition-colors duration-300">
-                      {result.title}
-                    </h2>
-                  </div>
-                </Link>
-              ))}
+                    <div className="px-4">
+                      {result.category && (
+                        <p className="text-xs text-gray-400 mb-1">{result.category}</p>
+                      )}
+                      <h2 className="text-base font-medium text-black transition-colors duration-300">
+                        {result.title}
+                      </h2>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
             
             {/* 进度指示器和加载更多按钮 */}

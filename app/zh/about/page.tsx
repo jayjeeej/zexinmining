@@ -24,15 +24,15 @@ export const metadata: Metadata = {
       'en-US': 'https://www.zexinmining.com/en/about'
     }
   },
-  openGraph: {
+    openGraph: {
     title: '关于泽鑫矿山设备',
     description: '泽鑫矿山设备是一家领先的矿业设备制造商和服务提供商，致力于为客户提供创新的矿业解决方案。',
     url: 'https://www.zexinmining.com/zh/about',
     siteName: '泽鑫矿山设备',
     locale: 'zh',
-    type: 'website',
-  }
-};
+      type: 'website',
+    }
+  };
 
 // 使用普通函数而非async函数，避免被视为服务器组件
 export default function AboutPage() {
