@@ -1,0 +1,7 @@
+[Cursor] 修复Netlify配置问题
+
+- 添加HTTP到HTTPS重定向规则
+- 添加非www到www的重定向规则
+- 添加安全头部和缓存控制设置
+- 配置Netlify Functions支持
+- 设置构建环境变量 

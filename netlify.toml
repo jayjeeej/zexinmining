@@ -2,5 +2,58 @@
   command = "npm run build"
   publish = ".next"
 
+[build.environment]
+  NEXT_USE_NETLIFY_EDGE = "true"
+  NODE_VERSION = "18"
+
 [[plugins]]
-  package = "@netlify/plugin-nextjs" 
+  package = "@netlify/plugin-nextjs"
+
+[functions]
+  # 为Netlify Functions设置较大的内存限制
+  node_bundler = "esbuild"
+  external_node_modules = ["sharp"]
+
+# HTTP到HTTPS重定向
+[[redirects]]
+  from = "http://:host/:path*"
+  to = "https://:host/:path*"
+  status = 301
+  force = true
+
+# 非www到www重定向
+[[redirects]]
+  from = "https://zexinmining.com/:path*"
+  to = "https://www.zexinmining.com/:path*"
+  status = 301
+  force = true
+
+# 安全头部设置
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+
+# 图片缓存设置
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# 视频缓存设置
+[[headers]]
+  for = "/videos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# 静态资源缓存设置
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# 数据缓存设置
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400" 
