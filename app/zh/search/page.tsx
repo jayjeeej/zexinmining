@@ -2,6 +2,9 @@ import { Suspense } from 'react';
 import { redirect } from 'next/navigation';
 import SearchResultsClient from './page.client';
 
+// 搜索页面必须是动态的，不能静态生成
+export const dynamic = 'force-dynamic';
+
 // 添加类型定义
 type SearchPageProps = {
   searchParams: { q?: string };

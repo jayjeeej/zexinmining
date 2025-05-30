@@ -4,7 +4,6 @@ const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',  // 添加静态导出
   eslint: {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.

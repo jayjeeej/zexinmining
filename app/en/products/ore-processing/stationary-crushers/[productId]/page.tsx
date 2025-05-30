@@ -15,6 +15,7 @@ import ProductDataInjection from '@/components/ProductDetail/ProductDataInjectio
 import ClientStationaryCrusherDetail from './page.client';
 import { ProductSpecification } from '@/lib/productDataSchema';
 import fs from 'fs/promises';
+import * as fsSync from 'fs'; // 添加同步fs导入
 import path from 'path';
 import { getProductDetailBreadcrumbConfig } from '@/lib/navigation';
 import { safelyGetRouteParams } from '@/lib/utils';
@@ -25,48 +26,34 @@ export const fetchCache = 'force-cache';      // 强制使用缓存
 export const runtime = 'nodejs';              // 使用Node.js运行时
 export const preferredRegion = 'auto';        // 自动选择最佳区域
 
-
-// 获取所有固定式破碎机产品ID用于静态生成
+// 为静态导出生成所有可能的路径参数
 export async function generateStaticParams() {
+  const locale = 'en';
+  const category = 'stationary-crushers';
+  const basePath = path.join(process.cwd(), 'public', 'data', locale, category);
+  
   try {
-    // 从文件系统读取所有产品数据文件
-    const dataDir = path.join(process.cwd(), 'public', 'data', 'en'); // 使用英文目录作为基准
-    const files = await fs.readdir(dataDir);
-    const productJsonFiles = files.filter(file => file.endsWith('.json'));
-    
-    // 查找所有固定式破碎机类别的产品
-    const stationaryCrusherProducts = [];
-    
-    for (const file of productJsonFiles) {
-      try {
-        const filePath = path.join(dataDir, file);
-        const content = await fs.readFile(filePath, 'utf8');
-        const data = JSON.parse(content);
-        
-        // 只选择固定式破碎机类别的产品
-        if (data.subcategory === 'stationary-crushers') {
-          stationaryCrusherProducts.push(file.replace('.json', ''));
-        }
-      } catch (error) {
-        // 忽略文件读取错误
-      }
+    // 检查目录是否存在
+    if (!fsSync.existsSync(basePath)) {
+      console.error(`Directory not found: ${basePath}`);
+      return [];
     }
     
-    const locales = ['en', 'zh'];
+    // 获取所有产品文件
+    const productFiles = fsSync.readdirSync(basePath)
+      .filter((file: string) => file.endsWith('.json'))
+      .map((file: string) => file.replace('.json', ''));
     
-    // 为每个语言和产品ID生成参数
-    return stationaryCrusherProducts.flatMap(productId => 
-      locales.map(locale => ({
-        productId,
-        locale
-      }))
-    );
+    // 为每个产品添加参数
+    const params = productFiles.map((productId: string) => ({
+      productId
+    }));
+    
+    console.log(`Generated ${params.length} static paths for ${category} products`);
+    return params;
   } catch (error) {
-    // 返回基本的静态参数，确保构建不会失败
-    return [
-      { locale: 'en', productId: 'jaw-crusher' },
-      { locale: 'zh', productId: 'jaw-crusher' }
-    ];
+    console.error(`Error generating static params for ${category}:`, error);
+    return [];
   }
 }
 

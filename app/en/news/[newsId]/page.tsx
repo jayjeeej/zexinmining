@@ -5,6 +5,8 @@ import NewsDetailClient from './NewsDetailClient';
 import { notFound } from 'next/navigation';
 import { NewsItem } from '@/lib/api/news';
 import { safelyGetRouteParams } from '@/lib/utils';
+import fs from 'fs';
+import path from 'path';
 // Vercel 优化导出指令
 export const dynamic = 'force-static';        // 强制静态生成
 export const revalidate = 3600;               // 每小时重新验证一次
@@ -12,6 +14,35 @@ export const fetchCache = 'force-cache';      // 强制使用缓存
 export const runtime = 'nodejs';              // 使用Node.js运行时
 export const preferredRegion = 'auto';        // 自动选择最佳区域
 
+// 为静态导出生成所有可能的路径参数
+export async function generateStaticParams() {
+  const locale = 'en';
+  const basePath = path.join(process.cwd(), 'public', 'data', locale, 'news');
+  
+  try {
+    // 检查目录是否存在
+    if (!fs.existsSync(basePath)) {
+      console.error(`Directory not found: ${basePath}`);
+      return [];
+    }
+    
+    // 获取所有新闻文件
+    const newsFiles = fs.readdirSync(basePath)
+      .filter((file: string) => file.endsWith('.json'))
+      .map((file: string) => file.replace('.json', ''));
+    
+    // 为每个新闻ID添加参数
+    const params = newsFiles.map((newsId: string) => ({
+      newsId
+    }));
+    
+    console.log(`Generated ${params.length} static paths for English news`);
+    return params;
+  } catch (error) {
+    console.error(`Error generating static params for news:`, error);
+    return [];
+  }
+}
 
 // 动态生成元数据
 export async function generateMetadata({ 

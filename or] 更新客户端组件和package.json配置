@@ -1,0 +1,33 @@
+[1mdiff --git a/app/en/about/page.client.tsx b/app/en/about/page.client.tsx[m
+[1mindex afd0df7..5989568 100644[m
+[1m--- a/app/en/about/page.client.tsx[m
+[1m+++ b/app/en/about/page.client.tsx[m
+[36m@@ -69,7 +69,7 @@[m [mexport default function AboutPageClient({ locale }: { locale: string }) {[m
+           imageSrc: '/images/about/team-founder.jpg'[m
+         },[m
+         {[m
+[31m-          name: isZh ? '王超' : 'Wang Chao',[m
+[32m+[m[32m          name: isZh ? '王超' : 'Eddie Wang',[m
+           title: isZh ? '首席执行官' : 'CEO',[m
+           description: isZh[m
+             ? '20年行业经验，带领团队开发多项核心技术。'[m
+[36m@@ -77,7 +77,7 @@[m [mexport default function AboutPageClient({ locale }: { locale: string }) {[m
+           imageSrc: '/images/about/team-ceo.jpg'[m
+         },[m
+         {[m
+[31m-          name: isZh ? '吴宇涛' : 'Wu Yutao',[m
+[32m+[m[32m          name: isZh ? '吴宇涛' : 'Cassian Wu',[m
+           title: isZh ? '国际业务总监' : 'International Business Director',[m
+           description: isZh[m
+             ? '丰富的国际贸易经验，负责全球市场拓展与客户管理。'[m
+[36m@@ -99,8 +99,8 @@[m [mexport default function AboutPageClient({ locale }: { locale: string }) {[m
+       phone: {[m
+         title: isZh ? '电话' : 'Phone',[m
+         contacts: [[m
+[31m-          { number: '+86 18577086999', name: '王超' },[m
+[31m-          { number: '+86 13807719695', name: '吴宇涛' }[m
+[32m+[m[32m          { number: '+86 18577086999', name: 'Eddie Wang' },[m
+[32m+[m[32m          { number: '+86 13807719695', name: 'Cassian Wu' }[m
+         ][m
+       },[m
+       whatsapp: {[m

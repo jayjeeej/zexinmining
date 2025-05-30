@@ -20,6 +20,51 @@ import { safelyGetRouteParams } from '@/lib/utils';
 export const dynamic = 'force-static'; // Force static generation
 export const revalidate = 3600; // Revalidate every hour
 
+// 为静态导出生成所有可能的路径参数
+export async function generateStaticParams() {
+  const locale = 'en';
+  const basePath = path.join(process.cwd(), 'public', 'data', locale, 'mineral-processing-solutions');
+  
+  try {
+    // 检查目录是否存在
+    if (!fs.existsSync(basePath)) {
+      console.error(`Directory not found: ${basePath}`);
+      return [];
+    }
+    
+    // 获取所有分类目录
+    const categories = fs.readdirSync(basePath, { withFileTypes: true })
+      .filter(dirent => dirent.isDirectory())
+      .map(dirent => dirent.name);
+    
+    // 为每个分类和解决方案生成参数
+    const params = [];
+    
+    for (const category of categories) {
+      const categoryPath = path.join(basePath, category);
+      
+      // 获取该分类下的所有解决方案文件
+      const solutionFiles = fs.readdirSync(categoryPath)
+        .filter(file => file.endsWith('.json'))
+        .map(file => file.replace('.json', ''));
+      
+      // 为每个解决方案添加参数
+      for (const solutionId of solutionFiles) {
+        params.push({
+          category,
+          solutionId
+        });
+      }
+    }
+    
+    console.log(`Generated ${params.length} static paths for mineral processing solutions`);
+    return params;
+  } catch (error) {
+    console.error('Error generating static params:', error);
+    return [];
+  }
+}
+
 // Get solution data
 async function getSolutionData(locale: string, category: string, solutionId: string) {
   try {

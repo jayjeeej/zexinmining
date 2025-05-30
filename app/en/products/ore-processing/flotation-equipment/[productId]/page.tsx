@@ -19,6 +19,7 @@ import { promises as fsPromises } from 'fs';
 import path from 'path';
 import { getProductDetailBreadcrumbConfig } from '@/lib/navigation';
 import { safelyGetRouteParams } from '@/lib/utils';
+import fsSync from 'fs';
 
 // Vercel 优化导出指令
 export const dynamic = 'force-static';        // 强制静态生成
@@ -29,43 +30,32 @@ export const preferredRegion = 'auto';        // 自动选择最佳区域
 
 // 获取所有浮选设备产品ID用于静态生成
 export async function generateStaticParams() {
+  const locale = 'en';
+  const category = 'flotation-equipment';
+  const basePath = path.join(process.cwd(), 'public', 'data', locale, category);
+  
   try {
-    // 从文件系统读取所有产品数据文件
-    const dataDir = path.join(process.cwd(), 'public', 'data', 'en', 'flotation-equipment'); // 修正为正确的目录名
-    
     // 检查目录是否存在
-    try {
-      await fsPromises.access(dataDir);
-    } catch (error) {
-      console.error(`目录不存在: ${dataDir}`);
-      return [
-        { locale: 'en', productId: 'pneumatic-flotation-cell' },
-        { locale: 'zh', productId: 'pneumatic-flotation-cell' }
-      ];
+    if (!fsSync.existsSync(basePath)) {
+      console.error(`Directory not found: ${basePath}`);
+      return [];
     }
     
-    const files = await fsPromises.readdir(dataDir);
-    const productJsonFiles = files.filter(file => file.endsWith('.json'));
+    // 获取所有产品文件
+    const productFiles = fsSync.readdirSync(basePath)
+      .filter((file: string) => file.endsWith('.json'))
+      .map((file: string) => file.replace('.json', ''));
     
-    // 提取所有浮选设备产品ID
-    const flotationEquipmentProducts = productJsonFiles.map(file => file.replace('.json', ''));
+    // 为每个产品添加参数
+    const params = productFiles.map((productId: string) => ({
+      productId
+    }));
     
-    const locales = ['en', 'zh'];
-    
-    // 为每个语言和产品ID生成参数
-    return flotationEquipmentProducts.flatMap(productId => 
-      locales.map(locale => ({
-        productId,
-        locale
-      }))
-    );
+    console.log(`Generated ${params.length} static paths for ${category} products`);
+    return params;
   } catch (error) {
-    console.error('生成浮选设备参数失败:', error);
-    // 返回基本的静态参数，确保构建不会失败
-    return [
-      { locale: 'en', productId: 'pneumatic-flotation-cell' },
-      { locale: 'zh', productId: 'pneumatic-flotation-cell' }
-    ];
+    console.error(`Error generating static params for ${category}:`, error);
+    return [];
   }
 }
 

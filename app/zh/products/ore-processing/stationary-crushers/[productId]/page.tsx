@@ -15,6 +15,7 @@ import ProductDataInjection from '@/components/ProductDetail/ProductDataInjectio
 import ClientStationaryCrusherDetail from './page.client';
 import { ProductSpecification } from '@/lib/productDataSchema';
 import fs from 'fs/promises';
+import * as fsSync from 'fs';
 import path from 'path';
 import { getProductDetailBreadcrumbConfig } from '@/lib/navigation';
 import { safelyGetRouteParams } from '@/lib/utils';
@@ -26,28 +27,34 @@ export const runtime = 'nodejs';              // 使用Node.js运行时
 export const preferredRegion = 'auto';        // 自动选择最佳区域
 
 
-// 获取所有固定式破碎机产品ID用于静态生成
+// 为静态导出生成所有可能的路径参数
 export async function generateStaticParams() {
+  const locale = 'zh';
+  const category = 'stationary-crushers';
+  const basePath = path.join(process.cwd(), 'public', 'data', locale, category);
+  
   try {
-    // 直接读取 stationary-crushers 目录下所有 JSON 文件
-    const dataDir = path.join(process.cwd(), 'public', 'data', 'en', 'stationary-crushers');
-    await fs.access(dataDir);
-    const files = await fs.readdir(dataDir);
-    const productJsonFiles = files.filter(file => file.endsWith('.json'));
-    const stationaryCrusherProducts = productJsonFiles.map(file => file.replace('.json', ''));
-    const locales = ['en', 'zh'];
-    return stationaryCrusherProducts.flatMap(productId => 
-      locales.map(locale => ({
-        productId,
-        locale
-      }))
-    );
+    // 检查目录是否存在
+    if (!fsSync.existsSync(basePath)) {
+      console.error(`Directory not found: ${basePath}`);
+      return [];
+    }
+    
+    // 获取所有产品文件
+    const productFiles = fsSync.readdirSync(basePath)
+      .filter((file: string) => file.endsWith('.json'))
+      .map((file: string) => file.replace('.json', ''));
+    
+    // 为每个产品添加参数
+    const params = productFiles.map((productId: string) => ({
+      productId
+    }));
+    
+    console.log(`Generated ${params.length} static paths for Chinese ${category} products`);
+    return params;
   } catch (error) {
-    // fallback
-    return [
-      { locale: 'en', productId: 'jaw-crusher' },
-      { locale: 'zh', productId: 'jaw-crusher' }
-    ];
+    console.error(`Error generating static params for Chinese ${category}:`, error);
+    return [];
   }
 }
 

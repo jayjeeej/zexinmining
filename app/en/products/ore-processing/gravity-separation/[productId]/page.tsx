@@ -14,8 +14,8 @@ import StructuredData, { MultiStructuredData } from '@/components/StructuredData
 import ProductDataInjection from '@/components/ProductDetail/ProductDataInjection';
 import ClientGravitySeparationDetail from './page.client';
 import { ProductSpecification } from '@/lib/productDataSchema';
-import fs from 'fs';
-import { promises as fsPromises } from 'fs';
+import fs from 'fs/promises';
+import * as fsSync from 'fs'; // 使用fsSync代替fs
 import path from 'path';
 import { getProductDetailBreadcrumbConfig } from '@/lib/navigation';
 import { safelyGetRouteParams } from '@/lib/utils';
@@ -28,45 +28,34 @@ export const fetchCache = 'force-cache';      // 强制使用缓存
 export const runtime = 'nodejs';              // 使用Node.js运行时
 export const preferredRegion = 'auto';        // 自动选择最佳区域
 
-// 获取所有重力分离设备产品ID用于静态生成
+// 为静态导出生成所有可能的路径参数
 export async function generateStaticParams() {
+  const locale = 'en';
+  const category = 'gravity-separation';
+  const basePath = path.join(process.cwd(), 'public', 'data', locale, category);
+  
   try {
-    // 从文件系统读取所有产品数据文件
-    const dataDir = path.join(process.cwd(), 'public', 'data', 'en', 'gravity-separation'); // 使用英文重力分选设备子目录
-    
     // 检查目录是否存在
-    try {
-      await fsPromises.access(dataDir);
-    } catch (error) {
-      // 静默处理错误
-      return [
-        { locale: 'en', productId: 'shaking-table' },
-        { locale: 'zh', productId: 'shaking-table' }
-      ];
+    if (!fsSync.existsSync(basePath)) {
+      console.error(`Directory not found: ${basePath}`);
+      return [];
     }
     
-    const files = await fsPromises.readdir(dataDir);
-    const productJsonFiles = files.filter(file => file.endsWith('.json'));
+    // 获取所有产品文件
+    const productFiles = fsSync.readdirSync(basePath)
+      .filter((file: string) => file.endsWith('.json'))
+      .map((file: string) => file.replace('.json', ''));
     
-    // 提取所有重力分选设备产品ID
-    const gravitySeparationProducts = productJsonFiles.map(file => file.replace('.json', ''));
+    // 为每个产品添加参数
+    const params = productFiles.map((productId: string) => ({
+      productId
+    }));
     
-    const locales = ['en', 'zh'];
-    
-    // 为每个语言和产品ID生成参数
-    return gravitySeparationProducts.flatMap(productId => 
-      locales.map(locale => ({
-        productId,
-        locale
-      }))
-    );
+    console.log(`Generated ${params.length} static paths for ${category} products`);
+    return params;
   } catch (error) {
-    // 静默处理错误
-    // 返回基本的静态参数，确保构建不会失败
-    return [
-      { locale: 'en', productId: 'shaking-table' },
-      { locale: 'zh', productId: 'shaking-table' }
-    ];
+    console.error(`Error generating static params for ${category}:`, error);
+    return [];
   }
 }
 
@@ -233,7 +222,7 @@ async function getRelatedProductsData(relatedIds: string[], locale: string) {
           for (const subcat of possibleSubcategories) {
             try {
               filePath = path.join(process.cwd(), 'public', 'data', locale, subcat, `${id}.json`);
-              fileContent = await fsPromises.readFile(filePath, 'utf8');
+              fileContent = await fs.readFile(filePath, 'utf8');
               foundFile = true;
               // 找到文件后记录子类别
               subcategory = subcat;
@@ -248,7 +237,7 @@ async function getRelatedProductsData(relatedIds: string[], locale: string) {
           if (!foundFile) {
             try {
               filePath = path.join(process.cwd(), 'public', 'data', locale, `${id}.json`);
-              fileContent = await fsPromises.readFile(filePath, 'utf8');
+              fileContent = await fs.readFile(filePath, 'utf8');
               foundFile = true;
               subcategory = '';
             } catch (err) {
@@ -335,22 +324,22 @@ export async function getGravitySeparationProductData(locale: string, productId:
     const dataPath = path.join(process.cwd(), 'public', 'data', locale, 'gravity-separation', `${productId}.json`);
     
     // 检查文件是否存在
-    if (!fs.existsSync(dataPath)) {
+    if (!fsSync.existsSync(dataPath)) {
       // 如果子目录不存在，尝试从根目录获取
       const rootDataPath = path.join(process.cwd(), 'public', 'data', locale, `${productId}.json`);
       
-      if (!fs.existsSync(rootDataPath)) {
+      if (!fsSync.existsSync(rootDataPath)) {
         // 文件不存在，返回null
         return null;
       }
       
       // 从根目录读取
-      const data = await fsPromises.readFile(rootDataPath, 'utf8');
+      const data = await fs.readFile(rootDataPath, 'utf8');
       return JSON.parse(data);
     }
     
     // 从子目录读取
-    const data = await fsPromises.readFile(dataPath, 'utf8');
+    const data = await fs.readFile(dataPath, 'utf8');
     return JSON.parse(data);
   } catch (error) {
     // 捕获所有错误，返回null

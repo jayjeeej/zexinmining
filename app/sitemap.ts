@@ -2,6 +2,10 @@ import { MetadataRoute } from 'next';
 import fs from 'fs/promises';
 import path from 'path';
 
+// 添加静态导出配置
+export const dynamic = 'force-static';
+export const revalidate = 3600; // 每小时重新验证一次
+
 // 产品类别定义
 const productCategories = [
   { id: 'drilling', name: 'Drilling Equipment' },
