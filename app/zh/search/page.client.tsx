@@ -201,20 +201,11 @@ export default function SearchResultsClient({ locale, query }: SearchResultsClie
       
       setIsLoading(true);
       try {
-        // 改用静态JSON文件而不是API
-        const response = await fetch(`/data/search-index-${locale}.json`);
-        
-        if (!response.ok) {
-          throw new Error(`无法加载搜索索引: ${response.status}`);
-        }
-        
-        const searchIndex = await response.json();
-        
-        // 客户端搜索逻辑
-        const searchResults = performClientSideSearch(searchIndex, query);
+        const response = await fetch(`/api/search?q=${encodeURIComponent(query)}&locale=${locale}`);
+        const data = await response.json();
         
         // 应用额外的前端去重处理
-        const dedupedResults = performLocalDeduplication(searchResults);
+        const dedupedResults = performLocalDeduplication(data);
         
         setResults(dedupedResults);
         
@@ -447,28 +438,6 @@ export default function SearchResultsClient({ locale, query }: SearchResultsClie
     }
   }, [isLoading, query]);
   
-  // 客户端搜索函数
-  const performClientSideSearch = (searchIndex: any[], query: string) => {
-    const normalizedQuery = query.toLowerCase().trim();
-    const keywords = normalizedQuery.split(/[\s,，、]+/).filter(kw => kw.length >= 1);
-    
-    return searchIndex.filter(item => {
-      const titleLower = item.title.toLowerCase();
-      
-      // 检查是否包含完整搜索词
-      if (titleLower.includes(normalizedQuery)) {
-        return true;
-      }
-      
-      // 检查是否包含所有拆分的关键词
-      return keywords.every(keyword => titleLower.includes(keyword));
-    }).map(item => ({
-      ...item,
-      score: 1,  // 简单评分
-      excerpt: item.excerpt || item.description?.substring(0, 150) + '...' || ''
-    }));
-  };
-  
   return (
     <LayoutWithTransition
       locale={locale}
@@ -643,35 +612,48 @@ export default function SearchResultsClient({ locale, query }: SearchResultsClie
         ) : results.length > 0 ? (
           <>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {displayedResults.map((result, index) => (
-                <Link 
-                  href={result.url} 
-                  key={`${result.id}-${index}`}
-                  className="product-card block rounded-xs pb-6 bg-white"
-                >
-                  {result.imageSrc && (
-                    <div className="mb-2 overflow-hidden">
-                      <div className="relative h-64 overflow-hidden bg-gray-50">
-                        <OptimizedImage
-                          src={result.imageSrc}
-                          alt={result.title}
-                          className="w-full h-full object-cover"
-                          objectFit="cover"
-                          unoptimized={true}
-                        />
+              {displayedResults.map((result, index) => {
+                // 确保结果有效URL
+                let url = result.url || '';
+                
+                // 确保以 /locale/ 开头
+                if (!url.startsWith(`/${locale}/`)) {
+                  url = `/${locale}/${url.replace(/^\//, '')}`;
+                }
+                
+                // 确保路径规范化
+                url = url.replace(/\/+/g, '/');
+                
+                return (
+                  <Link 
+                    href={url} 
+                    key={`${result.id}-${index}`}
+                    className="product-card block rounded-xs pb-6 bg-white"
+                  >
+                    {result.imageSrc && (
+                      <div className="mb-2 overflow-hidden">
+                        <div className="relative h-64 overflow-hidden bg-gray-50">
+                          <OptimizedImage
+                            src={result.imageSrc}
+                            alt={result.title}
+                            className="w-full h-full object-cover"
+                            objectFit="cover"
+                            unoptimized={true}
+                          />
+                        </div>
                       </div>
-                    </div>
-                  )}
-                  <div className="px-4">
-                    {result.category && (
-                      <p className="text-xs text-gray-400 mb-1">{result.category}</p>
                     )}
-                    <h2 className="text-base font-medium text-black transition-colors duration-300">
-                      {result.title}
-                    </h2>
-                  </div>
-                </Link>
-              ))}
+                    <div className="px-4">
+                      {result.category && (
+                        <p className="text-xs text-gray-400 mb-1">{result.category}</p>
+                      )}
+                      <h2 className="text-base font-medium text-black transition-colors duration-300">
+                        {result.title}
+                      </h2>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
             
             {/* 进度指示器和加载更多按钮 */}
