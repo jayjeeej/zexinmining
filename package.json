@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/add-alt-attributes.js && next build",
+    "build": "node scripts/add-alt-attributes.js && node scripts/generate-search-index.js && next build",
     "postbuild": "next-sitemap && node scripts/generate-sitemaps.js && node scripts/generate-server-sitemap.js",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-search-index": "node scripts/generate-search-index.js"
   },
   "dependencies": {
     "@ant-design/nextjs-registry": "^1.0.2",

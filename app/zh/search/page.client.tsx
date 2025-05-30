@@ -201,11 +201,20 @@ export default function SearchResultsClient({ locale, query }: SearchResultsClie
       
       setIsLoading(true);
       try {
-        const response = await fetch(`/api/search?q=${encodeURIComponent(query)}&locale=${locale}`);
-        const data = await response.json();
+        // 改用静态JSON文件而不是API
+        const response = await fetch(`/data/search-index-${locale}.json`);
+        
+        if (!response.ok) {
+          throw new Error(`无法加载搜索索引: ${response.status}`);
+        }
+        
+        const searchIndex = await response.json();
+        
+        // 客户端搜索逻辑
+        const searchResults = performClientSideSearch(searchIndex, query);
         
         // 应用额外的前端去重处理
-        const dedupedResults = performLocalDeduplication(data);
+        const dedupedResults = performLocalDeduplication(searchResults);
         
         setResults(dedupedResults);
         
@@ -437,6 +446,28 @@ export default function SearchResultsClient({ locale, query }: SearchResultsClie
       }
     }
   }, [isLoading, query]);
+  
+  // 客户端搜索函数
+  const performClientSideSearch = (searchIndex: any[], query: string) => {
+    const normalizedQuery = query.toLowerCase().trim();
+    const keywords = normalizedQuery.split(/[\s,，、]+/).filter(kw => kw.length >= 1);
+    
+    return searchIndex.filter(item => {
+      const titleLower = item.title.toLowerCase();
+      
+      // 检查是否包含完整搜索词
+      if (titleLower.includes(normalizedQuery)) {
+        return true;
+      }
+      
+      // 检查是否包含所有拆分的关键词
+      return keywords.every(keyword => titleLower.includes(keyword));
+    }).map(item => ({
+      ...item,
+      score: 1,  // 简单评分
+      excerpt: item.excerpt || item.description?.substring(0, 150) + '...' || ''
+    }));
+  };
   
   return (
     <LayoutWithTransition

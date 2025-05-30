@@ -19,7 +19,7 @@ interface SearchResult {
 // 搜索API必须是动态路由，因为它使用request.url来获取搜索参数
 export const dynamic = 'force-static';
 // 不使用Next.js的revalidate，而是通过Cache-Control头控制缓存
-export const revalidate = 3600; // 每小时重新验证一次
+export const revalidate = false; // 静态生成，不需要重新验证
 
 // 中英文术语对照表，用于跨语言搜索
 const termMappings: Record<string, string[]> = {
@@ -292,7 +292,9 @@ export async function GET(request: NextRequest) {
       (searchParams.get('debug') === 'true');
     
     const headers: HeadersInit = {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      // 添加缓存控制头，使浏览器可以缓存此API响应
+      'Cache-Control': 'public, max-age=3600, s-maxage=86400'
     };
     
     if (isDebug) {
