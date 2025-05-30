@@ -8,7 +8,9 @@ import {
   getFAQStructuredData, 
   getImageStructuredData,
   getProductCategoryStructuredData,
-  getOrganizationStructuredData
+  getOrganizationStructuredData,
+  getProductSpecificationsStructuredData,
+  getSpecificationTableStructuredData
 } from '@/lib/structuredData';
 import StructuredData, { MultiStructuredData } from '@/components/StructuredData';
 import ProductDataInjection from '@/components/ProductDetail/ProductDataInjection';
@@ -315,6 +317,48 @@ function formatSpecifications(product: any): ProductSpecification[] {
   return result;
 }
 
+// 新增：创建产品变体结构化数据
+function getProductVariantStructuredData(product: any, baseUrl: string) {
+  // 检查是否有多个型号规格
+  if (!product.specifications || !product.specifications.tableData || product.specifications.tableData.length <= 1) {
+    return null;
+  }
+
+  // 确保有型号列
+  const modelColumnIndex = 0; // 假设第一列是型号
+
+  // 创建变体数组
+  const variants = product.specifications.tableData.map((row: any) => {
+    return {
+      "@type": "ProductModel",
+      "name": `${product.title} ${row[modelColumnIndex]}`,
+      "model": row[modelColumnIndex],
+      "productID": `${product.id}-${row[modelColumnIndex].toLowerCase().replace(/\s+/g, '-')}`,
+      "additionalProperty": product.specifications.tableHeaders.map((header: string, index: number) => {
+        // 跳过型号列，因为已经作为model属性
+        if (index === modelColumnIndex) return null;
+        
+        return {
+          "@type": "PropertyValue",
+          "name": header,
+          "value": row[index]?.toString() || "",
+          ...(product.specifications.unitTypes && product.specifications.unitTypes[index]
+            ? {"unitCode": product.specifications.unitTypes[index]} : {})
+        };
+      }).filter(Boolean) // 移除null值
+    };
+  });
+
+  // 创建产品组数据
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProductGroup",
+    "name": product.series || product.title,
+    "description": product.overview || "",
+    "hasVariant": variants
+  };
+}
+
 export default async function ProductDetailPage({ params }: { params: { productId: string; locale: string } }) {
   try {
     // 静态路由下直接指定locale而不是从params获取
@@ -393,12 +437,61 @@ export default async function ProductDetailPage({ params }: { params: { productI
       relatedProducts = await getRelatedProductsData(product.relatedProducts, locale);
     }
     
-    // 构建结构化数据
+    // 创建技术规格的结构化数据属性
+    const specificationProperties: Array<{
+      "@type": string;
+      "name": string;
+      "value": string;
+      "unitCode"?: string;
+    }> = [];
+    
+    if (product.specifications && product.specifications.tableHeaders && product.specifications.tableData) {
+      const { tableHeaders, tableData, unitTypes = [] } = product.specifications;
+      
+      // 使用第一行数据（典型型号）创建技术规格
+      if (tableData[0]) {
+        tableHeaders.forEach((header: string, index: number) => {
+          if (tableData[0][index] !== undefined) {
+            specificationProperties.push({
+              "@type": "PropertyValue",
+              "name": header,
+              "value": tableData[0][index].toString(),
+              ...(unitTypes[index] ? { "unitCode": unitTypes[index] } : {})
+            });
+          }
+        });
+      }
+    }
+    
+    // 构建增强的产品结构化数据
     const productStructuredData = getProductStructuredData({
       productId,
       product,
       locale
     });
+    
+    // 增强产品结构化数据
+    const enhancedProductStructuredData = {
+      ...productStructuredData,
+      additionalProperty: specificationProperties,
+      isRelatedTo: [] as Array<{
+        "@type": string;
+        "name": string;
+        "url": string;
+      }>
+    };
+    
+    // 如果有相关产品，添加到结构化数据
+    if (relatedProducts && relatedProducts.length > 0) {
+      enhancedProductStructuredData.isRelatedTo = relatedProducts.map(related => ({
+        "@type": "Product",
+        "name": related.title,
+        "url": `${baseUrl}${related.href}`
+      }));
+    }
+    
+    // 构建产品变体结构化数据（如果有多个型号）
+    const productVariantStructuredData = getProductVariantStructuredData(product, baseUrl);
     
     const breadcrumbStructuredData = getBreadcrumbStructuredData(
       breadcrumbItems
@@ -410,7 +503,8 @@ export default async function ProductDetailPage({ params }: { params: { productI
     
     const imageStructuredData = getImageStructuredData({
       url: product.imageSrc,
-      caption: product.title
+      caption: product.title,
+      description: product.overview || ""
     });
     
     const productCategoryStructuredData = getProductCategoryStructuredData({
@@ -426,16 +520,55 @@ export default async function ProductDetailPage({ params }: { params: { productI
     
     // 创建结构化数据数组
     const structuredDataArray = [
-      productStructuredData,
+      enhancedProductStructuredData,
       breadcrumbStructuredData,
       imageStructuredData,
       productCategoryStructuredData,
       organizationStructuredData
     ];
     
+    // 添加技术规格表结构化数据（如果有）
+    const specTableStructuredData = getSpecificationTableStructuredData({
+      product,
+      locale
+    });
+    
+    if (specTableStructuredData) {
+      structuredDataArray.push(specTableStructuredData);
+    }
+    
+    // 如果有产品变体数据，添加到结构化数据中
+    if (productVariantStructuredData) {
+      structuredDataArray.push(productVariantStructuredData);
+    }
+    
     // 如果有FAQ数据，添加到结构化数据中
     if (faqStructuredData) {
       structuredDataArray.push(faqStructuredData);
+    }
+    
+    // 如果有案例研究数据，添加到结构化数据中
+    if (caseStudies && caseStudies.length > 0) {
+      caseStudies.forEach((cs, index) => {
+        if (cs.title && cs.description) {
+          const caseStudyData = {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": cs.title,
+            "description": cs.description,
+            "image": cs.imageSrc ? `${baseUrl}${cs.imageSrc}` : undefined,
+            "publisher": {
+              "@type": "Organization",
+              "name": "泽鑫矿山设备",
+              "logo": {
+                "@type": "ImageObject",
+                "url": `${baseUrl}/logo/logo-zh.webp`
+              }
+            }
+          };
+          structuredDataArray.push(caseStudyData);
+        }
+      });
     }
     
     return (

@@ -8,7 +8,9 @@ import {
   getFAQStructuredData, 
   getImageStructuredData,
   getProductCategoryStructuredData,
-  getOrganizationStructuredData
+  getOrganizationStructuredData,
+  getProductSpecificationsStructuredData,
+  getSpecificationTableStructuredData
 } from '@/lib/structuredData';
 import StructuredData, { MultiStructuredData } from '@/components/StructuredData';
 import ProductDataInjection from '@/components/ProductDetail/ProductDataInjection';
@@ -79,77 +81,27 @@ export async function generateStaticParams() {
 }
 
 // 生成元数据
-export async function generateMetadata({ 
-  params 
-}: { 
-  params: { productId: string; locale: string } 
-}): Promise<Metadata> {
-  try {
-    // 静态路由下直接指定locale而不是从params获取
-    const locale = 'en';
-    const { productId } = params;
-    
-    // 获取产品数据
-    const { product, isSuccess } = await getProductData(productId, locale);
-    if (!isSuccess || !product) return notFoundMetadata('en');
-    
-    const isZh = false; // 英文版，固定为false
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.zexinmining.com';
-    
-    // 构建规范链接URL - 注意这里的路径结构与目录结构一致
-    const canonicalUrl = `/${locale}/products/ore-processing/classification-equipment/${productId}`;
-    
-    // 优先使用产品数据中的SEO配置
-    if (product.seo) {
-      return {
-        title: product.seo.title || `${product.title} | ${isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment'}`,
-        description: product.seo.description || product.overview,
-        keywords: product.seo.keywords || `${product.title},${product.productCategory}`,
-        alternates: {
-          canonical: canonicalUrl,
-          languages: {
-            'zh-CN': `/zh/products/ore-processing/classification-equipment/${productId}`,
-            'en-US': `/en/products/ore-processing/classification-equipment/${productId}`,
-          },
-        },
-        openGraph: {
-          title: product.seo.title || product.title,
-          description: product.seo.description || product.overview,
-          url: `${baseUrl}${canonicalUrl}`,
-          siteName: isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment',
-          images: [
-            {
-              url: `${baseUrl}${product.imageSrc}`,
-              width: 1200,
-              height: 630,
-              alt: product.title,
-            },
-          ],
-          locale: isZh ? 'zh_CN' : 'en_US',
-          type: 'website',
-        },
-      };
-    }
-    
-    // 为SEO描述和关键词提供默认值
-    const seoDescription = product.overview || 
-                        (isZh 
-                          ? `${product.title} - 泽鑫矿山设备提供专业的${product.productCategory}解决方案` 
-                          : `${product.title} - Professional ${product.productCategory} solutions by Zexin Mining Equipment`);
-    
-    const seoKeywords = isZh 
-                       ? `${product.title},${product.productCategory},泽鑫矿山设备,矿山设备,分级设备` 
-                       : `${product.title},${product.productCategory},Zexin Mining Equipment,mining equipment,classification equipment`;
-    
-    // 如果产品数据中存在searchKeywords数组，使用它来增强关键词
-    const enhancedKeywords = product.searchKeywords && Array.isArray(product.searchKeywords) 
-      ? `${seoKeywords},${product.searchKeywords.join(',')}` 
-      : seoKeywords;
-    
+export async function generateMetadata({ params }: { params: { productId: string; locale: string } }): Promise<Metadata> {
+  // 静态路由下直接指定locale而不是从params获取
+  const locale = 'en';
+  const { productId } = await params;
+  
+  // 获取产品数据
+  const { product, isSuccess } = await getProductData(productId, locale);
+  if (!isSuccess || !product) return notFoundMetadata('en');
+  
+  const isZh = false; // 英文版，固定为false
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.zexinmining.com';
+  
+  // 构建规范链接URL - 注意这里的路径结构与目录结构一致
+  const canonicalUrl = `/${locale}/products/ore-processing/classification-equipment/${productId}`;
+  
+  // 优先使用产品数据中的SEO配置
+  if (product.seo) {
     return {
-      title: `${product.title} | ${isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment'}`,
-      description: seoDescription,
-      keywords: enhancedKeywords,
+      title: product.seo.title || `${product.title} | ${isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment'}`,
+      description: product.seo.description || product.overview,
+      keywords: product.seo.keywords || `${product.title},${product.productCategory}`,
       alternates: {
         canonical: canonicalUrl,
         languages: {
@@ -158,8 +110,8 @@ export async function generateMetadata({
         },
       },
       openGraph: {
-        title: product.title,
-        description: product.overview || seoDescription,
+        title: product.seo.title || product.title,
+        description: product.seo.description || product.overview,
         url: `${baseUrl}${canonicalUrl}`,
         siteName: isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment',
         images: [
@@ -174,10 +126,51 @@ export async function generateMetadata({
         type: 'website',
       },
     };
-  } catch (error) {
-    console.error('Error generating metadata:', error);
-    return notFoundMetadata('en');
   }
+  
+  // 为SEO描述和关键词提供默认值
+  const seoDescription = product.overview || 
+                      (isZh 
+                        ? `${product.title} - 泽鑫矿山设备提供专业的${product.productCategory}解决方案` 
+                        : `${product.title} - Professional ${product.productCategory} solutions by Zexin Mining Equipment`);
+  
+  const seoKeywords = isZh 
+                     ? `${product.title},${product.productCategory},泽鑫矿山设备,矿山设备,分级设备` 
+                     : `${product.title},${product.productCategory},Zexin Mining Equipment,mining equipment,classification equipment`;
+  
+  // 如果产品数据中存在searchKeywords数组，使用它来增强关键词
+  const enhancedKeywords = product.searchKeywords && Array.isArray(product.searchKeywords) 
+    ? `${seoKeywords},${product.searchKeywords.join(',')}` 
+    : seoKeywords;
+  
+  return {
+    title: `${product.title} | ${isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment'}`,
+    description: seoDescription,
+    keywords: enhancedKeywords,
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        'zh-CN': `/zh/products/ore-processing/classification-equipment/${productId}`,
+        'en-US': `/en/products/ore-processing/classification-equipment/${productId}`,
+      },
+    },
+    openGraph: {
+      title: product.title,
+      description: product.overview || seoDescription,
+      url: `${baseUrl}${canonicalUrl}`,
+      siteName: isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment',
+      images: [
+        {
+          url: `${baseUrl}${product.imageSrc}`,
+          width: 1200,
+          height: 630,
+          alt: product.title,
+        },
+      ],
+      locale: isZh ? 'zh_CN' : 'en_US',
+      type: 'website',
+    },
+  };
 }
 
 // 404元数据
@@ -324,25 +317,58 @@ function formatSpecifications(product: any): ProductSpecification[] {
   return result;
 }
 
-export default async function ProductDetailPage({ 
-  params 
-}: { 
-  params: { productId: string; locale: string } 
-}) {
+// 新增：创建产品变体结构化数据
+function getProductVariantStructuredData(product: any, baseUrl: string) {
+  // 检查是否有多个型号规格
+  if (!product.specifications || !product.specifications.tableData || product.specifications.tableData.length <= 1) {
+    return null;
+  }
+
+  // 确保有型号列
+  const modelColumnIndex = 0; // 假设第一列是型号
+
+  // 创建变体数组
+  const variants = product.specifications.tableData.map((row: any) => {
+    return {
+      "@type": "ProductModel",
+      "name": `${product.title} ${row[modelColumnIndex]}`,
+      "model": row[modelColumnIndex],
+      "productID": `${product.id}-${row[modelColumnIndex].toLowerCase().replace(/\s+/g, '-')}`,
+      "additionalProperty": product.specifications.tableHeaders.map((header: string, index: number) => {
+        // 跳过型号列，因为已经作为model属性
+        if (index === modelColumnIndex) return null;
+        
+        return {
+          "@type": "PropertyValue",
+          "name": header,
+          "value": row[index]?.toString() || "",
+          ...(product.specifications.unitTypes && product.specifications.unitTypes[index]
+            ? {"unitCode": product.specifications.unitTypes[index]} : {})
+        };
+      }).filter(Boolean) // 移除null值
+    };
+  });
+
+  // 创建产品组数据
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProductGroup",
+    "name": product.series || product.title,
+    "description": product.overview || "",
+    "hasVariant": variants
+  };
+}
+
+export default async function ProductDetailPage({ params }: { params: { productId: string; locale: string } }) {
   try {
     // 静态路由下直接指定locale而不是从params获取
     const locale = 'en';
-    const { productId } = params;
+    const { productId } = await params;
     
     const { product, isSuccess } = await getProductData(productId, locale);
     if (!isSuccess || !product) notFound();
     
-    // 验证产品是否属于分级设备类别
-    if (product.subcategory !== 'classification-equipment') {
-      console.log(`[DEBUG] Product ${productId} category: ${product.subcategory || 'undefined'}`);
-    }
-    
-    const isZh = false; // 英文版，固定为false
+    const isZh = false;
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.zexinmining.com';
     
     // 使用统一函数构建面包屑导航
@@ -406,12 +432,41 @@ export default async function ProductDetailPage({
       relatedProducts = await getRelatedProductsData(product.relatedProducts, locale);
     }
     
-    // 构建结构化数据
+    // 获取产品规格的结构化数据
+    const specificationProperties = getProductSpecificationsStructuredData({
+      product,
+      modelIndex: 0
+    });
+    
+    // 构建增强的产品结构化数据
     const productStructuredData = getProductStructuredData({
       productId,
       product,
       locale
     });
+    
+    // 增强产品结构化数据
+    const enhancedProductStructuredData = {
+      ...productStructuredData,
+      additionalProperty: specificationProperties,
+      isRelatedTo: [] as Array<{
+        "@type": string;
+        "name": string;
+        "url": string;
+      }>
+    };
+    
+    // 如果有相关产品，添加到结构化数据
+    if (relatedProducts && relatedProducts.length > 0) {
+      enhancedProductStructuredData.isRelatedTo = relatedProducts.map(related => ({
+        "@type": "Product",
+        "name": related.title,
+        "url": `${baseUrl}${related.href}`
+      }));
+    }
+    
+    // 构建产品变体结构化数据（如果有多个型号）
+    const productVariantStructuredData = getProductVariantStructuredData(product, baseUrl);
     
     const breadcrumbStructuredData = getBreadcrumbStructuredData(
       breadcrumbItems
@@ -423,7 +478,8 @@ export default async function ProductDetailPage({
     
     const imageStructuredData = getImageStructuredData({
       url: product.imageSrc,
-      caption: product.title
+      caption: product.title,
+      description: product.overview || ""
     });
     
     const productCategoryStructuredData = getProductCategoryStructuredData({
@@ -439,16 +495,55 @@ export default async function ProductDetailPage({
     
     // 创建结构化数据数组
     const structuredDataArray = [
-      productStructuredData,
+      enhancedProductStructuredData,
       breadcrumbStructuredData,
       imageStructuredData,
       productCategoryStructuredData,
       organizationStructuredData
     ];
     
+    // 添加技术规格表结构化数据（如果有）
+    const specTableStructuredData = getSpecificationTableStructuredData({
+      product,
+      locale
+    });
+    
+    if (specTableStructuredData) {
+      structuredDataArray.push(specTableStructuredData);
+    }
+    
+    // 如果有产品变体数据，添加到结构化数据中
+    if (productVariantStructuredData) {
+      structuredDataArray.push(productVariantStructuredData);
+    }
+    
     // 如果有FAQ数据，添加到结构化数据中
     if (faqStructuredData) {
       structuredDataArray.push(faqStructuredData);
+    }
+    
+    // 如果有案例研究数据，添加到结构化数据中
+    if (caseStudies && caseStudies.length > 0) {
+      caseStudies.forEach((cs, index) => {
+        if (cs.title && cs.description) {
+          const caseStudyData = {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": cs.title,
+            "description": cs.description,
+            "image": cs.imageSrc ? `${baseUrl}${cs.imageSrc}` : undefined,
+            "publisher": {
+              "@type": "Organization",
+              "name": "Zexin Mining Equipment",
+              "logo": {
+                "@type": "ImageObject",
+                "url": `${baseUrl}/logo/logo-en.webp`
+              }
+            }
+          };
+          structuredDataArray.push(caseStudyData);
+        }
+      });
     }
     
     return (

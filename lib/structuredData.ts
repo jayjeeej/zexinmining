@@ -13,7 +13,10 @@ export const SCHEMA_TYPES = {
   PRODUCT_MODEL: 'ProductModel',
   PRODUCT_GROUP: 'ProductGroup',
   WEBSITE: 'WebSite',
-  WEB_PAGE: 'WebPage'
+  WEB_PAGE: 'WebPage',
+  TABLE: 'Table',
+  ITEM_LIST: 'ItemList',
+  PROPERTY_VALUE: 'PropertyValue'
 };
 
 interface BreadcrumbItem {
@@ -330,17 +333,23 @@ export function getImageStructuredData({
   description?: string;
   baseUrl?: string;
 }): Record<string, any> {
-  const fullUrl = url.startsWith('http') ? url : `${baseUrl}${url}`;
+  // 确保URL以/开头但不是//开头(避免与http://混淆)
+  const imageUrl = url.startsWith('http') ? url : `${baseUrl}${url.startsWith('/') ? url : `/${url}`}`;
   
   return {
     "@context": "https://schema.org",
     "@type": SCHEMA_TYPES.IMAGE_OBJECT,
-    "contentUrl": fullUrl,
-    "url": fullUrl,
-    "width": `${width}`,
-    "height": `${height}`,
+    "contentUrl": imageUrl,
+    "url": imageUrl,
+    "name": caption,
     "caption": caption,
-    "description": description || caption
+    "description": description,
+    "width": width,
+    "height": height,
+    "representativeOfPage": true,
+    "thumbnailUrl": imageUrl,
+    "datePublished": new Date().toISOString().split('T')[0],
+    "inLanguage": baseUrl.includes('/zh') ? "zh-CN" : "en-US"
   };
 }
 
@@ -672,6 +681,93 @@ export function getCaseStudyStructuredData({
     'mainEntityOfPage': {
       '@type': 'WebPage',
       '@id': url
+    }
+  };
+}
+
+/**
+ * 生成专门针对产品规格的结构化数据
+ */
+export function getProductSpecificationsStructuredData({
+  product,
+  modelIndex = 0
+}: {
+  product: any;
+  modelIndex?: number;
+}): Array<{
+  "@type": string;
+  "name": string;
+  "value": string;
+  "unitCode"?: string;
+}> {
+  if (!product?.specifications?.tableHeaders || 
+      !product?.specifications?.tableData || 
+      !product.specifications.tableData[modelIndex]) {
+    return [];
+  }
+
+  const { tableHeaders, tableData, unitTypes = [] } = product.specifications;
+  const modelData = tableData[modelIndex];
+  
+  return tableHeaders.map((header: string, index: number) => {
+    if (modelData[index] === undefined) return null;
+    
+    return {
+      "@type": SCHEMA_TYPES.PROPERTY_VALUE,
+      "name": header,
+      "value": modelData[index].toString(),
+      ...(unitTypes[index] ? { "unitCode": unitTypes[index] } : {})
+    };
+  }).filter(Boolean);
+}
+
+/**
+ * 生成产品规格表的结构化数据
+ * 将整个规格表转换为结构化数据格式
+ */
+export function getSpecificationTableStructuredData({
+  product,
+  locale = 'zh',
+  baseUrl = 'https://www.zexinmining.com'
+}: {
+  product: any;
+  locale?: string;
+  baseUrl?: string;
+}): Record<string, any> | null {
+  if (!product.specifications || !product.specifications.tableHeaders || !product.specifications.tableData || product.specifications.tableData.length === 0) {
+    return null;
+  }
+  
+  const { tableHeaders, tableData, unitTypes = [] } = product.specifications;
+  const isZh = locale === 'zh';
+  
+  // 创建表格行数据
+  const rowData = tableData.map((row: any[], rowIndex: number) => {
+    const cells = row.map((cell, cellIndex) => ({
+      "@type": SCHEMA_TYPES.PROPERTY_VALUE,
+      "name": tableHeaders[cellIndex],
+      "value": cell?.toString() || "",
+      ...(unitTypes[cellIndex] ? { "unitCode": unitTypes[cellIndex] } : {})
+    }));
+    
+    return {
+      "@type": SCHEMA_TYPES.ITEM_LIST,
+      "name": `${isZh ? '规格行' : 'Specification Row'} ${rowIndex + 1}`,
+      "itemListElement": cells
+    };
+  });
+  
+  // 创建表格结构化数据
+  return {
+    "@context": "https://schema.org",
+    "@type": SCHEMA_TYPES.TABLE,
+    "about": product.title,
+    "name": product.specifications.title || (isZh ? `${product.title}技术规格表` : `${product.title} Technical Specifications`),
+    "description": product.specifications.note || "",
+    "mainContentOfPage": {
+      "@type": SCHEMA_TYPES.ITEM_LIST,
+      "numberOfItems": rowData.length,
+      "itemListElement": rowData
     }
   };
 }
