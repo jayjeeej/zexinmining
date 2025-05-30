@@ -3,6 +3,13 @@ import { getOrganizationStructuredData } from '@/lib/structuredData';
 import { MultiStructuredData } from '@/components/StructuredData';
 import AboutPageClient from './page.client';
 
+// Vercel 优化导出指令
+export const dynamic = 'force-static';        // 强制静态生成
+export const revalidate = 3600;               // 每小时重新验证一次
+export const fetchCache = 'force-cache';      // 强制使用缓存
+export const runtime = 'nodejs';              // 使用Node.js运行时
+export const preferredRegion = 'auto';        // 自动选择最佳区域
+
 // 为英文页面定义元数据
 export const metadata: Metadata = {
   title: 'About Us | Zexin Mining Equipment',
@@ -10,7 +17,7 @@ export const metadata: Metadata = {
     openGraph: {
     title: 'About Zexin Mining Equipment',
     description: 'Zexin Mining Equipment is a leading mining equipment manufacturer and service provider dedicated to delivering innovative mining solutions to our clients.',
-    url: `/en/about`,
+    url: `https://www.zexinmining.com/en/about`,
     siteName: 'Zexin Mining Equipment',
     locale: 'en',
       type: 'website',
@@ -18,7 +25,7 @@ export const metadata: Metadata = {
   };
 
 // 主页面组件
-export default async function AboutPage() {
+export default function AboutPage() {
   // 使用固定的locale值
   const locale = 'en';
   const isZh = false;

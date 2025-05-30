@@ -3,6 +3,13 @@ import { getOrganizationStructuredData } from '@/lib/structuredData';
 import { MultiStructuredData } from '@/components/StructuredData';
 import AboutPageClient from './page.client';
 
+// Vercel 优化导出指令
+export const dynamic = 'force-static';        // 强制静态生成
+export const revalidate = 3600;               // 每小时重新验证一次
+export const fetchCache = 'force-cache';      // 强制使用缓存
+export const runtime = 'nodejs';              // 使用Node.js运行时
+export const preferredRegion = 'auto';        // 自动选择最佳区域
+
 // 为中文页面定义元数据
 export const metadata: Metadata = {
   title: '关于我们 | 泽鑫矿山设备',
@@ -10,7 +17,7 @@ export const metadata: Metadata = {
     openGraph: {
     title: '关于泽鑫矿山设备',
     description: '泽鑫矿山设备是一家领先的矿业设备制造商和服务提供商，致力于为客户提供创新的矿业解决方案。',
-    url: `/zh/about`,
+    url: `https://www.zexinmining.com/zh/about`,
     siteName: '泽鑫矿山设备',
     locale: 'zh',
       type: 'website',
@@ -18,7 +25,7 @@ export const metadata: Metadata = {
   };
 
 // 主页面组件
-export default async function AboutPage() {
+export default function AboutPage() {
   // 使用固定的locale值
   const locale = 'zh';
   const isZh = true;
