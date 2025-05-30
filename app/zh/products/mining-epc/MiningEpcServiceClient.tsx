@@ -15,17 +15,18 @@ import {
 } from '@/lib/structuredData';
 import { MultiStructuredData } from '@/components/StructuredData';
 
-// 移除接口中的locale参数
+// 修复接口定义，添加可选的locale参数
 interface MiningEpcServiceClientProps {
+  locale?: string;
 }
 
-export default function MiningEpcServiceClient({}: MiningEpcServiceClientProps) {
-  // 硬编码中文locale
-  const locale = 'zh';
-  const isZh = true;
+export default function MiningEpcServiceClient({ locale }: MiningEpcServiceClientProps) {
+  // 使用safeLocale确保locale永不为undefined
+  const safeLocale = locale || 'zh';
+  const isZh = safeLocale === 'zh';
   
   // 面包屑导航
-  const breadcrumbConfig = getBreadcrumbConfig(locale);
+  const breadcrumbConfig = getBreadcrumbConfig(safeLocale);
   const breadcrumbItems = [
     { name: breadcrumbConfig.home.name, href: breadcrumbConfig.home.href },
     { name: breadcrumbConfig.products.name, href: breadcrumbConfig.products.href },
@@ -63,7 +64,7 @@ export default function MiningEpcServiceClient({}: MiningEpcServiceClientProps) 
     serviceType: 'EPCMO',
     serviceProvider: '泽鑫矿山设备',
     serviceItems: serviceItemsList,
-    locale,
+    locale: safeLocale,
     baseUrl
   });
   
@@ -117,7 +118,7 @@ export default function MiningEpcServiceClient({}: MiningEpcServiceClientProps) 
   const CustomProductLayout = ({ children }: { children: React.ReactNode }) => {
     return (
       <ProductLayout
-        locale={locale}
+        locale={safeLocale}
         breadcrumbItems={breadcrumbItems}
         // 不传递title和description，以阻止默认HeroSection的渲染
       >

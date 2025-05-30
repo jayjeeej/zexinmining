@@ -56,7 +56,7 @@ export default async function MiningEpcServicePage({ params }: { params: { local
     <>
       {/* 使用MultiStructuredData组件注入结构化数据 */}
       <MultiStructuredData dataArray={structuredDataArray} />
-      <MiningEpcServiceClient />
+      <MiningEpcServiceClient locale={locale} />
     </>
   );
 }
