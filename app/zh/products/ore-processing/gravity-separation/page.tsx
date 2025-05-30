@@ -199,19 +199,57 @@ export default async function GravitySeparationPage({ params }: { params: { loca
     categoryId: 'gravity-separation',
     categoryName: isZh ? '重选设备' : 'Gravity Separation Equipment',
     description: isZh 
-      ? '泽鑫矿山设备提供高效重选设备，包括跳汰机、摇床、螺旋溜槽和离心选矿机等，基于矿物密度差异实现精确分离' 
-      : 'Zexin Mining Equipment offers efficient gravity separation equipment including jig machines, shaking tables, spiral chutes and centrifugal concentrators for precise separation based on mineral density differences',
-    productCount: productIds.length,
-    locale,
-    baseUrl
+      ? '泽鑫重力选矿设备包括螺旋溜槽、跳汰机、摇床、离心选矿机等，专为金矿、锡矿、钨矿选矿设计，回收率高达98%，是贵金属和有色金属矿选矿的理想设备。' 
+      : 'Zexin gravity separation equipment includes spiral chutes, jig machines, shaking tables & centrifugal concentrators, designed for gold, tin and tungsten ore processing with recovery rates up to 98%.',
+    productCount: gravityProducts.length,
+    locale
   });
+
+  // 5. 增强产品组结构化数据
+  const enhancedProductGroupStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ProductGroup",
+    "name": isZh ? "泽鑫重力选矿设备系列" : "Zexin Gravity Separation Equipment Series",
+    "description": isZh 
+      ? "泽鑫重力选矿设备系列包括各种型号的螺旋溜槽、跳汰机、摇床和离心选矿机，提供全面的重选解决方案" 
+      : "Zexin gravity separation equipment series includes various models of spiral chutes, jig machines, shaking tables and centrifugal concentrators, offering comprehensive gravity separation solutions",
+    "url": `${baseUrl}/${locale}/products/ore-processing/gravity-separation`,
+    "category": isZh ? "选矿设备/重力选矿设备" : "Mineral Processing Equipment/Gravity Separation Equipment",
+    "brand": {
+      "@type": "Brand",
+      "name": isZh ? "泽鑫矿山设备" : "Zexin Mining Equipment"
+    },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": isZh ? "泽鑫矿山设备有限公司" : "Zexin Mining Equipment Co., Ltd.",
+      "url": baseUrl
+    },
+    "keywords": isZh 
+      ? "重力选矿设备,螺旋溜槽,跳汰机,摇床,离心选矿机,金矿选矿,锡矿选矿,钨矿选矿,重力分选,比重选矿" 
+      : "gravity separation equipment,spiral chute,jig machine,shaking table,centrifugal concentrator,gold ore processing,tin ore processing,tungsten ore processing",
+    "offers": {
+      "@type": "AggregateOffer",
+      "highPrice": "100000",
+      "lowPrice": "10000",
+      "priceCurrency": "CNY",
+      "offerCount": gravityProducts.length,
+      "availability": "https://schema.org/InStock"
+    },
+    "hasVariant": gravityProducts.map(p => ({
+      "@type": "Product",
+      "name": locale === 'zh' ? p.title.zh : p.title.en,
+      "model": p.model,
+      "productID": p.id,
+      "url": `${baseUrl}/${locale}/products/ore-processing/gravity-separation/${p.id}`
+    }))
+  };
   
-  // 组合所有结构化数据
   const structuredDataArray = [
-    productGroupStructuredData,
     organizationStructuredData,
+    productGroupStructuredData,
     breadcrumbStructuredData,
-    categoryStructuredData
+    categoryStructuredData,
+    enhancedProductGroupStructuredData
   ];
 
   return (

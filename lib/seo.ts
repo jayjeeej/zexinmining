@@ -3,7 +3,7 @@ import { siteUrl } from './constant';
 
 // 默认SEO配置
 export const defaultSEO = {
-  titleTemplate: '%s | 泽鑫矿山设备',
+  titleTemplate: '%s',
   defaultTitle: '泽鑫矿山设备 - 专业矿山设备制造商',
   description: '泽鑫矿山设备是专业矿山设备制造商，为全球客户提供高效可靠的智能解决方案和全面技术支持',
   keywords: '矿山设备,采矿设备,泽鑫,采矿解决方案,采矿技术,工业装备,钻机,露天矿',
@@ -28,8 +28,8 @@ export const defaultSEO = {
 
 // 英文版本SEO配置
 export const defaultEnglishSEO = {
-  titleTemplate: '%s | Zexin Mining Equipment',
-  defaultTitle: 'Zexin Mining Equipment - Professional Mining Equipment Manufacturer',
+  titleTemplate: '%s',
+  defaultTitle: 'Zexin Mining - Professional Mineral Processing Equipment',
   description: 'Zexin Mining Equipment is a professional mining equipment manufacturer, providing efficient and intelligent solutions with comprehensive technical support worldwide',
   keywords: 'mining equipment,excavation,Zexin,mining solutions,mining technology,industrial equipment,drilling,open pit mining',
   openGraph: {
@@ -223,8 +223,12 @@ export function getKeywords(type: string, locale: string, specificKeywords?: str
       en: 'crushing equipment,crusher,jaw crusher,cone crusher,impact crusher,hammer crusher,roller crusher,mobile crushing station,fine crushing,medium crushing,coarse crushing'
     },
     'grinding-equipment': {
-      zh: '磨矿设备 | 高效矿石研磨解决方案 - 泽鑫矿山设备',
-      en: 'Grinding Equipment | Efficient Ore Grinding Solutions - Zexin Mining'
+      zh: '球磨机-湿式溢流球磨机节能格子型球磨机 | 泽鑫矿山设备',
+      en: 'Ball Mills - Wet Overflow & Energy-saving Grid Type | Zexin Mining'
+    },
+    'mineral-processing-solutions': {
+      zh: '选矿工艺方案-金属矿非金属矿专业选矿流程 | 泽鑫矿山设备',
+      en: 'Mineral Processing Solutions - Gold, Copper & Iron Ore Beneficiation | Zexin Mining'
     }
   };
   
@@ -280,23 +284,23 @@ interface CategoryMetadataConfig {
 const CATEGORY_METADATA: Record<string, CategoryMetadataConfig> = {
   'vibrating-screens': {
     title: {
-      zh: '固定式振动筛设备 | 泽鑫矿山设备',
-      en: 'Stationary Vibrating Screens | Zexin Mining Equipment'
+      zh: '振动筛-直线振动筛香蕉筛高频筛系列 | 泽鑫矿山设备',
+      en: 'Vibrating Screens - Linear, Banana & High-frequency Series | Zexin Mining'
     },
     description: {
       zh: '泽鑫振动筛系列包括直线振动筛、香蕉筛、脱水筛、高频筛等，筛分精度高，多层筛分设计，处理量50-800t/h，维护简便，适用于矿石、砂石、煤炭等物料的高效分级。',
       en: 'Zexin vibrating screens: linear screens, banana screens, dewatering screens & high-frequency screens with multi-deck design. High precision, capacity of 50-800t/h, easy maintenance for efficient classification of minerals, aggregates & coal.'
     },
     defaultKeywords: {
-      zh: '固定式振动筛,直线振动筛,香蕉筛,脱水筛,高频筛,泽鑫矿山设备,矿石筛分,砂石筛分,煤炭筛分,多层筛分,筛分精度,大型振动筛',
-      en: 'stationary vibrating screens,linear vibrating screens,banana screens,dewatering screens,high-frequency screens,Zexin Mining Equipment,ore screening,aggregate screening,coal screening,multi-deck screening,screening precision,large vibrating screens'
+      zh: '振动筛,直线振动筛,香蕉筛,脱水筛,高频筛,泽鑫矿山设备,矿石筛分,砂石筛分,煤炭筛分,多层筛分,筛分精度,大型振动筛',
+      en: 'vibrating screens,linear vibrating screens,banana screens,dewatering screens,high-frequency screens,Zexin Mining Equipment,ore screening,aggregate screening,coal screening,multi-deck screening,screening precision,large vibrating screens'
     },
     path: '/products/ore-processing/vibrating-screens'
   },
   'classification-equipment': {
     title: {
-      zh: '分级设备 | 高效矿物分级解决方案 - 泽鑫矿山设备',
-      en: 'Classification Equipment | Efficient Mineral Classification Solutions - Zexin Mining'
+      zh: '分级机-螺旋分级机水力旋流器系列 | 泽鑫矿山设备',
+      en: 'Classifiers - Spiral Classifiers & Hydrocyclones Series | Zexin Mining'
     },
     description: {
       zh: '泽鑫矿山设备专业生产各类分级设备，包括高堰式螺旋分级机、沉没式螺旋分级机、水力旋流器等，用于矿石颗粒的分级与分选，提高选矿效率和精度，适用于多种矿石的精确分级处理。',
@@ -310,8 +314,8 @@ const CATEGORY_METADATA: Record<string, CategoryMetadataConfig> = {
   },
   'grinding-equipment': {
     title: {
-      zh: '磨矿设备 | 高效矿石研磨解决方案 - 泽鑫矿山设备',
-      en: 'Grinding Equipment | Efficient Ore Grinding Solutions - Zexin Mining'
+      zh: '球磨机-湿式溢流球磨机格子型球磨机系列 | 泽鑫矿山设备',
+      en: 'Ball Mills - Wet Overflow & Grid Type Ball Mill Series | Zexin Mining'
     },
     description: {
       zh: '泽鑫矿山设备专业生产各类磨矿设备，包括湿式溢流球磨机、湿式节能格子型球磨机、湿式棒磨机等，适用于各种矿石的研磨工艺。我们的磨矿设备采用先进的设计理念和耐磨材料，提供高效磨矿性能、精确粒度控制、低能耗运行和简便维护，为客户提供可靠的物料研磨解决方案。',
@@ -325,8 +329,8 @@ const CATEGORY_METADATA: Record<string, CategoryMetadataConfig> = {
   },
   'stationary-crushers': {
     title: {
-      zh: '固定式破碎设备 | 高效矿山与骨料加工设备',
-      en: 'Stationary Crushers | Efficient Mining & Aggregate Processing Equipment'
+      zh: '破碎机-颚式破碎机圆锥破碎机反击式破碎机系列 | 泽鑫矿山设备',
+      en: 'Crushers - Jaw, Cone & Impact Crusher Series | Zexin Mining'
     },
     description: {
       zh: '泽鑫矿山设备专业生产各类固定式破碎设备，包括颚式破碎机、圆锥破碎机、反击式破碎机、锤式破碎机和双辊破碎机等，适用于矿山、采石场、建筑材料和骨料生产的高效破碎解决方案。',
@@ -340,8 +344,8 @@ const CATEGORY_METADATA: Record<string, CategoryMetadataConfig> = {
   },
   'magnetic-separation': {
     title: {
-      zh: '磁选设备 | 铁矿锰矿高效磁选技术与设备 - 泽鑫矿山设备',
-      en: 'Magnetic Separation Equipment | Iron & Manganese Ore Processing - Zexin Mining'
+      zh: '磁选设备-铁矿选矿永磁滚筒磁选机系列 | 泽鑫矿山设备',
+      en: 'Magnetic Separation - Iron Ore Processing Magnetic Separator Series | Zexin Mining'
     },
     description: {
       zh: '泽鑫矿山设备提供专业磁选设备系列，包括干式和湿式磁选机、永磁和电磁磁选机，适用于铁矿、锰矿、赤铁矿等各类磁性矿物的高效分选，磁场强度可调，能耗低，分选精度高，回收率高。',
@@ -349,32 +353,10 @@ const CATEGORY_METADATA: Record<string, CategoryMetadataConfig> = {
     },
     path: '/products/ore-processing/magnetic'
   },
-  'flotation': {
-    title: {
-      zh: '浮选设备 | 铜铅锌矿高效浮选技术与设备 - 泽鑫矿山设备',
-      en: 'Flotation Equipment | Copper Lead Zinc Ore Processing - Zexin Mining'
-    },
-    description: {
-      zh: '泽鑫矿山设备专业生产浮选设备，包括充气式浮选机、自吸式浮选机、机械搅拌浮选机等，利用矿物表面物理化学性质差异进行分选，适用于铜、铅、锌、金等有色金属和贵金属矿物的高效分选。',
-      en: 'Zexin Mining Equipment specializes in manufacturing flotation equipment, including pneumatic flotation machines, self-priming flotation machines, and mechanical agitation flotation machines. By utilizing differences in physicochemical properties of mineral surfaces, our equipment is suitable for efficient separation of copper, lead, zinc, gold and other non-ferrous and precious metal minerals.'
-    },
-    path: '/products/ore-processing/flotation'
-  },
-  'crusher': {
-    title: {
-      zh: '破碎设备 | 高效矿石破碎解决方案 - 泽鑫矿山设备',
-      en: 'Crushing Equipment | Efficient Ore Crushing Solutions - Zexin Mining'
-    },
-    description: {
-      zh: '泽鑫矿山设备提供全系列破碎设备，包括颚式破碎机、圆锥破碎机、反击式破碎机、锤式破碎机和辊式破碎机，适用于各种硬度矿石的粗碎、中碎和细碎作业，具有破碎比大、产量高、维护简便等特点。',
-      en: 'Zexin Mining Equipment offers a complete range of crushing equipment including jaw crushers, cone crushers, impact crushers, hammer crushers and roller crushers, suitable for coarse, medium and fine crushing operations of various hardness ores, featuring large crushing ratio, high productivity and easy maintenance.'
-    },
-    path: '/products/ore-processing/crusher'
-  },
   'gravity-separation': {
     title: {
-      zh: '重力选矿设备 | 高效物料分选解决方案 - 泽鑫矿山设备',
-      en: 'Gravity Separation Equipment | Efficient Material Sorting Solutions - Zexin Mining'
+      zh: '重力选矿设备-螺旋溜槽跳汰机摇床系列 | 泽鑫矿山设备',
+      en: 'Gravity Separation Equipment - Spiral Chutes, Jigs & Shaking Tables | Zexin Mining'
     },
     description: {
       zh: '泽鑫重力选矿设备包括螺旋溜槽、跳汰机、摇床、离心选矿机等，专为金矿、锡矿、钨矿等密度差选矿设计，回收率高达98%，能耗低，维护简便，提供定制化重选解决方案。',
@@ -388,8 +370,8 @@ const CATEGORY_METADATA: Record<string, CategoryMetadataConfig> = {
   },
   'magnetic-separator': {
     title: {
-      zh: '磁选设备 | 高效矿物分选与提纯解决方案 - 泽鑫矿山设备',
-      en: 'Magnetic Separation Equipment | Efficient Mineral Sorting Solutions - Zexin Mining'
+      zh: '磁选机-永磁滚筒湿式强磁干式磁选机系列 | 泽鑫矿山设备',
+      en: 'Magnetic Separators - Permanent Drum & High-intensity Separator Series | Zexin Mining'
     },
     description: {
       zh: '泽鑫磁选设备包括永磁滚筒磁选机、湿式强磁机、干式磁选机等，适用于铁矿、锰矿、赤铁矿高效分选，磁场强度可调，分选精度高，铁精矿品位可达65%以上，能耗低，处理量大。',
@@ -403,8 +385,8 @@ const CATEGORY_METADATA: Record<string, CategoryMetadataConfig> = {
   },
   'flotation-equipment': {
     title: {
-      zh: '浮选设备 | 高效矿物浮选解决方案 - 泽鑫矿山设备',
-      en: 'Flotation Equipment | Efficient Mineral Flotation Solutions - Zexin Mining'
+      zh: '浮选机-气动浮选机自吸式浮选机XJK系列 | 泽鑫矿山设备',
+      en: 'Flotation Machines - Pneumatic & Self-aspirated Flotation Cell Series | Zexin Mining'
     },
     description: {
       zh: '泽鑫浮选设备包括气动浮选机、自吸式浮选机、粗颗粒浮选机等，适用于铜铅锌矿石高效分选，回收率高达95%，节能环保，为全球矿企提供一站式浮选解决方案。',
@@ -418,8 +400,8 @@ const CATEGORY_METADATA: Record<string, CategoryMetadataConfig> = {
   },
   'feeding-equipment': {
     title: {
-      zh: '给料设备 | 高效物料输送解决方案 - 泽鑫矿山设备',
-      en: 'Feeding Equipment | Efficient Material Handling Solutions - Zexin Mining'
+      zh: '给料机-振动给料机板式给料机带式给料机系列 | 泽鑫矿山设备',
+      en: 'Feeders - Vibratory, Apron & Belt Feeder Series | Zexin Mining'
     },
     description: {
       zh: '泽鑫给料设备包括振动给料机、板式给料机、带式给料机等，精确流量控制，耐磨结构设计，应用于采矿、建材行业，提高生产效率30%，降低物料损耗，延长设备使用寿命。',
@@ -433,8 +415,8 @@ const CATEGORY_METADATA: Record<string, CategoryMetadataConfig> = {
   },
   'washing-equipment': {
     title: {
-      zh: '洗矿设备 | 高效矿物清洗解决方案 - 泽鑫矿山设备',
-      en: 'Washing Equipment | Efficient Mineral Washing Solutions - Zexin Mining'
+      zh: '洗矿机-螺旋洗矿机双轴洗矿机滚筒洗矿机系列 | 泽鑫矿山设备',
+      en: 'Washing Machines - Screw, Log & Drum Washer Series | Zexin Mining'
     },
     description: {
       zh: '泽鑫洗矿设备包括螺旋洗矿机、双轴洗矿机、滚筒洗矿机等，高效去除矿石表面泥沙杂质，水资源循环利用率达90%，提升产品品位，适用于各类砂石、金属矿石和非金属矿物的清洗。',
@@ -448,8 +430,8 @@ const CATEGORY_METADATA: Record<string, CategoryMetadataConfig> = {
   },
   'ore-processing': {
     title: {
-      zh: '选矿设备 | 高效选矿解决方案 - 泽鑫矿山设备',
-      en: 'Mineral Processing Equipment | Efficient Ore Processing Solutions - Zexin Mining'
+      zh: '选矿设备-破碎机球磨机浮选机磁选机系列 | 泽鑫矿山设备',
+      en: 'Mineral Processing Equipment - Crushers, Mills & Separation Series | Zexin Mining'
     },
     description: {
       zh: '泽鑫提供全套高效选矿设备，包括破碎筛分、磨矿、浮选、磁选、重选设备，满足金矿、铁矿、铜矿等各类矿石处理需求，提高回收率，降低运营成本，实现矿产资源高效利用。',
@@ -460,6 +442,21 @@ const CATEGORY_METADATA: Record<string, CategoryMetadataConfig> = {
       en: 'mineral processing equipment,ore processing equipment,mineral processing technology,ore crushing,grinding equipment,flotation equipment,magnetic separation equipment,gravity separation equipment,screening equipment,classification equipment,dewatering equipment,gold processing,iron ore processing,copper processing,Zexin Mining Equipment'
     },
     path: '/products/ore-processing'
+  },
+  'mineral-processing-solutions': {
+    title: {
+      zh: '选矿工艺方案-金属矿非金属矿选矿流程设计 | 泽鑫矿山设备',
+      en: 'Mineral Processing Solutions - Metal & Non-metal Ore Beneficiation | Zexin Mining'
+    },
+    description: {
+      zh: '泽鑫提供全面的矿物加工解决方案，根据不同矿种特性设计最优选矿工艺流程，包括新能源矿种、贵金属、有色金属、黑色金属和非金属等矿物的加工方案',
+      en: 'Zexin provides comprehensive mineral processing solutions, designing optimal beneficiation processes for different mineral characteristics, including processing solutions for new energy minerals, precious metals, non-ferrous metals, ferrous metals, and non-metals'
+    },
+    defaultKeywords: {
+      zh: '选矿工艺方案,金属矿非金属矿专业选矿流程,泽鑫矿山设备',
+      en: 'mineral processing solutions,gold,copper,iron ore beneficiation,Zexin Mining'
+    },
+    path: '/products/ore-processing/mineral-processing-solutions'
   }
 };
 
@@ -515,42 +512,7 @@ export function getCategoryMetadata({
 
 // 导出特定产品类别的元数据获取函数（可保持向后兼容性）
 export function getVibratingScreensMetadata({ locale = 'en' }: { locale: string }): Metadata {
-  const isZh = locale === 'zh';
-  
-  return {
-    title: isZh ? '固定式振动筛设备 | 泽鑫矿山设备' : 'Stationary Vibrating Screens | Zexin Mining Equipment',
-    description: isZh 
-      ? '泽鑫振动筛系列包括直线振动筛、香蕉筛、脱水筛、高频筛等，筛分精度高，多层筛分设计，处理量50-800t/h，维护简便，适用于矿石、砂石、煤炭等物料的高效分级。'
-      : 'Zexin vibrating screens: linear screens, banana screens, dewatering screens & high-frequency screens with multi-deck design. High precision, capacity of 50-800t/h, easy maintenance for efficient classification of minerals, aggregates & coal.',
-    keywords: isZh 
-      ? '固定式振动筛,直线振动筛,香蕉筛,脱水筛,高频筛,泽鑫矿山设备,矿石筛分,砂石筛分,煤炭筛分,多层筛分,筛分精度,大型振动筛'
-      : 'stationary vibrating screens,linear vibrating screens,banana screens,dewatering screens,high-frequency screens,Zexin Mining Equipment,ore screening,aggregate screening,coal screening,multi-deck screening,screening precision,large vibrating screens',
-    alternates: {
-      canonical: `/${locale}/products/ore-processing/vibrating-screens`,
-      languages: {
-        'zh-CN': '/zh/products/ore-processing/vibrating-screens',
-        'en-US': '/en/products/ore-processing/vibrating-screens',
-      },
-    },
-    openGraph: {
-      title: isZh ? '固定式振动筛设备 | 泽鑫矿山设备' : 'Stationary Vibrating Screens | Zexin Mining Equipment',
-      description: isZh 
-        ? '泽鑫振动筛系列包括直线振动筛、香蕉筛、脱水筛、高频筛等，筛分精度高，多层筛分设计，处理量50-800t/h，维护简便，适用于矿石、砂石、煤炭等物料的高效分级。'
-        : 'Zexin vibrating screens: linear screens, banana screens, dewatering screens & high-frequency screens with multi-deck design. High precision, capacity of 50-800t/h, easy maintenance for efficient classification of minerals, aggregates & coal.',
-      url: `/${locale}/products/ore-processing/vibrating-screens`,
-      siteName: isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment',
-      images: [
-        {
-          url: '/images/products/vibrating-screens/overview.jpg',
-          width: 1200,
-          height: 630,
-          alt: isZh ? '泽鑫固定式振动筛设备' : 'Zexin Stationary Vibrating Screen Equipment',
-        },
-      ],
-      locale: isZh ? 'zh_CN' : 'en_US',
-      type: 'website',
-    },
-  };
+  return getCategoryMetadata({ categoryId: 'vibrating-screens', locale });
 }
 
 export function getStationaryCrushersMetadata({ locale, productKeywords }: { locale: string; productKeywords?: string }): Metadata {
@@ -754,4 +716,4 @@ export function getProductsPageMetadata({ locale }: { locale: string }): Metadat
     ogDescription: description,
     ogAlt: isZh ? '泽鑫矿山设备产品中心' : 'Zexin Mining Equipment Products'
   });
-} 
+}

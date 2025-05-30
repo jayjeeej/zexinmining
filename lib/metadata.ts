@@ -61,8 +61,8 @@ export function getMineralProcessingMetadata({ locale }: { locale: string }): Me
       ? '矿物加工设备和解决方案 | 高效选矿工艺 - 泽鑫矿山设备' 
       : 'Mineral Processing Equipment & Solutions | Efficient Beneficiation - Zexin Mining',
     description: isZh 
-      ? '泽鑫矿山设备提供全方位矿物加工解决方案和先进选矿设备，包括破碎、磨矿、浮选、磁选、重选设备，满足不同矿种选矿需求，提高回收率，降低成本。' 
-      : 'Zexin Mining Equipment offers comprehensive mineral processing solutions and advanced beneficiation equipment including crushing, grinding, flotation, magnetic and gravity separation to meet various ore processing requirements, increasing recovery rates and reducing costs.',
+      ? '泽鑫提供破碎、磨矿、浮选、磁选、重选等全系列选矿设备，专业矿物加工方案，提高回收率，降低运营成本。' 
+      : 'Complete range of mineral processing equipment: crushers, grinding mills, flotation, magnetic and gravity separators. Custom solutions to maximize recovery rates and reduce operational costs.',
     keywords: isZh 
       ? '矿物加工,选矿设备,矿物加工解决方案,选矿工艺,破碎设备,磨矿设备,浮选设备,磁选设备,重选设备,筛分设备,分级设备,脱水设备,高效选矿,节能环保' 
       : 'mineral processing,ore dressing equipment,mineral processing solutions,beneficiation process,crushing equipment,grinding equipment,flotation equipment,magnetic separation,gravity separation,screening equipment,classification,dewatering,efficient beneficiation,energy saving',
@@ -82,8 +82,8 @@ export function getMineralProcessingMetadata({ locale }: { locale: string }): Me
         ? '矿物加工设备与解决方案 | 先进选矿工艺 - 泽鑫矿山设备' 
         : 'Mineral Processing Equipment & Solutions | Advanced Beneficiation - Zexin Mining',
       description: isZh 
-        ? '泽鑫矿山设备提供专业矿物加工解决方案和先进选矿设备，提高回收率，降低成本。' 
-        : 'Zexin Mining Equipment offers professional mineral processing solutions and advanced beneficiation equipment, increasing recovery rates and reducing costs.',
+        ? '泽鑫提供全系列矿物加工设备和专业选矿方案，优化回收率，为矿企创造更高价值。' 
+        : 'Zexin offers advanced mineral processing equipment and turnkey beneficiation solutions to maximize recovery rates and create higher value for mining enterprises.',
       url: `https://www.zexinmining.com/${locale}/products/ore-processing`,
       siteName: isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment',
       images: [
@@ -103,8 +103,8 @@ export function getMineralProcessingMetadata({ locale }: { locale: string }): Me
         ? '矿物加工设备与解决方案 | 高效选矿工艺 - 泽鑫' 
         : 'Mineral Processing Equipment & Solutions | Efficient Beneficiation - Zexin',
       description: isZh 
-        ? '泽鑫矿山设备提供专业矿物加工解决方案和先进选矿设备，满足各种矿石处理需求。' 
-        : 'Zexin Mining Equipment offers professional mineral processing solutions and advanced beneficiation equipment for various ore processing requirements.',
+        ? '泽鑫提供全系列选矿设备和专业矿物加工方案，助力矿企提高回收率，实现可持续生产。' 
+        : 'Complete mineral processing solutions and premium equipment to maximize recovery rates and achieve sustainable mining operations.',
       images: ['https://www.zexinmining.com/images/mineral-processing-og.jpg'],
     },
   };

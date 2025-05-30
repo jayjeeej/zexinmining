@@ -126,9 +126,8 @@ async function fetchProductsDataDirect(locale: string) {
 
 // 生成元数据
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  // 等待params解析完成
-  const resolvedParams = await Promise.resolve(params);
-  const locale = resolvedParams.locale;
+  // 静态路由下直接指定locale而不是从params获取
+  const locale = 'zh';
   return getMagneticSeparatorMetadata({ locale });
 }
 

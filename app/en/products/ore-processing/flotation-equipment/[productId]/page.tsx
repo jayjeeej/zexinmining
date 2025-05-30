@@ -68,22 +68,37 @@ export async function generateMetadata({
   try {
     // 静态路由下直接指定locale而不是从params获取
     const locale = 'en';
-    const { productId } = await safelyGetRouteParams(params);
+    const productId = (await params).productId;
     
     // 获取产品数据
     const { product, isSuccess } = await getProductData(productId, locale);
     if (!isSuccess || !product) return notFoundMetadata();
     
-    // 在英文版中，直接使用固定值而不是比较
+    const isZh = false;
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.zexinmining.com';
     
     // 构建规范链接URL - 注意这里的路径结构与目录结构一致
     const canonicalUrl = `/${locale}/products/ore-processing/flotation-equipment/${productId}`;
     
+    // 确定主要关键特性
+    let mainFeature = '';
+    if (product.features && Array.isArray(product.features) && product.features.length > 0) {
+      const firstFeature = product.features[0] as any;
+      if (firstFeature && typeof firstFeature.title === 'string') {
+        mainFeature = firstFeature.title.replace(/[,，、]/g, '');
+      }
+    }
+    
+    // 获取型号
+    const model = product.model || '';
+    
+    // 构建SEO友好的标题
+    const seoTitle = `${product.title} - ${mainFeature}${model ? ' ' + model + ' Series' : ''} | Zexin Mining Equipment`;
+    
     // 优先使用产品数据中的SEO配置
     if (product.seo) {
       return {
-        title: product.seo.title || `${product.title} | Zexin Mining Equipment`,
+        title: product.seo.title || seoTitle,
         description: product.seo.description || product.overview,
         keywords: product.seo.keywords || `${product.title},${product.productCategory}`,
         alternates: {
@@ -94,10 +109,10 @@ export async function generateMetadata({
           },
         },
         openGraph: {
-          title: product.seo.title || product.title,
+          title: product.seo.title || seoTitle,
           description: product.seo.description || product.overview,
           url: `${baseUrl}${canonicalUrl}`,
-          siteName: 'Zexin Mining Equipment',
+          siteName: isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment',
           images: [
             {
               url: `${baseUrl}${product.imageSrc}`,
@@ -106,7 +121,7 @@ export async function generateMetadata({
               alt: product.title,
             },
           ],
-          locale: 'en_US',
+          locale: isZh ? 'zh_CN' : 'en_US',
           type: 'website',
         },
       };
@@ -114,9 +129,13 @@ export async function generateMetadata({
     
     // 为SEO描述和关键词提供默认值
     const seoDescription = product.overview || 
-                        `${product.title} - Professional ${product.productCategory} solutions by Zexin Mining Equipment`;
+                        (isZh 
+                          ? `${product.title} - 泽鑫矿山设备提供专业的${product.productCategory}解决方案` 
+                          : `${product.title} - Professional ${product.productCategory} solutions by Zexin Mining Equipment`);
     
-    const seoKeywords = `${product.title},${product.productCategory},Zexin Mining Equipment,mining equipment,flotation equipment`;
+    const seoKeywords = isZh 
+                       ? `${product.title},${product.productCategory},泽鑫矿山设备,矿山设备,浮选设备,浮选机` 
+                       : `${product.title},${product.productCategory},Zexin Mining Equipment,mining equipment,flotation equipment,flotation machine`;
     
     // 如果产品数据中存在searchKeywords数组，使用它来增强关键词
     const enhancedKeywords = product.searchKeywords && Array.isArray(product.searchKeywords) 
@@ -124,7 +143,7 @@ export async function generateMetadata({
       : seoKeywords;
     
     return {
-      title: `${product.title} | Zexin Mining Equipment`,
+      title: seoTitle,
       description: seoDescription,
       keywords: enhancedKeywords,
       alternates: {
@@ -135,10 +154,10 @@ export async function generateMetadata({
         },
       },
       openGraph: {
-        title: product.title,
+        title: seoTitle,
         description: product.overview || seoDescription,
         url: `${baseUrl}${canonicalUrl}`,
-        siteName: 'Zexin Mining Equipment',
+        siteName: isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment',
         images: [
           {
             url: `${baseUrl}${product.imageSrc}`,
@@ -147,7 +166,7 @@ export async function generateMetadata({
             alt: product.title,
           },
         ],
-        locale: 'en_US',
+        locale: isZh ? 'zh_CN' : 'en_US',
         type: 'website',
       },
     };

@@ -5,9 +5,10 @@ import { getBreadcrumbConfig } from '@/lib/navigation';
 
 // 生成元数据
 export const metadata: Metadata = {
-  title: '泽鑫矿山设备 - 新闻中心',
-  description: '了解泽鑫矿山设备的最新动态、产品发布、行业见解和企业新闻',
-  };
+  title: '矿山设备资讯-选矿技术文章矿业新闻 | 泽鑫矿山设备',
+  description: '了解矿山设备行业动态、选矿技术创新、产品发布和泽鑫最新工程案例，为您提供专业矿业资讯。',
+  keywords: '矿山设备资讯,选矿技术文章,矿业新闻,选矿工艺,矿山设备技术,泽鑫矿山',
+};
 
 // 服务端组件主体
 export default async function NewsPage() {

@@ -127,7 +127,8 @@ async function fetchProductsDataDirect(locale: string) {
 
 // 生成元数据
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  const locale = params?.locale || 'zh';
+  // 静态路由下直接指定locale而不是从params获取
+  const locale = 'zh';
   return getClassificationEquipmentMetadata({ locale });
 }
 

@@ -64,7 +64,7 @@ export default function VibratingScreensPageClient({ locale, initialData = [] }:
     { name: breadcrumbConfig.home.name, href: `/${locale}` },
     { name: breadcrumbConfig.products.name, href: `/${locale}/products` },
     { name: isZh ? '选矿设备' : 'Ore Processing Equipment', href: `/${locale}/products/ore-processing` },
-    { name: isZh ? '振动筛' : 'Vibrating Screens' }
+    { name: isZh ? '固定式振动筛' : 'Stationary Vibrating Screens' }
   ];
   
   // 页面描述内容

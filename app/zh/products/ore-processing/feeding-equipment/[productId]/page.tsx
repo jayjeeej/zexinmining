@@ -67,32 +67,41 @@ export async function generateStaticParams() {
 }
 
 // 生成元数据
-export async function generateMetadata({ 
-  params 
-}: { 
-  params: { productId: string; locale: string } 
-}): Promise<Metadata> {
-  // 静态路由下直接指定locale而不是从params获取
-  const locale = 'zh';
-  // 确保正确await params
-  const safeParams = await safelyGetRouteParams(params);
-  const { productId } = safeParams;
-  
-  // 获取产品数据
+export async function generateMetadata({ params }: { params: { productId: string; locale: string } }): Promise<Metadata> {
   try {
+    // 静态路由下直接指定locale而不是从params获取
+    const locale = 'zh';
+    const { productId } = await params;
+    
+    // 获取产品数据
     const { product, isSuccess } = await getProductData(productId, locale);
     if (!isSuccess || !product) return notFoundMetadata('zh');
     
-    const isZh = true; // 中文版，固定为true
+    const isZh = true;
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.zexinmining.com';
     
     // 构建规范链接URL - 注意这里的路径结构与目录结构一致
     const canonicalUrl = `/${locale}/products/ore-processing/feeding-equipment/${productId}`;
     
+    // 确定主要关键特性
+    let mainFeature = '';
+    if (product.features && Array.isArray(product.features) && product.features.length > 0) {
+      const firstFeature = product.features[0] as any;
+      if (firstFeature && typeof firstFeature.title === 'string') {
+        mainFeature = firstFeature.title.replace(/[,，、]/g, '');
+      }
+    }
+    
+    // 获取型号
+    const model = product.model || '';
+    
+    // 构建SEO友好的标题
+    const seoTitle = `${product.title}-${mainFeature}${model ? model + '系列' : ''} | 泽鑫矿山设备`;
+    
     // 优先使用产品数据中的SEO配置
     if (product.seo) {
       return {
-        title: product.seo.title || `${product.title} | ${isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment'}`,
+        title: product.seo.title || seoTitle,
         description: product.seo.description || product.overview,
         keywords: product.seo.keywords || `${product.title},${product.productCategory}`,
         alternates: {
@@ -103,7 +112,7 @@ export async function generateMetadata({
           },
         },
         openGraph: {
-          title: product.seo.title || product.title,
+          title: product.seo.title || seoTitle,
           description: product.seo.description || product.overview,
           url: `${baseUrl}${canonicalUrl}`,
           siteName: isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment',
@@ -128,8 +137,8 @@ export async function generateMetadata({
                           : `${product.title} - Professional ${product.productCategory} solutions by Zexin Mining Equipment`);
     
     const seoKeywords = isZh 
-                       ? `${product.title},${product.productCategory},泽鑫矿山设备,矿山设备,给料设备` 
-                       : `${product.title},${product.productCategory},Zexin Mining Equipment,mining equipment,feeding equipment`;
+                       ? `${product.title},${product.productCategory},泽鑫矿山设备,矿山设备,给料设备,给料机` 
+                       : `${product.title},${product.productCategory},Zexin Mining Equipment,mining equipment,feeding equipment,feeder`;
     
     // 如果产品数据中存在searchKeywords数组，使用它来增强关键词
     const enhancedKeywords = product.searchKeywords && Array.isArray(product.searchKeywords) 
@@ -137,7 +146,7 @@ export async function generateMetadata({
       : seoKeywords;
     
     return {
-      title: `${product.title} | ${isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment'}`,
+      title: seoTitle,
       description: seoDescription,
       keywords: enhancedKeywords,
       alternates: {
@@ -148,7 +157,7 @@ export async function generateMetadata({
         },
       },
       openGraph: {
-        title: product.title,
+        title: seoTitle,
         description: product.overview || seoDescription,
         url: `${baseUrl}${canonicalUrl}`,
         siteName: isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment',
@@ -165,7 +174,7 @@ export async function generateMetadata({
       },
     };
   } catch (error) {
-    console.error('Error generating metadata:', error);
+    // 静默处理错误
     return notFoundMetadata('zh');
   }
 }

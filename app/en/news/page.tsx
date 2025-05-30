@@ -5,9 +5,10 @@ import { getBreadcrumbConfig } from '@/lib/navigation';
 
 // 生成元数据
 export const metadata: Metadata = {
-  title: 'Zexin Mining - News Center',
-  description: 'Stay updated with the latest news, product releases, industry insights and corporate updates from Zexin Mining Equipment',
-  };
+  title: 'Mining Equipment News - Mineral Processing Articles & Updates | Zexin Mining',
+  description: 'Get the latest mining industry news, mineral processing innovations, equipment launches and project case studies. Expert insights on gold, iron and copper processing technologies.',
+  keywords: 'mining equipment news,mineral processing articles,mining industry updates,ore processing technology,mining equipment innovation,Zexin Mining',
+};
 
 // 服务端组件主体
 export default async function NewsPage() {

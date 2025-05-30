@@ -49,16 +49,17 @@ export async function getAllCaseStudies(locale: string) {
 
 // 案例页面元数据
 export const metadata: Metadata = {
-  title: 'Case Studies | Zexin Mining Equipment',
-  description: 'Zexin Mining Equipment Case Studies - Explore our completed mining engineering projects worldwide, showcasing our expertise in mining, mineral processing, and tailings management.',
-    alternates: {
+  title: 'Mining Project Cases - Gold, Iron & Copper Processing Plants | Zexin Mining',
+  description: 'Explore our global mining project portfolio showcasing successful mineral processing solutions for gold, iron and copper mines. Custom engineering expertise delivering superior recovery rates and efficiency.',
+  keywords: 'mining project cases,gold processing plant,iron ore project,copper processing plant,mineral processing,mining equipment,Zexin Mining',
+  alternates: {
     canonical: 'https://www.zexinmining.com/en/cases',
-      languages: {
-        'en': 'https://www.zexinmining.com/en/cases',
-        'zh': 'https://www.zexinmining.com/zh/cases'
-      }
+    languages: {
+      'en': 'https://www.zexinmining.com/en/cases',
+      'zh': 'https://www.zexinmining.com/zh/cases'
     }
-  };
+  }
+};
 
 export default async function CasesPage() {
   // 使用固定的locale值

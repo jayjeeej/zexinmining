@@ -87,10 +87,25 @@ export async function generateMetadata({ params }: { params: { productId: string
     // 构建规范链接URL - 注意这里的路径结构与目录结构一致
     const canonicalUrl = `/${locale}/products/ore-processing/gravity-separation/${productId}`;
     
+    // 确定主要关键特性
+    let mainFeature = '';
+    if (product.features && Array.isArray(product.features) && product.features.length > 0) {
+      const firstFeature = product.features[0] as any;
+      if (firstFeature && typeof firstFeature.title === 'string') {
+        mainFeature = firstFeature.title.replace(/[,，、]/g, '');
+      }
+    }
+    
+    // 获取型号
+    const model = product.model || '';
+    
+    // 构建SEO友好的标题
+    const seoTitle = `${product.title}-${mainFeature}${model ? model + '系列' : ''} | 泽鑫矿山设备`;
+    
     // 优先使用产品数据中的SEO配置
     if (product.seo) {
       return {
-        title: product.seo.title || `${product.title} | ${isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment'}`,
+        title: product.seo.title || seoTitle,
         description: product.seo.description || product.overview,
         keywords: product.seo.keywords || `${product.title},${product.productCategory}`,
         alternates: {
@@ -101,7 +116,7 @@ export async function generateMetadata({ params }: { params: { productId: string
           },
         },
         openGraph: {
-          title: product.seo.title || product.title,
+          title: product.seo.title || seoTitle,
           description: product.seo.description || product.overview,
           url: `${baseUrl}${canonicalUrl}`,
           siteName: isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment',
@@ -135,7 +150,7 @@ export async function generateMetadata({ params }: { params: { productId: string
       : seoKeywords;
     
     return {
-      title: `${product.title} | ${isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment'}`,
+      title: seoTitle,
       description: seoDescription,
       keywords: enhancedKeywords,
       alternates: {
@@ -146,7 +161,7 @@ export async function generateMetadata({ params }: { params: { productId: string
         },
       },
       openGraph: {
-        title: product.title,
+        title: seoTitle,
         description: product.overview || seoDescription,
         url: `${baseUrl}${canonicalUrl}`,
         siteName: isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment',

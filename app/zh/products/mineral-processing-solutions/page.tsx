@@ -9,10 +9,10 @@ export const revalidate = 3600; // 每小时重新验证一次
 
 // 选矿解决方案页面服务端组件
 export default async function MineralProcessingSolutionsPage({ params }: { params: { locale: string } }) {
-  // 确保在使用 params.locale 前先等待参数
-  const { locale } = await Promise.resolve(params);
+  // 静态路由下直接指定locale而不是从params获取
+  const locale = 'zh';
   
-  const isZh = locale === 'zh';
+  const isZh = true; // 中文版固定为true
   const baseUrl = 'https://www.zexinmining.com';
   
   // 面包屑配置
@@ -20,7 +20,7 @@ export default async function MineralProcessingSolutionsPage({ params }: { param
   const breadcrumbItems = [
     { name: breadcrumbConfig.home.name, url: breadcrumbConfig.home.href },
     { name: breadcrumbConfig.products.name, url: breadcrumbConfig.products.href },
-    { name: isZh ? '矿物加工解决方案' : 'Mineral Processing Solutions' }
+    { name: '矿物加工解决方案' }
   ];
   
   // 结构化数据
@@ -47,17 +47,13 @@ export default async function MineralProcessingSolutionsPage({ params }: { param
 
 // 生成页面元数据
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  // 确保在使用 params.locale 前先等待参数
-  const { locale } = await Promise.resolve(params);
-  const isZh = locale === 'zh';
+  // 静态路由下直接指定locale而不是从params获取
+  const locale = 'zh';
+  const isZh = true; // 中文版固定为true
   
   return {
-    title: isZh 
-      ? '矿物加工解决方案 - 定制化选矿工艺流程 - 泽鑫矿山设备' 
-      : 'Mineral Processing Solutions - Customized Beneficiation Processes - Zexin Mining Equipment',
-    description: isZh
-      ? '泽鑫提供全面的矿物加工解决方案，根据不同矿种特性设计最优选矿工艺流程，包括新能源矿种、贵金属、有色金属、黑色金属和非金属等矿物的加工方案'
-      : 'Zexin provides comprehensive mineral processing solutions, designing optimal beneficiation processes for different mineral characteristics, including processing solutions for new energy minerals, precious metals, non-ferrous metals, ferrous metals, and non-metals',
+    title: '矿物加工解决方案 - 定制化选矿工艺流程 - 泽鑫矿山设备',
+    description: '泽鑫提供定制选矿工艺方案，针对金属和非金属矿种优化加工流程，提高回收率，节能环保，实现矿石高值化。',
     alternates: {
       canonical: `https://www.zexinmining.com/${locale}/products/mineral-processing-solutions`,
       languages: {

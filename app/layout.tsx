@@ -6,8 +6,8 @@ import { getOrganizationStructuredData } from '../lib/structuredData';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | 泽鑫矿山设备',
-    default: '泽鑫矿山设备 - 专业矿山设备制造商'
+    template: '%s',
+    default: '泽鑫矿山设备 - 专业选矿设备制造商'
   },
   description: '泽鑫矿山设备是专业矿山设备制造商，为全球客户提供高效可靠的智能解决方案和全面技术支持',
   keywords: ['矿山设备', '泽鑫', '采矿设备', '高效解决方案', '钻机', '采矿技术', '工业装备'],

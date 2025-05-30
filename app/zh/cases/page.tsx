@@ -49,8 +49,9 @@ export async function getAllCaseStudies(locale: string) {
 
 // 案例页面元数据
 export const metadata: Metadata = {
-  title: '成功案例 | 泽鑫矿山设备',
-  description: '泽鑫矿山设备成功案例展示 - 查看我们在全球范围内完成的矿山工程项目，展示我们在采矿、选矿和尾矿处理领域的专业经验和技术实力。',
+  title: '矿山工程案例-金矿铁矿铜矿选矿项目 | 泽鑫矿山设备',
+  description: '查看泽鑫全球矿山工程案例，展示金矿、铁矿、铜矿选矿工程技术实力，提供定制化矿山解决方案。',
+  keywords: '矿山工程案例,金矿选矿项目,铁矿选矿项目,铜矿选矿项目,选矿工程,矿山设备,泽鑫矿山',
     alternates: {
     canonical: 'https://www.zexinmining.com/zh/cases',
       languages: {

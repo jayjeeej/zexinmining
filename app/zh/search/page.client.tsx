@@ -747,33 +747,33 @@ export default function SearchResultsClient({ locale, query }: SearchResultsClie
                 url = url.replace(/\.json(\/|$)/g, '$1').replace(/\/$/, '');
                 
                 return (
-                  <Link 
+                <Link 
                     href={url} 
-                    key={`${result.id}-${index}`}
-                    className="product-card block rounded-xs pb-6 bg-white"
-                  >
-                    {result.imageSrc && (
-                      <div className="mb-2 overflow-hidden">
-                        <div className="relative h-64 overflow-hidden bg-gray-50">
-                          <OptimizedImage
-                            src={result.imageSrc}
-                            alt={result.title}
-                            className="w-full h-full object-cover"
-                            objectFit="cover"
-                            unoptimized={true}
-                          />
-                        </div>
+                  key={`${result.id}-${index}`}
+                  className="product-card block rounded-xs pb-6 bg-white"
+                >
+                  {result.imageSrc && (
+                    <div className="mb-2 overflow-hidden">
+                      <div className="relative h-64 overflow-hidden bg-gray-50">
+                        <OptimizedImage
+                          src={result.imageSrc}
+                          alt={result.title}
+                          className="w-full h-full object-cover"
+                          objectFit="cover"
+                          unoptimized={true}
+                        />
                       </div>
-                    )}
-                    <div className="px-4">
-                      {result.category && (
-                        <p className="text-xs text-gray-400 mb-1">{result.category}</p>
-                      )}
-                      <h2 className="text-base font-medium text-black transition-colors duration-300">
-                        {result.title}
-                      </h2>
                     </div>
-                  </Link>
+                  )}
+                  <div className="px-4">
+                    {result.category && (
+                      <p className="text-xs text-gray-400 mb-1">{result.category}</p>
+                    )}
+                    <h2 className="text-base font-medium text-black transition-colors duration-300">
+                      {result.title}
+                    </h2>
+                  </div>
+                </Link>
                 );
               })}
             </div>
