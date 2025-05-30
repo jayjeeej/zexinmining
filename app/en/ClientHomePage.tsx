@@ -115,7 +115,6 @@ export default function ClientHomePage({ locale }: { locale: string }) {
                   <span className="text-2xl sm:text-3xl lg:text-4xl block text-black">Welcome to</span>
                   <span className="text-[42px] sm:text-[56px] lg:text-[72px] block" style={{
                     color: 'black',
-                    textShadow: '0 0 2px #ff6633, 0 0 2px #ff6633, 0 0 2px #ff6633, 1px 0 0 #ff6633, 0 1px 0 #ff6633, -1px 0 0 #ff6633, 0 -1px 0 #ff6633'
                   }}>Zexin Mining Equipment</span>
                 </h1>
               </div>
