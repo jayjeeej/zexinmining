@@ -5,9 +5,5 @@
   "framework": "nextjs",
   "cleanUrls": true,
   "trailingSlash": false,
-  "regions": ["iad1"],
-  "routes": [
-    { "src": "/en/about", "dest": "/en/about/index.html", "status": 200 },
-    { "src": "/zh/about", "dest": "/zh/about/index.html", "status": 200 }
-  ]
+  "regions": ["iad1"]
 } 
