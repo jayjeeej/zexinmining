@@ -5,7 +5,7 @@
   "framework": "nextjs",
   "regions": ["iad1"],
   "routes": [
-    { "src": "/en/about", "dest": "/en/about.html", "status": 200 },
-    { "src": "/zh/about", "dest": "/zh/about.html", "status": 200 }
+    { "src": "/en/about", "dest": "/en/about/index.html", "status": 200 },
+    { "src": "/zh/about", "dest": "/zh/about/index.html", "status": 200 }
   ]
 } 

@@ -61,6 +61,58 @@ If 'rewrites', 'redirects', 'headers', 'cleanUrls' or 'trailingSlash' are used, 
 
 这种配置可以确保Vercel正确处理静态HTML文件，避免尝试创建可能导致部署失败的Lambda函数。
 
+### 仍然存在的问题
+尽管修复了配置冲突，最新的部署日志显示问题依然存在：
+```
+[12:40:01.883] Error: Unable to find lambda for route: /en/about
+```
+
+这表明尽管构建过程成功生成了所有279个静态页面，但Vercel仍然尝试将`/en/about`作为Lambda函数处理，而非静态页面。
+
+#### 新的解决方案尝试
+1. 修改routes配置，确保路径指向正确的文件：
+```json
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "regions": ["iad1"],
+  "routes": [
+    { "src": "/en/about", "dest": "/en/about/index.html", "status": 200 },
+    { "src": "/zh/about", "dest": "/zh/about/index.html", "status": 200 }
+  ]
+}
+```
+
+2. 另一种方法是完全移除routes配置，改用rewrites：
+```json
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "regions": ["iad1"],
+  "rewrites": [
+    { "source": "/en/about", "destination": "/en/about/index.html" },
+    { "source": "/zh/about", "destination": "/zh/about/index.html" }
+  ]
+}
+```
+
+3. 或者尝试移除所有自定义路由配置，让Next.js和Vercel自行处理路由：
+```json
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "regions": ["iad1"]
+}
+```
+
+这三种方法都值得尝试，以找出最适合Vercel平台的配置方式。
+
 ### 最终解决方案
 通过直接修改源代码，采用更彻底的解决方案：
 
