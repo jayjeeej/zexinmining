@@ -113,6 +113,28 @@ If 'rewrites', 'redirects', 'headers', 'cleanUrls' or 'trailingSlash' are used, 
 
 这三种方法都值得尝试，以找出最适合Vercel平台的配置方式。
 
+### 第二次尝试仍然失败
+我们尝试了第一种解决方案（更新routes配置指向index.html），但最新的部署日志显示问题依然存在：
+```
+[12:43:01.259] Error: Unable to find lambda for route: /en/about
+```
+
+这表明即使指定了正确的HTML文件路径，Vercel仍然尝试查找Lambda函数而不是使用静态文件。
+
+#### 最终尝试方案
+我们将尝试第三种方案，完全移除自定义路由配置，让Next.js和Vercel自行处理路由：
+```json
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "regions": ["iad1"]
+}
+```
+
+这种最简化的配置可能会让Vercel回归到其默认行为，正确识别Next.js生成的静态页面，而不是尝试创建Lambda函数。
+
 ### 最终解决方案
 通过直接修改源代码，采用更彻底的解决方案：
 
