@@ -26,7 +26,15 @@ export default function Footer({ logoAlt }: FooterProps) {
     newsMedia: safeLocale === 'zh' ? "新闻与媒体" : "News & Media",
     aboutUs: safeLocale === 'zh' ? "关于我们" : "About us",
     contactUs: safeLocale === 'zh' ? "联系我们" : "Contact Us",
-    contactName: safeLocale === 'zh' ? "吴宇涛, 国际业务总监" : "Cassian Wu, International Business Director",
+    // 根据语言选择不同的联系人
+    contactName: safeLocale === 'zh' 
+      ? "王超, 首席执行官" 
+      : "Cassian Wu, International Business Director",
+    contactEmail: "zexinminingequipment@hotmail.com",
+    // 根据语言选择不同的联系人电话
+    contactPhone: safeLocale === 'zh' 
+      ? "+86 18577086999" 
+      : "+86 13807719695",
     copyright: safeLocale === 'zh' 
       ? `版权所有 © 泽鑫矿业有限公司; 广西省南宁市扶绥县尚龙大道东盟青年产业园, 中国` 
       : `Copyright © Zexin Mining Equipment Co., Ltd; Shanglong Avenue, ASEAN Youth Industrial Park, Fusui County, Nanning City, Guangxi Province, China`
@@ -40,6 +48,12 @@ export default function Footer({ logoAlt }: FooterProps) {
   const casesUrl = safeLocale === 'zh' ? '/zh/cases' : '/en/cases';
   const newsUrl = safeLocale === 'zh' ? '/zh/news' : '/en/news';
   const aboutUrl = safeLocale === 'zh' ? '/zh/about' : '/en/about';
+
+  // 根据语言选择不同的联系人图片和名称
+  const contactImageSrc = safeLocale === 'zh' 
+    ? "/images/about/team-ceo.jpg" 
+    : "/images/about/team-intl.jpg";
+  const contactAltName = safeLocale === 'zh' ? "王超" : "Cassian Wu";
 
   return (
     <footer className="pt-8 sm:pt-10 md:pt-12 lg:pt-16 pb-8 bg-gray-800 text-white">
@@ -119,8 +133,8 @@ export default function Footer({ logoAlt }: FooterProps) {
                   {/* 联系人照片 */}
                   <div className="relative w-20 h-20 rounded-md overflow-hidden">
                     <Image 
-                      src="/images/about/team-intl.jpg"
-                      alt={safeLocale === 'zh' ? "吴宇涛" : "Cassian Wu"}
+                      src={contactImageSrc}
+                      alt={contactAltName}
                       width={80}
                       height={80}
                       className="object-cover"
@@ -137,7 +151,7 @@ export default function Footer({ logoAlt }: FooterProps) {
                       Email: <a href="mailto:zexinminingequipment@hotmail.com" className="text-white hover:text-[#ff6633] transition-colors no-underline">zexinminingequipment@hotmail.com</a>
                     </p>
                     <p className="text-sm text-gray-300 leading-tight">
-                      Phone: +86 13807719695
+                      Phone: {footerContent.contactPhone}
                     </p>
                   </div>
                 </div>
