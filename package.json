@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/add-alt-attributes.js && next build",
+    "build": "node scripts/add-alt-attributes.js && next build && node scripts/fix-vercel-deployment.js",
     "postbuild": "next-sitemap && node scripts/generate-sitemaps.js && node scripts/generate-server-sitemap.js",
     "start": "next start",
     "lint": "next lint",
-    "vercel-build": "next build"
+    "vercel-build": "next build && node scripts/fix-vercel-deployment.js"
   },
   "dependencies": {
     "@ant-design/nextjs-registry": "^1.0.2",

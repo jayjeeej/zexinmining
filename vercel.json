@@ -3,5 +3,9 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "regions": ["iad1"]
+  "regions": ["iad1"],
+  "routes": [
+    { "src": "/en/about", "dest": "/.vercel/output/static/en/about/index.html", "status": 200 },
+    { "src": "/zh/about", "dest": "/.vercel/output/static/zh/about/index.html", "status": 200 }
+  ]
 } 
