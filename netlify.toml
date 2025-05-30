@@ -16,15 +16,22 @@
 
 # HTTP到HTTPS重定向
 [[redirects]]
-  from = "http://:host/:path*"
-  to = "https://:host/:path*"
+  from = "http://www.zexinmining.com/*"
+  to = "https://www.zexinmining.com/:splat"
+  status = 301
+  force = true
+
+# HTTP非www到HTTPS www重定向
+[[redirects]]
+  from = "http://zexinmining.com/*"
+  to = "https://www.zexinmining.com/:splat"
   status = 301
   force = true
 
 # 非www到www重定向
 [[redirects]]
-  from = "https://zexinmining.com/:path*"
-  to = "https://www.zexinmining.com/:path*"
+  from = "https://zexinmining.com/*"
+  to = "https://www.zexinmining.com/:splat"
   status = 301
   force = true
 
