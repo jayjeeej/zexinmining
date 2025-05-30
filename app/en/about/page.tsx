@@ -4,7 +4,7 @@ import { MultiStructuredData } from '@/components/StructuredData';
 import AboutPageClient from './page.client';
 
 // Vercel 优化导出指令
-export const dynamic = 'error';               // 强制静态生成，如果有动态内容则报错
+export const dynamic = 'force-static';        // 强制静态生成
 export const revalidate = false;              // 禁用重新验证
 export const fetchCache = 'force-cache';      // 强制使用缓存
 export const runtime = 'nodejs';              // 使用Node.js运行时
