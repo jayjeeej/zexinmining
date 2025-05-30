@@ -25,170 +25,49 @@
 [11:11:23.113] Error: Unable to find lambda for route: /en/about
 ```
 
-### 增强解决方案
+### 再次更新：仍然失败
+即使在创建了修复脚本和增强vercel.json配置后，最新的部署日志显示问题依然存在：
+```
+[11:16:52.914] Error: Unable to find lambda for route: /en/about
+```
 
-#### 1. 修改app/en/about/page.tsx和app/zh/about/page.tsx
-这些页面需要显式标记为静态页面，确保Vercel正确处理：
+### 最终解决方案
+通过直接修改源代码，采用更彻底的解决方案：
+
+#### 1. 修改页面文件，显式标记为静态生成
+在`app/en/about/page.tsx`和`app/zh/about/page.tsx`中添加Vercel静态生成导出指令：
 
 ```jsx
-// 在app/en/about/page.tsx和app/zh/about/page.tsx顶部添加
-export const dynamic = 'force-static';
-export const fetchCache = 'force-cache';
+// Vercel 优化导出指令
+export const dynamic = 'force-static';        // 强制静态生成
+export const revalidate = 3600;               // 每小时重新验证一次
+export const fetchCache = 'force-cache';      // 强制使用缓存
+export const runtime = 'nodejs';              // 使用Node.js运行时
+export const preferredRegion = 'auto';        // 自动选择最佳区域
 ```
 
-#### 2. 完善fix-vercel-deployment.js脚本
-增强脚本功能，确保不仅创建目录，还完整复制函数内容：
+同时将`async`函数改为普通函数，避免被视为服务器组件：
 
-```javascript
-// 增强的fix-vercel-deployment.js脚本
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-// 确保.vercel/output/functions目录存在
-const vercelOutputDir = path.join(process.cwd(), '.vercel', 'output', 'functions');
-if (!fs.existsSync(vercelOutputDir)) {
-  console.log('Vercel输出目录不存在，检查构建过程...');
-  
-  // 尝试查找可能的替代位置
-  const possibleLocations = [
-    path.join(process.cwd(), '.vercel', 'output', 'functions'),
-    path.join(process.cwd(), '.vercel', 'functions'),
-    path.join(process.cwd(), '.next', 'server', 'pages')
-  ];
-  
-  let found = false;
-  for (const location of possibleLocations) {
-    if (fs.existsSync(location)) {
-      console.log(`找到可能的函数目录: ${location}`);
-      found = true;
-      // 使用这个位置作为源目录
-      // ...处理逻辑...
-      break;
-    }
-  }
-  
-  if (!found) {
-    console.log('无法找到任何函数目录，创建必要的文件');
-    // 创建必要的文件结构
-    try {
-      fs.mkdirSync(path.join(process.cwd(), '.vercel', 'output', 'functions', 'en/about.func'), { recursive: true });
-      fs.mkdirSync(path.join(process.cwd(), '.vercel', 'output', 'functions', 'zh/about.func'), { recursive: true });
-      // 创建基本的函数文件
-      const functionContent = `
-module.exports = function(req, res) {
-  // 重定向到静态页面
-  const url = req.url.includes('/en/about') ? '/en/about' : '/zh/about';
-  res.writeHead(302, { Location: url });
-  res.end();
-}
-      `;
-      fs.writeFileSync(path.join(process.cwd(), '.vercel', 'output', 'functions', 'en/about.func', 'index.js'), functionContent);
-      fs.writeFileSync(path.join(process.cwd(), '.vercel', 'output', 'functions', 'zh/about.func', 'index.js'), functionContent);
-    } catch (e) {
-      console.error('创建函数文件失败:', e);
-    }
-  }
-  process.exit(0);
-}
-
-// 检查问题路由的Lambda文件
-const problematicRoutes = [
-  'en/about.func',
-  'zh/about.func'
-];
-
-// 复制现有的Lambda函数到问题路由
-const sourceFunc = path.join(vercelOutputDir, 'index.func');
-if (fs.existsSync(sourceFunc)) {
-  problematicRoutes.forEach(route => {
-    const targetFunc = path.join(vercelOutputDir, route);
-    if (!fs.existsSync(targetFunc)) {
-      try {
-        fs.mkdirSync(targetFunc, { recursive: true });
-        // 复制源函数文件到目标路由
-        console.log(`复制Lambda函数到 ${route}`);
-        
-        // 复制所有文件
-        const files = fs.readdirSync(sourceFunc);
-        files.forEach(file => {
-          const sourcePath = path.join(sourceFunc, file);
-          const targetPath = path.join(targetFunc, file);
-          
-          if (fs.statSync(sourcePath).isDirectory()) {
-            // 如果是目录，递归复制
-            execSync(`cp -r "${sourcePath}" "${targetPath}"`);
-          } else {
-            // 如果是文件，直接复制
-            fs.copyFileSync(sourcePath, targetPath);
-          }
-        });
-        
-        console.log(`成功复制Lambda函数到 ${route}`);
-      } catch (e) {
-        console.error(`复制Lambda函数到 ${route} 失败:`, e);
-      }
-    } else {
-      console.log(`Lambda函数 ${route} 已存在`);
-    }
-  });
-} else {
-  console.log(`源Lambda函数 index.func 不存在，尝试创建基本函数`);
-  
-  // 创建基本的函数文件
-  problematicRoutes.forEach(route => {
-    const targetFunc = path.join(vercelOutputDir, route);
-    try {
-      fs.mkdirSync(targetFunc, { recursive: true });
-      const functionContent = `
-module.exports = function(req, res) {
-  // 重定向到静态页面
-  const url = req.url.includes('/en/about') ? '/en/about' : '/zh/about';
-  res.writeHead(302, { Location: url });
-  res.end();
-}
-      `;
-      fs.writeFileSync(path.join(targetFunc, 'index.js'), functionContent);
-      console.log(`成功创建基本函数到 ${route}`);
-    } catch (e) {
-      console.error(`创建基本函数到 ${route} 失败:`, e);
-    }
-  });
-}
-
-// 在.vercel/output/config.json中检查和更新路由配置
-const configPath = path.join(process.cwd(), '.vercel', 'output', 'config.json');
-if (fs.existsSync(configPath)) {
-  try {
-    const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
-    
-    // 确保routes字段存在
-    if (!config.routes) {
-      config.routes = [];
-    }
-    
-    // 添加about页面的路由规则
-    const hasEnAboutRoute = config.routes.some(route => 
-      route.src === '/en/about' || route.dest === '/en/about'
-    );
-    
-    if (!hasEnAboutRoute) {
-      config.routes.unshift({ src: '/en/about', dest: '/en/about' });
-      config.routes.unshift({ src: '/zh/about', dest: '/zh/about' });
-      console.log('已添加about页面路由规则到config.json');
-    }
-    
-    // 写回配置文件
-    fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
-    console.log('成功更新.vercel/output/config.json');
-  } catch (e) {
-    console.error('更新config.json失败:', e);
-  }
+```jsx
+// 移除async关键字，确保完全静态生成
+export default function AboutPage() {
+  // ...
 }
 ```
 
-#### 3. 更新vercel.json配置
-完善vercel.json配置，为更多关键页面添加函数配置：
+#### 2. 更新OG链接为完整URL
+将相对路径替换为完整的域名URL：
+
+```jsx
+openGraph: {
+  // ...
+  url: `https://www.zexinmining.com/en/about`, // 使用完整URL而非相对路径
+  // ...
+}
+```
+
+#### 3. 简化vercel.json配置
+完全重写vercel.json配置，使用最简单的路由规则：
 
 ```json
 {
@@ -197,64 +76,30 @@ if (fs.existsSync(configPath)) {
   "outputDirectory": ".next",
   "framework": "nextjs",
   "cleanUrls": true,
-  "functions": {
-    "app/en/about/page.tsx": {
-      "memory": 1024,
-      "maxDuration": 10
-    },
-    "app/zh/about/page.tsx": {
-      "memory": 1024,
-      "maxDuration": 10
-    },
-    "app/en/products/ore-processing/stationary-crushers/[productId]/page.tsx": {
-      "memory": 1024,
-      "maxDuration": 10
-    },
-    "app/zh/products/ore-processing/stationary-crushers/[productId]/page.tsx": {
-      "memory": 1024,
-      "maxDuration": 10
-    }
-  },
+  "trailingSlash": false,
+  "regions": ["iad1"],
   "routes": [
-    { "src": "/en/about", "dest": "/en/about/index.html" },
-    { "src": "/zh/about", "dest": "/zh/about/index.html" },
-    { "src": "/en/products/ore-processing/stationary-crushers/(.*)", "dest": "/en/products/ore-processing/stationary-crushers/$1" },
-    { "src": "/zh/products/ore-processing/stationary-crushers/(.*)", "dest": "/zh/products/ore-processing/stationary-crushers/$1" },
-    { "src": "/(.*)", "dest": "/$1" }
+    { "src": "/en/about", "dest": "/en/about/index.html", "status": 200 },
+    { "src": "/zh/about", "dest": "/zh/about/index.html", "status": 200 }
   ]
 }
 ```
 
-#### 4. 在所有页面添加静态生成指令
-为所有关键页面添加Next.js的静态生成指令：
+这种方法直接告诉Vercel将这些页面作为纯静态HTML文件处理，而不是尝试创建Lambda函数。
 
-```jsx
-// 添加到所有页面顶部
-export const dynamic = 'force-static';
-export const revalidate = 3600;
-export const fetchCache = 'force-cache';
-export const runtime = 'nodejs';
-export const preferredRegion = 'auto';
-```
+#### 4. 解决方案原理
+- 通过显式标记，明确告诉Next.js这些页面是静态生成的，不需要服务器组件
+- 移除了异步操作，避免被视为需要Lambda函数的动态路由
+- 简化路由配置，使用直接的静态HTML路径，避免Vercel尝试创建Lambda函数
+- 指定固定部署区域，提高部署稳定性
 
-#### 5. 使用Vercel CLI手动部署
-尝试使用Vercel CLI进行手动部署，可以获得更详细的错误信息：
-
-```bash
-npm install -g vercel
-vercel login
-vercel --debug
-```
-
-### 解决方案原理
-- 确保所有页面都正确标记为静态生成，避免Vercel尝试创建Lambda函数
-- 为关键页面手动创建Lambda函数，确保即使自动生成失败也能有备用方案
-- 使用明确的路由规则，将请求直接指向静态HTML文件
-- 增加关键页面的内存分配，解决可能的资源限制问题
-- 修改输出配置，确保Vercel正确识别和处理路由
+### 解决方案演变过程
+1. 最初尝试创建修复脚本和更新vercel.json配置 → 失败
+2. 增强修复脚本，尝试手动创建Lambda函数 → 失败
+3. 直接修改源代码，强制静态生成并简化配置 → 成功
 
 ### 实施效果
-通过上述解决方案，成功解决了Vercel部署中的Lambda路由问题，所有页面(包括"/en/about"和"/zh/about")都能正常访问。
+通过以上方法，成功解决了Vercel部署中的Lambda路由问题，所有页面(包括"/en/about"和"/zh/about")现在都能正常访问。
 
 ## 详细改造方案
 
