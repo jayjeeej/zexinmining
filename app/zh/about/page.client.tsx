@@ -99,8 +99,8 @@ export default function AboutPageClient({ locale }: { locale: string }) {
       phone: {
         title: isZh ? '电话' : 'Phone',
         contacts: [
-          { number: '+86 18577086999', name: 'Eddie Wang' },
-          { number: '+86 13807719695', name: 'Cassian Wu' }
+          { number: '+86 18577086999', name: '王超' },
+          { number: '+86 13807719695', name: '吴宇涛' }
         ]
       },
       whatsapp: {
@@ -108,7 +108,7 @@ export default function AboutPageClient({ locale }: { locale: string }) {
         number: '+63 9654706775'
       },
       email: {
-        title: 'Email',
+        title: isZh ? '邮箱' : 'Email',
         address: 'zexinminingequipment@hotmail.com'
       },
       headquarters: {

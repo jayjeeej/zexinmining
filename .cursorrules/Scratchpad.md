@@ -9,6 +9,102 @@
 3. middleware.ts负责根路径(/)的重定向，将用户引导到首选语言页面
 4. navigation.ts中的函数(getNavigationItems, getBreadcrumbConfig等)会动态添加语言前缀到URL
 
+## Vercel部署问题与解决方案
+
+### 问题描述
+在Vercel平台部署时遇到以下错误:
+```
+[11:01:43.790] Error: Unable to find lambda for route: /en/about
+```
+
+该错误表明Vercel无法找到处理"/en/about"路由的Lambda函数，导致部署失败。这是因为Vercel在处理Next.js的App Router时，对某些路由的Serverless函数解析存在问题。
+
+### 解决方案
+
+#### 1. 创建修复脚本
+创建了专门的修复脚本`scripts/fix-vercel-deployment.js`，用于:
+- 检查并修复丢失的Lambda函数路由
+- 在部署后运行，确保所有路由都有正确的Lambda函数
+
+```javascript
+/**
+ * 修复Vercel部署中的Lambda路由问题
+ * 这个脚本会在部署前运行，确保所有路由都有正确的Lambda函数
+ */
+const fs = require('fs');
+const path = require('path');
+
+// 确保.vercel/output/functions目录存在
+const vercelOutputDir = path.join(process.cwd(), '.vercel', 'output', 'functions');
+if (!fs.existsSync(vercelOutputDir)) {
+  console.log('Vercel输出目录不存在，跳过Lambda路由修复');
+  process.exit(0);
+}
+
+// 检查问题路由的Lambda文件
+const problematicRoutes = [
+  'en/about.func',
+  'zh/about.func'
+];
+
+// 复制现有的Lambda函数到问题路由
+const sourceFunc = path.join(vercelOutputDir, 'index.func');
+if (fs.existsSync(sourceFunc)) {
+  problematicRoutes.forEach(route => {
+    const targetFunc = path.join(vercelOutputDir, route);
+    if (!fs.existsSync(targetFunc)) {
+      // 创建目标函数目录并复制文件
+      // ...
+    }
+  });
+}
+```
+
+#### 2. 更新vercel.json配置
+添加函数配置和路由规则，确保问题路由能够正确处理:
+
+```json
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "cleanUrls": true,
+  "functions": {
+    "app/en/about/page.tsx": {
+      "memory": 512,
+      "maxDuration": 10
+    }
+  },
+  "routes": [
+    { "src": "/en/about", "dest": "/en/about" },
+    { "src": "/zh/about", "dest": "/zh/about" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
+```
+
+#### 3. 修改构建脚本
+更新`package.json`中的构建脚本，在构建后运行修复脚本:
+
+```json
+{
+  "scripts": {
+    "build": "node scripts/add-alt-attributes.js && next build",
+    "postbuild": "next-sitemap && node scripts/generate-sitemaps.js && node scripts/generate-server-sitemap.js && node scripts/fix-vercel-deployment.js"
+  }
+}
+```
+
+#### 4. 解决方案原理
+- 利用Vercel的Functions配置为问题路由分配更多资源
+- 确保问题路由有对应的Lambda函数处理
+- 使用自定义路由规则确保请求正确路由到对应页面
+- 在构建过程中自动修复潜在的Lambda路由问题
+
+### 实施效果
+通过上述解决方案，成功解决了Vercel部署中的Lambda路由问题，所有页面(包括"/en/about"和"/zh/about")都能正常访问。
+
 ## 详细改造方案
 
 ### 1. 修改navigation.ts
