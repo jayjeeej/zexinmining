@@ -191,6 +191,7 @@ export const navigationItems: NavItem[] = [
               zh: '矿山EPC服务',
               en: 'Mining EPC Services'
             },
+            // 注意：URL 必须在组件中拼接语言前缀
             url: '/products/mining-epc',
             text: {
               zh: '泽鑫矿山设备提供从设计到运营的一站式矿业产业链服务，满足客户多样化需求。',
@@ -488,52 +489,52 @@ export function getBreadcrumbConfig(locale: string): BreadcrumbConfig {
   return {
     home: {
       name: isZh ? '首页' : 'Home',
-      href: `/${locale}`
+      href: isZh ? '/zh' : '/en'
     },
     products: {
       name: isZh ? '产品与服务' : 'Products & Services',
-      href: `/${locale}/products`
+      href: isZh ? '/zh/products' : '/en/products'
     },
     mineralProcessing: {
       name: isZh ? '选矿设备' : 'Mineral Processing Equipment',
-      href: `/${locale}/products/ore-processing`
+      href: isZh ? '/zh/products/ore-processing' : '/en/products/ore-processing'
     },
     categories: {
       'stationary-crushers': {
         name: isZh ? '固定式破碎机' : 'Stationary Crushers',
-        href: `/${locale}/products/ore-processing/stationary-crushers`
+        href: isZh ? '/zh/products/ore-processing/stationary-crushers' : '/en/products/ore-processing/stationary-crushers'
       },
       'grinding-equipment': {
         name: isZh ? '磨矿设备' : 'Grinding Equipment',
-        href: `/${locale}/products/ore-processing/grinding-equipment`
+        href: isZh ? '/zh/products/ore-processing/grinding-equipment' : '/en/products/ore-processing/grinding-equipment'
       },
       'vibrating-screens': {
         name: isZh ? '固定式振动筛' : 'Stationary Vibrating Screens',
-        href: `/${locale}/products/ore-processing/vibrating-screens`
+        href: isZh ? '/zh/products/ore-processing/vibrating-screens' : '/en/products/ore-processing/vibrating-screens'
       },
       'gravity-separation': {
         name: isZh ? '重力选矿设备' : 'Gravity Separation Equipment',
-        href: `/${locale}/products/ore-processing/gravity-separation`
+        href: isZh ? '/zh/products/ore-processing/gravity-separation' : '/en/products/ore-processing/gravity-separation'
       },
       'magnetic-separator': {
         name: isZh ? '磁选设备' : 'Magnetic Separation Equipment',
-        href: `/${locale}/products/ore-processing/magnetic-separator`
+        href: isZh ? '/zh/products/ore-processing/magnetic-separator' : '/en/products/ore-processing/magnetic-separator'
       },
       'flotation-equipment': {
         name: isZh ? '浮选设备' : 'Flotation Equipment',
-        href: `/${locale}/products/ore-processing/flotation-equipment`
+        href: isZh ? '/zh/products/ore-processing/flotation-equipment' : '/en/products/ore-processing/flotation-equipment'
       },
       'feeding-equipment': {
         name: isZh ? '给料设备' : 'Feeding Equipment',
-        href: `/${locale}/products/ore-processing/feeding-equipment`
+        href: isZh ? '/zh/products/ore-processing/feeding-equipment' : '/en/products/ore-processing/feeding-equipment'
       },
       'classification-equipment': {
         name: isZh ? '分级设备' : 'Classification Equipment',
-        href: `/${locale}/products/ore-processing/classification-equipment`
+        href: isZh ? '/zh/products/ore-processing/classification-equipment' : '/en/products/ore-processing/classification-equipment'
       },
       'washing-equipment': {
         name: isZh ? '洗矿设备' : 'Washing Equipment',
-        href: `/${locale}/products/ore-processing/washing-equipment`
+        href: isZh ? '/zh/products/ore-processing/washing-equipment' : '/en/products/ore-processing/washing-equipment'
       }
     }
   };
@@ -561,7 +562,7 @@ export function getProductDetailBreadcrumbConfig(params: {
     { name: breadcrumbConfig.mineralProcessing.name, href: breadcrumbConfig.mineralProcessing.href },
     { 
       name: breadcrumbConfig.categories[category]?.name || category, 
-      href: breadcrumbConfig.categories[category]?.href || `/${locale}/products/ore-processing/${category}`
+      href: breadcrumbConfig.categories[category]?.href || (locale === 'zh' ? `/zh/products/ore-processing/${category}` : `/en/products/ore-processing/${category}`)
     },
     { name: productTitle }
   ];
@@ -577,7 +578,8 @@ export function getNavigationItems(locale: string): HeaderNavItem[] {
     // 转换顶级属性
     const navItem: HeaderNavItem = {
       label: item.label[isZh ? 'zh' : 'en'],
-      url: `/${locale}${item.url}`
+      // 使用静态路径而非动态构建
+      url: isZh ? `/zh${item.url}` : `/en${item.url}`
     };
     
     // 如果存在列，转换列内容
@@ -588,7 +590,8 @@ export function getNavigationItems(locale: string): HeaderNavItem[] {
             // 转换子项
             const headerSubItem: HeaderSubItem = {
               label: subItem.label[isZh ? 'zh' : 'en'],
-              url: subItem.noLink ? '#' : `/${locale}${subItem.url}`
+              // 使用静态路径而非动态构建
+              url: subItem.noLink ? '#' : (isZh ? `/zh${subItem.url}` : `/en${subItem.url}`)
             };
             
             // 设置noLink标记
@@ -620,7 +623,8 @@ export function getNavigationItems(locale: string): HeaderNavItem[] {
                   items: nestedColumn.items.map(nestedItem => {
                     const headerNestedItem: HeaderSubItem = {
                       label: nestedItem.label[isZh ? 'zh' : 'en'],
-                      url: nestedItem.noLink ? '#' : `/${locale}${nestedItem.url}`
+                      // 使用静态路径而非动态构建
+                      url: nestedItem.noLink ? '#' : (isZh ? `/zh${nestedItem.url}` : `/en${nestedItem.url}`)
                     };
                     
                     // 设置noLink标记
@@ -665,7 +669,7 @@ export function getLogo(locale: string): HeaderLogo {
   const isZh = locale === 'zh';
   
   return {
-    url: `/${locale}`,
+    url: isZh ? '/zh' : '/en',
     alt: isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment',
     src: isZh ? '/logo/logo-zh.webp' : '/logo/logo-en.webp',
     width: 160,

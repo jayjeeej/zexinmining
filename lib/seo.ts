@@ -10,11 +10,11 @@ export const defaultSEO = {
   openGraph: {
     type: 'website',
     locale: 'zh_CN',
-    url: 'https://zexinmining.com/',
+    url: 'https://www.zexinmining.com/',
     siteName: '泽鑫矿山设备',
     images: [
       {
-        url: 'https://zexinmining.com/images/og-image.jpg',
+        url: 'https://www.zexinmining.com/images/og-image.jpg',
         width: 1200,
         height: 630,
         alt: '泽鑫矿山设备',
@@ -85,7 +85,7 @@ export function buildMetadata({
   ogDescription?: string;
 }): Metadata {
   const isZh = locale === 'zh';
-  const siteUrl = 'https://zexinmining.com';
+  const siteUrl = 'https://www.zexinmining.com';
   const canonicalUrl = `${siteUrl}/${locale}${path}`;
   
   return {
@@ -128,7 +128,7 @@ export function buildMetadata({
 }
 
 // 添加导出函数getMineralProcessingMetadata
-export * from '../app/[locale]/metadata';
+export * from '../lib/metadata';
 
 // 组织架构数据
 export function getOrganizationSchema(isZh: boolean) {
@@ -136,52 +136,52 @@ export function getOrganizationSchema(isZh: boolean) {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": isZh ? "泽鑫矿山设备" : "Zexin Mining Equipment",
-    "alternateName": isZh ? "泽鑫矿山设备有限公司" : "Zexin Mining Equipment Co., Ltd.",
-    "url": "https://zexinmining.com",
-    "logo": "https://zexinmining.com/logo/logo-social.png",
+    "alternateName": isZh ? "泽鑫矿业有限公司" : "Zexin Mining Equipment Co., Ltd.",
+    "url": "https://www.zexinmining.com",
+    "logo": "https://www.zexinmining.com/logo/logo-social.png",
     "sameAs": [
       "https://www.linkedin.com/company/zexinmining",
       "https://twitter.com/zexinmining",
       "https://www.facebook.com/zexinmining"
     ],
     "description": isZh 
-      ? "泽鑫矿山设备专业生产矿山机械和选矿设备，提供破碎机、磨矿机、浮选机、磁选机、重选设备等全套解决方案，为全球矿业客户创造价值。" 
-      : "Zexin Mining Equipment specializes in manufacturing mining machinery and mineral processing equipment, providing comprehensive solutions including crushers, grinding mills, flotation machines, magnetic separators and gravity separation equipment, creating value for global mining customers.",
+      ? "泽鑫矿山设备有限公司成立于2012年，是一家专注于矿山设备的综合服务提供商，涵盖设计、研发、制造、安装、维护及售后服务。厂区占地90亩，经过多年的发展，公司已形成完整的矿山设备产品线，能够为客户提供从矿山开采到矿物加工的全套解决方案。" 
+      : "Zexin Mining Equipment Co., Ltd., established in 2012, is a comprehensive service provider focused on mining equipment, covering design, research and development, manufacturing, installation, maintenance, and after-sales service. With a factory area of 60,000 square meters (approximately 15 acres), after years of development, the company has formed a complete mining equipment product line, providing customers with complete solutions from mining to mineral processing.",
     "contactPoint": [
       {
         "@type": "ContactPoint",
-        "telephone": "+86-123-4567-8901",
-        "contactType": "customer service",
+        "telephone": "+86 18577086999",
+        "contactType": "sales",
         "availableLanguage": ["Chinese", "English"],
-        "email": "info@zexinmining.com"
+        "name": "Eddie Wang"
       },
       {
         "@type": "ContactPoint",
-        "telephone": "+86-123-4567-8902",
-        "contactType": "technical support",
+        "telephone": "+86 13807719695",
+        "contactType": "customer service",
         "availableLanguage": ["Chinese", "English"],
-        "email": "support@zexinmining.com"
+        "name": "Cassian Wu"
       }
     ],
+    "email": "zexinminingequipment@hotmail.com",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "China",
-      "addressLocality": isZh ? "上海市" : "Shanghai",
-      "addressRegion": isZh ? "上海" : "Shanghai",
-      "postalCode": "200000",
-      "streetAddress": isZh ? "浦东新区张江高科技园区" : "Zhangjiang Hi-Tech Park, Pudong New Area"
+      "addressLocality": isZh ? "扶绥县" : "Fusui County",
+      "addressRegion": isZh ? "南宁市, 广西省" : "Nanning City, Guangxi Province",
+      "streetAddress": isZh ? "尚龙大道东盟青年产业园" : "Shanglong Avenue, ASEAN Youth Industrial Park"
     },
-    "foundingDate": "2005-01-15",
+    "foundingDate": "2012",
     "numberOfEmployees": {
       "@type": "QuantitativeValue",
-      "value": "250+"
+      "value": "20+"
     },
     "areaServed": {
       "@type": "GeoCircle",
       "geoMidpoint": {
         "@type": "GeoCoordinates",
-        "latitude": 31.2304,
-        "longitude": 121.4737
+        "latitude": 22.2452,
+        "longitude": 107.9043
       },
       "geoRadius": "5000 km"
     }
@@ -243,52 +243,29 @@ export function getKeywords(type: string, locale: string, specificKeywords?: str
 // 从产品JSON中获取热门关键词
 export async function getProductSeoKeywords(locale: string, productIds: string[]): Promise<string | null> {
   try {
-    // 并行加载所有产品数据
-    const promises = productIds.map(async (id) => {
-      try {
-        // 根据环境确定路径
-        // 在服务器端运行时从文件系统读取
-        if (typeof window === 'undefined') {
-          const fs = require('fs');
-          const path = require('path');
-          const filePath = path.join(process.cwd(), 'public', 'data', locale, `${id}.json`);
-          
-          if (fs.existsSync(filePath)) {
-            const fileContent = fs.readFileSync(filePath, 'utf8');
-            const json = JSON.parse(fileContent);
-            return json.seo?.keywords || null;
-          }
-        } else {
-          // 在客户端通过fetch获取
-          const res = await fetch(`/data/${locale}/${id}.json`);
-          if (res.ok) {
-            const json = await res.json();
-            return json.seo?.keywords || null;
-          }
-        }
-      } catch (error) {
-        console.error(`Error loading SEO keywords for ${id}:`, error);
-      }
-      return null;
-    });
+    // 检查参数是否有效
+    if (!locale || !productIds || productIds.length === 0) {
+      console.warn("getProductSeoKeywords: Missing required parameters", { locale, productIdsLength: productIds?.length });
+      return getDefaultKeywords(locale);
+    }
     
-    const keywordsList = await Promise.all(promises);
-    
-    // 过滤掉null值并合并关键词（去重）
-    const uniqueKeywords = new Set<string>();
-    keywordsList.filter(Boolean).forEach(keywords => {
-      if (keywords) {
-        // 分割关键词字符串并添加到集合中（自动去重）
-        keywords.split(',').forEach((keyword: string) => uniqueKeywords.add(keyword.trim()));
-      }
-    });
-    
-    // 将集合转换回字符串
-    return Array.from(uniqueKeywords).join(',');
+    // 返回默认关键词，避免文件系统读取
+    return getDefaultKeywords(locale);
   } catch (error) {
     console.error("Error extracting SEO keywords from products:", error);
-    return null;
+    return getDefaultKeywords(locale);
   }
+}
+
+// 获取默认关键词
+function getDefaultKeywords(locale: string): string {
+  const isZh = locale === 'zh';
+  
+  if (isZh) {
+    return "矿山设备,选矿设备,破碎机,球磨机,浮选机,泽鑫矿山,磁选机,摇床,跳汰机,螺旋溜槽,矿山解决方案";
+  }
+  
+  return "mining equipment,mineral processing,crusher,ball mill,flotation machine,zexin mining,magnetic separator,shaking table,jig machine,spiral chute,mining solutions";
 }
 
 // 定义产品类别元数据配置接口
@@ -665,7 +642,7 @@ export function getProductStructuredData({
     "@context": "https://schema.org",
     "@type": "Product",
     "name": product.name,
-    "image": `https://zexinmining.com${product.imageSrc}`,
+    "image": `https://www.zexinmining.com${product.imageSrc}`,
     "description": product.fullDescription,
     "category": product.category,
     "sku": productId,
@@ -673,16 +650,16 @@ export function getProductStructuredData({
     "brand": {
       "@type": "Brand",
       "name": isZh ? "泽鑫矿山设备" : "Zexin Mining Equipment",
-      "logo": "https://zexinmining.com/logo/logo-zh.webp"
+      "logo": "https://www.zexinmining.com/logo/logo-zh.webp"
     },
     "manufacturer": {
       "@type": "Organization",
       "name": isZh ? "泽鑫矿山设备有限公司" : "Zexin Mining Equipment Co., Ltd.",
-      "url": "https://zexinmining.com"
+      "url": "https://www.zexinmining.com"
     },
     "offers": {
       "@type": "Offer",
-      "url": `https://zexinmining.com/${locale}/products/${productId}`,
+      "url": `https://www.zexinmining.com/${locale}/products/${productId}`,
       "priceCurrency": "CNY",
       "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
       "availability": "https://schema.org/InStock"
@@ -698,7 +675,7 @@ export const getBreadcrumbSchema = (breadcrumbs: {name: string, url?: string}[])
     '@type': 'ListItem',
     'position': index + 1,
     'name': breadcrumb.name,
-    'item': breadcrumb.url ? `https://zexinmining.com${breadcrumb.url}` : undefined
+    'item': breadcrumb.url ? `https://www.zexinmining.com${breadcrumb.url}` : undefined
   }))
 });
 
@@ -721,10 +698,10 @@ export const getLocalBusinessSchema = (isZh: boolean) => ({
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   'name': isZh ? '泽鑫矿山设备有限公司' : 'Zexin Mining Equipment Co., Ltd.',
-  'image': 'https://zexinmining.com/images/company/headquarters.jpg',
+  'image': 'https://www.zexinmining.com/images/company/headquarters.jpg',
   'telephone': '+86-123-4567-8901',
   'email': 'info@zexinmining.com',
-  'url': 'https://zexinmining.com',
+  'url': 'https://www.zexinmining.com',
   'address': {
     '@type': 'PostalAddress',
     'streetAddress': isZh ? '浦东新区张江高科技园区' : 'Zhangjiang Hi-Tech Park, Pudong New Area',

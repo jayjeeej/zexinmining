@@ -1,6 +1,0 @@
-{
-  "framework": "nextjs",
-  "buildCommand": "bash .cloudflare/build-command.sh",
-  "outputDirectory": ".next",
-  "nodeVersion": "20"
-} 

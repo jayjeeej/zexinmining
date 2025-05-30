@@ -13,6 +13,8 @@ export interface NewsItem {
   image: string;
   author?: string;
   slug: string;
+  imageAlt?: string;
+  tags?: string[];
 }
 
 interface GetNewsOptions {

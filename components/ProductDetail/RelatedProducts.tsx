@@ -33,6 +33,19 @@ export default function RelatedProducts({ products, title }: RelatedProductsProp
   const [slideWidth, setSlideWidth] = useState(327); // 固定卡片宽度，类似参考代码
   const [containerWidth, setContainerWidth] = useState(0);
   
+  // 根据当前URL确定语言
+  const [language, setLanguage] = useState<'zh' | 'en'>('zh');
+  
+  useEffect(() => {
+    // 从URL中获取当前语言
+    const pathname = window.location.pathname;
+    if (pathname.startsWith('/en/')) {
+      setLanguage('en');
+    } else {
+      setLanguage('zh');
+    }
+  }, []);
+  
   // 计算可视区域能显示的最大卡片数量
   useEffect(() => {
     const handleResize = () => {
@@ -177,7 +190,11 @@ export default function RelatedProducts({ products, title }: RelatedProductsProp
               }}
             tabIndex={0}
           >
-            {products.map((product) => (
+            {products.map((product) => {
+              // 根据当前语言转换链接
+              const productHref = product.href.replace(/^\/(zh|en)\//, `/${language}/`);
+              
+              return (
                 <li key={product.id} className="snap-start" style={{ width: `${slideWidth}px` }}>
                   <div className="h-full group relative rounded-xs bg-white pb-8 product-card">
                   <div className="mb-10">
@@ -196,12 +213,13 @@ export default function RelatedProducts({ products, title }: RelatedProductsProp
                       {product.title}
                     </p>
                   </div>
-                  <Link href={product.href} className="absolute left-0 top-0 h-full w-full">
+                  <Link href={productHref} className="absolute left-0 top-0 h-full w-full">
                     <span className="sr-only">{product.title}</span>
                   </Link>
                 </div>
               </li>
-            ))}
+              );
+            })}
           </ul>
           
           {/* 进度指示器 */}

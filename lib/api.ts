@@ -128,6 +128,27 @@ function cleanupOldCache(): void {
 }
 
 /**
+ * 检查文件是否存在的辅助函数
+ */
+async function checkFileExists(filepath: string): Promise<boolean> {
+  if (typeof window !== 'undefined') return false; // 客户端始终返回false
+  
+  try {
+    // 确保filepath是有效的字符串
+    if (!filepath || typeof filepath !== 'string') {
+      console.error(`[API] 无效的文件路径: ${filepath}`);
+      return false;
+    }
+    
+    const fs = require('fs').promises;
+    await fs.access(filepath);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+/**
  * 加载产品基本元数据
  * 仅加载产品的基本信息，不包含详细规格和说明
  * @param productId 产品ID
@@ -210,6 +231,16 @@ export async function getProductData(
     cacheDuration?: number;
   } = {}
 ): Promise<ProductResponse> {
+  // 参数验证
+  if (!productId || !locale) {
+    console.error(`[API] 错误: 无效的参数 productId=${productId}, locale=${locale}`);
+    return {
+      product: null as unknown as ProductData,
+      isSuccess: false,
+      message: `Invalid parameters: productId=${productId}, locale=${locale}`
+    };
+  }
+
   const { skipCache = false, cacheDuration = DEFAULT_CACHE_DURATION } = options;
   const cacheKey = `product:${locale}:${productId}`;
   
@@ -366,11 +397,42 @@ export async function getProductData(
         const fs = require('fs').promises;
         const path = require('path');
         
+        // 记录当前查找的产品ID和子类别
+        console.log(`[API DEBUG] 尝试加载产品: ${productId}, 推测子类别: ${subcategory || '未知'}`);
+        console.log(`[API DEBUG] 按优先顺序尝试以下类别: ${possibleCategories.join(', ')}`);
+        
+        // 如果productId包含"crusher"关键字，优先尝试stationary-crushers目录
+        if (productId.includes('crusher') && !possibleCategories.includes('stationary-crushers')) {
+          console.log(`[API DEBUG] 产品ID包含'crusher'，优先尝试stationary-crushers目录`);
+          possibleCategories.unshift('stationary-crushers');
+        }
+        
+        const cwd = process.cwd();
+        if (!cwd) {
+          throw new Error('Cannot determine current working directory');
+        }
+        
         // 依次尝试所有可能的类别
         for (const category of possibleCategories) {
-          try {
-            const filePath = path.join(process.cwd(), 'public', 'data', locale, category, `${productId}.json`);
-            console.log(`[API] 尝试从文件系统加载: ${filePath}`);
+          if (!category || typeof category !== 'string') {
+            console.log(`[API DEBUG] 跳过无效类别: ${category}`);
+            continue;
+          }
+          
+          const filePath = path.join(cwd, 'public', 'data', locale, category, `${productId}.json`);
+          
+          if (!filePath) {
+            console.error(`[API DEBUG] 生成文件路径失败: locale=${locale}, category=${category}, productId=${productId}`);
+            continue;
+          }
+          
+          const exists = await checkFileExists(filePath);
+          
+          console.log(`[API DEBUG] 尝试路径: ${filePath}, 文件${exists ? '存在' : '不存在'}`);
+          
+          if (exists) {
+            try {
+              console.log(`[API] 从文件系统找到产品数据: ${filePath}`);
             
             const fileContent = await fs.readFile(filePath, 'utf8');
             const productData = JSON.parse(fileContent);
@@ -387,18 +449,24 @@ export async function getProductData(
             });
             
             return result;
-          } catch (fsError) {
+            } catch (readError) {
+              console.error(`[API] 文件存在但读取失败: ${filePath}`, readError);
             // 继续尝试下一个类别
             continue;
+            }
           }
         }
         
         // 最后尝试从根目录加载
+        const rootFilePath = path.join(cwd, 'public', 'data', locale, `${productId}.json`);
+        const rootExists = await checkFileExists(rootFilePath);
+        console.log(`[API DEBUG] 尝试根目录: ${rootFilePath}, 文件${rootExists ? '存在' : '不存在'}`);
+        
+        if (rootExists) {
         try {
-          const filePath = path.join(process.cwd(), 'public', 'data', locale, `${productId}.json`);
-          console.log(`[API] 尝试从根目录加载: ${filePath}`);
+            console.log(`[API] 从根目录找到产品数据: ${rootFilePath}`);
           
-          const fileContent = await fs.readFile(filePath, 'utf8');
+            const fileContent = await fs.readFile(rootFilePath, 'utf8');
           const productData = JSON.parse(fileContent);
           
           // 添加到内存缓存
@@ -413,10 +481,13 @@ export async function getProductData(
           });
           
           return result;
-        } catch (rootFsError) {
-          console.error(`[API] 错误: 无法从根目录加载产品数据: ${productId}, 回退到HTTP请求`);
-          // 继续尝试HTTP请求
+          } catch (rootReadError) {
+            console.error(`[API] 根目录文件存在但读取失败: ${rootFilePath}`, rootReadError);
         }
+        }
+        
+        console.error(`[API] 错误: 无法从任何位置加载产品数据: ${productId}, 回退到HTTP请求`);
+        // 继续尝试HTTP请求
       } catch (nodeError) {
         console.error(`[API] 错误: 服务器端文件读取失败: ${nodeError instanceof Error ? nodeError.message : String(nodeError)}, 回退到HTTP请求`);
         // 继续尝试HTTP请求
@@ -439,9 +510,13 @@ export async function getProductData(
         
         // 如果找到了数据，停止循环
         if (response.ok) {
+          console.log(`[API] 成功从 ${category} 子目录加载产品: ${productId}`);
           break;
+        } else {
+          console.log(`[API] 从 ${category} 未找到产品: ${productId}, 状态码: ${response.status}`);
         }
       } catch (fetchError) {
+        console.error(`[API] 尝试从 ${category} 加载时出错:`, fetchError);
         // 继续尝试下一个类别
         continue;
       }
@@ -460,6 +535,12 @@ export async function getProductData(
           },
           next: { revalidate: 3600 }
         });
+        
+        if (response.ok) {
+          console.log(`[API] 成功从根目录加载产品: ${productId}`);
+        } else {
+          console.error(`[API] 从根目录未找到产品: ${productId}, 状态码: ${response.status}`);
+        }
       } catch (fetchError: any) {
         console.error(`[API] 网络请求失败 (${productUrl}): ${fetchError.message}`);
         

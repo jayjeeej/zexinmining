@@ -29,7 +29,7 @@ export function getProductStructuredData({
   productId,
   product,
   locale = 'zh',
-  baseUrl = 'https://zexinmining.com'
+  baseUrl = 'https://www.zexinmining.com'
 }: {
   productId: string;
   product: ProductData;
@@ -127,7 +127,7 @@ export function getProductStructuredData({
  */
 export function getBreadcrumbStructuredData(
   breadcrumbs: BreadcrumbItem[],
-  baseUrl = 'https://zexinmining.com'
+  baseUrl = 'https://www.zexinmining.com'
 ): Record<string, any> {
   return {
     "@context": "https://schema.org",
@@ -195,7 +195,7 @@ export function getOrganizationStructuredData(isZh = true): Record<string, any> 
 /**
  * 生成网站的结构化数据
  */
-export function getWebsiteStructuredData(locale = 'zh', baseUrl = 'https://zexinmining.com'): Record<string, any> {
+export function getWebsiteStructuredData(locale = 'zh', baseUrl = 'https://www.zexinmining.com'): Record<string, any> {
   const isZh = locale === 'zh';
   
   return {
@@ -227,7 +227,7 @@ export function getWebsiteStructuredData(locale = 'zh', baseUrl = 'https://zexin
  * 生成企业作为本地企业的结构化数据
  * 增强本地SEO效果
  */
-export function getLocalBusinessStructuredData(locale = 'zh', baseUrl = 'https://zexinmining.com'): Record<string, any> {
+export function getLocalBusinessStructuredData(locale = 'zh', baseUrl = 'https://www.zexinmining.com'): Record<string, any> {
   const isZh = locale === 'zh';
   
   return {
@@ -321,7 +321,7 @@ export function getImageStructuredData({
   width = 800,
   height = 600,
   description = '',
-  baseUrl = 'https://zexinmining.com'
+  baseUrl = 'https://www.zexinmining.com'
 }: {
   url: string;
   caption: string;
@@ -377,7 +377,7 @@ export function getProductCategoryStructuredData({
   description,
   productCount = 10,
   locale = 'zh',
-  baseUrl = 'https://zexinmining.com'
+  baseUrl = 'https://www.zexinmining.com'
 }: {
   categoryId: string;
   categoryName: string;
@@ -477,7 +477,7 @@ export function getServiceStructuredData({
   serviceProvider,
   serviceItems = [],
   locale = 'zh',
-  baseUrl = 'https://zexinmining.com'
+  baseUrl = 'https://www.zexinmining.com'
 }: {
   serviceId: string;
   serviceName: string;
@@ -528,7 +528,7 @@ export function getServiceStructuredData({
  */
 export function getMineralProcessingSolutionsStructuredData({
   locale = 'zh',
-  baseUrl = 'https://zexinmining.com',
+  baseUrl = 'https://www.zexinmining.com',
   solutionCategories = []
 }: {
   locale?: string;

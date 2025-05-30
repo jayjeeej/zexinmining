@@ -1,7 +1,6 @@
 const createNextIntlPlugin = require('next-intl/plugin');
+
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
-const CompressionPlugin = require('compression-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -23,7 +22,6 @@ const nextConfig = {
   // 性能优化配置
   reactStrictMode: true,
   productionBrowserSourceMaps: false, // 禁用生产环境的源映射以提高性能
-  swcMinify: true, // 使用SWC进行代码压缩
   compiler: {
     // 移除控制台日志，提高性能
     removeConsole: {
@@ -142,15 +140,12 @@ const nextConfig = {
   },
   // 配置代码分割策略
   webpack: (config, { isServer }) => {
-    // 禁用缓存，避免生成大型缓存文件
-    config.cache = false;
-    
-    // 修改代码分割的大小阈值，创建更小的块
+    // 修改代码分割的大小阈值，创建更多小块
     config.optimization.splitChunks = {
       chunks: 'all',
-      maxInitialRequests: 30,
+      maxInitialRequests: 25,
       minSize: 20000,
-      maxSize: 40000, // 降低为40KB以创建更小的块
+      maxSize: 60000,
       cacheGroups: {
         default: false,
         vendors: false,
@@ -175,38 +170,8 @@ const nextConfig = {
         },
       },
     };
-    
-    // 优化Terser压缩选项
-    config.optimization.minimizer = [
-      new TerserPlugin({
-        terserOptions: {
-          compress: {
-            drop_console: true,
-          },
-          mangle: true,
-        },
-        exclude: /\/node_modules/,
-      }),
-    ];
-    
-    // 添加Gzip压缩
-    if (!isServer) {
-      config.plugins.push(
-        new CompressionPlugin({
-          filename: '[path][base].gz',
-          algorithm: 'gzip',
-          test: /\.(js|css|html|svg)$/,
-          threshold: 10240,
-          minRatio: 0.8,
-        })
-      );
-    }
-    
     return config;
   },
-  // 使用输出模式作为静态站点，避免大型服务器端缓存文件
-  output: 'export',
-  distDir: 'out',
 }
 
 module.exports = withNextIntl(nextConfig) 

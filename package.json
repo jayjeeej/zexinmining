@@ -5,11 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "node scripts/add-alt-attributes.js && next build",
-    "postbuild": "next-sitemap && node scripts/generate-sitemaps.js && node scripts/generate-server-sitemap.js && node scripts/generate-search-cache.js && node scripts/clean-cache.js",
-    "verify-build": "node scripts/verify-build.js",
+    "postbuild": "next-sitemap && node scripts/generate-sitemaps.js && node scripts/generate-server-sitemap.js",
     "start": "next start",
-    "lint": "next lint",
-    "clean-cache": "node scripts/clean-cache.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "@ant-design/nextjs-registry": "^1.0.2",
@@ -17,7 +15,9 @@
     "@formatjs/intl-localematcher": "^0.6.1",
     "@tailwindcss/typography": "^0.5.16",
     "@types/date-fns": "^2.5.3",
+    "accept-language": "^3.0.20",
     "autoprefixer": "^10.4.21",
+    "chalk": "^5.4.1",
     "date-fns": "^4.1.0",
     "framer-motion": "^12.9.2",
     "glob": "^11.0.2",

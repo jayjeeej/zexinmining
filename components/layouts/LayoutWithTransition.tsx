@@ -3,9 +3,15 @@
 import React, { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import PageTransition from '../PageTransition';
-import ProductLayout from './ProductLayout';
+import ProductLayout from '@/components/layouts/ProductLayout';
 import { clearAllCache } from '../../lib/usePageData';
 import { ReactNode } from 'react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import StructuredData from '@/components/StructuredData';
+import Breadcrumb from '@/components/Breadcrumb';
+import HeroSection from '@/components/HeroSection';
+import { getNavigationItems, getLogo } from '@/lib/navigation';
 
 // 扩展Window接口，添加预加载数据
 declare global {

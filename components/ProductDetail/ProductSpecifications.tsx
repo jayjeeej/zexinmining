@@ -1,8 +1,9 @@
 'use client';
 
 import { useLocale } from 'next-intl';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useId } from 'react';
 import CardAnimationProvider from '@/components/CardAnimationProvider';
+import { usePathname } from 'next/navigation';
 
 // 新增hooks来检测视窗宽度
 function useMediaQuery(width: number) {
@@ -97,6 +98,8 @@ export default function ProductSpecifications({
   // 优先使用传入的locale，如果没有则使用next-intl的locale
   const nextLocale = useLocale();
   const isZh = locale ? locale === 'zh' : nextLocale === 'zh';
+  const pathname = usePathname(); // 添加路径监听
+  const instanceId = useId(); // 创建组件实例唯一ID
   
   // 单位状态 (metric 或 imperial)
   const [unit, setUnit] = useState<'metric' | 'imperial'>(
@@ -145,6 +148,8 @@ export default function ProductSpecifications({
   useEffect(() => {
     if (!useInjectedData || typeof document === 'undefined') return;
     
+    console.log(`[ProductSpecifications] Initializing for path: ${pathname} with ID: ${instanceId}`);
+    
     let attempts = 0;
     const maxAttempts = 5;
     
@@ -157,6 +162,7 @@ export default function ProductSpecifications({
       const productDataScript = document.getElementById('product_data');
       
       if (productDataScript && productDataScript.textContent) {
+        console.log('[ProductSpecifications] Loading product data from script, path:', pathname);
         const productData = JSON.parse(productDataScript.textContent);
         
         if (productData.specifications) {
@@ -263,7 +269,7 @@ export default function ProductSpecifications({
         return () => window.removeEventListener('load', loadProductData);
       }
     }
-  }, [unit, useInjectedData, specifications]);
+  }, [unit, useInjectedData, specifications, pathname, instanceId]); // 添加instanceId作为依赖
 
   // 处理单位切换
   const handleUnitChange = (newUnit: 'metric' | 'imperial') => {
@@ -335,7 +341,7 @@ export default function ProductSpecifications({
   const isScrollView = isMobile && (viewType === 'scroll' || (viewType === 'combined' && tableView === 'full'));
 
   return (
-    <section id="specifications" className="mb-16 lg:mb-32 scroll-mt-32">
+    <section id="specifications" className="mb-16 lg:mb-32 scroll-mt-32" key={`specs-${pathname}-${instanceId}`}>
       <CardAnimationProvider />
       <div className="contain">
         <h2 className="text-4xl mb-8 font-headline">{isZh ? '技术规格' : 'Specifications'}</h2>

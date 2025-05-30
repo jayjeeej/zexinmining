@@ -1,10 +1,10 @@
 import React, { ReactNode } from 'react';
-import Header from '../Header';
-import Footer from '../Footer';
-import StructuredData from '../StructuredData';
-import Breadcrumb from '../Breadcrumb';
-import HeroSection from '../HeroSection';
-import { getNavigationItems, getLogo } from '../../lib/navigation';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import StructuredData from '@/components/StructuredData';
+import Breadcrumb from '@/components/Breadcrumb';
+import HeroSection from '@/components/HeroSection';
+import { getNavigationItems, getLogo } from '@/lib/navigation';
 
 interface BreadcrumbItem {
   name: string;

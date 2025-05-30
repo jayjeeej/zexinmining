@@ -1,18 +1,37 @@
-import createMiddleware from 'next-intl/middleware';
-import { locales, defaultLocale } from './i18n/request';
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
-// 创建中间件
-export default createMiddleware({
-  // 支持的语言列表
-  locales: ['en', 'zh'],
-  // 默认语言
-  defaultLocale: 'en',
-  // 设置将语言信息存储在 cookie 中，并自动检测用户的首选语言
-  localeDetection: true,
-  localePrefix: 'always'
-});
+// 获取用户首选的语言
+function getPreferredLocale(request: NextRequest): string {
+  // 1. 尝试从cookie获取
+  const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value;
+  if (cookieLocale && ['en', 'zh'].includes(cookieLocale)) {
+    return cookieLocale;
+  }
+  
+  // 2. 尝试从Accept-Language头获取
+  const acceptLanguage = request.headers.get('accept-language');
+  if (acceptLanguage) {
+    if (acceptLanguage.includes('zh')) return 'zh';
+  }
+  
+  // 3. 默认返回英文
+  return 'en';
+}
+
+export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+  
+  // 如果是根路径，重定向到用户首选语言
+  if (pathname === '/') {
+    const locale = getPreferredLocale(request);
+    return NextResponse.redirect(new URL(`/${locale}`, request.url));
+  }
+  
+  return NextResponse.next();
+}
 
 export const config = {
-  // 匹配所有路径，除了 /api, /_next, /public 等系统路径
-  matcher: ['/((?!api|_next|.*\\..*).*)']
+  // 只匹配根路径
+  matcher: ['/', '/((?!api|_next|.*\\..*).*)'],
 }; 

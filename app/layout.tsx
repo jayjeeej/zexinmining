@@ -39,6 +39,12 @@ export const metadata: Metadata = {
     ],
     locale: 'zh_CN',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: '泽鑫矿山设备 - 专业矿山设备制造商',
+    description: '为全球客户提供高效可靠的智能解决方案和全面技术支持',
+    images: ['/images/og-image.jpg'],
+  },
   robots: {
     index: true,
     follow: true,

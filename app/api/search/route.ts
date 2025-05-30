@@ -16,109 +16,10 @@ interface SearchResult {
   slug?: string; // 添加 slug 属性，用于新闻项
 }
 
-// 移除dynamic和revalidate配置，使其可以静态导出
-// export const dynamic = 'force-dynamic';
-// export const revalidate = false;
-
-// 预先生成的搜索结果
-const preGeneratedResults: Record<string, any> = {
-  "zh": {
-    "破碎机": [
-      {
-        "id": "jaw-crusher",
-        "url": "/products/stationary-crushers/jaw-crusher",
-        "title": "颚式破碎机",
-        "excerpt": "颚式破碎机是最常用的初级破碎设备，适用于各种矿石的初级破碎。",
-        "category": "破碎设备",
-        "score": 100,
-        "imageSrc": "/images/products/crushers/jaw-crusher.png",
-        "resultType": "product"
-      },
-      {
-        "id": "cone-crusher",
-        "url": "/products/stationary-crushers/cone-crusher",
-        "title": "圆锥破碎机",
-        "excerpt": "圆锥破碎机广泛应用于矿山、冶炼、建材、公路、铁路、水利和化学工业等众多行业。",
-        "category": "破碎设备",
-        "score": 95,
-        "imageSrc": "/images/products/crushers/cone-crusher.png",
-        "resultType": "product"
-      }
-    ],
-    "筛分": [
-      {
-        "id": "vibrating-screen",
-        "url": "/products/vibrating-screens/vibrating-screen",
-        "title": "振动筛",
-        "excerpt": "振动筛是矿山、建材、交通、能源等部门最常用的筛分设备。",
-        "category": "筛分设备",
-        "score": 100,
-        "imageSrc": "/images/products/screens/vibrating-screen.png",
-        "resultType": "product"
-      }
-    ],
-    "磨矿": [
-      {
-        "id": "ball-mill",
-        "url": "/products/grinding-equipment/ball-mill",
-        "title": "球磨机",
-        "excerpt": "球磨机是物料被破碎之后，再进行粉碎的关键设备。",
-        "category": "磨矿设备",
-        "score": 90,
-        "imageSrc": "/images/products/grinding/ball-mill.png",
-        "resultType": "product"
-      }
-    ]
-  },
-  "en": {
-    "crusher": [
-      {
-        "id": "jaw-crusher",
-        "url": "/products/stationary-crushers/jaw-crusher",
-        "title": "Jaw Crusher",
-        "excerpt": "Jaw crusher is the most commonly used primary crushing equipment, suitable for primary crushing of various ores.",
-        "category": "Crushing Equipment",
-        "score": 100,
-        "imageSrc": "/images/products/crushers/jaw-crusher.png",
-        "resultType": "product"
-      },
-      {
-        "id": "cone-crusher",
-        "url": "/products/stationary-crushers/cone-crusher",
-        "title": "Cone Crusher",
-        "excerpt": "Cone crusher is widely used in mining, metallurgy, construction, road, railway, water conservancy and chemical industries.",
-        "category": "Crushing Equipment",
-        "score": 95,
-        "imageSrc": "/images/products/crushers/cone-crusher.png",
-        "resultType": "product"
-      }
-    ],
-    "screen": [
-      {
-        "id": "vibrating-screen",
-        "url": "/products/vibrating-screens/vibrating-screen",
-        "title": "Vibrating Screen",
-        "excerpt": "Vibrating screen is the most commonly used screening equipment in mining, building materials, transportation, energy and other departments.",
-        "category": "Screening Equipment",
-        "score": 100,
-        "imageSrc": "/images/products/screens/vibrating-screen.png",
-        "resultType": "product"
-      }
-    ],
-    "mill": [
-      {
-        "id": "ball-mill",
-        "url": "/products/grinding-equipment/ball-mill",
-        "title": "Ball Mill",
-        "excerpt": "Ball mill is a key equipment for grinding materials after being crushed.",
-        "category": "Grinding Equipment",
-        "score": 90,
-        "imageSrc": "/images/products/grinding/ball-mill.png",
-        "resultType": "product"
-      }
-    ]
-  }
-};
+// 搜索API必须是动态路由，因为它使用request.url来获取搜索参数
+export const dynamic = 'force-dynamic';
+// 不使用Next.js的revalidate，而是通过Cache-Control头控制缓存
+export const revalidate = false;
 
 // 中英文术语对照表，用于跨语言搜索
 const termMappings: Record<string, string[]> = {
@@ -230,60 +131,99 @@ const productIndicators = [
   "浮选机", "flotation", "机", "plant", "工厂", "line", "生产线"
 ];
 
-// 重写：获取图片路径，支持不同字段名称
-function getItemImagePath(item: any): string {
-  // 处理images数组字段 (案例研究常用)
-  if (item.images && Array.isArray(item.images) && item.images.length > 0) {
-    return item.images[0];
+// 检查关键词是否在内容中彼此接近，返回接近度分数
+function checkKeywordProximity(content: string, keywords: string[]): number {
+  // 只对多个关键词进行检查
+  if (keywords.length <= 1) return 0;
+  
+  // 过滤掉太短的关键词和完整搜索词（数组最后一个元素）
+  const filteredKeywords = keywords.slice(0, -1).filter(kw => kw.length >= 2);
+  if (filteredKeywords.length <= 1) return 0;
+  
+  // 记录每个关键词在内容中的位置
+  const positions: Record<string, number[]> = {};
+  
+  // 查找每个关键词的所有位置
+  for (const keyword of filteredKeywords) {
+    positions[keyword] = [];
+    let pos = content.indexOf(keyword);
+    while (pos !== -1) {
+      positions[keyword].push(pos);
+      pos = content.indexOf(keyword, pos + 1);
+    }
+    
+    // 如果某个关键词不存在，返回0
+    if (positions[keyword].length === 0) {
+      return 0;
+    }
   }
   
-  // 处理常见的单图片字段名
-  if (item.imageSrc) return item.imageSrc; // 产品常用
-  if (item.image) return item.image;       // 新闻常用
-  if (item.coverImage) return item.coverImage;
-  if (item.thumbnail) return item.thumbnail;
-  if (item.featuredImage) return item.featuredImage;
+  // 计算关键词之间的最小距离
+  let minDistance = content.length;
   
-  // 尝试其他可能的字段名
-  const possibleFields = ['imageUrl', 'cover', 'heroImage', 'bannerImage', 'mainImage'];
-  for (const field of possibleFields) {
-    if (item[field]) return item[field];
+  // 获取第一个关键词的位置
+  const firstKw = filteredKeywords[0];
+  const firstPositions = positions[firstKw];
+  
+  // 对于第一个关键词的每个位置
+  for (const pos1 of firstPositions) {
+    // 初始最大距离
+    let maxDistForThisPos = 0;
+    
+    // 检查与其他每个关键词的最小距离
+    for (let i = 1; i < filteredKeywords.length; i++) {
+      const kw = filteredKeywords[i];
+      let minDistForThisKw = content.length;
+      
+      // 找到当前关键词与pos1最近的位置
+      for (const pos2 of positions[kw]) {
+        const dist = Math.abs(pos2 - pos1);
+        if (dist < minDistForThisKw) {
+          minDistForThisKw = dist;
+        }
+      }
+      
+      // 更新这个位置的最大距离
+      if (minDistForThisKw > maxDistForThisPos) {
+        maxDistForThisPos = minDistForThisKw;
+      }
+    }
+    
+    // 更新整体最小距离
+    if (maxDistForThisPos < minDistance) {
+      minDistance = maxDistForThisPos;
+    }
   }
   
-  // 无图片路径
-  return '';
+  // 距离越小，关键词越接近，得分越高
+  // 距离在100字符内视为非常相关
+  if (minDistance <= 50) return 15;
+  if (minDistance <= 100) return 10;
+  if (minDistance <= 200) return 5;
+  if (minDistance <= 500) return 2;
+  
+  return 0;
 }
 
-// 重写：根据图片路径确定内容类型
-function determineContentTypeByImagePath(imagePath: string): string {
-  if (!imagePath) return 'product'; // 默认为产品类型
-  
-  const path = imagePath.toLowerCase();
-  
-  // 根据图片路径中的目录名精确判断内容类型
-  if (path.includes('/images/news/') || 
-      path.includes('/news/') || 
-      path.includes('/articles/') || 
-      path.includes('/article/') || 
-      path.includes('/blog/')) {
-    return 'news';
+// 新增：统一图片路径获取和类型判定
+function getItemImageAndType(item: any): { image: string, type: string } {
+  let image = '';
+  if (item.images && Array.isArray(item.images) && item.images.length > 0) {
+    image = item.images[0];
+  } else if (item.imageSrc) {
+    image = item.imageSrc;
+  } else if (item.image) {
+    image = item.image;
+  } else if (item.coverImage) {
+    image = item.coverImage;
   }
-  
-  if (path.includes('/images/cases/') || 
-      path.includes('/case-studies/') || 
-      path.includes('/cases/') || 
-      path.includes('/case/')) {
-    return 'case';
+  let type = 'product';
+  if (image.includes('/news/') || image.includes('/images/news/')) {
+    type = 'news';
+  } else if (image.includes('/case-studies/') || image.includes('/images/cases/') || image.includes('/cases/')) {
+    type = 'case';
   }
-  
-  if (path.includes('/images/products/') || 
-      path.includes('/product/') || 
-      path.includes('/products/')) {
-    return 'product';
-  }
-  
-  // 默认为产品类型
-  return 'product';
+  return { image, type };
 }
 
 function debugLog(...args: any[]) {
@@ -295,46 +235,469 @@ function debugLog(...args: any[]) {
   }
 }
 
-// 搜索处理函数 - 在静态导出模式下使用预生成的结果
+// 在结果中确保URL使用静态路径
+function ensureStaticUrls(results: SearchResult[], locale: string): SearchResult[] {
+  return results.map(result => {
+    // 确保URL是静态路径
+    if (!result.url) {
+      debugLog(`警告: 结果没有URL: ${result.title}`);
+      return result;
+    }
+    
+    // 调试输出
+    if (process.env.NODE_ENV === 'development') {
+      debugLog(`格式化URL前: ${result.url}`);
+    }
+    
+    // 修复常见的URL错误
+    let fixedUrl = result.url;
+    
+    // 修复错误的路径组合，如/products/news/
+    if (fixedUrl.includes('/products/news/')) {
+      fixedUrl = fixedUrl.replace('/products/news/', '/news/');
+    }
+    
+    // 如果URL不以/zh/或/en/开头，添加语言前缀
+    if (!fixedUrl.startsWith('/zh/') && !fixedUrl.startsWith('/en/')) {
+      // 将动态URL替换为静态URL
+      fixedUrl = `/${locale === 'zh' ? 'zh' : 'en'}/${fixedUrl.replace(/^\/[a-z]{2}\//, '').replace(/^\//, '')}`;
+    }
+    
+    // 修复可能的case-studies错误路径
+    if (fixedUrl.includes('/case-studies/')) {
+      fixedUrl = fixedUrl.replace('/case-studies/', '/cases/');
+    }
+    
+    // 调试输出
+    if (process.env.NODE_ENV === 'development') {
+      debugLog(`格式化URL后: ${fixedUrl}`);
+    }
+    
+    // 更新结果URL
+    result.url = fixedUrl;
+    
+    return result;
+  });
+}
+
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const query = searchParams.get('q') || '';
     const locale = searchParams.get('locale') || 'zh';
+    const subCategory = searchParams.get('sub') || '';
+    const isDev = process.env.NODE_ENV === 'development';
+    const isDebug = isDev ? 
+      (searchParams.get('debug') !== 'false') : 
+      (searchParams.get('debug') === 'true');
     
-    // 如果查询为空，返回空结果
+    const headers: HeadersInit = {
+      'Content-Type': 'application/json'
+    };
+    
+    if (isDebug) {
+      debugLog('收到搜索请求:', { 
+        url: request.url,
+        query, 
+        locale, 
+        subCategory,
+        rawParams: Object.fromEntries(searchParams.entries())
+      });
+    }
+    
     if (!query || query.length < 2) {
       return NextResponse.json([], { status: 200 });
     }
     
-    // 检查预生成的搜索结果
-    if (preGeneratedResults[locale]) {
-      // 尝试精确匹配
-      if (preGeneratedResults[locale][query]) {
-        return NextResponse.json(preGeneratedResults[locale][query], { 
-          status: 200,
-          headers: { 'Cache-Control': 'public, max-age=86400' }
-        });
+    // 禁止跨语言搜索，若关键词与locale语言不一致，直接返回空结果
+    const isZhLocale = locale === 'zh';
+    const isQueryZh = /[\u4e00-\u9fa5]/.test(query);
+    const isQueryEn = /[a-zA-Z]/.test(query);
+    // 恢复跨语言搜索限制
+    if ((isZhLocale && isQueryEn) || (!isZhLocale && isQueryZh)) {
+      if (isDebug) debugLog('禁止跨语言搜索，直接返回空结果');
+      return NextResponse.json([], { status: 200 });
+    }
+    
+    // 振动筛搜索特殊处理
+    if (query.toLowerCase().includes('vibrating screen') || query.toLowerCase().includes('振动筛')) {
+      // 直接读取振动筛产品
+      const vibScreenDir = path.join(process.cwd(), 'public', 'data', locale, 'vibrating-screens');
+      const screenResults: SearchResult[] = [];
+      
+      if (fs.existsSync(vibScreenDir)) {
+        try {
+          const screenFiles = fs.readdirSync(vibScreenDir).filter(file => file.endsWith('.json'));
+          
+          for (const file of screenFiles) {
+            try {
+              const filePath = path.join(vibScreenDir, file);
+              const content = fs.readFileSync(filePath, 'utf8');
+              const product = JSON.parse(content);
+              
+              // 添加到结果中
+              const { image, type } = getItemImageAndType(product);
+              if (!image) continue;
+              screenResults.push({
+                id: product.id,
+                url: product.href || `/${locale}/products/ore-processing/vibrating-screens/${product.id}`,
+                title: product.title,
+                excerpt: product.overview?.substring(0, 150) + '...',
+                category: product.productCategory,
+                score: 1000, // 给高优先级
+                imageSrc: image,
+                resultType: type
+              });
+            } catch (error) {
+              if (isDebug) debugLog(`处理振动筛文件${file}时出错: ${error}`);
+            }
+          }
+          
+          if (screenResults.length > 0) {
+            // 直接返回振动筛产品
+            return NextResponse.json(screenResults, {
+              status: 200,
+              headers
+            });
+          }
+        } catch (error) {
+          if (isDebug) debugLog(`读取振动筛目录失败: ${error}`);
+        }
+      }
+    }
+
+    // 搜索关键词处理（规范化）
+    const normalizedQuery = query.toLowerCase().trim();
+    
+    // 将搜索词拆分为多个关键词（按空格、逗号等分隔）
+    let keywords = normalizedQuery.split(/[\s,，、]+/).filter(kw => kw.length >= 1);
+    
+    if (isDebug) {
+      debugLog(`搜索关键词: ${normalizedQuery}, 拆分后: [${keywords.join(', ')}]`);
+    }
+    
+    // 在public/data目录下搜索产品数据
+    const dataDir = path.join(process.cwd(), 'public', 'data', locale);
+    if (isDebug) {
+      debugLog(`数据目录: ${dataDir}`);
+    }
+    
+    let categoryDirs: string[] = [];
+    let fileExists = false;
+    
+    // 检查数据目录是否存在
+    try {
+      fileExists = fs.existsSync(dataDir);
+      if (isDebug) {
+        debugLog(`数据目录存在: ${fileExists}`);
       }
       
-      // 尝试部分匹配
-      for (const key in preGeneratedResults[locale]) {
-        if (query.includes(key) || key.includes(query)) {
-          return NextResponse.json(preGeneratedResults[locale][key], { 
-            status: 200,
-            headers: { 'Cache-Control': 'public, max-age=86400' }
-          });
+      if (fileExists) {
+        // 获取所有产品目录
+        categoryDirs = fs.readdirSync(dataDir, { withFileTypes: true })
+          .filter(dirent => dirent.isDirectory())
+          .map(dirent => dirent.name);
+           
+        if (isDebug) {
+          debugLog(`找到目录: ${categoryDirs.join(', ')}`);
+        }
+      } else {
+        debugLog(`数据目录不存在: ${dataDir}`);
+      }
+    } catch (error) {
+      debugLog(`读取目录错误: ${error}`);
+      categoryDirs = [];
+    }
+      
+    // 如果指定了子分类，只搜索该子分类
+    let categoriesToSearch = subCategory 
+      ? [...categoryDirs.filter(category => category === subCategory)]
+      : [...categoryDirs];
+    
+    if (isDebug) {
+      debugLog(`搜索目录: ${categoriesToSearch.join(', ')}`);
+    }
+    
+    // 搜索所有产品JSON文件
+    let results: SearchResult[] = [];
+    let processedFiles = 0;
+    
+    for (const category of categoriesToSearch) {
+      const categoryPath = path.join(dataDir, category);
+      if (isDebug) {
+        debugLog(`处理分类: ${category}, 路径: ${categoryPath}`);
+      }
+      
+      let files: string[] = [];
+      
+      try {
+        files = fs.readdirSync(categoryPath)
+          .filter(file => file.endsWith('.json'));
+           
+        if (isDebug) {
+          debugLog(`${category} 分类中找到 ${files.length} 个JSON文件`);
+        }
+      } catch (error) {
+        debugLog(`读取 ${category} 目录失败: ${error}`);
+        continue;
+      }
+        
+      for (const file of files) {
+        const filePath = path.join(categoryPath, file);
+        processedFiles++;
+        
+        try {
+          if (isDebug) {
+            debugLog(`处理文件: ${filePath}`);
+          }
+        const content = fs.readFileSync(filePath, 'utf8');
+        const product = JSON.parse(content);
+          const productId = product.id;
+          
+          // ========== 简化匹配逻辑：只检查标题是否包含搜索词 ==========
+          // 标题必须包含搜索词（至少包含一个关键词）
+          const titleLower = product.title ? product.title.toLowerCase() : '';
+          
+          // 1. 检查是否包含完整搜索词
+          const hasFullQueryInTitle = titleLower.includes(normalizedQuery);
+          
+          // 2. 如果不包含完整搜索词，检查是否包含所有拆分的关键词
+          let hasAllKeywordsInTitle = true;
+          for (const keyword of keywords) {
+            if (!titleLower.includes(keyword)) {
+              hasAllKeywordsInTitle = false;
+              break;
+            }
+          }
+          
+          // 调试信息
+          if (isDebug) {
+            debugLog(`文件: ${productId}, 标题: "${product.title}", 包含完整查询: ${hasFullQueryInTitle}, 包含所有关键词: ${hasAllKeywordsInTitle}`);
+          }
+          
+          // 只有标题包含完整搜索词或所有关键词的内容才添加到结果中
+          if (hasFullQueryInTitle || hasAllKeywordsInTitle) {
+            const { image, type } = getItemImageAndType(product);
+            if (!image) continue; // 必须有图片
+            
+            if (isDebug) {
+              debugLog(`匹配成功: ${product.title}, 类型: ${type}, 图片: ${image}`);
+            }
+          
+            // 根据类型构建正确的URL
+            let url = '';
+            switch (type) {
+              case 'news':
+                url = `/${locale === 'zh' ? 'zh' : 'en'}/news/${product.slug || product.id}`;
+                break;
+              case 'case':
+                url = `/${locale === 'zh' ? 'zh' : 'en'}/cases/${product.id}`;
+                break;
+              default: // 产品
+                // 从href属性获取正确URL或构建包含ore-processing的URL
+                if (product.href) {
+                  url = product.href;
+                } else {
+                  url = `/${locale === 'zh' ? 'zh' : 'en'}/products/ore-processing/${category}/${product.id}`;
+                }
+                break;
+            }
+            
+            // 添加到结果中 - 分值固定为10
+              results.push({
+                id: product.id,
+              url: url,
+                title: product.title,
+              excerpt: product.overview?.substring(0, 150) + '...' || product.summary?.substring(0, 150) + '...' || '',
+              category: product.productCategory || product.category || category,
+              score: 10,
+                imageSrc: image,
+                resultType: type
+              });
+          }
+        } catch (error) {
+          debugLog(`处理文件 ${file} 时出错: ${error}`);
         }
       }
     }
     
-    // 如果没有匹配，返回空结果
-    return NextResponse.json([], { 
+    // 搜索新闻数据
+    try {
+      const newsDir = path.join(dataDir, 'news');
+      if (fs.existsSync(newsDir)) {
+        const newsFiles = fs.readdirSync(newsDir).filter(file => file.endsWith('.json'));
+        
+        if (isDebug) {
+          debugLog(`找到 ${newsFiles.length} 个新闻文件`);
+        }
+        
+        for (const file of newsFiles) {
+          const filePath = path.join(newsDir, file);
+          processedFiles++;
+          
+          try {
+            const content = fs.readFileSync(filePath, 'utf8');
+            const news = JSON.parse(content);
+            const newsSlug = news.slug || news.id;
+            
+            // ========== 简化匹配逻辑：只检查标题是否包含搜索词 ==========
+            // 标题必须包含搜索词（至少包含一个关键词）
+            const titleLower = news.title ? news.title.toLowerCase() : '';
+            
+            // 1. 检查是否包含完整搜索词
+            const hasFullQueryInTitle = titleLower.includes(normalizedQuery);
+            
+            // 2. 如果不包含完整搜索词，检查是否包含所有拆分的关键词
+            let hasAllKeywordsInTitle = true;
+            for (const keyword of keywords) {
+              if (!titleLower.includes(keyword)) {
+                hasAllKeywordsInTitle = false;
+                break;
+              }
+            }
+            
+            // 调试信息
+            if (isDebug) {
+              debugLog(`新闻: "${news.title}", 包含完整查询: ${hasFullQueryInTitle}, 包含所有关键词: ${hasAllKeywordsInTitle}`);
+            }
+            
+            // 只有标题包含完整搜索词或所有关键词的内容才添加到结果中
+            if (hasFullQueryInTitle || hasAllKeywordsInTitle) {
+              const { image, type } = getItemImageAndType(news);
+              if (!image) continue; // 必须有图片
+              
+              if (isDebug) {
+                debugLog(`匹配成功: ${news.title}, 类型: ${type}, 图片: ${image}`);
+              }
+              
+              // 添加到结果中 - 分值固定为10
+              results.push({
+                id: newsSlug,
+                url: news.href || `/${locale === 'zh' ? 'zh' : 'en'}/news/${newsSlug}`,
+                title: news.title,
+                excerpt: news.summary?.substring(0, 150) + '...' || '',
+                category: news.category || 'news',
+                score: 10,
+                imageSrc: image,
+                resultType: type
+              });
+            }
+          } catch (error) {
+            debugLog(`处理新闻文件 ${file} 时出错: ${error}`);
+          }
+        }
+      }
+    } catch (error) {
+      debugLog(`搜索新闻时出错: ${error}`);
+    }
+    
+    // 搜索案例研究数据
+    try {
+      const caseDir = path.join(dataDir, 'case-studies');
+      if (fs.existsSync(caseDir)) {
+        const caseFiles = fs.readdirSync(caseDir).filter(file => file.endsWith('.json'));
+        
+        if (isDebug) {
+          debugLog(`找到 ${caseFiles.length} 个案例文件`);
+        }
+        
+        for (const file of caseFiles) {
+          const filePath = path.join(caseDir, file);
+          processedFiles++;
+          
+          try {
+            const content = fs.readFileSync(filePath, 'utf8');
+            const caseStudy = JSON.parse(content);
+            
+            // ========== 简化匹配逻辑：只检查标题是否包含搜索词 ==========
+            // 标题必须包含搜索词（至少包含一个关键词）
+            const titleLower = caseStudy.title ? caseStudy.title.toLowerCase() : '';
+            
+            // 1. 检查是否包含完整搜索词
+            const hasFullQueryInTitle = titleLower.includes(normalizedQuery);
+            
+            // 2. 如果不包含完整搜索词，检查是否包含所有拆分的关键词
+            let hasAllKeywordsInTitle = true;
+            for (const keyword of keywords) {
+              if (!titleLower.includes(keyword)) {
+                hasAllKeywordsInTitle = false;
+                break;
+              }
+            }
+            
+            // 调试信息
+            if (isDebug) {
+              debugLog(`案例: "${caseStudy.title}", 包含完整查询: ${hasFullQueryInTitle}, 包含所有关键词: ${hasAllKeywordsInTitle}`);
+            }
+            
+            // 只有标题包含完整搜索词或所有关键词的内容才添加到结果中
+            if (hasFullQueryInTitle || hasAllKeywordsInTitle) {
+              const { image, type } = getItemImageAndType(caseStudy);
+              if (!image) continue; // 必须有图片
+              
+              if (isDebug) {
+                debugLog(`匹配成功: ${caseStudy.title}, 类型: ${type}, 图片: ${image}`);
+              }
+              
+              // 确保使用正确的URL路径 - 网站使用/cases/而不是/case-studies/
+              const caseUrl = caseStudy.href || `/${locale === 'zh' ? 'zh' : 'en'}/cases/${caseStudy.id}`;
+              
+              // 添加到结果中 - 分值固定为10
+              results.push({
+                id: caseStudy.id,
+                url: caseUrl,
+                title: caseStudy.title,
+                excerpt: caseStudy.description?.substring(0, 150) + '...' || '',
+                category: caseStudy.category || 'case',
+                score: 10,
+                imageSrc: image,
+                resultType: 'case'
+              });
+            }
+          } catch (error) {
+            debugLog(`处理案例文件 ${file} 时出错: ${error}`);
+          }
+        }
+      }
+    } catch (error) {
+      debugLog(`搜索案例时出错: ${error}`);
+    }
+    
+    // 应用静态URL处理 - 确保URL格式正确
+    results = ensureStaticUrls(results, locale);
+    
+    // 返回结果
+    if (isDebug) {
+      debugLog(`处理完成: 找到 ${results.length} 个匹配结果`);
+      
+      // 在开发环境或明确要求调试时，包含调试信息
+      if (isDev || searchParams.get('debug') === 'true') {
+        return NextResponse.json({
+          results: results,
+          debug: {
+            query,
+            locale,
+            processedFiles,
+            resultCount: results.length,
+            urls: results.map(r => r.url)
+          }
+        }, {
+          status: 200,
+          headers: headers
+        });
+      }
+    }
+
+    return NextResponse.json(results, {
       status: 200,
-      headers: { 'Cache-Control': 'public, max-age=3600' }
+      headers: headers
     });
   } catch (error) {
-    console.error('Search API error:', error);
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    debugLog('搜索过程中出现错误:', error);
+    return NextResponse.json({ 
+      error: '搜索处理失败',
+      message: error instanceof Error ? error.message : String(error),
+      stack: process.env.NODE_ENV !== 'production' ? (error instanceof Error ? error.stack : '') : undefined
+    }, { status: 500 });
   }
 }

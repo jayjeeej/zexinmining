@@ -456,7 +456,7 @@ SearchForm.displayName = 'SearchForm';
 // Logo组件分离，避免搜索输入时重新渲染
 const LogoComponent = React.memo(({ logo }: { logo: HeaderLogo }) => (
   <div className="flex items-center shrink-0" data-header-logo="">
-    <Link href={logo.url} className="shrink-0">
+    <a href={logo.url} className="shrink-0">
       <img 
         src={logo.src}
         alt={logo.alt}
@@ -465,7 +465,7 @@ const LogoComponent = React.memo(({ logo }: { logo: HeaderLogo }) => (
         className="h-10 sm:h-12 lg:h-[48px] w-auto shrink-0"
         style={{ objectFit: 'contain' }}
       />
-    </Link>
+    </a>
   </div>
 ));
 
@@ -977,38 +977,36 @@ export default function Header({ logo, items }: HeaderProps) {
       return; // Do nothing if language is the same
     }
     
-    // Ensure currentPath is not null
+    // 确保currentPath不为空
     if (!currentPath) {
-      // If currentPath is null, use root path
+      // 如果currentPath为空，使用根路径
       router.push(`/${langCode}`);
       return;
     }
     
-    // Path format: /zh/products or /en/products etc.
-    // Split path into array and filter out empty strings
+    // 路径格式样例: /zh/products 或 /en/products
+    // 将路径分割为数组并过滤掉空字符串
     const segments = currentPath.split('/').filter(segment => segment.length > 0);
     
-    // Ensure language code is valid
+    // 确保语言代码有效
     if (!languages.some(lang => lang.code === langCode)) {
       console.error(`Invalid language code: ${langCode}`);
       return;
     }
     
-    let newSegments = [...segments]; // Create a new array to modify
-    
-    // Check if first segment is a language code
+    // 检查第一段是否是语言代码
     const firstSegmentIsLang = segments.length > 0 && languages.some(lang => lang.code === segments[0]);
     
-    if (firstSegmentIsLang) {
-      // If first segment is language code, replace it
-      newSegments[0] = langCode;
-    } else {
-      // If first segment is not language code, add new language code at the beginning
-      newSegments = [langCode, ...segments];
-    }
+    let newPath = '';
     
-    // Build new URL
-    let newPath = `/${newSegments.join('/')}`;
+    if (firstSegmentIsLang && segments.length > 0) {
+      // 直接替换语言部分
+      // 例如：/zh/products -> /en/products
+      newPath = `/${langCode}/${segments.slice(1).join('/')}`;
+    } else {
+      // 如果第一段不是语言代码，添加新的语言代码到开头
+      newPath = `/${langCode}/${segments.join('/')}`;
+    }
     
     // 搜索页面特殊处理：保留搜索参数
     if (typeof window !== 'undefined') {
@@ -1025,7 +1023,7 @@ export default function Header({ logo, items }: HeaderProps) {
       }
     }
     
-    // Navigate to new URL
+    // 导航到新URL
     router.push(newPath);
   };
 
@@ -1070,7 +1068,7 @@ export default function Header({ logo, items }: HeaderProps) {
           <div className="flex h-full items-center justify-between border-b border-gray-100 py-3 lg:py-0">
             {/* Logo */}
             <div className="flex items-center shrink-0" data-header-logo="">
-              <Link 
+              <a 
                 href={logo.url} 
                 className="shrink-0"
               >
@@ -1082,7 +1080,7 @@ export default function Header({ logo, items }: HeaderProps) {
                   className="h-10 sm:h-12 lg:h-[48px] w-auto shrink-0"
                   style={{ objectFit: 'contain' }}
                 />
-              </Link>
+              </a>
             </div>
 
             {/* Desktop Navigation */}

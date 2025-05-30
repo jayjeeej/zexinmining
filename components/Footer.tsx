@@ -32,6 +32,15 @@ export default function Footer({ logoAlt }: FooterProps) {
       : `Copyright © Zexin Mining Equipment Co., Ltd; Shanglong Avenue, ASEAN Youth Industrial Park, Fusui County, Nanning City, Guangxi Province, China`
   };
 
+  // 根据当前语言获取静态路径
+  const homeUrl = safeLocale === 'zh' ? '/zh' : '/en';
+  const productsUrl = safeLocale === 'zh' ? '/zh/products' : '/en/products';
+  const solutionsUrl = safeLocale === 'zh' ? '/zh/products/mineral-processing-solutions' : '/en/products/mineral-processing-solutions';
+  const miningEpcUrl = safeLocale === 'zh' ? '/zh/products/mining-epc' : '/en/products/mining-epc';
+  const casesUrl = safeLocale === 'zh' ? '/zh/cases' : '/en/cases';
+  const newsUrl = safeLocale === 'zh' ? '/zh/news' : '/en/news';
+  const aboutUrl = safeLocale === 'zh' ? '/zh/about' : '/en/about';
+
   return (
     <footer className="pt-8 sm:pt-10 md:pt-12 lg:pt-16 pb-8 bg-gray-800 text-white">
       <div className="max-w-[90%] sm:max-w-[92%] lg:max-w-[94%] 2xl:max-w-[95%] mx-auto px-4 sm:px-5 lg:px-6">
@@ -39,7 +48,7 @@ export default function Footer({ logoAlt }: FooterProps) {
           {/* Logo区域 */}
           <div className="col-span-1 sm:col-span-2 pb-8 sm:pb-12 lg:pb-16">
             <figure aria-label="Logotype">
-              <Link href={`/${safeLocale}`}>
+              <Link href={homeUrl}>
                 <OptimizedImage 
                   src={logoSrc}
                   alt={logoAlt}
@@ -57,12 +66,12 @@ export default function Footer({ logoAlt }: FooterProps) {
           <div className="col-span-1">
             <nav aria-label="Left footer navigation" className="text-base text-white pb-6 sm:pb-8 lg:pb-16">
               <ul className="flex flex-col gap-2 sm:gap-1">
-                <li><Link href={`/${safeLocale}/products`} className="text-white no-underline hover:text-[#ff6633] transition-colors font-text inline-block py-1">{footerContent.productsServices}</Link></li>
-                <li><Link href={`/${safeLocale}/products/mineral-processing-solutions`} className="text-white no-underline hover:text-[#ff6633] transition-colors font-text inline-block py-1">{footerContent.solutions}</Link></li>
-                <li><Link href={`/${safeLocale}/products/mining-epc`} className="text-white no-underline hover:text-[#ff6633] transition-colors font-text inline-block py-1">{footerContent.miningEPC}</Link></li>
-                <li><Link href={`/${safeLocale}/cases`} className="text-white no-underline hover:text-[#ff6633] transition-colors font-text inline-block py-1">{footerContent.globalCases}</Link></li>
-                <li><Link href={`/${safeLocale}/news`} className="text-white no-underline hover:text-[#ff6633] transition-colors font-text inline-block py-1">{footerContent.newsMedia}</Link></li>
-                <li><Link href={`/${safeLocale}/about`} className="text-white no-underline hover:text-[#ff6633] transition-colors font-text inline-block py-1">{footerContent.aboutUs}</Link></li>
+                <li><Link href={productsUrl} className="text-white no-underline hover:text-[#ff6633] transition-colors font-text inline-block py-1">{footerContent.productsServices}</Link></li>
+                <li><Link href={solutionsUrl} className="text-white no-underline hover:text-[#ff6633] transition-colors font-text inline-block py-1">{footerContent.solutions}</Link></li>
+                <li><Link href={miningEpcUrl} className="text-white no-underline hover:text-[#ff6633] transition-colors font-text inline-block py-1">{footerContent.miningEPC}</Link></li>
+                <li><Link href={casesUrl} className="text-white no-underline hover:text-[#ff6633] transition-colors font-text inline-block py-1">{footerContent.globalCases}</Link></li>
+                <li><Link href={newsUrl} className="text-white no-underline hover:text-[#ff6633] transition-colors font-text inline-block py-1">{footerContent.newsMedia}</Link></li>
+                <li><Link href={aboutUrl} className="text-white no-underline hover:text-[#ff6633] transition-colors font-text inline-block py-1">{footerContent.aboutUs}</Link></li>
               </ul>
             </nav>
           </div>
@@ -74,29 +83,29 @@ export default function Footer({ logoAlt }: FooterProps) {
               <nav aria-label="Social Media Links" className="text-base text-white">
                 <div className="flex flex-row gap-4 items-center">
                   {/* Facebook */}
-                  <Link href="#" aria-label="Facebook" className="text-white hover:text-[#ff6633] transition-colors">
+                  <a href="#" aria-label="Facebook" className="text-white hover:text-[#ff6633] transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
                     </svg>
-                  </Link>
+                  </a>
                   {/* X (Twitter) */}
-                  <Link href="https://x.com/XindiMining" aria-label="X (Twitter)" className="text-white hover:text-[#ff6633] transition-colors">
+                  <a href="https://x.com/XindiMining" aria-label="X (Twitter)" className="text-white hover:text-[#ff6633] transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                     </svg>
-                  </Link>
+                  </a>
                   {/* YouTube */}
-                  <Link href="https://www.youtube.com/@zexinmining" aria-label="YouTube" className="text-white hover:text-[#ff6633] transition-colors">
+                  <a href="https://www.youtube.com/@zexinmining" aria-label="YouTube" className="text-white hover:text-[#ff6633] transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
                     </svg>
-                  </Link>
+                  </a>
                   {/* LinkedIn */}
-                  <Link href="#" aria-label="LinkedIn" className="text-white hover:text-[#ff6633] transition-colors">
+                  <a href="#" aria-label="LinkedIn" className="text-white hover:text-[#ff6633] transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
                     </svg>
-                  </Link>
+                  </a>
                 </div>
               </nav>
               
@@ -125,7 +134,7 @@ export default function Footer({ logoAlt }: FooterProps) {
                       {footerContent.contactName}
                     </p>
                     <p className="text-sm text-gray-300 leading-tight">
-                      Email: <Link href="mailto:zexinminingequipment@hotmail.com" className="text-white hover:text-[#ff6633] transition-colors no-underline">zexinminingequipment@hotmail.com</Link>
+                      Email: <a href="mailto:zexinminingequipment@hotmail.com" className="text-white hover:text-[#ff6633] transition-colors no-underline">zexinminingequipment@hotmail.com</a>
                     </p>
                     <p className="text-sm text-gray-300 leading-tight">
                       Phone: +86 13807719695
