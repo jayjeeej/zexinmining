@@ -9,23 +9,32 @@ export const revalidate = 3600;               // 每小时重新验证一次
 export const fetchCache = 'force-cache';      // 强制使用缓存
 export const runtime = 'nodejs';              // 使用Node.js运行时
 export const preferredRegion = 'auto';        // 自动选择最佳区域
+
+// 确保静态生成
 export const generateStaticParams = () => [{}];
 
 // 为英文页面定义元数据
 export const metadata: Metadata = {
   title: 'About Us | Zexin Mining Equipment',
   description: 'Learn about Zexin Mining Equipment company history, culture, professional team and global operations, and how we provide outstanding products and services to mining clients.',
-    openGraph: {
+  alternates: {
+    canonical: 'https://www.zexinmining.com/en/about',
+    languages: {
+      'zh-CN': 'https://www.zexinmining.com/zh/about',
+      'en-US': 'https://www.zexinmining.com/en/about'
+    }
+  },
+  openGraph: {
     title: 'About Zexin Mining Equipment',
     description: 'Zexin Mining Equipment is a leading mining equipment manufacturer and service provider dedicated to delivering innovative mining solutions to our clients.',
-    url: `https://www.zexinmining.com/en/about`,
+    url: 'https://www.zexinmining.com/en/about',
     siteName: 'Zexin Mining Equipment',
     locale: 'en',
-      type: 'website',
-    }
-  };
+    type: 'website',
+  }
+};
 
-// 主页面组件
+// 使用普通函数而非async函数，避免被视为服务器组件
 export default function AboutPage() {
   // 使用固定的locale值
   const locale = 'en';
