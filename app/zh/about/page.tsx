@@ -9,6 +9,7 @@ export const revalidate = 3600;               // 每小时重新验证一次
 export const fetchCache = 'force-cache';      // 强制使用缓存
 export const runtime = 'nodejs';              // 使用Node.js运行时
 export const preferredRegion = 'auto';        // 自动选择最佳区域
+export const generateStaticParams = () => [{}];
 
 // 为中文页面定义元数据
 export const metadata: Metadata = {
