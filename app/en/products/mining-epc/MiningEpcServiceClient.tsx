@@ -14,8 +14,9 @@ import {
 } from '@/lib/structuredData';
 import { MultiStructuredData } from '@/components/StructuredData';
 
+// 修复接口定义，确保locale可选并有默认值
 interface MiningEpcServiceClientProps {
-  locale: string;
+  locale?: string;
 }
 
 export default function MiningEpcServiceClient({ locale = 'en' }: MiningEpcServiceClientProps) {

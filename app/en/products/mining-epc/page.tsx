@@ -73,7 +73,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
       : 'Mining EPC Services - Full Mining Industry Chain Solutions - Zexin Mining Equipment',
     description: isZh
       ? '泽鑫矿山设备提供从设计到运营的一站式矿业产业链服务，包括咨询、设计、设备制造与采购、施工、运营管理等全方位EPCMO服务。'
-      : 'Zexin Mining Equipment provides one-stop mining industry chain services from design to operation, including consulting, design, equipment manufacturing and procurement, construction, operation management, and other comprehensive EPCMO services.',
+      : 'Complete turnkey mining solutions from Zexin: Engineering, Procurement, Construction & Operations. Expert mine design, equipment selection, and project management for successful mining projects.',
     alternates: {
       canonical: `https://www.zexinmining.com/${locale}/products/mining-epc`,
       languages: {
