@@ -31,6 +31,36 @@
 [11:16:52.914] Error: Unable to find lambda for route: /en/about
 ```
 
+### Vercel配置冲突解决
+在最新的部署尝试中，发现了一个新的配置冲突问题：
+```
+If 'rewrites', 'redirects', 'headers', 'cleanUrls' or 'trailingSlash' are used, then 'routes' cannot be present.
+```
+
+这个错误表明在vercel.json中，不能同时使用"routes"配置和"cleanUrls"或"trailingSlash"等配置项。
+
+#### 解决方案
+修改vercel.json，移除冲突的配置项：
+```json
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "regions": ["iad1"],
+  "routes": [
+    { "src": "/en/about", "dest": "/en/about.html", "status": 200 },
+    { "src": "/zh/about", "dest": "/zh/about.html", "status": 200 }
+  ]
+}
+```
+
+主要变更：
+- 移除了"cleanUrls"和"trailingSlash"配置项
+- 保留了"routes"配置，因为它是解决"/en/about"和"/zh/about"路由问题的关键
+
+这种配置可以确保Vercel正确处理静态HTML文件，避免尝试创建可能导致部署失败的Lambda函数。
+
 ### 最终解决方案
 通过直接修改源代码，采用更彻底的解决方案：
 
