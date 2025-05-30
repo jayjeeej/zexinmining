@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "node scripts/add-alt-attributes.js && next build",
-    "postbuild": "next-sitemap && node scripts/generate-sitemaps.js && node scripts/generate-server-sitemap.js",
+    "postbuild": "next-sitemap && node scripts/generate-sitemaps.js && node scripts/generate-server-sitemap.js && node scripts/fix-vercel-deployment.js",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "vercel-build": "next build"
   },
   "dependencies": {
     "@ant-design/nextjs-registry": "^1.0.2",

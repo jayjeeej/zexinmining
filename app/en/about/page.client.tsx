@@ -69,7 +69,7 @@ export default function AboutPageClient({ locale }: { locale: string }) {
           imageSrc: '/images/about/team-founder.jpg'
         },
         {
-          name: isZh ? '王超' : 'Wang Chao',
+          name: isZh ? '王超' : 'Eddie Wang',
           title: isZh ? '首席执行官' : 'CEO',
           description: isZh
             ? '20年行业经验，带领团队开发多项核心技术。'
@@ -77,7 +77,7 @@ export default function AboutPageClient({ locale }: { locale: string }) {
           imageSrc: '/images/about/team-ceo.jpg'
         },
         {
-          name: isZh ? '吴宇涛' : 'Wu Yutao',
+          name: isZh ? '吴宇涛' : 'Cassian Wu',
           title: isZh ? '国际业务总监' : 'International Business Director',
           description: isZh
             ? '丰富的国际贸易经验，负责全球市场拓展与客户管理。'
@@ -99,8 +99,8 @@ export default function AboutPageClient({ locale }: { locale: string }) {
       phone: {
         title: isZh ? '电话' : 'Phone',
         contacts: [
-          { number: '+86 18577086999', name: '王超' },
-          { number: '+86 13807719695', name: '吴宇涛' }
+          { number: '+86 18577086999', name: 'Eddie Wang' },
+          { number: '+86 13807719695', name: 'Cassian Wu' }
         ]
       },
       whatsapp: {
