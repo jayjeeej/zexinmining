@@ -15,29 +15,65 @@ if (!fs.existsSync(path.join(process.cwd(), '.next'))) {
 }
 
 // 确保.vercel/output/static目录存在
-const vercelOutputDir = path.join(process.cwd(), '.vercel/output/static');
-if (!fs.existsSync(vercelOutputDir)) {
-  console.log('创建Vercel输出目录...');
-  fs.mkdirSync(path.join(process.cwd(), '.vercel/output/static'), { recursive: true });
+const staticOutputDir = path.join(process.cwd(), '.vercel/output/static');
+if (!fs.existsSync(staticOutputDir)) {
+  console.log('创建Vercel静态输出目录...');
+  fs.mkdirSync(staticOutputDir, { recursive: true });
+}
+
+// 确保.vercel/output/functions目录存在
+const functionsOutputDir = path.join(process.cwd(), '.vercel/output/functions');
+if (!fs.existsSync(functionsOutputDir)) {
+  console.log('创建Vercel函数输出目录...');
+  fs.mkdirSync(functionsOutputDir, { recursive: true });
 }
 
 // 处理特定的问题页面
 const problematicRoutes = [
-  { source: '/en/about', dir: 'en/about' },
-  { source: '/zh/about', dir: 'zh/about' }
+  { source: '/en/about', dir: 'en/about', func: 'en/about.func' },
+  { source: '/zh/about', dir: 'zh/about', func: 'zh/about.func' }
 ];
 
 // 获取构建ID
 const buildId = fs.readFileSync(path.join(process.cwd(), '.next/BUILD_ID'), 'utf8').trim();
 console.log(`当前构建ID: ${buildId}`);
 
+// 创建基本的Lambda函数内容
+const createBasicLambdaFunction = (route) => `
+module.exports = (req, res) => {
+  // 设置头部和内容类型
+  res.setHeader('Content-Type', 'text/html; charset=utf-8');
+  
+  // 创建HTML内容
+  const html = \`
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="refresh" content="0;url=${route.source}">
+        <title>${route.source.includes('/en/') ? 'About Us' : '关于我们'} | Zexin Mining</title>
+      </head>
+      <body>
+        <p>Redirecting to <a href="${route.source}">${route.source}</a>...</p>
+      </body>
+    </html>
+  \`;
+  
+  // 响应状态码和内容
+  res.statusCode = 200;
+  res.end(html);
+};
+`;
+
 problematicRoutes.forEach(route => {
   console.log(`处理路由: ${route.source}`);
   
+  // 1. 创建静态HTML文件
   // 创建目标目录
-  const targetDir = path.join(vercelOutputDir, route.dir);
-  if (!fs.existsSync(targetDir)) {
-    fs.mkdirSync(targetDir, { recursive: true });
+  const targetStaticDir = path.join(staticOutputDir, route.dir);
+  if (!fs.existsSync(targetStaticDir)) {
+    fs.mkdirSync(targetStaticDir, { recursive: true });
   }
   
   // 获取原始页面内容（如果可能）
@@ -72,9 +108,75 @@ problematicRoutes.forEach(route => {
   }
   
   // 写入index.html
-  fs.writeFileSync(path.join(targetDir, 'index.html'), pageContent);
+  fs.writeFileSync(path.join(targetStaticDir, 'index.html'), pageContent);
   console.log(`为 ${route.source} 创建了静态HTML文件`);
+  
+  // 2. 创建Lambda函数
+  const funcDir = path.join(functionsOutputDir, route.func);
+  if (!fs.existsSync(funcDir)) {
+    fs.mkdirSync(funcDir, { recursive: true });
+  }
+  
+  // 写入Lambda函数文件
+  const lambdaContent = createBasicLambdaFunction(route);
+  fs.writeFileSync(path.join(funcDir, 'index.js'), lambdaContent);
+  
+  // 创建基本的function配置
+  const funcConfig = {
+    "runtime": "nodejs18.x",
+    "handler": "index.js",
+    "memory": 128
+  };
+  fs.writeFileSync(path.join(funcDir, '.vc-config.json'), JSON.stringify(funcConfig, null, 2));
+  console.log(`为 ${route.source} 创建了Lambda函数`);
 });
+
+// 确保.vercel/output/config.json存在
+const configOutputPath = path.join(process.cwd(), '.vercel/output/config.json');
+let outputConfig = {
+  "version": 3,
+  "routes": []
+};
+
+// 如果已存在配置文件，读取它
+if (fs.existsSync(configOutputPath)) {
+  try {
+    outputConfig = JSON.parse(fs.readFileSync(configOutputPath, 'utf8'));
+    if (!outputConfig.routes) {
+      outputConfig.routes = [];
+    }
+  } catch (err) {
+    console.warn(`读取配置文件失败: ${err.message}，将使用默认配置`);
+  }
+}
+
+// 添加路由配置
+problematicRoutes.forEach(route => {
+  // 检查是否已存在相同的路由
+  const routeExists = outputConfig.routes.some(r => 
+    (r.src === route.source) || (r.source === route.source)
+  );
+  
+  if (!routeExists) {
+    // 优先使用Lambda函数
+    outputConfig.routes.unshift({
+      "src": route.source,
+      "dest": `/${route.func}/index.js`,
+      "check": true
+    });
+    // 作为备份，也添加静态文件路由
+    outputConfig.routes.push({
+      "src": route.source,
+      "dest": `/${route.dir}/index.html`,
+      "status": 200,
+      "check": false
+    });
+  }
+});
+
+// 写入配置文件
+fs.writeFileSync(configOutputPath, JSON.stringify(outputConfig, null, 2));
+console.log('已更新Vercel输出配置');
 
 // 创建vercel.json，如果它不存在的话
 const vercelJsonPath = path.join(process.cwd(), 'vercel.json');
@@ -89,8 +191,8 @@ const vercelConfig = {
 // 添加路由配置
 vercelConfig.routes = problematicRoutes.map(route => ({
   "src": route.source,
-  "dest": `/.vercel/output/static/${route.dir}/index.html`,
-  "status": 200
+  "dest": `/${route.func}/index.js`,
+  "check": true
 }));
 
 // 写入vercel.json
