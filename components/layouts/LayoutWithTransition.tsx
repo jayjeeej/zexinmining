@@ -100,6 +100,16 @@ export default function LayoutWithTransition({
         structuredData={structuredData}
         productTabs={productTabs}
       >
+        <HeroSection 
+          title={title || ''}
+          description={description}
+          backgroundColor="white"
+          textColor="text-gray-700"
+          showDecorationLine={true}
+          headingLevel="h1"
+          tabs={productTabs}
+        />
+        
         {children}
       </ProductLayout>
     </PageTransition>

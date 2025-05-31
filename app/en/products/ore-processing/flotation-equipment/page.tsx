@@ -177,10 +177,12 @@ export default async function FlotationEquipmentPage({ params }: { params: { loc
   );
   
   // 4. 产品类别结构化数据
+  const categoryDescription = 'Zexin high-efficiency flotation equipment includes pneumatic, self-aspirated and XFC air inflation flotation cells. Features high mineralization rates for ferrous, non-ferrous and non-metallic minerals, with low energy consumption, easy operation and high recovery rates.';
+  
   const categoryStructuredData = getProductCategoryStructuredData({
     categoryId: 'flotation-equipment',
     categoryName: 'Flotation Equipment',
-    description: 'Zexin Mining Equipment offers efficient flotation equipment including pneumatic flotation cells, self-aspirated flotation cells, coarse flotation cells and air inflation flotation cells for non-ferrous, precious and non-metallic mineral separation',
+    description: categoryDescription,
     productCount: productIds.length,
     locale,
     baseUrl
@@ -191,7 +193,7 @@ export default async function FlotationEquipmentPage({ params }: { params: { loc
   const webPageStructuredData = getWebPageStructuredData({
     pageUrl: pageUrl,
     pageName: 'Flotation Equipment',
-    description: 'Zexin Mining Equipment offers efficient flotation equipment including pneumatic flotation cells, self-aspirated flotation cells, coarse flotation cells and air inflation flotation cells for non-ferrous, precious and non-metallic mineral separation',
+    description: categoryDescription,
     locale: locale,
     baseUrl: baseUrl,
     breadcrumbId: null

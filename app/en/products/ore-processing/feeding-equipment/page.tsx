@@ -158,7 +158,7 @@ export default async function FeedingEquipmentPage({ params }: { params: { local
   const categoryStructuredData = getProductCategoryStructuredData({
     categoryId: 'feeding-equipment',
     categoryName: 'Feeding Equipment',
-    description: 'Zexin Mining Equipment offers reliable feeding solutions including vibrating feeders, electromagnetic feeders, mechanical feeders, plate feeders and more, ensuring stable and efficient material feeding for mineral processing lines',
+    description: 'Zexin feeding equipment includes vibratory, apron & belt feeders with precise flow control & wear-resistant design. Boosts mining & construction productivity, reduces material waste & extends equipment lifespan. Custom solutions available.',
     productCount: productIds.length,
     locale,
     baseUrl
@@ -169,7 +169,7 @@ export default async function FeedingEquipmentPage({ params }: { params: { local
   const webPageStructuredData = getWebPageStructuredData({
     pageUrl: pageUrl,
     pageName: 'Feeding Equipment',
-    description: 'Zexin Mining Equipment offers reliable feeding solutions including vibrating feeders, electromagnetic feeders, mechanical feeders, plate feeders and more, ensuring stable and efficient material feeding for mineral processing lines',
+    description: 'Zexin feeding equipment includes vibratory, apron & belt feeders with precise flow control & wear-resistant design. Boosts mining & construction productivity, reduces material waste & extends equipment lifespan. Custom solutions available.',
     locale: locale,
     baseUrl: baseUrl,
     breadcrumbId: null

@@ -69,7 +69,7 @@ export default function FlotationEquipmentPageClient({ locale, initialData = [] 
   
   // 页面描述内容
   const pageDescription = isZh
-    ? '泽鑫矿山设备专业生产各类浮选设备，包括气动浮选机、自吸式浮选机、粗颗粒浮选机和XFC充气式浮选机等，适用于各种有色金属、黑色金属和非金属矿物的浮选分离工艺。我们的浮选设备具有高矿化率、能耗低、结构稳固、操作简便等特点，为客户提供高效可靠的浮选解决方案。'
+    ? '泽鑫提供高效浮选设备，包括气动浮选机、自吸式浮选机和XFC充气式浮选机，高矿化率设计，适用于有色金属、黑色金属和非金属矿物的分离，能耗低，操作简便，回收率高。'
     : 'Zexin Mining Equipment specializes in manufacturing various flotation equipment including pneumatic flotation cells, self-aspirated flotation cells, coarse flotation cells, and XFC air inflation flotation cells. Our flotation equipment features high mineralization rates, low energy consumption, robust structure, and ease of operation, providing efficient and reliable flotation solutions for non-ferrous metals, ferrous metals, and non-metallic mineral beneficiation processes.';
   
   // 产品标签导航

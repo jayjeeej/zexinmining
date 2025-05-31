@@ -70,7 +70,7 @@ export default function GravitySeparationPageClient({ locale, initialData = [] }
   // 页面描述内容
   const pageDescription = isZh
     ? '泽鑫矿山设备专业生产重选设备，包括螺旋溜槽、跳汰机、摇床、离心选矿机等，基于矿物颗粒比重差异原理进行分选。我们的设备适用于金、锡、钨、钽铌、锆、铬、锰等贵重和稀有金属矿的高效选别，具有分选精度高、回收率高、结构可靠、操作简便、能耗低等特点，是矿产资源绿色高效回收的理想选择。'
-    : 'Zexin Mining Equipment specializes in manufacturing gravity separation equipment including spiral chutes, jig machines, shaking tables and centrifugal concentrators, based on the principle of specific gravity differences between mineral particles. Our equipment is suitable for efficient separation of gold, tin, tungsten minerals based on specific gravity differences, featuring high recovery rates, low energy consumption and environmental protection.';
+    : 'Zexin high-efficiency gravity separation equipment includes spiral chutes, jig machines, shaking tables and centrifugal concentrators. Utilizing mineral density differences for precise separation with high recovery rates, ideal for gold, tin and tungsten processing with minimal environmental impact.';
   
   // 产品标签导航
   const productTabsElement = (

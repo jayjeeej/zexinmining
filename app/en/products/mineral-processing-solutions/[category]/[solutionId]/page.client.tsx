@@ -212,7 +212,7 @@ export default function SolutionDetailClient({
           <div className="md:hidden">
             <HeroSection
               title={pageTitle}
-              description={pageDescription}
+              description=""
               textAlign="left"
               showDecorationLine={true}
               decorationLineColor="bg-gray-200"
@@ -225,7 +225,6 @@ export default function SolutionDetailClient({
               title={pageTitle}
               description={<>
                 <div className="h-[1px] w-24 bg-gray-200 mx-auto my-4"></div>
-                <p className="text-base md:text-lg font-text text-gray-800">{pageDescription}</p>
               </>}
               textAlign="center"
               showDecorationLine={false}

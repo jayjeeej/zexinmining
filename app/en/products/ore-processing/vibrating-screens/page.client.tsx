@@ -70,7 +70,7 @@ export default function VibratingScreensPageClient({ locale, initialData = [] }:
   // 页面描述内容
   const pageDescription = isZh
     ? '泽鑫矿山设备提供全系列振动筛，包括圆振动筛、高频振动筛、香蕉振动筛。我们的振动筛设备广泛应用于矿石、骨料、煤炭和其他物料的分级、分选和脱水作业，具有筛分精度高、处理能力强、结构合理、维护简便等特点，能满足不同行业客户的筛分需求。'
-    : 'Zexin Mining Equipment offers a complete range of vibrating screens, including circular vibrating screens, high-frequency vibrating screens, banana vibrating screens. Our vibrating screen equipment is widely used for grading, sorting, and dewatering of ores, aggregates, coal, and other materials, featuring high screening precision, strong processing capacity, reasonable structure, and easy maintenance to meet the screening requirements of customers in various industries.';
+    : 'Zexin vibrating screens: linear screens, banana screens, dewatering screens & high-frequency screens with multi-deck design. High precision, easy maintenance for efficient classification of minerals, aggregates & coal.';
   
   // 产品标签导航
   const productTabsElement = (

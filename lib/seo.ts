@@ -207,8 +207,8 @@ export function getKeywords(type: string, locale: string, specificKeywords?: str
       en: 'mineral processing equipment,ore dressing equipment,crushers,grinding mills,flotation machines,magnetic separators,gravity separators,classifiers,dewatering equipment,mineral processing,gold ore processing,iron ore processing'
     },
     'gravity-separation': {
-      zh: '重选设备,重力选矿,比重分选,金矿选矿,锡矿选矿,钨矿选矿,螺旋溜槽,跳汰机,摇床,离心选矿机,高回收率,环保选矿',
-      en: 'gravity separation equipment,gravity concentration,specific gravity separation,gold ore processing,tin ore processing,tungsten ore processing,spiral chute,jig machine,shaking table,centrifugal concentrator,high recovery rate'
+      zh: '高效重选设备-金矿锡矿选矿系列 | 泽鑫矿山设备',
+      en: 'High-Efficiency Gravity Separators - Gold & Tin Ore Series | Zexin Mining'
     },
     'magnetic-separation': {
       zh: '磁选设备,磁选机,永磁磁选机,电磁磁选机,干式磁选,湿式磁选,弱磁选,强磁选,铁矿选矿,锰矿选矿,赤铁矿选矿,钛铁矿选矿',
@@ -223,8 +223,8 @@ export function getKeywords(type: string, locale: string, specificKeywords?: str
       en: 'crushing equipment,crusher,jaw crusher,cone crusher,impact crusher,hammer crusher,roller crusher,mobile crushing station,fine crushing,medium crushing,coarse crushing'
     },
     'grinding-equipment': {
-      zh: '球磨机-湿式溢流球磨机节能格子型球磨机 | 泽鑫矿山设备',
-      en: 'Ball Mills - Wet Overflow & Energy-saving Grid Type | Zexin Mining'
+      zh: '高效球磨机-节能磨矿设备系列 | 泽鑫矿山设备',
+      en: 'High-Efficiency Ball Mills - Energy-saving Grinding Series | Zexin Mining'
     },
     'mineral-processing-solutions': {
       zh: '选矿工艺方案-金属矿非金属矿专业选矿流程 | 泽鑫矿山设备',
@@ -314,31 +314,31 @@ const CATEGORY_METADATA: Record<string, CategoryMetadataConfig> = {
   },
   'grinding-equipment': {
     title: {
-      zh: '球磨机-湿式溢流球磨机格子型球磨机系列 | 泽鑫矿山设备',
-      en: 'Ball Mills - Wet Overflow & Grid Type Ball Mill Series | Zexin Mining'
+      zh: '高效球磨机-节能磨矿设备系列 | 泽鑫矿山设备',
+      en: 'High-Efficiency Ball Mills - Energy-saving Grinding Series | Zexin Mining'
     },
     description: {
-      zh: '泽鑫矿山设备专业生产各类磨矿设备，包括湿式溢流球磨机、湿式节能格子型球磨机、湿式棒磨机等，适用于各种矿石的研磨工艺。我们的磨矿设备采用先进的设计理念和耐磨材料，提供高效磨矿性能、精确粒度控制、低能耗运行和简便维护，为客户提供可靠的物料研磨解决方案。',
-      en: 'Zexin Mining Equipment specializes in manufacturing various grinding equipment including wet overflow ball mills, wet energy-saving grid ball mills, wet rod mills and more. Our grinding equipment features efficient grinding performance, precise particle size control, low energy consumption and easy maintenance, providing reliable grinding solutions for various mineral processing applications.'
+      zh: '泽鑫提供高效磨矿设备，包括湿式溢流球磨机、节能格子型球磨机和棒磨机，采用先进设计和耐磨材料，实现精确粒度控制和低能耗运行。',
+      en: 'Zexin offers high-efficiency grinding equipment including wet overflow ball mills, energy-saving grid ball mills and rod mills, featuring advanced design and wear-resistant materials for precise particle control and low energy consumption.'
     },
     defaultKeywords: {
-      zh: '磨矿设备,球磨机,棒磨机,湿式球磨机,干式球磨机,溢流球磨机,节能球磨机,格子型球磨机,磨矿机,研磨设备,矿石磨矿,选矿设备',
-      en: 'grinding equipment,ball mill,rod mill,wet ball mill,dry ball mill,overflow ball mill,energy-saving ball mill,grid ball mill,grinding mill,grinding machine,ore grinding,mineral processing equipment'
+      zh: '高效球磨机,节能磨矿设备,湿式溢流球磨机,格子型球磨机,棒磨机,矿石研磨,精确粒度控制,低能耗磨矿设备,矿石细磨,高效研磨,泽鑫矿业',
+      en: 'high-efficiency ball mills,energy-saving grinding equipment,wet overflow ball mill,grid ball mill,rod mill,ore grinding,precise particle control,low energy consumption grinding,fine grinding,efficient milling,Zexin Mining'
     },
     path: '/products/ore-processing/grinding-equipment'
   },
   'stationary-crushers': {
     title: {
-      zh: '破碎机-颚式破碎机圆锥破碎机反击式破碎机系列 | 泽鑫矿山设备',
-      en: 'Crushers - Jaw, Cone & Impact Crusher Series | Zexin Mining'
+      zh: '高效破碎机-颚式圆锥反击式锤式破碎机系列 | 泽鑫矿山设备',
+      en: 'High-Efficiency Crushers - Jaw, Cone & Impact Series | Zexin Mining'
     },
     description: {
-      zh: '泽鑫矿山设备专业生产各类固定式破碎设备，包括颚式破碎机、圆锥破碎机、反击式破碎机、锤式破碎机和双辊破碎机等，适用于矿山、采石场、建筑材料和骨料生产的高效破碎解决方案。',
-      en: 'Zexin Mining Equipment manufactures various stationary crushers including jaw crushers, cone crushers, impact crushers, hammer crushers and double roller crushers, providing efficient crushing solutions for mining, quarrying, construction materials and aggregate production.'
+      zh: '泽鑫提供高效固定式破碎机，包括颚式、圆锥、反击式、锤式和辊式破碎机，适用于矿石、建材和骨料生产，具备高产能、低能耗和可靠性能。',
+      en: 'Zexin offers high-efficiency stationary crushers including jaw, cone, impact, hammer and roller crushers for minerals and construction materials, featuring high capacity, low energy consumption and reliable performance.'
     },
     defaultKeywords: {
-      zh: '固定式破碎机,颚式破碎机,圆锥破碎机,反击式破碎机,锤式破碎机,双辊破碎机,矿山破碎设备,石料破碎机,骨料破碎设备,采石场破碎机,建筑材料破碎设备,高效破碎机,节能破碎机,泽鑫',
-      en: 'stationary crushers,jaw crusher,cone crusher,impact crusher,hammer crusher,double roller crusher,mining crushing equipment,stone crusher,aggregate crushing equipment,quarry crusher,construction material crusher,efficient crusher,energy-saving crusher,Zexin'
+      zh: '高效破碎机,颚式破碎机,圆锥破碎机,反击式破碎机,锤式破碎机,双辊破碎机,矿山破碎设备,石料破碎机,骨料生产设备,采石场设备,建筑材料破碎,高效节能破碎机,泽鑫矿业',
+      en: 'high-efficiency crushers,jaw crusher,cone crusher,impact crusher,hammer crusher,double roller crusher,mining crushing equipment,stone crusher,aggregate production,quarry equipment,construction material crusher,energy-saving crusher,Zexin Mining'
     },
     path: '/products/ore-processing/stationary-crushers'
   },
@@ -355,46 +355,46 @@ const CATEGORY_METADATA: Record<string, CategoryMetadataConfig> = {
   },
   'gravity-separation': {
     title: {
-      zh: '重力选矿设备-螺旋溜槽跳汰机摇床系列 | 泽鑫矿山设备',
-      en: 'Gravity Separation Equipment - Spiral Chutes, Jigs & Shaking Tables | Zexin Mining'
+      zh: '高效重选设备-跳汰机系列 | 泽鑫矿山设备',
+      en: 'High-Efficiency Gravity Separators - jig separator Series | Zexin Mining'
     },
     description: {
-      zh: '泽鑫重力选矿设备包括螺旋溜槽、跳汰机、摇床、离心选矿机等，专为金矿、锡矿、钨矿等密度差选矿设计，回收率高达98%，能耗低，维护简便，提供定制化重选解决方案。',
-      en: 'Zexin gravity separation equipment: spiral chutes, jig machines, shaking tables & centrifugal concentrators. High-efficiency density-based separation for gold, tin & tungsten ores with 98% recovery rates. Low energy, easy maintenance, custom solutions.'
+      zh: '泽鑫提供高效重力选矿设备，包括螺旋溜槽、跳汰机、摇床和离心选矿机，专为金矿、锡矿等密度差选矿设计，回收率高达98%，能耗低。',
+      en: 'Zexin offers high-efficiency gravity separation equipment including spiral chutes, jig machines, shaking tables and centrifugal concentrators for gold and tin ores with 98% recovery rates and low energy consumption.'
     },
     defaultKeywords: {
-      zh: '重力选矿设备,重选设备,螺旋溜槽,跳汰机,摇床,离心选矿机,金矿选矿,锡矿选矿,钨矿选矿,重力分选,比重选矿,矿物分选,密度分选',
-      en: 'gravity separation equipment,gravity concentrators,spiral chute,jig machine,shaking table,centrifugal concentrator,gold ore processing,tin ore processing,tungsten ore processing,gravity concentration,specific gravity separation,mineral sorting,density separation'
+      zh: '高效重选设备,金矿选矿设备,锡矿选矿,螺旋溜槽,跳汰机,摇床,离心选矿机,高回收率选矿,密度分选,比重选矿,节能重选设备,泽鑫矿业',
+      en: 'high-efficiency gravity separators,gold ore processing equipment,tin ore beneficiation,spiral chute,jig machine,shaking table,centrifugal concentrator,high-recovery mineral processing,density separation,specific gravity separation,energy-saving gravity equipment,Zexin Mining'
     },
     path: '/products/ore-processing/gravity-separation'
   },
   'magnetic-separator': {
     title: {
-      zh: '磁选机-永磁滚筒湿式强磁干式磁选机系列 | 泽鑫矿山设备',
-      en: 'Magnetic Separators - Permanent Drum & High-intensity Separator Series | Zexin Mining'
+      zh: '高效磁选机-铁矿强磁设备系列 | 泽鑫矿山设备',
+      en: 'High-Efficiency Magnetic Separators - Iron Ore Series | Zexin Mining'
     },
     description: {
-      zh: '泽鑫磁选设备包括永磁滚筒磁选机、湿式强磁机、干式磁选机等，适用于铁矿、锰矿、赤铁矿高效分选，磁场强度可调，分选精度高，铁精矿品位可达65%以上，能耗低，处理量大。',
-      en: 'Zexin magnetic separators: permanent drum, wet high-intensity & dry magnetic separators with adjustable field strength. Process iron, manganese & hematite ores with 65%+ concentrate grade. Low energy consumption, high capacity & precision sorting.'
+      zh: '泽鑫提供高效磁选设备，包括永磁滚筒、湿式强磁和干式磁选机，适用于铁矿、锰矿高效分选，精矿品位可达65%以上，能耗低，处理量大。',
+      en: 'Zexin offers high-efficiency magnetic separators including permanent drum, wet high-intensity and dry magnetic separators for iron and manganese ores with 65%+ concentrate grade, low energy consumption and high capacity.'
     },
     defaultKeywords: {
-      zh: '磁选设备,磁选机,永磁磁选机,高强度磁选机,湿式磁选机,干式磁选机,滚筒磁选机,磁辊选机,平板磁选机,带式磁选机,锆英砂磁选机,电选机,弱磁选机,强磁选机,选矿设备',
-      en: 'magnetic separation equipment,magnetic separator,permanent magnetic separator,high-intensity magnetic separator,wet magnetic separator,dry magnetic separator,drum magnetic separator,roll magnetic separator,plate magnetic separator,belt magnetic separator,zircon magnetic separator,electrostatic separator,mineral processing equipment'
+      zh: '高效磁选机,铁矿磁选设备,永磁滚筒磁选机,湿式强磁选机,干式磁选机,高品位铁精矿,节能磁选设备,赤铁矿选矿,锰矿磁选,高强度磁选,泽鑫矿业',
+      en: 'high-efficiency magnetic separators,iron ore magnetic equipment,permanent drum magnetic separator,wet high-intensity magnetic separator,dry magnetic separator,high-grade iron concentrate,energy-saving magnetic equipment,hematite processing,manganese ore separation,high-intensity magnetic separation,Zexin Mining'
     },
     path: '/products/ore-processing/magnetic-separator'
   },
   'flotation-equipment': {
     title: {
-      zh: '浮选机-气动浮选机自吸式浮选机XJK系列 | 泽鑫矿山设备',
-      en: 'Flotation Machines - Pneumatic & Self-aspirated Flotation Cell Series | Zexin Mining'
+      zh: '高效浮选机-气动自吸式浮选设备 | 泽鑫矿山设备',
+      en: 'High-Efficiency Flotation Machines - Pneumatic & Self-aspirated Series | Zexin Mining'
     },
     description: {
-      zh: '泽鑫浮选设备包括气动浮选机、自吸式浮选机、粗颗粒浮选机等，适用于铜铅锌矿石高效分选，回收率高达95%，节能环保，为全球矿企提供一站式浮选解决方案。',
-      en: 'Zexin flotation equipment includes pneumatic cells, self-aspirated machines & coarse particle flotation cells. High-efficiency separation for copper, lead & zinc ores with 95% recovery rates. Energy-saving design with expert support.'
+      zh: '泽鑫提供高效浮选设备，包括气动、自吸式和粗颗粒浮选机，适用于铜铅锌矿石分选，回收率高达95%，节能环保，运行成本低。',
+      en: 'Zexin offers high-efficiency flotation equipment including pneumatic, self-aspirated and coarse particle flotation cells for copper, lead and zinc ores with 95% recovery rates and low operating costs.'
     },
     defaultKeywords: {
-      zh: '浮选设备,浮选机,气动浮选机,自吸式浮选机,粗颗粒浮选机,充气式浮选机,矿物浮选设备,浮选分离,矿物浮选,选矿浮选设备,浮选槽,浮选系统,浮选工艺',
-      en: 'flotation equipment,flotation cell,pneumatic flotation cell,self-aspirated flotation cell,coarse flotation cell,air inflation flotation cell,mineral flotation equipment,flotation separation,mineral flotation,ore flotation equipment,flotation tank,flotation system,flotation process'
+      zh: '高效浮选机,气动浮选设备,自吸式浮选机,铜矿浮选,铅锌矿浮选,高回收率浮选机,节能浮选设备,矿物浮选分离,选矿浮选工艺,泽鑫矿业,低能耗浮选',
+      en: 'high-efficiency flotation machines,pneumatic flotation equipment,self-aspirated flotation cells,copper flotation,lead-zinc flotation,high-recovery flotation,energy-saving flotation,mineral flotation separation,ore flotation process,Zexin Mining,low-energy flotation'
     },
     path: '/products/ore-processing/flotation-equipment'
   },

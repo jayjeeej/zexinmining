@@ -186,10 +186,12 @@ export default async function VibratingScreensPage({ params }: { params: { local
   );
   
   // 4. 产品类别结构化数据
+  const categoryDescription = 'Zexin vibrating screens: linear screens, banana screens, dewatering screens & high-frequency screens with multi-deck design. High precision, easy maintenance for efficient classification of minerals, aggregates & coal.';
+
   const categoryStructuredData = getProductCategoryStructuredData({
     categoryId: 'vibrating-screens',
     categoryName: 'Vibrating Screen Equipment',
-    description: 'Zexin Mining Equipment offers efficient vibrating screen equipment, including banana screens, linear vibrating screens, circular vibrating screens, dewatering screens and other series products to meet various screening requirements',
+    description: categoryDescription,
     productCount: productIds.length,
     locale,
     baseUrl
@@ -199,8 +201,8 @@ export default async function VibratingScreensPage({ params }: { params: { local
   const pageUrl = `${baseUrl}/${locale}/products/ore-processing/vibrating-screens`;
   const webPageStructuredData = getWebPageStructuredData({
     pageUrl: pageUrl,
-    pageName: 'Vibrating Screen Equipment',
-    description: 'Zexin Mining Equipment offers efficient vibrating screen equipment, including banana screens, linear vibrating screens, circular vibrating screens, dewatering screens and other series products to meet various screening requirements',
+    pageName: 'Vibrating Screens - Linear, Banana & High-frequency Series | Zexin Mining',
+    description: categoryDescription,
     locale: locale,
     baseUrl: baseUrl,
     breadcrumbId: null

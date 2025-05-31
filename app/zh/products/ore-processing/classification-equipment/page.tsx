@@ -179,12 +179,12 @@ export default async function ClassificationEquipmentPage({ params }: { params: 
     );
   
   // 4. 产品类别结构化数据
+  const categoryDescription = '泽鑫提供高效分级设备，包括高堰式和沉没式螺旋分级机，采用耐磨材料设计，实现精确粒度控制，处理能力大，耗能低，适用于金属和非金属矿石的粒度分离。';
+  
   const categoryStructuredData = getProductCategoryStructuredData({
     categoryId: 'classification-equipment',
     categoryName: isZh ? '分级设备' : 'Classification Equipment',
-    description: isZh 
-      ? '泽鑫矿山设备提供高性能分级设备，包括螺旋分级机、水力旋流器和分泥斗等，用于根据颗粒大小和密度对矿物进行精确分级' 
-      : 'Zexin Mining Equipment offers high-performance classification equipment including spiral classifiers, hydrocyclones, and cone classifiers for precise mineral classification by particle size and density',
+    description: categoryDescription,
     productCount: productIds.length,
     locale,
     baseUrl
@@ -195,9 +195,7 @@ export default async function ClassificationEquipmentPage({ params }: { params: 
   const webPageStructuredData = getWebPageStructuredData({
     pageUrl: pageUrl,
     pageName: isZh ? '分级设备' : 'Classification Equipment',
-    description: isZh 
-      ? '泽鑫矿山设备提供高性能分级设备，包括螺旋分级机、水力旋流器和分泥斗等，用于根据颗粒大小和密度对矿物进行精确分级' 
-      : 'Zexin Mining Equipment offers high-performance classification equipment including spiral classifiers, hydrocyclones, and cone classifiers for precise mineral classification by particle size and density',
+    description: categoryDescription,
     locale: locale,
     baseUrl: baseUrl,
     breadcrumbId: null

@@ -173,12 +173,12 @@ export default async function ClassificationEquipmentPage({ params }: { params: 
     );
   
   // 4. 产品类别结构化数据
+  const categoryDescription = 'Zexin high-efficiency classification equipment includes high weir and submerged spiral classifiers. Wear-resistant design delivers precise particle size control with high processing capacity and low energy consumption, ideal for metallic and non-metallic ore separation.';
+  
   const categoryStructuredData = getProductCategoryStructuredData({
     categoryId: 'classification-equipment',
     categoryName: isZh ? '分级设备' : 'Classification Equipment',
-    description: isZh 
-      ? '泽鑫矿山设备提供高性能分级设备，包括螺旋分级机、水力旋流器和分泥斗等，用于根据颗粒大小和密度对矿物进行精确分级' 
-      : 'Zexin Mining Equipment offers high-performance classification equipment including spiral classifiers, hydrocyclones, and cone classifiers for precise mineral classification by particle size and density',
+    description: categoryDescription,
     productCount: productIds.length,
     locale,
     baseUrl
@@ -189,7 +189,7 @@ export default async function ClassificationEquipmentPage({ params }: { params: 
   const webPageStructuredData = getWebPageStructuredData({
     pageUrl: pageUrl,
     pageName: 'Classification Equipment',
-    description: 'Zexin Mining Equipment offers high-performance classification equipment including spiral classifiers, hydrocyclones, and cone classifiers for precise mineral classification by particle size and density',
+    description: categoryDescription,
     locale: locale,
     baseUrl: baseUrl,
     breadcrumbId: null

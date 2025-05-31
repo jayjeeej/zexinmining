@@ -70,7 +70,7 @@ export default function ClassificationEquipmentPageClient({ locale, initialData 
   // 页面描述内容
   const pageDescription = isZh
     ? '泽鑫矿山设备专业生产各类矿物分级设备，包括高堰式螺旋分级机和沉没式螺旋分级机，适用于各种矿石的分级处理。我们的分级设备采用优质耐磨材料和先进设计理念，提供高效分级性能、精确粒度控制，为客户提供可靠的物料分级解决方案。'
-    : 'Zexin Mining Equipment specializes in manufacturing various mineral classification equipment including High Weir Spiral Classifiers and Submerged Spiral Classifiers. Our classification equipment features efficient separation performance, precise particle size control, and durable construction, providing reliable classification solutions for various mineral processing applications.';
+    : 'Zexin high-efficiency classification equipment includes high weir and submerged spiral classifiers. Wear-resistant design delivers precise particle size control with high processing capacity and low energy consumption, ideal for metallic and non-metallic ore separation.';
   
   // 产品标签导航
   const productTabsElement = (

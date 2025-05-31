@@ -7,6 +7,7 @@ import ContactCard from '@/components/ContactCard';
 import { getBreadcrumbConfig } from '@/lib/navigation';
 import Accordion, { AccordionItem } from '@/components/Accordion';
 import CardAnimationProvider from '@/components/CardAnimationProvider';
+import HeroSection from '@/components/HeroSection';
 
 export default function OreProcessingPageClient() {
   // 写死语言设置，这是英文页面
@@ -109,6 +110,15 @@ export default function OreProcessingPageClient() {
       title="Mineral Processing Equipment"
       description={pageDescription}
     >
+      <HeroSection 
+        title="Mineral Processing Equipment"
+        description={pageDescription}
+        backgroundColor="white"
+        textColor="text-gray-700"
+        showDecorationLine={true}
+        headingLevel="h1"
+      />
+      
       <section className="mb-0 bg-white">
         <Container withPadding>
           {/* 预处理设备区域 */}

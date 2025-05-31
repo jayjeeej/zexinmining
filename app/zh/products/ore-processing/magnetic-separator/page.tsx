@@ -180,7 +180,7 @@ export default async function MagneticSeparatorPage({ params }: { params: { loca
   const categoryStructuredData = getProductCategoryStructuredData({
     categoryId: 'magnetic-separator',
     categoryName: '磁选机',
-    description: '泽鑫矿山设备提供高性能磁选机系列，包括干式磁选机、湿式磁选机、强磁选机、弱磁选机等，适用于各类磁性矿物的高效分离',
+    description: '泽鑫提供高效磁选设备，包括永磁滚筒、湿式强磁和电选机型号。采用先进磁路设计和优质永磁材料，实现精确矿物分离，高回收率和低运行成本，适用于铁矿石和稀土矿物加工。',
     productCount: productIds.length,
     locale,
     baseUrl
@@ -191,7 +191,7 @@ export default async function MagneticSeparatorPage({ params }: { params: { loca
   const webPageStructuredData = getWebPageStructuredData({
     pageUrl: pageUrl,
     pageName: '磁选机-永磁滚筒磁选机湿式强磁机干式磁选机 | 泽鑫矿山设备',
-    description: '泽鑫提供永磁滚筒磁选机和湿式强磁机，专业铁矿石磁选设备，铁精矿品位65%，磁场可调，节能高效。',
+    description: '泽鑫提供高效磁选设备，包括永磁滚筒、湿式强磁和电选机型号。采用先进磁路设计和优质永磁材料，实现精确矿物分离，高回收率和低运行成本，适用于铁矿石和稀土矿物加工。',
     locale: locale,
     baseUrl: baseUrl,
     images: ['/images/products/ore-processing/magnetic-separator.jpg']

@@ -180,7 +180,7 @@ export default async function MagneticSeparatorPage({ params }: { params: { loca
   const categoryStructuredData = getProductCategoryStructuredData({
     categoryId: 'magnetic-separator',
     categoryName: 'Magnetic Separator',
-    description: 'Zexin Mining Equipment offers high-performance magnetic separator series, including dry magnetic separators, wet magnetic separators, high-intensity magnetic separators, and low-intensity magnetic separators for efficient separation of various magnetic minerals',
+    description: 'Zexin offers high-efficiency magnetic separators including permanent drum, wet high-intensity and electrostatic models. Advanced magnetic circuit design provides precise mineral separation, high recovery rates and low operating costs for iron ore and rare earth minerals processing.',
     productCount: productIds.length,
     locale,
     baseUrl
@@ -191,7 +191,7 @@ export default async function MagneticSeparatorPage({ params }: { params: { loca
   const webPageStructuredData = getWebPageStructuredData({
     pageUrl: pageUrl,
     pageName: 'Magnetic Separators - Permanent Drum & Wet High-intensity Models | Zexin Mining',
-    description: 'Professional magnetic separators including permanent drum, wet high-intensity, and electrostatic models for iron ore, rare earth minerals and other magnetic materials processing.',
+    description: 'Zexin offers high-efficiency magnetic separators including permanent drum, wet high-intensity and electrostatic models. Advanced magnetic circuit design provides precise mineral separation, high recovery rates and low operating costs for iron ore and rare earth minerals processing.',
     locale: locale,
     baseUrl: baseUrl,
     images: ['/images/products/ore-processing/magnetic-separator.jpg']

@@ -70,7 +70,7 @@ export default function GrindingEquipmentPageClient({ locale, initialData = [] }
   // 页面描述内容
   const pageDescription = isZh
     ? '泽鑫矿山设备专业生产各类磨矿设备，包括湿式溢流球磨机、湿式节能格子型球磨机、湿式棒磨机、湿式格子型球磨机、干式球磨机和干式棒磨机等，适用于各种矿石的研磨工艺。我们的磨矿设备采用先进的设计理念和耐磨材料，提供高效磨矿性能、精确粒度控制、低能耗运行和简便维护，为客户提供可靠的物料研磨解决方案。'
-    : 'Zexin Mining Equipment specializes in manufacturing various grinding equipment including wet overflow ball mills, wet energy-saving grid ball mills, wet rod mills, wet grid ball mills, dry ball mills and dry rod mills. Our grinding equipment features efficient grinding performance, precise particle size control, low energy consumption and easy maintenance, providing reliable grinding solutions for various mineral processing applications.';
+    : 'Zexin offers high-efficiency grinding equipment including wet overflow ball mills, energy-saving grid ball mills and rod mills, featuring advanced design and wear-resistant materials for precise particle control and low energy consumption.';
   
   // 产品标签导航
   const productTabsElement = (

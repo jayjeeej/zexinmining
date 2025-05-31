@@ -186,12 +186,14 @@ export default async function VibratingScreensPage({ params }: { params: { local
   );
   
   // 4. 产品类别结构化数据
+  const categoryDescription = isZh 
+    ? '泽鑫提供各类振动筛，包括直线振动筛、香蕉筛和高频筛等，筛分精度高，多层筛分设计，维护简便，适用于矿石、砂石、煤炭等物料的高效分级。' 
+    : 'Zexin vibrating screens: linear screens, banana screens, dewatering screens & high-frequency screens with multi-deck design. High precision, easy maintenance for efficient classification of minerals, aggregates & coal.';
+
   const categoryStructuredData = getProductCategoryStructuredData({
     categoryId: 'vibrating-screens',
     categoryName: isZh ? '振动筛设备' : 'Vibrating Screen Equipment',
-    description: isZh 
-      ? '泽鑫矿山设备提供高效振动筛设备，包括香蕉筛、直线振动筛、圆振动筛、脱水筛等系列产品，满足各种筛分需求' 
-      : 'Zexin Mining Equipment offers efficient vibrating screen equipment, including banana screens, linear vibrating screens, circular vibrating screens, dewatering screens and other series products to meet various screening requirements',
+    description: categoryDescription,
     productCount: productIds.length,
     locale,
     baseUrl
@@ -201,10 +203,8 @@ export default async function VibratingScreensPage({ params }: { params: { local
   const pageUrl = `${baseUrl}/${locale}/products/ore-processing/vibrating-screens`;
   const webPageStructuredData = getWebPageStructuredData({
     pageUrl: pageUrl,
-    pageName: isZh ? '振动筛设备' : 'Vibrating Screen Equipment',
-    description: isZh 
-      ? '泽鑫矿山设备提供高效振动筛设备，包括香蕉筛、直线振动筛、圆振动筛、脱水筛等系列产品，满足各种筛分需求' 
-      : 'Zexin Mining Equipment offers efficient vibrating screen equipment, including banana screens, linear vibrating screens, circular vibrating screens, dewatering screens and other series products to meet various screening requirements',
+    pageName: isZh ? '振动筛-直线振动筛香蕉筛高频筛系列 | 泽鑫矿山设备' : 'Vibrating Screens - Linear, Banana & High-frequency Series | Zexin Mining',
+    description: categoryDescription,
     locale: locale,
     baseUrl: baseUrl,
     breadcrumbId: null

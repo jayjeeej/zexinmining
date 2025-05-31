@@ -70,7 +70,7 @@ export default function MagneticSeparatorPageClient({ locale, initialData = [] }
   // 页面描述内容
   const pageDescription = isZh
     ? '泽鑫矿山设备专业生产各类磁选设备，包括永磁滚筒磁选机、湿式高强度磁辊选机、平板高强度磁选机、三盘带式磁选机、四辊高压电选机以及双辊永磁锆英磁选机等。我们的磁选设备采用先进的磁路设计和优质永磁材料，提供高效分选性能、精确矿物分离、低能耗运行和简便维护，为客户提供可靠的磁性物料分选解决方案。'
-    : 'Zexin Mining Equipment specializes in manufacturing various magnetic separation equipment including permanent drum magnetic separators, wet high-intensity magnetic roll separators, plate high-intensity magnetic separators, triple-disc belt magnetic separators, four-roll high-voltage electrostatic separators, and double-roll permanent magnetic zircon separators. Our magnetic separation equipment features advanced magnetic circuit design, efficient separation performance, precise mineral recovery, and low operational costs.';
+    : 'Zexin offers high-efficiency magnetic separators including permanent drum, wet high-intensity and electrostatic models. Advanced magnetic circuit design provides precise mineral separation, high recovery rates and low operating costs for iron ore and rare earth minerals processing.';
   
   // 产品标签导航
   const productTabsElement = (

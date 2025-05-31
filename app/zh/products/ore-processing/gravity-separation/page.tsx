@@ -195,12 +195,12 @@ export default async function GravitySeparationPage({ params }: { params: { loca
   );
   
   // 4. 产品类别结构化数据
+  const categoryDescription = '泽鑫提供高效重力选矿设备，包括螺旋溜槽、跳汰机、摇床和离心选矿机，利用矿物比重差实现精确分选，回收率高，特别适用于金、锡、钨等贵重金属选矿，节能环保。';
+  
   const categoryStructuredData = getProductCategoryStructuredData({
     categoryId: 'gravity-separation',
     categoryName: isZh ? '重选设备' : 'Gravity Separation Equipment',
-    description: isZh 
-      ? '泽鑫重力选矿设备包括螺旋溜槽、跳汰机、摇床、离心选矿机等，专为金矿、锡矿、钨矿选矿设计，回收率高达98%，是贵金属和有色金属矿选矿的理想设备。' 
-      : 'Zexin gravity separation equipment includes spiral chutes, jig machines, shaking tables & centrifugal concentrators, designed for gold, tin and tungsten ore processing with recovery rates up to 98%.',
+    description: categoryDescription,
     productCount: gravityProducts.length,
     locale
   });
@@ -210,9 +210,7 @@ export default async function GravitySeparationPage({ params }: { params: { loca
     "@context": "https://schema.org",
     "@type": "ProductGroup",
     "name": isZh ? "泽鑫重力选矿设备系列" : "Zexin Gravity Separation Equipment Series",
-    "description": isZh 
-      ? "泽鑫重力选矿设备系列包括各种型号的螺旋溜槽、跳汰机、摇床和离心选矿机，提供全面的重选解决方案" 
-      : "Zexin gravity separation equipment series includes various models of spiral chutes, jig machines, shaking tables and centrifugal concentrators, offering comprehensive gravity separation solutions",
+    "description": categoryDescription,
     "url": `${baseUrl}/${locale}/products/ore-processing/gravity-separation`,
     "category": isZh ? "选矿设备/重力选矿设备" : "Mineral Processing Equipment/Gravity Separation Equipment",
     "brand": {
@@ -249,9 +247,7 @@ export default async function GravitySeparationPage({ params }: { params: { loca
   const webPageStructuredData = getWebPageStructuredData({
     pageUrl: pageUrl,
     pageName: isZh ? '重力选矿设备' : 'Gravity Separation Equipment',
-    description: isZh 
-      ? '泽鑫重力选矿设备包括螺旋溜槽、跳汰机、摇床、离心选矿机等，专为金矿、锡矿、钨矿选矿设计，回收率高达98%，是贵金属和有色金属矿选矿的理想设备。' 
-      : 'Zexin gravity separation equipment includes spiral chutes, jig machines, shaking tables & centrifugal concentrators, designed for gold, tin and tungsten ore processing with recovery rates up to 98%.',
+    description: categoryDescription,
     locale: locale,
     baseUrl: baseUrl,
     breadcrumbId: null

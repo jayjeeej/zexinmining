@@ -205,10 +205,12 @@ export default async function WashingEquipmentPage({ params }: { params: { local
   );
   
   // 4. 产品类别结构化数据
+  const categoryDescription = 'Zexin high-efficiency washing equipment includes spiral washers, twin-shaft log washers and wheel bucket sand washers. Wear-resistant design ensures excellent cleaning performance with low water consumption and high impurity removal rate, extending downstream equipment lifespan.';
+  
   const categoryStructuredData = getProductCategoryStructuredData({
     categoryId: 'washing-equipment',
     categoryName: 'Washing Equipment',
-    description: 'Zexin Mining Equipment offers efficient washing equipment including spiral washers, twin shaft log washers, wheel bucket sand washers, suitable for cleaning various ores and aggregates',
+    description: categoryDescription,
     productCount: productIds.length,
     locale,
     baseUrl
@@ -219,7 +221,7 @@ export default async function WashingEquipmentPage({ params }: { params: { local
   const webPageStructuredData = getWebPageStructuredData({
     pageUrl: pageUrl,
     pageName: 'Washing Equipment',
-    description: 'Zexin Mining Equipment offers efficient washing equipment including spiral washers, twin shaft log washers, wheel bucket sand washers, suitable for cleaning various ores and aggregates',
+    description: categoryDescription,
     locale: locale,
     baseUrl: baseUrl,
     breadcrumbId: null

@@ -69,7 +69,7 @@ export default function WashingEquipmentPageClient({ locale, initialData = [] }:
   
   // 页面描述内容
   const pageDescription = isZh
-    ? '泽鑫矿山设备专业生产各类洗矿设备，包括单轴螺旋洗矿机、双轴洗矿机、双螺旋洗矿机、滚筒洗矿机和洗矿槽等，适用于各种矿石和骨料的清洗工艺。我们的洗矿设备采用先进的设计理念和耐磨材料，提供高效清洗性能、低能耗运行和简便维护，为客户提供可靠的物料清洗解决方案。'
+    ? '泽鑫提供高效洗矿设备，包括螺旋洗矿机、双轴洗矿机和轮斗洗砂机，采用耐磨材料设计，确保高效清洗性能，低水耗节能运行，矿石杂质去除率高，延长下游设备使用寿命。'
     : 'Zexin Mining Equipment specializes in manufacturing various washing equipment including single shaft screw washers, twin shaft log washers, double spiral washers, drum washers and log washers. Our washing equipment features efficient cleaning performance, low water consumption, energy efficiency and easy maintenance, providing reliable washing solutions for various mineral processing and aggregate production applications.';
   
   // 产品标签导航

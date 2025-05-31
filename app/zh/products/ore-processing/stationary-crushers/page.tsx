@@ -197,10 +197,10 @@ export default async function StationaryCrushersPage({ params }: { params: { loc
     // 4. 产品类别结构化数据
     const categoryStructuredData = getProductCategoryStructuredData({
       categoryId: 'stationary-crushers',
-      categoryName: isZh ? '固定式破碎机' : 'Stationary Crushers',
+      categoryName: isZh ? '高效固定式破碎机' : 'Stationary Crushers',
       description: isZh 
-        ? '泽鑫矿山设备提供各种类型的固定式破碎机，包括颚式破碎机、圆锥破碎机、反击式破碎机、锤式破碎机等，用于矿石和岩石的高效破碎' 
-        : 'Zexin Mining Equipment offers various types of stationary crushers, including jaw crushers, cone crushers, impact crushers, hammer crushers, etc., for efficient crushing of ores and rocks',
+        ? '泽鑫提供高效固定式破碎机，包括颚式、圆锥、反击式、锤式和辊式破碎机，适用于矿石、建材和骨料生产，具备高产能、低能耗和可靠性能。' 
+        : 'Zexin offers high-efficiency stationary crushers including jaw, cone, impact, hammer and roller crushers for minerals and construction materials, featuring high capacity, low energy consumption and reliable performance.',
       productCount: productIds.length,
       locale,
       baseUrl
@@ -210,10 +210,8 @@ export default async function StationaryCrushersPage({ params }: { params: { loc
     const pageUrl = `${baseUrl}/${locale}/products/ore-processing/stationary-crushers`;
     const webPageStructuredData = getWebPageStructuredData({
       pageUrl: pageUrl,
-      pageName: isZh ? '固定式破碎机' : 'Stationary Crushers',
-      description: isZh 
-        ? '泽鑫矿山设备提供各种类型的固定式破碎机，包括颚式破碎机、圆锥破碎机、反击式破碎机、锤式破碎机等，用于矿石和岩石的高效破碎' 
-        : 'Zexin Mining Equipment offers various types of stationary crushers, including jaw crushers, cone crushers, impact crushers, hammer crushers, etc., for efficient crushing of ores and rocks',
+      pageName: '高效固定式破碎机',
+      description: '泽鑫提供高效固定式破碎机，包括颚式、圆锥、反击式、锤式和辊式破碎机，适用于矿石、建材和骨料生产，具备高产能、低能耗和可靠性能。',
       locale: locale,
       baseUrl: baseUrl,
       breadcrumbId: null

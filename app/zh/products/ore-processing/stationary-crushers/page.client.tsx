@@ -69,8 +69,8 @@ export default function StationaryCrushersPageClient({ locale, initialData = [] 
   
   // 页面描述内容
   const pageDescription = isZh
-    ? '泽鑫矿山设备提供全系列固定式破碎机，包括颚式破碎机、圆锥破碎机、反击式破碎机、锤式破碎机、辊式破碎机和立轴冲击式破碎机，适用于各种矿石、岩石和建筑材料的破碎作业。我们的破碎设备具有结构坚固、性能可靠、产量高、能耗低等特点，能够满足客户不同工艺段的破碎需求。'
-    : 'Zexin Mining Equipment offers a complete range of stationary crushers including jaw crushers, cone crushers, impact crushers, hammer crushers, roll crushers, and vertical shaft impact crushers for various minerals, rocks, and construction materials. Our crushing equipment features robust construction, reliable performance, high production capacity, and low energy consumption to meet customer crushing requirements at different process stages.';
+    ? '泽鑫提供高效固定式破碎机，包括颚式、圆锥、反击式、锤式和辊式破碎机，适用于矿石、岩石和建筑材料。我们的设备结构坚固、性能可靠、产能高、能耗低，满足各种破碎需求。'
+    : 'Zexin offers high-efficiency stationary crushers including jaw, cone, impact, hammer and roller crushers for minerals, rocks and construction materials. Our equipment features robust construction, reliable performance, high capacity and low energy consumption.';
   
   // 产品标签导航 - 传递当前类别ID用于排除当前页面
   const productTabsElement = (

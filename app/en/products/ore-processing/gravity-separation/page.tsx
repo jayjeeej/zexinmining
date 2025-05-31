@@ -193,10 +193,12 @@ export default async function GravitySeparationPage({ params }: { params: { loca
   );
   
   // 4. 产品类别结构化数据
+  const categoryDescription = 'Zexin high-efficiency gravity separation equipment includes spiral chutes, jig machines, shaking tables and centrifugal concentrators. Utilizing mineral density differences for precise separation with high recovery rates, ideal for gold, tin and tungsten processing with minimal environmental impact.';
+  
   const categoryStructuredData = getProductCategoryStructuredData({
     categoryId: 'gravity-separation',
     categoryName: 'Gravity Separation Equipment',
-    description: 'Zexin Mining Equipment offers efficient gravity separation equipment including jig machines, shaking tables, spiral chutes and centrifugal concentrators for precise separation based on mineral density differences',
+    description: categoryDescription,
     productCount: productIds.length,
     locale,
     baseUrl
@@ -207,7 +209,7 @@ export default async function GravitySeparationPage({ params }: { params: { loca
     "@context": "https://schema.org",
     "@type": "ProductGroup",
     "name": "Zexin Gravity Separation Equipment Series",
-    "description": "Zexin gravity separation equipment series includes various models of spiral chutes, jig machines, shaking tables and centrifugal concentrators, offering comprehensive gravity separation solutions",
+    "description": categoryDescription,
     "url": `${baseUrl}/${locale}/products/ore-processing/gravity-separation`,
     "category": "Mineral Processing Equipment/Gravity Separation Equipment",
     "brand": {
@@ -242,7 +244,7 @@ export default async function GravitySeparationPage({ params }: { params: { loca
   const webPageStructuredData = getWebPageStructuredData({
     pageUrl: pageUrl,
     pageName: 'Gravity Separation Equipment',
-    description: 'Zexin Mining Equipment offers efficient gravity separation equipment including jig machines, shaking tables, spiral chutes and centrifugal concentrators for precise separation based on mineral density differences',
+    description: categoryDescription,
     locale: locale,
     baseUrl: baseUrl,
     breadcrumbId: null

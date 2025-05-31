@@ -70,7 +70,7 @@ export default function FeedingEquipmentPageClient({ locale, initialData = [] }:
   // 页面描述内容
   const pageDescription = isZh
     ? '泽鑫矿山设备专业生产各类给料设备，包括振动给料机、板式给料机、带式给料机、圆盘给料机、棒条振动给料机和电磁振动给料机等，适用于采矿、建材、化工等行业的物料输送需求。我们的给料设备采用先进的设计理念和耐磨材料，提供高效给料性能、精确流量控制、低能耗运行和简便维护，为客户提供可靠的物料输送解决方案。'
-    : 'Zexin Mining Equipment specializes in manufacturing various feeding equipment including vibratory feeders, apron feeders, belt feeders, disc feeders, grizzly feeders and electromagnetic vibrating feeders. Our feeding equipment features efficient material handling performance, precise flow control, low energy consumption and easy maintenance, providing reliable feeding solutions for mining, construction materials, chemical industry and other applications.';
+    : 'Zexin feeding equipment includes vibratory, apron & belt feeders with precise flow control & wear-resistant design. Boosts mining & construction productivity, reduces material waste & extends equipment lifespan. Custom solutions available.';
   
   // 产品标签导航
   const productTabsElement = (

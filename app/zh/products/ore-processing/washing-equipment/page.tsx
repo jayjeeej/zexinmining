@@ -208,12 +208,12 @@ export default async function WashingEquipmentPage({ params }: { params: { local
   );
   
   // 4. 产品类别结构化数据
+  const categoryDescription = '泽鑫提供高效洗矿设备，包括螺旋洗矿机、双轴洗矿机和轮斗洗砂机，采用耐磨材料设计，确保高效清洗性能，低水耗节能运行，矿石杂质去除率高，延长下游设备使用寿命。';
+  
   const categoryStructuredData = getProductCategoryStructuredData({
     categoryId: 'washing-equipment',
     categoryName: isZh ? '洗矿设备' : 'Washing Equipment',
-    description: isZh 
-      ? '泽鑫矿山设备提供高效洗矿设备，包括螺旋洗矿机、双轴洗矿机、轮斗洗砂机等，适用于各种矿石和骨料的清洗工艺' 
-      : 'Zexin Mining Equipment offers efficient washing equipment including spiral washers, twin shaft log washers, wheel bucket sand washers, suitable for cleaning various ores and aggregates',
+    description: categoryDescription,
     productCount: productIds.length,
     locale,
     baseUrl
@@ -224,9 +224,7 @@ export default async function WashingEquipmentPage({ params }: { params: { local
   const webPageStructuredData = getWebPageStructuredData({
     pageUrl: pageUrl,
     pageName: isZh ? '洗矿设备' : 'Washing Equipment',
-    description: isZh 
-      ? '泽鑫矿山设备提供高效洗矿设备，包括螺旋洗矿机、双轴洗矿机、轮斗洗砂机等，适用于各种矿石和骨料的清洗工艺' 
-      : 'Zexin Mining Equipment offers efficient washing equipment including spiral washers, twin shaft log washers, wheel bucket sand washers, suitable for cleaning various ores and aggregates',
+    description: categoryDescription,
     locale: locale,
     baseUrl: baseUrl,
     breadcrumbId: null

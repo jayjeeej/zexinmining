@@ -160,7 +160,7 @@ export default async function FeedingEquipmentPage({ params }: { params: { local
     categoryId: 'feeding-equipment',
     categoryName: isZh ? '给料设备' : 'Feeding Equipment',
     description: isZh 
-      ? '泽鑫矿山设备提供可靠的给料解决方案，包括振动给料机、电磁给料机、给料机械、板式给料机等，确保矿石处理线路稳定高效供料' 
+      ? '泽鑫给料设备包括振动给料机、板式给料机、带式给料机等，精确流量控制，耐磨结构设计，应用于采矿、建材行业，提高生产效率，降低物料损耗，延长设备使用寿命。' 
       : 'Zexin Mining Equipment offers reliable feeding solutions including vibrating feeders, electromagnetic feeders, mechanical feeders, plate feeders and more, ensuring stable and efficient material feeding for mineral processing lines',
     productCount: productIds.length,
     locale,
@@ -173,7 +173,7 @@ export default async function FeedingEquipmentPage({ params }: { params: { local
     pageUrl: pageUrl,
     pageName: isZh ? '给料设备' : 'Feeding Equipment',
     description: isZh 
-      ? '泽鑫矿山设备提供可靠的给料解决方案，包括振动给料机、电磁给料机、给料机械、板式给料机等，确保矿石处理线路稳定高效供料' 
+      ? '泽鑫给料设备包括振动给料机、板式给料机、带式给料机等，精确流量控制，耐磨结构设计，应用于采矿、建材行业，提高生产效率，降低物料损耗，延长设备使用寿命。' 
       : 'Zexin Mining Equipment offers reliable feeding solutions including vibrating feeders, electromagnetic feeders, mechanical feeders, plate feeders and more, ensuring stable and efficient material feeding for mineral processing lines',
     locale: locale,
     baseUrl: baseUrl,

@@ -31,7 +31,7 @@ export default function HeroSection({
   tabs,
   showDecorationLine = true,
   decorationLineColor = 'bg-gray-200',
-  titleColor = 'text-[#ff6633]',
+  titleColor = 'text-black',
   textAlign = 'left',
   headingLevel = 'h1'
 }: HeroSectionProps) {

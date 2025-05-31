@@ -170,7 +170,7 @@ export default function MineralProcessingSolutionsClient() {
           <section className="absolute inset-0 flex items-center justify-center">
             <Container>
               <div className="text-center w-full mx-auto px-4">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display text-[#ff6633] mb-2 sm:mb-3 md:mb-4 text-balance leading-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display text-black mb-2 sm:mb-3 md:mb-4 text-balance leading-tight">
                   选矿解决方案
                 </h1>
                 <p className="text-xs sm:text-sm md:text-base font-text text-white/90 mx-auto max-w-3xl">

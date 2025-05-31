@@ -191,7 +191,7 @@ export default async function GrindingEquipmentPage({ params }: { params: { loca
   const categoryStructuredData = getProductCategoryStructuredData({
     categoryId: 'grinding-equipment',
     categoryName: 'Grinding Equipment',
-    description: 'Zexin Mining Equipment offers efficient grinding equipment solutions, including ball mills, rod mills, autogenous mills, and SAG mills to meet the needs of ore grinding and material pulverization',
+    description: 'Zexin offers high-efficiency grinding equipment including wet overflow ball mills, energy-saving grid ball mills and rod mills, featuring advanced design and wear-resistant materials for precise particle control and low energy consumption.',
     productCount: productIds.length,
     locale,
     baseUrl
@@ -202,7 +202,7 @@ export default async function GrindingEquipmentPage({ params }: { params: { loca
   const webPageStructuredData = getWebPageStructuredData({
     pageUrl: pageUrl,
     pageName: 'Grinding Equipment',
-    description: 'Zexin Mining Equipment offers efficient grinding equipment solutions, including ball mills, rod mills, autogenous mills, and SAG mills to meet the needs of ore grinding and material pulverization',
+    description: 'Zexin offers high-efficiency grinding equipment including wet overflow ball mills, energy-saving grid ball mills and rod mills, featuring advanced design and wear-resistant materials for precise particle control and low energy consumption.',
     locale: locale,
     baseUrl: baseUrl,
     breadcrumbId: null
