@@ -32,6 +32,6 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // 只匹配根路径，排除验证文件
-  matcher: ['/', '/((?!api|_next|.*\\..*|baidu_verify_.*\\.html).*)'],
+  // 只匹配根路径，排除验证文件和其他特殊路径
+  matcher: ['/', '/((?!api|_next|.*\\..*|baidu_verify_.*|baidu-site-verification.*|BingSiteAuth.*|shenma-site-verification.*|sogousiteverification.*|fc8664f68b63308b6.*).*)'],
 }; 
