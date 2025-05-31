@@ -8,7 +8,6 @@ import {
   getCaseStudyStructuredData,
   getImageStructuredData
 } from '@/lib/structuredData';
-import { MultiStructuredData } from '@/components/StructuredData';
 import CaseDetailClient from './CaseDetailClient';
 import { safelyGetRouteParams } from '@/lib/utils';
 import fs from 'fs';
@@ -304,11 +303,11 @@ export default async function CaseDetailPage({
   // Base URL
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.zexinmining.com';
   
-  // 生成结构化数据
+  // 结构化数据
   const breadcrumbStructuredData = getBreadcrumbStructuredData(
     breadcrumbItems.map(item => ({
       name: item.name,
-      url: item.href
+      url: item.href || ''
     })),
     baseUrl
   );
@@ -319,89 +318,56 @@ export default async function CaseDetailPage({
   // 网站结构化数据
   const websiteStructuredData = getWebsiteStructuredData(locale, baseUrl);
   
-  // 案例研究结构化数据
-  const caseStudyStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    'headline': caseData.title,
-    'description': caseData.description,
-    'image': caseData.imageSrc 
-      ? `${baseUrl}${caseData.imageSrc}` 
-      : (caseData.images && caseData.images.length > 0 ? `${baseUrl}${caseData.images[0]}` : undefined),
-    'datePublished': caseData.date || new Date().toISOString().split('T')[0],
-    'author': {
-      '@type': 'Organization',
-      'name': '泽鑫矿山设备'
-    },
-    'publisher': {
-      '@type': 'Organization',
-      'name': '泽鑫矿山设备有限公司',
-      'logo': {
-        '@type': 'ImageObject',
-        'url': `${baseUrl}/logo/logo.png`
-      }
-    },
-    'mainEntityOfPage': {
-      '@type': 'WebPage',
-      '@id': `${baseUrl}/${locale}/cases/${caseId}`
-    }
-  };
+  // 案例结构化数据
+  const caseStudyStructuredData = getCaseStudyStructuredData({
+    caseId,
+    caseData,
+    locale,
+    baseUrl
+  });
   
-  // 图像结构化数据
-  const imageStructuredData = caseData.images && caseData.images.length > 0 
-    ? getImageStructuredData({
-      url: caseData.images[0],
+  // 图片结构化数据
+  const mainImage = caseData.imageSrc || (caseData.images && caseData.images[0]);
+  const imageStructuredData = mainImage ? getImageStructuredData({
+    url: mainImage,
     caption: caseData.title,
     description: caseData.description,
     baseUrl
-    })
-    : null;
-  
-  // 组合所有结构化数据
-  const structuredDataArray = [
-    breadcrumbStructuredData,
-    organizationStructuredData,
-    websiteStructuredData,
-    caseStudyStructuredData
-  ];
-  
-  if (imageStructuredData) {
-    structuredDataArray.push(imageStructuredData);
-  }
-  
-  // 相关案例
-  let relatedCases = [];
-  if (caseData.relatedCases && Array.isArray(caseData.relatedCases)) {
-    relatedCases = await Promise.all(caseData.relatedCases.map(async (relatedId: string) => {
-      try {
-        const relatedCaseData = await getCaseData(locale, relatedId);
-        if (relatedCaseData) {
-          return {
-            id: relatedId,
-            title: relatedCaseData.title,
-            description: relatedCaseData.description,
-            image: relatedCaseData.imageSrc || (relatedCaseData.images && relatedCaseData.images[0]),
-            href: `/${locale}/cases/${relatedId}`
-          };
-        }
-        return null;
-      } catch (error) {
-        console.error(`Error fetching related case ${relatedId}:`, error);
-        return null;
-      }
-    }));
-    
-    // 过滤掉空值
-    relatedCases = relatedCases.filter(Boolean);
-  }
+  }) : null;
   
   return (
     <>
-      <MultiStructuredData dataArray={structuredDataArray} />
+      {/* 使用独立script标签注入各结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudyStructuredData) }}
+      />
+      
+      {imageStructuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(imageStructuredData) }}
+        />
+      )}
+      
       <CaseDetailClient 
-        locale={locale}
-        caseDetail={caseData}
         breadcrumbItems={breadcrumbItems}
+        caseDetail={caseData}
       />
     </>
   );

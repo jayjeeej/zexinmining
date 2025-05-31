@@ -26,26 +26,6 @@ export default function StructuredData({ data, id }: StructuredDataProps) {
 }
 
 /**
- * 多结构化数据组件
- * 用于在页面中注入多个schema.org结构化数据
- * 
- * @param dataArray 要注入的结构化数据对象数组
- */
-export function MultiStructuredData({ dataArray }: { dataArray: Record<string, any>[] }) {
-  return (
-    <>
-      {dataArray.map((data, index) => (
-        <StructuredData 
-          key={`structured-data-${index}`}
-          data={data}
-          id={`structured-data-${index}`}
-        />
-      ))}
-    </>
-  );
-}
-
-/**
  * 产品数据注入组件
  * 用于在页面中注入产品数据，类似于山特维克的实现
  * 
@@ -66,4 +46,4 @@ export function ProductDataScript({
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
   );
-} 
+}

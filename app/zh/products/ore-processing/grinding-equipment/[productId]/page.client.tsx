@@ -148,11 +148,10 @@ export default function ClientGrindingEquipmentDetail({
           title={isZh ? "需要研磨设备解决方案？" : "Need Grinding Equipment Solutions?"}
           description={isZh ? "我们的专业工程师团队随时为您提供技术咨询和定制研磨设备方案。<br>联系我们获取更多研磨设备的详细信息和应用建议！" : "Our professional engineering team is always ready to provide technical consultation and customized grinding solutions.<br>Contact us for more details and application advice on our grinding equipment!"}
           buttonText={isZh ? "联系我们" : "Contact Us"}
-          linkUrl={`/${locale}/contact`}
+          linkUrl=""
           imageSrc="/images/mineral-processing/contact-support.jpg"
           imageAlt={isZh ? "研磨设备技术支持" : "Grinding Equipment Support"}
           rounded={false}
-          useModal={true}
           formTitle={{ 
             zh: '研磨设备咨询', 
             en: 'Grinding Equipment Inquiry' 

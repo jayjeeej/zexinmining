@@ -3,6 +3,7 @@ import './globals.css'; // Import global styles
 import '../styles/performance.css'; // 引入性能优化全局样式
 import StructuredData from '../components/StructuredData';
 import { getOrganizationStructuredData } from '../lib/structuredData';
+import BaiduVerificationTag from './components/BaiduVerificationTag';
 
 export const metadata: Metadata = {
   title: {
@@ -57,11 +58,8 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'rvOFxT0dkAmX13xPiyte-guHg1A4uE2JmEwTo6JYz-A', // 替换为您的验证码
-    // 百度站长需要使用自定义验证，这里注释掉
-    // baidu: 'your-baidu-site-verification-code',
     other: {
-      // 如需百度站长验证，请替换为实际的验证码
-      // baidu: 'your-baidu-site-verification-code', 
+      'baidu-site-verification': ['codeva-rq96ZYqafE', 'codeva-nbtCgXOQHG'], // 添加百度验证码
     }
   },
   icons: {
@@ -107,9 +105,11 @@ export default function RootLayout({
   return (
     <html lang="zh" suppressHydrationWarning>
       <head>
-        {/* 百度站点验证 */}
+        {/* 百度站点验证 - 静态标签 */}
         <meta name="baidu-site-verification" content="codeva-rq96ZYqafE" />
         <meta name="baidu-site-verification" content="codeva-nbtCgXOQHG" />
+        {/* 百度站点验证 - 动态组件（针对爬虫） */}
+        <BaiduVerificationTag />
         {/* 预连接到重要资源 */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

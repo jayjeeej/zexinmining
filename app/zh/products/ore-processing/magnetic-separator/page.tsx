@@ -5,12 +5,12 @@ import {
   getProductGroupStructuredData,
   getOrganizationStructuredData,
   getBreadcrumbStructuredData,
-  getProductCategoryStructuredData
+  getProductCategoryStructuredData,
+  getWebPageStructuredData
 } from '@/lib/structuredData';
-import { MultiStructuredData } from '@/components/StructuredData';
-import { getBreadcrumbConfig } from '@/lib/navigation';
 import fs from 'fs';
 import path from 'path';
+import { getBreadcrumbConfig } from '@/lib/navigation';
 
 // 磁选设备产品数据
 const magneticSeparatorProducts = [
@@ -139,7 +139,7 @@ export default async function MagneticSeparatorPage({ params }: { params: { loca
   // 直接从文件系统读取产品数据
   const productsData = await fetchProductsDataDirect(locale);
   
-  const isZh = locale === 'zh';
+  const isZh = true; // 中文页面
   const baseUrl = 'https://www.zexinmining.com';
   
   // 面包屑配置
@@ -147,19 +147,19 @@ export default async function MagneticSeparatorPage({ params }: { params: { loca
   const breadcrumbItems = [
     { name: breadcrumbConfig.home.name, href: `/${locale}` },
     { name: breadcrumbConfig.products.name, href: `/${locale}/products` },
-    { name: isZh ? '选矿设备' : 'Ore Processing Equipment', href: `/${locale}/products/ore-processing` },
-    { name: isZh ? '磁选机' : 'Magnetic Separator' }
+    { name: '选矿设备', href: `/${locale}/products/ore-processing` },
+    { name: '磁选机' }
   ];
   
   // 准备结构化数据
   // 1. 产品组结构化数据
   const productGroupStructuredData = getProductGroupStructuredData({
-    groupName: isZh ? '磁选机' : 'Magnetic Separator',
+    groupName: '磁选机',
     groupId: 'magnetic-separator',
     products: magneticSeparatorProducts.map(p => ({
       id: p.id,
       model: p.model,
-      title: locale === 'zh' ? p.title.zh : p.title.en
+      title: p.title.zh
     })),
     locale: locale
   });
@@ -179,27 +179,51 @@ export default async function MagneticSeparatorPage({ params }: { params: { loca
   // 4. 产品类别结构化数据
   const categoryStructuredData = getProductCategoryStructuredData({
     categoryId: 'magnetic-separator',
-    categoryName: isZh ? '磁选机' : 'Magnetic Separator',
-    description: isZh 
-      ? '泽鑫矿山设备提供高性能磁选机系列，包括干式磁选机、湿式磁选机、强磁选机、弱磁选机等，适用于各类磁性矿物的高效分离' 
-      : 'Zexin Mining Equipment offers high-performance magnetic separator series, including dry magnetic separators, wet magnetic separators, high-intensity magnetic separators, and low-intensity magnetic separators for efficient separation of various magnetic minerals',
+    categoryName: '磁选机',
+    description: '泽鑫矿山设备提供高性能磁选机系列，包括干式磁选机、湿式磁选机、强磁选机、弱磁选机等，适用于各类磁性矿物的高效分离',
     productCount: productIds.length,
     locale,
     baseUrl
   });
   
-  // 组合所有结构化数据
-  const structuredDataArray = [
-    productGroupStructuredData,
-    organizationStructuredData,
-    breadcrumbStructuredData,
-    categoryStructuredData
-  ];
+  // 5. 网页结构化数据
+  const pageUrl = `${baseUrl}/${locale}/products/ore-processing/magnetic-separator`;
+  const webPageStructuredData = getWebPageStructuredData({
+    pageUrl: pageUrl,
+    pageName: '磁选机-永磁滚筒磁选机湿式强磁机干式磁选机 | 泽鑫矿山设备',
+    description: '泽鑫提供永磁滚筒磁选机和湿式强磁机，专业铁矿石磁选设备，铁精矿品位65%，磁场可调，节能高效。',
+    locale: locale,
+    baseUrl: baseUrl,
+    images: ['/images/products/ore-processing/magnetic-separator.jpg']
+  });
 
   return (
     <>
-      {/* 使用MultiStructuredData组件注入结构化数据 */}
-      <MultiStructuredData dataArray={structuredDataArray} />
+      {/* 使用独立script标签注入各结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productGroupStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageStructuredData) }}
+      />
       
       {/* 将数据预先嵌入页面，避免客户端重新获取 */}
       <script

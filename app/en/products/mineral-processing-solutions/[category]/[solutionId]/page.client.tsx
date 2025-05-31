@@ -4,14 +4,11 @@ import React, { useState, useEffect } from 'react';
 import OptimizedImage from '@/components/layouts/OptimizedImage';
 import Link from 'next/link';
 import ProductLayout from '@/components/layouts/ProductLayout';
-import { getBreadcrumbConfig } from '@/lib/navigation';
 import Container from '@/components/Container';
 import ContactCard from '@/components/ContactCard';
 import ProductApplications from '@/components/ProductDetail/ProductApplications';
 import RelatedProducts from '@/components/ProductDetail/RelatedProducts';
 import HeroSection from '@/components/HeroSection';
-import { getBreadcrumbStructuredData, getOrganizationStructuredData } from '@/lib/structuredData';
-import { MultiStructuredData } from '@/components/StructuredData';
 import CardAnimationProvider from '@/components/CardAnimationProvider';
 import ContactFormModal from '@/components/ContactFormModal';
 
@@ -100,7 +97,6 @@ interface SolutionData {
 }
 
 interface SolutionDetailClientProps {
-  locale: string;
   category: string;
   solutionId: string;
   solutionData: SolutionData;
@@ -109,19 +105,21 @@ interface SolutionDetailClientProps {
 }
 
 export default function SolutionDetailClient({ 
-  locale, 
   category,
   solutionId,
   solutionData,
   breadcrumbItems,
   relatedProducts
 }: SolutionDetailClientProps) {
-  const isZh = locale === 'zh';
+  // 硬编码为英文版
+  const locale = 'en';
+  const isZh = false;
+  
   // 添加模态框状态
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   // 获取分类名称
-  function getCategoryName(category: string, isZh: boolean): string {
+  function getCategoryName(category: string): string {
     const categoryNames: Record<string, {zh: string, en: string}> = {
       'new-energy': {zh: '新能源矿种', en: 'New Energy Minerals'},
       'precious-metals': {zh: '贵金属', en: 'Precious Metals'},
@@ -130,19 +128,19 @@ export default function SolutionDetailClient({
       'non-metallic': {zh: '非金属', en: 'Non-metallic Minerals'}
     };
     
-    return isZh ? categoryNames[category]?.zh || category : categoryNames[category]?.en || category;
+    return categoryNames[category]?.en || category;
   }
 
   // 获取多语言字段值的辅助函数
-  const getLocalizedValue = (field: any, locale: string): string => {
+  const getLocalizedValue = (field: any): string => {
     if (!field) return '';
     
     // 如果是字符串，直接返回
     if (typeof field === 'string') return field;
     
-    // 如果是对象，根据locale返回相应语言的值
+    // 如果是对象，返回英文值
     if (typeof field === 'object') {
-      return field[locale] || field[isZh ? 'zh' : 'en'] || '';
+      return field['en'] || '';
     }
     
     return '';
@@ -150,19 +148,13 @@ export default function SolutionDetailClient({
 
   // 获取页面标题
   const pageTitle = solutionData.title 
-    ? getLocalizedValue(solutionData.title, locale)
-    : (isZh ? 
-      `${getLocalizedValue(solutionData.mineralName, 'zh')}选矿工艺` : 
-      `${getLocalizedValue(solutionData.mineralName, 'en')} Beneficiation Process`
-    );
+    ? getLocalizedValue(solutionData.title)
+    : `${getLocalizedValue(solutionData.mineralName)} Beneficiation Process`;
 
   // 获取页面描述
   const pageDescription = solutionData.description 
-    ? getLocalizedValue(solutionData.description, locale)
-    : (isZh ? 
-      `泽鑫提供专业的${getLocalizedValue(solutionData.mineralName, 'zh')}选矿工艺解决方案，高效提取和加工${getLocalizedValue(solutionData.mineralName, 'zh')}矿物资源。` : 
-      `Zexin provides professional ${getLocalizedValue(solutionData.mineralName, 'en')} beneficiation process solutions for efficient extraction and processing of ${getLocalizedValue(solutionData.mineralName, 'en')} mineral resources.`
-    );
+    ? getLocalizedValue(solutionData.description)
+    : `Zexin provides professional ${getLocalizedValue(solutionData.mineralName)} beneficiation process solutions for efficient extraction and processing of ${getLocalizedValue(solutionData.mineralName)} mineral resources.`;
 
   // 处理当前显示的流程步骤 - 改为手风琴状态管理
   const [openSteps, setOpenSteps] = useState<Set<number>>(() => {
@@ -187,81 +179,8 @@ export default function SolutionDetailClient({
     });
   };
 
-  // 生成面包屑结构化数据
-  const breadcrumbStructuredData = getBreadcrumbStructuredData(
-    breadcrumbItems.map(item => ({ 
-      name: item.name, 
-      url: item.href 
-    }))
-  );
-
-  // 获取组织结构化数据
-  const organizationStructuredData = getOrganizationStructuredData(isZh);
-
-  // 创建技术文章结构化数据
-  const technicalArticleStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "TechnicalArticle",
-    "headline": pageTitle,
-    "description": pageDescription,
-    "author": {
-      "@type": "Organization",
-      "name": isZh ? "泽鑫矿山设备" : "Zexin Mining Equipment"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": isZh ? "泽鑫矿山设备" : "Zexin Mining Equipment",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "/logo/logo.png"
-      }
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://zexin-mining.com/${locale}/products/mineral-processing-solutions/${category}/${solutionId}`
-    },
-    "about": {
-      "@type": "Thing",
-      "name": getLocalizedValue(solutionData.mineralName, locale)
-    },
-    "proficiencyLevel": "Expert",
-    "step": solutionData.processSteps.map(step => ({
-      "@type": "HowToStep",
-      "name": step.title,
-      "text": step.description
-    }))
-  };
-
-  // 创建服务结构化数据
-  const serviceStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": pageTitle,
-    "description": pageDescription,
-    "provider": {
-      "@type": "Organization",
-      "name": isZh ? "泽鑫矿山设备" : "Zexin Mining Equipment"
-    },
-    "serviceType": isZh ? "选矿工艺解决方案" : "Mineral Processing Solution",
-    "areaServed": {
-      "@type": "Country",
-      "name": isZh ? "全球" : "Global"
-    }
-  };
-
-  // 合并所有结构化数据
-  const structuredDataArray = [
-    breadcrumbStructuredData,
-    organizationStructuredData,
-    technicalArticleStructuredData,
-    serviceStructuredData
-  ];
-
   return (
     <>
-      {/* SEO结构化数据 */}
-      <MultiStructuredData dataArray={structuredDataArray} />
-      
       {/* 添加ContactFormModal组件 */}
       <ContactFormModal
         isOpen={isContactModalOpen}
@@ -275,7 +194,7 @@ export default function SolutionDetailClient({
           zh: '请填写以下表单，我们的专业团队将根据您的具体需求提供定制方案', 
           en: 'Please fill in the form below, and our professional team will provide customized solutions based on your specific requirements' 
         }}
-        subjectDefaultValue={`${isZh ? '关于' : 'About '} ${getLocalizedValue(solutionData.mineralName, locale)} ${isZh ? '选矿解决方案的咨询' : ' Processing Solution'}`}
+        subjectDefaultValue={`${isZh ? 'About ' : ''} ${getLocalizedValue(solutionData.mineralName)} ${isZh ? '选矿解决方案的咨询' : ' Processing Solution'}`}
       />
       
       {/* 添加CardAnimationProvider以启用流程图动画效果 */}
@@ -298,6 +217,7 @@ export default function SolutionDetailClient({
               showDecorationLine={true}
               decorationLineColor="bg-gray-200"
               backgroundColor="bg-transparent"
+              headingLevel="h1"
             />
           </div>
           <div className="hidden md:block">
@@ -310,6 +230,7 @@ export default function SolutionDetailClient({
               textAlign="center"
               showDecorationLine={false}
               backgroundColor="bg-transparent"
+              headingLevel="h1"
             />
           </div>
         </div>
@@ -323,14 +244,14 @@ export default function SolutionDetailClient({
             <div className="w-full md:w-1/3 text-left mb-4 md:mb-0">
               <h2 className="text-xl md:text-2xl font-normal">
                 {solutionData.processTitle 
-                  ? getLocalizedValue(solutionData.processTitle, locale)
-                  : (isZh ? '工艺流程介绍' : 'Process Introduction')
+                  ? getLocalizedValue(solutionData.processTitle)
+                  : 'Process Introduction'
                 }
               </h2>
             </div>
             <div className="w-full md:w-2/3 text-right">
               <p className="text-lg sm:text-xl md:text-[26px] font-bold w-full">
-                {getLocalizedValue(solutionData.processIntroduction, locale)}
+                {getLocalizedValue(solutionData.processIntroduction)}
               </p>
             </div>
           </div>

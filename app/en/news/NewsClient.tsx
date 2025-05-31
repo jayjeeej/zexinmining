@@ -6,9 +6,8 @@ import Container from '@/components/Container';
 import OptimizedImage from '@/components/layouts/OptimizedImage';
 import Link from 'next/link';
 import { formatDate } from '@/lib/utils/date';
-import { getBreadcrumbStructuredData, getOrganizationStructuredData } from '@/lib/structuredData';
-import { MultiStructuredData } from '@/components/StructuredData';
 import { NewsItem } from '@/lib/api/news';
+import HeroSection from '@/components/HeroSection';
 
 // 组件属性类型
 interface NewsClientProps {
@@ -392,195 +391,166 @@ export default function NewsClient({ locale, initialNewsItems, breadcrumbItems, 
     saveStateToHistory(); // 更新状态
   };
 
-  // SEO结构化数据
-  const breadcrumbStructuredData = getBreadcrumbStructuredData(
-    breadcrumbItems.map(item => ({ name: item.name, url: item.href }))
-  );
-  const organizationStructuredData = getOrganizationStructuredData(isZh);
-  
-  const newsListStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "headline": isZh ? "新闻中心" : "News Center",
-    "description": isZh ? 
-      "了解泽鑫矿山设备的最新动态、产品发布和企业新闻" : 
-      "Stay updated with the latest news, product releases and corporate updates from Zexin Mining Equipment",
-    "url": `https://zexin-mining.com/${locale}/news`,
-    "publisher": {
-      "@type": "Organization",
-      "name": isZh ? "泽鑫矿山设备" : "Zexin Mining Equipment",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://zexin-mining.com/logo/logo.png"
-      }
-    }
-  };
-
-  // 合并所有结构化数据
-  const structuredDataArray = [
-    breadcrumbStructuredData,
-    organizationStructuredData,
-    newsListStructuredData
-  ];
-
   return (
-    <>
-      {/* SEO结构化数据 */}
-      <MultiStructuredData dataArray={structuredDataArray} />
-    
-      <ProductLayout locale={locale} breadcrumbItems={breadcrumbItems}>
-        {/* 主要内容区域 - 采用左右布局 */}
-        <section className="bg-white py-16 md:py-24">
-          <Container>
-            <div className="flex flex-col lg:flex-row gap-12">
-              {/* 左侧分类导航 */}
-              <div className="w-full lg:w-1/5 lg:border-r lg:border-gray-100 lg:pr-6">
-                <h2 className="text-lg mb-4 font-normal text-gray-500">{isZh ? '分类' : 'Categories'}</h2>
-                <div className="flex flex-col space-y-3">
-                  {categories.map((category) => (
-                    <button
-                      key={category.id}
-                      onClick={() => handleFilterChange(category.id)}
-                      className={`text-left py-1 transition-colors text-base ${
-                        activeFilter === category.id 
-                          ? 'text-[#ff6633] font-medium' 
-                          : 'text-gray-700 hover:text-[#ff6633]'
-                      }`}
-                    >
-                      {category.name}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* 右侧新闻列表 */}
-              <div className="w-full lg:w-4/5">
-                {/* 页面标题 */}
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-16">
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-black">
-                    {isZh ? '新闻中心' : 'News Center'}
-                  </h2>
-                </div>
-                
-                {/* 搜索框 */}
-                <div className="mb-8 flex justify-end">
-                  <div className="relative w-full max-w-xs">
-                    <input
-                      type="text"
-                      id="news-search"
-                      name="news-search"
-                      value={searchTerm}
-                      onChange={handleSearch}
-                      placeholder={isZh ? "搜索新闻..." : "Search news..."}
-                      className="w-full px-4 py-2 border-b border-[#ff6633] pl-10 focus:outline-none focus:border-b focus:border-[#ff6633] bg-transparent"
-                    />
-                    <svg 
-                      className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24" 
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                    </svg>
-                  </div>
-                </div>
-                
-                {displayedNews.length > 0 ? (
-                  <>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
-                      {displayedNews.map((news) => (
-                        <Link 
-                          href={`/${locale}/news/${news.slug}`}
-                          key={news.id}
-                          className="group block no-underline"
-                        >
-                          <div className="h-full flex flex-col">
-                            <div className="relative aspect-[4/3] mb-4 overflow-hidden">
-                              <OptimizedImage
-                                src={news.image || '/images/news/placeholder.jpg'}
-                                alt={news.title}
-                                fill
-                                className="object-cover w-full h-full"
-                                unoptimized={true}
-                              />
-                            </div>
-                            <div className="flex-1 flex flex-col">
-                              <div className="flex items-center gap-4 mb-2 text-sm">
-                                <span className="text-gray-500">{formatDate(news.date, locale)}</span>
-                                <span className="text-[#ff6633]">
-                                  {categories.find(c => c.id === news.category)?.name || news.category}
-                                </span>
-                              </div>
-                              <h2 className="text-xl font-normal mb-3 text-black group-hover:text-[#ff6633] transition-colors">
-                                {news.title}
-                              </h2>
-                              <p className="text-gray-600 text-sm line-clamp-3 mb-4">
-                                {news.summary}
-                              </p>
-                              <div className="mt-auto">
-                                <span className="inline-flex items-center text-[#ff6633] text-sm font-normal group-hover:underline">
-                                  {isZh ? '阅读全文' : 'Read article'}
-                                  <svg className="w-4 h-4 ml-1" viewBox="0 0 16 16" fill="none">
-                                    <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
-                                  </svg>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
-
-                    {/* 进度条和加载更多按钮 - 当filteredNews数量大于6个时显示 */}
-                    {filteredNews.length > 6 && (
-                      <div className="mt-20 flex flex-col items-center gap-y-8">
-                        {/* 进度指示器 */}
-                        <div className="text-center">
-                          <div className="relative mb-2 h-[2px] w-[200px] bg-gray-100">
-                            <span 
-                              className="absolute left-0 top-0 h-[2px] bg-orange-500" 
-                              style={{width: `${progressPercentage}%`}}
-                            ></span>
-                          </div>
-                          <p>{Math.min(displayCount, filteredNews.length)} / {filteredNews.length}</p>
-                        </div>
-                        
-                        {/* 加载更多按钮 - 仅当未加载全部内容时显示 */}
-                        {displayCount < filteredNews.length && (
-                        <button
-                          onClick={loadMore}
-                          disabled={loading}
-                            className="group inline-flex items-center text-sm gap-3 transition-colors no-underline bg-gray-100 px-6 py-3 hover:bg-gray-200 disabled:bg-gray-100 disabled:cursor-not-allowed"
-                        >
-                          {loading ? (
-                            <>
-                              <svg className="animate-spin -ml-1 mr-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"></circle>
-                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                              </svg>
-                                <span className="w-full">{isZh ? '加载中...' : 'Loading...'}</span>
-                            </>
-                          ) : (
-                              <span className="w-full">{isZh ? '加载更多' : 'Load more'}</span>
-                          )}
-                        </button>
-                        )}
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <div className="py-12 text-center">
-                    <p className="text-gray-500 text-lg">
-                      {isZh ? '没有找到相关新闻' : 'No news found'}
-                    </p>
-                  </div>
-                )}
+    <ProductLayout locale={locale} breadcrumbItems={breadcrumbItems}>
+      {/* 添加HeroSection组件，设置headingLevel为h1 */}
+      <HeroSection
+        title={isZh ? '新闻中心' : 'News Center'}
+        description={isZh ? '了解泽鑫矿山设备的最新动态、产品发布和企业新闻' : 'Stay updated with the latest news, product releases, and corporate updates from Zexin Mining Equipment'}
+        headingLevel="h1"
+      />
+      
+      {/* 主要内容区域 - 采用左右布局 */}
+      <section className="bg-white py-16 md:py-24">
+        <Container>
+          <div className="flex flex-col lg:flex-row gap-12">
+            {/* 左侧分类导航 */}
+            <div className="w-full lg:w-1/5 lg:border-r lg:border-gray-100 lg:pr-6">
+              <h2 className="text-lg mb-4 font-normal text-gray-500">{isZh ? '分类' : 'Categories'}</h2>
+              <div className="flex flex-col space-y-3">
+                {categories.map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => handleFilterChange(category.id)}
+                    className={`text-left py-1 transition-colors text-base ${
+                      activeFilter === category.id 
+                        ? 'text-[#ff6633] font-medium' 
+                        : 'text-gray-700 hover:text-[#ff6633]'
+                    }`}
+                  >
+                    {category.name}
+                  </button>
+                ))}
               </div>
             </div>
-          </Container>
-        </section>
-      </ProductLayout>
-    </>
+
+            {/* 右侧新闻列表 */}
+            <div className="w-full lg:w-4/5">
+              {/* 页面标题 - 修改为h2 */}
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-16">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-black">
+                  {isZh ? '新闻列表' : 'News List'}
+                </h2>
+              </div>
+              
+              {/* 搜索框 */}
+              <div className="mb-8 flex justify-end">
+                <div className="relative w-full max-w-xs">
+                  <input
+                    type="text"
+                    id="news-search"
+                    name="news-search"
+                    value={searchTerm}
+                    onChange={handleSearch}
+                    placeholder={isZh ? "搜索新闻..." : "Search news..."}
+                    className="w-full px-4 py-2 border-b border-[#ff6633] pl-10 focus:outline-none focus:border-b focus:border-[#ff6633] bg-transparent"
+                  />
+                  <svg 
+                    className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24" 
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                  </svg>
+                </div>
+              </div>
+              
+              {displayedNews.length > 0 ? (
+                <>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+                    {displayedNews.map((news) => (
+                      <Link 
+                        href={`/${locale}/news/${news.slug}`}
+                        key={news.id}
+                        className="group block no-underline"
+                      >
+                        <div className="h-full flex flex-col">
+                          <div className="relative aspect-[4/3] mb-4 overflow-hidden">
+                            <OptimizedImage
+                              src={news.image || '/images/news/placeholder.jpg'}
+                              alt={news.title}
+                              fill
+                              className="object-cover w-full h-full"
+                              unoptimized={true}
+                            />
+                          </div>
+                          <div className="flex-1 flex flex-col">
+                            <div className="flex items-center gap-4 mb-2 text-sm">
+                              <span className="text-gray-500">{formatDate(news.date, locale)}</span>
+                              <span className="text-[#ff6633]">
+                                {categories.find(c => c.id === news.category)?.name || news.category}
+                              </span>
+                            </div>
+                            <h2 className="text-xl font-normal mb-3 text-black group-hover:text-[#ff6633] transition-colors">
+                              {news.title}
+                            </h2>
+                            <p className="text-gray-600 text-sm line-clamp-3 mb-4">
+                              {news.summary}
+                            </p>
+                            <div className="mt-auto">
+                              <span className="inline-flex items-center text-[#ff6633] text-sm font-normal group-hover:underline">
+                                {isZh ? '阅读全文' : 'Read article'}
+                                <svg className="w-4 h-4 ml-1" viewBox="0 0 16 16" fill="none">
+                                  <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+
+                  {/* 进度条和加载更多按钮 - 当filteredNews数量大于6个时显示 */}
+                  {filteredNews.length > 6 && (
+                    <div className="mt-20 flex flex-col items-center gap-y-8">
+                      {/* 进度指示器 */}
+                      <div className="text-center">
+                        <div className="relative mb-2 h-[2px] w-[200px] bg-gray-100">
+                          <span 
+                            className="absolute left-0 top-0 h-[2px] bg-orange-500" 
+                            style={{width: `${progressPercentage}%`}}
+                          ></span>
+                        </div>
+                        <p>{Math.min(displayCount, filteredNews.length)} / {filteredNews.length}</p>
+                      </div>
+                      
+                      {/* 加载更多按钮 - 仅当未加载全部内容时显示 */}
+                      {displayCount < filteredNews.length && (
+                      <button
+                        onClick={loadMore}
+                        disabled={loading}
+                          className="group inline-flex items-center text-sm gap-3 transition-colors no-underline bg-gray-100 px-6 py-3 hover:bg-gray-200 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                      >
+                        {loading ? (
+                          <>
+                            <svg className="animate-spin -ml-1 mr-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"></circle>
+                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                              <span className="w-full">{isZh ? '加载中...' : 'Loading...'}</span>
+                          </>
+                        ) : (
+                            <span className="w-full">{isZh ? '加载更多' : 'Load more'}</span>
+                        )}
+                      </button>
+                      )}
+                    </div>
+                  )}
+                </>
+              ) : (
+                <div className="py-12 text-center">
+                  <p className="text-gray-500 text-lg">
+                    {isZh ? '没有找到相关新闻' : 'No news found'}
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+        </Container>
+      </section>
+    </ProductLayout>
   );
 }

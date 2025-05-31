@@ -8,9 +8,12 @@ import {
   getFAQStructuredData, 
   getImageStructuredData,
   getProductCategoryStructuredData,
-  getOrganizationStructuredData
+  getOrganizationStructuredData,
+  getProductSpecificationsStructuredData,
+  getSpecificationTableStructuredData,
+  getProductVariantStructuredData,
+  getWebPageStructuredData
 } from '@/lib/structuredData';
-import StructuredData, { MultiStructuredData } from '@/components/StructuredData';
 import ProductDataInjection from '@/components/ProductDetail/ProductDataInjection';
 import ClientFlotationEquipmentDetail from './page.client';
 import { ProductSpecification } from '@/lib/productDataSchema';
@@ -275,7 +278,14 @@ async function getRelatedProductsData(relatedIds: string[], locale: string) {
 
 // 格式化规格数据为统一格式
 function formatSpecifications(product: any): ProductSpecification[] {
-  if (!product.specifications || !product.specifications.tableHeaders || !product.specifications.tableData) {
+  // 基础验证
+  if (
+    !product || 
+    !product.specifications || 
+    !product.specifications.tableHeaders || 
+    !product.specifications.tableData ||
+    product.specifications.tableData.length === 0
+  ) {
     return [];
   }
   
@@ -323,43 +333,21 @@ export default async function ProductDetailPage({
   try {
     // 静态路由下直接指定locale而不是从params获取
     const locale = 'en';
-    const { productId } = await safelyGetRouteParams(params);
+    const productId = (await params).productId;
     
     // 获取产品数据
     const { product, isSuccess } = await getProductData(productId, locale);
-    if (!isSuccess || !product) return <div>Product not found</div>;
+    if (!isSuccess || !product) return notFound();
     
-    // 格式化规格数据
-    const specifications = formatSpecifications(product);
+    // 验证产品是否属于浮选设备类别
+    if (product.subcategory !== 'flotation-equipment') {
+      // 静默处理
+    }
     
-    // 获取应用数据
-    const applications = product.applications && Array.isArray(product.applications.items) 
-      ? product.applications.items.map((app: any) => ({
-          icon: app.icon || '/icons/application-default.svg',
-          title: app.title || '',
-          description: app.description || ''
-        }))
-      : [];
+    const isZh = false;
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.zexinmining.com';
     
-    // 技术优势数据
-    const technicalAdvantages = product.technicalAdvantages && Array.isArray(product.technicalAdvantages.items) 
-      ? product.technicalAdvantages.items.map((adv: any) => ({
-          title: adv.title || '',
-          description: adv.description || ''
-        }))
-      : [];
-    
-    // 案例研究数据
-    const caseStudies = product.caseStudies || [];
-    
-    // 常见问题数据
-    const faqs = product.faqs || [];
-    
-    // 相关产品数据
-    const relatedProductIds = product.relatedProducts || [];
-    const relatedProducts = await getRelatedProductsData(relatedProductIds, locale);
-    
-    // 获取面包屑导航
+    // 使用统一函数构建面包屑导航
     const breadcrumbConfig = getProductDetailBreadcrumbConfig({
       locale,
       productId,
@@ -367,61 +355,242 @@ export default async function ProductDetailPage({
       category: 'flotation-equipment'
     });
     
-    // 构建结构化数据
-    const structuredDataItems = [
-      // 产品结构化数据
-      getProductStructuredData({
-        productId,
-        product,
-        locale
-      }),
-      // 面包屑结构化数据
-      getBreadcrumbStructuredData(breadcrumbConfig.map(item => ({ name: item.name, url: item.href }))),
-      // 产品分类结构化数据
-      getProductCategoryStructuredData({
-        categoryId: 'flotation-equipment',
-        categoryName: 'Flotation Equipment',
-        description: 'Zexin Mining offers efficient flotation equipment',
-        locale
-      }),
-      // 组织结构化数据
-      getOrganizationStructuredData()
+    // 定义面包屑项目用于结构化数据
+    const breadcrumbItems = [
+      { name: 'Home', url: '/en' },
+      { name: 'Products', url: '/en/products' },
+      { name: 'Ore Processing', url: '/en/products/ore-processing' },
+      { name: 'Flotation Equipment', url: '/en/products/ore-processing/flotation-equipment' },
+      { name: product.title, url: `/en/products/ore-processing/flotation-equipment/${productId}` }
     ];
     
-    // 如果有FAQ，添加FAQ结构化数据
-    if (faqs.length > 0) {
-      structuredDataItems.push(
-        getFAQStructuredData(faqs)
-      );
+    // 格式化规格数据
+    const specifications = formatSpecifications(product);
+    
+    // 应用领域格式化
+    const applications = Array.isArray(product.applications) 
+      ? product.applications.map((app: any) => ({
+          icon: app.icon || '/icons/application.svg',
+          title: app.title || '',
+          description: app.description || ''
+        }))
+      : [];
+    
+    // 技术优势格式化  
+    const technicalAdvantages = Array.isArray(product.technicalAdvantages)
+      ? product.technicalAdvantages.map((adv: any) => ({
+          title: adv.title || '',
+          description: adv.description || ''
+        }))
+      : [];
+    
+    // 案例研究格式化
+    const caseStudies = Array.isArray(product.caseStudies)
+      ? product.caseStudies.map((cs: any) => ({
+          title: cs.title || '',
+          description: cs.description || cs.summary || '',
+          results: cs.results || '',
+          imageSrc: cs.imageSrc || null
+        }))
+      : [];
+    
+    // FAQ格式化
+    const faqs = Array.isArray(product.faqs)
+      ? product.faqs.map((faq: any) => ({
+          question: faq.question || '',
+          answer: faq.answer || ''
+        }))
+      : [];
+    
+    // 获取相关产品数据
+    let relatedProducts: any[] = [];
+    if (product.relatedProducts && Array.isArray(product.relatedProducts)) {
+      relatedProducts = await getRelatedProductsData(product.relatedProducts, locale);
     }
     
-    // 如果有产品图片，添加图片结构化数据
-    if (product.imageSrc) {
-      structuredDataItems.push(
-        getImageStructuredData({
-          url: product.imageSrc,
-          caption: product.title, // 使用caption而不是alt
-          width: 800,
-          height: 600
-        })
-      );
+    // 创建技术规格的结构化数据属性
+    const specificationProperties = getProductSpecificationsStructuredData({
+      product,
+      modelIndex: 0
+    });
+    
+    // 构建增强的产品结构化数据
+    const productStructuredData = getProductStructuredData({
+      productId,
+      product,
+      locale,
+      baseUrl
+    });
+    
+    // 增强产品结构化数据
+    const enhancedProductStructuredData = {
+      ...productStructuredData,
+      additionalProperty: specificationProperties,
+      isRelatedTo: [] as Array<{
+        "@type": string;
+        "name": string;
+        "url": string;
+      }>
+    };
+    
+    // 如果有相关产品，添加到结构化数据
+    if (relatedProducts && relatedProducts.length > 0) {
+      enhancedProductStructuredData.isRelatedTo = relatedProducts.map(related => ({
+        "@type": "Product",
+        "name": related.title,
+        "url": `${baseUrl}${related.href}`
+      }));
     }
+    
+    // 构建产品变体结构化数据（如果有多个型号）
+    const productVariantStructuredData = getProductVariantStructuredData({
+      product,
+      groupName: product.series || product.title,
+      locale,
+      baseUrl
+    });
+    
+    // 创建面包屑结构化数据
+    const breadcrumbStructuredData = getBreadcrumbStructuredData(breadcrumbItems, baseUrl);
+    
+    // 创建FAQ结构化数据
+    const faqStructuredData = faqs.length > 0 
+      ? getFAQStructuredData(faqs)
+      : null;
+    
+    // 创建图片结构化数据
+    const imageStructuredData = getImageStructuredData({
+      url: product.imageSrc,
+      caption: product.title,
+      description: product.overview || "",
+      baseUrl
+    });
+    
+    // 创建产品类别结构化数据
+    const categoryStructuredData = getProductCategoryStructuredData({
+      categoryId: 'flotation-equipment',
+      categoryName: 'Flotation Equipment',
+      description: 'Zexin Mining Equipment offers efficient flotation equipment including pneumatic flotation cells, self-aspirated flotation cells, coarse flotation cells and air inflation flotation cells for non-ferrous, precious and non-metallic mineral separation',
+      locale: locale,
+      baseUrl: baseUrl
+    });
+    
+    // 创建组织结构化数据
+    const organizationStructuredData = getOrganizationStructuredData(isZh);
+    
+    // 创建规格表结构化数据
+    const specTableStructuredData = getSpecificationTableStructuredData({
+      product,
+      locale
+    });
+    
+    // 创建WebPage结构化数据
+    const pageUrl = `${baseUrl}/${locale}/products/ore-processing/flotation-equipment/${productId}`;
+    const webPageStructuredData = getWebPageStructuredData({
+      pageUrl: pageUrl,
+      pageName: product.title,
+      description: product.overview || "",
+      locale: locale,
+      baseUrl: baseUrl,
+      images: [product.imageSrc],
+      breadcrumbId: null
+    });
+    
+    // 创建案例研究结构化数据
+    const caseStudyStructuredData = caseStudies.map((cs, index) => {
+      if (cs.title && cs.description) {
+        return {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": cs.title,
+          "description": cs.description,
+          "image": cs.imageSrc ? `${baseUrl}${cs.imageSrc}` : undefined,
+          "author": {
+            "@type": "Organization",
+            "name": "Zexin Mining Equipment"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Zexin Mining Equipment",
+            "logo": {
+              "@type": "ImageObject",
+              "url": `${baseUrl}/logo/logo-en.webp`
+            }
+          },
+          "datePublished": new Date().toISOString().split('T')[0]
+        };
+      }
+      return null;
+    }).filter(Boolean);
     
     return (
       <>
-        {/* 结构化数据 */}
-        <MultiStructuredData dataArray={structuredDataItems} />
+        {/* 使用独立script标签注入各结构化数据 */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(enhancedProductStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(imageStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageStructuredData) }}
+        />
+        
+        {specTableStructuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(specTableStructuredData) }}
+          />
+        )}
+        
+        {productVariantStructuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(productVariantStructuredData) }}
+          />
+        )}
+        
+        {faqStructuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+          />
+        )}
+        
+        {caseStudyStructuredData.map((csData, index) => (
+          <script
+            key={`case-study-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(csData) }}
+          />
+        ))}
         
         <ProductLayout
           locale={locale}
           breadcrumbItems={breadcrumbConfig}
         >
-          {/* 产品数据注入 - 用于客户端组件访问 */}
-          <ProductDataInjection
-            product={product}
-            locale={locale}
-          >
-            {/* 客户端产品详情组件 */}
+          {/* 注入产品数据 */}
+          <ProductDataInjection product={product} locale={locale}>
             <ClientFlotationEquipmentDetail
               locale={locale}
               productData={product}
@@ -437,9 +606,7 @@ export default async function ProductDetailPage({
       </>
     );
   } catch (error) {
-    // 显性记录错误，帮助调试
-    console.error("Product detail page rendering error:", error);
-    // 静默处理错误
+    console.error('Error in ProductDetailPage:', error);
     return notFound();
   }
 } 

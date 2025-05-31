@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
+import { getOrganizationSchema } from '@/lib/seo';
+import { getWebPageStructuredData, getBreadcrumbStructuredData } from '@/lib/structuredData';
 export const preferredRegion = 'auto';        // 自动选择最佳区域
 export const runtime = 'nodejs';              // 使用Node.js运行时
 export const fetchCache = 'force-cache';      // 强制使用缓存
-import { getOrganizationSchema } from '@/lib/seo';
 import fs from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
@@ -257,11 +258,13 @@ async function getRelatedProductsData(relatedIds: string[], locale: string) {
   }
 }
 
-// 获取解决方案页面元数据
+// 生成元数据
 export async function generateMetadata({ params }: { 
-  params: { locale: string; category: string; solutionId: string } 
+  params: { category: string; solutionId: string } 
 }): Promise<Metadata> {
-  // 验证参数
+  // 硬编码语言为中文
+  const locale = 'zh';
+  
   if (!params) {
     console.error('Error in generateMetadata: params is undefined');
     return {
@@ -270,9 +273,9 @@ export async function generateMetadata({ params }: {
     };
   }
   
-  // 确保在使用params前先等待参数
-  const resolvedParams = await Promise.resolve(params);
-  const { locale = 'zh', category, solutionId } = resolvedParams;
+  // 正确处理动态路由参数
+  const resolvedParams = await params;
+  const { category, solutionId } = resolvedParams;
   
   // 验证必需参数
   if (!category || !solutionId) {
@@ -293,11 +296,8 @@ export async function generateMetadata({ params }: {
     };
   }
   
-  const isZh = locale === 'zh';
-  const title = solutionData.title || (isZh ? `${solutionData.mineralName?.zh || ''}选矿工艺` : `${solutionData.mineralName?.en || ''} Beneficiation Process`);
-  const description = solutionData.description || (isZh ? 
-    `泽鑫提供专业的${solutionData.mineralName?.zh || ''}选矿工艺解决方案，高效提取和加工${solutionData.mineralName?.zh || ''}矿物资源` : 
-    `Zexin provides professional ${solutionData.mineralName?.en || ''} beneficiation process solutions for efficient extraction and processing of ${solutionData.mineralName?.en || ''} mineral resources`);
+  const title = solutionData.title || `${solutionData.mineralName?.zh || ''}选矿工艺`;
+  const description = solutionData.description || `泽鑫提供专业的${solutionData.mineralName?.zh || ''}选矿工艺解决方案，高效提取和加工${solutionData.mineralName?.zh || ''}矿物资源`;
   
   return {
     title: title,
@@ -314,8 +314,15 @@ export async function generateMetadata({ params }: {
 
 // 动态路由的详情页服务端组件
 export default async function SolutionDetailPage({ params }: { 
-  params: { locale: string; category: string; solutionId: string } 
+  params: { category: string; solutionId: string } 
 }) {
+  // 硬编码语言为中文
+  const locale = 'zh';
+  const isZh = true;
+  
+  // 准备基本URL供结构化数据使用
+  const baseUrl = 'https://www.zexinmining.com';
+  
   // 验证参数
   if (!params) {
     console.error('Error: params is undefined');
@@ -323,9 +330,9 @@ export default async function SolutionDetailPage({ params }: {
     return null; // 防止进一步执行
   }
   
-  // 确保在使用params前先等待参数
-  const resolvedParams = await Promise.resolve(params);
-  const { locale = 'zh', category, solutionId } = resolvedParams;
+  // 正确处理动态路由参数
+  const resolvedParams = await params;
+  const { category, solutionId } = resolvedParams;
   
   // 验证必需参数
   if (!category || !solutionId) {
@@ -359,23 +366,43 @@ export default async function SolutionDetailPage({ params }: {
     }
   }
   
-  const isZh = locale === 'zh';
+  // 获取多语言字段值的辅助函数
+  const getLocalizedValue = (field: any): string => {
+    if (!field) return '';
+    
+    // 如果是字符串，直接返回
+    if (typeof field === 'string') return field;
+    
+    // 如果是对象，返回中文值
+    if (typeof field === 'object') {
+      return field['zh'] || '';
+    }
+    
+    return '';
+  };
+
+  // 获取页面标题
+  const pageTitle = solutionData.title 
+    ? getLocalizedValue(solutionData.title)
+    : `${getLocalizedValue(solutionData.mineralName)}选矿工艺`;
+
+  // 获取页面描述
+  const pageDescription = solutionData.description 
+    ? getLocalizedValue(solutionData.description)
+    : `泽鑫提供专业的${getLocalizedValue(solutionData.mineralName)}选矿工艺解决方案，高效提取和加工${getLocalizedValue(solutionData.mineralName)}矿物资源`;
   
   // 获取组织架构结构化数据
   const organizationSchema = getOrganizationSchema(isZh);
-
-  // 获取分类名称
-  function getCategoryName(category: string, isZh: boolean): string {
-    const categoryNames: Record<string, {zh: string, en: string}> = {
-      'new-energy': {zh: '新能源矿种', en: 'New Energy Minerals'},
-      'precious-metals': {zh: '贵金属', en: 'Precious Metals'},
-      'non-ferrous': {zh: '有色金属', en: 'Non-ferrous Metals'},
-      'ferrous': {zh: '黑色金属', en: 'Ferrous Metals'},
-      'non-metallic': {zh: '非金属', en: 'Non-metallic Minerals'}
-    };
-    
-    return isZh ? categoryNames[category]?.zh || category : categoryNames[category]?.en || category;
-  }
+  
+  // 获取页面结构化数据
+  const pageUrl = `${baseUrl}/${locale}/products/mineral-processing-solutions/${category}/${solutionId}`;
+  
+  const webPageStructuredData = getWebPageStructuredData({
+    pageName: pageTitle,
+    description: pageDescription,
+    pageUrl: pageUrl,
+    locale: 'zh'
+  });
 
   // 处理面包屑导航
   const breadcrumbConfig = getBreadcrumbConfig(locale);
@@ -383,19 +410,119 @@ export default async function SolutionDetailPage({ params }: {
     { name: breadcrumbConfig.home.name, href: breadcrumbConfig.home.href },
     { name: breadcrumbConfig.products.name, href: breadcrumbConfig.products.href },
     { 
-      name: isZh ? '选矿解决方案' : 'Mineral Processing Solutions',
+      name: '选矿解决方案',
       href: `/${locale}/products/mineral-processing-solutions`
     },
     { 
-      name: isZh 
-        ? (typeof solutionData.mineralName === 'string' 
+      name: (typeof solutionData.mineralName === 'string' 
             ? `${solutionData.mineralName}选矿工艺` 
             : `${solutionData.mineralName.zh}选矿工艺`)
-        : (typeof solutionData.mineralName === 'string'
-            ? `${solutionData.mineralName} Beneficiation Process`
-            : `${solutionData.mineralName.en} Beneficiation Process`)
     }
   ];
+  
+  // 生成面包屑结构化数据
+  const breadcrumbStructuredData = getBreadcrumbStructuredData(
+    breadcrumbItems.map(item => ({ 
+      name: item.name, 
+      url: item.href 
+    })),
+    baseUrl
+  );
+
+  // 创建技术文章结构化数据
+  const technicalArticleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "TechnicalArticle",
+    "headline": pageTitle,
+    "description": pageDescription,
+    "author": {
+      "@type": "Organization",
+      "name": "泽鑫矿山设备"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "泽鑫矿山设备",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${baseUrl}/logo/logo.png`
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": pageUrl
+    },
+    "about": {
+      "@type": "Thing",
+      "name": getLocalizedValue(solutionData.mineralName)
+    },
+    "proficiencyLevel": "Expert",
+    "step": solutionData.processSteps.map((step: {title: string; description: string}) => ({
+      "@type": "HowToStep",
+      "name": step.title,
+      "text": step.description
+    })),
+    // 添加关键词，帮助搜索引擎更好地理解内容
+    "keywords": `${getLocalizedValue(solutionData.mineralName)}选矿,${getLocalizedValue(solutionData.mineralName)}加工,${getLocalizedValue(solutionData.mineralName)}选矿设备,选矿工艺,泽鑫矿山设备`,
+    // 添加矿物处理技术分类
+    "articleSection": "矿物加工技术",
+    // 添加更新日期
+    "dateModified": new Date().toISOString().split('T')[0]
+  };
+
+  // 创建服务结构化数据
+  const serviceStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": pageTitle,
+    "description": pageDescription,
+    "provider": {
+      "@type": "Organization",
+      "name": "泽鑫矿山设备"
+    },
+    "serviceType": "选矿工艺解决方案",
+    "areaServed": {
+      "@type": "Country",
+      "name": "全球"
+    }
+  };
+
+  // 创建"如何做"(HowTo)结构化数据，详细描述选矿流程
+  const howToStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": `${getLocalizedValue(solutionData.mineralName)}选矿工艺流程`,
+    "description": solutionData.processIntroduction || `泽鑫提供专业的${getLocalizedValue(solutionData.mineralName)}选矿工艺解决方案，高效提取和加工${getLocalizedValue(solutionData.mineralName)}矿物资源`,
+    "totalTime": "P30D", // 估计完成整个选矿流程的时间
+    "tool": solutionData.relatedProducts?.map((productId: string) => ({
+      "@type": "HowToTool",
+      "name": productId.replace(/-/g, ' ')
+    })),
+    "step": solutionData.processSteps.map((step: {title: string; description: string}, index: number) => ({
+      "@type": "HowToStep",
+      "position": index + 1,
+      "name": step.title,
+      "itemListElement": {
+        "@type": "HowToDirection",
+        "text": step.description
+      }
+    })),
+    "image": solutionData.applicationsImage ? `${baseUrl}${solutionData.applicationsImage}` : undefined
+  };
+
+  // 如果有应用图片，创建图片结构化数据
+  let imageStructuredData = null;
+  if (solutionData.applicationsImage) {
+    imageStructuredData = {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "contentUrl": `${baseUrl}${solutionData.applicationsImage}`,
+      "name": `${getLocalizedValue(solutionData.mineralName)}选矿工艺流程图`,
+      "description": `${getLocalizedValue(solutionData.mineralName)}选矿处理工艺流程图，展示了从破碎到精矿产出的完整工艺`,
+      "representativeOfPage": true,
+      "caption": solutionData.processTitle || `${getLocalizedValue(solutionData.mineralName)}选矿工艺流程`,
+      "creditText": "泽鑫矿山设备技术团队"
+    };
+  }
   
   return (
     <>
@@ -405,9 +532,40 @@ export default async function SolutionDetailPage({ params }: {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(technicalArticleStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToStructuredData) }}
+      />
+      
+      {imageStructuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(imageStructuredData) }}
+        />
+      )}
+      
       {/* 解决方案详情页面 */}
       <SolutionDetailClient 
-        locale={locale}
         category={category}
         solutionId={solutionId}
         solutionData={solutionData}

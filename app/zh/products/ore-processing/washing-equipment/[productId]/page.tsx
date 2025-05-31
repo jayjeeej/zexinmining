@@ -8,9 +8,12 @@ import {
   getFAQStructuredData, 
   getImageStructuredData,
   getProductCategoryStructuredData,
-  getOrganizationStructuredData
+  getOrganizationStructuredData,
+  getProductSpecificationsStructuredData,
+  getSpecificationTableStructuredData,
+  getProductVariantStructuredData,
+  getWebPageStructuredData
 } from '@/lib/structuredData';
-import { MultiStructuredData } from '@/components/StructuredData';
 import ProductDataInjection from '@/components/ProductDetail/ProductDataInjection';
 import ClientWashingEquipmentDetail from './page.client';
 import { ProductSpecification } from '@/lib/productDataSchema';
@@ -25,7 +28,6 @@ export const fetchCache = 'force-cache';      // 强制使用缓存
 export const runtime = 'nodejs';              // 使用Node.js运行时
 export const preferredRegion = 'auto';        // 自动选择最佳区域
 
-
 // 获取所有洗矿设备产品ID用于静态生成
 export async function generateStaticParams() {
   try {
@@ -38,8 +40,8 @@ export async function generateStaticParams() {
     } catch (error) {
       console.error(`Directory ${dataDir} does not exist or cannot be accessed:`, error);
       return [
-        { locale: 'en', productId: 'spiral-washer' },
-        { locale: 'zh', productId: 'spiral-washer' }
+        { locale: 'en', productId: 'log-washer' },
+        { locale: 'zh', productId: 'log-washer' }
       ];
     }
     
@@ -64,14 +66,18 @@ export async function generateStaticParams() {
     console.error('Error generating static params for washing equipment:', error);
     // 返回基本的静态参数，确保构建不会失败
     return [
-      { locale: 'en', productId: 'spiral-washer' },
-      { locale: 'zh', productId: 'spiral-washer' }
+      { locale: 'en', productId: 'log-washer' },
+      { locale: 'zh', productId: 'log-washer' }
     ];
   }
 }
 
 // 生成元数据
-export async function generateMetadata({ params }: { params: { productId: string; locale: string } }): Promise<Metadata> {
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: { productId: string; locale: string } 
+}): Promise<Metadata> {
   try {
     // 静态路由下直接指定locale而不是从params获取
     const locale = 'zh';
@@ -126,8 +132,8 @@ export async function generateMetadata({ params }: { params: { productId: string
                           : `${product.title} - Professional ${product.productCategory} solutions by Zexin Mining Equipment`);
     
     const seoKeywords = isZh 
-                       ? `${product.title},${product.productCategory},泽鑫矿山设备,矿山设备,洗矿设备,矿石清洗` 
-                       : `${product.title},${product.productCategory},Zexin Mining Equipment,mining equipment,washing equipment,ore washing`;
+                       ? `${product.title},${product.productCategory},泽鑫矿山设备,矿山设备,洗矿设备` 
+                       : `${product.title},${product.productCategory},Zexin Mining Equipment,mining equipment,washing equipment`;
     
     // 如果产品数据中存在searchKeywords数组，使用它来增强关键词
     const enhancedKeywords = product.searchKeywords && Array.isArray(product.searchKeywords) 
@@ -243,12 +249,12 @@ async function getRelatedProductsData(relatedIds: string[], locale: string) {
             href = `/${locale}/products/ore-processing/magnetic-separator/${id}`;
           } else if (productSubcategory === 'flotation-equipment' || productSubcategory === 'flotation') {
             href = `/${locale}/products/ore-processing/flotation-equipment/${id}`;
+          } else if (productSubcategory === 'feeding-equipment') {
+            href = `/${locale}/products/ore-processing/feeding-equipment/${id}`;
           } else if (productSubcategory === 'washing-equipment') {
             href = `/${locale}/products/ore-processing/washing-equipment/${id}`;
           } else if (productSubcategory === 'classification-equipment') {
             href = `/${locale}/products/ore-processing/classification-equipment/${id}`;
-          } else if (productSubcategory === 'feeding-equipment') {
-            href = `/${locale}/products/ore-processing/feeding-equipment/${id}`;
           } else if (data.href) {
             // 如果有预定义的href使用预定义的
             href = data.href;
@@ -282,7 +288,14 @@ async function getRelatedProductsData(relatedIds: string[], locale: string) {
 
 // 格式化规格数据为统一格式
 function formatSpecifications(product: any): ProductSpecification[] {
-  if (!product.specifications || !product.specifications.tableHeaders || !product.specifications.tableData) {
+  // 基础验证
+  if (
+    !product || 
+    !product.specifications || 
+    !product.specifications.tableHeaders || 
+    !product.specifications.tableData ||
+    product.specifications.tableData.length === 0
+  ) {
     return [];
   }
   
@@ -296,15 +309,13 @@ function formatSpecifications(product: any): ProductSpecification[] {
       if (value !== undefined) {
         const spec: ProductSpecification = {
           name: header,
-          value: String(value) // 确保值是字符串
+          value: value.toString(),
+          unit: '',
+          // 根据ProductSpecification接口添加正确的属性
+          imperialValue: tableDataImperial && tableDataImperial[0] ? 
+                        tableDataImperial[0][index]?.toString() : '',
+          imperialUnit: ''
         };
-        
-        // 如果有英制单位数据，添加到规格对象
-        if (tableHeadersImperial && tableDataImperial && tableDataImperial[0]) {
-          spec.imperialName = tableHeadersImperial[index];
-          spec.imperialValue = String(tableDataImperial[0][index]); // 确保值是字符串
-        }
-        
         result.push(spec);
       }
     });
@@ -313,11 +324,18 @@ function formatSpecifications(product: any): ProductSpecification[] {
   return result;
 }
 
-export default async function ProductDetailPage({ params }: { params: { productId: string; locale: string } }) {
+export default async function ProductDetailPage({ 
+  params 
+}: { 
+  params: { productId: string; locale: string } 
+}) {
   try {
     // 静态路由下直接指定locale而不是从params获取
     const locale = 'zh';
-    const { productId } = await params;
+    const isZh = true; // 中文版，固定为true
+    // 确保正确await params
+    const safeParams = await safelyGetRouteParams(params);
+    const { productId } = safeParams;
     
     const { product, isSuccess } = await getProductData(productId, locale);
     if (!isSuccess || !product) return notFound();
@@ -327,7 +345,6 @@ export default async function ProductDetailPage({ params }: { params: { productI
       console.log(`[DEBUG] Product ${productId} category: ${product.subcategory || 'undefined'}`);
     }
     
-    const isZh = true; // 中文版，固定为true
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.zexinmining.com';
     
     // 使用统一函数构建面包屑导航
@@ -346,9 +363,6 @@ export default async function ProductDetailPage({ params }: { params: { productI
       { name: '洗矿设备', url: '/zh/products/ore-processing/washing-equipment' },
       { name: product.title, url: `/zh/products/ore-processing/washing-equipment/${productId}` }
     ];
-    
-    // 格式化规格数据
-    const specifications = formatSpecifications(product);
     
     // 应用领域格式化
     const applications = Array.isArray(product.applications) 
@@ -391,7 +405,16 @@ export default async function ProductDetailPage({ params }: { params: { productI
       relatedProducts = await getRelatedProductsData(product.relatedProducts, locale);
     }
     
-    // 构建结构化数据
+    // 格式化规格数据
+    const specifications = formatSpecifications(product);
+    
+    // 创建技术规格的结构化数据属性
+    const specificationProperties = getProductSpecificationsStructuredData({
+      product,
+      modelIndex: 0
+    });
+    
+    // 构建产品结构化数据
     const productStructuredData = getProductStructuredData({
       productId,
       product,
@@ -399,8 +422,30 @@ export default async function ProductDetailPage({ params }: { params: { productI
       baseUrl
     });
     
+    // 增强产品结构化数据
+    const enhancedProductStructuredData = {
+      ...productStructuredData,
+      additionalProperty: specificationProperties,
+      isRelatedTo: [] as Array<{
+        "@type": string;
+        "name": string;
+        "url": string;
+      }>
+    };
+    
+    // 如果有相关产品，添加到结构化数据
+    if (relatedProducts && relatedProducts.length > 0) {
+      enhancedProductStructuredData.isRelatedTo = relatedProducts.map(related => ({
+        "@type": "Product",
+        "name": related.title,
+        "url": `${baseUrl}${related.href}`
+      }));
+    }
+    
+    // 创建面包屑结构化数据
     const breadcrumbStructuredData = getBreadcrumbStructuredData(breadcrumbItems, baseUrl);
     
+    // 创建FAQ结构化数据
     const faqStructuredData = faqs.length > 0 
       ? getFAQStructuredData(faqs.map(faq => ({ 
           question: faq.question, 
@@ -408,43 +453,146 @@ export default async function ProductDetailPage({ params }: { params: { productI
         }))) 
       : null;
     
-    const imageStructuredData = product.imageSrc ? getImageStructuredData({
+    // 创建图片结构化数据
+    const imageStructuredData = getImageStructuredData({
       url: product.imageSrc,
       caption: product.title,
-      description: product.overview,
+      description: product.overview || "",
       baseUrl
-    }) : null;
+    });
     
-    const categoryStructuredData = getProductCategoryStructuredData({
+    // 创建产品类别结构化数据
+    const productCategoryStructuredData = getProductCategoryStructuredData({
       categoryId: 'washing-equipment',
       categoryName: isZh ? '洗矿设备' : 'Washing Equipment',
-      description: isZh ? '泽鑫矿山设备提供各类高效洗矿设备' : 'Zexin Mining Equipment provides a range of efficient washing equipment',
+      description: isZh ? '泽鑫矿山设备提供各类高效洗矿设备，满足矿石清洗需求' : 'Zexin Mining Equipment provides a range of efficient washing equipment for mineral processing',
       locale: locale,
       baseUrl: baseUrl
     });
     
+    // 创建组织结构化数据
     const organizationStructuredData = getOrganizationStructuredData(isZh);
     
-    // 合并所有结构化数据
-    const structuredDataArray = [
-      productStructuredData,
-      breadcrumbStructuredData,
-      categoryStructuredData,
-      organizationStructuredData,
-      ...(imageStructuredData ? [imageStructuredData] : []),
-      ...(faqStructuredData ? [faqStructuredData] : [])
-    ];
+    // 创建规格表结构化数据
+    const specTableStructuredData = getSpecificationTableStructuredData({
+      product,
+      locale,
+      baseUrl
+    });
+    
+    // 创建WebPage结构化数据
+    const pageUrl = `${baseUrl}/${locale}/products/ore-processing/washing-equipment/${productId}`;
+    const webPageStructuredData = getWebPageStructuredData({
+      pageUrl: pageUrl,
+      pageName: product.title,
+      description: product.overview || "",
+      locale: locale,
+      baseUrl: baseUrl,
+      images: [product.imageSrc],
+      breadcrumbId: null
+    });
+    
+    // 构建产品变体结构化数据（如果有多个型号）
+    const productVariantStructuredData = getProductVariantStructuredData({
+      product,
+      groupName: product.series || product.title,
+      locale,
+      baseUrl
+    });
+    
+    // 创建案例研究结构化数据
+    const caseStudyStructuredData = caseStudies.map((cs, index) => {
+      if (cs.title && cs.description) {
+        return {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": cs.title,
+          "description": cs.description || "",
+          "image": cs.imageSrc ? `${baseUrl}${cs.imageSrc}` : undefined,
+          "author": {
+            "@type": "Organization",
+            "name": "泽鑫矿山设备"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "泽鑫矿山设备",
+            "logo": {
+              "@type": "ImageObject",
+              "url": `${baseUrl}/logo/logo-zh.webp`
+            }
+          },
+          "datePublished": new Date().toISOString().split('T')[0]
+        };
+      }
+      return null;
+    }).filter(Boolean);
     
     return (
       <>
-        {/* SEO结构化数据 */}
-        <MultiStructuredData dataArray={structuredDataArray} />
+        {/* 使用独立script标签注入各结构化数据 */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(enhancedProductStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(imageStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productCategoryStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageStructuredData) }}
+        />
+        
+        {specTableStructuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(specTableStructuredData) }}
+          />
+        )}
+        
+        {productVariantStructuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(productVariantStructuredData) }}
+          />
+        )}
+        
+        {faqStructuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+          />
+        )}
+        
+        {caseStudyStructuredData.map((csData, index) => (
+          <script
+            key={`case-study-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(csData) }}
+          />
+        ))}
         
         <ProductLayout
           locale={locale}
           breadcrumbItems={breadcrumbConfig}
         >
-          {/* 注入产品数据 */}
           <ProductDataInjection product={product} locale={locale}>
             <ClientWashingEquipmentDetail
               locale={locale}

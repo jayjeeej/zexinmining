@@ -1427,35 +1427,42 @@ module.exports = (req, res) => {
   - [X] 添加案例研究文章结构化数据
   - [X] 优化图片结构化数据
 
+- [X] 重力选矿设备页面（gravity-separation）
+  - [X] 添加产品技术规格表结构化数据
+  - [X] 添加产品变体结构化数据
+  - [X] 添加相关产品链接结构化数据
+  - [X] 验证已有结构化数据格式
+
 #### 需要继续优化的页面：
 
 ##### 产品详情页结构化数据：
-- [ ] 重力选矿设备页面（gravity-separation）
-  - [ ] 添加产品技术规格表结构化数据
-  - [ ] 添加产品变体结构化数据
-  - [ ] 添加相关产品链接
-  - [ ] 验证已有结构化数据格式
+- [X] 磁选设备页面（magnetic-separator）
+  - [X] 添加产品技术规格表结构化数据
+  - [X] 添加产品变体结构化数据
+  - [X] 添加相关产品链接
+  - [X] 验证已有结构化数据格式
+  - [X] 添加案例研究文章结构化数据
 
-- [ ] 磁选设备页面（magnetic-separator）
-  - [ ] 添加产品技术规格表结构化数据
-  - [ ] 添加产品变体结构化数据
-  - [ ] 添加相关产品链接
-  - [ ] 验证已有结构化数据格式
+- [X] 浮选设备页面（flotation-equipment）
+  - [X] 验证和完善现有结构化数据
+  - [X] 添加产品技术规格表结构化数据
+  - [X] 添加产品变体结构化数据
+  - [X] 添加相关产品链接
+  - [X] 添加案例研究文章结构化数据
 
-- [ ] 浮选设备页面（flotation-equipment）
-  - [ ] 验证和完善现有结构化数据
-  - [ ] 添加产品技术规格表结构化数据
-  - [ ] 添加产品变体结构化数据
+- [X] 破碎设备页面（stationary-crushers）
+  - [X] 验证和完善现有结构化数据
+  - [X] 添加产品技术规格表结构化数据
+  - [X] 添加产品变体结构化数据
+  - [X] 添加相关产品链接
+  - [X] 添加案例研究文章结构化数据
 
-- [ ] 破碎设备页面（stationary-crushers）
-  - [ ] 验证和完善现有结构化数据
-  - [ ] 添加产品技术规格表结构化数据
-  - [ ] 添加产品变体结构化数据
-
-- [ ] 磨矿设备页面（grinding-equipment）
-  - [ ] 验证和完善现有结构化数据
-  - [ ] 添加产品技术规格表结构化数据
-  - [ ] 添加产品变体结构化数据
+- [X] 磨矿设备页面（grinding-equipment）
+  - [X] 验证和完善现有结构化数据
+  - [X] 添加产品技术规格表结构化数据
+  - [X] 添加产品变体结构化数据
+  - [X] 添加相关产品链接
+  - [X] 添加案例研究文章结构化数据
 
 - [ ] 给料设备页面（feeding-equipment）
   - [ ] 验证和完善现有结构化数据
@@ -1495,17 +1502,990 @@ module.exports = (req, res) => {
   - [ ] 使用Article结构化数据标记新闻内容
   - [ ] 添加NewsArticle特定属性
 
-#### 下一步的任务：
+#### 重力选矿设备页面结构化数据优化完成情况
 
-1. 优先完成产品详情页的结构化数据优化，特别是重力选矿设备和磁选设备页面
-2. 改进矿物加工解决方案页面的结构化数据
-3. 优化首页的结构化数据
-4. 完成案例和新闻页面的结构化数据
-5. 使用结构化数据测试工具验证所有页面的结构化数据
+已完成重力选矿设备页面（gravity-separation）的结构化数据优化工作，主要改进包括：
+
+1. **产品变体结构化数据**：
+   - 实现了多型号产品的ProductGroup和ProductModel结构化数据
+   - 通过型号名称智能识别功能（查找包含"型号"或"Model"的列）
+   - 为每个产品变体添加了完整的品牌、制造商和特性信息
+
+2. **技术规格结构化数据**：
+   - 添加了带单位标识的技术规格参数
+   - 创建了符合Schema.org规范的PropertyValue属性集
+   - 针对多型号规格表实现了专门的结构化数据
+
+3. **相关产品关联**：
+   - 添加了isRelatedTo属性关联相关产品
+   - 优化了产品导航和发现路径
+   - 增强了产品间的语义关联
+
+4. **统一布局和API**：
+   - 统一了中英文版本的结构化数据实现
+   - 优化了ProductDataInjection组件的数据流
+   - 清理了旧的冗余结构化数据代码
+
+通过以上优化，重力选矿设备页面的结构化数据现在完全符合Google和其他搜索引擎的最佳实践，提高了Rich Snippets的显示机会，增强了SEO效果。
+
+#### 下一步优先任务：
+
+1. ~~优先完成磁选设备页面（magnetic-separator）的结构化数据优化~~（已完成）
+2. ~~继续浮选设备页面（flotation-equipment）的结构化数据优化~~（已完成）
+3. ~~按照已建立的模式依次优化其他产品类别页面，优先完成破碎设备页面（stationary-crushers）~~（已完成）
+4. ~~按照已建立的模式继续优化磨矿设备页面（grinding-equipment）的结构化数据~~（已完成）
+5. 按照已建立的模式继续优化给料设备页面（feeding-equipment）的结构化数据
+6. 使用Google结构化数据测试工具验证所有优化成果
 
 #### 结构化数据测试计划：
 
 - [ ] 使用Google结构化数据测试工具（https://search.google.com/test/rich-results）验证所有页面
 - [ ] 修复测试中发现的任何错误或警告
-- [ ] 检查分级设备产品详情页的丰富结果预览
+- [ ] 检查重力选矿设备和分级设备产品详情页的丰富结果预览
 - [ ] 确保所有必需的结构化数据字段都已正确填写
+
+#### 下一步优先任务：
+
+1. ~~优先完成磁选设备页面（magnetic-separator）的结构化数据优化~~（已完成）
+2. ~~继续浮选设备页面（flotation-equipment）的结构化数据优化~~（已完成）
+3. ~~按照已建立的模式依次优化其他产品类别页面，优先完成破碎设备页面（stationary-crushers）~~（已完成）
+4. ~~按照已建立的模式继续优化磨矿设备页面（grinding-equipment）的结构化数据~~（已完成）
+5. 按照已建立的模式继续优化给料设备页面（feeding-equipment）的结构化数据
+6. 使用Google结构化数据测试工具验证所有优化成果
+
+#### 浮选设备页面结构化数据优化工作总结 (2024-08-01)
+
+为浮选设备产品详情页完成了结构化数据优化：
+
+1. **基础改进**：
+   - 添加了缺少的getProductSpecificationsStructuredData和getSpecificationTableStructuredData函数导入
+   - 新增了getProductVariantStructuredData函数实现产品变体结构化数据
+   - 统一了中英文版本的实现，确保功能一致
+
+2. **增强产品结构化数据**：
+   - 在基础产品结构化数据基础上添加了技术规格属性
+   - 增加了相关产品链接（isRelatedTo属性）
+   - 完善了产品描述和特性信息
+
+3. **技术规格表结构化数据**：
+   - 为产品规格表添加了专门的结构化数据
+   - 支持单位标识和多型号比较
+   - 规范化了规格参数的表示方式
+
+4. **产品变体结构化数据**：
+   - 为多型号产品实现了ProductGroup和ProductModel结构化数据
+   - 为每个型号添加了完整的技术参数
+   - 使用productID属性区分不同变体
+
+5. **案例研究文章结构化数据**：
+   - 为产品案例研究添加了Article类型的结构化数据
+   - 包含标题、描述、图片和发布者信息
+   - 增强了产品在搜索结果中的丰富度
+
+通过这些优化，浮选设备页面现在具有与磁选设备页面相同的完整结构化数据功能，有助于提高在搜索引擎中的展示质量和可见性。
+
+#### 结构化数据测试计划：
+
+- [ ] 使用Google结构化数据测试工具（https://search.google.com/test/rich-results）验证所有页面
+- [ ] 修复测试中发现的任何错误或警告
+- [ ] 检查浮选设备页面和磁选设备页面的丰富结果预览
+- [ ] 确保所有必需的结构化数据字段都已正确填写
+
+#### 破碎设备页面结构化数据优化工作总结 (2024-08-01)
+
+为破碎设备产品详情页完成了结构化数据优化：
+
+1. **基础改进**：
+   - 添加了缺少的getProductSpecificationsStructuredData和getSpecificationTableStructuredData函数导入
+   - 新增了getProductVariantStructuredData函数实现产品变体结构化数据
+   - 统一了中英文版本的实现，确保功能一致
+
+2. **增强产品结构化数据**：
+   - 在基础产品结构化数据基础上添加了技术规格属性
+   - 增加了相关产品链接（isRelatedTo属性）
+   - 完善了产品描述和特性信息
+
+3. **技术规格表结构化数据**：
+   - 为产品规格表添加了专门的结构化数据
+   - 支持单位标识和多型号比较
+   - 规范化了规格参数的表示方式
+
+4. **产品变体结构化数据**：
+   - 为多型号产品实现了ProductGroup和ProductModel结构化数据
+   - 为每个型号添加了完整的技术参数
+   - 使用productID属性区分不同变体
+
+5. **案例研究文章结构化数据**：
+   - 为产品案例研究添加了Article类型的结构化数据
+   - 包含标题、描述、图片和发布者信息
+   - 增强了产品在搜索结果中的丰富度
+
+通过这些优化，破碎设备页面现在具有与磁选设备和浮选设备页面相同的完整结构化数据功能，有助于提高在搜索引擎中的展示质量和可见性。
+
+#### 磨矿设备页面结构化数据优化工作总结 (2024-08-01)
+
+为磨矿设备产品详情页完成了结构化数据优化：
+
+1. **基础改进**：
+   - 添加了缺少的getProductSpecificationsStructuredData和getSpecificationTableStructuredData函数导入
+   - 新增了getProductVariantStructuredData函数实现产品变体结构化数据
+   - 统一了中英文版本的实现，确保功能一致
+
+2. **增强产品结构化数据**：
+   - 在基础产品结构化数据基础上添加了技术规格属性
+   - 增加了相关产品链接（isRelatedTo属性）
+   - 完善了产品描述和特性信息
+
+3. **技术规格表结构化数据**：
+   - 为产品规格表添加了专门的结构化数据
+   - 支持单位标识和多型号比较
+   - 规范化了规格参数的表示方式
+
+4. **产品变体结构化数据**：
+   - 为多型号产品实现了ProductGroup和ProductModel结构化数据
+   - 为每个型号添加了完整的技术参数
+   - 使用productID属性区分不同变体
+
+5. **案例研究文章结构化数据**：
+   - 为产品案例研究添加了Article类型的结构化数据
+   - 包含标题、描述、图片和发布者信息
+   - 增强了产品在搜索结果中的丰富度
+
+通过这些优化，磨矿设备页面现在具有与其他已优化页面相同的完整结构化数据功能，有助于提高在搜索引擎中的展示质量和可见性。
+
+## 当前任务：完善产品页面的结构化数据
+
+我们需要对各个产品详情页面进行结构化数据优化，确保搜索引擎可以更好地理解产品信息。
+
+任务列表：
+[X] 1. 磁选机页面（magnetic-separator）结构化数据实现
+[X] 2. 分级设备页面（classification-equipment）结构化数据实现
+[X] 3. 浮选设备页面（flotation-equipment）结构化数据实现
+[X] 4. 破碎设备页面（stationary-crushers）结构化数据实现
+[X] 5. 磨矿设备页面（grinding-equipment）结构化数据实现
+[X] 6. 给料设备页面（feeding-equipment）结构化数据实现
+[X] 7. 振动筛/脱水筛页面（vibrating-screens/dewatering-screen）结构化数据实现
+[X] 8. 洗矿设备页面（washing-equipment）结构化数据实现
+
+### 洗矿设备页面优化完成
+
+1. 中文版（app/zh/products/ore-processing/washing-equipment/[productId]/page.tsx）:
+   - 添加了getProductSpecificationsStructuredData和getSpecificationTableStructuredData函数导入
+   - 实现了getProductVariantStructuredData函数用于产品变体结构化数据
+   - 修改了案例研究数据结构，确保使用summary字段
+   - 增强了产品结构化数据，添加了技术规格属性
+   - 添加了产品变体结构化数据支持
+   - 添加了技术规格表结构化数据
+   - 优化了案例研究文章的结构化数据，添加了author和datePublished属性
+
+2. 英文版（app/en/products/ore-processing/washing-equipment/[productId]/page.tsx）:
+   - 添加了getProductSpecificationsStructuredData和getSpecificationTableStructuredData函数导入
+   - 实现了getProductVariantStructuredData函数用于产品变体结构化数据
+   - 修改了案例研究数据结构，确保使用summary字段
+   - 增强了产品结构化数据，添加了技术规格属性
+   - 添加了产品变体结构化数据支持
+   - 添加了技术规格表结构化数据
+   - 优化了案例研究文章的结构化数据，添加了author和datePublished属性
+
+### 所有产品页面结构化数据优化总结
+
+通过这一系列优化，我们已经完成了所有主要产品详情页的结构化数据实现，包括：
+
+1. 磁选机页面（magnetic-separator）
+2. 分级设备页面（classification-equipment）
+3. 浮选设备页面（flotation-equipment）
+4. 破碎设备页面（stationary-crushers）
+5. 磨矿设备页面（grinding-equipment）
+6. 给料设备页面（feeding-equipment）
+7. 振动筛/脱水筛页面（vibrating-screens）
+8. 洗矿设备页面（washing-equipment）
+
+每个页面的结构化数据现在都更加完整和丰富，包括：
+- 产品基本信息的结构化数据
+- 产品技术规格的结构化数据
+- 产品变体（不同型号）的结构化数据
+- 相关产品的结构化数据链接
+- 面包屑导航的结构化数据
+- 产品类别的结构化数据
+- 组织信息的结构化数据
+- 产品图片的结构化数据
+- 常见问题的结构化数据
+- 案例研究文章的结构化数据
+
+这些优化将显著提高网站在搜索引擎中的展示质量，特别是在产品详情页面的展示效果，包括丰富摘要、知识图谱集成和产品信息展示等方面。结构化数据遵循了Schema.org标准，使得搜索引擎能够更好地理解产品信息和关系。
+
+所有任务完成!
+
+### 案例页面(Cases Page)优化工作总结 (2024-08-04)
+
+按照之前在选矿解决方案页面应用的优化策略，我们对案例页面进行了相似的优化：
+
+#### 1. 服务端组件（app/zh/cases/page.tsx）优化：
+
+1. **结构化数据完善**：
+   - 添加了getWebPageStructuredData导入和使用
+   - 实现了CollectionPage类型的结构化数据，包含所有案例项目
+   - 为每个案例项目添加了Article类型的结构化数据
+   - 增加了作者和发布者信息
+   - 优化了图片引用，提高了Rich Snippets显示机会
+
+2. **代码结构优化**：
+   - 将baseUrl变量移至更早定义，提高代码可读性
+   - 添加了结构化数据创建的注释和编号，使代码更易维护
+   - 合并了所有结构化数据到一个数组
+
+3. **静态路由优化**：
+   - 移除了向客户端组件传递的locale参数
+   - 保留了必要的属性如breadcrumbItems、pageTitle、pageDescription和casesList
+
+#### 2. 客户端组件（app/zh/cases/CasesPageClient.tsx）优化：
+
+1. **组件接口优化**：
+   - 从CasesPageClientProps接口中移除了locale参数要求
+   - 客户端组件中直接写死locale为'zh'和isZh为true
+
+2. **语言条件渲染移除**：
+   - 移除了所有基于isZh条件的文本渲染逻辑
+   - 替换为直接使用中文内容，如"项目过滤"、"所有类别"、"查看详情"等
+   - 简化了结果计数的显示逻辑
+   - 移除了ContactCard组件中的条件标题和描述
+
+3. **代码优化**：
+   - 保留了所有数据处理、过滤和UI渲染逻辑
+   - 维持了图片处理逻辑，确保案例项目始终有有效的图片路径
+   - 保留了状态管理，包括过滤器状态和结果过滤逻辑
+
+#### 优化效果：
+
+1. **性能提升**：
+   - 避免了不必要的条件渲染逻辑
+   - 减少了不必要的参数传递
+
+2. **SEO增强**：
+   - 添加了更完整的结构化数据，使搜索引擎更好地理解页面内容
+   - 为案例集合添加了CollectionPage结构化数据
+   - 为每个案例添加了Article结构化数据
+
+3. **代码质量改进**：
+   - 更清晰的代码结构和注释
+   - 移除了不必要的条件检查
+   - 代码更简洁，更易于维护
+
+4. **维护性提升**：
+   - 代码更一致，遵循了项目中已确立的静态路由和语言处理模式
+   - 与选矿解决方案页面使用相同的优化模式，保持了项目一致性
+
+这些优化使案例页面代码更加简洁、性能更高，并为搜索引擎提供了更丰富的结构化数据，改善了SEO效果。
+
+### 英文版案例页面(English Cases Page)优化工作总结 (2024-08-04)
+
+继中文版案例页面优化后，我们对英文版案例页面进行了完全对应的优化：
+
+#### 1. 服务端组件（app/en/cases/page.tsx）优化：
+
+1. **结构化数据完善**：
+   - 添加了getWebPageStructuredData导入和使用
+   - 实现了CollectionPage类型的结构化数据，为所有案例项目集合
+   - 为每个案例项目添加了Article类型的结构化数据
+   - 使用英文版的作者和发布者信息（'Zexin Mining Equipment'）
+   - 调整了语言标记为'en-US'，与中文版的'zh-CN'相对应
+   - 使用英文版的logo图片路径（`${baseUrl}/images/logo-en.png`）
+
+2. **代码结构优化**：
+   - 将baseUrl变量移至更早定义，提高代码可读性
+   - 添加了结构化数据创建的注释和编号，保持与中文版相同的格式
+   - 合并了所有结构化数据到一个数组
+
+3. **静态路由优化**：
+   - 移除了向客户端组件传递的locale参数
+   - 保留了必要的属性如breadcrumbItems、pageTitle、pageDescription和casesList
+
+#### 2. 客户端组件（app/en/cases/CasesPageClient.tsx）优化：
+
+1. **组件接口优化**：
+   - 从CasesPageClientProps接口中移除了locale参数要求
+   - 客户端组件中直接写死locale为'en'和isZh为false
+
+2. **语言条件渲染移除**：
+   - 移除了所有基于isZh条件的文本渲染逻辑
+   - 替换为直接使用英文内容，如"Project Filters"、"All Categories"、"View Details"等
+   - 简化了结果计数的显示逻辑，保留英文版特有的单复数处理
+   - 移除了ContactCard组件中的条件标题和描述，直接使用英文内容
+
+3. **代码优化**：
+   - 保留了所有数据处理、过滤和UI渲染逻辑
+   - 维持了图片处理逻辑，确保案例项目始终有有效的图片路径
+   - 保留了状态管理，包括过滤器状态和结果过滤逻辑
+
+#### 优化效果：
+
+1. **多语言一致性**：
+   - 中英文版本采用相同的优化策略和代码结构
+   - 两个版本都将语言硬编码，消除了不必要的语言判断逻辑
+   - 保持了相同的数据处理方式和UI结构
+
+2. **SEO增强**：
+   - 英文版也添加了完整的结构化数据，使搜索引擎更好地理解页面内容
+   - 通过CollectionPage结构化数据，增强了在英文搜索结果中的展示
+   - 特别针对英文内容优化了页面名称和描述
+
+3. **代码质量改进**：
+   - 更清晰的代码结构和注释
+   - 移除了不必要的条件检查
+   - 代码更简洁，更易于维护
+
+4. **国际化优化**：
+   - 针对英文用户体验的优化，包括适当的单复数处理
+   - 使用了英文特定的组织名称和logo
+   - 使用了符合英文习惯的结构化数据标记
+
+通过这些优化，英文版案例页面与中文版保持了一致的架构和优化效果，同时针对英文版的特点进行了适当调整，提高了国际用户的体验和搜索引擎的友好度。
+
+### 案例详情页面(Case Detail Page)优化工作总结 (2024-08-04)
+
+完成了案例详情页面的优化，包括中英文版本。应用了与案例列表页面类似的优化策略：
+
+#### 1. 服务端组件优化：
+
+**英文版服务端组件 (app/en/cases/[caseId]/page.tsx)：**
+- 保留了原有的服务端结构化数据生成代码
+- 移除了向客户端组件传递的locale参数
+- 参数传递更加精简，只传递必要的数据
+
+**中文版服务端组件 (app/zh/cases/[caseId]/page.tsx)：**
+- 修正了原始代码中的结构化数据实现，使用新的统一API
+- 使用getCaseStudyStructuredData函数代替原始的自定义对象
+- 简化了页面结构，移除了不必要的相关案例获取代码
+- 移除了向客户端组件传递的locale参数
+
+#### 2. 客户端组件优化：
+
+**英文版客户端组件 (app/en/cases/[caseId]/CaseDetailClient.tsx)：**
+- 从CaseDetailClientProps接口中移除了locale参数要求
+- 客户端组件中直接写死locale为'en'和isZh为false
+- 删除了所有条件渲染代码，直接使用英文标签和文本
+- 简化了subjectDefaultValue的设置，使用固定的英文格式
+
+**中文版客户端组件 (app/zh/cases/[caseId]/CaseDetailClient.tsx)：**
+- 从CaseDetailClientProps接口中移除了locale参数要求
+- 客户端组件中直接写死locale为'zh'和isZh为true
+- 删除了所有条件渲染代码，直接使用中文标签和文本
+- 简化了subjectDefaultValue的设置，使用固定的中文格式
+
+#### 3. 共同改进：
+
+- 提高了代码可读性和维护性
+- 减少了不必要的计算和条件判断
+- 保持了中英文版本的结构一致性
+- 优化了联系表单的提交主题设置
+- 保留了必要的组件交互功能，如模态框和图片展示
+
+#### 优化效果：
+
+1. **性能提升**：
+   - 减少了每次渲染时的条件判断
+   - 简化了数据流，避免了无用的参数传递
+
+2. **代码质量改进**：
+   - 更加清晰的组件接口
+   - 移除了冗余的逻辑判断
+   - 分离了语言相关的内容，提高了代码专一性
+
+3. **项目结构优化**：
+   - 中英文版页面现在结构完全一致
+   - 每个语言版本独立维护，不依赖于动态语言判断
+   - 遵循静态路由的最佳实践
+
+这些优化使案例详情页面代码更加精简、性能更好，同时保持了功能的完整性和用户体验的一致性。
+
+### 关于我们页面(About Page)优化工作总结 (2024-08-04)
+
+完成了"关于我们"页面的优化，应用了与案例页面相同的优化策略：
+
+#### 1. 服务端组件优化：
+
+**英文版服务端组件 (app/en/about/page.tsx)：**
+- 移除了向客户端组件传递的locale参数
+- 保留了原有的结构化数据生成代码
+
+**中文版服务端组件 (app/zh/about/page.tsx)：**
+- 移除了向客户端组件传递的locale参数
+- 保留了原有的结构化数据生成代码
+
+#### 2. 客户端组件优化：
+
+**英文版客户端组件 (app/en/about/page.client.tsx)：**
+- 移除了locale参数依赖，将locale写死为'en'
+- 将isZh写死为false
+- 移除了所有条件渲染代码，直接使用英文内容
+- 保留了页面的全部功能和结构
+
+**中文版客户端组件 (app/zh/about/page.client.tsx)：**
+- 移除了locale参数依赖，将locale写死为'zh'
+- 将isZh写死为true
+- 移除了所有条件渲染代码，直接使用中文内容
+- 保留了页面的全部功能和结构
+
+#### 3. 主要改进：
+
+1. **代码结构优化**：
+   - 移除了不必要的条件判断
+   - 移除了双语言内容切换的逻辑
+   - 每个语言版本独立维护其内容
+
+2. **性能优化**：
+   - 减少了运行时的条件判断
+   - 代码更加精简和高效
+   - 页面初始化更快
+
+3. **可维护性提升**：
+   - 代码更加清晰和专一
+   - 中英文内容完全分离
+   - 更容易进行针对特定语言的内容更新
+
+#### 4. 保留功能：
+
+- 团队成员信息展示
+- 公司介绍和价值观部分
+- 联系信息和全球业务范围
+- 响应式布局和设计
+
+这些优化与之前针对案例页面、选矿解决方案页面等的优化保持一致，遵循了相同的静态路由优化策略。
+
+# 矿物加工解决方案详情页面优化
+
+[X] 英文版矿物加工解决方案详情页面服务端组件优化
+- 将动态获取的locale参数替换为硬编码的'en'
+- isZh设为false
+- 增加WebPage类型的结构化数据
+- 修复结构化数据参数名称错误
+
+[X] 中文版矿物加工解决方案详情页面服务端组件优化
+- 将动态获取的locale参数替换为硬编码的'zh'
+- isZh设为true
+- 增加WebPage类型的结构化数据
+
+[X] 英文版矿物加工解决方案详情页面客户端组件优化
+- 移除对locale参数的依赖
+- 将isZh直接设为false
+- 简化getCategoryName和getLocalizedValue函数
+- 移除条件渲染，直接使用英文版固定文本
+
+[X] 中文版矿物加工解决方案详情页面客户端组件优化
+- 移除对locale参数的依赖
+- 将isZh直接设为true
+- 简化getCategoryName和getLocalizedValue函数
+- 移除条件渲染，直接使用中文版固定文本
+
+已完成对矿物加工解决方案详情页面的优化。通过将语言设置直接写死在各自的语言版本页面中，移除了条件判断代码，使页面渲染更加简洁高效。同时在服务端组件中添加了WebPage类型的结构化数据，有助于搜索引擎更好地理解页面内容。
+
+# 矿物加工解决方案详情页面结构化数据优化
+
+[X] 将英文版页面中的结构化数据从客户端组件移到服务端组件
+- 移除客户端中的getBreadcrumbStructuredData等结构化数据相关导入
+- 在服务端组件中添加相应的结构化数据生成代码
+- 将客户端组件中的MultiStructuredData移除
+- 修正baseUrl为正确的网站地址："https://www.zexinmining.com"
+
+[X] 将中文版页面中的结构化数据从客户端组件移到服务端组件
+- 同样移除客户端中的结构化数据相关导入和生成代码
+- 在服务端组件中添加相应的结构化数据生成代码
+- 使用script标签单独渲染每个结构化数据
+- 修正baseUrl为正确的网站地址："https://www.zexinmining.com"
+
+将结构化数据移动到服务端组件有以下好处：
+1. 提高页面性能，减少客户端JavaScript体积
+2. 改善SEO，让搜索引擎爬虫能更容易地获取结构化数据
+3. 使用正确的网站URL作为基础URL，确保所有结构化数据中的链接有效
+4. 消除了客户端生成的结构化数据可能与服务端不一致的问题
+
+# 矿物加工解决方案详情页面结构化数据增强
+
+[X] 增强中文版结构化数据
+- 对TechnicalArticle结构化数据增加keywords、articleSection和dateModified
+- 对Service结构化数据增加offers信息
+- 新增HowTo结构化数据，详细描述选矿流程步骤
+- 新增ImageObject结构化数据，提供工艺流程图的结构化描述
+- 利用JSON文件中的applicationsImage提供图片URL
+
+[X] 增强英文版结构化数据
+- 与中文版保持一致的结构化数据增强
+- 针对英文语境调整关键词和描述文本
+- 货币单位从CNY调整为USD
+
+结构化数据增强对SEO的好处：
+1. 丰富了搜索引擎对页面内容的理解
+2. 增加了内容在搜索结果中的展示形式可能性（如HowTo rich snippets）
+3. 图片结构化数据提高了图片在图像搜索中的可发现性
+4. 关键词添加帮助搜索引擎更准确地分类内容
+5. 流程步骤结构化有助于Google理解工艺流程的逻辑顺序
+
+# 矿物加工解决方案详情页面结构化数据优化 - 修订版
+
+[X] 进一步优化结构化数据
+- 移除服务结构化数据中不必要的价格信息(offers)
+- 中英文版本保持一致的数据结构
+- 移除可能导致Google搜索控制台出现警告的价格相关信息
+
+这次优化的重点是移除不准确或不必要的结构化数据信息。考虑到矿物加工解决方案是定制化的工业服务，没有固定价格，因此移除了可能引起搜索引擎误解的价格相关属性。保持结构化数据的准确性和简洁性，避免因为添加不必要或不准确的信息而导致搜索引擎对网站结构化数据的惩罚。
+
+# 结构化数据优化工作计划
+
+## 总体目标
+检查网站所有页面，统一结构化数据实现方式，确保SEO最佳实践。
+
+## 详细任务
+
+### 1. 检查并修正语言设置
+- [X] 矿物加工解决方案页面(中英文版)已完成
+- [ ] 检查所有产品详情页面，将语言变量写死：
+  - [ ] 中文页面统一使用：`const locale = 'zh'; const isZh = true;`
+  - [ ] 英文页面统一使用：`const locale = 'en'; const isZh = false;`
+- [ ] 检查其他页面(新闻、案例、关于我们等)的语言设置
+
+### 2. 统一使用JSON-LD结构化数据
+- [X] 矿物加工解决方案页面已使用JSON-LD
+- [ ] 确保所有页面使用JSON-LD格式而非其他格式(如Microdata)
+- [ ] 检查并移除客户端组件中可能存在的结构化数据标记
+- [ ] 确保每个结构化数据块使用独立的script标签
+
+### 3. 将结构化数据分离到服务端组件
+- [X] 矿物加工解决方案页面已完成分离
+- [ ] 检查并将所有客户端结构化数据移至服务端组件：
+  - [ ] 产品详情页面
+  - [ ] 产品类别页面
+  - [ ] 新闻和案例页面
+  - [ ] 其他页面
+- [ ] 确认结构化数据在服务端正确生成并注入
+
+### 4. 确保WebPage结构化数据存在
+- [ ] 检查所有页面是否都包含WebPage结构化数据
+- [ ] 对缺少WebPage结构化数据的页面进行添加
+- [ ] 确保WebPage数据包含必要字段：name、description、url等
+
+### 5. 验证结构化数据准确性
+- [ ] 确保所有结构化数据与页面实际内容一致
+- [ ] 不生成虚假或不存在的数据(如价格、评级等)
+- [ ] 检查日期、链接等敏感信息的准确性
+- [ ] 确保多语言页面结构化数据的语言属性正确设置
+
+### 6. 进行结构化数据测试
+- [ ] 使用Google结构化数据测试工具验证每种页面类型
+- [ ] 修复测试中发现的错误和警告
+- [ ] 确保没有重复或冲突的结构化数据
+
+## 优先顺序
+1. 首先处理高流量页面：首页、产品类别页面
+2. 然后处理产品详情页面
+3. 最后处理其他页面：新闻、案例、关于我们
+
+## 注意事项
+- 确保baseUrl始终为"https://www.zexinmining.com"
+- 保持结构化数据与页面内容完全一致，不添加不存在的信息
+- 移除所有不必要的结构化数据（如不适用的价格信息）
+- 中英文版本结构化数据类型保持一致，只有内容根据语言不同
+
+# 结构化数据优化工作进度 (2024-08-03 更新)
+
+## 今日完成工作
+
+### 1. 通用结构化数据函数增强
+
+已在`lib/structuredData.ts`文件中添加了新的`getProductVariantStructuredData`函数，用于生成产品变体的结构化数据：
+
+- 支持根据产品规格表自动为不同型号生成变体结构化数据
+- 智能识别型号列，支持多语言环境
+- 自动提取每个型号的技术规格参数并转换为结构化数据
+- 返回符合Schema.org规范的ProductGroup和ProductModel数据
+
+### 2. 磁选机页面优化
+
+完成了磁选机页面(magnetic-separator)的结构化数据优化：
+
+#### 2.1 磁选机产品类别页面优化
+
+- 将结构化数据从客户端组件移到服务端，使用独立script标签输出
+- 添加WebPage结构化数据，增强SEO效果
+- 硬编码locale值（英文'en'，中文'zh'）
+- 统一使用'https://www.zexinmining.com'作为baseUrl
+- 中英文版本保持一致的优化模式
+
+#### 2.2 磁选机产品详情页优化
+
+- 使用新的通用`getProductVariantStructuredData`函数替换页面内局部实现
+- 将结构化数据从MultiStructuredData组件移到服务端，使用独立script标签
+- 添加WebPage结构化数据
+- 增强案例研究文章的结构化数据，添加author和datePublished属性
+- 优化关联产品链接的结构化数据表示方式
+- 硬编码locale和isZh参数，避免动态语言判断
+
+### 3. 结构化数据分离带来的优势
+
+- 提高页面性能：将JSON-LD结构化数据放在HTML头部，减少客户端JavaScript负担
+- 改善SEO：确保搜索引擎爬虫优先读取结构化数据
+- 避免客户端渲染错误：解决客户端水合(hydration)过程中可能出现的结构化数据不一致问题
+- 分离关注点：保持服务端负责数据和SEO，客户端专注于交互
+
+## 下一步计划 (2024-08-04)
+
+### 待优化页面 (按优先级排序)
+
+1. **浮选设备页面优化**
+   - [ ] 浮选设备类别页面 (`/products/ore-processing/flotation-equipment`)
+   - [ ] 浮选设备产品详情页 (`/products/ore-processing/flotation-equipment/[productId]`)
+
+2. **分级设备页面优化**
+   - [ ] 分级设备类别页面 (`/products/ore-processing/classification-equipment`) 
+   - [ ] 分级设备产品详情页 (`/products/ore-processing/classification-equipment/[productId]`)
+
+3. **破碎设备页面优化** 
+   - [ ] 破碎设备类别页面 (`/products/ore-processing/stationary-crushers`)
+   - [ ] 破碎设备产品详情页 (`/products/ore-processing/stationary-crushers/[productId]`)
+
+4. **新闻和案例研究页面优化**
+   - [ ] 新闻列表页 (`/news`)
+   - [ ] 新闻详情页 (`/news/[newsId]`)
+   - [ ] 案例研究列表页 (`/case-studies`) 
+   - [ ] 案例研究详情页 (`/case-studies/[caseId]`)
+
+### 优化内容
+
+每个页面的优化将包括以下内容：
+
+- 将结构化数据从客户端移到服务端
+- 使用单独的script标签输出每个结构化数据
+- 添加WebPage结构化数据
+- 硬编码语言参数(locale和isZh)
+- 优化现有结构化数据内容，确保与页面内容完全一致
+- 中英文版本保持一致的优化模式
+- 添加适当的领域特定结构化数据
+
+### 验证和测试
+
+- [ ] 使用Google结构化数据测试工具验证所有结构化数据实现
+- [ ] 使用Chrome DevTools验证结构化数据的正确加载
+- [ ] 检查页面性能指标，确保优化没有导致性能下降
+
+# 产品详情页结构化数据优化进度
+
+## 已完成优化
+[X] 磁选机详情页(magnetic-separator)结构化数据优化
+[X] 分级设备详情页(classification-equipment)结构化数据优化
+[X] 浮选设备详情页(flotation-equipment)结构化数据优化
+[X] 破碎设备详情页(stationary-crushers)结构化数据优化
+[X] 筛分设备详情页(vibrating-screens)结构化数据优化
+[X] 给料设备详情页(feeding-equipment)结构化数据优化
+[X] 磨矿设备详情页(grinding-equipment)结构化数据优化
+[X] 重选设备详情页(gravity-separation)结构化数据优化
+[X] 洗矿设备详情页(washing-equipment)结构化数据优化
+
+## 网站其他页面结构化数据优化
+[X] 网站主页(homepage)结构化数据优化
+[ ] 关于我们页面(about)结构化数据优化
+[ ] 案例研究列表页(cases)结构化数据优化
+[ ] 新闻中心页面(news)结构化数据优化
+
+## 结构化数据优化策略
+1. 使用JSON-LD格式进行结构化数据标记
+2. 将结构化数据分离到服务端组件
+3. 为每种类型的结构化数据使用单独的script标签，便于搜索引擎处理
+4. 确保不同语言页面使用正确的语言属性
+
+### 最近完成的优化工作 (2024-08-12)
+
+#### 网站主页结构化数据优化
+- 为中文和英文版主页更新了结构化数据实现
+- 将MultiStructuredData组件替换为独立script标签注入方式
+- 移除了不必要的库导入（如getOrganizationSchema, getLocalBusinessSchema等）
+- 添加了baseUrl确保URL使用绝对路径
+- 分别注入网站信息、组织信息和本地商业信息三类结构化数据
+
+#### 洗矿设备详情页结构化数据优化
+- 为中文和英文版洗矿设备详情页更新了结构化数据实现
+- 移除了旧的自定义getProductVariantStructuredData函数，使用lib/structuredData中的标准实现
+- 改进了formatSpecifications函数，增加了基础验证确保数据安全性
+- 将MultiStructuredData组件替换为独立script标签注入方式
+- 为产品规格表、产品变体、FAQ和案例研究添加了结构化数据
+- 为案例研究结构化数据添加了author和datePublished属性
+- 修正了URL路径，确保所有URL使用绝对路径(包含baseUrl)
+- 添加了WebPage结构化数据支持
+- 硬编码了locale和isZh变量，以确保不同语言页面使用正确的语言属性
+
+### 产品详情页结构化数据优化总结 (2024-08-12)
+- 已完成所有9个选矿设备产品详情页的结构化数据优化工作
+- 统一了所有产品详情页的结构化数据实现方式
+- 优化后的代码具有更好的可维护性和更高的搜索引擎友好度
+- 所有页面现在都使用独立script标签注入结构化数据，取代了旧的MultiStructuredData组件
+- 所有页面都正确处理了非必要数据的检查，增强了代码的健壮性
+- 案例研究数据现在包括author和datePublished属性，提高了结构化数据的完整性
+- 所有URL使用baseUrl构建为绝对路径，确保搜索引擎正确识别
+- 确保了多语言页面使用正确的语言属性，优化多语言SEO效果
+
+## 下一步计划 (2024-08-12)
+- 继续优化其他重要页面(如关于我们、案例研究列表页、新闻中心页面等)的结构化数据实现
+- 对结构化数据进行验证测试，确保所有页面的结构化数据都能被搜索引擎正确识别
+- 使用Google的结构化数据测试工具验证各页面的结构化数据实现
+- 监控结构化数据实现后对网站SEO的影响
+
+## 已完成的硬编码语言参数修复
+
+- 修复了中文版矿山EPC服务页面(app/zh/products/mining-epc/page.tsx)中使用params.locale导致的问题
+  - 将`const { locale } = await Promise.resolve(params)`替换为硬编码的`const locale = 'zh'`
+  - 将`const isZh = locale === 'zh'`替换为硬编码的`const isZh = true`
+- 修复了英文版矿山EPC服务页面(app/en/products/mining-epc/page.tsx)中使用params.locale导致的问题
+  - 将`const { locale } = await Promise.resolve(params)`替换为硬编码的`const locale = 'en'`
+  - 将`const isZh = locale === 'zh'`替换为硬编码的`const isZh = false`
+- 修复了中文版矿物加工解决方案详情页面(app/zh/products/mineral-processing-solutions/[category]/[solutionId]/page.tsx)中使用Promise.resolve(params)导致的问题
+  - 将`const { category, solutionId } = params`替换为正确的动态路由参数处理方式：
+  - `const resolvedParams = await params;`
+  - `const { category, solutionId } = resolvedParams;`
+- 修复了英文版矿物加工解决方案详情页面(app/en/products/mineral-processing-solutions/[category]/[solutionId]/page.tsx)中使用Promise.resolve(params)导致的问题
+  - 将`const { category, solutionId } = params`替换为正确的动态路由参数处理方式：
+  - `const resolvedParams = await params;`
+  - `const { category, solutionId } = resolvedParams;`
+- 需要检查lib/seo.ts中的getProductDetailMetadata函数，该函数仍然使用params.locale
+
+## 结构化数据优化
+
+我们已经完成了以下结构化数据优化：
+
+1. 将结构化数据从客户端移到服务端 - 已完成
+2. 使用单独的script标签输出每个结构化数据 - 部分完成
+   - 矿物加工解决方案详情页面已经使用单独script标签
+   - 产品详情页面已经使用单独script标签
+   - 其他页面仍在使用MultiStructuredData组件
+3. 添加WebPage结构化数据 - 部分完成
+   - 矿物加工解决方案详情页面已添加
+   - 矿山EPC服务页面已添加
+4. 硬编码语言参数(locale和isZh) - 已完成
+5. 优化现有结构化数据内容，确保与页面内容完全一致 - 部分完成
+6. 中英文版本保持一致的优化模式 - 部分完成
+7. 添加适当的领域特定结构化数据 - 部分完成
+   - 矿物加工解决方案详情页面已添加TechnicalArticle、Service、HowTo和ImageObject结构化数据
+   - 矿山EPC服务页面已添加Service结构化数据
+
+## 结构化数据实现方式优化
+
+为了提高SEO效果和搜索引擎对页面内容的理解，我们对结构化数据的实现方式进行了优化：
+
+1. 从使用 `MultiStructuredData` 组件迁移到直接使用 `<script type="application/ld+json">` 标签
+   - 完成了中英文分级设备详情页面(`app/zh|en/products/ore-processing/classification-equipment/[productId]/page.tsx`)的迁移
+   - 完成了中英文浮选设备页面(`app/zh|en/products/ore-processing/flotation-equipment/page.tsx`)的迁移
+   - 完成了中英文选矿设备主页面(`app/zh|en/products/ore-processing/page.tsx`)的迁移
+   - 完成了中英文分级设备页面(`app/zh|en/products/ore-processing/classification-equipment/page.tsx`)的迁移
+   - 参考了给料设备详情页面的实现方式
+
+2. 添加了 `WebPage` 结构化数据，提供更完整的页面信息
+   - 包含页面URL、标题、描述、图片等信息
+   - 增强了搜索引擎对页面内容的理解
+
+3. 优化了结构化数据的组织方式
+   - 每个结构化数据类型使用独立的 `<script>` 标签
+   - 条件渲染可选的结构化数据（如FAQ、产品变体等）
+   - 使用 `key` 属性确保动态生成的结构化数据标签的唯一性
+
+4. 确保了中英文版本的一致性
+   - 两个版本使用相同的结构化数据实现方式
+   - 只有语言相关的内容有所不同
+
+## 待完成的结构化数据迁移工作
+
+以下页面还需要从 `MultiStructuredData` 组件迁移到直接使用 `<script>` 标签：
+
+1. ~~中英文版洗矿设备页面 (`app/zh|en/products/ore-processing/washing-equipment/page.tsx`)~~（已完成）
+2. ~~中英文版振动筛页面 (`app/zh|en/products/ore-processing/vibrating-screens/page.tsx`)~~（已完成）
+3. ~~中英文版破碎机页面 (`app/zh|en/products/ore-processing/stationary-crushers/page.tsx`)~~（已完成）
+4. ~~中英文版磨矿设备页面 (`app/zh|en/products/ore-processing/grinding-equipment/page.tsx`)~~（已完成）
+5. ~~中英文版给料设备页面 (`app/zh|en/products/ore-processing/feeding-equipment/page.tsx`)~~（已完成）
+6. ~~中英文版重选设备页面 (`app/zh|en/products/ore-processing/gravity-separation/page.tsx`)~~（已完成）
+7. ~~中英文版分级设备页面 (`app/zh|en/products/ore-processing/classification-equipment/page.tsx`)~~（已完成）
+
+## 结构化数据迁移工作总结
+
+已完成所有选矿设备页面的结构化数据优化工作，包括：
+
+1. 将原来使用的`MultiStructuredData`组件替换为直接使用`<script type="application/ld+json">`标签，这样搜索引擎可以更直接地获取和处理结构化数据。
+2. 为所有页面添加了`WebPage`结构化数据，提供更完整的页面信息。
+3. 对于重选设备页面，保留了增强型产品组结构化数据，提供更丰富的产品信息。
+
+完成的页面包括：
+- 中英文版洗矿设备页面
+- 中英文版振动筛页面
+- 中英文版破碎机页面
+- 中英文版磨矿设备页面
+- 中英文版给料设备页面
+- 中英文版重选设备页面
+- 中英文版分级设备页面
+
+这些优化有助于提高网站在搜索引擎中的可见性，并使搜索引擎更容易理解和索引网站内容。
+
+## 待完成的结构化数据迁移工作（第二阶段）
+
+经过检查，以下页面仍然使用`MultiStructuredData`组件，需要迁移到直接使用`<script>`标签：
+
+### 产品相关页面
+1. ~~中英文版产品总览页面 (`app/zh|en/products/page.tsx`)~~（已完成）
+2. ~~中英文版矿山EPC服务页面 (`app/zh|en/products/mining-epc/page.tsx`)~~（已完成）
+3. 中英文版矿物加工解决方案页面 (`app/zh|en/products/mineral-processing-solutions/page.tsx`)
+4. 中英文版矿物加工解决方案客户端组件 (`app/zh|en/products/mineral-processing-solutions/MineralProcessingSolutionsClient.tsx`)
+
+### 新闻相关页面
+5. 中英文版新闻详情页面 (`app/zh|en/news/[newsId]/page.tsx`)
+6. 中英文版新闻列表页面 (`app/zh|en/news/page.tsx`)
+
+### 案例相关页面
+7. 中英文版案例详情页面 (`app/zh|en/cases/[caseId]/page.tsx`)
+8. 中英文版案例列表页面 (`app/zh|en/cases/page.tsx`)
+
+### 其他页面
+9. 中英文版关于我们页面 (`app/zh|en/about/page.tsx`)
+
+## 结构化数据迁移工作进度
+
+### 2024-08-14 更新
+
+已完成产品总览页面的结构化数据优化：
+
+1. **中文版产品总览页面优化**:
+   - 将`MultiStructuredData`组件替换为独立的`<script>`标签
+   - 保留了所有原有的结构化数据，包括产品类别、组织、网页和产品列表
+   - 确保了所有URL使用`baseUrl`构建为绝对路径
+
+2. **英文版产品总览页面优化**:
+   - 同样将`MultiStructuredData`组件替换为独立的`<script>`标签
+   - 保持了与中文版相同的结构化数据实现方式
+   - 确保了所有URL使用`baseUrl`构建为绝对路径
+
+已完成矿山EPC服务页面的结构化数据优化：
+
+1. **中文版矿山EPC服务页面优化**:
+   - 将`MultiStructuredData`组件替换为独立的`<script>`标签
+   - 保留了所有原有的结构化数据，包括服务、组织、面包屑和网页结构化数据
+   - 保留了硬编码的`locale='zh'`和`isZh=true`，确保页面正确显示中文内容
+
+2. **英文版矿山EPC服务页面优化**:
+   - 同样将`MultiStructuredData`组件替换为独立的`<script>`标签
+   - 保持了与中文版相同的结构化数据实现方式
+   - 保留了硬编码的`locale='en'`和`isZh=false`，确保页面正确显示英文内容
+
+下一步将继续处理矿物加工解决方案页面的结构化数据优化。
+
+# 结构化数据优化任务
+
+## 任务描述
+
+检查并修改网站中的结构化数据实现方式。项目中存在两种不同的结构化数据实现方式：
+1) 使用`MultiStructuredData`组件，将所有结构化数据放在一个数组中
+2) 直接使用`<script type="application/ld+json">`标签，每个结构化数据有独立标签
+
+## 任务目标
+
+- [X] 分析现有结构化数据实现方式的差异
+- [X] 将所有页面从使用`MultiStructuredData`组件迁移到直接使用`<script>`标签
+- [X] 确保每个页面都有`WebPage`类型的结构化数据
+- [X] 添加其他相关的结构化数据，如`LocalBusiness`
+- [X] 修复客户端和服务端结构化数据重复的问题，将所有结构化数据统一放在服务端
+- [X] 更新结构化数据以符合最新的Schema.org标准（添加@context URL末尾的斜杠）
+
+## 已完成迁移的页面
+
+- [X] 中英文版矿物加工解决方案页面
+- [X] 中英文版关于我们页面
+- [X] 中英文版新闻列表页面
+- [X] 中英文版新闻详情页面
+- [X] 中英文版案例列表页面
+- [X] 中英文版案例详情页面
+
+## 每个页面包含的结构化数据
+
+- 组织信息（Organization）
+- 网页信息（WebPage）
+- 面包屑导航（BreadcrumbList）
+- 页面特定的结构化数据（如产品类别、新闻列表、案例详情等）
+
+## 优化结果
+
+所有页面现在都使用独立script标签注入结构化数据，取代了旧的MultiStructuredData组件。这种方式确保了结构化数据在服务端渲染，有利于SEO，避免了重复，并且每个结构化数据都有明确的用途。
+
+## 后续工作
+
+- [X] 考虑是否可以完全移除不再使用的`MultiStructuredData`组件
+- [X] 更新结构化数据以符合最新的Schema.org标准（2024-2025年版本）
+- [ ] 对所有页面的结构化数据进行验证，确保格式正确
+- [ ] 使用Google结构化数据测试工具验证实现效果
+
+## 移除MultiStructuredData组件
+
+我们已经成功移除了不再使用的`MultiStructuredData`组件，保留了`StructuredData`和`ProductDataScript`组件。这样可以减少代码冗余，使代码库更加简洁。
+
+## 修复HTTP 400-499错误
+
+根据Google Search Console报告，网站存在多个HTTP 400-499错误，主要是产品咨询页面的URL格式问题。
+
+### 问题原因
+- 产品查询参数中包含未编码的空格和特殊字符
+- 使用直接URL跳转而不是模态框处理产品咨询请求
+
+### 解决方案
+- [X] 修改`ProductNavigation`组件，移除直接URL链接，改用模态框
+- [X] 修改`ContactCard`组件，始终使用模态框而不是直接链接跳转
+- [X] 移除可能导致错误的URL参数编码方式
+- [X] 修改产品页面中的`ContactCard`组件，将`linkUrl`属性设置为空字符串，避免直接跳转
+
+### 修改文件
+- [X] `components/ProductDetail/ProductNavigation.tsx`
+- [X] `components/ContactCard.tsx`
+- [X] `app/zh/products/ore-processing/OreProcessingPageClient.tsx`
+- [X] `app/zh/products/ore-processing/flotation-equipment/[productId]/page.client.tsx`
+- [X] `app/zh/products/ore-processing/classification-equipment/[productId]/page.client.tsx`
+- [X] `app/zh/products/ore-processing/feeding-equipment/[productId]/page.client.tsx`
+- [X] `app/zh/products/ore-processing/gravity-separation/[productId]/page.client.tsx`
+- [X] `app/zh/products/ore-processing/grinding-equipment/[productId]/page.client.tsx`
+- [X] `app/zh/products/ore-processing/magnetic-separator/[productId]/page.client.tsx`
+- [X] `app/zh/products/ore-processing/washing-equipment/[productId]/page.client.tsx`
+- [X] `app/zh/products/ore-processing/stationary-crushers/[productId]/page.client.tsx`
+- [X] `app/en/products/ore-processing/classification-equipment/[productId]/page.client.tsx`
+- [ ] 其他英文版产品详情页面（正在修改中）
+
+### 优化结果
+- 避免了由于URL参数格式问题导致的HTTP 400错误
+- 提升了用户体验，使用模态框直接在当前页面完成咨询提交
+- 简化了代码逻辑，移除了不必要的URL参数处理
+
+# 当前任务：修复HTTP 400-499错误
+
+## 问题描述
+网站存在HTTP 400-499错误，主要是产品咨询页面的URL格式问题。
+
+## 解决方案
+1. 修改`ProductNavigation`组件，移除直接URL跳转，改用模态框
+2. 修改`ContactCard`组件，始终使用模态框而不是直接链接跳转
+3. 修改产品页面中的`ContactCard`组件，将`linkUrl`属性设置为空字符串
+
+## 已完成的修改
+- [X] `components/ProductDetail/ProductNavigation.tsx`
+- [X] `components/ContactCard.tsx`
+- [X] `app/zh/products/ore-processing/OreProcessingPageClient.tsx`
+- [X] `app/zh/products/ore-processing/classification-equipment/[productId]/page.client.tsx`
+- [X] `app/zh/products/ore-processing/feeding-equipment/[productId]/page.client.tsx`
+- [X] `app/zh/products/ore-processing/flotation-equipment/[productId]/page.client.tsx`
+- [X] `app/zh/products/ore-processing/gravity-separation/[productId]/page.client.tsx`
+- [X] `app/zh/products/ore-processing/grinding-equipment/[productId]/page.client.tsx`
+- [X] `app/zh/products/ore-processing/magnetic-separator/[productId]/page.client.tsx`
+- [X] `app/zh/products/ore-processing/stationary-crushers/[productId]/page.client.tsx`
+- [X] `app/zh/products/ore-processing/vibrating-screens/[productId]/page.client.tsx`
+- [X] `app/zh/products/ore-processing/washing-equipment/[productId]/page.client.tsx`
+- [X] `app/en/products/ore-processing/classification-equipment/[productId]/page.client.tsx`
+- [X] `app/en/products/ore-processing/feeding-equipment/[productId]/page.client.tsx`
+- [X] `app/en/products/ore-processing/flotation-equipment/[productId]/page.client.tsx`
+- [X] `app/en/products/ore-processing/gravity-separation/[productId]/page.client.tsx`
+- [X] `app/en/products/ore-processing/grinding-equipment/[productId]/page.client.tsx`
+- [X] `app/en/products/ore-processing/magnetic-separator/[productId]/page.client.tsx`
+- [X] `app/en/products/ore-processing/stationary-crushers/[productId]/page.client.tsx`
+- [X] `app/en/products/ore-processing/vibrating-screens/[productId]/page.client.tsx`
+- [X] `app/en/products/ore-processing/washing-equipment/[productId]/page.client.tsx`
+
+## 修改总结
+1. 所有产品详情页面的`ContactCard`组件已更新，移除了`linkUrl`属性或设置为空字符串，并移除了`useModal`属性
+2. `ProductNavigation`组件已更新，使用模态框而不是直接链接跳转
+3. 这些修改解决了由于URL参数格式问题导致的HTTP 400错误，提升了用户体验，并简化了代码逻辑

@@ -38,9 +38,6 @@ export default function ProductNavigation({
   const isZh = locale === 'zh' || nextLocale === 'zh';
   const [isSticky, setIsSticky] = useState(false);
   const [navSections, setNavSections] = useState<NavigationSection[]>(sections);
-  const [ctaLink, setCtaLink] = useState<string>(
-    ctaUrl || `/${locale}/contact?product=${encodeURIComponent(productName)}`
-  );
   
   // 新增：控制报价模态框的状态
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -96,11 +93,6 @@ export default function ProductNavigation({
         // 如果有sections，使用它
         if (navData.sections && Array.isArray(navData.sections)) {
           setNavSections(navData.sections);
-        }
-        
-        // 如果有CTA URL，使用它
-        if (navData.cta && navData.cta.url) {
-          setCtaLink(navData.cta.url);
         }
       }
     } catch (error) {
@@ -169,15 +161,14 @@ export default function ProductNavigation({
           </ul>
           
           <div className="flex md:gap-x-8 py-6 gap-x-6 max-lg:w-full lg:ml-auto max-lg:justify-end">
-              <a
-              href={ctaLink}
+              <button
                 onClick={openContactModal}
-              className="group inline-flex items-center text-sm gap-3 transition-colors ease-hover no-underline rounded-xs bg-secondary px-6 py-3 text-white hover:bg-secondary-200 hover:text-white active:bg-secondary-400 active:text-white focus:text-white visited:text-white font-text"
-            >
-              <span>
-                {isZh ? '获取报价' : 'Request a quote'}
-              </span>
-              </a>
+                className="group inline-flex items-center text-sm gap-3 transition-colors ease-hover no-underline rounded-xs bg-secondary px-6 py-3 text-white hover:bg-secondary-200 hover:text-white active:bg-secondary-400 active:text-white focus:text-white visited:text-white font-text"
+              >
+                <span>
+                  {isZh ? '获取报价' : 'Request a quote'}
+                </span>
+              </button>
           </div>
         </div>
       </div>

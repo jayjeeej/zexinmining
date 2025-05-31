@@ -7,6 +7,11 @@ import { NewsItem } from '@/lib/api/news';
 import { safelyGetRouteParams } from '@/lib/utils';
 import fs from 'fs';
 import path from 'path';
+import { 
+  getBreadcrumbStructuredData, 
+  getOrganizationStructuredData, 
+  getNewsArticleStructuredData 
+} from '@/lib/structuredData';
 // Vercel 优化导出指令
 export const dynamic = 'force-static';        // 强制静态生成
 export const revalidate = 3600;               // 每小时重新验证一次
@@ -81,9 +86,21 @@ export async function generateMetadata({
       alt: newsItem.imageAlt || newsItem.title,
     }
   ];
+  
+  // 优化标题长度，确保不超过28个中文字符
+  let optimizedTitle = newsItem.title;
+  const siteName = '泽鑫矿山设备';
+  
+  // 如果标题超过24个字符，则截取前20个字符并添加省略号
+  if (optimizedTitle.length > 24) {
+    optimizedTitle = optimizedTitle.substring(0, 20) + '...';
+    optimizedTitle = `${optimizedTitle} | ${siteName}`;
+  } else {
+    optimizedTitle = `${optimizedTitle} | ${siteName}`;
+  }
 
   return {
-    title: newsItem.title,
+    title: optimizedTitle,
     description: newsItem.summary,
     alternates: {
       canonical: canonicalUrl,
@@ -146,13 +163,59 @@ export default async function NewsDetailPage({
   const relatedNewsResult = await getNewsById(newsId, locale, { related: true, limit: 3 });
   const relatedNews = Array.isArray(relatedNewsResult) ? relatedNewsResult : [];
 
-  // 传递数据给客户端组件
+  // 添加分类映射
+  const categoryMap: Record<string, { zh: string, en: string }> = {
+    'company': { zh: '公司新闻', en: 'Company News' },
+    'product': { zh: '产品动态', en: 'Product Updates' },
+    'industry': { zh: '行业资讯', en: 'Industry Insights' },
+    'technical': { zh: '选矿知识', en: 'Beneficiation Techniques' }
+  };
+
+  // 获取基础URL
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.zexinmining.com';
+  
+  // 服务端生成结构化数据
+  const isZh = locale === 'zh';
+
+  // SEO结构化数据
+  const breadcrumbStructuredData = getBreadcrumbStructuredData(
+    breadcrumbItems.map(item => ({ name: item.name, url: item.href }))
+  );
+  const organizationStructuredData = getOrganizationStructuredData(isZh);
+  
+  // 新闻文章结构化数据
+  const newsArticleStructuredData = getNewsArticleStructuredData({
+    newsItem,
+    locale,
+    baseUrl,
+    categoryMap
+  });
+
+  // 传递数据给客户端组件，不包括结构化数据
   return (
-    <NewsDetailClient 
-      locale={locale} 
-      newsItem={newsItem} 
-      relatedNews={relatedNews} 
-      breadcrumbItems={breadcrumbItems} 
-    />
+    <>
+      {/* 使用独立script标签注入各结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(newsArticleStructuredData) }}
+      />
+      
+      <NewsDetailClient 
+        locale={locale} 
+        newsItem={newsItem} 
+        relatedNews={relatedNews} 
+        breadcrumbItems={breadcrumbItems} 
+      />
+    </>
   );
 }

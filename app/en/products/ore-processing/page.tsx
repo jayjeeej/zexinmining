@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import { getCategoryMetadata, getMineralProcessingMetadata } from '@/lib/seo';
-import { getOrganizationStructuredData, getProductCategoryStructuredData, getBreadcrumbStructuredData } from '@/lib/structuredData';
-import { MultiStructuredData } from '@/components/StructuredData';
+import { getOrganizationStructuredData, getProductCategoryStructuredData, getBreadcrumbStructuredData, getWebPageStructuredData } from '@/lib/structuredData';
 import OreProcessingPageClient from './OreProcessingPageClient';
 import { getBreadcrumbConfig } from '@/lib/navigation';
 
@@ -32,6 +31,40 @@ export default async function OreProcessingPage() {
     { name: 'Ore Processing Equipment' }
   ];
   
+  // 预处理设备数据（用于生成结构化数据）
+  const preProcessingEquipment = [
+    {
+      title: "Stationary Crusher",
+      description: "High-efficiency ore crushing equipment, including jaw crushers, cone crushers, etc., suitable for various hardness ores.",
+      imageSrc: "/images/mineral-processing/stationary-crusher.jpg",
+      linkUrl: `/${locale}/products/ore-processing/stationary-crushers`,
+    },
+    {
+      title: "Stationary Vibrating Screen",
+      description: "High-precision screening equipment, used for ore classification and separation, ensuring the particle size requirements for subsequent processing.",
+      imageSrc: "/images/mineral-processing/vibrating-screen.jpg",
+      linkUrl: `/${locale}/products/ore-processing/vibrating-screens`,
+    },
+    // 其他预处理设备...
+  ];
+  
+  // 分选设备数据（用于生成结构化数据）
+  const separationEquipment = [
+    {
+      title: "Gravity Separation Equipment",
+      description: "Adopting advanced jigging technology, suitable for efficient separation of gold, tin, tungsten and other gravity-selected minerals.",
+      imageSrc: "/images/mineral-processing/gravity-separator.jpg",
+      linkUrl: `/${locale}/products/ore-processing/gravity-separation`,
+    },
+    {
+      title: "Magnetic Separator",
+      description: "Professional magnetic separation series including dry and wet magnetic separators, suitable for efficient separation of iron ore, manganese ore, hematite.",
+      imageSrc: "/images/mineral-processing/magnetic-separator.jpg",
+      linkUrl: `/${locale}/products/ore-processing/magnetic-separator`,
+    },
+    // 其他分选设备...
+  ];
+  
   // 准备结构化数据
   // 1. 组织结构化数据
   const organizationStructuredData = getOrganizationStructuredData(isZh);
@@ -49,20 +82,82 @@ export default async function OreProcessingPage() {
   // 3. 面包屑结构化数据
   const breadcrumbStructuredData = getBreadcrumbStructuredData(breadcrumbItems, baseUrl);
   
-  // 组合所有结构化数据
-  const structuredDataArray = [
-    organizationStructuredData,
-    categoryStructuredData,
-    breadcrumbStructuredData
-  ];
+  // 4. 网页结构化数据
+  const pageUrl = `${baseUrl}/${locale}/products/ore-processing`;
+  const webPageStructuredData = getWebPageStructuredData({
+    pageUrl,
+    pageName: 'Mineral Processing Equipment - Efficient Mineral Separation & Pre-Treatment Solutions',
+    description: 'Zexin provides comprehensive mineral processing equipment and solutions, including crushing, grinding, flotation, magnetic separation, gravity separation, classification, dewatering and other process equipment, achieving efficient mineral separation and optimal recovery rates',
+    locale,
+    baseUrl,
+    images: [
+      '/images/mineral-processing/crushing-equipment.jpg',
+      '/images/mineral-processing/magnetic-separator.jpg',
+      '/images/mineral-processing/gravity-separator.jpg'
+    ],
+    breadcrumbId: `${pageUrl}#breadcrumb`
+  });
+  
+  // 5. 产品集合结构化数据
+  const itemListStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      ...preProcessingEquipment.map((item, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "Product",
+          "name": item.title,
+          "description": item.description,
+          "image": `${baseUrl}${item.imageSrc}`,
+          "url": `${baseUrl}${item.linkUrl}`
+        }
+      })),
+      ...separationEquipment.map((item, index) => ({
+        "@type": "ListItem",
+        "position": index + preProcessingEquipment.length + 1,
+        "item": {
+          "@type": "Product",
+          "name": item.title,
+          "description": item.description,
+          "image": `${baseUrl}${item.imageSrc}`,
+          "url": `${baseUrl}${item.linkUrl}`
+        }
+      }))
+    ]
+  };
   
   return (
     <>
-      {/* 使用MultiStructuredData组件注入结构化数据 */}
-      <MultiStructuredData dataArray={structuredDataArray} />
+      {/* 使用独立script标签注入各结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+      />
       
-      {/* 客户端组件 */}
-      <OreProcessingPageClient locale={locale} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListStructuredData) }}
+      />
+      
+      {/* 客户端组件 - 不再传递locale参数 */}
+      <OreProcessingPageClient />
     </>
   );
 } 

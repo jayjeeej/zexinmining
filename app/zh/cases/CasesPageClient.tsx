@@ -8,6 +8,7 @@ import Image from 'next/image';
 import CardAnimationProvider from '@/components/CardAnimationProvider';
 import ContactFormModal from '@/components/ContactFormModal';
 import ContactCard from '@/components/ContactCard';
+import HeroSection from '@/components/HeroSection';
 
 // 案例项目接口定义
 interface CaseProject {
@@ -31,7 +32,6 @@ interface Filters {
 
 // 客户端组件接口
 interface CasesPageClientProps {
-  locale: string;
   breadcrumbItems: { name: string; href?: string }[];
   pageTitle: string;
   pageDescription: string;
@@ -39,13 +39,14 @@ interface CasesPageClientProps {
 }
 
 export default function CasesPageClient({
-  locale,
   breadcrumbItems,
   pageTitle,
   pageDescription,
   casesList
 }: CasesPageClientProps) {
-  const isZh = locale === 'zh';
+  // 写死语言设置为中文
+  const locale = 'zh';
+  const isZh = true;
   
   // 控制联系表单模态框的状态
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -139,6 +140,13 @@ export default function CasesPageClient({
       locale={locale}
       breadcrumbItems={breadcrumbItems}
     >
+      {/* 添加HeroSection组件，设置headingLevel为h1 */}
+      <HeroSection
+        title={pageTitle}
+        description={pageDescription}
+        headingLevel="h1"
+      />
+      
       {/* 添加卡片动画提供者 */}
       <CardAnimationProvider />
       
@@ -161,7 +169,7 @@ export default function CasesPageClient({
           <div className="mb-16 pb-8">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-16">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-black">
-                {isZh ? '项目过滤' : 'Project Filters'}
+                项目过滤
               </h2>
               
               {(selectedCategory || selectedYear) && (
@@ -169,7 +177,7 @@ export default function CasesPageClient({
                   onClick={resetFilters}
                   className="text-sm flex items-center text-black underline decoration-1 underline-offset-4 hover:text-[#ff6633] transition-colors"
                 >
-                  {isZh ? '重置过滤器' : 'Reset Filters'}
+                  重置过滤器
                 </button>
               )}
             </div>
@@ -182,7 +190,7 @@ export default function CasesPageClient({
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full p-3 border-0 border-b border-gray-100 focus:outline-none focus:ring-0 focus:border-[#ff6633] bg-transparent"
                 >
-                  <option value="">{isZh ? '所有类别' : 'All Categories'}</option>
+                  <option value="">所有类别</option>
                   {filters.categories.map(category => (
                     <option key={category} value={category}>{category}</option>
                   ))}
@@ -196,7 +204,7 @@ export default function CasesPageClient({
                   onChange={(e) => setSelectedYear(e.target.value)}
                   className="w-full p-3 border-0 border-b border-gray-100 focus:outline-none focus:ring-0 focus:border-[#ff6633] bg-transparent"
                 >
-                  <option value="">{isZh ? '所有年份' : 'All Years'}</option>
+                  <option value="">所有年份</option>
                   {filters.years.map(year => (
                     <option key={year} value={year}>{year}</option>
                   ))}
@@ -250,7 +258,7 @@ export default function CasesPageClient({
                   
                   <div className="mt-auto group-hover:text-[#ff6633] transition-colors flex items-center gap-1">
                     <span className="text-sm font-medium underline decoration-1 underline-offset-4">
-                      {isZh ? '查看详情' : 'View Details'}
+                      查看详情
                     </span>
                     <svg 
                       width="16" 
@@ -276,19 +284,16 @@ export default function CasesPageClient({
           
           {/* 结果计数 */}
           <div className="mt-8 text-sm text-gray-500 text-center">
-            {isZh 
-              ? `显示 ${filteredProjects.length} 个结果`
-              : `Showing ${filteredProjects.length} result${filteredProjects.length !== 1 ? 's' : ''}`
-            }
+            显示 {filteredProjects.length} 个结果
           </div>
         </Container>
       </div>
       
       {/* 使用ContactCard组件替代底部按钮 */}
       <ContactCard
-        title={isZh ? "寻找适合您的矿山解决方案？" : "Looking for Mining Solutions Tailored to Your Needs?"}
-        description={isZh ? "我们的专业团队可以根据您的具体需求，提供定制化的矿山设备和解决方案。<br>无论您是需要完整工艺流程设计，还是特定设备的配置建议，我们都能为您提供专业支持。" : "Our professional team can provide customized mining equipment and solutions based on your specific requirements.<br>Whether you need a complete process design or configuration advice for specific equipment, we can provide professional support."}
-        buttonText={isZh ? "咨询定制解决方案" : "Inquire About Custom Solutions"}
+        title="寻找适合您的矿山解决方案？"
+        description="我们的专业团队可以根据您的具体需求，提供定制化的矿山设备和解决方案。<br>无论您是需要完整工艺流程设计，还是特定设备的配置建议，我们都能为您提供专业支持。"
+        buttonText="咨询定制解决方案"
         linkUrl=""
         useModal={true}
         formTitle={{ 

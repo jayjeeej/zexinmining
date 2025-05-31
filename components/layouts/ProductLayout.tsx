@@ -3,7 +3,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import StructuredData from '@/components/StructuredData';
 import Breadcrumb from '@/components/Breadcrumb';
-import HeroSection from '@/components/HeroSection';
 import { getNavigationItems, getLogo } from '@/lib/navigation';
 
 interface BreadcrumbItem {
@@ -41,8 +40,7 @@ const ProductLayout = ({
       
       <Breadcrumb items={breadcrumbItems} locale={locale} />
       
-      {/* 如果提供了标题，则显示统一的HeroSection */}
-      {title && <HeroSection title={title} description={description} tabs={productTabs} />}
+      {/* 移除自动添加HeroSection的代码，由客户端组件自行添加 */}
       
       <main className="flex-grow">
         {children}

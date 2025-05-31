@@ -5,9 +5,9 @@ import {
   getProductGroupStructuredData, 
   getOrganizationStructuredData, 
   getBreadcrumbStructuredData,
-  getProductCategoryStructuredData
+  getProductCategoryStructuredData,
+  getWebPageStructuredData
 } from '@/lib/structuredData';
-import { MultiStructuredData } from '@/components/StructuredData';
 import { getBreadcrumbConfig } from '@/lib/navigation';
 import{ getCategoryMetadata } from '@/lib/seo';
 import fs from 'fs';
@@ -190,18 +190,46 @@ export default async function ClassificationEquipmentPage({ params }: { params: 
     baseUrl
   });
   
-  // 组合所有结构化数据
-  const structuredDataArray = [
-    productGroupStructuredData,
-    organizationStructuredData,
-    breadcrumbStructuredData,
-    categoryStructuredData
-  ];
+  // 5. WebPage结构化数据
+  const pageUrl = `${baseUrl}/${locale}/products/ore-processing/classification-equipment`;
+  const webPageStructuredData = getWebPageStructuredData({
+    pageUrl: pageUrl,
+    pageName: isZh ? '分级设备' : 'Classification Equipment',
+    description: isZh 
+      ? '泽鑫矿山设备提供高性能分级设备，包括螺旋分级机、水力旋流器和分泥斗等，用于根据颗粒大小和密度对矿物进行精确分级' 
+      : 'Zexin Mining Equipment offers high-performance classification equipment including spiral classifiers, hydrocyclones, and cone classifiers for precise mineral classification by particle size and density',
+    locale: locale,
+    baseUrl: baseUrl,
+    breadcrumbId: null
+  });
 
   return (
     <>
-      {/* 使用MultiStructuredData组件注入结构化数据 */}
-      <MultiStructuredData dataArray={structuredDataArray} />
+      {/* 使用独立script标签注入各结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productGroupStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageStructuredData) }}
+      />
       
       {/* 将数据预先嵌入页面，避免客户端重新获取 */}
       <script

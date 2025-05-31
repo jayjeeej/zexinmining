@@ -8,9 +8,12 @@ import {
   getFAQStructuredData, 
   getImageStructuredData,
   getProductCategoryStructuredData,
-  getOrganizationStructuredData
+  getOrganizationStructuredData,
+  getProductSpecificationsStructuredData,
+  getSpecificationTableStructuredData,
+  getProductVariantStructuredData,
+  getWebPageStructuredData
 } from '@/lib/structuredData';
-import StructuredData, { MultiStructuredData } from '@/components/StructuredData';
 import ProductDataInjection from '@/components/ProductDetail/ProductDataInjection';
 import ClientVibratingScreenDetail from './page.client';
 import { ProductSpecification } from '@/lib/productDataSchema';
@@ -247,44 +250,42 @@ async function getRelatedProducts(locale: string, productId: string) {
   }
 }
 
-// 格式化规格数据为统一格式，按型号分组
-function formatSpecifications(product: any): any[] {
-  if (!product.specifications || !product.specifications.tableHeaders || !product.specifications.tableData) {
+// 格式化规格数据为统一格式
+function formatSpecifications(product: any): ProductSpecification[] {
+  // 基础验证
+  if (
+    !product || 
+    !product.specifications || 
+    !product.specifications.tableHeaders || 
+    !product.specifications.tableData ||
+    product.specifications.tableData.length === 0
+  ) {
     return [];
   }
   
+  const result: ProductSpecification[] = [];
   const { tableHeaders, tableData, tableHeadersImperial, tableDataImperial } = product.specifications;
   
-  // 将数据按型号分组，每个型号一个对象
-  const modelSpecs = tableData.map((row: any[], rowIndex: number) => {
-    // 创建当前型号的规格对象
-    const modelSpec: Record<string, any> = {};
-    
-    // 填充规格数据
+  // 获取第一行数据（通常是唯一的一行数据）
+  if (tableData[0]) {
     tableHeaders.forEach((header: string, index: number) => {
-      const value = row[index];
+      const value = tableData[0][index];
       if (value !== undefined) {
-        // 创建规格对象，包含公制和英制值
-        const spec: any = {
-          value: String(value),
-          unit: '' // 如果需要单位，可以从数据中提取
+        const spec: ProductSpecification = {
+          name: header,
+          value: value.toString(),
+          unit: '',
+          // 根据ProductSpecification接口添加正确的属性
+          imperialValue: tableDataImperial && tableDataImperial[0] ? 
+                        tableDataImperial[0][index]?.toString() : '',
+          imperialUnit: ''
         };
-        
-        // 如果有英制单位数据，添加英制值
-        if (tableHeadersImperial && tableDataImperial && tableDataImperial[rowIndex]) {
-          spec.imperialValue = String(tableDataImperial[rowIndex][index]);
-          spec.imperialUnit = ''; // 如果需要英制单位，可以从数据中提取
-        }
-        
-        // 使用表头作为键
-        modelSpec[header] = spec;
+        result.push(spec);
       }
     });
+  }
   
-    return modelSpec;
-  });
-  
-  return modelSpecs;
+  return result;
 }
 
 export default async function ProductDetailPage({ 
@@ -335,47 +336,96 @@ export default async function ProductDetailPage({
       baseUrl
     });
     
-    const breadcrumbStructuredData = getBreadcrumbStructuredData(breadcrumbItems, baseUrl);
-    
-    const faqStructuredData = product.faqs ? getFAQStructuredData(product.faqs) : null;
-    
-    const imageStructuredData = product.imageSrc ? getImageStructuredData({
-      url: product.imageSrc,
-      caption: product.title,
-      description: product.overview,
-      baseUrl
-    }) : null;
-    
-    const categoryStructuredData = getProductCategoryStructuredData({
-      categoryId: 'vibrating-screens',
-      categoryName: isZh ? '振动筛设备' : 'Vibrating Screen Equipment',
-      description: isZh ? '高效率振动筛设备，满足不同物料筛分需求' : 'High-efficiency vibrating screen equipment for various material screening requirements',
-      productCount: 10,
-      locale,
-      baseUrl
+    // 获取产品规格的结构化数据
+    const specificationProperties = getProductSpecificationsStructuredData({
+      product,
+      modelIndex: 0
     });
     
-    const organizationStructuredData = getOrganizationStructuredData(isZh);
-    
-    const structuredDataArray = [
-      productStructuredData,
-      breadcrumbStructuredData,
-      ...(faqStructuredData ? [faqStructuredData] : []),
-      ...(imageStructuredData ? [imageStructuredData] : []),
-      categoryStructuredData,
-      organizationStructuredData
-    ];
-
-    // 使用ProductLayout组件需要的面包屑格式
-    const breadcrumbsForLayout = breadcrumbItems;
-
-    // 准备客户端组件所需的数据
-    const specifications = formatSpecifications(product);
+    // 增强产品结构化数据
+    const enhancedProductStructuredData = {
+      ...productStructuredData,
+      additionalProperty: specificationProperties,
+      isRelatedTo: [] as Array<{
+        "@type": string;
+        "name": string;
+        "url": string;
+      }>
+    };
     
     // 获取相关产品数据
     const relatedProducts = product.relatedProducts 
       ? await getRelatedProducts(locale, productId)
       : [];
+    
+    // 如果有相关产品，添加到结构化数据
+    if (relatedProducts && relatedProducts.length > 0) {
+      enhancedProductStructuredData.isRelatedTo = relatedProducts
+        .filter(related => related !== null)
+        .map(related => ({
+          "@type": "Product",
+          "name": related.title,
+          "url": `${baseUrl}${related.href}`
+        }));
+    }
+    
+    // 创建面包屑结构化数据
+    const breadcrumbStructuredData = getBreadcrumbStructuredData(breadcrumbItems, baseUrl);
+    
+    // 创建FAQ结构化数据
+    const faqs = product.faqs || [];
+    const faqStructuredData = faqs.length > 0 
+      ? getFAQStructuredData(faqs.map(faq => ({ 
+          question: faq.question, 
+          answer: faq.answer 
+        }))) 
+      : null;
+    
+    // 创建图片结构化数据
+    const imageStructuredData = getImageStructuredData({
+      url: product.imageSrc,
+      caption: product.title,
+      description: product.overview || "",
+      baseUrl
+    });
+    
+    // 创建产品类别结构化数据
+    const categoryStructuredData = getProductCategoryStructuredData({
+      categoryId: 'vibrating-screens',
+      categoryName: 'Vibrating Screen Equipment',
+      description: 'High-efficiency vibrating screen equipment for various material screening requirements',
+      locale: locale,
+      baseUrl: baseUrl
+    });
+    
+    // 创建组织结构化数据
+    const organizationStructuredData = getOrganizationStructuredData(isZh);
+    
+    // 创建规格表结构化数据
+    const specTableStructuredData = getSpecificationTableStructuredData({
+      product,
+      locale
+    });
+    
+    // 创建WebPage结构化数据
+    const pageUrl = `${baseUrl}/${locale}/products/ore-processing/vibrating-screens/${productId}`;
+    const webPageStructuredData = getWebPageStructuredData({
+      pageUrl: pageUrl,
+      pageName: product.title,
+      description: product.overview || "",
+      locale: locale,
+      baseUrl: baseUrl,
+      images: [product.imageSrc],
+      breadcrumbId: null
+    });
+    
+    // 构建产品变体结构化数据（如果有多个型号）
+    const productVariantStructuredData = getProductVariantStructuredData({
+      product,
+      groupName: product.series || product.title,
+      locale,
+      baseUrl
+    });
     
     // 应用领域 - 确保格式正确
     const applications = product.applications && Array.isArray(product.applications.items)
@@ -398,39 +448,117 @@ export default async function ProductDetailPage({
       ? product.caseStudies
       : [];
     
-    // 常见问题
-    const faqs = product.faqs || [];
+    // 创建案例研究结构化数据
+    const caseStudyStructuredData = caseStudies.map((cs, index) => {
+      if (cs.title && cs.summary) {
+        return {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": cs.title,
+          "description": cs.summary || "",
+          "image": cs.imageSrc ? `${baseUrl}${cs.imageSrc}` : undefined,
+          "author": {
+            "@type": "Organization",
+            "name": "Zexin Mining Equipment"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Zexin Mining Equipment",
+            "logo": {
+              "@type": "ImageObject",
+              "url": `${baseUrl}/logo/logo-en.webp`
+            }
+          },
+          "datePublished": new Date().toISOString().split('T')[0]
+        };
+      }
+      return null;
+    }).filter(Boolean);
     
-    // 创建合并的结构化数据
-    const combinedStructuredData = {
-      "@context": "https://schema.org",
-      "@graph": structuredDataArray
-    };
-
+    // 准备客户端组件所需的数据
+    const specifications = formatSpecifications(product);
+    
     return (
       <>
-        {/* SEO结构化数据 */}
-        <MultiStructuredData dataArray={structuredDataArray} />
+        {/* 使用独立script标签注入各结构化数据 */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(enhancedProductStructuredData) }}
+        />
         
-      <ProductLayout
-        locale={locale}
-        breadcrumbItems={breadcrumbConfig}
-      >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(imageStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageStructuredData) }}
+        />
+        
+        {specTableStructuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(specTableStructuredData) }}
+          />
+        )}
+        
+        {productVariantStructuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(productVariantStructuredData) }}
+          />
+        )}
+        
+        {faqStructuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+          />
+        )}
+        
+        {caseStudyStructuredData.map((csData, index) => (
+          <script
+            key={`case-study-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(csData) }}
+          />
+        ))}
+        
+        <ProductLayout
+          locale={locale}
+          breadcrumbItems={breadcrumbConfig}
+        >
           {/* 注入产品数据 */}
           <ProductDataInjection product={product} locale={locale}>
             {/* 振动筛设备专用客户端组件 */}
-          <ClientVibratingScreenDetail
-            locale={locale}
-            productData={product}
-            specifications={specifications}
-            applications={applications}
-            technicalAdvantages={technicalAdvantages}
-            caseStudies={caseStudies}
-            faqs={faqs}
-            relatedProducts={relatedProducts}
-          />
-        </ProductDataInjection>
-      </ProductLayout>
+            <ClientVibratingScreenDetail
+              locale={locale}
+              productData={product}
+              specifications={specifications}
+              applications={applications}
+              technicalAdvantages={technicalAdvantages}
+              caseStudies={caseStudies}
+              faqs={faqs}
+              relatedProducts={relatedProducts}
+            />
+          </ProductDataInjection>
+        </ProductLayout>
       </>
     );
   } catch (error) {

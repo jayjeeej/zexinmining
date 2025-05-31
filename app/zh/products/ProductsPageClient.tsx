@@ -30,13 +30,11 @@ interface ProductCardData {
   };
 }
 
-interface ProductsPageClientProps {
-  locale: string;
-}
-
-// 产品列表页面客户端组件
-export default function ProductsPageClient({ locale }: ProductsPageClientProps) {
-  const isZh = locale === 'zh';
+// 产品列表页面客户端组件 - 写死中文版本
+export default function ProductsPageClient() {
+  // 写死语言设置为中文
+  const locale = 'zh';
+  const isZh = true;
   
   // 示例产品列表数据
   const products: ProductCardData[] = [
@@ -98,10 +96,8 @@ export default function ProductsPageClient({ locale }: ProductsPageClientProps) 
         
         {/* 使用统一的HeroSection组件 */}
         <HeroSection
-          title={isZh ? '产品与服务' : 'Products and Services'}
-          description={isZh 
-            ? '泽鑫矿山设备提供全系列高效智能的矿山解决方案，满足您的各种需求。' 
-            : 'Zexin Mining Equipment offers a full range of efficient and intelligent mining solutionsto meet your various needs.'}
+          title="产品与服务"
+          description="泽鑫矿山设备提供全系列高效智能的矿山解决方案，满足您的各种需求。"
         />
          {/* 统一产品列表卡*/}
         <section className="mb-0 bg-gray-50 py-16 lg:py-32">
@@ -112,13 +108,13 @@ export default function ProductsPageClient({ locale }: ProductsPageClientProps) 
                   <div key={product.id} className="w-full">
                     <div className="relative flex h-full flex-col no-underline group" data-block="card" style={{ minHeight: '480px' }}>
                       <Link href={`/zh/products/${product.id}`} className="absolute left-0 top-0 h-full w-full z-10">
-                        <span className="sr-only">{isZh ? product.name.zh : product.name.en}</span>
+                        <span className="sr-only">{product.name.zh}</span>
                       </Link>
                       <div className="mb-4 not-prose relative">
                         <img 
                           className="w-full md:rounded transition-opacity ease-hover group-hover:opacity-90"
                           src={product.imageSrc}
-                          alt={isZh ? product.name.zh : product.name.en}
+                          alt={product.name.zh}
                           width="688" 
                           height="387" 
                           loading="lazy"
@@ -132,16 +128,16 @@ export default function ProductsPageClient({ locale }: ProductsPageClientProps) 
                         <div className="flex flex-col gap-4 not-prose mb-4">
                           <div className="not-prose">
                             <h2 className="leading-none decoration-2 group-hover:underline underline-offset-2 decoration-1 decoration-[#ff6633] sm:text-2xl text-xl font-medium font-display">
-                              {isZh ? product.name.zh : product.name.en}
+                              {product.name.zh}
                             </h2>
                           </div>
                         </div>
                         <div className="prose flex-grow flex flex-col h-full">
-                          <p>{isZh ? product.description.zh : product.description.en}</p>
+                          <p>{product.description.zh}</p>
                           <div className="mt-auto pt-4">
                             <span className="group inline-flex items-center text-sm gap-3 transition-colors ease-hover text-current hover:text-current focus:text-current active:text-current">
                               <span className="group-hover:opacity-80 group-focus:opacity-80 group-active:opacity-80 transition-opacity underline decoration-black decoration-1 underline-offset-4">
-                                {isZh ? "了解更多信息" : "Learn more"}
+                                了解更多信息
                               </span>
                               <span className="text-[#ff6633]">
                                 <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
@@ -161,7 +157,7 @@ export default function ProductsPageClient({ locale }: ProductsPageClientProps) 
         </section>
       </main>
 
-      <Footer logoAlt={isZh ? "泽鑫集团" : "Zexin Group"} />
+      <Footer logoAlt="泽鑫集团" />
     </>
   );
 } 

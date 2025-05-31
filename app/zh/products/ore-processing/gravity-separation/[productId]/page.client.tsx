@@ -152,11 +152,10 @@ export default function ClientGravitySeparationDetail({
           title={isZh ? "需要重选设备解决方案？" : "Need Gravity Separation Solutions?"}
           description={isZh ? "我们的专业工程师团队随时为您提供技术咨询和定制重选设备方案。<br>联系我们获取更多重选设备的详细信息和应用建议！" : "Our professional engineering team is always ready to provide technical consultation and customized gravity separation solutions.<br>Contact us for more details and application advice on our gravity separation equipment!"}
           buttonText={isZh ? "联系我们" : "Contact Us"}
-          linkUrl={`/${locale}/contact`}
+          linkUrl=""
           imageSrc="/images/mineral-processing/contact-support.jpg"
           imageAlt={isZh ? "重选设备技术支持" : "Gravity Separation Equipment Support"}
           rounded={false}
-          useModal={true}
           formTitle={{ 
             zh: '重选设备咨询', 
             en: 'Gravity Separation Inquiry' 

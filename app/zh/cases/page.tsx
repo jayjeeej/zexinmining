@@ -3,9 +3,9 @@ import { getBreadcrumbConfig } from '@/lib/navigation';
 import { 
   getBreadcrumbStructuredData, 
   getOrganizationStructuredData,
-  getWebsiteStructuredData 
+  getWebsiteStructuredData,
+  getWebPageStructuredData
 } from '@/lib/structuredData';
-import { MultiStructuredData } from '@/components/StructuredData';
 import CasesPageClient from './CasesPageClient';
 import fs from 'fs';
 import path from 'path';
@@ -65,6 +65,7 @@ export default async function CasesPage() {
   // 使用固定的locale值
   const locale = 'zh';
   const isZh = true;
+  const baseUrl = 'https://www.zexinmining.com';
   
   // 获取面包屑配置
   const breadcrumbConfig = getBreadcrumbConfig(locale);
@@ -81,7 +82,7 @@ export default async function CasesPage() {
   const casesList = await getAllCaseStudies(locale);
   
   // 结构化数据
-  const baseUrl = 'https://www.zexinmining.com';
+  // 1. 面包屑结构化数据
   const breadcrumbStructuredData = getBreadcrumbStructuredData(
     breadcrumbItems.map(item => ({
       name: item.name,
@@ -90,24 +91,92 @@ export default async function CasesPage() {
     baseUrl
   );
   
+  // 2. 组织结构化数据
   const organizationStructuredData = getOrganizationStructuredData(isZh);
   
+  // 3. 网站结构化数据
   const websiteStructuredData = getWebsiteStructuredData(locale, baseUrl);
   
-  const structuredDataArray = [
-    breadcrumbStructuredData,
-    organizationStructuredData,
-    websiteStructuredData
-  ];
+  // 4. 网页结构化数据
+  const pageUrl = `${baseUrl}/${locale}/cases`;
+  const webPageStructuredData = getWebPageStructuredData({
+    pageUrl,
+    pageName: '矿山工程案例 - 成功项目展示',
+    description: pageDescription,
+    locale,
+    baseUrl,
+    images: casesList.slice(0, 3).map(caseItem => caseItem.imageSrc || `/images/cases/${caseItem.slug}/plant-layout.jpg`),
+    breadcrumbId: `${pageUrl}#breadcrumb`
+  });
+  
+  // 5. 集合页面结构化数据（针对案例集合）
+  const collectionPageStructuredData = {
+    '@context': 'https://schema.org/',
+    '@type': 'CollectionPage',
+    '@id': `${pageUrl}#collectionpage`,
+    'url': pageUrl,
+    'name': '矿山工程案例集',
+    'description': pageDescription,
+    'inLanguage': 'zh-CN',
+    'isPartOf': {
+      '@id': `${baseUrl}/#website`
+    },
+    'breadcrumb': {
+      '@id': `${pageUrl}#breadcrumb`
+    },
+    'numberOfItems': casesList.length,
+    'itemListElement': casesList.map((caseItem, index) => ({
+      '@type': 'Article',
+      'position': index + 1,
+      'url': `${baseUrl}/${locale}/cases/${caseItem.slug}`,
+      'name': caseItem.title,
+      'description': caseItem.summary || caseItem.description || '',
+      'image': caseItem.imageSrc || `/images/cases/${caseItem.slug}/plant-layout.jpg`,
+      'author': {
+        '@type': 'Organization',
+        'name': '泽鑫矿山设备'
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': '泽鑫矿山设备',
+        'logo': {
+          '@type': 'ImageObject',
+          'url': `${baseUrl}/images/logo-zh.png`
+        }
+      }
+    }))
+  };
   
   return (
     <>
-      {/* SEO结构化数据 */}
-      <MultiStructuredData dataArray={structuredDataArray} />
+      {/* 使用独立script标签注入各结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
       
-      {/* 客户端组件 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageStructuredData) }}
+      />
+      
+      {/* 客户端组件 - 不再传递locale参数 */}
       <CasesPageClient 
-        locale={locale}
         breadcrumbItems={breadcrumbItems}
         pageTitle={pageTitle}
         pageDescription={pageDescription}

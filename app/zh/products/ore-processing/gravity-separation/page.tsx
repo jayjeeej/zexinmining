@@ -5,9 +5,9 @@ import {
   getProductGroupStructuredData, 
   getOrganizationStructuredData, 
   getBreadcrumbStructuredData,
-  getProductCategoryStructuredData
+  getProductCategoryStructuredData,
+  getWebPageStructuredData
 } from '@/lib/structuredData';
-import { MultiStructuredData } from '@/components/StructuredData';
 import { getBreadcrumbConfig } from '@/lib/navigation';
 import fs from 'fs';
 import path from 'path';
@@ -244,18 +244,51 @@ export default async function GravitySeparationPage({ params }: { params: { loca
     }))
   };
   
-  const structuredDataArray = [
-    organizationStructuredData,
-    productGroupStructuredData,
-    breadcrumbStructuredData,
-    categoryStructuredData,
-    enhancedProductGroupStructuredData
-  ];
+  // 6. WebPage结构化数据
+  const pageUrl = `${baseUrl}/${locale}/products/ore-processing/gravity-separation`;
+  const webPageStructuredData = getWebPageStructuredData({
+    pageUrl: pageUrl,
+    pageName: isZh ? '重力选矿设备' : 'Gravity Separation Equipment',
+    description: isZh 
+      ? '泽鑫重力选矿设备包括螺旋溜槽、跳汰机、摇床、离心选矿机等，专为金矿、锡矿、钨矿选矿设计，回收率高达98%，是贵金属和有色金属矿选矿的理想设备。' 
+      : 'Zexin gravity separation equipment includes spiral chutes, jig machines, shaking tables & centrifugal concentrators, designed for gold, tin and tungsten ore processing with recovery rates up to 98%.',
+    locale: locale,
+    baseUrl: baseUrl,
+    breadcrumbId: null
+  });
 
   return (
     <>
-      {/* 使用MultiStructuredData组件注入结构化数据 */}
-      <MultiStructuredData dataArray={structuredDataArray} />
+      {/* 使用独立script标签注入各结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productGroupStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(enhancedProductGroupStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageStructuredData) }}
+      />
       
       {/* 将数据预先嵌入页面，避免客户端重新获取 */}
       <script

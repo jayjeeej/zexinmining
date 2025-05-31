@@ -11,6 +11,7 @@ interface HeroSectionProps {
   decorationLineColor?: string;
   titleColor?: string;
   textAlign?: 'left' | 'center' | 'right';
+  headingLevel?: 'h1' | 'h2';
 }
 
 /**
@@ -20,6 +21,7 @@ interface HeroSectionProps {
  * 支持自定义背景和文本颜色配置
  * 支持底部显示产品Tab导航
  * 支持装饰性线条显示
+ * 支持配置标题级别，避免多个h1标签
  */
 export default function HeroSection({ 
   title, 
@@ -30,12 +32,16 @@ export default function HeroSection({
   showDecorationLine = true,
   decorationLineColor = 'bg-gray-200',
   titleColor = 'text-[#ff6633]',
-  textAlign = 'left'
+  textAlign = 'left',
+  headingLevel = 'h1'
 }: HeroSectionProps) {
   // 固定内边距和样式，不接受外部className覆盖
   const titleClass = `text-balance text-4xl md:text-7xl ${textAlign === 'center' ? 'text-center' : 'text-left'} font-display ${titleColor} !important`;
   const descriptionClass = `text-base font-text ${textColor} z-10 relative`;
   const containerClass = textAlign === 'center' ? 'text-center' : '';
+
+  // 根据headingLevel渲染不同的标题标签
+  const HeadingTag = headingLevel;
 
   return (
     <>
@@ -51,7 +57,7 @@ export default function HeroSection({
                 <div className={`w-16 sm:w-20 h-1 ${decorationLineColor} mb-3 sm:mb-4 md:mb-6 -translate-x-[40%]`}></div>
               </div>
             )}
-            <h1 className={titleClass}>{title}</h1>
+            <HeadingTag className={titleClass}>{title}</HeadingTag>
             {description && (
               <div className="w-full prose text-center mx-auto">
                 {typeof description === 'string' ? (
@@ -70,7 +76,7 @@ export default function HeroSection({
                   <div className={`w-16 sm:w-20 h-1 ${decorationLineColor} mb-3 sm:mb-4 md:mb-6`}></div>
                 </div>
               )}
-            <h1 className={titleClass}>{title}</h1>
+            <HeadingTag className={titleClass}>{title}</HeadingTag>
           </div>
           {description && (
             <div className="w-full prose lg:col-span-2 lg:col-start-5 text-left">

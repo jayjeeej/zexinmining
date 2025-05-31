@@ -8,7 +8,6 @@ import {
   getCaseStudyStructuredData,
   getImageStructuredData
 } from '@/lib/structuredData';
-import { MultiStructuredData } from '@/components/StructuredData';
 import CaseDetailClient from './CaseDetailClient';
 import { safelyGetRouteParams } from '@/lib/utils';
 import fs from 'fs';
@@ -336,23 +335,37 @@ export default async function CaseDetailPage({
     baseUrl
   }) : null;
   
-  // 组合所有结构化数据
-  const structuredDataArray = [
-    breadcrumbStructuredData,
-    organizationStructuredData,
-    websiteStructuredData,
-    caseStudyStructuredData
-  ];
-  
-  if (imageStructuredData) {
-    structuredDataArray.push(imageStructuredData);
-  }
-  
   return (
     <>
-      <MultiStructuredData dataArray={structuredDataArray} />
+      {/* 使用独立script标签注入各结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudyStructuredData) }}
+      />
+      
+      {imageStructuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(imageStructuredData) }}
+        />
+      )}
+      
       <CaseDetailClient 
-        locale={locale}
         breadcrumbItems={breadcrumbItems}
         caseDetail={caseData}
       />

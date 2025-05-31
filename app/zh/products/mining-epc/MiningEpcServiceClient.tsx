@@ -1,5 +1,5 @@
 'use client';
-// 矿山EPC服务客户端组件
+// 矿山EPC服务客户端组件 - 中文版
 import React, { useState, useEffect, useRef } from 'react';
 import ProductLayout from '@/components/layouts/ProductLayout';
 import { getBreadcrumbConfig } from '@/lib/navigation';
@@ -8,25 +8,14 @@ import ContactCard from '@/components/ContactCard';
 import Accordion, { AccordionItem } from '@/components/Accordion';
 import CountUpAnimation from '@/components/CountUpAnimation';
 import Link from 'next/link';
-import { 
-  getBreadcrumbStructuredData, 
-  getOrganizationStructuredData,
-  getServiceStructuredData
-} from '@/lib/structuredData';
-import { MultiStructuredData } from '@/components/StructuredData';
 
-// 修复接口定义，添加可选的locale参数
-interface MiningEpcServiceClientProps {
-  locale?: string;
-}
-
-export default function MiningEpcServiceClient({ locale }: MiningEpcServiceClientProps) {
-  // 使用safeLocale确保locale永不为undefined
-  const safeLocale = locale || 'zh';
-  const isZh = safeLocale === 'zh';
+export default function MiningEpcServiceClient() {
+  // 直接硬编码为中文版
+  const locale = 'zh';
+  const isZh = true;
   
   // 面包屑导航
-  const breadcrumbConfig = getBreadcrumbConfig(safeLocale);
+  const breadcrumbConfig = getBreadcrumbConfig(locale);
   const breadcrumbItems = [
     { name: breadcrumbConfig.home.name, href: breadcrumbConfig.home.href },
     { name: breadcrumbConfig.products.name, href: breadcrumbConfig.products.href },
@@ -43,35 +32,6 @@ export default function MiningEpcServiceClient({ locale }: MiningEpcServiceClien
     '工程施工',
     '项目管理',
     '运营服务'
-  ];
-
-  // 结构化数据
-  const baseUrl = 'https://www.zexinmining.com';
-  const breadcrumbStructuredData = getBreadcrumbStructuredData(
-    breadcrumbItems.map(item => ({
-      name: item.name,
-      url: item.href
-    })),
-    baseUrl
-  );
-  
-  const organizationStructuredData = getOrganizationStructuredData(isZh);
-  
-  const serviceStructuredData = getServiceStructuredData({
-    serviceId: 'mining-epc',
-    serviceName: '矿山EPC服务',
-    serviceDescription: pageDescription,
-    serviceType: 'EPCMO',
-    serviceProvider: '泽鑫矿山设备',
-    serviceItems: serviceItemsList,
-    locale: safeLocale,
-    baseUrl
-  });
-  
-  const structuredDataArray = [
-    breadcrumbStructuredData,
-    organizationStructuredData,
-    serviceStructuredData
   ];
 
   // 服务模块数据 - 预留5个手风琴装置
@@ -118,13 +78,10 @@ export default function MiningEpcServiceClient({ locale }: MiningEpcServiceClien
   const CustomProductLayout = ({ children }: { children: React.ReactNode }) => {
     return (
       <ProductLayout
-        locale={safeLocale}
+        locale={locale}
         breadcrumbItems={breadcrumbItems}
         // 不传递title和description，以阻止默认HeroSection的渲染
       >
-        {/* 结构化数据 */}
-        <MultiStructuredData dataArray={structuredDataArray} />
-        
         {/* 自定义的Hero部分 */}
         <div className="relative w-full">
           {/* 图片区域 */}
@@ -248,7 +205,7 @@ export default function MiningEpcServiceClient({ locale }: MiningEpcServiceClien
             </div>
           </Container>
         </div>
-        
+
         {/* 矿山工程建设流程分析 */}
         <div className="relative py-14 bg-white">
           <Container>
@@ -418,7 +375,7 @@ export default function MiningEpcServiceClient({ locale }: MiningEpcServiceClien
               </div>
               
               {/* 简短描述 - 带完整的水平上划线，参考Global Operations */}
-                              <div className="mt-8 text-center mx-auto max-w-3xl relative">
+              <div className="mt-8 text-center mx-auto max-w-3xl relative">
                 <div className="border-t border-gray-200 mb-4"></div>
                 <p className="text-[16px] text-gray-700 leading-relaxed mb-4">
                   凭借20年+的行业经验，我们已为全球20多个国家的矿业客户提供专业解决方案。拥有10项以上专利技术，成功完成超过40个大型矿业项目，树立了众多行业标杆案例。
@@ -451,21 +408,21 @@ export default function MiningEpcServiceClient({ locale }: MiningEpcServiceClien
     <CustomProductLayout>
       {/* 联系咨询区 */}
       <ContactCard
-        title='需要矿山工程总承包服务？'
-        description='我们的专业工程师团队随时为您提供技术咨询和定制方案。<br/>联系我们获取更多矿山EPC服务的详细信息和应用建议！'
-        buttonText='联系我们'
-        linkUrl="/zh/contact"
+        title="需要矿山工程总承包服务？"
+        description="我们的专业工程师团队随时为您提供技术咨询和定制方案。<br/>联系我们获取更多矿山EPC服务的详细信息和应用建议！"
+        buttonText="联系我们"
+        linkUrl={`/${locale}/contact`}
         imageSrc="/images/mineral-processing/contact-support.jpg"
         imageAlt="矿山EPC服务咨询"
         rounded={false}
         useModal={true}
-        formTitle={{
-          zh: '矿山EPC服务咨询',
-          en: '矿山EPC服务咨询'
+        formTitle={{ 
+          zh: '矿山EPC服务咨询', 
+          en: 'Mining EPC Services Inquiry' 
         }}
-        formSubtitle={{
-          zh: '请填写以下表单，我们的专业EPC团队将尽快与您联系',
-          en: '请填写以下表单，我们的专业EPC团队将尽快与您联系'
+        formSubtitle={{ 
+          zh: '请填写以下表单，我们的专业EPC团队将尽快与您联系', 
+          en: 'Please fill in the form below, and our professional EPC team will contact you shortly' 
         }}
         formType="mining-epc"
       />

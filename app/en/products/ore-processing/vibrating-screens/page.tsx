@@ -5,9 +5,9 @@ import {
   getProductGroupStructuredData, 
   getOrganizationStructuredData, 
   getBreadcrumbStructuredData,
-  getProductCategoryStructuredData
+  getProductCategoryStructuredData,
+  getWebPageStructuredData
 } from '@/lib/structuredData';
-import { MultiStructuredData } from '@/components/StructuredData';
 import { getBreadcrumbConfig } from '@/lib/navigation';
 import fs from 'fs';
 import path from 'path';
@@ -195,18 +195,44 @@ export default async function VibratingScreensPage({ params }: { params: { local
     baseUrl
   });
   
-  // 组合所有结构化数据
-  const structuredDataArray = [
-    productGroupStructuredData,
-    organizationStructuredData,
-    breadcrumbStructuredData,
-    categoryStructuredData
-  ];
+  // 5. WebPage结构化数据
+  const pageUrl = `${baseUrl}/${locale}/products/ore-processing/vibrating-screens`;
+  const webPageStructuredData = getWebPageStructuredData({
+    pageUrl: pageUrl,
+    pageName: 'Vibrating Screen Equipment',
+    description: 'Zexin Mining Equipment offers efficient vibrating screen equipment, including banana screens, linear vibrating screens, circular vibrating screens, dewatering screens and other series products to meet various screening requirements',
+    locale: locale,
+    baseUrl: baseUrl,
+    breadcrumbId: null
+  });
 
   return (
     <>
-      {/* 使用MultiStructuredData组件注入结构化数据 */}
-      <MultiStructuredData dataArray={structuredDataArray} />
+      {/* 使用独立script标签注入各结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productGroupStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageStructuredData) }}
+      />
       
       {/* 将数据预先嵌入页面，避免客户端重新获取 */}
       <script

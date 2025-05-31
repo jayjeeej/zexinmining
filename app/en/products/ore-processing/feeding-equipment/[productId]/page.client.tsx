@@ -149,11 +149,10 @@ export default function ClientFeedingEquipmentDetail({
           title={isZh ? "需要给料设备解决方案？" : "Need Feeding Equipment Solutions?"}
           description={isZh ? "我们的专业工程师团队随时为您提供技术咨询和定制给料设备方案。<br>联系我们获取更多给料设备的详细信息和应用建议！" : "Our professional engineering team is always ready to provide technical consultation and customized feeding solutions.<br>Contact us for more details and application advice on our feeding equipment!"}
           buttonText={isZh ? "联系我们" : "Contact Us"}
-          linkUrl={`/${locale}/contact`}
+          linkUrl=""
           imageSrc="/images/mineral-processing/contact-support.jpg"
           imageAlt={isZh ? "给料设备技术支持" : "Feeding Equipment Support"}
           rounded={false}
-          useModal={true}
           formTitle={{ 
             zh: '给料设备咨询', 
             en: 'Feeding Equipment Inquiry' 

@@ -90,7 +90,7 @@ export function getProductStructuredData({
   
   // 基本产品结构化数据
   const productStructuredData: any = {
-    "@context": "https://schema.org",
+    "@context": "https://schema.org/",
     "@type": SCHEMA_TYPES.PRODUCT,
     "name": product.title,
     "description": product.overview,
@@ -133,7 +133,7 @@ export function getBreadcrumbStructuredData(
   baseUrl = 'https://www.zexinmining.com'
 ): Record<string, any> {
   return {
-    "@context": "https://schema.org",
+    "@context": "https://schema.org/",
     "@type": SCHEMA_TYPES.BREADCRUMB,
     "itemListElement": breadcrumbs.map((item, index) => ({
       "@type": "ListItem",
@@ -151,7 +151,7 @@ export function getFAQStructuredData(
   questions: Array<{ question: string; answer: string }>
 ): Record<string, any> {
   return {
-    "@context": "https://schema.org",
+    "@context": "https://schema.org/",
     "@type": SCHEMA_TYPES.FAQ,
     "mainEntity": questions.map(q => ({
       "@type": "Question",
@@ -174,7 +174,7 @@ export function getOrganizationStructuredData(isZh = true): Record<string, any> 
     : 'Zexin Mining Equipment is a professional mining equipment manufacturer providing efficient and reliable smart solutions and comprehensive technical support to global customers';
   
   return {
-    '@context': 'https://schema.org',
+    '@context': 'https://schema.org/',
     '@type': 'Organization',
     '@id': `${siteUrl}/#organization`,
     'name': name,
@@ -202,7 +202,7 @@ export function getWebsiteStructuredData(locale = 'zh', baseUrl = 'https://www.z
   const isZh = locale === 'zh';
   
   return {
-    "@context": "https://schema.org",
+    "@context": "https://schema.org/",
     "@type": SCHEMA_TYPES.WEBSITE,
     "name": isZh ? "泽鑫矿山设备官网" : "Zexin Mining Equipment Official Website",
     "url": `${baseUrl}/${locale}`,
@@ -234,7 +234,7 @@ export function getLocalBusinessStructuredData(locale = 'zh', baseUrl = 'https:/
   const isZh = locale === 'zh';
   
   return {
-    "@context": "https://schema.org",
+    "@context": "https://schema.org/",
     "@type": SCHEMA_TYPES.LOCAL_BUSINESS,
     "name": isZh ? "泽鑫矿山设备有限公司" : "Zexin Mining Equipment Co., Ltd.",
     "image": `${baseUrl}/images/company/headquarters.jpg`,
@@ -293,7 +293,7 @@ export function getProductGroupStructuredData({
   const langPath = isZh ? '/zh' : '/en';
   
   return {
-    '@context': 'https://schema.org',
+    '@context': 'https://schema.org/',
     '@type': 'ItemList',
     '@id': `${siteUrl}${langPath}/products/ore-processing/${groupId}#itemlist`,
     'name': groupName,
@@ -337,7 +337,7 @@ export function getImageStructuredData({
   const imageUrl = url.startsWith('http') ? url : `${baseUrl}${url.startsWith('/') ? url : `/${url}`}`;
   
   return {
-    "@context": "https://schema.org",
+    "@context": "https://schema.org/",
     "@type": SCHEMA_TYPES.IMAGE_OBJECT,
     "contentUrl": imageUrl,
     "url": imageUrl,
@@ -361,7 +361,7 @@ export function getHomePageStructuredData(locale: string) {
   const langPath = isZh ? '/zh' : '/en';
   
   return {
-    '@context': 'https://schema.org',
+    '@context': 'https://schema.org/',
     '@type': 'WebSite',
     '@id': `${siteUrl}${langPath}/#website`,
     'url': `${siteUrl}${langPath}/`,
@@ -401,7 +401,7 @@ export function getProductCategoryStructuredData({
   
   // 产品类别页的特定WebPage数据
   const webPageData = {
-    "@context": "https://schema.org",
+    "@context": "https://schema.org/",
     "@type": SCHEMA_TYPES.WEB_PAGE,
     "name": `${categoryName} | ${isZh ? '泽鑫矿山设备产品' : 'Zexin Mining Equipment Products'}`,
     "description": description,
@@ -417,7 +417,7 @@ export function getProductCategoryStructuredData({
   
   // 面包屑数据
   const breadcrumbData = {
-    "@context": "https://schema.org",
+    "@context": "https://schema.org/",
     "@id": `${categoryUrl}#breadcrumb`,
     "@type": SCHEMA_TYPES.BREADCRUMB,
     "itemListElement": [
@@ -444,7 +444,7 @@ export function getProductCategoryStructuredData({
   
   // 集合页数据 - 表示这是一个产品集合页面
   const collectionPageData = {
-    "@context": "https://schema.org",
+    "@context": "https://schema.org/",
     "@type": "CollectionPage",
     "url": categoryUrl,
     "name": categoryName,
@@ -455,7 +455,7 @@ export function getProductCategoryStructuredData({
   
   // 组合为一个完整的图谱
   return {
-    "@context": "https://schema.org",
+    "@context": "https://schema.org/",
     "@graph": [
       {
         "@id": `${baseUrl}/#website`,
@@ -501,7 +501,7 @@ export function getServiceStructuredData({
   const serviceUrl = `${baseUrl}/${locale}/products/${serviceId}`;
   
   return {
-    "@context": "https://schema.org",
+    "@context": "https://schema.org/",
     "@type": "Service",
     "serviceType": serviceType,
     "name": serviceName,
@@ -597,7 +597,7 @@ export function getMineralProcessingSolutionsStructuredData({
   
   // 创建解决方案结构化数据
   return {
-    "@context": "https://schema.org",
+    "@context": "https://schema.org/",
     "@type": "Service",
     "name": isZh ? "矿物加工解决方案" : "Mineral Processing Solutions",
     "url": solutionUrl,
@@ -659,7 +659,7 @@ export function getCaseStudyStructuredData({
   const url = `${baseUrl}/${locale}/cases/${caseId}`;
 
   return {
-    '@context': 'https://schema.org',
+    '@context': 'https://schema.org/',
     '@type': 'Article',
     'headline': caseData.title,
     'description': caseData.description,
@@ -759,7 +759,7 @@ export function getSpecificationTableStructuredData({
   
   // 创建表格结构化数据
   return {
-    "@context": "https://schema.org",
+    "@context": "https://schema.org/",
     "@type": SCHEMA_TYPES.TABLE,
     "about": product.title,
     "name": product.specifications.title || (isZh ? `${product.title}技术规格表` : `${product.title} Technical Specifications`),
@@ -770,4 +770,207 @@ export function getSpecificationTableStructuredData({
       "itemListElement": rowData
     }
   };
+}
+
+/**
+ * 生成新闻文章的结构化数据
+ */
+export function getNewsArticleStructuredData({
+  newsItem,
+  locale = 'zh',
+  baseUrl = 'https://www.zexinmining.com',
+  categoryMap = {}
+}: {
+  newsItem: any;
+  locale?: string;
+  baseUrl?: string;
+  categoryMap?: Record<string, { zh: string, en: string }>;
+}): Record<string, any> {
+  const isZh = locale === 'zh';
+  
+  // 获取分类名称
+  const getCategoryName = (categoryId: string) => {
+    if (!categoryId) return '';
+    return categoryMap[categoryId] 
+      ? (isZh ? categoryMap[categoryId].zh : categoryMap[categoryId].en)
+      : categoryId;
+  };
+  
+  return {
+    "@context": "https://schema.org/",
+    "@type": "NewsArticle",
+    "headline": newsItem.title,
+    "description": newsItem.summary,
+    "image": [`${baseUrl}${newsItem.image}`],
+    "datePublished": newsItem.date,
+    "dateModified": newsItem.date,
+    "author": {
+      "@type": "Person",
+      "name": newsItem.author || (isZh ? "泽鑫编辑部" : "Zexin Editorial Team")
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": isZh ? "泽鑫矿山设备" : "Zexin Mining Equipment",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${baseUrl}${isZh ? "/logo/logo-zh.webp" : "/logo/logo-en.webp"}`
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `${baseUrl}/${locale}/news/${newsItem.slug}`
+    },
+    "articleSection": getCategoryName(newsItem.category),
+    "keywords": newsItem.tags || [newsItem.category]
+  };
+}
+
+/**
+ * 生成WebPage结构化数据
+ */
+export function getWebPageStructuredData({
+  pageUrl,
+  pageName,
+  description,
+  locale = 'zh',
+  baseUrl = 'https://www.zexinmining.com',
+  breadcrumbId = null,
+  images = [],
+  datePublished = null,
+  dateModified = null
+}: {
+  pageUrl: string;
+  pageName: string;
+  description: string;
+  locale?: string;
+  baseUrl?: string;
+  breadcrumbId?: string | null;
+  images?: string[];
+  datePublished?: string | null;
+  dateModified?: string | null;
+}): Record<string, any> {
+  const isZh = locale === 'zh';
+  
+  const webPageData: Record<string, any> = {
+    "@context": "https://schema.org/",
+    "@type": SCHEMA_TYPES.WEB_PAGE,
+    "@id": pageUrl,
+    "url": pageUrl,
+    "name": pageName,
+    "description": description,
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": baseUrl,
+      "name": isZh ? "泽鑫矿山设备官网" : "Zexin Mining Equipment Official Website"
+    },
+    "inLanguage": isZh ? "zh-CN" : "en-US",
+    "potentialAction": {
+      "@type": "ReadAction",
+      "target": [pageUrl]
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", ".description"]
+    }
+  };
+  
+  // 添加面包屑ID引用（如果存在）
+  if (breadcrumbId) {
+    webPageData.breadcrumb = { "@id": breadcrumbId };
+  }
+  
+  // 添加图片（如果有）
+  if (images && images.length > 0) {
+    webPageData.image = images.map(img => {
+      // 如果图片路径不是完整URL，则添加baseUrl
+      const imgUrl = img.startsWith('http') ? img : `${baseUrl}${img}`;
+      return imgUrl;
+    });
+  }
+  
+  // 添加发布日期（如果有）
+  if (datePublished) {
+    webPageData.datePublished = datePublished;
+  }
+  
+  // 添加修改日期（如果有）
+  if (dateModified) {
+    webPageData.dateModified = dateModified;
+  }
+  
+  return webPageData;
+}
+
+/**
+ * 生成产品变体结构化数据
+ * 根据产品规格表为不同型号生成结构化数据
+ */
+export function getProductVariantStructuredData({
+  product,
+  groupName,
+  locale = 'zh',
+  baseUrl = 'https://www.zexinmining.com'
+}: {
+  product: any;
+  groupName: string;
+  locale?: string;
+  baseUrl?: string;
+}): Record<string, any> | null {
+  if (!product?.specifications?.tableHeaders || 
+      !product?.specifications?.tableData || 
+      product.specifications.tableData.length === 0) {
+    return null;
+  }
+  
+  const isZh = locale === 'zh';
+  const companyName = isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment';
+  const { tableHeaders, tableData } = product.specifications;
+  
+  // 查找包含"型号"或"Model"的列索引，通常是表格的第一列
+  const modelColumnIndex = tableHeaders.findIndex((header: string) => 
+    header.includes(isZh ? '型号' : 'Model') || 
+    header.toLowerCase().includes('model')
+  );
+  
+  // 如果找不到型号列，则使用第一列作为型号
+  const modelIndex = modelColumnIndex >= 0 ? modelColumnIndex : 0;
+  
+  // 生成变体结构化数据
+  const productGroupStructuredData = {
+    "@context": "https://schema.org/",
+    "@type": SCHEMA_TYPES.PRODUCT_GROUP,
+    "name": groupName,
+    "productGroupID": product.id,
+    "description": product.overview,
+    "brand": {
+      "@type": "Brand",
+      "name": companyName
+    },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": companyName
+    },
+    "hasVariant": tableData.map((row: any[], index: number) => {
+      // 构建每个型号的技术规格
+      const specifications = tableHeaders.map((header: string, headerIndex: number) => {
+        if (row[headerIndex] === undefined) return null;
+        return {
+          "@type": "PropertyValue",
+          "name": header,
+          "value": row[headerIndex].toString()
+        };
+      }).filter(Boolean);
+      
+      // 创建产品变体
+      return {
+        "@type": SCHEMA_TYPES.PRODUCT_MODEL,
+        "name": `${product.title} ${row[modelIndex]}`,
+        "model": row[modelIndex],
+        "productID": `${product.id}-${row[modelIndex]}`.replace(/\s+/g, '-').toLowerCase(),
+        "additionalProperty": specifications
+      };
+    })
+  };
+  
+  return productGroupStructuredData;
 }

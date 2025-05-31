@@ -5,9 +5,9 @@ import {
   getProductGroupStructuredData,
   getOrganizationStructuredData,
   getBreadcrumbStructuredData, 
-  getProductCategoryStructuredData
+  getProductCategoryStructuredData,
+  getWebPageStructuredData
 } from '@/lib/structuredData';
-import { MultiStructuredData } from '@/components/StructuredData';
 import { getBreadcrumbConfig } from '@/lib/navigation';
 import{ getCategoryMetadata } from '@/lib/seo';
 import fs from 'fs';
@@ -206,18 +206,46 @@ export default async function StationaryCrushersPage({ params }: { params: { loc
       baseUrl
     });
     
-    // 组合所有结构化数据
-    const structuredDataArray = [
-      productGroupStructuredData,
-      organizationStructuredData,
-      breadcrumbStructuredData,
-      categoryStructuredData
-    ];
+    // 5. WebPage结构化数据
+    const pageUrl = `${baseUrl}/${locale}/products/ore-processing/stationary-crushers`;
+    const webPageStructuredData = getWebPageStructuredData({
+      pageUrl: pageUrl,
+      pageName: isZh ? '固定式破碎机' : 'Stationary Crushers',
+      description: isZh 
+        ? '泽鑫矿山设备提供各种类型的固定式破碎机，包括颚式破碎机、圆锥破碎机、反击式破碎机、锤式破碎机等，用于矿石和岩石的高效破碎' 
+        : 'Zexin Mining Equipment offers various types of stationary crushers, including jaw crushers, cone crushers, impact crushers, hammer crushers, etc., for efficient crushing of ores and rocks',
+      locale: locale,
+      baseUrl: baseUrl,
+      breadcrumbId: null
+    });
   
     return (
       <>
-        {/* 使用MultiStructuredData组件注入结构化数据 */}
-        <MultiStructuredData dataArray={structuredDataArray} />
+        {/* 使用独立script标签注入各结构化数据 */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productGroupStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageStructuredData) }}
+        />
         
         {/* 将数据预先嵌入页面，避免客户端重新获取 */}
         <script

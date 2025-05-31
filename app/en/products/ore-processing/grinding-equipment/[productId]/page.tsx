@@ -8,9 +8,12 @@ import {
   getFAQStructuredData, 
   getImageStructuredData,
   getProductCategoryStructuredData,
-  getOrganizationStructuredData
+  getOrganizationStructuredData,
+  getProductSpecificationsStructuredData,
+  getSpecificationTableStructuredData,
+  getProductVariantStructuredData,
+  getWebPageStructuredData
 } from '@/lib/structuredData';
-import StructuredData, { MultiStructuredData } from '@/components/StructuredData';
 import ProductDataInjection from '@/components/ProductDetail/ProductDataInjection';
 import ClientGrindingEquipmentDetail from './page.client';
 import { ProductSpecification } from '@/lib/productDataSchema';
@@ -289,7 +292,14 @@ async function getRelatedProductsData(relatedIds: string[], locale: string) {
 
 // 格式化规格数据为统一格式
 function formatSpecifications(product: any): ProductSpecification[] {
-  if (!product.specifications || !product.specifications.tableHeaders || !product.specifications.tableData) {
+  // 基础验证
+  if (
+    !product || 
+    !product.specifications || 
+    !product.specifications.tableHeaders || 
+    !product.specifications.tableData ||
+    product.specifications.tableData.length === 0
+  ) {
     return [];
   }
   
@@ -303,15 +313,13 @@ function formatSpecifications(product: any): ProductSpecification[] {
       if (value !== undefined) {
         const spec: ProductSpecification = {
           name: header,
-          value: String(value) // 确保值是字符串
+          value: value.toString(),
+          unit: '',
+          // 根据ProductSpecification接口添加正确的属性
+          imperialValue: tableDataImperial && tableDataImperial[0] ? 
+                        tableDataImperial[0][index]?.toString() : '',
+          imperialUnit: ''
         };
-        
-        // 如果有英制单位数据，添加到规格对象
-        if (tableHeadersImperial && tableDataImperial && tableDataImperial[0]) {
-          spec.imperialName = tableHeadersImperial[index];
-          spec.imperialValue = String(tableDataImperial[0][index]); // 确保值是字符串
-        }
-        
         result.push(spec);
       }
     });
@@ -328,19 +336,19 @@ export default async function ProductDetailPage({
   try {
     // 静态路由下直接指定locale而不是从params获取
     const locale = 'en';
-    const productId = (await params).productId;
+    // 确保正确await params
+    const safeParams = await safelyGetRouteParams(params);
+    const { productId } = safeParams;
     
     const { product, isSuccess } = await getProductData(productId, locale);
     if (!isSuccess || !product) return notFound();
     
-    // 验证产品是否属于研磨设备类别
+    // 验证产品是否属于磨矿设备类别
     if (product.subcategory !== 'grinding-equipment') {
-      console.warn(`Product ${productId} is not a grinding equipment but was accessed via grinding equipment route`);
-      // 可以选择重定向到正确的类别或者显示错误页面
+      console.log(`[DEBUG] Product ${productId} category: ${product.subcategory || 'undefined'}`);
     }
     
-    // 在英文版页面中，isZh应该直接硬编码为false
-    const isZh = false;
+    const isZh = false; // 英文版，固定为false
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.zexinmining.com';
     
     // 使用统一函数构建面包屑导航
@@ -360,6 +368,47 @@ export default async function ProductDetailPage({
       { name: product.title, url: `/en/products/ore-processing/grinding-equipment/${productId}` }
     ];
     
+    // 应用领域格式化
+    const applications = Array.isArray(product.applications) 
+      ? product.applications.map((app: any) => ({
+          icon: app.icon || '/icons/application.svg',
+          title: app.title || '',
+          description: app.description || ''
+        }))
+      : [];
+    
+    // 技术优势格式化  
+    const technicalAdvantages = Array.isArray(product.technicalAdvantages)
+      ? product.technicalAdvantages.map((adv: any) => ({
+          title: adv.title || '',
+          description: adv.description || ''
+        }))
+      : [];
+    
+    // 案例研究格式化
+    const caseStudies = Array.isArray(product.caseStudies)
+      ? product.caseStudies.map((cs: any) => ({
+          title: cs.title || '',
+          description: cs.description || cs.summary || '',
+          results: cs.results || '',
+          imageSrc: cs.imageSrc || null
+        }))
+      : [];
+    
+    // FAQ格式化
+    const faqs = Array.isArray(product.faqs)
+      ? product.faqs.map((faq: any) => ({
+          question: faq.question || '',
+          answer: faq.answer || ''
+        }))
+      : [];
+    
+    // 获取相关产品数据
+    let relatedProducts: any[] = [];
+    if (product.relatedProducts && Array.isArray(product.relatedProducts)) {
+      relatedProducts = await getRelatedProductsData(product.relatedProducts, locale);
+    }
+    
     // 构建结构化数据
     const productStructuredData = getProductStructuredData({
       productId,
@@ -368,80 +417,180 @@ export default async function ProductDetailPage({
       baseUrl
     });
     
-    // 为结构化数据构建面包屑格式 - 这里可以重用同一格式
+    // 获取产品规格的结构化数据
+    const specificationProperties = getProductSpecificationsStructuredData({
+      product,
+      modelIndex: 0
+    });
+    
+    // 增强产品结构化数据
+    const enhancedProductStructuredData = {
+      ...productStructuredData,
+      additionalProperty: specificationProperties,
+      isRelatedTo: [] as Array<{
+        "@type": string;
+        "name": string;
+        "url": string;
+      }>
+    };
+    
+    // 如果有相关产品，添加到结构化数据
+    if (relatedProducts && relatedProducts.length > 0) {
+      enhancedProductStructuredData.isRelatedTo = relatedProducts.map(related => ({
+        "@type": "Product",
+        "name": related.title,
+        "url": `${baseUrl}${related.href}`
+      }));
+    }
+    
+    // 创建面包屑结构化数据
     const breadcrumbStructuredData = getBreadcrumbStructuredData(breadcrumbItems, baseUrl);
     
-    const faqStructuredData = product.faqs ? getFAQStructuredData(product.faqs) : null;
+    // 创建FAQ结构化数据
+    const faqStructuredData = faqs.length > 0 
+      ? getFAQStructuredData(faqs.map(faq => ({ 
+          question: faq.question, 
+          answer: faq.answer 
+        }))) 
+      : null;
     
-    const imageStructuredData = product.imageSrc ? getImageStructuredData({
+    // 创建图片结构化数据
+    const imageStructuredData = getImageStructuredData({
       url: product.imageSrc,
       caption: product.title,
-      description: product.overview,
+      description: product.overview || "",
       baseUrl
-    }) : null;
+    });
     
+    // 创建产品类别结构化数据
     const categoryStructuredData = getProductCategoryStructuredData({
       categoryId: 'grinding-equipment',
-      categoryName: isZh ? '研磨设备' : 'Grinding Equipment',
-      description: isZh ? '高效率研磨设备，满足不同矿石研磨需求' : 'High-efficiency grinding equipment for various ore grinding requirements',
-      productCount: 10,
+      categoryName: 'Grinding Equipment',
+      description: 'High-efficiency grinding equipment for various ore grinding requirements',
+      locale: locale,
+      baseUrl: baseUrl
+    });
+    
+    // 创建组织结构化数据
+    const organizationStructuredData = getOrganizationStructuredData(isZh);
+    
+    // 创建规格表结构化数据
+    const specTableStructuredData = getSpecificationTableStructuredData({
+      product,
+      locale
+    });
+    
+    // 创建WebPage结构化数据
+    const pageUrl = `${baseUrl}/${locale}/products/ore-processing/grinding-equipment/${productId}`;
+    const webPageStructuredData = getWebPageStructuredData({
+      pageUrl: pageUrl,
+      pageName: product.title,
+      description: product.overview || "",
+      locale: locale,
+      baseUrl: baseUrl,
+      images: [product.imageSrc],
+      breadcrumbId: null
+    });
+    
+    // 构建产品变体结构化数据（如果有多个型号）
+    const productVariantStructuredData = getProductVariantStructuredData({
+      product,
+      groupName: product.series || product.title,
       locale,
       baseUrl
     });
     
-    const organizationStructuredData = getOrganizationStructuredData(isZh);
+    // 创建案例研究结构化数据
+    const caseStudyStructuredData = caseStudies.map((cs, index) => {
+      if (cs.title && cs.description) {
+        return {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": cs.title,
+          "description": cs.description || "",
+          "image": cs.imageSrc ? `${baseUrl}${cs.imageSrc}` : undefined,
+          "author": {
+            "@type": "Organization",
+            "name": "Zexin Mining Equipment"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Zexin Mining Equipment",
+            "logo": {
+              "@type": "ImageObject",
+              "url": `${baseUrl}/logo/logo-en.webp`
+            }
+          },
+          "datePublished": new Date().toISOString().split('T')[0]
+        };
+      }
+      return null;
+    }).filter(Boolean);
     
-    const structuredDataArray = [
-      productStructuredData,
-      breadcrumbStructuredData,
-      ...(faqStructuredData ? [faqStructuredData] : []),
-      ...(imageStructuredData ? [imageStructuredData] : []),
-      categoryStructuredData,
-      organizationStructuredData
-    ];
-
-    // 准备客户端组件所需的数据
+    // 格式化规格数据
     const specifications = formatSpecifications(product);
-    
-    // 获取相关产品数据
-    const relatedProducts = product.relatedProducts 
-      ? await getRelatedProductsData(product.relatedProducts, locale)
-      : [];
-    
-    // 应用领域 - 确保格式正确
-    const applications = product.applications && Array.isArray(product.applications.items)
-      ? product.applications.items
-      : Array.isArray(product.applications) 
-        ? product.applications 
-        : [];
-    
-    // 技术优势 - 字符串数组或对象数组
-    let technicalAdvantages: any[] = [];
-    if (Array.isArray(product.technicalAdvantages)) {
-      // 检查第一个元素确定是字符串数组还是对象数组
-      technicalAdvantages = product.technicalAdvantages;
-    } else if (product.technicalAdvantages && Array.isArray(product.technicalAdvantages.items)) {
-      technicalAdvantages = product.technicalAdvantages.items;
-    }
-    
-    // 案例研究
-    const caseStudies = product.caseStudies && Array.isArray(product.caseStudies)
-      ? product.caseStudies
-      : [];
-    
-    // 常见问题
-    const faqs = product.faqs || [];
-    
-    // 创建合并的结构化数据
-    const combinedStructuredData = {
-      "@context": "https://schema.org",
-      "@graph": structuredDataArray
-    };
 
     return (
       <>
-        {/* SEO结构化数据 - 使用组件方式 */}
-        <MultiStructuredData dataArray={structuredDataArray} />
+        {/* 使用独立script标签注入各结构化数据 */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(enhancedProductStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(imageStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageStructuredData) }}
+        />
+        
+        {specTableStructuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(specTableStructuredData) }}
+          />
+        )}
+        
+        {productVariantStructuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(productVariantStructuredData) }}
+          />
+        )}
+        
+        {faqStructuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+          />
+        )}
+        
+        {caseStudyStructuredData.map((csData, index) => (
+          <script
+            key={`case-study-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(csData) }}
+          />
+        ))}
         
       <ProductLayout
         locale={locale}

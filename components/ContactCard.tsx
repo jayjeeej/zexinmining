@@ -99,34 +99,24 @@ export default function ContactCard({
         {/* 按钮区域 - 底部布局 */}
         <div className="border-t border-gray-100 pt-12">
           <div className="flex flex-col md:flex-row justify-end items-center gap-8">
-              {useModal ? (
-                  <button
-                    onClick={openModal}
-                className={`group inline-flex items-center text-sm transition-colors ease-hover no-underline rounded-xs border-2 border-[#ff6633] ${buttonColor} px-8 py-3 text-white hover:text-black ${buttonHoverColor} `}
-                  >
-                    <span className="font-medium">{buttonText}</span>
-                  </button>
-              ) : (
-              <Link
-                href={linkUrl}
+              {/* 始终使用模态框，忽略useModal参数，避免直接跳转到可能包含特殊字符的URL */}
+              <button
+                onClick={openModal}
                 className={`group inline-flex items-center text-sm transition-colors ease-hover no-underline rounded-xs border-2 border-[#ff6633] ${buttonColor} px-8 py-3 text-white hover:text-black ${buttonHoverColor} `}
               >
                 <span className="font-medium">{buttonText}</span>
-              </Link>
-              )}
+              </button>
           </div>
         </div>
         
         {/* 联系表单模态框 */}
-        {useModal && (
-          <ContactFormModal
-            isOpen={isModalOpen}
-            onClose={closeModal}
-            formTitle={formTitle}
-            formSubtitle={formSubtitle}
-            formType={formType}
-          />
-        )}
+        <ContactFormModal
+          isOpen={isModalOpen}
+          onClose={closeModal}
+          formTitle={formTitle}
+          formSubtitle={formSubtitle}
+          formType={formType}
+        />
       </div>
     </section>
   );

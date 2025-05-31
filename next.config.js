@@ -105,6 +105,16 @@ const nextConfig = {
             value: 'public, max-age=3600, stale-while-revalidate=86400'
           }
         ]
+      },
+      // 百度验证文件特殊处理
+      {
+        source: '/baidu_verify_:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, must-revalidate'
+          }
+        ]
       }
     ];
   },
@@ -121,8 +131,21 @@ const nextConfig = {
             type: 'header',
             key: 'x-forwarded-proto',
             value: 'http',
-          },
+          }
         ],
+        // 百度验证文件不重定向
+        missing: [
+          {
+            type: 'query',
+            key: 'baidu-site-verification',
+          }
+        ]
+      },
+      // 百度验证文件路径不重定向
+      {
+        source: '/baidu_verify_:code',
+        destination: '/baidu_verify_:code',
+        permanent: false,
       },
       // 非www到www重定向（将不带www的版本重定向到带www的版本）
       {
@@ -133,8 +156,21 @@ const nextConfig = {
           {
             type: 'host',
             value: 'zexinmining.com',
-          },
+          }
         ],
+        // 百度验证文件不重定向
+        missing: [
+          {
+            type: 'query',
+            key: 'baidu-site-verification',
+          }
+        ]
+      },
+      // 百度验证文件特殊处理
+      {
+        source: '/baidu_verify_:code',
+        destination: '/api/baidu-verify/:code',
+        permanent: false,
       }
     ]
   },

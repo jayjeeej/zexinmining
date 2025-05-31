@@ -8,9 +8,12 @@ import {
   getFAQStructuredData, 
   getImageStructuredData,
   getProductCategoryStructuredData,
-  getOrganizationStructuredData
+  getOrganizationStructuredData,
+  getProductSpecificationsStructuredData,
+  getSpecificationTableStructuredData,
+  getProductVariantStructuredData,
+  getWebPageStructuredData
 } from '@/lib/structuredData';
-import StructuredData, { MultiStructuredData } from '@/components/StructuredData';
 import ProductDataInjection from '@/components/ProductDetail/ProductDataInjection';
 import ClientMagneticSeparatorDetail from './page.client';
 import { ProductSpecification } from '@/lib/productDataSchema';
@@ -197,160 +200,60 @@ function notFoundMetadata(): Metadata {
 // 获取相关产品数据
 async function getRelatedProductsData(relatedIds: string[], locale: string) {
   try {
-    const relatedProducts = await Promise.all(
+    const results = await Promise.all(
       relatedIds.map(async (id) => {
         try {
-          // 根据产品ID判断可能的子类别
-          let subcategory = '';
-          
-          // 先检查特定产品ID
-          if (id === 'four-roll-high-voltage-electrostatic-separator') {
-            subcategory = 'magnetic-separator';
-          } else if (id.includes('feeder')) {
-            subcategory = 'feeding-equipment';
-          } else if (id.includes('mill') || id.includes('grinding')) {
-            subcategory = 'grinding-equipment';
-          } else if (id.includes('screen')) {
-            subcategory = 'vibrating-screens';
-          } else if (id.includes('crusher')) {
-            subcategory = 'stationary-crushers';
-          } else if (id.includes('magnetic') || id.includes('separator') || id.includes('electrostatic')) {
-            subcategory = 'magnetic-separator';
-          } else if (id.includes('flotation')) {
-            subcategory = 'flotation-equipment';
-          } else if (id.includes('jig') || id.includes('table') || id.includes('chute') || id.includes('centrifugal')) {
-            subcategory = 'gravity-separation';
-          } else if (id.includes('washer') || id.includes('washing')) {
-            subcategory = 'washing-equipment';
-          } else if (id.includes('classifier')) {
-            subcategory = 'classification-equipment';
-          }
-          
-          // 尝试加载数据从子目录
-          let filePath = '';
-          let fileContent = '';
-          
-          // 创建可能的子目录列表
-          const possibleSubcategories = [
-            subcategory, 
-            'magnetic-separator', 
-            'grinding-equipment', 
-            'vibrating-screens', 
-            'stationary-crushers',
-            'flotation-equipment',
-            'gravity-separation',
-            'feeding-equipment',
-            'washing-equipment',
-            'classification-equipment'
-          ].filter(Boolean);
-          
-          // 尝试从各个可能的子目录加载数据
-          let foundFile = false;
-          for (const category of possibleSubcategories) {
-            try {
-              filePath = path.join(process.cwd(), 'public', 'data', locale, category, `${id}.json`);
-              fileContent = await fs.readFile(filePath, 'utf8');
-              foundFile = true;
-              break;
-            } catch (err) {
-              // 继续尝试下一个子目录
-              continue;
-            }
-          }
-          
-          // 如果在所有子目录都未找到，尝试根目录
-          if (!foundFile) {
-            try {
-              filePath = path.join(process.cwd(), 'public', 'data', locale, `${id}.json`);
-              fileContent = await fs.readFile(filePath, 'utf8');
-              foundFile = true;
-            } catch (rootErr) {
-              // 尝试英文目录
-              try {
-                const enFilePath = path.join(process.cwd(), 'public', 'data', 'en', subcategory, `${id}.json`);
-                fileContent = await fs.readFile(enFilePath, 'utf8');
-                foundFile = true;
-              } catch (enErr) {
-                try {
-                  const enRootPath = path.join(process.cwd(), 'public', 'data', 'en', `${id}.json`);
-                  fileContent = await fs.readFile(enRootPath, 'utf8');
-                  foundFile = true;
-                } catch (enRootErr) {
-                  // 静默处理错误
-                  return null;
-                }
-              }
-            }
-          }
-          
-          const data = JSON.parse(fileContent);
-          
-          // 根据subcategory构建子类目结构URL
-          const productSubcategory = data.subcategory || subcategory || '';
-          let href;
-          
-          // 构建唯一正确的URL格式
-          if (productSubcategory) {
-            href = `/${locale}/products/ore-processing/${productSubcategory}/${id}`;
-          } else if (data.href) {
-            // 如果有预定义的href使用预定义的
-            href = data.href;
-          } else {
-            // 兜底 - 为未分类产品提供备用链接
-            href = `/${locale}/products/ore-processing/other/${id}`;
-          }
+          const { product, isSuccess } = await getProductData(id, locale);
+          if (!isSuccess || !product) return null;
           
           return {
-            id: data.id,
-            title: data.title,
-            imageSrc: data.imageSrc,
-            href: href,
-            category: data.productCategory
+            id,
+            title: product.title,
+            imageSrc: product.imageSrc,
+            overview: product.overview,
+            href: `/products/ore-processing/magnetic-separator/${id}`
           };
         } catch (error) {
-          // 静默处理错误
+          console.warn(`Failed to load related product: ${id}`);
           return null;
         }
       })
     );
     
-    const filteredProducts = relatedProducts.filter(Boolean);
-    return filteredProducts;
+    return results.filter(p => p !== null);
   } catch (error) {
-    // 静默处理错误
+    console.error('Error getting related products:', error);
     return [];
   }
 }
 
-// 格式化规格数据为统一格式
+// 产品规格格式化
 function formatSpecifications(product: any): ProductSpecification[] {
-  if (!product.specifications || !product.specifications.tableHeaders || !product.specifications.tableData) {
+  // 基础验证
+  if (
+    !product || 
+    !product.specifications || 
+    !product.specifications.tableHeaders || 
+    !product.specifications.tableData ||
+    product.specifications.tableData.length === 0
+  ) {
     return [];
   }
   
   const result: ProductSpecification[] = [];
-  const { tableHeaders, tableData, tableHeadersImperial, tableDataImperial } = product.specifications;
+  const { tableHeaders, tableData, unitTypes = [] } = product.specifications;
   
-  // 获取第一行数据（通常是唯一的一行数据）
-  if (tableData[0]) {
-    tableHeaders.forEach((header: string, index: number) => {
-      const value = tableData[0][index];
-      if (value !== undefined) {
-        const spec: ProductSpecification = {
-          name: header,
-          value: String(value) // 确保值是字符串
-        };
-        
-        // 如果有英制单位数据，添加到规格对象
-        if (tableHeadersImperial && tableDataImperial && tableDataImperial[0]) {
-          spec.imperialName = tableHeadersImperial[index];
-          spec.imperialValue = String(tableDataImperial[0][index]); // 确保值是字符串
-        }
-        
-        result.push(spec);
-      }
-    });
-  }
+  // 只处理第一行（典型型号）
+  // 这个优化应该由产品详情页组件处理多型号的情况
+  tableHeaders.forEach((header: string, index: number) => {
+    if (tableData[0] && tableData[0][index] !== undefined) {
+      result.push({
+        name: header,
+        value: tableData[0][index],
+        unit: unitTypes[index] || ''
+      });
+    }
+  });
   
   return result;
 }
@@ -374,7 +277,7 @@ export default async function ProductDetailPage({
     }
     
     const isZh = false; // 英文版，固定为false
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.zexinmining.com';
+    const baseUrl = 'https://www.zexinmining.com';
     
     // 使用统一函数构建面包屑导航
     const breadcrumbConfig = getProductDetailBreadcrumbConfig({
@@ -389,7 +292,7 @@ export default async function ProductDetailPage({
       { name: 'Home', url: '/en' },
       { name: 'Products', url: '/en/products' },
       { name: 'Ore Processing', url: '/en/products/ore-processing' },
-      { name: 'Magnetic Separator', url: '/en/products/ore-processing/magnetic-separator' },
+      { name: 'Magnetic Separators', url: '/en/products/ore-processing/magnetic-separator' },
       { name: product.title, url: `/en/products/ore-processing/magnetic-separator/${productId}` }
     ];
     
@@ -399,7 +302,7 @@ export default async function ProductDetailPage({
     // 应用领域格式化
     const applications = Array.isArray(product.applications) 
       ? product.applications.map((app: any) => ({
-          icon: app.icon || '/icons/application.svg',
+          icon: app.icon || '/icons/application-default.svg',
           title: app.title || '',
           description: app.description || ''
         }))
@@ -437,7 +340,13 @@ export default async function ProductDetailPage({
       relatedProducts = await getRelatedProductsData(product.relatedProducts, locale);
     }
     
-    // 构建结构化数据
+    // 创建技术规格的结构化数据属性
+    const specificationProperties = getProductSpecificationsStructuredData({
+      product,
+      modelIndex: 0
+    });
+    
+    // 构建增强的产品结构化数据
     const productStructuredData = getProductStructuredData({
       productId,
       product,
@@ -445,46 +354,168 @@ export default async function ProductDetailPage({
       baseUrl
     });
     
+    // 增强产品结构化数据
+    const enhancedProductStructuredData = {
+      ...productStructuredData,
+      additionalProperty: specificationProperties,
+      isRelatedTo: [] as Array<{
+        "@type": string;
+        "name": string;
+        "url": string;
+      }>
+    };
+    
+    // 如果有相关产品，添加到结构化数据
+    if (relatedProducts && relatedProducts.length > 0) {
+      enhancedProductStructuredData.isRelatedTo = relatedProducts.map(related => ({
+        "@type": "Product",
+        "name": related.title,
+        "url": `${baseUrl}${related.href}`
+      }));
+    }
+    
+    // 构建产品变体结构化数据（如果有多个型号）
+    const productVariantStructuredData = getProductVariantStructuredData({
+      product,
+      groupName: product.series || product.title,
+      locale,
+      baseUrl
+    });
+    
+    // 创建面包屑结构化数据
     const breadcrumbStructuredData = getBreadcrumbStructuredData(breadcrumbItems, baseUrl);
     
+    // 创建FAQ结构化数据
     const faqStructuredData = faqs.length > 0 
-      ? getFAQStructuredData(faqs.map(faq => ({ 
-          question: faq.question, 
-          answer: faq.answer 
-        }))) 
+      ? getFAQStructuredData(faqs)
       : null;
     
-    const imageStructuredData = product.imageSrc ? getImageStructuredData({
+    // 创建图片结构化数据
+    const imageStructuredData = getImageStructuredData({
       url: product.imageSrc,
       caption: product.title,
-      description: product.overview,
+      description: product.overview || "",
       baseUrl
-    }) : null;
+    });
     
+    // 创建产品类别结构化数据
     const categoryStructuredData = getProductCategoryStructuredData({
       categoryId: 'magnetic-separator',
-      categoryName: isZh ? '磁选机' : 'Magnetic Separator',
-      description: isZh ? '泽鑫矿山设备提供各类高效磁选机' : 'Zexin Mining Equipment provides a range of efficient magnetic separators',
+      categoryName: 'Magnetic Separator',
+      description: 'Zexin Mining Equipment provides a range of efficient magnetic separators',
       locale: locale,
       baseUrl: baseUrl
     });
     
+    // 创建组织结构化数据
     const organizationStructuredData = getOrganizationStructuredData(isZh);
     
-    // 合并所有结构化数据
-    const structuredDataArray = [
-      productStructuredData,
-      breadcrumbStructuredData,
-      categoryStructuredData,
-      organizationStructuredData,
-      ...(imageStructuredData ? [imageStructuredData] : []),
-      ...(faqStructuredData ? [faqStructuredData] : [])
-    ];
+    // 创建规格表结构化数据
+    const specTableStructuredData = getSpecificationTableStructuredData({
+      product,
+      locale
+    });
+    
+    // 创建WebPage结构化数据
+    const pageUrl = `${baseUrl}/${locale}/products/ore-processing/magnetic-separator/${productId}`;
+    const webPageStructuredData = getWebPageStructuredData({
+      pageUrl: pageUrl,
+      pageName: product.title,
+      description: product.overview || "",
+      locale: locale,
+      baseUrl: baseUrl,
+      images: [product.imageSrc],
+      breadcrumbId: null
+    });
+    
+    // 创建案例研究结构化数据
+    const caseStudyStructuredData = caseStudies.map((cs, index) => {
+      if (cs.title && cs.description) {
+        return {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": cs.title,
+          "description": cs.description,
+          "image": cs.imageSrc ? `${baseUrl}${cs.imageSrc}` : undefined,
+          "author": {
+            "@type": "Organization",
+            "name": "Zexin Mining Equipment"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Zexin Mining Equipment",
+            "logo": {
+              "@type": "ImageObject",
+              "url": `${baseUrl}/logo/logo-en.webp`
+            }
+          },
+          "datePublished": new Date().toISOString().split('T')[0]
+        };
+      }
+      return null;
+    }).filter(Boolean);
     
     return (
       <>
-        {/* SEO结构化数据 */}
-        <MultiStructuredData dataArray={structuredDataArray} />
+        {/* 使用独立script标签注入各结构化数据 */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(enhancedProductStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(imageStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageStructuredData) }}
+        />
+        
+        {specTableStructuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(specTableStructuredData) }}
+          />
+        )}
+        
+        {productVariantStructuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(productVariantStructuredData) }}
+          />
+        )}
+        
+        {faqStructuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+          />
+        )}
+        
+        {caseStudyStructuredData.map((csData, index) => (
+          <script
+            key={`case-study-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(csData) }}
+          />
+        ))}
         
         <ProductLayout
           locale={locale}

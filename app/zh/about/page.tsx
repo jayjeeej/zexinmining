@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
-import { getOrganizationStructuredData } from '@/lib/structuredData';
-import { MultiStructuredData } from '@/components/StructuredData';
+import { getOrganizationStructuredData, getWebPageStructuredData, getLocalBusinessStructuredData } from '@/lib/structuredData';
 import AboutPageClient from './page.client';
 
 // Vercel 优化导出指令
@@ -39,19 +38,48 @@ export default function AboutPage() {
   // 使用固定的locale值
   const locale = 'zh';
   const isZh = true;
+  const baseUrl = 'https://www.zexinmining.com';
+  const pageUrl = `${baseUrl}/${locale}/about`;
   
   // 获取结构化数据
   const organizationStructuredData = getOrganizationStructuredData(isZh);
   
-  // 组合成数组供MultiStructuredData组件使用
-  const structuredDataArray = [
-    organizationStructuredData
-  ];
+  // 添加WebPage结构化数据
+  const webPageStructuredData = getWebPageStructuredData({
+    pageUrl,
+    pageName: '关于我们 | 泽鑫矿山设备',
+    description: '了解泽鑫矿山设备公司的历史、企业文化、专业团队和全球业务，以及我们如何为矿业客户提供卓越的产品与服务。',
+    locale,
+    baseUrl,
+    images: [
+      '/images/about/about-company.jpg',
+      '/images/about/team-founder.jpg',
+      '/images/about/team-ceo.jpg'
+    ]
+  });
+  
+  // 添加LocalBusiness结构化数据
+  const localBusinessStructuredData = getLocalBusinessStructuredData(locale, baseUrl);
 
   return (
     <>
-      <MultiStructuredData dataArray={structuredDataArray} />
-      <AboutPageClient locale={locale} />
+      {/* 使用独立script标签注入结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageStructuredData) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessStructuredData) }}
+      />
+      
+      <AboutPageClient />
     </>
   );
 } 

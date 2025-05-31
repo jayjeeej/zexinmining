@@ -149,11 +149,10 @@ export default function ClientWashingEquipmentDetail({
           title={isZh ? "需要洗选设备解决方案？" : "Need Washing Equipment Solutions?"}
           description={isZh ? "我们的专业工程师团队随时为您提供技术咨询和定制洗选设备方案。<br>联系我们获取更多洗选设备的详细信息和应用建议！" : "Our professional engineering team is always ready to provide technical consultation and customized washing solutions.<br>Contact us for more details and application advice on our washing equipment!"}
           buttonText={isZh ? "联系我们" : "Contact Us"}
-          linkUrl={`/${locale}/contact`}
+          linkUrl=""
           imageSrc="/images/mineral-processing/contact-support.jpg"
           imageAlt={isZh ? "洗选设备技术支持" : "Washing Equipment Support"}
           rounded={false}
-          useModal={true}
           formTitle={{ 
             zh: '洗选设备咨询', 
             en: 'Washing Equipment Inquiry' 

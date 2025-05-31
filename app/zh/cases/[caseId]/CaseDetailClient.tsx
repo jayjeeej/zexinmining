@@ -28,17 +28,18 @@ interface CaseDetail {
 
 // 客户端组件接口
 interface CaseDetailClientProps {
-  locale: string;
   breadcrumbItems: { name: string; href?: string }[];
   caseDetail: CaseDetail;
 }
 
 export default function CaseDetailClient({
-  locale,
   breadcrumbItems,
   caseDetail
 }: CaseDetailClientProps) {
-  const isZh = locale === 'zh';
+  // 写死语言设置为中文
+  const locale = 'zh';
+  const isZh = true;
+  
   // 使用主图或者第一张图片
   const mainImage = caseDetail.imageSrc || caseDetail.images[0];
   // 使用图库图片或者除第一张外的其他图片
@@ -63,7 +64,7 @@ export default function CaseDetailClient({
             en: 'Inquire About Similar Projects'
           }
         }
-        subjectDefaultValue={`${isZh ? '关于' : 'About '} ${caseDetail.title} ${isZh ? '的咨询' : ''}`}
+        subjectDefaultValue={`关于${caseDetail.title}的咨询`}
       />
       
       <div className="bg-white py-16 md:py-24">
@@ -77,7 +78,7 @@ export default function CaseDetailClient({
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
               <div className="flex flex-col">
                 <span className="text-sm text-gray-500 uppercase">
-                  {isZh ? '项目类别' : 'Category'}
+                  项目类别
                 </span>
                 <span className="text-base font-medium text-black mt-1">
                   {caseDetail.category}
@@ -86,7 +87,7 @@ export default function CaseDetailClient({
               
               <div className="flex flex-col">
                 <span className="text-sm text-gray-500 uppercase">
-                  {isZh ? '项目地点' : 'Location'}
+                  项目地点
                 </span>
                 <span className="text-base font-medium text-black mt-1">
                   {caseDetail.location}
@@ -95,7 +96,7 @@ export default function CaseDetailClient({
               
               <div className="flex flex-col">
                 <span className="text-sm text-gray-500 uppercase">
-                  {isZh ? '完成年份' : 'Year'}
+                  完成年份
                 </span>
                 <span className="text-base font-medium text-black mt-1">
                   {caseDetail.year}
@@ -104,7 +105,7 @@ export default function CaseDetailClient({
               
               <div className="flex flex-col">
                 <span className="text-sm text-gray-500 uppercase">
-                  {isZh ? '客户' : 'Client'}
+                  客户
                 </span>
                 <span className="text-base font-medium text-black mt-1">
                   {caseDetail.client}
@@ -132,7 +133,7 @@ export default function CaseDetailClient({
           <div className="mb-16">
             <div className="flex flex-col md:flex-row justify-between items-start gap-6">
               <h2 className="text-2xl text-black">
-                {isZh ? '项目概述' : 'Project Overview'}
+                项目概述
               </h2>
               <p className="text-xl md:text-2xl lg:text-[26px] font-bold text-gray-800 md:text-right max-w-4xl">
                 {caseDetail.description}
@@ -148,7 +149,7 @@ export default function CaseDetailClient({
                 <span className="block border-t border-[#ff6633] w-[60px] mt-4"></span>
               </div>
               <h3 className="text-xl font-bold text-black mb-4">
-                {isZh ? '项目挑战' : 'Challenges'}
+                项目挑战
               </h3>
               <p className="text-gray-700 leading-relaxed">
                 {caseDetail.challenge}
@@ -161,7 +162,7 @@ export default function CaseDetailClient({
                 <span className="block border-t border-[#ff6633] w-[60px] mt-4"></span>
               </div>
               <h3 className="text-xl font-bold text-black mb-4">
-                {isZh ? '解决方案' : 'Solutions'}
+                解决方案
               </h3>
               <p className="text-gray-700 leading-relaxed">
                 {caseDetail.solution}
@@ -174,7 +175,7 @@ export default function CaseDetailClient({
                 <span className="block border-t border-[#ff6633] w-[60px] mt-4"></span>
               </div>
               <h3 className="text-xl font-bold text-black mb-4">
-                {isZh ? '项目成果' : 'Results'}
+                项目成果
               </h3>
               <p className="text-gray-700 leading-relaxed">
                 {caseDetail.results}
@@ -186,14 +187,14 @@ export default function CaseDetailClient({
           {galleryImages.length > 0 && (
             <div className="mb-16">
               <h2 className="text-2xl text-black mb-8">
-                {isZh ? '项目图片' : 'Project Images'}
+                项目图片
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {galleryImages.map((image, index) => (
                   <LazyLoadWrapper key={index} className="relative aspect-[4/3]">
                     <Image
                       src={image}
-                      alt={`${caseDetail.title} - ${isZh ? '图片' : 'Image'} ${index + 1}`}
+                      alt={`${caseDetail.title} - 图片 ${index + 1}`}
                       fill
                       unoptimized={true}
                       sizes="(max-width: 768px) 100vw, 600px"
@@ -228,7 +229,7 @@ export default function CaseDetailClient({
                     strokeLinejoin="round"
                   />
                 </svg>
-                {isZh ? '返回所有案例' : 'Back to All Cases'}
+                返回所有案例
               </Link>
             </div>
           </div>
@@ -237,9 +238,9 @@ export default function CaseDetailClient({
       
       {/* 添加ContactCard代替按钮 */}
       <ContactCard
-        title={isZh ? "需要类似项目解决方案？" : "Need Similar Project Solutions?"}
-        description={isZh ? "我们的专业工程师团队可以针对您的需求提供定制化解决方案。<br>基于这个案例项目，我们可以为您设计最适合的矿山设备配置方案。" : "Our professional engineering team can provide customized solutions based on your needs.<br>Based on this case project, we can design the most suitable mining equipment configuration for you."}
-        buttonText={isZh ? "咨询类似项目" : "Inquire About Similar Projects"}
+        title="需要类似项目解决方案？"
+        description="我们的专业工程师团队可以针对您的需求提供定制化解决方案。<br>基于这个案例项目，我们可以为您设计最适合的矿山设备配置方案。"
+        buttonText="咨询类似项目"
         linkUrl=""
         useModal={true}
         formTitle={{ 

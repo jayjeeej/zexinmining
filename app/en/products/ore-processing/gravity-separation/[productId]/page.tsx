@@ -8,14 +8,16 @@ import {
   getFAQStructuredData, 
   getImageStructuredData,
   getProductCategoryStructuredData,
-  getOrganizationStructuredData
+  getOrganizationStructuredData,
+  getSpecificationTableStructuredData,
+  getProductVariantStructuredData,
+  getWebPageStructuredData
 } from '@/lib/structuredData';
-import StructuredData, { MultiStructuredData } from '@/components/StructuredData';
 import ProductDataInjection from '@/components/ProductDetail/ProductDataInjection';
 import ClientGravitySeparationDetail from './page.client';
 import { ProductSpecification } from '@/lib/productDataSchema';
-import fs from 'fs/promises';
-import * as fsSync from 'fs'; // 使用fsSync代替fs
+import fs from 'fs';
+import { promises as fsPromises } from 'fs';
 import path from 'path';
 import { getProductDetailBreadcrumbConfig } from '@/lib/navigation';
 import { safelyGetRouteParams } from '@/lib/utils';
@@ -36,13 +38,13 @@ export async function generateStaticParams() {
   
   try {
     // 检查目录是否存在
-    if (!fsSync.existsSync(basePath)) {
+    if (!fs.existsSync(basePath)) {
       console.error(`Directory not found: ${basePath}`);
       return [];
     }
     
     // 获取所有产品文件
-    const productFiles = fsSync.readdirSync(basePath)
+    const productFiles = fs.readdirSync(basePath)
       .filter((file: string) => file.endsWith('.json'))
       .map((file: string) => file.replace('.json', ''));
     
@@ -237,7 +239,7 @@ async function getRelatedProductsData(relatedIds: string[], locale: string) {
           for (const subcat of possibleSubcategories) {
             try {
               filePath = path.join(process.cwd(), 'public', 'data', locale, subcat, `${id}.json`);
-              fileContent = await fs.readFile(filePath, 'utf8');
+              fileContent = await fsPromises.readFile(filePath, 'utf8');
               foundFile = true;
               // 找到文件后记录子类别
               subcategory = subcat;
@@ -252,7 +254,7 @@ async function getRelatedProductsData(relatedIds: string[], locale: string) {
           if (!foundFile) {
             try {
               filePath = path.join(process.cwd(), 'public', 'data', locale, `${id}.json`);
-              fileContent = await fs.readFile(filePath, 'utf8');
+              fileContent = await fsPromises.readFile(filePath, 'utf8');
               foundFile = true;
               subcategory = '';
             } catch (err) {
@@ -302,7 +304,14 @@ async function getRelatedProductsData(relatedIds: string[], locale: string) {
 
 // 格式化规格数据为统一格式
 function formatSpecifications(product: any): ProductSpecification[] {
-  if (!product.specifications || !product.specifications.tableHeaders || !product.specifications.tableData) {
+  // 基础验证
+  if (
+    !product || 
+    !product.specifications || 
+    !product.specifications.tableHeaders || 
+    !product.specifications.tableData ||
+    product.specifications.tableData.length === 0
+  ) {
     return [];
   }
   
@@ -316,15 +325,13 @@ function formatSpecifications(product: any): ProductSpecification[] {
       if (value !== undefined) {
         const spec: ProductSpecification = {
           name: header,
-          value: String(value) // 确保值是字符串
+          value: value.toString(),
+          unit: '',
+          // 根据ProductSpecification接口添加正确的属性
+          imperialValue: tableDataImperial && tableDataImperial[0] ? 
+                        tableDataImperial[0][index]?.toString() : '',
+          imperialUnit: ''
         };
-        
-        // 如果有英制单位数据，添加到规格对象
-        if (tableHeadersImperial && tableDataImperial && tableDataImperial[0]) {
-          spec.imperialName = tableHeadersImperial[index];
-          spec.imperialValue = String(tableDataImperial[0][index]); // 确保值是字符串
-        }
-        
         result.push(spec);
       }
     });
@@ -339,22 +346,22 @@ export async function getGravitySeparationProductData(locale: string, productId:
     const dataPath = path.join(process.cwd(), 'public', 'data', locale, 'gravity-separation', `${productId}.json`);
     
     // 检查文件是否存在
-    if (!fsSync.existsSync(dataPath)) {
+    if (!fs.existsSync(dataPath)) {
       // 如果子目录不存在，尝试从根目录获取
       const rootDataPath = path.join(process.cwd(), 'public', 'data', locale, `${productId}.json`);
       
-      if (!fsSync.existsSync(rootDataPath)) {
+      if (!fs.existsSync(rootDataPath)) {
         // 文件不存在，返回null
         return null;
       }
       
       // 从根目录读取
-      const data = await fs.readFile(rootDataPath, 'utf8');
+      const data = await fsPromises.readFile(rootDataPath, 'utf8');
       return JSON.parse(data);
     }
     
     // 从子目录读取
-    const data = await fs.readFile(dataPath, 'utf8');
+    const data = await fsPromises.readFile(dataPath, 'utf8');
     return JSON.parse(data);
   } catch (error) {
     // 捕获所有错误，返回null
@@ -362,26 +369,18 @@ export async function getGravitySeparationProductData(locale: string, productId:
   }
 }
 
-export default async function ProductDetailPage({ 
-  params 
-}: { 
-  params: { productId: string; locale: string } 
-}) {
+export default async function ProductDetailPage({ params }: { params: { productId: string; locale: string } }) {
   try {
     // 静态路由下直接指定locale而不是从params获取
     const locale = 'en';
-    const productId = (await params).productId;
+    const isZh = false; // 英文版，固定为false
+    // 确保正确await params
+    const safeParams = await safelyGetRouteParams(params);
+    const { productId } = safeParams;
     
-    // 获取产品数据
-    const product = await getGravitySeparationProductData(locale, productId);
-    if (!product) return <div>Product not found</div>;
+    const { product, isSuccess } = await getProductData(productId, locale);
+    if (!isSuccess || !product) return notFound();
     
-    // 验证产品是否属于重力分离设备类别
-    if (product.subcategory !== 'gravity-separation') {
-      // 静默处理
-    }
-    
-    const isZh = false;
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.zexinmining.com';
     
     // 使用统一函数构建面包屑导航
@@ -392,76 +391,28 @@ export default async function ProductDetailPage({
       category: 'gravity-separation'
     });
     
-    // 构建结构化数据
-    const productStructuredData = getProductStructuredData({
-      productId,
-      product,
-      locale,
-      baseUrl
-    });
-    
+    // 定义面包屑项目用于结构化数据
     const breadcrumbItems = [
       { name: 'Home', url: '/en' },
       { name: 'Products', url: '/en/products' },
       { name: 'Ore Processing', url: '/en/products/ore-processing' },
-      { name: 'Gravity Separation', url: '/en/products/ore-processing/gravity-separation' },
+      { name: 'Gravity Separation Equipment', url: '/en/products/ore-processing/gravity-separation' },
       { name: product.title, url: `/en/products/ore-processing/gravity-separation/${productId}` }
     ];
     
-    const breadcrumbStructuredData = getBreadcrumbStructuredData(breadcrumbItems, baseUrl);
-    
-    const faqStructuredData = product.faqs && Array.isArray(product.faqs) && product.faqs.length > 0
-      ? getFAQStructuredData(product.faqs.map((faq: any) => ({
-          question: faq.question,
-          answer: faq.answer
-        })))
-      : null;
-    
-    const imageStructuredData = product.imageSrc ? getImageStructuredData({
-      url: product.imageSrc,
-      caption: product.title,
-      description: product.overview,
-      baseUrl
-    }) : null;
-    
-    const categoryStructuredData = getProductCategoryStructuredData({
-      categoryId: 'gravity-separation',
-      categoryName: isZh ? '重力分选设备' : 'Gravity Separation',
-      description: isZh ? '高效率重力分选设备，满足不同矿石分选需求' : 'High-efficiency gravity separation equipment for various ore separation requirements',
-      locale,
-      baseUrl
-    });
-    
-    const organizationStructuredData = getOrganizationStructuredData(isZh);
-    
-    const structuredDataArray = [
-      productStructuredData,
-      breadcrumbStructuredData,
-      categoryStructuredData,
-      organizationStructuredData,
-      ...(imageStructuredData ? [imageStructuredData] : []),
-      ...(faqStructuredData ? [faqStructuredData] : [])
-    ];
-    
-    // 准备客户端组件所需的数据
+    // 格式化规格数据
     const specifications = formatSpecifications(product);
-    
-    // 获取相关产品数据
-    let relatedProducts: any[] = [];
-    if (product.relatedProducts && Array.isArray(product.relatedProducts)) {
-      relatedProducts = await getRelatedProductsData(product.relatedProducts, locale);
-    }
     
     // 应用领域格式化
     const applications = Array.isArray(product.applications) 
       ? product.applications.map((app: any) => ({
-          icon: app.icon || '/icons/application.svg',
+          icon: app.icon || '/icons/application-default.svg',
           title: app.title || '',
           description: app.description || ''
         }))
       : [];
     
-    // 技术优势格式化
+    // 技术优势格式化  
     const technicalAdvantages = Array.isArray(product.technicalAdvantages)
       ? product.technicalAdvantages.map((adv: any) => ({
           title: adv.title || '',
@@ -487,17 +438,220 @@ export default async function ProductDetailPage({
         }))
       : [];
     
+    // 获取相关产品数据
+    let relatedProducts: any[] = [];
+    if (product.relatedProducts && Array.isArray(product.relatedProducts)) {
+      relatedProducts = await getRelatedProductsData(product.relatedProducts, locale);
+    }
+    
+    // 创建技术规格的结构化数据属性
+    const specificationProperties: Array<{
+      "@type": string;
+      "name": string;
+      "value": string;
+      "unitCode"?: string;
+    }> = [];
+    
+    if (product.specifications && product.specifications.tableHeaders && product.specifications.tableData) {
+      const { tableHeaders, tableData, unitTypes = [] } = product.specifications;
+      
+      // 使用第一行数据（典型型号）创建技术规格
+      if (tableData[0]) {
+        tableHeaders.forEach((header: string, index: number) => {
+          if (tableData[0][index] !== undefined) {
+            specificationProperties.push({
+              "@type": "PropertyValue",
+              "name": header,
+              "value": tableData[0][index].toString(),
+              ...(unitTypes[index] ? { "unitCode": unitTypes[index] } : {})
+            });
+          }
+        });
+      }
+    }
+    
+    // 构建增强的产品结构化数据
+    const productStructuredData = getProductStructuredData({
+      productId,
+      product,
+      locale,
+      baseUrl
+    });
+    
+    // 增强产品结构化数据
+    const enhancedProductStructuredData = {
+      ...productStructuredData,
+      additionalProperty: specificationProperties,
+      isRelatedTo: [] as Array<{
+        "@type": string;
+        "name": string;
+        "url": string;
+      }>
+    };
+    
+    // 如果有相关产品，添加到结构化数据
+    if (relatedProducts && relatedProducts.length > 0) {
+      enhancedProductStructuredData.isRelatedTo = relatedProducts.map(related => ({
+        "@type": "Product",
+        "name": related.title,
+        "url": `${baseUrl}${related.href}`
+      }));
+    }
+    
+    // 构建产品变体结构化数据（如果有多个型号）
+    const productVariantStructuredData = getProductVariantStructuredData({
+      product,
+      groupName: product.series || product.title,
+      locale,
+      baseUrl
+    });
+    
+    const breadcrumbStructuredData = getBreadcrumbStructuredData(
+      breadcrumbItems,
+      baseUrl
+    );
+    
+    const faqStructuredData = faqs.length > 0 
+      ? getFAQStructuredData(faqs.map(faq => ({ 
+          question: faq.question, 
+          answer: faq.answer 
+        })))
+      : null;
+    
+    const imageStructuredData = getImageStructuredData({
+      url: product.imageSrc,
+      caption: product.title,
+      description: product.overview || "",
+      baseUrl
+    });
+    
+    const productCategoryStructuredData = getProductCategoryStructuredData({
+      categoryId: 'gravity-separation',
+      categoryName: 'Gravity Separation Equipment',
+      description: 'Gravity separation equipment for mineral separation based on density differences, providing efficient gravity concentration processes and equipment.',
+      locale,
+      baseUrl
+    });
+    
+    const organizationStructuredData = getOrganizationStructuredData(isZh);
+    
+    // 创建规格表结构化数据
+    const specTableStructuredData = getSpecificationTableStructuredData({
+      product,
+      locale,
+      baseUrl
+    });
+    
+    // 创建WebPage结构化数据
+    const pageUrl = `${baseUrl}/${locale}/products/ore-processing/gravity-separation/${productId}`;
+    const webPageStructuredData = getWebPageStructuredData({
+      pageUrl: pageUrl,
+      pageName: product.title,
+      description: product.overview || "",
+      locale: locale,
+      baseUrl: baseUrl,
+      images: [product.imageSrc],
+      breadcrumbId: null
+    });
+    
+    // 创建案例研究结构化数据
+    const caseStudyStructuredData = caseStudies.map((cs, index) => {
+      if (cs.title && cs.description) {
+        return {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": cs.title,
+          "description": cs.description || "",
+          "image": cs.imageSrc ? `${baseUrl}${cs.imageSrc}` : undefined,
+          "author": {
+            "@type": "Organization",
+            "name": "Zexin Mining Equipment"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Zexin Mining Equipment",
+            "logo": {
+              "@type": "ImageObject",
+              "url": `${baseUrl}/logo/logo-en.webp`
+            }
+          },
+          "datePublished": new Date().toISOString().split('T')[0]
+        };
+      }
+      return null;
+    }).filter(Boolean);
+    
+    // 将数据传递给产品布局组件
     return (
       <>
-        {/* SEO结构化数据 */}
-        <MultiStructuredData dataArray={structuredDataArray} />
+        {/* 使用独立script标签注入各结构化数据 */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(enhancedProductStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(imageStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productCategoryStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageStructuredData) }}
+        />
+        
+        {specTableStructuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(specTableStructuredData) }}
+          />
+        )}
+        
+        {productVariantStructuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(productVariantStructuredData) }}
+          />
+        )}
+        
+        {faqStructuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+          />
+        )}
+        
+        {caseStudyStructuredData.map((csData, index) => (
+          <script
+            key={`case-study-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(csData) }}
+          />
+        ))}
         
         <ProductLayout
           locale={locale}
           breadcrumbItems={breadcrumbConfig}
         >
-          {/* 注入产品数据 */}
-          <ProductDataInjection product={product} locale={locale}>
+          <ProductDataInjection
+            product={product}
+            locale={locale}
+          >
             <ClientGravitySeparationDetail
               locale={locale}
               productData={product}
@@ -513,9 +667,7 @@ export default async function ProductDetailPage({
       </>
     );
   } catch (error) {
-    // 显性记录错误，帮助调试
-    console.error("Product detail page rendering error:", error);
-    // 静默处理错误
+    console.error('[ERROR] Gravity separation equipment detail page loading failed:', error);
     return notFound();
   }
 } 
