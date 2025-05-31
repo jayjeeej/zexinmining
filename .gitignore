@@ -40,3 +40,5 @@ next-env.d.ts
 *.ntvs*
 *.njsproj
 *.sln 
+# Local Netlify folder
+.netlify
