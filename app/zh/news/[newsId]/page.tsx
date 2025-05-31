@@ -86,7 +86,7 @@ export async function generateMetadata({
       alt: newsItem.imageAlt || newsItem.title,
     }
   ];
-  
+
   // 优化标题长度，确保不超过28个中文字符
   let optimizedTitle = newsItem.title;
   const siteName = '泽鑫矿山设备';
