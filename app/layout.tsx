@@ -109,6 +109,7 @@ export default function RootLayout({
       <head>
         {/* 百度站点验证 */}
         <meta name="baidu-site-verification" content="codeva-rq96ZYqafE" />
+        <meta name="baidu-site-verification" content="codeva-nbtCgXOQHG" />
         {/* 预连接到重要资源 */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
