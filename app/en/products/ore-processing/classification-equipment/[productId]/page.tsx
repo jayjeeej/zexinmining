@@ -82,26 +82,71 @@ export async function generateStaticParams() {
 
 // 生成元数据
 export async function generateMetadata({ params }: { params: { productId: string; locale: string } }): Promise<Metadata> {
-  // 静态路由下直接指定locale而不是从params获取
-  const locale = 'en';
+    // 静态路由下直接指定locale而不是从params获取
+    const locale = 'en';
   const { productId } = await params;
-  
-  // 获取产品数据
-  const { product, isSuccess } = await getProductData(productId, locale);
-  if (!isSuccess || !product) return notFoundMetadata('en');
-  
-  const isZh = false; // 英文版，固定为false
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.zexinmining.com';
-  
-  // 构建规范链接URL - 注意这里的路径结构与目录结构一致
-  const canonicalUrl = `/${locale}/products/ore-processing/classification-equipment/${productId}`;
-  
-  // 优先使用产品数据中的SEO配置
-  if (product.seo) {
+    
+    // 获取产品数据
+    const { product, isSuccess } = await getProductData(productId, locale);
+    if (!isSuccess || !product) return notFoundMetadata('en');
+    
+    const isZh = false; // 英文版，固定为false
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.zexinmining.com';
+    
+    // 构建规范链接URL - 注意这里的路径结构与目录结构一致
+    const canonicalUrl = `/${locale}/products/ore-processing/classification-equipment/${productId}`;
+    
+    // 优先使用产品数据中的SEO配置
+    if (product.seo) {
+      return {
+        title: product.seo.title || `${product.title} | ${isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment'}`,
+        description: product.seo.description || product.overview,
+        keywords: product.seo.keywords || `${product.title},${product.productCategory}`,
+        alternates: {
+          canonical: canonicalUrl,
+          languages: {
+            'zh-CN': `/zh/products/ore-processing/classification-equipment/${productId}`,
+            'en-US': `/en/products/ore-processing/classification-equipment/${productId}`,
+          },
+        },
+        openGraph: {
+          title: product.seo.title || product.title,
+          description: product.seo.description || product.overview,
+          url: `${baseUrl}${canonicalUrl}`,
+          siteName: isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment',
+          images: [
+            {
+              url: `${baseUrl}${product.imageSrc}`,
+              width: 1200,
+              height: 630,
+              alt: product.title,
+            },
+          ],
+          locale: isZh ? 'zh_CN' : 'en_US',
+          type: 'website',
+        },
+      };
+    }
+    
+    // 为SEO描述和关键词提供默认值
+    const seoDescription = product.overview || 
+                        (isZh 
+                          ? `${product.title} - 泽鑫矿山设备提供专业的${product.productCategory}解决方案` 
+                          : `${product.title} - Professional ${product.productCategory} solutions by Zexin Mining Equipment`);
+    
+    const seoKeywords = isZh 
+                       ? `${product.title},${product.productCategory},泽鑫矿山设备,矿山设备,分级设备` 
+                       : `${product.title},${product.productCategory},Zexin Mining Equipment,mining equipment,classification equipment`;
+    
+    // 如果产品数据中存在searchKeywords数组，使用它来增强关键词
+    const enhancedKeywords = product.searchKeywords && Array.isArray(product.searchKeywords) 
+      ? `${seoKeywords},${product.searchKeywords.join(',')}` 
+      : seoKeywords;
+    
     return {
-      title: product.seo.title || `${product.title} | ${isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment'}`,
-      description: product.seo.description || product.overview,
-      keywords: product.seo.keywords || `${product.title},${product.productCategory}`,
+      title: `${product.title} | ${isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment'}`,
+      description: seoDescription,
+      keywords: enhancedKeywords,
       alternates: {
         canonical: canonicalUrl,
         languages: {
@@ -110,8 +155,8 @@ export async function generateMetadata({ params }: { params: { productId: string
         },
       },
       openGraph: {
-        title: product.seo.title || product.title,
-        description: product.seo.description || product.overview,
+        title: product.title,
+        description: product.overview || seoDescription,
         url: `${baseUrl}${canonicalUrl}`,
         siteName: isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment',
         images: [
@@ -126,51 +171,6 @@ export async function generateMetadata({ params }: { params: { productId: string
         type: 'website',
       },
     };
-  }
-  
-  // 为SEO描述和关键词提供默认值
-  const seoDescription = product.overview || 
-                      (isZh 
-                        ? `${product.title} - 泽鑫矿山设备提供专业的${product.productCategory}解决方案` 
-                        : `${product.title} - Professional ${product.productCategory} solutions by Zexin Mining Equipment`);
-  
-  const seoKeywords = isZh 
-                     ? `${product.title},${product.productCategory},泽鑫矿山设备,矿山设备,分级设备` 
-                     : `${product.title},${product.productCategory},Zexin Mining Equipment,mining equipment,classification equipment`;
-  
-  // 如果产品数据中存在searchKeywords数组，使用它来增强关键词
-  const enhancedKeywords = product.searchKeywords && Array.isArray(product.searchKeywords) 
-    ? `${seoKeywords},${product.searchKeywords.join(',')}` 
-    : seoKeywords;
-  
-  return {
-    title: `${product.title} | ${isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment'}`,
-    description: seoDescription,
-    keywords: enhancedKeywords,
-    alternates: {
-      canonical: canonicalUrl,
-      languages: {
-        'zh-CN': `/zh/products/ore-processing/classification-equipment/${productId}`,
-        'en-US': `/en/products/ore-processing/classification-equipment/${productId}`,
-      },
-    },
-    openGraph: {
-      title: product.title,
-      description: product.overview || seoDescription,
-      url: `${baseUrl}${canonicalUrl}`,
-      siteName: isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment',
-      images: [
-        {
-          url: `${baseUrl}${product.imageSrc}`,
-          width: 1200,
-          height: 630,
-          alt: product.title,
-        },
-      ],
-      locale: isZh ? 'zh_CN' : 'en_US',
-      type: 'website',
-    },
-  };
 }
 
 // 404元数据
