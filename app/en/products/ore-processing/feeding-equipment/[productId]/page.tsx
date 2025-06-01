@@ -504,14 +504,25 @@ export default async function ProductDetailPage({
       baseUrl
     });
     
-    // 应用领域 - 确保格式正确
-    const applications = product.applications && Array.isArray(product.applications.items)
-      ? product.applications.items
-      : Array.isArray(product.applications) 
-        ? product.applications 
-        : [];
+    // 应用领域格式化
+    let applications: any[] = [];
+    if (product.applications) {
+      if (Array.isArray(product.applications)) {
+        applications = product.applications.map((app: any) => ({
+          icon: app.icon || '/icons/application-default.svg',
+          title: app.title || '',
+          description: app.description || ''
+        }));
+      } else if (product.applications.items && Array.isArray(product.applications.items)) {
+        applications = product.applications.items.map((app: any) => ({
+          icon: app.icon || '/icons/application-default.svg',
+          title: app.title || '',
+          description: app.description || ''
+        }));
+      }
+    }
     
-    // 技术优势 - 字符串数组或对象数组
+    // 技术优势格式化
     let technicalAdvantages: any[] = [];
     if (Array.isArray(product.technicalAdvantages)) {
       // 检查第一个元素确定是字符串数组还是对象数组

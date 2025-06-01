@@ -2489,3 +2489,57 @@ module.exports = (req, res) => {
 1. 所有产品详情页面的`ContactCard`组件已更新，移除了`linkUrl`属性或设置为空字符串，并移除了`useModal`属性
 2. `ProductNavigation`组件已更新，使用模态框而不是直接链接跳转
 3. 这些修改解决了由于URL参数格式问题导致的HTTP 400错误，提升了用户体验，并简化了代码逻辑
+
+# 页面跳转闪黑问题解决方案
+
+## 问题分析
+
+通过分析Sandvik网站的实现和我们自己的代码，我们发现页面跳转时闪黑的主要原因是使用了透明度（opacity）变化来实现页面过渡效果。在页面加载过程中，透明度的变化会导致背景色暂时显示出来，造成闪黑现象。
+
+## 解决方案
+
+我们采取了以下措施来解决这个问题：
+
+### 1. 移除透明度过渡效果
+- 在`PageTransition.tsx`中移除了`document.body.style.opacity`相关代码
+- 使用CSS类和transform变换代替透明度变化
+
+### 2. 确保背景色一致性
+- 在`globals.css`和`layout.tsx`中确保HTML和body元素始终保持白色背景
+- 在页面过渡期间保持背景色不变
+
+### 3. 优化资源加载
+- 在`layout.tsx`中添加关键图片预加载
+- 使用`fetchPriority="high"`属性优先加载首屏图片
+
+### 4. 改进过渡效果
+- 在`performance.css`中使用transform变换替代opacity实现过渡效果
+- 移除所有可能导致闪黑的透明度变化代码
+
+### 5. 稳定页面布局
+- 在`pageStabilizer.js`中使用`display:none`替代透明度变化
+- 保存和恢复页面状态，防止布局跳动
+
+## 代码实现
+
+主要修改了以下文件：
+- `components/PageTransition.tsx`
+- `public/js/pageStabilizer.js`
+- `app/globals.css`
+- `app/layout.tsx`
+- `styles/performance.css`
+
+## 经验总结
+
+1. 避免使用opacity透明度变化来实现页面过渡效果
+2. 确保HTML和body元素有一致的背景色
+3. 使用transform变换代替opacity实现过渡效果
+4. 预加载关键资源，特别是首屏图片
+5. 在页面过渡期间保持背景色不变
+
+参考Sandvik网站的实现，他们通过以下技术实现了无闪黑的页面过渡：
+- 使用`data-header`和`data-initiated`属性标记已初始化的元素
+- 页面元素有明确的层级结构，避免在过渡时出现布局混乱
+- 使用`data-block-section`和`data-block`属性实现模块化加载
+- 图片使用`srcset`和`sizes`属性实现响应式加载
+- 使用`<link rel="preconnect">`预连接到关键资源

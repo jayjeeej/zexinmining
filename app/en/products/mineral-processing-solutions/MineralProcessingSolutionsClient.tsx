@@ -111,12 +111,8 @@ export default function MineralProcessingSolutionsClient() {
   const CustomProductLayout = ({ children }: { children: React.ReactNode }) => {
     // 状态管理
     const [openAccordions, setOpenAccordions] = useState<Set<string>>(() => {
-      // 创建包含所有矿物类别ID的初始集合，使所有手风琴默认打开
-      const initialOpenAccordions = new Set<string>();
-      mineralCategories.forEach(category => {
-        initialOpenAccordions.add(category.id);
-      });
-      return initialOpenAccordions;
+      // 创建空集合，使所有手风琴默认关闭
+      return new Set<string>();
     });
 
     // 切换手风琴开关状态
@@ -139,41 +135,15 @@ export default function MineralProcessingSolutionsClient() {
         // 不传递title和description，以阻止默认HeroSection的渲染
       >
         {/* 自定义的Hero部分 */}
-        <div className="relative w-full">
-          {/* 图片区域 */}
-          <section className="w-full">
-            <picture>
-              {/* 移动设备版本 */}
-              <source 
-                srcSet="/images/products/mineral-processing-solutions/mineral-plant-mobile.jpg" 
-                media="(max-width: 768px)" 
-                type="image/jpeg" 
-              />
-              {/* 桌面版本 */}
-              <source 
-                srcSet="/images/products/mineral-processing-solutions/mineral-plant.jpg" 
-                media="(min-width: 769px)" 
-                type="image/jpeg" 
-              />
-              <img 
-                src="/images/products/mineral-processing-solutions/mineral-plant.jpg" 
-                alt="Mineral Processing Solutions"
-                className="w-full h-auto"
-                loading="eager"
-              />
-            </picture>
-            {/* 半透明遮罩 */}
-            <div className="absolute inset-0 bg-black/50"></div>
-          </section>
-          
+        <div className="relative w-full bg-white py-10 md:py-14">
           {/* 内容区域 */}
-          <section className="absolute inset-0 flex items-center justify-center">
+          <section className="flex items-center justify-center">
             <Container>
               <div className="text-center w-full mx-auto px-4">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display text-black mb-2 sm:mb-3 md:mb-4 text-balance leading-tight">
+                <h1 className="text-[40px] md:text-[80px] font-display text-black mb-2 sm:mb-3 md:mb-4 text-balance leading-none">
                   Mineral Processing Solutions
                 </h1>
-                <p className="text-xs sm:text-sm md:text-base font-text text-white/90 mx-auto max-w-3xl">
+                <p className="text-xs sm:text-sm md:text-base font-text text-gray-700 mx-auto max-w-3xl">
                   {pageDescription}
                 </p>
               </div>
@@ -189,20 +159,20 @@ export default function MineralProcessingSolutionsClient() {
                 const isOpen = openAccordions.has(item.id);
                 
                 return (
-                  <div key={index} className="rounded">
+                  <div key={index} className="">
                     <button 
-                      className={`w-full flex justify-between items-center py-4 px-6 text-left focus:outline-none transition-colors duration-300 ${
-                        isOpen ? 'bg-gray-700 text-white' : 'bg-gray-100 hover:bg-gray-200 text-black'
+                      className={`w-full flex justify-between items-center py-4 text-left focus:outline-none transition-colors duration-300 border-b border-gray-300 ${
+                        isOpen ? 'text-black' : 'text-black hover:text-[#ff6633]'
                       }`}
                       onClick={() => toggleAccordion(item.id)}
                     >
-                      <span className="text-xl font-medium">{item.title}</span>
+                      <span className="text-xl font-bold uppercase">{item.title}</span>
                       <span className="text-3xl transition-transform duration-300 text-[#ff6633]">{isOpen ? '−' : '+'}</span>
                     </button>
                     <div 
                       className={`transform transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 max-h-[1000px]' : 'opacity-0 max-h-0 overflow-hidden'}`}
                     >
-                      <div className="bg-white p-6">
+                      <div className="py-6">
                         {item.content}
                       </div>
                     </div>

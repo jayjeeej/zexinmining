@@ -112,10 +112,11 @@ export default function PageTransition({ children }: PageTransitionProps) {
       if (!isChangingRoute) {
         setIsChangingRoute(true);
         
-        // 在路由开始变化时添加过渡类
+        // 在路由开始变化时添加过渡类，但不改变透明度
         if (typeof document !== 'undefined') {
           document.body.classList.add('page-transitioning');
-          document.body.style.opacity = '0.8'; // 轻微降低不透明度，提供视觉过渡
+          // 移除透明度变化，避免闪黑
+          // document.body.style.opacity = '0.8'; 
         }
         
         if (typeof window !== 'undefined' && prevPathname) {
@@ -130,7 +131,8 @@ export default function PageTransition({ children }: PageTransitionProps) {
       // 路由变化完成后移除过渡类
       if (typeof document !== 'undefined') {
         document.body.classList.remove('page-transitioning');
-        document.body.style.opacity = '1';
+        // 移除透明度变化，避免闪黑
+        // document.body.style.opacity = '1';
       }
       
       // 预加载图片

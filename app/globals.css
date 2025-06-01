@@ -26,15 +26,23 @@
   --element-transition-duration: 200ms;
 }
 
+/* 确保HTML和body有一致的背景色 */
+html, body {
+  background-color: #ffffff;
+}
+
 /* 全局平滑过渡效果  */
 html {
   scroll-behavior: smooth;
 }
 
-/* 页面过渡动画 */
+/* 页面过渡动画 - 移除透明度变化 */
 body {
-  opacity: 1;
-  transition: opacity var(--page-transition-duration) ease-in-out;
+  /* 移除opacity属性，避免闪黑 */
+  /* opacity: 1; */
+  background-color: #ffffff;
+  /* 保留其他过渡效果，但不使用透明度 */
+  /* transition: opacity var(--page-transition-duration) ease-in-out; */
 }
 
 /* 平滑显示图片，防止闪烁 */

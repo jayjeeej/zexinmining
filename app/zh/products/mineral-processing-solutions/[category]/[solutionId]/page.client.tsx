@@ -200,61 +200,50 @@ export default function SolutionDetailClient({
       <CardAnimationProvider />
       
     <ProductLayout locale={locale} breadcrumbItems={breadcrumbItems}>
-      {/* 自定义Hero区域 - 使用HeroSection组件但添加自定义渐变遮罩 */}
-      <div className="relative">
-        {/* 自定义灰色渐变遮罩 */}
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-100 to-white z-0"></div>
-        
-        {/* 使用HeroSection组件 */}
-        <div className="relative z-10">
-          {/* 自定义响应式对齐方式：小屏幕左对齐，大屏幕居中 */}
-          <div className="md:hidden">
-            <HeroSection
-              title={pageTitle}
-              description=""
-              textAlign="left"
-              showDecorationLine={true}
-              decorationLineColor="bg-gray-200"
-              backgroundColor="bg-transparent"
-              headingLevel="h1"
-            />
-          </div>
-          <div className="hidden md:block">
-            <HeroSection
-              title={pageTitle}
-              description={<>
-                <div className="h-[1px] w-24 bg-gray-200 mx-auto my-4"></div>
-              </>}
-              textAlign="center"
-              showDecorationLine={false}
-              backgroundColor="bg-transparent"
-              headingLevel="h1"
-            />
-          </div>
-        </div>
+      {/* 自定义Hero区域 - 使用与上一级页面相同的结构 */}
+      <div className="relative w-full bg-white py-10 md:py-14">
+        {/* 内容区域 */}
+        <section className="flex items-center justify-center">
+          <Container>
+            <div className="text-center w-full mx-auto px-4">
+              <h1 className="text-[40px] md:text-[80px] font-display text-black mb-2 sm:mb-3 md:mb-4 text-balance leading-none">
+                {pageTitle}
+              </h1>
+              {pageDescription && (
+                <p className="text-xs sm:text-sm md:text-base font-text text-gray-700 mx-auto max-w-3xl">
+                  {pageDescription}
+                </p>
+              )}
+            </div>
+          </Container>
+        </section>
       </div>
 
       {/* 2. 工艺介绍部分 - 交互式流程展示 - 改为手风琴格式 */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
+      <section className="py-20 md:py-24 bg-black">
         <Container>
           {/* 修改布局为左右结构，标题左对齐垂直居中，内容右对齐 */}
-          <div className="mb-8 sm:mb-10 md:mb-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-20">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-20">
             <div className="w-full md:w-1/3 text-left mb-4 md:mb-0">
-              <h2 className="text-xl md:text-2xl font-normal">
+              <h2 className="text-xl md:text-2xl font-normal text-[#ff6633]">
                 {solutionData.processTitle 
                   ? getLocalizedValue(solutionData.processTitle)
-                  : '工艺流程介绍'
+                  : '工艺介绍'
                 }
               </h2>
             </div>
             <div className="w-full md:w-2/3 text-right">
-              <p className="text-lg sm:text-xl md:text-[26px] font-bold w-full">
+              <p className="text-lg sm:text-xl md:text-[26px] font-bold w-full text-white">
                 {getLocalizedValue(solutionData.processIntroduction)}
               </p>
             </div>
           </div>
+        </Container>
+      </section>
 
-          {/* 手风琴式流程步骤 - 修改为黑色主题 */}
+      {/* 手风琴式流程步骤 - 白色背景 */}
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
+        <Container>
           <div className="space-y-6 sm:space-y-8 md:space-y-12">
             {(solutionData.processSteps || []).map((step, index) => {
               const isOpen = openSteps.has(index);
@@ -262,22 +251,18 @@ export default function SolutionDetailClient({
               return (
                 <div key={index} className="rounded">
                   <button 
-                    className={`w-full flex justify-between items-center py-3 sm:py-4 px-4 sm:px-6 text-left focus:outline-none transition-colors duration-300 ${
-                      isOpen ? 'bg-gray-700 text-white' : 'bg-gray-100 hover:bg-gray-200 text-black'
-                    }`}
+                    className={`w-full flex justify-between items-center py-4 text-left focus:outline-none transition-colors duration-300 border-b border-gray-300 text-black`}
                     onClick={() => toggleStep(index)}
                   >
-                    <div className="flex items-center">
-                      <span className="text-base sm:text-lg md:text-xl font-medium">{step.title}</span>
-                    </div>
-                    <span className="text-xl md:text-2xl transition-transform duration-300 text-[#ff6633]">{isOpen ? '−' : '+'}</span>
+                    <span className="text-base sm:text-lg md:text-xl font-bold uppercase">{step.title}</span>
+                    <span className="text-3xl transition-transform duration-300 text-[#ff6633]">{isOpen ? '−' : '+'}</span>
                   </button>
                   
                   {/* 步骤内容 */}
                   <div 
                     className={`transform transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 max-h-[1000px]' : 'opacity-0 max-h-0 overflow-hidden'}`}
                   >
-                    <div className="bg-white p-4 sm:p-6">
+                    <div className="py-6">
                       <p className="text-base md:text-lg text-gray-700">{step.description}</p>
                     </div>
                   </div>

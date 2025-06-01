@@ -365,13 +365,22 @@ export default async function ProductDetailPage({
     ];
     
     // 应用领域格式化
-    const applications = Array.isArray(product.applications) 
-      ? product.applications.map((app: any) => ({
-          icon: app.icon || '/icons/application.svg',
+    let applications: any[] = [];
+    if (product.applications) {
+      if (Array.isArray(product.applications)) {
+        applications = product.applications.map((app: any) => ({
+          icon: app.icon || '/icons/application-default.svg',
           title: app.title || '',
           description: app.description || ''
-        }))
-      : [];
+        }));
+      } else if (product.applications.items && Array.isArray(product.applications.items)) {
+        applications = product.applications.items.map((app: any) => ({
+          icon: app.icon || '/icons/application-default.svg',
+          title: app.title || '',
+          description: app.description || ''
+        }));
+      }
+    }
     
     // 技术优势格式化  
     const technicalAdvantages = Array.isArray(product.technicalAdvantages)

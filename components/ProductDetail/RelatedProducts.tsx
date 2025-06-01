@@ -222,21 +222,23 @@ export default function RelatedProducts({ products, title }: RelatedProductsProp
             })}
           </ul>
           
-          {/* 进度指示器 */}
-          <div className="w-full pb-3 pt-8 -bottom-6 left-0">
-            <span aria-hidden="true" className="bg-gray bg-opacity-15 z-10 block h-0.5 w-full">
-              <span 
-                className="block h-0.5 bg-primary transition-all ease-hover" 
-                style={{ 
-                  width: `${progressWidth}%`,
-                  marginLeft: `${progressPosition}%`
-                }}
-              ></span>
-            </span>
-          </div>
+          {/* 进度指示器 - 仅当产品数量大于等于4个时显示 */}
+          {products.length >= 4 && (
+            <div className="w-full pb-3 pt-8 -bottom-6 left-0">
+              <span aria-hidden="true" className="bg-gray bg-opacity-15 z-10 block h-0.5 w-full">
+                <span 
+                  className="block h-0.5 bg-primary transition-all ease-hover" 
+                  style={{ 
+                    width: `${progressWidth}%`,
+                    marginLeft: `${progressPosition}%`
+                  }}
+                ></span>
+              </span>
+            </div>
+          )}
           
-          {/* 导航按钮 */}
-          {products.length > maxVisibleItems && (
+          {/* 导航按钮 - 仅当产品数量大于maxVisibleItems且大于等于4个时显示 */}
+          {products.length > maxVisibleItems && products.length >= 4 && (
             <div className="absolute -bottom-14 right-0 flex gap-4">
               <button 
                 className="flex items-center justify-center rounded-full bg-gray-100 p-3 transition-colors ease-hover hover:bg-gray-200 active:bg-gray-300"

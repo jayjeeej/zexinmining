@@ -62,7 +62,7 @@ const ProductApplications: React.FC<ProductApplicationsProps> = ({ applications,
             <div className="lg:w-2/3">
               <div className="flex flex-col gap-4">
                 {applications.map((app, index) => (
-                  <div key={index} className="bg-white text-black p-6 rounded border border-black">
+                  <div key={index} className="bg-[#f8f8f8] text-black p-6">
                     <h3 className="text-xl font-medium mb-3 font-headline">{app.title}</h3>
                     <p className="text-gray-800 font-text">{app.description}</p>
                   </div>

@@ -32,12 +32,16 @@
           overflow: hidden !important;
           pointer-events: none;
           visibility: visible;
-          opacity: 0;
+          /* 移除透明度变化，避免闪黑 */
+          /* opacity: 0; */
+          background-color: #ffffff; /* 确保背景色为白色 */
         }
         body.page-stabilized {
-          opacity: 1;
-          transition: opacity 0.3s ease-out;
+          /* 移除透明度变化，避免闪黑 */
+          /* opacity: 1; */
+          /* transition: opacity 0.3s ease-out; */
           min-height: var(--min-page-height, auto);
+          background-color: #ffffff; /* 确保背景色为白色 */
         }
         .page-loading-overlay {
           position: fixed;
@@ -47,12 +51,14 @@
           height: 100%;
           background-color: #fff;
           z-index: 9999;
-          opacity: 1;
+          /* 移除透明度变化，避免闪黑 */
+          /* opacity: 1; */
           pointer-events: none;
-          transition: opacity 0.3s ease-out;
+          /* transition: opacity 0.3s ease-out; */
         }
         .page-loading-overlay.hidden {
-          opacity: 0;
+          /* opacity: 0; */
+          display: none; /* 使用display:none替代透明度变化 */
         }
         @media (prefers-reduced-motion: reduce) {
           body.page-stabilized {
@@ -104,8 +110,9 @@
         bodyStyleBackup = {
           minHeight: document.body.style.minHeight,
           overflow: document.body.style.overflow,
-          opacity: document.body.style.opacity,
           visibility: document.body.style.visibility
+          // 移除opacity备份，避免闪黑
+          // opacity: document.body.style.opacity
         };
         
         // 添加过渡状态类
@@ -175,8 +182,9 @@
         if (bodyStyleBackup) {
           document.body.style.minHeight = bodyStyleBackup.minHeight;
           document.body.style.overflow = bodyStyleBackup.overflow;
-          document.body.style.opacity = bodyStyleBackup.opacity;
           document.body.style.visibility = bodyStyleBackup.visibility;
+          // 移除opacity恢复，避免闪黑
+          // document.body.style.opacity = bodyStyleBackup.opacity;
         }
         
         // 移除所有类

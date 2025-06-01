@@ -35,9 +35,9 @@ export default function HeroSection({
   textAlign = 'left',
   headingLevel = 'h1'
 }: HeroSectionProps) {
-  // 固定内边距和样式，不接受外部className覆盖
-  const titleClass = `text-balance text-4xl md:text-7xl ${textAlign === 'center' ? 'text-center' : 'text-left'} font-display ${titleColor} !important`;
-  const descriptionClass = `text-base font-text ${textColor} z-10 relative`;
+  // 更新标题样式，与MiningEpcServiceClient.tsx保持一致
+  const titleClass = `text-[40px] md:text-[80px] ${textAlign === 'center' ? 'text-center' : 'text-left'} font-display ${titleColor} leading-none mb-2 sm:mb-2 md:mb-3 text-balance`;
+  const descriptionClass = `text-xs sm:text-sm md:text-base font-text ${textColor} z-10 relative`;
   const containerClass = textAlign === 'center' ? 'text-center' : '';
 
   // 根据headingLevel渲染不同的标题标签
@@ -45,7 +45,8 @@ export default function HeroSection({
 
   return (
     <>
-    <section className={`min-h-[300px] flex flex-col justify-center ${backgroundColor} relative py-16`}>
+    {/* 更新内边距，与MiningEpcServiceClient.tsx保持一致 */}
+    <section className={`flex flex-col justify-center ${backgroundColor} relative py-10 md:py-14`}>
       {/* 渐变黑色遮罩已移除 */}
       
       <Container className={`relative z-10 ${containerClass}`}>

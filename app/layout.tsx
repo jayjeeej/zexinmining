@@ -119,8 +119,33 @@ export default function RootLayout({
         <script src="/js/lazyLoading.js" defer></script>
         {/* 添加字体CSS引用 */}
         <link rel="stylesheet" href="/css/fonts.css" />
+
+        {/* 预加载关键图片 - 提高首屏加载性能，避免闪黑 */}
+        <link 
+          rel="preload" 
+          href="/images/og-image.jpg" 
+          as="image" 
+          fetchPriority="high"
+          type="image/jpeg" 
+        />
+        {/* 预加载首页Hero图片 */}
+        <link 
+          rel="preload" 
+          href="/images/Homepage/hero.jpg" 
+          as="image" 
+          fetchPriority="high"
+          type="image/jpeg" 
+        />
+        {/* 设置页面背景色，确保一致性 */}
+        <style>
+          {`
+            html, body {
+              background-color: #ffffff;
+            }
+          `}
+        </style>
       </head>
-      <body className="overflow-x-hidden font-text flex flex-col min-h-screen">
+      <body className="overflow-x-hidden font-text flex flex-col min-h-screen bg-white">
         {children}
       </body>
     </html>

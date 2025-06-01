@@ -67,8 +67,8 @@ export default function MiningEpcServiceClient() {
   const accordionItems: AccordionItem[] = serviceModules.map(module => ({
     id: module.id,
     title: module.title,
-    content: <div className="p-6">{module.content}</div>,
-    expanded: true // Default to expand all items
+    content: <div>{module.content}</div>,
+    expanded: false // Default to collapse all items
   }));
 
   // Get all module IDs as default expanded IDs
@@ -76,6 +76,25 @@ export default function MiningEpcServiceClient() {
 
   // Custom wrapper component that only overrides the hero part of the specific page
   const CustomProductLayout = ({ children }: { children: React.ReactNode }) => {
+    // 添加状态管理
+    const [openAccordions, setOpenAccordions] = useState<Set<string>>(() => {
+      // 创建空集合，使所有手风琴默认关闭
+      return new Set<string>();
+    });
+
+    // 切换手风琴开关状态
+    const toggleAccordion = (id: string) => {
+      setOpenAccordions(prev => {
+        const newSet = new Set(prev);
+        if (newSet.has(id)) {
+          newSet.delete(id);
+        } else {
+          newSet.add(id);
+        }
+        return newSet;
+      });
+    };
+
     return (
       <ProductLayout
         locale={locale}
@@ -83,41 +102,15 @@ export default function MiningEpcServiceClient() {
         // Don't pass title and description to prevent default HeroSection rendering
       >
         {/* Custom Hero section */}
-        <div className="relative w-full">
-          {/* Image area */}
-          <section className="w-full">
-            <picture>
-              {/* Mobile version */}
-              <source 
-                srcSet="/images/products/mining-epc-contract-hero-mobile.jpg" 
-                media="(max-width: 768px)" 
-                type="image/jpeg" 
-              />
-              {/* Desktop version */}
-              <source 
-                srcSet="/images/products/mining-epc-contract-hero.jpg" 
-                media="(min-width: 769px)" 
-                type="image/jpeg" 
-              />
-              <img 
-                src="/images/products/mining-epc-contract-hero.jpg" 
-                alt="Mining EPC Services"
-                className="w-full h-auto"
-                loading="eager"
-              />
-            </picture>
-            {/* Semi-transparent overlay */}
-            <div className="absolute inset-0 bg-black/50"></div>
-          </section>
-          
+        <div className="relative w-full bg-white py-10 md:py-14">
           {/* Content area */}
-          <section className="absolute inset-0 flex items-center justify-center">
+          <section className="flex items-center justify-center">
             <Container>
-              <div className="text-center w-full mx-auto px-4">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display text-[#ff6633] mb-2 sm:mb-2 md:mb-3 text-balance leading-tight">
+              <div className="text-left md:text-center w-full">
+                <h1 className="text-[40px] md:text-[80px] font-display text-black mb-2 sm:mb-2 md:mb-3 text-balance leading-none">
                   Full Mining Industry Chain Services (EPCMO)
                 </h1>
-                <p className="text-xs sm:text-sm md:text-base font-text text-white/90 mx-auto max-w-4xl">
+                <p className="text-xs sm:text-sm md:text-base font-text text-gray-700 md:mx-auto max-w-4xl">
                   {pageDescription}
                 </p>
               </div>
@@ -126,24 +119,37 @@ export default function MiningEpcServiceClient() {
         </div>
         
         {/* Use Accordion component instead of custom accordion */}
-        <div className="py-10">
+        <div className="py-10 bg-gray">
           <Container>
-            <div className="mb-8">
-              <Accordion 
-                items={accordionItems}
-                allowMultiple={true}
-                expandAll={true}
-                defaultExpandedIds={allModuleIds}
-                className="space-y-8 divide-y-0"
-                titleClassName="w-full flex justify-between items-center py-4 px-6 text-left focus:outline-none transition-colors bg-gray-700 text-white hover:bg-gray-700 text-base sm:text-lg md:text-xl lg:text-[20px]"
-                contentClassName="bg-white"
-              />
+            <div className="mb-8 space-y-12">
+              {accordionItems.map((item, index) => {
+                const isOpen = openAccordions.has(item.id);
+                
+                return (
+                  <div key={index} className="rounded">
+                    <button 
+                      className="w-full flex justify-between items-center py-4 text-left focus:outline-none transition-colors duration-300 border-b border-gray-500 text-white"
+                      onClick={() => toggleAccordion(item.id)}
+                    >
+                      <span className="text-xl font-bold uppercase">{item.title}</span>
+                      <span className="text-3xl transition-transform duration-300 text-[#ff6633]">{isOpen ? '−' : '+'}</span>
+                    </button>
+                    <div 
+                      className={`transform transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 max-h-[1000px]' : 'opacity-0 max-h-0 overflow-hidden'}`}
+                    >
+                      <div className="py-6 text-white">
+                        {item.content}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </Container>
         </div>
         
         {/* Mining project pain points statistics */}
-        <div className="py-10 bg-white">
+        <div className="py-10 bg-gray-50">
           <Container>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
               {/* Left side - 90% statistic */}

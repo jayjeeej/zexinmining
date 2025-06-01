@@ -108,23 +108,27 @@ iframe.zx-loaded {
   contain-intrinsic-size: 0 500px;
 }
 
-/* 页面过渡效果 */
+/* 页面过渡效果 - 修改为使用transform替代opacity */
 .page-transition-enter {
-  opacity: 0;
+  transform: translateY(10px);
+  /* 移除opacity: 0; */
 }
 
 .page-transition-enter-active {
-  opacity: 1;
-  transition: opacity 0.3s ease-out;
+  transform: translateY(0);
+  transition: transform 0.3s ease-out;
+  /* 移除opacity和相关过渡 */
 }
 
 .page-transition-exit {
-  opacity: 1;
+  transform: translateY(0);
+  /* 移除opacity: 1; */
 }
 
 .page-transition-exit-active {
-  opacity: 0;
-  transition: opacity 0.3s ease-out;
+  transform: translateY(-10px);
+  transition: transform 0.3s ease-out;
+  /* 移除opacity和相关过渡 */
 }
 
 /* 优化链接点击触感 */
