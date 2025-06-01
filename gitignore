@@ -40,3 +40,8 @@ next-env.d.ts
 *.ntvs*
 *.njsproj
 *.sln 
+
+# Canonical检查脚本
+check_canonical.py
+verify_canonical_fix.py
+verify_canonical_comprehensive.py 

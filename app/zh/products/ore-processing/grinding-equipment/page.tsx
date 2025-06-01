@@ -190,7 +190,7 @@ export default async function GrindingEquipmentPage({ params }: { params: { loca
   // 4. 产品类别结构化数据
   const categoryStructuredData = getProductCategoryStructuredData({
     categoryId: 'grinding-equipment',
-    categoryName: isZh ? '高效磨矿设备' : 'High-Efficiency Grinding Equipment',
+    categoryName: isZh ? '磨矿设备' : 'Grinding Equipment',
     description: isZh 
       ? '泽鑫提供高效磨矿设备，包括湿式溢流球磨机、节能格子型球磨机和棒磨机，采用先进设计和耐磨材料，实现精确粒度控制和低能耗运行。' 
       : 'Zexin offers high-efficiency grinding equipment including wet overflow ball mills, energy-saving grid ball mills and rod mills, featuring advanced design and wear-resistant materials for precise particle control and low energy consumption.',
@@ -203,7 +203,7 @@ export default async function GrindingEquipmentPage({ params }: { params: { loca
   const pageUrl = `${baseUrl}/${locale}/products/ore-processing/grinding-equipment`;
   const webPageStructuredData = getWebPageStructuredData({
     pageUrl: pageUrl,
-    pageName: '高效磨矿设备',
+    pageName: '磨矿设备',
     description: '泽鑫提供高效磨矿设备，包括湿式溢流球磨机、节能格子型球磨机和棒磨机，采用先进设计和耐磨材料，实现精确粒度控制和低能耗运行。',
     locale: locale,
     baseUrl: baseUrl,

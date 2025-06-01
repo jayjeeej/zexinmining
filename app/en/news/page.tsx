@@ -9,6 +9,13 @@ export const metadata: Metadata = {
   title: 'Mining Equipment News - Mineral Processing Articles & Updates | Zexin Mining',
   description: 'Get the latest mining industry news, mineral processing innovations, equipment launches and project case studies. Expert insights on gold, iron and copper processing technologies.',
   keywords: 'mining equipment news,mineral processing articles,mining industry updates,ore processing technology,mining equipment innovation,Zexin Mining',
+  alternates: {
+    canonical: 'https://www.zexinmining.com/en/news',
+    languages: {
+      'zh': 'https://www.zexinmining.com/zh/news',
+      'en': 'https://www.zexinmining.com/en/news',
+    },
+  },
 };
 
 // 服务端组件主体

@@ -9,6 +9,13 @@ export const metadata: Metadata = {
   title: '矿山设备资讯-选矿技术文章矿业新闻 | 泽鑫矿山设备',
   description: '了解矿山设备行业动态、选矿技术创新、产品发布和泽鑫最新工程案例，为您提供专业矿业资讯。',
   keywords: '矿山设备资讯,选矿技术文章,矿业新闻,选矿工艺,矿山设备技术,泽鑫矿山',
+  alternates: {
+    canonical: 'https://www.zexinmining.com/zh/news',
+    languages: {
+      'zh': 'https://www.zexinmining.com/zh/news',
+      'en': 'https://www.zexinmining.com/en/news',
+    },
+  },
 };
 
 // 服务端组件主体
