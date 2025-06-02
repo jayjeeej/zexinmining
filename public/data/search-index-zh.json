@@ -405,6 +405,15 @@
     "resultType": "news"
   },
   {
+    "id": "gravity-separation-equipment-analysis-and-practical-guide-2025",
+    "url": "/zh/news/gravity-separation-equipment-analysis-and-practical-guide-2025",
+    "title": "重选设备核心技术解析与选矿实践指南",
+    "excerpt": "本文深入剖析重选设备技术优势和应用边界，提供设备选型、工艺优化和维护策略实用指南，帮助矿山提升选矿效率和降低运营成本。",
+    "category": "technical",
+    "imageSrc": "/images/news/gravity-separation-equipment-guide.jpg",
+    "resultType": "news"
+  },
+  {
     "id": "gold-tailings-recovery-2024",
     "url": "/zh/news/gold-tailings-recovery-gravity-separation",
     "title": "高效利用资源：泽鑫矿业创新重选技术在金矿尾矿再利用中的突破",
@@ -546,6 +555,15 @@
     "excerpt": "本文深入分析影响球磨机能源消耗的五大关键因素，为选矿企业实现节能降耗提供实用技术参考。",
     "category": "product",
     "imageSrc": "/images/news/optimizing-ball-mill-energy-efficiency.jpg",
+    "resultType": "news"
+  },
+  {
+    "id": "advanced-zircon-titanium-beneficiation-technologies-2025",
+    "url": "/zh/news/advanced-zircon-titanium-beneficiation-technologies-2025",
+    "title": "锆钛矿选矿技术深度解析：特性分析与工业化分选工艺突破",
+    "excerpt": "通过优化预处理技术、分选工艺和中矿资源化技术，本文提出了锆钛矿高效选矿解决方案，将资源综合利用率从不足60%提升至85%以上。",
+    "category": "technical",
+    "imageSrc": "/images/news/zircon-titanium-beneficiation-technologies.jpg",
     "resultType": "news"
   },
   {

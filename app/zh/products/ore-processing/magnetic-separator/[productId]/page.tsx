@@ -208,7 +208,7 @@ async function getRelatedProductsData(relatedIds: string[], locale: string) {
             title: product.title,
             imageSrc: product.imageSrc,
             overview: product.overview,
-            href: `/products/ore-processing/magnetic-separator/${id}`
+            href: `/${locale}/products/ore-processing/magnetic-separator/${id}`
           };
         } catch (error) {
           console.warn(`获取相关产品失败: ${id}`);
