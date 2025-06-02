@@ -115,8 +115,19 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* 全站组织结构化数据 */}
         <StructuredData data={organizationStructuredData} id="organization-schema" />
+        
+        {/* 防止闪黑的即时执行脚本 */}
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            document.documentElement.classList.add('js');
+            document.documentElement.style.backgroundColor = '#ffffff';
+            document.documentElement.style.visibility = 'visible';
+          `
+        }} />
+        
         {/* 性能优化脚本 */}
-        <script src="/js/lazyLoading.js" defer></script>
+        <script src="/js/pageStabilizer.js" />
+        <script src="/js/lazyLoading.js" defer />
         {/* 添加字体CSS引用 */}
         <link rel="stylesheet" href="/css/fonts.css" />
 
@@ -136,16 +147,45 @@ export default function RootLayout({
           fetchPriority="high"
           type="image/jpeg" 
         />
+        
         {/* 设置页面背景色，确保一致性 */}
-        <style>
-          {`
+        <style dangerouslySetInnerHTML={{
+          __html: `
             html, body {
-              background-color: #ffffff;
+              background-color: #ffffff !important;
+              visibility: visible !important;
+            }
+            html:not(.js) {
+              visibility: visible !important;
+            }
+            /* 移除所有页面过渡效果 */
+            * {
+              transition: none !important;
+            }
+          `
+        }} />
+        
+        {/* 为非JS环境提供样式 */}
+        <noscript id="no-js-styles">
+          <style>
+            {`
+              html {
+                visibility: visible !important;
+                background-color: #ffffff !important;
+              }
+              body {
+                background-color: #ffffff !important;
+                visibility: visible !important;
             }
           `}
         </style>
+        </noscript>
       </head>
       <body className="overflow-x-hidden font-text flex flex-col min-h-screen bg-white">
+        {/* 页面跳转到主内容的链接 */}
+        <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:p-4 focus:bg-white z-50">
+          跳到主要内容
+        </a>
         {children}
       </body>
     </html>

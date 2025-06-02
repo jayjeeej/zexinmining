@@ -2,6 +2,15 @@
 
 import { useEffect } from 'react';
 
+// 为window对象添加pageStabilizer属性的类型声明
+declare global {
+  interface Window {
+    pageStabilizer?: {
+      saveState: () => void;
+    };
+  }
+}
+
 /**
  * 卡片动画提供者组件
  * 
@@ -26,7 +35,10 @@ export default function CardAnimationProvider() {
   useEffect(() => {
     // 添加动画准备就绪类
     const addAnimationReadyClass = () => {
-      document.documentElement.classList.add('animation-ready');
+      // 确保页面已完全加载并且不处于过渡状态
+      if (document.readyState === 'complete') {
+        document.documentElement.classList.add('animation-ready');
+      }
     };
     
     // 移除动画准备就绪类
@@ -39,36 +51,51 @@ export default function CardAnimationProvider() {
       if (event.persisted) {
         // 页面是从缓存恢复的，需要重置并重新触发动画效果
         removeAnimationReadyClass();
-        setTimeout(addAnimationReadyClass, 10);
+        // 延迟添加类，确保页面稳定后再启用动画
+        setTimeout(addAnimationReadyClass, 100);
       }
     };
     
     // 处理load事件的函数引用
-    const handleLoad = () => setTimeout(addAnimationReadyClass, 100);
+    const handleLoad = () => {
+      // 确保页面完全加载后再启用动画
+      setTimeout(addAnimationReadyClass, 150);
+    };
+    
+    // 处理页面过渡完成事件
+    const handleTransitionEnd = () => {
+      // 页面过渡完成后启用动画
+      setTimeout(addAnimationReadyClass, 50);
+    };
     
     // DOM加载完成后启用动画，但需要延迟执行确保所有元素已经正确渲染
     if (typeof window !== 'undefined') {
       // 如果页面已经完全加载，立即添加类
       if (document.readyState === 'complete') {
-        setTimeout(addAnimationReadyClass, 100);
+        setTimeout(addAnimationReadyClass, 150);
       } else {
         // 否则等待页面加载完成
         window.addEventListener('load', handleLoad);
+      }
+      
+      // 监听页面过渡完成事件（如果存在）
+      if (window.pageStabilizer) {
+        document.addEventListener('page-transition-end', handleTransitionEnd);
       }
     }
     
     // 添加页面显示事件监听
     window.addEventListener('pageshow', handlePageShow);
     
-    // 如果页面尚未完全加载，添加load事件监听
-    if (typeof window !== 'undefined' && document.readyState !== 'complete') {
-      window.addEventListener('load', handleLoad);
-    }
-    
     // 组件卸载时移除事件监听和类
     return () => {
       window.removeEventListener('pageshow', handlePageShow);
       window.removeEventListener('load', handleLoad);
+      
+      if (window.pageStabilizer) {
+        document.removeEventListener('page-transition-end', handleTransitionEnd);
+      }
+      
       removeAnimationReadyClass();
     };
   }, []);

@@ -21,36 +21,47 @@
   --gray-800: 31, 41, 55;
   --gray-900: 17, 24, 39;
   
-  /* 过渡动画设置 */
-  --page-transition-duration: 300ms;
+  /* 过渡动画设置 - 保留用于其他元素 */
   --element-transition-duration: 200ms;
+  
+  /* 完全禁用页面过渡 */
+  --page-transition-duration: 0ms;
 }
 
 /* 确保HTML和body有一致的背景色 */
 html, body {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
 }
 
-/* 全局平滑过渡效果  */
+/* 移除全局平滑过渡效果 */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+  visibility: visible;
 }
 
-/* 页面过渡动画 - 移除透明度变化 */
+/* 移除页面过渡动画 */
 body {
-  /* 移除opacity属性，避免闪黑 */
-  /* opacity: 1; */
-  background-color: #ffffff;
-  /* 保留其他过渡效果，但不使用透明度 */
-  /* transition: opacity var(--page-transition-duration) ease-in-out; */
+  background-color: #ffffff !important;
+  visibility: visible !important;
+}
+
+/* 禁用页面跳转过渡效果 */
+.page-transition-enter,
+.page-transition-enter-active,
+.page-transition-exit,
+.page-transition-exit-active {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  opacity: 1 !important;
 }
 
 /* 平滑显示图片，防止闪烁 */
 img {
-  transition: opacity var(--element-transition-duration) ease-in-out;
+  transition: none;
 }
 
-/* 产品卡片过渡效果 */
+/* 产品卡片过渡效果 - 保留 */
 .product-grid-container {
   transition: opacity var(--element-transition-duration) ease-in-out;
 }
@@ -109,10 +120,18 @@ img {
   h1, h2, h3, h4, h5, h6 {
     font-family: 'ZexinSansHeadline', 'ZexinSansText', system-ui, sans-serif;
   }
+  
+  /* 确保所有页面跳转没有过渡效果 */
+  * {
+    transition-property: none;
 }
 
-/* Add any custom global styles below */
-/* Removed empty body ruleset */ 
+  /* JavaScript禁用时的样式 */
+  html:not(.js) body {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
 
 /* 隐藏滚动条样式 */
 @layer utilities {

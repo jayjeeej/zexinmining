@@ -8,7 +8,8 @@ img[data-src],
 video[data-src],
 iframe[data-src] {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  /* 移除过渡效果，避免闪黑 */
+  transition: none;
 }
 
 img.zx-loaded,
@@ -17,7 +18,7 @@ iframe.zx-loaded {
   opacity: 1;
 }
 
-/* 滚动效果 */
+/* 滚动效果 - 保留组件内部动画 */
 [data-fade-in] {
   opacity: 0;
   transform: translateY(20px);
@@ -29,7 +30,7 @@ iframe.zx-loaded {
   transform: translateY(0);
 }
 
-/* 滚动效果变体 */
+/* 滚动效果变体 - 保留组件内部动画 */
 [data-fade-in="left"] {
   transform: translateX(-20px);
 }
@@ -108,27 +109,15 @@ iframe.zx-loaded {
   contain-intrinsic-size: 0 500px;
 }
 
-/* 页面过渡效果 - 修改为使用transform替代opacity */
-.page-transition-enter {
-  transform: translateY(10px);
-  /* 移除opacity: 0; */
-}
-
-.page-transition-enter-active {
-  transform: translateY(0);
-  transition: transform 0.3s ease-out;
-  /* 移除opacity和相关过渡 */
-}
-
-.page-transition-exit {
-  transform: translateY(0);
-  /* 移除opacity: 1; */
-}
-
+/* 完全移除页面过渡效果 */
+.page-transition-enter,
+.page-transition-enter-active,
+.page-transition-exit,
 .page-transition-exit-active {
-  transform: translateY(-10px);
-  transition: transform 0.3s ease-out;
-  /* 移除opacity和相关过渡 */
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  opacity: 1 !important;
 }
 
 /* 优化链接点击触感 */
@@ -166,7 +155,7 @@ img {
 
 /* OptimizedImage组件样式 */
 .optimized-image {
-  transition: opacity 0.2s ease-in-out;
+  transition: none; /* 移除过渡效果 */
 }
 
 .optimized-image.image-loading {

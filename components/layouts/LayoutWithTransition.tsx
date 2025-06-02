@@ -81,6 +81,9 @@ export default function LayoutWithTransition({
     if (typeof window !== 'undefined') {
       localStorage.setItem('app_last_active_time', String(Date.now()));
       document.addEventListener('visibilitychange', handleVisibilityChange);
+      
+      // 禁用页面过渡动画
+      document.documentElement.style.setProperty('--page-transition-duration', '0ms');
     }
     
     return () => {
@@ -90,28 +93,27 @@ export default function LayoutWithTransition({
     };
   }, [pathname, preloadedData]);
   
+  // 直接渲染内容，无需PageTransition包装
   return (
-    <PageTransition>
-      <ProductLayout
-        locale={locale}
-        breadcrumbItems={breadcrumbItems}
-        title={title}
+    <ProductLayout
+      locale={locale}
+      breadcrumbItems={breadcrumbItems}
+      title={title}
+      description={description}
+      structuredData={structuredData}
+      productTabs={productTabs}
+    >
+      <HeroSection 
+        title={title || ''}
         description={description}
-        structuredData={structuredData}
-        productTabs={productTabs}
-      >
-        <HeroSection 
-          title={title || ''}
-          description={description}
-          backgroundColor="white"
-          textColor="text-gray-700"
-          showDecorationLine={true}
-          headingLevel="h1"
-          tabs={productTabs}
-        />
-        
-        {children}
-      </ProductLayout>
-    </PageTransition>
+        backgroundColor="white"
+        textColor="text-gray-700"
+        showDecorationLine={true}
+        headingLevel="h1"
+        tabs={productTabs}
+      />
+      
+      {children}
+    </ProductLayout>
   );
 } 
