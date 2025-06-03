@@ -113,7 +113,7 @@ export default function ClientHomePage({ locale }: { locale: string }) {
               <div className="lg:col-span-3 w-full">
                 <h1 className="text-balance font-display text-6xl lg:text-7xl w-full">
                   <span className="text-2xl sm:text-3xl lg:text-4xl block text-black">欢迎来到</span>
-                  <span className="text-[42px] sm:text-[56px] lg:text-[72px] block" style={{
+                  <span className="text-[40px] sm:text-[40px] lg:text-[80px] block" style={{
                     color: 'black',
                   }}>泽鑫矿山设备</span>
                 </h1>
