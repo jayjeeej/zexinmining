@@ -167,26 +167,61 @@ const MobileMenu = React.memo(({
     };
   }, [isOpen]);
   
-  // 处理菜单打开逻辑
+  // 处理菜单打开逻辑 - 使用状态管理而非DOM重载
   const openSubMenu = (index: number, url?: string, isCategory: boolean = false) => {
     setActiveMenuStack(prev => [...prev, { itemIndex: index, parentUrl: url, isCategory }]);
   };
   
-  // 返回上一级菜单
+  // 返回上一级菜单 - 无需重新加载，只修改状态
   const goBack = () => {
-    setActiveMenuStack(prev => prev.slice(0, -1));
+    // 添加CSS类以触发过渡动画
+    const menuContent = document.querySelector('.mobile-menu-content');
+    if (menuContent) {
+      menuContent.classList.add('menu-transition-out');
+      
+      // 短暂延迟后更新状态，确保动画有时间执行
+      setTimeout(() => {
+        setActiveMenuStack(prev => prev.slice(0, -1));
+        // 移除过渡类并添加进入动画
+        menuContent.classList.remove('menu-transition-out');
+        menuContent.classList.add('menu-transition-in');
+        
+        // 动画结束后移除类
+        setTimeout(() => {
+          menuContent.classList.remove('menu-transition-in');
+        }, 300);
+      }, 150);
+    } else {
+      // 降级处理：如果DOM元素不存在，直接更新状态
+      setActiveMenuStack(prev => prev.slice(0, -1));
+    }
   };
   
-  // 返回到主菜单
+  // 返回到主菜单 - 同样使用动画过渡
   const backToMainMenu = () => {
-    setActiveMenuStack([]);
+    const menuContent = document.querySelector('.mobile-menu-content');
+    if (menuContent) {
+      menuContent.classList.add('menu-transition-out');
+      
+      setTimeout(() => {
+        setActiveMenuStack([]);
+        menuContent.classList.remove('menu-transition-out');
+        menuContent.classList.add('menu-transition-in');
+        
+        setTimeout(() => {
+          menuContent.classList.remove('menu-transition-in');
+        }, 300);
+      }, 150);
+    } else {
+      setActiveMenuStack([]);
+    }
   };
   
   // 判断当前显示的菜单级别
   const menuLevel = activeMenuStack.length;
   
-  // 获取当前需要显示的项目
-  const getCurrentItems = () => {
+  // 获取当前需要显示的项目 - 使用useMemo优化性能
+  const getCurrentItems = useMemo(() => {
     if (menuLevel === 0) {
       // 主菜单
       return { items: items, title: null, parentUrl: undefined };
@@ -224,9 +259,34 @@ const MobileMenu = React.memo(({
     }
     
     return { items: [], title: null, parentUrl: undefined };
-  };
+  }, [items, menuLevel, activeMenuStack]);
   
-  const { items: currentItems, title: currentTitle, parentUrl: currentParentUrl } = getCurrentItems();
+  const { items: currentItems, title: currentTitle, parentUrl: currentParentUrl } = getCurrentItems;
+  
+  // 添加CSS样式到head，确保过渡动画正常工作
+  useEffect(() => {
+    // 确保样式只添加一次
+    if (!document.getElementById('mobile-menu-transitions')) {
+      const style = document.createElement('style');
+      style.id = 'mobile-menu-transitions';
+      style.innerHTML = `
+        .mobile-menu-content {
+          transition: opacity 0.3s ease;
+        }
+        .menu-transition-out {
+          opacity: 0.5;
+          transform: translateX(-10px);
+          transition: opacity 0.15s ease, transform 0.15s ease;
+        }
+        .menu-transition-in {
+          opacity: 1;
+          transform: translateX(0);
+          transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }, []);
   
   return (
     <nav 
@@ -306,8 +366,8 @@ const MobileMenu = React.memo(({
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                       </button>
-                                      )}
-                                    </div>
+                  )}
+                </div>
               </li>
             ))}
           </ul>
@@ -363,7 +423,7 @@ const MobileMenu = React.memo(({
                     )}
                     
                     {hasSubItems && (
-            <button 
+                      <button 
                         className="ml-4 text-current p-1"
                         aria-label={locale === 'zh' ? `打开${item.label}子菜单` : `Open ${item.label} submenu`}
                         onClick={() => openSubMenu(index, isCategory ? currentParentUrl : item.url, isCategory)}
@@ -371,15 +431,15 @@ const MobileMenu = React.memo(({
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5" aria-hidden="true">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
-            </button>
+                      </button>
                     )}
-          </div>
+                  </div>
                 </li>
               );
             })}
           </ul>
         )}
-        </div>
+      </div>
     </nav>
   );
 });
