@@ -35,6 +35,13 @@
   status = 301
   force = true
 
+# 根路径重定向到英文版本，避免307临时重定向
+[[redirects]]
+  from = "https://www.zexinmining.com/"
+  to = "https://www.zexinmining.com/en"
+  status = 301
+  force = true
+
 # 安全头部设置
 [[headers]]
   for = "/*"
