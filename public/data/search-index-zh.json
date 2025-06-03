@@ -6,7 +6,8 @@
     "excerpt": "泽鑫矿山XS系列轮式洗砂机通过创新的轮斗技术，为砂石和其他骨料提供卓越的清洗性能。凭借高处理能力和低水耗，这些坚固的洗砂机能有效去除粘土、粉尘和杂质，同时最大限度减少物料损失和能源消耗。",
     "category": "矿石加工设备",
     "imageSrc": "/images/products/washing-equipment/wheel-bucket-sand-washer.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Wheel Bucket Sand Washer | Zexin Mining"
   },
   {
     "id": "twin-shaft-log-washer",
@@ -15,7 +16,8 @@
     "excerpt": "泽鑫矿山ZX系列双轴洗矿机通过特殊设计的桨叶和反向旋转轴提供卓越的粘土去除和物料清洗效果。这些坚固耐用的设备高效处理高粘土含量的物料，为骨料、硬岩矿物和工业材料提供出色的清洗性能，适用于处理最大150毫米的物料。",
     "category": "矿物加工设备",
     "imageSrc": "/images/products/washing-equipment/twin-shaft-log-washer.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Twin Shaft Log Washer | Zexin Mining"
   },
   {
     "id": "spiral-washer",
@@ -24,7 +26,8 @@
     "excerpt": "泽鑫矿山FG系列单轴螺旋洗矿机通过螺旋叶片搅拌作用，高效清洗矿物表面杂质，同时保持物料完整性。结构简单，操作可靠，适用于冶金、建材和硅酸盐行业中0.3-10毫米颗粒的洗选，提供稳定一致的处理效果。",
     "category": "矿物加工设备",
     "imageSrc": "/images/products/washing-equipment/spiral-washer.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Spiral Washer | Zexin Mining"
   },
   {
     "id": "trommel-screen",
@@ -33,7 +36,8 @@
     "excerpt": "泽鑫矿山设备GT系列滚筒筛采用创新的旋转筛分技术，与普通的筛分设备相比具有旋转速度慢(3-6 rpm)和更高的筛分效率两大优势。现代滚筒筛的生产处理能力为30-240立方米每小时，筛孔尺寸为10-100毫米，专为复杂粘性物料和含水量高的物料开发。适用于各种矿物、砂石、煤炭、建筑废料、垃圾等物料的筛选和生产应用。",
     "category": "矿石筛分设备",
     "imageSrc": "/images/products/vibrating-screens/trommel-screen.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Trommel Screen | Zexin Mining"
   },
   {
     "id": "linear-vibrating-screen",
@@ -42,7 +46,8 @@
     "excerpt": "泽鑫矿山ZDS/ZKR系列直线振动筛为矿石加工应用提供卓越的筛分性能。采用坚固构造、可调振幅和稳定的直线运动轨迹，这些筛机在处理从细粒到大块骨料的各类物料时提供高效率和精准度，同时在苛刻的矿山环境中保持可靠运行。",
     "category": "矿石筛分设备",
     "imageSrc": "/images/products/vibrating-screens/linear-vibrating-screen.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Linear Vibrating Screen | Zexin Mining"
   },
   {
     "id": "inclined-vibrating-screen",
@@ -51,7 +56,8 @@
     "excerpt": "泽鑫矿山YA系列圆振动筛采用先进的偏心轴驱动技术，提供卓越的筛分性能。特别适合中小型选矿厂，这款多层倾斜筛网能够高精度分离5-100mm粒度物料。坚固的偏心轴驱动系统确保在各种应用中保持一致的筛分性能，包括铁矿石、砂石骨料、石灰石和煤炭。处理能力达60-350吨/小时，筛分面积4.2-14.4平方米，这款多功能设备在保持能源效率和低维护要求的同时提供可靠运行。",
     "category": "矿石筛分设备",
     "imageSrc": "/images/products/vibrating-screens/inclined-vibrating-screen.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Inclined Vibrating Screen | Zexin Mining"
   },
   {
     "id": "dewatering-screen",
@@ -60,7 +66,8 @@
     "excerpt": "泽鑫矿山DWS系列高效脱水筛为细粒物料提供卓越的脱水性能，同时最大化回收率。专为中小型矿山设计，这款振动脱水筛能有效降低细砂、尾矿、煤泥和各种矿物精矿的含水率至8-15%。筛面面积范围从3.6到21平方米，强劲的双轴激振系统提供强力振动，实现最佳脱水效果，同时保持低能耗和极低的维护需求。",
     "category": "矿石筛分设备",
     "imageSrc": "/images/products/vibrating-screens/dewatering-screen.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Dewatering Screen | Zexin Mining"
   },
   {
     "id": "bar-vibrating-screen",
@@ -69,7 +76,8 @@
     "excerpt": "泽鑫矿山ZGS系列棒条振动筛采用高强度棒条结构，专为高含水率、易堵塞物料设计。筛面间距可调，处理能力高，特别适合铁矿、煤矿、砂石、建筑垃圾等粗细分级。自清洁系统显著降低维护频率，节能高效，适合中小型矿山连续作业。",
     "category": "矿石筛分设备",
     "imageSrc": "/images/products/vibrating-screens/bar-vibrating-screen.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Bar Vibrating Screen | Zexin Mining"
   },
   {
     "id": "banana-multislope-vibrating-screen",
@@ -78,7 +86,8 @@
     "excerpt": "泽鑫矿山MSBS系列高频香蕉振动筛是一款创新型多段斜筛分设备，采用独特的弧形筛面设计，入料端倾角可达45°，出料端为5°的渐变结构。这种多层振动筛设计显著提高了筛分效率95%以上，特别适用于高湿度、高黏性和难筛分物料。矿用多段斜筛处理能力80-600吨/小时，筛分精度高，能耗低25-30%，振幅可调，适用于铁矿、金矿、铜矿、锌矿等各类矿石筛分。高频矿用香蕉筛采用双轴激振系统，振动轨迹稳定，自清洁能",
     "category": "矿石筛分设备",
     "imageSrc": "/images/products/vibrating-screens/banana-multislope-vibrating-screen.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Banana Multislope Vibrating Screen | Zexin Mining"
   },
   {
     "id": "jaw-crusher",
@@ -87,7 +96,8 @@
     "excerpt": "泽鑫矿业的ZPE系列颚式破碎机代表了初级破碎技术的巅峰，专为最严苛的矿山和骨料生产应用而设计。凭借其坚固的结构和优化的破碎腔，这款多功能破碎机在确保可靠运行的同时，即使处理最硬的材料也能提供出色的破碎比和吞吐量。完美适用于石灰石、花岗岩、河卵石和各种矿石，ZPE系列将成熟的肘板技术与现代效率特性相结合，在各类规模的采石场和矿山中实现最大生产力，同时最小化运营成本。",
     "category": "矿山破碎设备",
     "imageSrc": "/images/products/stationary-crushers/jaw-crusher.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Jaw Crusher | Zexin Mining"
   },
   {
     "id": "impact-crusher",
@@ -96,7 +106,8 @@
     "excerpt": "振鑫矿机ZPF系列反击式破碎机代表了中细碎技术的巅峰，专为中等硬度物料高效破碎而设计。创新的反击破碎技术与优化转子系统，实现极高破碎比和优异粒型控制，同时大幅降低能耗。特别适用于矿山、建材、骨料生产，ZPF系列以高产能、优质立方体成品和低运营成本为客户创造更大价值。",
     "category": "矿山破碎设备",
     "imageSrc": "/images/products/stationary-crushers/impact-crusher.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Impact Crusher | Zexin Mining"
   },
   {
     "id": "hp-cone-crusher",
@@ -105,7 +116,8 @@
     "excerpt": "泽信矿业的HP系列液压圆锥破碎机采用先进的破碎技术，具有高产能、低能耗、优异的产品粒形和卓越的可靠性，适用于矿山和骨料加工应用。",
     "category": "矿山破碎设备",
     "imageSrc": "/images/products/stationary-crushers/hp-cone-crusher.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Hp Cone Crusher | Zexin Mining"
   },
   {
     "id": "hammer-crusher",
@@ -114,7 +126,8 @@
     "excerpt": "振鑫矿机ZPC系列高效锤式破碎机代表了先进的破碎技术，专为低至中等硬度的脆性物料设计。高速旋转锤头系统实现极高破碎比，单段破碎高效节能且运行稳定。非常适合中小型矿山、煤炭加工、石灰石生产及建筑垃圾回收，ZPC系列兼具耐用性与精度，最大化产能同时降低运营成本。",
     "category": "矿山破碎设备",
     "imageSrc": "/images/products/stationary-crushers/hammer-crusher.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Hammer Crusher | Zexin Mining"
   },
   {
     "id": "double-roller-crusher",
@@ -123,7 +136,8 @@
     "excerpt": "振鑫矿机2PG系列双辊破碎机代表了先进的中细碎技术，专为中低硬度物料设计。采用双辊压缩设计，这款多功能破碎机可实现极高的产品粒度均匀性，极大减少过粉碎，同时确保能效和运行稳定。非常适用于煤炭加工、石灰石生产、粘土物料和耐火材料等领域，2PG系列结合了结构简单与可靠性能，在最大化产能的同时，降低运营成本。",
     "category": "矿山破碎设备",
     "imageSrc": "/images/products/stationary-crushers/double-roller-crusher.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Double Roller Crusher | Zexin Mining"
   },
   {
     "id": "cone-crusher",
@@ -132,7 +146,8 @@
     "excerpt": "泽鑫矿业的ZYP系列液压圆锥破碎机代表了先进的二级和三级破碎技术，将卓越性能与多功能性相结合，适用于严苛的应用场景。采用多缸液压系统和层压破碎原理，这款坚固的破碎机为中硬到硬质材料提供优异的粒形、高破碎比和稳定的输出。特别适合中小型矿山作业、采石场和骨料生产，ZYP系列在保持精确产品级配控制的同时提供出色的能源效率。其适用于各种材料类型（包括石灰石、花岗岩、河卵石和金属矿石）的适应性使其成为高效破",
     "category": "矿山破碎设备",
     "imageSrc": "/images/products/stationary-crushers/cone-crusher.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Cone Crusher | Zexin Mining"
   },
   {
     "id": "wolframite-beneficiation-processes-2023",
@@ -141,7 +156,8 @@
     "excerpt": "本文从工艺创新角度深入分析黑钨矿选矿技术，探讨设备优化与参数调控的关键因素，阐述如何通过创新工艺组合解决黑钨矿选矿难题，实现钨资源的高效利用与精矿品质提升。",
     "category": "technical",
     "imageSrc": "/images/news/wolframite-beneficiation-process.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Wolframite Beneficiation Process | Zexin Mining"
   },
   {
     "id": "vietnam-customer-visit-equipment-inspection-2025",
@@ -150,7 +166,8 @@
     "excerpt": "越南客户代表团莅临泽鑫矿山生产基地，考察泥石分离机和板式给料机套件的生产进度。客户对设备的生产工艺和质量标准给予高度评价，当场追加订购两台颚式破碎机，充分体现了对泽鑫矿山设备的高度认可。",
     "category": "company",
     "imageSrc": "/images/news/vietnam-delegation-visit-2025.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Vietnam Delegation Visit 2025 | Zexin Mining"
   },
   {
     "id": "vein-gold-ore-processing-technology-2023",
@@ -159,7 +176,8 @@
     "excerpt": "本文详细分析脉金矿的物理特性与选矿难点，对比重选-氰化、重选-浮选、浮选-重选三种联合工艺的适用条件与技术优势，为提高脉金矿回收率与经济效益提供系统工艺参考。",
     "category": "technical",
     "imageSrc": "/images/news/vein-gold-ore-beneficiation-process.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Vein Gold Ore Beneficiation Process | Zexin Mining"
   },
   {
     "id": "vanadium-titanium-magnetite-valuable-elements-recovery-2025",
@@ -168,7 +186,8 @@
     "excerpt": "本文深入探讨钒钛磁铁矿这一战略性复合资源的高效分选技术路线，详细分析了从预分选、阶段磨矿到铁精矿提质和微细粒钛回收的全流程工艺创新，为提高复杂共生矿物的分离效率和有价元素综合回收率提供了系统解决方案。",
     "category": "technical",
     "imageSrc": "/images/news/vanadium-titanium-magnetite-valuable-elements-recovery.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Vanadium Titanium Magnetite Valuable Elements Recovery | Zexin Mining"
   },
   {
     "id": "tin-ore-processing-technologies-2025",
@@ -177,7 +196,8 @@
     "excerpt": "本文系统分析锡矿选矿的四大技术路线——重选、浮选、磁选及化学处理法，详细阐述各工艺特点、关键设备选型及组合应用策略，为锡矿资源高效利用提供全面技术参考。",
     "category": "technical",
     "imageSrc": "/images/news/tin-ore-beneficiation-process.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Tin Ore Beneficiation Process | Zexin Mining"
   },
   {
     "id": "tantalum-niobium-gravity-separation-2024",
@@ -186,7 +206,8 @@
     "excerpt": "深入剖析钽铌矿选矿重选工艺的应用现状、技术优势和创新发展，探讨多种选矿方法的组合应用对提升回收率的重要意义。",
     "category": "technical",
     "imageSrc": "/images/news/gravity-separation-tantalum.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Gravity Separation Tantalum | Zexin Mining"
   },
   {
     "id": "tantalum-niobium-beneficiation-2024",
@@ -195,7 +216,8 @@
     "excerpt": "现代钽铌矿选矿工艺流程的全面解析，从原矿处理到精矿提纯的各环节技术详解及未来发展趋势。",
     "category": "technical",
     "imageSrc": "/images/news/tantalum-niobium-process.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Tantalum Niobium Process | Zexin Mining"
   },
   {
     "id": "spiral-classifier-importance-applications-2024",
@@ -204,7 +226,8 @@
     "excerpt": "深入探讨螺旋分级机在现代选矿工艺中的核心功能与技术特点，分析其在颗粒分级、脱水、脱泥及密度分离等方面的应用优势，并详细介绍不同类型螺旋分级机的结构特点与适用场景。",
     "category": "product",
     "imageSrc": "/images/news/spiral-classifier-applications.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Spiral Classifier Applications | Zexin Mining"
   },
   {
     "id": "siderite-beneficiation-methods-2023",
@@ -213,7 +236,8 @@
     "excerpt": "详细解析低铁含量菱铁矿的四种主流选矿工艺：重力选矿、强磁选矿、浮选工艺及磁化焙烧-弱磁选联合工艺，分析各工艺的技术特点、适用条件和应用效果，为菱铁矿资源高效利用提供专业参考。",
     "category": "technical",
     "imageSrc": "/images/news/siderite-beneficiation-methods.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Siderite Beneficiation Methods | Zexin Mining"
   },
   {
     "id": "screening-equipment-selection-guide-2024",
@@ -222,7 +246,8 @@
     "excerpt": "详细分析各类筛分设备的工作原理、技术特点与应用优势，针对砂石生产线不同阶段提供专业筛分设备选型建议，助力提升生产效率和产品质量。",
     "category": "product",
     "imageSrc": "/images/news/selection-guide-for-mining-screening-equipment.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Selection Guide For Mining Screening Equipment | Zexin Mining"
   },
   {
     "id": "rare-earth-gravity-separation-2024",
@@ -231,7 +256,8 @@
     "excerpt": "深入剖析稀土矿物重力选别工艺与设备应用，探讨在战略性稀土资源高效回收领域的技术发展与实践。",
     "category": "technical",
     "imageSrc": "/images/news/rare-earth-gravity-separation-zexin.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Rare Earth Gravity Separation Zexin | Zexin Mining"
   },
   {
     "id": "pyrite-beneficiation-methods-2024",
@@ -240,7 +266,8 @@
     "excerpt": "深入解析黄铁矿选矿的三大处理工艺、适用条件和经济性比较，为不同品位和嵌布特性的黄铁矿石提供最佳选矿方案，提升资源利用率。",
     "category": "technical",
     "imageSrc": "/images/news/pyrite-beneficiation-technology-zexin.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Pyrite Beneficiation Technology Zexin | Zexin Mining"
   },
   {
     "id": "mining-jig-technology-2024",
@@ -249,7 +276,8 @@
     "excerpt": "详细剖析各类矿用跳汰机的工作原理、结构特点与技术优势，探讨不同类型跳汰机在矿物分选中的应用场景，为选矿工艺选型提供全面参考。",
     "category": "product",
     "imageSrc": "/images/news/comprehensive-analysis-of-mining-jigs.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Comprehensive Analysis Of Mining Jigs | Zexin Mining"
   },
   {
     "id": "mineral-processing-methods-2024",
@@ -258,7 +286,8 @@
     "excerpt": "全面解析五大主流选矿技术的原理、应用场景及最新发展趋势，帮助矿业企业优化工艺流程，提高精矿品位与回收率，实现资源高效利用。",
     "category": "technical",
     "imageSrc": "/images/news/mineral-processing-methods.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Mineral Processing Methods | Zexin Mining"
   },
   {
     "id": "mineral-processing-experiments-2024",
@@ -267,7 +296,8 @@
     "excerpt": "深入解析选矿试验在矿山开发中的重要性，从试验准备到结果分析的全流程介绍，以及如何通过科学试验方法提高矿物回收率和降低投资风险。",
     "category": "company",
     "imageSrc": "/images/news/mineral-processing-experiments.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Mineral Processing Experiments | Zexin Mining"
   },
   {
     "id": "mineral-processing-equipment-essentials-2025",
@@ -276,7 +306,8 @@
     "excerpt": "系统解析现代选矿厂四大工艺流程中的关键设备配置方案，从破碎、磨矿到选别与脱水，为矿业企业提供全面的设备选型与配置参考。",
     "category": "technical",
     "imageSrc": "/images/news/mineral-processing-plant-equipment.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Mineral Processing Plant Equipment | Zexin Mining"
   },
   {
     "id": "metal-mine-extraction-method-selection-2025",
@@ -285,7 +316,8 @@
     "excerpt": "本文深入剖析金属矿山采矿方法选择的科学决策过程，系统梳理了从矿体地质条件到矿石特性等多重关键影响因素，探讨如何基于矿体形态、厚度、倾角等特征选择最佳开采技术，为矿山企业提升资源回收率、降低生产成本和保障安全生产提供专业指导。",
     "category": "technical",
     "imageSrc": "/images/news/metal-mine-extraction-method-selection.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Metal Mine Extraction Method Selection | Zexin Mining"
   },
   {
     "id": "manganese-processing-2023",
@@ -294,7 +326,8 @@
     "excerpt": "详解锰矿在冶金工业中的关键应用，包括脱氧脱硫工艺、合金制备以及精细加工技术，全面展示锰矿从原料到最终产品的转化过程及工业价值。",
     "category": "technical",
     "imageSrc": "/images/news/manganese-processing-techniques-zexin.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Manganese Processing Techniques Zexin | Zexin Mining"
   },
   {
     "id": "manganese-oxide-beneficiation-2024",
@@ -303,7 +336,8 @@
     "excerpt": "随着优质碳酸锰资源减少，氧化锰矿成为重要开采对象。本文深入分析泽鑫矿业对氧化锰单一及联合选矿方法的研究，为这类难选低品位矿石提供系统解决方案。",
     "category": "technical",
     "imageSrc": "/images/news/manganese-oxide-processing-techniques-zexin.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Manganese Oxide Processing Techniques Zexin | Zexin Mining"
   },
   {
     "id": "manganese-ore-processing-2024",
@@ -312,7 +346,8 @@
     "excerpt": "深入分析锰矿的种类特点及其选矿方法，从重力选矿到磁选、浮选等多种技术，探讨如何针对不同类型锰矿选择最合适的工艺流程以提高回收率。",
     "category": "technical",
     "imageSrc": "/images/news/manganese-ore-processing-techniques.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Manganese Ore Processing Techniques | Zexin Mining"
   },
   {
     "id": "manganese-deposits-2024",
@@ -321,7 +356,8 @@
     "excerpt": "深入探讨全球锰矿床的主要类型，包括海相沉积锰矿床、沉积变质锰矿床、层控铅锌铁锰矿床和风化锰矿床等，分析其地质特征、分布规律及矿石性质。",
     "category": "technical",
     "imageSrc": "/images/news/manganese-deposit-types-zexin.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Manganese Deposit Types Zexin | Zexin Mining"
   },
   {
     "id": "magnetic-separator-flow-types-2024",
@@ -330,7 +366,8 @@
     "excerpt": "深入解析永磁滚筒湿式磁选机的顺流、逆流和半逆流三种工作方式的技术特点、适用矿种及工业应用案例，为矿山企业选型提供专业参考。",
     "category": "product",
     "imageSrc": "/images/news/magnetic-separator-flow-types-comparison.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Magnetic Separator Flow Types Comparison | Zexin Mining"
   },
   {
     "id": "jig-optimization-factors-2024",
@@ -339,7 +376,8 @@
     "excerpt": "深度解析影响跳汰机选别效果的关键工艺参数与操作因素，探讨冲程冲次、给排水系统、床层管理及给矿特性等方面的优化调控策略，为提升选矿效率提供专业指导。",
     "category": "product",
     "imageSrc": "/images/news/key-factors-analysis-and-control-strategies-for-optimizing-mining-Jig performance.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Key Factors Analysis And Control Strategies For Optimizing Mining Jig Performance | Zexin Mining"
   },
   {
     "id": "jaw-crusher-comparison-2024",
@@ -348,7 +386,8 @@
     "excerpt": "详细分析市场主流大型颚式破碎机系列的技术特点、性能参数和应用场景，助力矿山和砂石企业选择最适合其生产需求的破碎设备。",
     "category": "product",
     "imageSrc": "/images/news/jaw-crusher-comparison.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Jaw Crusher Comparison | Zexin Mining"
   },
   {
     "id": "iron-tailings-reprocessing-2023",
@@ -357,7 +396,8 @@
     "excerpt": "随着富铁矿资源日益减少，铁尾矿再选技术成为行业焦点。本文深入分析铁尾矿的磁选、重选、浮选及联合选矿工艺，为提高铁资源回收率提供技术参考。",
     "category": "technical",
     "imageSrc": "/images/news/iron-tailings-reprocessing.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Iron Tailings Reprocessing | Zexin Mining"
   },
   {
     "id": "iron-ore-magnetic-separators-guide-2024",
@@ -366,7 +406,8 @@
     "excerpt": "详细解析铁矿石加工中常用的环式、筒式、柱式及辊式四类磁选设备的工作原理、技术特点及适用场景，为不同类型铁矿石选矿提供科学的设备选型参考。",
     "category": "product",
     "imageSrc": "/images/news/magnetic-separator-types.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Magnetic Separator Types | Zexin Mining"
   },
   {
     "id": "iron-ore-gravity-separation-2025",
@@ -375,7 +416,8 @@
     "excerpt": "随着铁矿资源品位不断下降，业内提出了一系列优化铁矿石重选工艺的创新方法，通过设备选型优化、工艺参数调整和流程整合，显著提升了选矿效率和精矿品质。",
     "category": "technical",
     "imageSrc": "/images/news/iron-ore-gravity-separation-efficiency.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Iron Ore Gravity Separation Efficiency | Zexin Mining"
   },
   {
     "id": "hydrocyclone-troubleshooting-guide-2024",
@@ -384,7 +426,8 @@
     "excerpt": "本文深入分析水力旋流器在实际运行中常见的五大故障现象，包括给矿压力波动、设备堵塞、底流异常、溢流异常及沉砂排放问题，并提供专业的诊断方法和针对性解决方案，帮助选矿企业提高设备运行稳定性和分级效率。",
     "category": "product",
     "imageSrc": "/images/news/hydrocyclone-troubleshooting-guide.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Hydrocyclone Troubleshooting Guide | Zexin Mining"
   },
   {
     "id": "hematite-beneficiation-process-2024",
@@ -393,7 +436,8 @@
     "excerpt": "面对日益枯竭的优质铁矿资源，本文深入分析高硫高泥赤铁矿选矿技术难点，提出创新的预脱泥-强磁-再磨-反浮选联合工艺流程，实现了难处理赤铁矿的高效分离与提纯。",
     "category": "technical",
     "imageSrc": "/images/news/hematite-beneficiation-zexin.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Hematite Beneficiation Zexin | Zexin Mining"
   },
   {
     "id": "gravity-separation-gold-processing-2024",
@@ -402,7 +446,8 @@
     "excerpt": "深入剖析金矿重选工艺技术，包括跳汰重选法、摇床重选法、溜槽重选法和联合重选法等，全面分析各种重选方法的适用条件、优势及最佳粒度范围，为不同类型金矿选矿提供专业技术参考。",
     "category": "technical",
     "imageSrc": "/images/news/gravity-separation-gold-processing.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Gravity Separation Gold Processing | Zexin Mining"
   },
   {
     "id": "gravity-separation-equipment-analysis-and-practical-guide-2025",
@@ -411,7 +456,8 @@
     "excerpt": "本文深入剖析重选设备技术优势和应用边界，提供设备选型、工艺优化和维护策略实用指南，帮助矿山提升选矿效率和降低运营成本。",
     "category": "technical",
     "imageSrc": "/images/news/gravity-separation-equipment-guide.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Gravity Separation Equipment Guide | Zexin Mining"
   },
   {
     "id": "gold-tailings-recovery-2024",
@@ -420,7 +466,8 @@
     "excerpt": "深度剖析如何通过先进重选技术有效回收金矿尾矿中的价值金属，实现经济效益与环境保护的双赢策略。",
     "category": "technical",
     "imageSrc": "/images/news/gold-tailings-recovery-zexin.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Gold Tailings Recovery Zexin | Zexin Mining"
   },
   {
     "id": "gold-ore-processing-technology-2025",
@@ -429,7 +476,8 @@
     "excerpt": "本文详细分析金矿石选矿的四大关键环节——破碎、磨矿分级、选别和脱水工艺，系统阐述各环节设备选择和工艺参数优化策略，为金矿企业提高回收率和精矿品质提供全面技术参考。",
     "category": "technical",
     "imageSrc": "/images/news/gold-ore-beneficiation-process.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Gold Ore Beneficiation Process | Zexin Mining"
   },
   {
     "id": "gold-flotation-process-2023",
@@ -438,7 +486,8 @@
     "excerpt": "深入探讨黄金浮选工艺从破碎到脱水的完整流程，提供设备选择和工艺优化的技术见解，以实现最大化的黄金回收效率。",
     "category": "technical",
     "imageSrc": "/images/news/gold-flotation-process-zexin.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Gold Flotation Process Zexin | Zexin Mining"
   },
   {
     "id": "fluorite-separation-techniques-2024",
@@ -447,7 +496,8 @@
     "excerpt": "详细解析萤石与方解石、重晶石等相似矿物的高效分离技术，包括优化的浮选工艺流程、药剂组合与创新的多段处理方案，实现97%以上的高品位萤石精矿生产。",
     "category": "technical",
     "imageSrc": "/images/news/fluorite-processing-technology.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Fluorite Processing Technology | Zexin Mining"
   },
   {
     "id": "flotation-tank-troubleshooting-2024",
@@ -456,7 +506,8 @@
     "excerpt": "本文深入分析了浮选机槽体常见的8类故障现象及其解决方案，帮助矿山企业提高设备管理效率和选矿作业稳定性。",
     "category": "product",
     "imageSrc": "/images/news/flotation-tank-8-ccommon-problems-and-solutions.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Flotation Tank 8 Ccommon Problems And Solutions | Zexin Mining"
   },
   {
     "id": "flotation-process-technology-2024",
@@ -465,7 +516,8 @@
     "excerpt": "详细介绍泡沫浮选在矿物加工中的核心地位与工作原理，系统分析七种主要浮选工艺流程的特点与适用条件，并解构浮选工艺完整的设备组成与处理流程，为矿业企业优化选矿技术提供专业参考。",
     "category": "technical",
     "imageSrc": "/images/news/flotation-technology-overview.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Flotation Technology Overview | Zexin Mining"
   },
   {
     "id": "flotation-optimization-2023",
@@ -474,7 +526,8 @@
     "excerpt": "深入解析矿物加工中影响浮选效率的关键因素，从化学药剂到操作参数，结合泽鑫矿山设备专业技术经验。",
     "category": "technical",
     "imageSrc": "/images/news/mineral-flotation-efficiency-factors-zexin.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Mineral Flotation Efficiency Factors Zexin | Zexin Mining"
   },
   {
     "id": "crusher-equipment-principles-2024",
@@ -483,7 +536,8 @@
     "excerpt": "本文详细分析了7种主流破碎设备的工作原理、适用条件及优缺点比较，助您在矿山设备选型中做出最佳决策。",
     "category": "product",
     "imageSrc": "/images/news/comprehensive-guide-to-main-crusher-types.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Comprehensive Guide To Main Crusher Types | Zexin Mining"
   },
   {
     "id": "copper-flotation-technologies-2024",
@@ -492,7 +546,8 @@
     "excerpt": "本文系统分析铜矿浮选技术的核心工艺，从单硫化铜、多金属硫化铜到氧化硫化铜矿物的处理策略，详细阐述各类工艺流程的适用条件、关键参数和优化方法，为铜矿选矿实践提供了全面的技术参考与指导。",
     "category": "technical",
     "imageSrc": "/images/news/copper-flotation-process.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Copper Flotation Process | Zexin Mining"
   },
   {
     "id": "clay-mineral-washing-equipment-applications-2024",
@@ -501,7 +556,8 @@
     "excerpt": "全面剖析洗矿机技术在粘土矿物加工领域的创新应用，深入解读滚筒洗矿机、圆木洗矿机与螺旋洗矿机的技术特点、适用场景及选型要点，为提升粘土矿物纯度、降低生产成本与实现资源综合利用提供专业解决方案。",
     "category": "product",
     "imageSrc": "/images/news/mineral-washing-equipment-applications.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Mineral Washing Equipment Applications | Zexin Mining"
   },
   {
     "id": "classifier-equipment-comparison-2024",
@@ -510,7 +566,8 @@
     "excerpt": "对螺旋分级机与水力旋流器在处理能力、空间利用、分级效率、操作难度及成本等五个维度的深入对比，为选矿工艺中的设备选型提供专业参考。",
     "category": "product",
     "imageSrc": "/images/news/classification-equipment-selection-guide.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Classification Equipment Selection Guide | Zexin Mining"
   },
   {
     "id": "chromite-properties-applications-beneficiation-2025",
@@ -519,7 +576,8 @@
     "excerpt": "全面剖析铬铁矿的矿物学特性、战略工业价值及四大主流选矿工艺，深入探讨重选法、磁选法、浮选法和化学法在不同条件下的应用优势与技术要点，为铬铁矿资源的高效开发与利用提供专业参考。",
     "category": "technical",
     "imageSrc": "/images/news/chromite-beneficiation-technologies.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Chromite Beneficiation Technologies | Zexin Mining"
   },
   {
     "id": "carbonaceous-gold-gravity-separation-2023",
@@ -528,7 +586,8 @@
     "excerpt": "深入剖析影响碳质金矿重选效率的关键因素，从矿石特性到设备参数选择及操作条件管控，探讨如何通过系统工艺优化实现碳质金矿处理回收率的提升。",
     "category": "technical",
     "imageSrc": "/images/news/carbonaceous-gold-gravity-separation-technology.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Carbonaceous Gold Gravity Separation Technology | Zexin Mining"
   },
   {
     "id": "carbon-interference-reduction-2023",
@@ -537,7 +596,8 @@
     "excerpt": "深入探讨碳质物对金矿重选过程的干扰机制及其抑制方法，从预处理技术、流程优化、设备参数调整到药剂应用等多维度阐述如何提升碳质金矿重选回收效率。",
     "category": "technical",
     "imageSrc": "/images/news/carbon-interference-reduction-techniques.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Carbon Interference Reduction Techniques | Zexin Mining"
   },
   {
     "id": "barite-gravity-separation-process-2023",
@@ -546,7 +606,8 @@
     "excerpt": "本文详细分析重晶石选矿工艺中的重选技术路线，从破碎到脱水五大关键环节进行系统阐述，为重晶石矿山提升精矿品质和选别效率提供实用技术参考。",
     "category": "technical",
     "imageSrc": "/images/news/barite-separation-process.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Barite Separation Process | Zexin Mining"
   },
   {
     "id": "ball-mill-energy-saving-factors-2024",
@@ -555,7 +616,8 @@
     "excerpt": "本文深入分析影响球磨机能源消耗的五大关键因素，为选矿企业实现节能降耗提供实用技术参考。",
     "category": "product",
     "imageSrc": "/images/news/optimizing-ball-mill-energy-efficiency.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Optimizing Ball Mill Energy Efficiency | Zexin Mining"
   },
   {
     "id": "advanced-zircon-titanium-beneficiation-technologies-2025",
@@ -564,7 +626,8 @@
     "excerpt": "通过优化预处理技术、分选工艺和中矿资源化技术，本文提出了锆钛矿高效选矿解决方案，将资源综合利用率从不足60%提升至85%以上。",
     "category": "technical",
     "imageSrc": "/images/news/zircon-titanium-beneficiation-technologies.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Zircon Titanium Beneficiation Technologies | Zexin Mining"
   },
   {
     "id": "advanced-silver-recovery-flotation-methods-2025",
@@ -573,7 +636,8 @@
     "excerpt": "本文详细分析了铅锌硫化矿中伴生银的回收技术，系统梳理了优先浮选、混合浮选、等可浮浮选、异步浮选等八种工业浮选工艺的技术特点、应用条件及优缺点，为提高复杂多金属矿石中贵金属回收率、优化选矿流程、降低环境影响提供了系统解决方案。",
     "category": "technical",
     "imageSrc": "/images/news/silver-recovery-flotation-methods.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Silver Recovery Flotation Methods | Zexin Mining"
   },
   {
     "id": "advanced-fluorite-ore-beneficiation-technologies-2025",
@@ -582,7 +646,8 @@
     "excerpt": "本文深入剖析伴生型萤石矿的选矿技术挑战，从石英型、方解石型到多金属共伴生型萤石矿，系统介绍各类矿石的浮选工艺流程、药剂体系优化及关键控制参数，为提高复杂共生萤石矿的精矿品质和回收率提供了全面的技术解决方案。",
     "category": "technical",
     "imageSrc": "/images/news/benefication-techniques-for-associated-fluorite-ores.jpg",
-    "resultType": "news"
+    "resultType": "news",
+    "imageSrcAlt": "Benefication Techniques For Associated Fluorite Ores | Zexin Mining"
   },
   {
     "id": "wet-high-intensity-magnetic-roll-separator",
@@ -591,7 +656,8 @@
     "excerpt": "泽鑫矿山HYG系列辊式强磁湿式磁选机采用先进磁辊设计，磁场强度高达13500高斯，专为细粒级弱磁性矿物分选而设计。设备湿式工艺处理效率高，能有效从复杂矿石中回收有价矿物，提升精矿品位。",
     "category": "选矿设备",
     "imageSrc": "/images/products/magnetic-separator/wet-high-intensity-magnetic-roll-separator.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Wet High Intensity Magnetic Roll Separator | Zexin Mining"
   },
   {
     "id": "triple-disc-belt-magnetic-separator",
@@ -600,7 +666,8 @@
     "excerpt": "泽鑫矿山三盘带式磁选机为弱磁性矿物提供卓越的干式磁选性能。配备三个精密设计的磁盘和创新的带式输送系统，该设备在处理锰矿、钨矿、锡矿、稀土矿物和金红石等细粒物料时提供了卓越的分选效率。",
     "category": "选矿设备",
     "imageSrc": "/images/products/magnetic-separator/triple-disc-belt-magnetic-separator.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Triple Disc Belt Magnetic Separator | Zexin Mining"
   },
   {
     "id": "plate-high-intensity-magnetic-separator",
@@ -609,7 +676,8 @@
     "excerpt": "泽鑫矿山HYQC系列平板式高强磁选机为弱磁性矿物提供卓越的分选性能。专为浆体形式的细粒物料处理而设计，这种先进的湿式磁选设备产生强大的高梯度磁场，能有效捕获顺磁性物质，具有显著的选择性和回收率。",
     "category": "选矿设备",
     "imageSrc": "/images/products/magnetic-separator/plate-high-intensity-magnetic-separator.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Plate High Intensity Magnetic Separator | Zexin Mining"
   },
   {
     "id": "permanent-drum-magnetic-separator",
@@ -618,7 +686,8 @@
     "excerpt": "泽鑫矿山CTB系列高强度永磁筒式磁选机为铁矿石选矿提供卓越的选别性能和高效率的磁性颗粒回收。专为矿山苛刻环境下的连续运行而设计，这些磁选机将高磁场强度与精密工程相结合，最大限度地提高铁磁性物料的分离效率。",
     "category": "选矿设备",
     "imageSrc": "/images/products/magnetic-separator/permanent-drum-magnetic-separator.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Permanent Drum Magnetic Separator | Zexin Mining"
   },
   {
     "id": "four-roll-high-voltage-electrostatic-separator",
@@ -627,7 +696,8 @@
     "excerpt": "泽鑫矿山DXJ系列四辊高压电选机为非导电性和导电性矿物提供卓越的分选性能。凭借四个精密设计的辊筒和变频控制系统，这些电选机在处理石英、长石、锆英砂和金红石等矿物时提供了出色的效率，确保最大回收率和产品纯度。",
     "category": "选矿设备",
     "imageSrc": "/images/products/magnetic-separator/four-roll-high-voltage-electrostatic-separator.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Four Roll High Voltage Electrostatic Separator | Zexin Mining"
   },
   {
     "id": "double-roll-permanent-magnetic-zircon-separator",
@@ -636,7 +706,8 @@
     "excerpt": "泽鑫矿山双辊永磁锆英磁选机为弱磁性矿物提供卓越的干式磁选性能。配备垂直排列的双辊磁性系统和稀土永磁体，产生高达14000高斯的磁场强度，该设备在处理锆英砂、钨矿、锡矿和稀土矿物等细粒物料时提供了卓越的分选效率。",
     "category": "选矿设备",
     "imageSrc": "/images/products/magnetic-separator/double-roll-permanent-magnetic-zircon-separator.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Double Roll Permanent Magnetic Zircon Separator | Zexin Mining"
   },
   {
     "id": "wet-rod-mill",
@@ -645,7 +716,8 @@
     "excerpt": "MBY系列湿式棒磨机是一种高效研磨设备，主要用于矿石的一段磨矿或预磨作业。其独特的棒状研磨体设计使产品粒度更均匀，过粉碎现象少，广泛应用于有色金属、黑色金属选矿及建材、化工等行业的细碎和粗磨工序，特别适合处理易泥化矿石。",
     "category": "磨矿设备",
     "imageSrc": "/images/products/grinding-equipment/wet-rod-mill.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Wet Rod Mill | Zexin Mining"
   },
   {
     "id": "wet-overflow-ball-mill",
@@ -654,7 +726,8 @@
     "excerpt": "ZMQY系列湿式溢流球磨机是一种高效磨矿设备，结构简单、运行可靠，适用于各类矿石磨矿作业。该溢流型球磨机为金、铜、铁等各类矿石提供稳定的研磨性能，具有出色的粒度控制特性和低维护需求，广泛应用于选矿、水泥、化工等行业。",
     "category": "磨矿设备",
     "imageSrc": "/images/products/grinding-equipment/overflow-ball-mill.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Overflow Ball Mill | Zexin Mining"
   },
   {
     "id": "wet-grid-ball-mill",
@@ -663,7 +736,8 @@
     "excerpt": "ZMGQ系列湿式格子型球磨机是泽鑫矿山的先进磨矿技术代表，提供卓越的细磨性能，同时能耗降低15-25%。这种格子型球磨机采用创新的排矿格栅设计，加速物料处理流程，防止过度磨矿，优化粒度分布，广泛应用于金、铜、铁等金属矿和非金属矿的选矿加工。",
     "category": "磨矿设备",
     "imageSrc": "/images/products/grinding-equipment/wet-grid-ball-mill.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Wet Grid Ball Mill | Zexin Mining"
   },
   {
     "id": "wet-energy-saving-grid-ball-mill",
@@ -672,7 +746,8 @@
     "excerpt": "ZMQG系列湿式节能格子型球磨机是一种高效低能耗的湿式粉磨设备，适用于金属和非金属矿石的磨矿作业。其特有的格子型卸料结构和优化的内部结构设计，使研磨效率提高20%以上，能耗降低30%，广泛应用于选矿、水泥、建材等工业领域的湿式粉磨工艺。",
     "category": "磨矿设备",
     "imageSrc": "/images/products/grinding-equipment/wet-energy-saving-grid-ball-mill.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Wet Energy Saving Grid Ball Mill | Zexin Mining"
   },
   {
     "id": "dry-rod-mill",
@@ -681,7 +756,8 @@
     "excerpt": "泽鑫矿山设备MBS系列干式棒磨机相比标准干式球磨机能降低20-30%能耗，同时提供卓越的磨矿性能。专为中小型矿山设计，该专业磨矿设备可生产0.833-0.147mm的均匀粒度产品，最大限度减少过磨和粉尘产生。我们的干式棒磨机结合先进的钢棒研磨介质和创新的腔室设计，确保在各种矿物加工应用中提高产量、精确的产品分级和降低运营成本。",
     "category": "研磨设备",
     "imageSrc": "/images/products/grinding-equipment/dry-rod-mill.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Dry Rod Mill | Zexin Mining"
   },
   {
     "id": "dry-ball-mill",
@@ -690,7 +766,8 @@
     "excerpt": "泽鑫矿山设备Φ系列干式球磨机专为中小型矿山设计，可处理粒度高达25mm的物料。采用优化的研磨介质设计，此节能磨矿设备可生产0.074-0.89mm间的细粉，具有卓越的均匀性。我们的干式球磨机结合了坚固的机械可靠性和多样化的应用能力，确保更高的矿物回收率、更低的运营成本和最小的维护需求。",
     "category": "研磨设备",
     "imageSrc": "/images/products/grinding-equipment/dry-ball-mill.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Dry Ball Mill | Zexin Mining"
   },
   {
     "id": "synchronous-counter-directional-jig",
@@ -699,7 +776,8 @@
     "excerpt": "SCDJM系列工业级复合式双动跳汰机是一款高效密度分选系统，采用创新的双脉冲技术创造强力垂直交变水流，实现矿物最佳分层效果。这款工业级4室重力选矿设备配备先进的双层分选结构，包含主选、精选和回收阶段，实现全面矿物富集。凭借专利复合运动技术，系统可高效分选铁矿、金矿、锡矿和有色金属等多种物料，同时保持能源效率和每小时40-80吨的高处理量，成为全球商业采矿作业的首选设备。",
     "category": "重力选矿设备",
     "imageSrc": "/images/products/gravity-separation/synchronous-counter-directional-jig.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Synchronous Counter Directional Jig | Zexin Mining"
   },
   {
     "id": "synchronous-counter-directional-jig-small",
@@ -708,7 +786,8 @@
     "excerpt": "SCDJM系列复合双动跳汰机是一种高效的重力选矿设备，专为中小型矿物加工作业设计。采用创新的双脉冲技术和先进的复合运动力学，创造强大的垂直交替水流，实现最佳的矿物分层和分离。这种紧凑型矿物富集设备可有效处理0.5-50mm的物料，特别适用于铁矿石、金、铜、锡、钨等矿物加工应用，提供优质分离效果、高回收率和卓越的能源效率，是寻求工业级加工性能的小型采矿作业的理想解决方案。",
     "category": "重力选矿设备",
     "imageSrc": "/images/products/gravity-separation/synchronous-counter-directional-jig-small.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Synchronous Counter Directional Jig Small | Zexin Mining"
   },
   {
     "id": "spiral-chute",
@@ -717,7 +796,8 @@
     "excerpt": "螺旋溜槽是一种高效无动力的重力选矿设备，通过离心力、重力和水流的协同作用实现精确矿物分选。采用优质玻璃钢材料制造，具有耐腐蚀、重量轻、使用寿命长等显著优势。5LL系列广泛应用于铁矿、钨矿、锡矿、钛铁矿、铬铁矿等黑色金属、有色金属和稀有金属的选矿，以及砂金回收和煤炭洗选过程，特别适用于处理粒度范围为0.02-2.0毫米的细粒物料，实现高效环保的比重分选。",
     "category": "重力选矿设备",
     "imageSrc": "/images/products/gravity-separation/spiral-chute.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Spiral Chute | Zexin Mining"
   },
   {
     "id": "shaking-table",
@@ -726,7 +806,8 @@
     "excerpt": "摇床是一种高效的重力选矿设备，通过床面的往复运动和水流的冲洗作用，实现不同重量和密度矿物的分选。我们的摇床采用先进的摇动机构和床面布料设计，能够实现极高的分选精度，特别适合处理细粒物料和贵重金属矿物。",
     "category": "重力选矿设备",
     "imageSrc": "/images/products/gravity-separation/shaking-table.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Shaking Table | Zexin Mining"
   },
   {
     "id": "sawtooth-wave-jig",
@@ -735,7 +816,8 @@
     "excerpt": "锯齿波跳汰机是一种采用独特锯齿波形运动的重力选矿设备，特别适合处理细粒物料和密度差较小的矿物。其锯齿波运动提供更精确的分选效果，对金、银、铂、钨、锡、钽、铌和稀土元素等贵金属和重矿物具有较高的回收率，是小型细粒矿物加工的理想设备。",
     "category": "重力选矿设备",
     "imageSrc": "/images/products/gravity-separation/sawtooth-wave-jig.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Sawtooth Wave Jig | Zexin Mining"
   },
   {
     "id": "centrifugal-separator",
@@ -744,7 +826,8 @@
     "excerpt": "STLB系列设备采用先进的旋转分选技术,通过高速旋转产生强大的离心场,实现矿物颗粒的高效分离。该设备特别适合处理细粒级物料,在金属矿和非金属矿的选别中表现出色。",
     "category": "重力选矿设备",
     "imageSrc": "/images/products/gravity-separation/centrifugal-separator.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Centrifugal Separator | Zexin Mining"
   },
   {
     "id": "xfc-air-inflation-flotation-cell",
@@ -753,7 +836,8 @@
     "excerpt": "XFC充气式浮选机是一种高效率的气动浮选设备，采用先进的叶轮-定子系统设计，通过强制循环和射流充气技术实现矿浆与空气的高效混合与矿化。该设备具有充气量大、矿化率高、能耗低等特点，广泛应用于有色金属、黑色金属和非金属矿物的浮选分选工艺，是现代选矿厂的理想选择。",
     "category": "选矿设备",
     "imageSrc": "/images/products/flotation-equipment/xfc-air-inflation-flotation-cell.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Xfc Air Inflation Flotation Cell | Zexin Mining"
   },
   {
     "id": "self-aspirated-flotation-cell",
@@ -762,7 +846,8 @@
     "excerpt": "自吸式浮选机是一种先进的矿物分离设备，通过特殊设计的叶轮系统自动吸入空气与矿浆混合。该设备结构简单，无需额外鼓风机，气泡分布均匀，大幅提高矿物回收率，被广泛应用于有色金属、黑色金属和非金属矿物的选矿工艺中。",
     "category": "选矿设备",
     "imageSrc": "/images/products/flotation-equipment/self-aspirated-flotation-cell.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Self Aspirated Flotation Cell | Zexin Mining"
   },
   {
     "id": "pneumatic-flotation-cell",
@@ -771,7 +856,8 @@
     "excerpt": "充气式浮选槽是一种先进的矿物分离系统，通过控制空气注入创造最佳泡沫条件。具有高回收率和可调充气设置，该浮选设备显著提高了各种金属和非金属矿石的选矿作业效率。",
     "category": "选矿设备",
     "imageSrc": "/images/products/flotation-equipment/pneumatic-flotation-cell.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Pneumatic Flotation Cell | Zexin Mining"
   },
   {
     "id": "coarse-flotation-cell",
@@ -780,7 +866,8 @@
     "excerpt": "粗颗粒浮选机是一种专为处理粗重矿物颗粒设计的高效浮选设备，采用双槽体结构（吸入槽和直流槽），能够有效处理粒度较大、比重较高的矿物颗粒。其特殊设计的叶轮结构产生强大搅拌力和合理的流场分布，提高了粗粒矿物的浮选效率，广泛应用于有色金属、黑色金属和贵重金属矿物的选矿工艺中。",
     "category": "选矿设备",
     "imageSrc": "/images/products/flotation-equipment/coarse-flotation-cell.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Coarse Flotation Cell | Zexin Mining"
   },
   {
     "id": "vibratory-feeder",
@@ -789,7 +876,8 @@
     "excerpt": "泽鑫矿山ZG系列振动给料机在严苛的采矿作业中提供卓越的物料处理性能。采用双振动电机设计和坚固的料槽结构，这些高效给料机确保可靠、均匀的给料，同时在恶劣环境中提供稳定的产量，实现最大生产力。",
     "category": "矿物加工设备",
     "imageSrc": "/images/products/feeding-equipment/vibratory-feeder.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Vibratory Feeder | Zexin Mining"
   },
   {
     "id": "grizzly-feeder",
@@ -798,7 +886,8 @@
     "excerpt": "泽鑫矿山VF系列棒条振动给料机在严苛的采矿作业中提供卓越的物料处理和初级筛分能力。采用双振动电机驱动和坚固的棒条栅格设计，这些强力给料机确保一致、均匀的给料，同时在初级破碎前有效去除细粒物料。",
     "category": "矿物加工设备",
     "imageSrc": "/images/products/feeding-equipment/grizzly-feeder.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Grizzly Feeder | Zexin Mining"
   },
   {
     "id": "apron-feeder",
@@ -807,7 +896,8 @@
     "excerpt": "泽鑫矿山BLG系列链板给料机在苛刻的采矿作业中提供卓越的物料处理性能。采用坚固的钢板结构和变速控制，这些耐用的给料机确保大型、磨蚀性物料的可靠、均匀给料，同时在严峻环境下提供持续的生产率，实现最高效率。",
     "category": "矿石加工设备",
     "imageSrc": "/images/products/feeding-equipment/apron-feeder.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Apron Feeder | Zexin Mining"
   },
   {
     "id": "submerged-spiral-classifier",
@@ -816,7 +906,8 @@
     "excerpt": "FLC/2FLC系列沉没式螺旋分级机是一种高效的矿物处理设备，专为精确的颗粒分级和砂石洗选设计。凭借坚固的螺旋设计和增强的处理能力，它提供卓越的矿石分级性能，同时能耗最小化。",
     "category": "脱泥分级设备",
     "imageSrc": "/images/products/classification-equipment/submerged-spiral-classifier.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Submerged Spiral Classifier | Zexin Mining"
   },
   {
     "id": "hydrocyclone-separator",
@@ -825,7 +916,8 @@
     "excerpt": "FX系列水力旋流器分离器是一种先进的分级设备，专为矿物加工操作中的高效颗粒分离而设计。凭借优化的涡流设计和耐磨材料，它提供卓越的分级性能，实现高通量和精确切割点。",
     "category": "脱泥分级设备",
     "imageSrc": "/images/products/classification-equipment/hydrocyclone-separator.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Hydrocyclone Separator | Zexin Mining"
   },
   {
     "id": "high-weir-spiral-classifier",
@@ -834,7 +926,8 @@
     "excerpt": "FLG/2FLG系列高堰式螺旋分级机是一种精密的矿物处理设备，专为高效颗粒分级和固液分离而设计。凭借其独特的高堰设计和优化的螺旋结构，为各类矿业生产提供卓越的分级性能。",
     "category": "脱泥分级设备",
     "imageSrc": "/images/products/classification-equipment/high-weir-spiral-classifier.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "High Weir Spiral Classifier | Zexin Mining"
   },
   {
     "id": "cone-classifier",
@@ -843,7 +936,8 @@
     "excerpt": "FD系列分泥斗是一种先进的脱泥设备，专为矿浆中细颗粒的高效分离而设计。其圆锥结构和优化的水力设计提供卓越的脱泥性能，非常适合各种选矿应用。",
     "category": "脱泥分级设备",
     "imageSrc": "/images/products/classification-equipment/cone-classifier.jpg",
-    "resultType": "product"
+    "resultType": "product",
+    "imageSrcAlt": "Cone Classifier | Zexin Mining"
   },
   {
     "id": "xinjiang-tungsten",
@@ -852,7 +946,8 @@
     "excerpt": "泽鑫矿山设备设计建造的100吨/日钨矿选矿厂，处理WO3品位约7%的钨矿石，采用全重选工艺流程。",
     "category": "钨矿选矿",
     "imageSrc": "/images/cases/xinjiang-tungsten/tungsten-processing-plant-xinjiang.jpg",
-    "resultType": "case"
+    "resultType": "case",
+    "imageSrcAlt": "Tungsten Processing Plant Xinjiang | Zexin Mining"
   },
   {
     "id": "uae-slag-processing",
@@ -861,7 +956,8 @@
     "excerpt": "泽鑫矿山设备2024年为阿联酋客户设计的铁炉渣选厂，该设施处理钢铁厂产生的炉渣，回收有价值的铁含量，并从非金属成分中生产建筑材料。",
     "category": "炉渣处理",
     "imageSrc": "/images/cases/uae-slag-processing/steel-slag-processing-plant-abu-dhabi-uae.jpg",
-    "resultType": "case"
+    "resultType": "case",
+    "imageSrcAlt": "Steel Slag Processing Plant Abu Dhabi Uae | Zexin Mining"
   },
   {
     "id": "south-africa-manganese",
@@ -870,7 +966,8 @@
     "excerpt": "泽鑫矿山设备为南非客户提供的年产150万吨锰矿生产线，从设计到安装调试全程参与，实现了高效稳定的锰矿加工。",
     "category": "锰矿",
     "imageSrc": "/images/cases/south-africa-manganese/south-africa-manganese-processing-plant-zexin.jpg",
-    "resultType": "case"
+    "resultType": "case",
+    "imageSrcAlt": "South Africa Manganese Processing Plant Zexin | Zexin Mining"
   },
   {
     "id": "myanmar-tin",
@@ -879,7 +976,8 @@
     "excerpt": "由泽鑫矿业设备为缅甸垒固地区设计建造的专业河道沙锡选矿厂。该厂专门处理具有显著矿物与废料比重差异的冲积型锡矿，实现了高回收率和优质产品。",
     "category": "锡矿",
     "imageSrc": "/images/cases/myanmar-tin/river-sand-tin-processing-plant-loikaw.jpg",
-    "resultType": "case"
+    "resultType": "case",
+    "imageSrcAlt": "River Sand Tin Processing Plant Loikaw | Zexin Mining"
   },
   {
     "id": "hainan-iron",
@@ -888,7 +986,8 @@
     "excerpt": "这是一个针对海南省昌江县现有铁矿选厂的全面升级改造项目。该项目旨在提高精矿品位，同时解决空间有限的问题，满足严格的环保标准，并保持年产能200万吨。",
     "category": "铁矿",
     "imageSrc": "/images/cases/hainan-iron/hainan-changjiang-iron-ore-processing-plant.jpg",
-    "resultType": "case"
+    "resultType": "case",
+    "imageSrcAlt": "Hainan Changjiang Iron Ore Processing Plant | Zexin Mining"
   },
   {
     "id": "hainan-iron-tailings",
@@ -897,7 +996,8 @@
     "excerpt": "该项目是国家重点大型铁矿资源综合利用项目，位于海南省昌江县，日处理铁尾矿量1万吨，原矿品位10-20度。泽鑫矿山设备提供了从设计到安装调试的全流程服务，项目采用粗破、中破、筛分、跳汰等工艺流程，实现了低品位尾矿的高效回收利用。",
     "category": "铁矿",
     "imageSrc": "/images/cases/hainan-iron-tailings/hainan-iron-tailings-processing-plant-zexin-mining.jpg",
-    "resultType": "case"
+    "resultType": "case",
+    "imageSrcAlt": "Hainan Iron Tailings Processing Plant Zexin Mining | Zexin Mining"
   },
   {
     "id": "guilin-yongfu-polymetallic",
@@ -906,7 +1006,8 @@
     "excerpt": "泽鑫矿山设备为某矿业公司提供的桂林永福300吨/日铅锌铜多金属选矿厂项目，是一个老矿坑复产项目，包括选矿试验研究、工程设计、设备供应和安装调试等一条龙服务。",
     "category": "多金属选矿",
     "imageSrc": "/images/cases/guilin-yongfu-polymetallic/yongfu-lead-zinc-copper-processing-plant-guilin.jpg",
-    "resultType": "case"
+    "resultType": "case",
+    "imageSrcAlt": "Yongfu Lead Zinc Copper Processing Plant Guilin | Zexin Mining"
   },
   {
     "id": "guangxi-lead-zinc",
@@ -915,7 +1016,8 @@
     "excerpt": "由泽鑫矿业设备设计建造的日处理1000吨铅锌矿选矿厂。该厂采用先进的选矿工艺，实现了铅锌矿物的高效分离，生产出高品质的铅精矿和锌精矿产品。",
     "category": "铅锌矿",
     "imageSrc": "/images/cases/guangxi-lead-zinc/lead-zinc-processing-plant.jpg",
-    "resultType": "case"
+    "resultType": "case",
+    "imageSrcAlt": "Lead Zinc Processing Plant | Zexin Mining"
   },
   {
     "id": "gabon-manganese",
@@ -924,6 +1026,7 @@
     "excerpt": "泽鑫矿山设备为塔塔集团在加蓬设计并建设的大型锰矿加工厂，年产能200万吨。项目优化了含杂质较多的锰矿资源的选矿工艺，提供符合冶金工业标准的优质锰精矿。",
     "category": "锰矿",
     "imageSrc": "/images/cases/gabon-manganese/gabon-tata-group-manganese-processing-plant.jpg",
-    "resultType": "case"
+    "resultType": "case",
+    "imageSrcAlt": "Gabon Tata Group Manganese Processing Plant | Zexin Mining"
   }
 ]

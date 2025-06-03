@@ -4,6 +4,7 @@ export interface ProductData {
   title: string;
   series: string;
   imageSrc: string;
+  imageSrcAlt?: string; // 添加图片alt属性
   productCategory: string;
   subcategory: string;
   model: string;
@@ -106,6 +107,7 @@ export interface Product {
   series?: string;
   model?: string;
   imageSrc: string;
+  imageSrcAlt?: string; // 添加图片alt属性
   productCategory: string;
   subcategory?: string;
   metaData?: Array<{

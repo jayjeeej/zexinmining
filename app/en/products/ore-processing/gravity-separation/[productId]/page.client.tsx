@@ -72,6 +72,7 @@ export default function ClientGravitySeparationDetail({
         title={productData.title}
         series={productData.series}
         imageSrc={productData.imageSrc}
+        imageSrcAlt={productData.imageSrcAlt}
         meta={productData.meta}
         showOverview={false}
       />

@@ -12,11 +12,12 @@ interface ProductHeroProps {
   title: string;
   series: string;
   imageSrc: string;
+  imageSrcAlt?: string;
   meta: Meta[];
   showOverview?: boolean;
 }
 
-export default function ProductHero({ title, series, imageSrc, meta, showOverview = true }: ProductHeroProps) {
+export default function ProductHero({ title, series, imageSrc, imageSrcAlt, meta, showOverview = true }: ProductHeroProps) {
   const locale = useLocale();
   const isZh = locale === 'zh';
 
@@ -46,7 +47,7 @@ export default function ProductHero({ title, series, imageSrc, meta, showOvervie
               <div className="relative w-full max-w-[800px] h-auto max-h-[500px] overflow-hidden">
                 <OptimizedImage
                 src={imageSrc}
-                alt={`${title} | ${series} - ${isZh ? '产品规格：' : 'Specifications: '}${meta.map(m => `${m.key}: ${m.displayValue}`).join(', ')}`}
+                alt={imageSrcAlt || `${title} | ${series} - ${isZh ? '产品规格：' : 'Specifications: '}${meta.map(m => `${m.key}: ${m.displayValue}`).join(', ')}`}
                   width={800}
                   height={500}
                   priority
