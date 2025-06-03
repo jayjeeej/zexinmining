@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ProductLayout from '@/components/layouts/ProductLayout';
 import Container from '@/components/Container';
 import Link from 'next/link';
@@ -50,6 +50,10 @@ export default function CasesPageClient({
   
   // 控制联系表单模态框的状态
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  
+  // 添加位置记忆相关状态
+  const initialLoadRef = useRef(true); // 用于追踪是否是首次加载
+  const didRestoreScrollRef = useRef(false); // 追踪是否已恢复滚动位置
   
   // 处理和规范化案例数据
   const processCaseData = (cases: CaseProject[]): CaseProject[] => {
@@ -103,11 +107,195 @@ export default function CasesPageClient({
   const [selectedCategory, setSelectedCategory] = useState<string>('');
   const [selectedYear, setSelectedYear] = useState<string>('');
   
+  // 保存当前状态到history.state和sessionStorage
+  const saveStateToHistory = () => {
+    const currentState = {
+      selectedCategory,
+      selectedYear,
+      scrollPosition: window.scrollY
+    };
+    
+    try {
+      history.replaceState(currentState, '');
+      sessionStorage.setItem('casesPageState', JSON.stringify(currentState));
+    } catch (error) {
+      console.error('Failed to save cases page state:', error);
+    }
+  };
+  
+  // 恢复状态
+  const restoreState = (state: any, isRecentBack = false) => {
+    if (!state) return;
+    
+    try {
+      // 恢复过滤器状态
+      if (state.selectedCategory) {
+        setSelectedCategory(state.selectedCategory);
+      }
+      
+      if (state.selectedYear) {
+        setSelectedYear(state.selectedYear);
+      }
+      
+      // 延迟恢复滚动位置以确保内容已渲染
+      if (typeof state.scrollPosition === 'number' && !didRestoreScrollRef.current) {
+        didRestoreScrollRef.current = true;
+        
+        // 使用多层RAF嵌套来确保DOM完全更新后再滚动
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            // 始终使用平滑滚动效果
+            window.scrollTo({
+              top: state.scrollPosition,
+              behavior: 'smooth'
+            });
+          });
+        });
+      }
+    } catch (error) {
+      console.error('Failed to restore cases page state:', error);
+    }
+  };
+  
   // 初始化过滤器和项目
   useEffect(() => {
     setFilters(generateFilters(processedCases));
     setFilteredProjects(processedCases);
+    
+    // 控制浏览器的滚动恢复行为
+    if ('scrollRestoration' in history) {
+      // 禁用浏览器默认的滚动位置恢复，让我们自己控制
+      history.scrollRestoration = 'manual';
+    }
+    
+    if (initialLoadRef.current) {
+      initialLoadRef.current = false;
+      
+      // 首先尝试从history.state恢复
+      if (history.state) {
+        restoreState(history.state, false);
+      } 
+      // 否则从sessionStorage恢复
+      else {
+        const savedState = sessionStorage.getItem('casesPageState');
+        if (savedState) {
+          try {
+            const state = JSON.parse(savedState);
+            restoreState(state, false);
+            
+            // 同时更新history.state
+            history.replaceState(state, '');
+          } catch (error) {
+            console.error('Failed to parse saved cases page state:', error);
+          }
+        }
+      }
+    }
+    
+    return () => {
+      // 恢复默认行为
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'auto';
+      }
+    };
   }, []);
+  
+  // 监听页面滚动，持续更新状态
+  useEffect(() => {
+    let scrollTimeout: NodeJS.Timeout;
+    
+    const handleScroll = () => {
+      // 使用防抖，避免频繁更新
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        saveStateToHistory();
+      }, 200);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    // 清理函数
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(scrollTimeout);
+    };
+  }, [selectedCategory, selectedYear]);
+  
+  // 监听popstate事件 (浏览器后退/前进按钮)
+  useEffect(() => {
+    const handlePopState = (event: PopStateEvent) => {
+      // 检查是否是从案例详情页返回
+      const isBackFromDetail = sessionStorage.getItem('backFromCaseDetail') === 'true';
+      const backTimestamp = sessionStorage.getItem('backTimestamp');
+      
+      if (isBackFromDetail) {
+        // 清除标记
+        sessionStorage.removeItem('backFromCaseDetail');
+        sessionStorage.removeItem('backTimestamp');
+        
+        // 检查返回时间，如果刚刚返回就使用平滑滚动
+        const isRecentBack = backTimestamp ? (Date.now() - parseInt(backTimestamp)) < 1000 : false;
+        
+        // 稍微延迟恢复滚动位置，让页面有足够时间准备
+        setTimeout(() => {
+          if (event.state) {
+            // 确保滚动恢复更平滑
+            restoreState(event.state, isRecentBack);
+          } else {
+            // 尝试从sessionStorage获取
+            const savedState = sessionStorage.getItem('casesPageState');
+            if (savedState) {
+              try {
+                const state = JSON.parse(savedState);
+                restoreState(state, isRecentBack);
+              } catch (error) {
+                console.error('Failed to parse saved cases page state:', error);
+              }
+            }
+          }
+        }, 50); // 略微增加延迟以确保DOM更新
+      } else if (event.state) {
+        // 正常的浏览器后退/前进操作
+        restoreState(event.state, false);
+      }
+    };
+    
+    window.addEventListener('popstate', handlePopState);
+    
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, []);
+  
+  // 当用户离开页面或点击某个案例项时保存状态
+  useEffect(() => {
+    // 保存当前状态的函数
+    const saveState = () => {
+      saveStateToHistory();
+    };
+    
+    // 为所有案例链接添加点击事件监听器
+    const caseLinks = document.querySelectorAll(`a[href^="/${locale}/cases/"]`);
+    caseLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // 设置标记表示从案例列表页离开
+        sessionStorage.setItem('backFromCaseDetail', 'true');
+        sessionStorage.setItem('backTimestamp', Date.now().toString());
+        saveState();
+      });
+    });
+    
+    // 当用户离开页面时保存状态
+    window.addEventListener('beforeunload', saveState);
+    
+    // 清理函数
+    return () => {
+      caseLinks.forEach(link => {
+        link.removeEventListener('click', saveState);
+      });
+      window.removeEventListener('beforeunload', saveState);
+    };
+  }, [selectedCategory, selectedYear, locale]);
   
   // 过滤项目
   const filterProjects = () => {
@@ -127,6 +315,8 @@ export default function CasesPageClient({
   // 监听过滤器变化
   useEffect(() => {
     filterProjects();
+    // 更新状态
+    setTimeout(saveStateToHistory, 100);
   }, [selectedCategory, selectedYear]);
   
   // 重置过滤器

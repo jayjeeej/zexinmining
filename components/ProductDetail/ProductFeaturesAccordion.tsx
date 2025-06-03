@@ -62,20 +62,19 @@ export default function ProductFeaturesAccordion({
         <h2 className="text-3xl lg:text-4xl mb-10 text-left pb-4 font-headline">
           {isZh ? '特点与技术优势' : 'Features & Technical Advantages'}
         </h2>
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-4">
           {formattedFeatures.map((feature, index) => (
-            <div key={index} className="border-b border-gray-200 w-full pb-2">
+            <div key={index} className="border-b border-gray-200 w-full pb-2 max-w-lg mx-auto">
               {/* 特性标题作为手风琴标题 */}
               <button
                 onClick={() => toggleFeature(index)}
                 className="flex justify-between items-center w-full text-left py-4 focus:outline-none"
               >
-                <span className="text-lg md:text-xl text-gray-900 font-headline line-clamp-2">{feature.title}</span>
-                <span className={`ml-4 flex-shrink-0 text-2xl text-gray-500 transition-transform duration-300 ease-in-out ${
-                  openIndices.includes(index) ? 'transform rotate-180' : ''
-                }`}>
-                  {openIndices.includes(index) ? '−' : '+'}
-                </span>
+                <span className="text-lg md:text-xl text-gray-900 font-headline line-clamp-2 pr-6">{feature.title}</span>
+                <div className="ml-auto flex-shrink-0">
+                  <span className={`block w-4 border-t border-[#ff6633] ${openIndices.includes(index) ? 'rotate-45 translate-y-0.5' : ''} transition-transform duration-300`}></span>
+                  <span className={`block w-4 border-t border-[#ff6633] mt-1 ${openIndices.includes(index) ? '-rotate-45' : ''} transition-transform duration-300`}></span>
+                </div>
               </button>
               
               {/* 特性详细描述作为手风琴内容 */}

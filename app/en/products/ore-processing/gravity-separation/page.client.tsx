@@ -7,6 +7,7 @@ import ProductTabs from '@/components/ProductTabs';
 import { getBreadcrumbConfig } from '@/lib/navigation';
 import { getMineralProcessingCategories } from '@/lib/productCategories';
 import CardAnimationProvider from '@/components/CardAnimationProvider';
+import ScrollPositionMemoryWithLinks from '@/components/ScrollPositionMemoryWithLinks';
 
 // 产品元数据类型
 interface ProductMeta {
@@ -32,6 +33,17 @@ interface GravitySeparationPageClientProps {
 export default function GravitySeparationPageClient({ locale, initialData = [] }: GravitySeparationPageClientProps) {
   const isZh = locale === 'zh';
   const [products, setProducts] = useState<Product[]>(initialData);
+  
+  // 添加ScrollPositionMemoryWithLinks组件，实现位置记忆和平滑滚动
+  const memoryComponent = (
+    <ScrollPositionMemoryWithLinks
+      storageKey="gravitySeparationPageState"
+      backFromDetailKey="backFromProductDetail"
+      locale={locale}
+      linkPathPrefix="products/ore-processing/gravity-separation"
+      dependencies={[products.length]}
+    />
+  );
   
   // 在首次渲染时静默设置产品数据，不显示任何加载状态
   useEffect(() => {
@@ -97,6 +109,7 @@ export default function GravitySeparationPageClient({ locale, initialData = [] }
   return (
     <>
       <CardAnimationProvider />
+      {memoryComponent}
       <LayoutWithTransition
         locale={locale}
         breadcrumbItems={breadcrumbItems}

@@ -150,7 +150,7 @@ export default function ProductNavigation({
             {navSections.map((section, index) => (
               <li key={index}>
                 <a 
-                  className="block whitespace-nowrap border-b-2 border-transparent p-0 py-6 no-underline hover:border-primary transition-colors duration-200 font-text" 
+                  className="block whitespace-nowrap border-b-2 border-transparent p-0 py-9 no-underline hover:border-primary transition-colors duration-200 font-text" 
                   href={`#${section.id}`}
                   onClick={(e) => handleSmoothScroll(e, section.id)}
                 >

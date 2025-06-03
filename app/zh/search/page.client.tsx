@@ -150,10 +150,10 @@ export default function SearchResultsClient({ locale, query }: SearchResultsClie
             requestAnimationFrame(() => {
               // 记录恢复的位置
               console.log('Restoring scroll to:', state.scrollPosition);
-              // 根据来源决定是否使用平滑滚动
+              // 始终使用平滑滚动效果
               window.scrollTo({
                 top: state.scrollPosition,
-                behavior: isRecentBack ? 'smooth' : 'auto'
+                behavior: 'smooth'
               });
             });
           });
@@ -452,8 +452,8 @@ export default function SearchResultsClient({ locale, query }: SearchResultsClie
     setActiveTab(tab);
     setDisplayCount(Math.min(6, count));
     
-    // 滚动到页面顶部
-    window.scrollTo({ top: 0, behavior: 'auto' });
+    // 重置滚动位置到顶部
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     
     // 保存状态
     setTimeout(saveStateToHistory, 100);

@@ -133,7 +133,7 @@ export default function ClientHomePage({ locale }: { locale: string }) {
               </div>
             </div>
           </Container>
-          <div className="3xl:aspect-video 3xl:max-h-[95vh] 3xl:mx-auto 3xl:min-w-screen-container overflow-y-hidden"
+          <div className="3xl:aspect-video 3xl:max-h-[95vh] 3xl:mx-auto 3xl:min-w-screen-container overflow-y-hidden relative"
             itemScope
             itemType="https://schema.org/ImageObject"
           >
@@ -148,6 +148,7 @@ export default function ClientHomePage({ locale }: { locale: string }) {
               quality={90}
               unoptimized={true}
             />
+            <div className="absolute inset-0 bg-black opacity-30 pointer-events-none"></div>
             <meta itemProp="name" content="Zexin Mining Equipment Manufacturing" />
             <meta itemProp="description" content="Worker at Zexin Mining Equipment factory performing precision welding on large mining equipment components, with blue welding sparks illuminating the industrial environment" />
             <meta itemProp="representativeOfPage" content="true" />
@@ -238,11 +239,11 @@ export default function ClientHomePage({ locale }: { locale: string }) {
                     {content.epcmo.title}
                   </strong>
                   <div>
-                    <h2 className="text-white text-xl md:text-2xl xl:text-[32px] leading-tight text-balance" style={{ fontFamily: '"Sandvik Sans Display", sans-serif' }}>
-                      {content.epcmo.heading}
+                    <h2 className="text-white text-[36px] uppercase leading-tight text-balance" style={{ fontFamily: '"Sandvik Sans Display", sans-serif' }}>
+                      ONE-STOP MINING PROJECT SOLUTIONS
                     </h2>
                     <div className="prose mt-4 xl:prose-xl lg:mt-8 text-white">
-                      <p>{content.epcmo.description}</p>
+                      <p className="text-[16px] md:text-[20px]">We provide end-to-end professional services from engineering design, procurement, and construction to management and operations, creating lasting value and operational excellence for global mining clients through our rich experience and advanced technologies.</p>
                     </div>
                   </div>
                   <div>
@@ -316,7 +317,7 @@ export default function ClientHomePage({ locale }: { locale: string }) {
                     </div>
                     <div className="mt-auto">
                       <Link href={content.careersSustainability.sustainability.url} className="text-sm font-bold underline decoration-[#ff6633]">
-                        Browse processing solutions
+                        View processing solutions
                       </Link>
                     </div>
                   </div>

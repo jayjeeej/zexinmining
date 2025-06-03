@@ -105,10 +105,10 @@ export default function NewsClient({ locale, initialNewsItems, breadcrumbItems, 
         // 使用多层RAF嵌套来确保DOM完全更新后再滚动
         requestAnimationFrame(() => {
           requestAnimationFrame(() => {
-            // 根据来源决定是否使用平滑滚动
+            // 始终使用平滑滚动效果
             window.scrollTo({
               top: state.scrollPosition,
-              behavior: isRecentBack ? 'smooth' : 'auto'
+              behavior: 'smooth'
             });
           });
         });
@@ -378,7 +378,7 @@ export default function NewsClient({ locale, initialNewsItems, breadcrumbItems, 
     // 重置滚动位置到顶部
     window.scrollTo({
       top: 0,
-      behavior: 'auto'
+      behavior: 'smooth'
     });
     
     // 更新history状态

@@ -133,7 +133,7 @@ export default function ClientHomePage({ locale }: { locale: string }) {
               </div>
             </div>
           </Container>
-          <div className="3xl:aspect-video 3xl:max-h-[95vh] 3xl:mx-auto 3xl:min-w-screen-container overflow-y-hidden"
+          <div className="3xl:aspect-video 3xl:max-h-[95vh] 3xl:mx-auto 3xl:min-w-screen-container overflow-y-hidden relative"
             itemScope
             itemType="https://schema.org/ImageObject"
           >
@@ -148,6 +148,7 @@ export default function ClientHomePage({ locale }: { locale: string }) {
               quality={90}
               unoptimized={true}
             />
+            <div className="absolute inset-0 bg-black opacity-30 pointer-events-none"></div>
             <meta itemProp="name" content="泽鑫矿山设备生产场景" />
             <meta itemProp="description" content="泽鑫矿山设备工厂内工人正在进行大型矿山设备组件的精密焊接工作，蓝色焊接火花照亮工业环境" />
             <meta itemProp="representativeOfPage" content="true" />
@@ -238,11 +239,11 @@ export default function ClientHomePage({ locale }: { locale: string }) {
                     {content.epcmo.title}
                   </strong>
                   <div>
-                    <h2 className="text-white text-xl md:text-2xl xl:text-[32px] leading-tight text-balance" style={{ fontFamily: '"Sandvik Sans Display", sans-serif' }}>
-                      {content.epcmo.heading}
+                    <h2 className="text-white text-[36px] uppercase leading-tight text-balance" style={{ fontFamily: '"Sandvik Sans Display", sans-serif' }}>
+                      矿业项目一站式解决方案
                     </h2>
                     <div className="prose mt-4 xl:prose-xl lg:mt-8 text-white">
-                      <p>{content.epcmo.description}</p>
+                      <p className="text-[16px] md:text-[20px]">{content.epcmo.description}</p>
                     </div>
                   </div>
                   <div>
@@ -316,7 +317,7 @@ export default function ClientHomePage({ locale }: { locale: string }) {
                     </div>
                     <div className="mt-auto">
                       <Link href={content.careersSustainability.sustainability.url} className="text-sm font-bold underline decoration-[#ff6633]">
-                        浏览加工解决方案
+                        查看加工解决方案
                       </Link>
                     </div>
                   </div>

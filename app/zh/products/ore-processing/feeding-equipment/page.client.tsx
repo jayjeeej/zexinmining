@@ -7,6 +7,7 @@ import ProductTabs from '@/components/ProductTabs';
 import { getBreadcrumbConfig } from '@/lib/navigation';
 import { getMineralProcessingCategories } from '@/lib/productCategories';
 import CardAnimationProvider from '@/components/CardAnimationProvider';
+import ScrollPositionMemoryWithLinks from '@/components/ScrollPositionMemoryWithLinks';
 
 // 产品元数据类型
 interface ProductMeta {
@@ -32,6 +33,17 @@ interface FeedingEquipmentPageClientProps {
 export default function FeedingEquipmentPageClient({ locale, initialData = [] }: FeedingEquipmentPageClientProps) {
   const isZh = locale === 'zh';
   const [products, setProducts] = useState<Product[]>(initialData);
+
+  // 添加ScrollPositionMemoryWithLinks组件，实现位置记忆和平滑滚动
+  const memoryComponent = (
+    <ScrollPositionMemoryWithLinks
+      storageKey="feedingEquipmentPageState"
+      backFromDetailKey="backFromProductDetail"
+      locale={locale}
+      linkPathPrefix="products/ore-processing/feeding-equipment"
+      dependencies={[products.length]}
+    />
+  );
 
   // 在首次渲染时静默设置产品数据，不显示任何加载状态
   useEffect(() => {
@@ -97,62 +109,63 @@ export default function FeedingEquipmentPageClient({ locale, initialData = [] }:
   return (
     <>
       <CardAnimationProvider />
-    <LayoutWithTransition
-      locale={locale}
-      breadcrumbItems={breadcrumbItems}
-      title={isZh ? "给料设备" : "Feeding Equipment"} 
-      description={pageDescription}
-      productTabs={productTabsElement}
-    >
-      <section 
-        className="mb-16 lg:mb-32 bg-gray-50 py-16 lg:py-32 last-of-type:mb-0" 
-        data-filter-content="" 
-        data-id="feeding-equipment-filter" 
+      {memoryComponent}
+      <LayoutWithTransition
+        locale={locale}
+        breadcrumbItems={breadcrumbItems}
+        title={isZh ? "给料设备" : "Feeding Equipment"} 
+        description={pageDescription}
+        productTabs={productTabsElement}
       >
-        <div className="contain">
-          <div className="grid sm:gap-x-8 xl:grid-cols-3"> 
-            <div aria-live="polite" aria-atomic="true" className="col-span-4 xl:col-span-3">
-              <p className="sr-only" aria-live="polite">
-                {`${products?.length || 0} ${isZh ? '个结果' : 'results'}`}
-              </p>
-              
-              {/* 产品卡片列表区域 - 提前渲染所有卡片，避免任何显示加载状态 */}
-              <div className="product-grid-container">
-                  <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                  {displayProducts.map(product => (
-                    <li key={product.id} className={product.id.startsWith('placeholder') ? 'opacity-0' : ''}>
-                        <ProductFilterCard 
-                          id={product.id}
-                          title={product.title}
-                          imageSrc={product.imageSrc}
-                          productCategory={product.productCategory}
-                          meta={product.meta}
-                          href={product.href}
-                        />
-                      </li>
-                    ))}
-                  </ul>
+        <section 
+          className="mb-16 lg:mb-32 bg-gray-50 py-16 lg:py-32 last-of-type:mb-0" 
+          data-filter-content="" 
+          data-id="feeding-equipment-filter" 
+        >
+          <div className="contain">
+            <div className="grid sm:gap-x-8 xl:grid-cols-3"> 
+              <div aria-live="polite" aria-atomic="true" className="col-span-4 xl:col-span-3">
+                <p className="sr-only" aria-live="polite">
+                  {`${products?.length || 0} ${isZh ? '个结果' : 'results'}`}
+                </p>
+                
+                {/* 产品卡片列表区域 - 提前渲染所有卡片，避免任何显示加载状态 */}
+                <div className="product-grid-container">
+                    <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    {displayProducts.map(product => (
+                      <li key={product.id} className={product.id.startsWith('placeholder') ? 'opacity-0' : ''}>
+                          <ProductFilterCard 
+                            id={product.id}
+                            title={product.title}
+                            imageSrc={product.imageSrc}
+                            productCategory={product.productCategory}
+                            meta={product.meta}
+                            href={product.href}
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      
-      {/* 预加载插入脚本，确保下次导航时能快速显示图片 */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.addEventListener('load', function() {
-              try {
-                ${products.map(p => `
-                  (new Image()).src = "${p.imageSrc}";
-                `).join('')}
-              } catch(e) {}
-            });
-          `
-        }}
-      />
-    </LayoutWithTransition>
+        </section>
+        
+        {/* 预加载插入脚本，确保下次导航时能快速显示图片 */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.addEventListener('load', function() {
+                try {
+                  ${products.map(p => `
+                    (new Image()).src = "${p.imageSrc}";
+                  `).join('')}
+                } catch(e) {}
+              });
+            `
+          }}
+        />
+      </LayoutWithTransition>
     </>
   );
 } 

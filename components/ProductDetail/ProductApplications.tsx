@@ -23,20 +23,14 @@ const ProductApplications: React.FC<ProductApplicationsProps> = ({ applications,
   
   const isZh = locale === 'zh';
 
-  // 根据产品特性生成副标题
-  const subtitle = isZh 
-    ? "专为您的选矿需求设计的高效解决方案" 
-    : "Efficient solutions designed for your mineral processing needs";
-
   return (
     <>
       <section id="applications" className="mb-16 lg:mb-32 scroll-mt-32">
         <div className="contain">
           <div className="flex flex-col lg:flex-row gap-8">
-            {/* 左侧标题和副标题 */}
+            {/* 左侧标题 */}
             <div className="lg:w-1/3">
               <h2 className="text-3xl lg:text-4xl mb-4 font-headline">{isZh ? '应用领域' : 'Applications'}</h2>
-              <p className="text-base text-gray-600 mb-6 font-text">{subtitle}</p>
               {/* 工艺流程图 */}
               {applicationsImage && (
                 <div className="mt-4">
