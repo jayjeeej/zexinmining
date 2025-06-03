@@ -38,7 +38,9 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const userAgent = request.headers.get('user-agent') || '';
   const isBaiduBot = userAgent.includes('Baiduspider') || userAgent.includes('baidu');
+  const is360Bot = userAgent.includes('360Spider');
   const isSearchBot = isBaiduBot || 
+                     is360Bot ||
                      userAgent.includes('Googlebot') || 
                      userAgent.includes('bingbot') || 
                      userAgent.includes('YandexBot');
@@ -66,8 +68,9 @@ export function middleware(request: NextRequest) {
   // 如果是搜索引擎爬虫访问根路径
   if (isSearchBot && pathname === '/') {
     console.log('Search bot accessing root path:', pathname);
-    // 百度爬虫默认返回中文版，其他爬虫返回英文版
-    if (isBaiduBot) {
+    // 百度爬虫和360爬虫默认返回中文版，其他爬虫返回英文版
+    if (isBaiduBot || is360Bot) {
+      console.log('Baidu/360 bot detected, rewriting to /zh');
       return NextResponse.rewrite(new URL('/zh', request.url));
     } else {
       return NextResponse.rewrite(new URL('/en', request.url));
