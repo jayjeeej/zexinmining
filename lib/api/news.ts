@@ -135,9 +135,9 @@ export async function getNews({
   }
 }
 
-// 通过ID获取新闻
+// 通过ID或slug获取新闻
 export async function getNewsById(
-  slug: string, 
+  idOrSlug: string, 
   locale: string,
   options: GetNewsByIdOptions = {}
 ): Promise<NewsItem | NewsItem[] | null> {
@@ -146,15 +146,19 @@ export async function getNewsById(
   const newsItems = await readNewsData(locale);
   
   if (related) {
-      // 获取当前新闻
-      const currentNews = newsItems.find(news => news.slug === slug);
+      // 获取当前新闻（先通过slug匹配，再通过id匹配）
+      const currentNews = newsItems.find(news => 
+        news.slug === idOrSlug || news.id === idOrSlug
+      );
       
       if (!currentNews) {
         return [];
       }
       
       // 排除当前新闻
-      const otherNews = newsItems.filter(news => news.slug !== slug);
+      const otherNews = newsItems.filter(news => 
+        news.slug !== idOrSlug && news.id !== idOrSlug
+      );
       
       // 优化推荐逻辑：
       // 1. 首先优先选择同类别的新闻
@@ -185,8 +189,10 @@ export async function getNewsById(
         .map(item => item.news);
   }
   
-  // 返回单个新闻
-  return newsItems.find(news => news.slug === slug) || null;
+  // 返回单个新闻（先通过slug匹配，再通过id匹配）
+  return newsItems.find(news => 
+    news.slug === idOrSlug || news.id === idOrSlug
+  ) || null;
   } catch (error) {
     console.error('Error in getNewsById:', error);
     return null;

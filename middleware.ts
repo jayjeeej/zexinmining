@@ -19,29 +19,64 @@ function getPreferredLocale(request: NextRequest): string {
   return 'en';
 }
 
+// 检查是否是产品页面（有重定向错误的页面）
+function isProductPage(pathname: string): boolean {
+  const productPatterns = [
+    '/zh/products/ore-processing/classification-equipment/',
+    '/zh/products/mineral-processing-solutions/',
+    '/zh/products/ore-processing/grinding-equipment/',
+    '/zh/products/ore-processing/stationary-crushers/',
+    '/zh/products/ore-processing/vibrating-screens/',
+    '/zh/products/ore-processing/washing-equipment/',
+    '/zh/products/ore-processing/magnetic-separator/'
+  ];
+  
+  return productPatterns.some(pattern => pathname.startsWith(pattern));
+}
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const userAgent = request.headers.get('user-agent') || '';
   const isBaiduBot = userAgent.includes('Baiduspider') || userAgent.includes('baidu');
+  const isSearchBot = isBaiduBot || 
+                     userAgent.includes('Googlebot') || 
+                     userAgent.includes('bingbot') || 
+                     userAgent.includes('YandexBot');
   
-  // 检查是否是百度验证文件
+  // 检查是否是产品页面（有重定向错误的页面）
+  if (isProductPage(pathname)) {
+    console.log('Product page detected, skipping middleware:', pathname);
+    // 为这些页面添加特殊标记，防止在next.config.js中再次重定向
+    const response = NextResponse.next();
+    response.headers.set('x-no-redirect', 'true');
+    return response;
+  }
+  
+  // 检查是否是搜索引擎验证文件
   if (pathname.startsWith('/baidu_verify_') || 
       pathname.includes('baidu-site-verification') || 
       pathname.includes('shenma-site-verification') ||
-      pathname.includes('sogousiteverification')) {
+      pathname.includes('sogousiteverification') ||
+      pathname.includes('BingSiteAuth')) {
     console.log('Search engine verification file requested:', pathname);
     // 直接放行验证文件请求，不做任何重定向
     return NextResponse.next();
   }
   
-  // 如果是百度爬虫且访问首页，直接返回首页内容而不重定向
-  if (isBaiduBot && (pathname === '/' || pathname === '/zh' || pathname === '/en')) {
-    console.log('Baidu spider accessing homepage:', pathname);
-    // 如果是根路径，不进行重定向
-    if (pathname === '/') {
-      // 默认返回中文版，因为百度主要抓取中文内容
+  // 如果是搜索引擎爬虫访问根路径
+  if (isSearchBot && pathname === '/') {
+    console.log('Search bot accessing root path:', pathname);
+    // 百度爬虫默认返回中文版，其他爬虫返回英文版
+    if (isBaiduBot) {
       return NextResponse.rewrite(new URL('/zh', request.url));
+    } else {
+      return NextResponse.rewrite(new URL('/en', request.url));
     }
+  }
+  
+  // 如果是搜索引擎爬虫访问语言路径，直接返回内容
+  if (isSearchBot && (pathname === '/zh' || pathname === '/en')) {
+    console.log('Search bot accessing language path:', pathname);
     return NextResponse.next();
   }
   

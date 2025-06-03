@@ -33,13 +33,26 @@ export async function generateStaticParams() {
     
     // 获取所有新闻文件
     const newsFiles = fs.readdirSync(basePath)
-      .filter((file: string) => file.endsWith('.json'))
-      .map((file: string) => file.replace('.json', ''));
+      .filter((file: string) => file.endsWith('.json'));
     
-    // 为每个新闻ID添加参数
-    const params = newsFiles.map((newsId: string) => ({
-      newsId
-    }));
+    // 读取每个文件获取slug
+    const params = [];
+    for (const file of newsFiles) {
+      try {
+        const filePath = path.join(basePath, file);
+        const content = fs.readFileSync(filePath, 'utf8');
+        const newsData = JSON.parse(content);
+        
+        // 使用slug作为路由参数，如果没有slug则使用文件名
+        const slug = newsData.slug || file.replace('.json', '');
+        
+        params.push({
+          newsId: slug
+        });
+      } catch (error) {
+        console.error(`Error processing news file ${file}:`, error);
+      }
+    }
     
     console.log(`Generated ${params.length} static paths for English news`);
     return params;
@@ -74,7 +87,7 @@ export async function generateMetadata({
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.zexinmining.com';
   
   // 构建规范链接URL
-  const canonicalUrl = `/${locale}/news/${newsId}`;
+  const canonicalUrl = `/${locale}/news/${newsItem.slug || newsId}`;
 
   // 准备OG图像数组
   const ogImages = [
@@ -111,8 +124,8 @@ export async function generateMetadata({
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'zh-CN': `/zh/news/${newsId}`,
-        'en-US': `/en/news/${newsId}`,
+        'zh-CN': `/zh/news/${newsItem.slug || newsId}`,
+        'en-US': `/en/news/${newsItem.slug || newsId}`,
       },
     },
     openGraph: {

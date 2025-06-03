@@ -58,6 +58,60 @@ async function getAllProductIds(): Promise<{ id: string, locale: string, lastMod
   return results;
 }
 
+// 获取所有新闻IDs
+async function getAllNewsIds(): Promise<{ id: string, slug: string, locale: string, lastModified: Date }[]> {
+  const results: { id: string, slug: string, locale: string, lastModified: Date }[] = [];
+  const locales = ['en', 'zh'];
+  
+  try {
+    // 遍历语言文件夹
+    for (const locale of locales) {
+      const newsDir = path.join(process.cwd(), 'public', 'data', locale, 'news');
+      
+      try {
+        // 检查目录是否存在
+        const dirExists = await fs.access(newsDir).then(() => true).catch(() => false);
+        if (!dirExists) {
+          console.error(`News directory not found for locale ${locale}: ${newsDir}`);
+          continue;
+        }
+        
+        const files = await fs.readdir(newsDir);
+        
+        // 只处理JSON文件
+        const jsonFiles = files.filter(file => file.endsWith('.json'));
+        
+        for (const file of jsonFiles) {
+          try {
+            const filePath = path.join(newsDir, file);
+            const stats = await fs.stat(filePath);
+            
+            // 读取文件内容获取slug
+            const fileContent = await fs.readFile(filePath, 'utf8');
+            const newsData = JSON.parse(fileContent);
+            const slug = newsData.slug || file.replace('.json', '');
+            
+            results.push({
+              id: file.replace('.json', ''),
+              slug,
+              locale,
+              lastModified: stats.mtime
+            });
+          } catch (fileError) {
+            console.error(`Error processing news file ${file}:`, fileError);
+          }
+        }
+      } catch (localeError) {
+        console.error(`Error reading news directory for locale ${locale}:`, localeError);
+      }
+    }
+  } catch (error) {
+    console.error('Error generating news sitemap entries:', error);
+  }
+  
+  return results;
+}
+
 // 获取产品数据，包括类别信息
 async function getProductWithCategory(id: string, locale: string): Promise<any> {
   try {
@@ -104,6 +158,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'about',
     'contact',
     'services',
+    'news', // 添加新闻列表页
   ];
   
   for (const page of corePages) {
@@ -177,6 +232,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.7,
       });
     }
+  }
+  
+  // 添加新闻详情页面
+  const newsEntries = await getAllNewsIds();
+  for (const news of newsEntries) {
+    sitemapEntries.push({
+      url: `${baseUrl}/${news.locale}/news/${news.slug}`,
+      lastModified: news.lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    });
   }
   
   return sitemapEntries;

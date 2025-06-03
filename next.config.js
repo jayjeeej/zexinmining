@@ -133,19 +133,14 @@ const nextConfig = {
             value: 'http',
           }
         ],
-        // 百度验证文件不重定向
+        // 排除已经是HTTPS的请求，避免循环重定向
         missing: [
           {
-            type: 'query',
-            key: 'baidu-site-verification',
+            type: 'header',
+            key: 'x-forwarded-proto',
+            value: 'https',
           }
         ]
-      },
-      // 百度验证文件路径不重定向
-      {
-        source: '/baidu_verify_:code',
-        destination: '/baidu_verify_:code',
-        permanent: false,
       },
       // 非www到www重定向（将不带www的版本重定向到带www的版本）
       {
@@ -158,19 +153,112 @@ const nextConfig = {
             value: 'zexinmining.com',
           }
         ],
-        // 百度验证文件不重定向
+        // 排除已经是www的请求，避免循环重定向
         missing: [
           {
-            type: 'query',
-            key: 'baidu-site-verification',
+            type: 'host',
+            value: 'www.zexinmining.com',
           }
         ]
       },
-      // 百度验证文件特殊处理
+      // 百度验证文件特殊处理 - 直接提供文件内容，不进行重定向
       {
-        source: '/baidu_verify_:code',
-        destination: '/api/baidu-verify/:code',
+        source: '/baidu_verify_codeva-nbtCgXOQHG.html',
+        destination: '/baidu_verify_codeva-nbtCgXOQHG.html',
         permanent: false,
+      },
+      
+      // 修复产品页面重定向错误 - 确保这些URL不会被其他重定向规则影响
+      {
+        source: '/zh/products/ore-processing/classification-equipment/',
+        destination: '/zh/products/ore-processing/classification-equipment/',
+        permanent: false,
+        // 添加特殊条件，防止循环重定向
+        has: [
+          {
+            type: 'header',
+            key: 'x-no-redirect',
+            value: '(?!true)',
+          }
+        ]
+      },
+      {
+        source: '/zh/products/mineral-processing-solutions/',
+        destination: '/zh/products/mineral-processing-solutions/',
+        permanent: false,
+        // 添加特殊条件，防止循环重定向
+        has: [
+          {
+            type: 'header',
+            key: 'x-no-redirect',
+            value: '(?!true)',
+          }
+        ]
+      },
+      {
+        source: '/zh/products/ore-processing/grinding-equipment/',
+        destination: '/zh/products/ore-processing/grinding-equipment/',
+        permanent: false,
+        // 添加特殊条件，防止循环重定向
+        has: [
+          {
+            type: 'header',
+            key: 'x-no-redirect',
+            value: '(?!true)',
+          }
+        ]
+      },
+      {
+        source: '/zh/products/ore-processing/stationary-crushers/',
+        destination: '/zh/products/ore-processing/stationary-crushers/',
+        permanent: false,
+        // 添加特殊条件，防止循环重定向
+        has: [
+          {
+            type: 'header',
+            key: 'x-no-redirect',
+            value: '(?!true)',
+          }
+        ]
+      },
+      {
+        source: '/zh/products/ore-processing/vibrating-screens/',
+        destination: '/zh/products/ore-processing/vibrating-screens/',
+        permanent: false,
+        // 添加特殊条件，防止循环重定向
+        has: [
+          {
+            type: 'header',
+            key: 'x-no-redirect',
+            value: '(?!true)',
+          }
+        ]
+      },
+      {
+        source: '/zh/products/ore-processing/washing-equipment/',
+        destination: '/zh/products/ore-processing/washing-equipment/',
+        permanent: false,
+        // 添加特殊条件，防止循环重定向
+        has: [
+          {
+            type: 'header',
+            key: 'x-no-redirect',
+            value: '(?!true)',
+          }
+        ]
+      },
+      {
+        source: '/zh/products/ore-processing/magnetic-separator/',
+        destination: '/zh/products/ore-processing/magnetic-separator/',
+        permanent: false,
+        // 添加特殊条件，防止循环重定向
+        has: [
+          {
+            type: 'header',
+            key: 'x-no-redirect',
+            value: '(?!true)',
+          }
+        ]
       }
     ]
   },
