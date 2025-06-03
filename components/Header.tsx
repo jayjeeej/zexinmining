@@ -834,6 +834,7 @@ export default function Header({ logo, items }: HeaderProps) {
   const [isSearchOverlayOpen, setIsSearchOverlayOpen] = useState(false);
   const [openMenuIndex, setOpenMenuIndex] = useState<number | null>(null);
   const headerRef = useRef<HTMLElement>(null);
+  const isInitialRender = useRef(true);
   
   const locale = useLocale();
   const currentPath = usePathname();
@@ -848,12 +849,74 @@ export default function Header({ logo, items }: HeaderProps) {
     }
   }, []);
 
-  // 监听全局点击事件
+  // 监听浏览器返回按钮事件，恢复菜单状态
+  useEffect(() => {
+    const handlePopState = () => {
+      if (typeof window !== 'undefined') {
+        // 检查是否是从菜单跳转后返回
+        const wasMenuOpen = sessionStorage.getItem('mobileMenuWasOpen') === 'true';
+        const menuExitTimestamp = sessionStorage.getItem('menuExitTimestamp');
+        
+        // 如果是从菜单跳转后返回，且返回时间在合理范围内（30秒内）
+        if (wasMenuOpen && menuExitTimestamp) {
+          const now = Date.now();
+          const exitTime = parseInt(menuExitTimestamp, 10);
+          
+          // 只有在短时间内返回才恢复菜单状态
+          if (now - exitTime < 30000) {
+            setMobileMenuOpen(true);
+            document.body.classList.add('overflow-hidden');
+            sessionStorage.removeItem('menuExitTimestamp');
+          } else {
+            // 如果返回时间超过阈值，清除状态
+            sessionStorage.removeItem('mobileMenuWasOpen');
+            sessionStorage.removeItem('menuExitTimestamp');
+          }
+        }
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, []);
+  
+  // 在页面加载时检查是否需要恢复菜单状态
+  useEffect(() => {
+    if (typeof window !== 'undefined' && isInitialRender.current) {
+      isInitialRender.current = false;
+      
+      // 检查是否是从菜单跳转后返回
+      const wasMenuOpen = sessionStorage.getItem('mobileMenuWasOpen') === 'true';
+      const menuExitTimestamp = sessionStorage.getItem('menuExitTimestamp');
+      
+      // 如果是从菜单跳转后返回，且返回时间在合理范围内（30秒内）
+      if (wasMenuOpen && menuExitTimestamp) {
+        const now = Date.now();
+        const exitTime = parseInt(menuExitTimestamp, 10);
+        
+        // 只有在短时间内返回才恢复菜单状态
+        if (now - exitTime < 30000) {
+          setMobileMenuOpen(true);
+          document.body.classList.add('overflow-hidden');
+        } else {
+          // 如果返回时间超过阈值，清除状态
+          sessionStorage.removeItem('mobileMenuWasOpen');
+          sessionStorage.removeItem('menuExitTimestamp');
+        }
+      }
+    }
+  }, []);
+
+  // 监听全局点击事件，检测从菜单链接点击离开的情况
   useEffect(() => {
     // 捕获阶段监听
     const captureListener = (e: MouseEvent) => {
-      if (e.target instanceof HTMLAnchorElement) {
-        console.log('捕获阶段检测到链接点击:', e.target.href);
+      if (e.target instanceof HTMLAnchorElement && isMobileMenuOpen) {
+        // 如果菜单打开状态下点击了链接，保存状态
+        sessionStorage.setItem('mobileMenuWasOpen', 'true');
+        sessionStorage.setItem('menuExitTimestamp', Date.now().toString());
       }
     };
     
@@ -874,7 +937,7 @@ export default function Header({ logo, items }: HeaderProps) {
       document.removeEventListener('click', captureListener, true);
       document.removeEventListener('click', bubbleListener, false);
     };
-  }, []);
+  }, [isMobileMenuOpen]);
 
   // 使用useEffect保存搜索框状态到sessionStorage
   useEffect(() => {
@@ -1043,6 +1106,8 @@ export default function Header({ logo, items }: HeaderProps) {
       document.body.classList.remove('overflow-hidden');
       // 关闭子菜单
       setOpenMenuIndex(null);
+      // 清除菜单状态
+      sessionStorage.removeItem('mobileMenuWasOpen');
     }
   };
 
@@ -1051,6 +1116,8 @@ export default function Header({ logo, items }: HeaderProps) {
     setMobileMenuOpen(false);
     setOpenMenuIndex(null);
     document.body.classList.remove('overflow-hidden');
+    // 清除菜单状态
+    sessionStorage.removeItem('mobileMenuWasOpen');
   };
 
   return (
