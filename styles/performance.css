@@ -358,13 +358,13 @@ html.animation-ready span[class*="transition-transform"] {
 }
 
 /* 确保导航后不被pageStabilizer.js覆盖 */
-html.animation-ready:not(.body.page-transitioning) .transition-all.duration-300.ease-in-out.overflow-hidden {
+html.animation-ready:not(.body.page-transitioning):not(.bfcache-restored) .transition-all.duration-300.ease-in-out.overflow-hidden {
   transition-property: max-height, opacity !important;
   transition-duration: 0.3s !important;
   transition-timing-function: ease-in-out !important;
 }
 
-html.animation-ready:not(.body.page-transitioning) span[class*="transition-transform"] {
+html.animation-ready:not(.body.page-transitioning):not(.bfcache-restored) span[class*="transition-transform"] {
   transition-property: transform !important;
   transition-duration: 0.3s !important;
   transition-timing-function: ease-in-out !important;
@@ -670,27 +670,6 @@ html .search-cancel-button {
   animation: mobile-fade-in 350ms cubic-bezier(0.2, 0.6, 0.35, 1) forwards;
 }
 
-/* 禁用动画 - 用于导航返回时直接显示菜单 */
-.mobile-menu.no-animation {
-  animation: none !important;
-  transition: none !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: translateY(0) !important;
-}
-
-.mobile-menu.no-animation .mobile-menu-content {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-  transition: none !important;
-}
-
-.mobile-menu.no-animation li {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-  transition: none !important;
-}
-
 /* 防止移动菜单产生CLS */
 @media (min-width: 1024px) {
   .mobile-menu {
@@ -802,4 +781,39 @@ html.animation-ready .table-animation-container.expanding {
   height: auto;
   max-height: none;
   transition: height 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* bfcache恢复样式 */
+html.bfcache-restored * {
+  animation-play-state: paused !important;
+  transition: none !important;
+}
+
+html.bfcache-restored .mobile-menu.open,
+html.bfcache-restored .search-dropdown.open,
+html.bfcache-restored .search-overlay-bg.open {
+  animation: none !important;
+  transition: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+/* 确保bfcache恢复时不会有闪烁 */
+.bfcache-restore {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* 确保导航后不被pageStabilizer.js覆盖 */
+html.animation-ready:not(.body.page-transitioning):not(.bfcache-restored) .transition-all.duration-300.ease-in-out.overflow-hidden {
+  transition-property: max-height, opacity !important;
+  transition-duration: 0.3s !important;
+  transition-timing-function: ease-in-out !important;
+}
+
+html.animation-ready:not(.body.page-transitioning):not(.bfcache-restored) span[class*="transition-transform"] {
+  transition-property: transform !important;
+  transition-duration: 0.3s !important;
+  transition-timing-function: ease-in-out !important;
 }

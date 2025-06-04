@@ -9,6 +9,7 @@ import { useLocale } from 'next-intl';
 import { languages, HeaderNavItem, HeaderLogo, HeaderSubItem, HeaderColumn } from '../lib/navigation';
 import OptimizedImage from './layouts/OptimizedImage';
 import CardAnimationProvider from './CardAnimationProvider';
+import CustomMobileMenu from './MobileMenu';
 
 // Debounce function (can be moved to a utils file later)
 function debounce<T extends (...args: any[]) => any>(func: T, wait: number): (...args: Parameters<T>) => void {
@@ -140,9 +141,6 @@ const MobileMenu = React.memo(({
   // 获取当前路径用于语言切换
   const currentPath = usePathname();
   
-  // 添加初始渲染标记，避免导航返回时的动画
-  const [isInitialRender, setIsInitialRender] = useState(true);
-  
   // 状态用于跟踪当前展开的菜单层级结构
   const [activeMenuStack, setActiveMenuStack] = useState<Array<{
     itemIndex: number, 
@@ -214,12 +212,6 @@ const MobileMenu = React.memo(({
           console.error('Failed to parse saved menu stack', e);
         }
       }
-      
-      // 第一次渲染完成后，将初始渲染标记设为false
-      // 使用requestAnimationFrame确保在下一次重绘前完成
-      requestAnimationFrame(() => {
-        setIsInitialRender(false);
-      });
     }
   }, []);
   
@@ -284,27 +276,17 @@ const MobileMenu = React.memo(({
   
   const { items: currentItems, title: currentTitle, parentUrl: currentParentUrl } = getCurrentItems();
   
-  // 确定菜单CSS类，如果是初次渲染并且应该打开，则添加no-animation类
-  const menuClassNames = `mobile-menu fixed left-0 z-20 w-full bg-white ${
-    isOpen ? 'open' : ''
-  } ${isInitialRender && isOpen ? 'no-animation' : ''}`;
-  
-  // 确定内容CSS类，在初次渲染时禁用内容动画
-  const contentClassNames = `contain pb-8 pt-8 px-4 mobile-menu-content overflow-y-auto max-h-[calc(100dvh_-_90px)] ${
-    isInitialRender && isOpen ? 'no-animation' : ''
-  }`;
-  
   return (
     <nav 
       ref={menuRef}
-      className={menuClassNames}
+      className={`mobile-menu fixed left-0 z-20 w-full bg-white ${isOpen ? 'open' : ''}`}
       style={{ top: '90px' }}
       role="navigation"
       aria-label={locale === 'zh' ? "移动端导航菜单" : "Mobile navigation menu"}
       itemScope
       itemType="https://schema.org/SiteNavigationElement"
     >
-      <div className={contentClassNames}>
+      <div className="contain pb-8 pt-8 px-4 mobile-menu-content overflow-y-auto max-h-[calc(100dvh_-_90px)]">
         {/* 返回按钮 */}
         {menuLevel > 0 && (
             <button 
@@ -342,7 +324,7 @@ const MobileMenu = React.memo(({
         
         {/* 主菜单 */}
         {menuLevel === 0 && (
-          <ul className={`list-none p-0 m-0 ${isInitialRender && isOpen ? 'no-animation' : ''}`} role="menu">
+          <ul className="list-none p-0 m-0" role="menu">
             {(currentItems as HeaderNavItem[]).map((item, index) => (
               <li key={index} className="mb-6" role="menuitem" itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
                 <div className="flex w-full justify-between">
@@ -372,8 +354,8 @@ const MobileMenu = React.memo(({
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                       </button>
-                  )}
-                </div>
+                                      )}
+                                    </div>
               </li>
             ))}
           </ul>
@@ -381,7 +363,7 @@ const MobileMenu = React.memo(({
         
         {/* 子菜单项 */}
         {menuLevel > 0 && (
-          <ul className={`list-none p-0 m-0 ${isInitialRender && isOpen ? 'no-animation' : ''}`} role="menu">
+          <ul className="list-none p-0 m-0" role="menu">
             {(currentItems as HeaderSubItem[]).map((item, index) => {
               // 检查是否为分类标题 (没有URL或URL与父级相同)
               const isCategory = !item.url || item.url === '#' || item.url === currentParentUrl || item.noLink;
@@ -905,9 +887,6 @@ export default function Header({ logo, items }: HeaderProps) {
   const currentPath = usePathname();
   const router = useRouter();
   
-  // 上一个路径的引用
-  const previousPathRef = useRef(currentPath);
-  
   // 检测滚动条宽度
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -916,46 +895,6 @@ export default function Header({ logo, items }: HeaderProps) {
       document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
     }
   }, []);
-
-  // 监听路由变化以恢复菜单状态
-  useEffect(() => {
-    // 初始化时恢复菜单状态
-    if (typeof window !== 'undefined') {
-      const restoreMobileMenuState = () => {
-        const savedMobileMenuState = sessionStorage.getItem('mobileMenuOpen');
-        if (savedMobileMenuState === 'true') {
-          // 直接设置状态，不触发动画
-          setMobileMenuOpen(true);
-          document.body.classList.add('overflow-hidden');
-        }
-      };
-      
-      // 首次加载时恢复菜单状态
-      restoreMobileMenuState();
-    }
-  }, []);
-  
-  // 使用currentPath监听路由变化
-  useEffect(() => {
-    // 如果路径变化了，说明发生了导航
-    if (previousPathRef.current !== currentPath) {
-      // 路由变化完成后，检查并恢复菜单状态
-      const restoreMobileMenuState = () => {
-        const savedMobileMenuState = sessionStorage.getItem('mobileMenuOpen');
-        if (savedMobileMenuState === 'true') {
-          // 直接设置状态，不触发动画
-          setMobileMenuOpen(true);
-          document.body.classList.add('overflow-hidden');
-        }
-      };
-      
-      // 短暂延迟确保DOM已完全更新
-      setTimeout(restoreMobileMenuState, 100);
-      
-      // 更新上一个路径
-      previousPathRef.current = currentPath;
-    }
-  }, [currentPath]);
 
   // 监听全局点击事件
   useEffect(() => {
@@ -1172,6 +1111,68 @@ export default function Header({ logo, items }: HeaderProps) {
     }
   };
 
+  // 恢复移动菜单状态
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // 从sessionStorage恢复状态
+      const savedMobileMenuState = sessionStorage.getItem('mobileMenuOpen');
+      if (savedMobileMenuState === 'true') {
+        setMobileMenuOpen(true);
+        document.body.classList.add('overflow-hidden');
+      }
+      
+      // 监听恢复事件
+      const handleRestoreMobileMenu = (event: Event) => {
+        const customEvent = event as CustomEvent;
+        if (customEvent.detail?.open) {
+          console.log('Header组件收到恢复菜单事件');
+          setMobileMenuOpen(true);
+          document.body.classList.add('overflow-hidden');
+        }
+      };
+      
+      // 监听搜索覆盖层恢复事件
+      const handleRestoreSearchOverlay = (event: Event) => {
+        const customEvent = event as CustomEvent;
+        if (customEvent.detail?.open) {
+          console.log('Header组件收到恢复搜索覆盖层事件');
+          setIsSearchOverlayOpen(true);
+          document.body.classList.add('overflow-hidden');
+        }
+      };
+      
+      // 监听页面显示事件，用于bfcache恢复
+      const handlePageShow = (event: PageTransitionEvent) => {
+        if (event.persisted) {
+          console.log('页面从bfcache恢复 - Header组件');
+          // 从sessionStorage恢复菜单状态
+          const savedMobileMenuState = sessionStorage.getItem('mobileMenuOpen');
+          if (savedMobileMenuState === 'true') {
+            setMobileMenuOpen(true);
+            document.body.classList.add('overflow-hidden');
+          }
+          
+          // 从sessionStorage恢复搜索覆盖层状态
+          const savedSearchState = sessionStorage.getItem('searchOverlayOpen');
+          if (savedSearchState === 'true') {
+            setIsSearchOverlayOpen(true);
+            document.body.classList.add('overflow-hidden');
+          }
+        }
+      };
+      
+      window.addEventListener('restoreMobileMenu', handleRestoreMobileMenu);
+      window.addEventListener('restoreSearchOverlay', handleRestoreSearchOverlay);
+      window.addEventListener('pageshow', handlePageShow);
+      
+      return () => {
+        window.removeEventListener('restoreMobileMenu', handleRestoreMobileMenu);
+        window.removeEventListener('restoreSearchOverlay', handleRestoreSearchOverlay);
+        window.removeEventListener('pageshow', handlePageShow);
+      };
+    }
+  }, []);
+
   return (
     <>
       <CardAnimationProvider />
@@ -1300,7 +1301,7 @@ export default function Header({ logo, items }: HeaderProps) {
       )}
 
         {/* Mobile Menu */}
-      <MobileMenu 
+      <CustomMobileMenu 
         isOpen={isMobileMenuOpen}
           onClose={closeMobileMenu}
         logo={logo}
