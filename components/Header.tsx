@@ -57,7 +57,6 @@ const styles = {
     .backface-fix {
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
-      transform: translateZ(0);
       perspective: 1000px;
     }
   `,
@@ -1141,7 +1140,11 @@ export default function Header({ logo, items }: HeaderProps) {
       
       // 添加animation-ready类
       document.documentElement.classList.add('animation-ready');
-      document.documentElement.classList.add('backface-fix');
+      
+      // 条件性添加backface-fix类 - 只在非弹窗状态下添加
+      if (!document.querySelector('.modal-backdrop') && !document.querySelector('.modal-open')) {
+        document.documentElement.classList.add('backface-fix');
+      }
       
       // 清理函数
       return () => {
