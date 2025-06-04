@@ -10,6 +10,78 @@ import { languages, HeaderNavItem, HeaderLogo, HeaderSubItem, HeaderColumn } fro
 import OptimizedImage from './layouts/OptimizedImage';
 import CardAnimationProvider from './CardAnimationProvider';
 
+// 添加CSS样式定义，用于控制导航菜单的过渡效果
+const styles = {
+  mobileMenu: `
+    .mobile-menu {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      opacity: 0;
+      transform: translateY(-10px);
+      visibility: hidden;
+      will-change: opacity, transform;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      transform-style: preserve-3d;
+    }
+    
+    .mobile-menu.open {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+    
+    /* 为了支持刷新和返回导航时的状态恢复 */
+    @media (max-width: 1023px) {
+      html[data-menu-open="true"] body {
+        overflow: hidden;
+      }
+    }
+
+    /* 防止页面过渡期间闪烁 */
+    body.navigation-transition {
+      animation: none !important;
+      transition: none !important;
+    }
+    
+    body.navigation-transition * {
+      animation: none !important;
+      transition: none !important;
+    }
+
+    /* 当组件即将卸载时，使用这个类避免闪烁 */
+    .no-transition {
+      transition: none !important;
+    }
+
+    /* 针对不同浏览器的返回导航优化 */
+    .backface-fix {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+      perspective: 1000px;
+    }
+  `,
+  globalStyles: `
+    /* 通用的防闪烁样式 */
+    .render-blocker {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      z-index: 9999;
+      pointer-events: none;
+      display: none;
+    }
+    
+    /* 在导航返回时显示 */
+    html[data-navigating-back="true"] .render-blocker {
+      display: block;
+    }
+  `
+};
+
 // Debounce function (can be moved to a utils file later)
 function debounce<T extends (...args: any[]) => any>(func: T, wait: number): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout | null = null;
@@ -151,23 +223,49 @@ const MobileMenu = React.memo(({
   // 添加菜单引用
   const menuRef = useRef<HTMLElement>(null);
   
+  // 使用状态跟踪过渡状态
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  
   // 直接控制可见性
   useEffect(() => {
     const menu = menuRef.current;
-        if (menu) {
+    if (menu) {
       if (isOpen) {
+        // 当菜单打开时，立即移除invisible类并设置可见性
         menu.classList.remove('invisible');
+        menu.style.visibility = 'visible';
+        setIsTransitioning(true);
+        
+        // 使用RAF确保浏览器有时间应用初始状态
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            menu.classList.add('open');
+            
+            // 设置一个定时器，确保过渡完成后更新状态
+            const transitionDuration = 300; // 匹配CSS中的过渡时间
+            setTimeout(() => {
+              setIsTransitioning(false);
+            }, transitionDuration);
+          });
+        });
       } else {
+        // 开始关闭过渡
+        setIsTransitioning(true);
+        menu.classList.remove('open');
+        
         // 等待过渡效果完成后再添加invisible类
         const transitionEndHandler = () => {
-          if (!isOpen) {
+          if (!isOpen && menu) {
             menu.classList.add('invisible');
-      }
+            menu.style.visibility = 'hidden';
+            setIsTransitioning(false);
+          }
         };
+        
         menu.addEventListener('transitionend', transitionEndHandler, { once: true });
-    return () => {
+        return () => {
           menu.removeEventListener('transitionend', transitionEndHandler);
-    };
+        };
       }
     }
   }, [isOpen]);
@@ -179,7 +277,11 @@ const MobileMenu = React.memo(({
       if (isOpen) {
         sessionStorage.setItem('mobileMenuOpen', 'true');
         sessionStorage.setItem('mobileMenuStack', JSON.stringify(activeMenuStack));
-        // 确保菜单可见
+        
+        // 设置HTML属性用于CSS选择器
+        document.documentElement.setAttribute('data-menu-open', 'true');
+        
+        // 确保菜单可见并有正确的样式
         if (menuRef.current) {
           menuRef.current.style.visibility = 'visible';
           menuRef.current.style.opacity = '1';
@@ -187,6 +289,7 @@ const MobileMenu = React.memo(({
         }
       } else {
         sessionStorage.setItem('mobileMenuOpen', 'false');
+        document.documentElement.removeAttribute('data-menu-open');
       }
     }
   }, [isOpen, activeMenuStack]);
@@ -194,44 +297,161 @@ const MobileMenu = React.memo(({
   // 在页面加载或导航返回时恢复菜单状态
   useEffect(() => {
     if (typeof window !== 'undefined') {
+      // 监听页面性能导航事件，用于检测返回导航
+      const handleNavigationEvent = (event: any) => {
+        // 如果是通过后退按钮返回的
+        if (event.type === 'navigate' && event.navigationType === 'back') {
+          // 为文档添加一个返回导航标记，用于CSS选择器
+          document.documentElement.setAttribute('data-navigating-back', 'true');
+          
+          // 检查菜单状态
+          const savedState = sessionStorage.getItem('mobileMenuOpen');
+          if (savedState === 'true') {
+            const menu = menuRef.current;
+            if (menu) {
+              // 在应用任何过渡之前，先添加no-transition类
+              menu.classList.add('no-transition');
+              menu.classList.add('open');
+              menu.style.visibility = 'visible';
+              menu.style.opacity = '1';
+              menu.style.transform = 'translateY(0)';
+              
+              // 强制重绘
+              void menu.offsetWidth;
+              
+              // 恢复过渡
+              setTimeout(() => {
+                menu.classList.remove('no-transition');
+                document.documentElement.removeAttribute('data-navigating-back');
+              }, 100);
+            }
+          } else {
+            setTimeout(() => {
+              document.documentElement.removeAttribute('data-navigating-back');
+            }, 100);
+          }
+        }
+      };
+      
+      // 尝试从sessionStorage恢复菜单状态
       const savedState = sessionStorage.getItem('mobileMenuOpen');
+      
       if (savedState === 'true') {
         // 如果有保存的菜单状态，恢复它
         try {
+          // 恢复子菜单层级结构
           const savedStack = sessionStorage.getItem('mobileMenuStack');
           if (savedStack) {
             setActiveMenuStack(JSON.parse(savedStack));
           }
-          // 确保菜单可见
+          
+          // 确保菜单可见并有正确的样式
           if (menuRef.current) {
+            // 在初始渲染时不使用过渡效果
+            menuRef.current.classList.add('no-transition');
+            menuRef.current.classList.add('open', 'backface-fix');
             menuRef.current.style.visibility = 'visible';
             menuRef.current.style.opacity = '1';
             menuRef.current.style.transform = 'translateY(0)';
+            
+            // 强制重绘后移除no-transition类
+            void menuRef.current.offsetWidth;
+            setTimeout(() => {
+              if (menuRef.current) {
+                menuRef.current.classList.remove('no-transition');
+              }
+            }, 50);
           }
+          
+          // 设置HTML属性用于CSS选择器
+          document.documentElement.setAttribute('data-menu-open', 'true');
         } catch (e) {
           console.error('Failed to parse saved menu stack', e);
         }
       }
-    }
-    
-    // 添加页面可见性变化监听
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === 'visible') {
-        // 页面从后台恢复时，检查菜单状态
-        const savedState = sessionStorage.getItem('mobileMenuOpen');
-        if (savedState === 'true' && menuRef.current) {
-          menuRef.current.style.visibility = 'visible';
-          menuRef.current.style.opacity = '1';
-          menuRef.current.style.transform = 'translateY(0)';
+      
+      // 添加页面可见性变化监听
+      const handleVisibilityChange = () => {
+        if (document.visibilityState === 'visible') {
+          // 页面从后台恢复时，检查菜单状态
+          const savedState = sessionStorage.getItem('mobileMenuOpen');
+          if (savedState === 'true' && menuRef.current) {
+            // 避免过渡动画
+            menuRef.current.classList.add('no-transition');
+            menuRef.current.classList.add('open', 'backface-fix');
+            menuRef.current.style.visibility = 'visible';
+            menuRef.current.style.opacity = '1';
+            menuRef.current.style.transform = 'translateY(0)';
+            
+            // 强制重绘后移除no-transition类
+            void menuRef.current.offsetWidth;
+            setTimeout(() => {
+              if (menuRef.current) {
+                menuRef.current.classList.remove('no-transition');
+              }
+            }, 50);
+            
+            document.documentElement.setAttribute('data-menu-open', 'true');
+          }
         }
+      };
+      
+      // 监听性能导航事件（如果浏览器支持）
+      if ('PerformanceNavigationTiming' in window) {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach(handleNavigationEvent);
+        });
+        
+        observer.observe({ type: 'navigation', buffered: true });
       }
-    };
-    
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    
-    return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
+      
+      // 添加可见性事件监听
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+      
+      // 监听popstate事件（后退按钮）
+      const handlePopState = () => {
+        // 添加导航返回标记
+        document.documentElement.setAttribute('data-navigating-back', 'true');
+        
+        // 检查菜单状态
+        const savedState = sessionStorage.getItem('mobileMenuOpen');
+        if (savedState === 'true') {
+          // 恢复菜单状态
+          setTimeout(() => {
+            if (menuRef.current) {
+              menuRef.current.classList.add('no-transition', 'backface-fix');
+              menuRef.current.classList.add('open');
+              menuRef.current.style.visibility = 'visible';
+              menuRef.current.style.opacity = '1';
+              menuRef.current.style.transform = 'translateY(0)';
+              
+              // 强制重绘
+              void menuRef.current.offsetWidth;
+              
+              // 恢复过渡
+              setTimeout(() => {
+                if (menuRef.current) {
+                  menuRef.current.classList.remove('no-transition');
+                }
+                document.documentElement.removeAttribute('data-navigating-back');
+              }, 100);
+            }
+          }, 0);
+        } else {
+          setTimeout(() => {
+            document.documentElement.removeAttribute('data-navigating-back');
+          }, 100);
+        }
+      };
+      
+      window.addEventListener('popstate', handlePopState);
+      
+      return () => {
+        document.removeEventListener('visibilitychange', handleVisibilityChange);
+        window.removeEventListener('popstate', handlePopState);
+      };
+    }
   }, []);
   
   // 处理菜单打开逻辑
@@ -906,14 +1126,31 @@ export default function Header({ logo, items }: HeaderProps) {
   const currentPath = usePathname();
   const router = useRouter();
   
-  // 添加animation-ready类
+  // 添加动画和菜单样式
   useEffect(() => {
     if (typeof window !== 'undefined') {
+      // 添加菜单样式
+      const styleEl = document.createElement('style');
+      styleEl.innerHTML = styles.mobileMenu + styles.globalStyles;
+      document.head.appendChild(styleEl);
+      
+      // 添加防闪烁遮罩层
+      const blocker = document.createElement('div');
+      blocker.className = 'render-blocker';
+      document.body.appendChild(blocker);
+      
+      // 添加animation-ready类
       document.documentElement.classList.add('animation-ready');
+      document.documentElement.classList.add('backface-fix');
       
       // 清理函数
       return () => {
         document.documentElement.classList.remove('animation-ready');
+        document.documentElement.classList.remove('backface-fix');
+        document.head.removeChild(styleEl);
+        if (document.body.contains(blocker)) {
+          document.body.removeChild(blocker);
+        }
       };
     }
   }, []);
@@ -933,6 +1170,11 @@ export default function Header({ logo, items }: HeaderProps) {
     const captureListener = (e: MouseEvent) => {
       if (e.target instanceof HTMLAnchorElement) {
         console.log('捕获阶段检测到链接点击:', e.target.href);
+        
+        // 如果链接导航到其他页面，添加导航标记
+        if (!e.target.href.includes('#') && !e.defaultPrevented) {
+          sessionStorage.setItem('isNavigating', 'true');
+        }
       }
     };
     
@@ -1115,11 +1357,13 @@ export default function Header({ logo, items }: HeaderProps) {
     if (newState) {
       // 打开菜单时禁止body滚动
       document.body.classList.add('overflow-hidden');
+      document.documentElement.setAttribute('data-menu-open', 'true');
       // 确保搜索框已关闭
       setIsSearchOverlayOpen(false);
     } else {
       // 关闭菜单时恢复body滚动
       document.body.classList.remove('overflow-hidden');
+      document.documentElement.removeAttribute('data-menu-open');
       // 关闭子菜单
       setOpenMenuIndex(null);
     }
@@ -1135,6 +1379,7 @@ export default function Header({ logo, items }: HeaderProps) {
     setMobileMenuOpen(false);
     setOpenMenuIndex(null);
     document.body.classList.remove('overflow-hidden');
+    document.documentElement.removeAttribute('data-menu-open');
     
     // 更新会话存储状态
     if (typeof window !== 'undefined') {
@@ -1156,9 +1401,19 @@ export default function Header({ logo, items }: HeaderProps) {
   return (
     <>
       <CardAnimationProvider />
+      
+      {/* 添加样式标签 - 确保CSS样式被应用 */}
+      <style jsx global>{`
+        ${styles.mobileMenu}
+        ${styles.globalStyles}
+      `}</style>
+      
+      {/* 防闪烁遮罩层 */}
+      <div className="render-blocker" aria-hidden="true" />
+      
       <header
         ref={headerRef}
-        className="sticky top-0 z-[20] w-full bg-[#ffffff] h-[90px]"
+        className="sticky top-0 z-[20] w-full bg-[#ffffff] h-[90px] backface-fix"
         style={{ height: '90px' }}
         role="banner"
         aria-label="Site header"
