@@ -22,12 +22,6 @@
       var style = document.createElement('style');
       style.id = 'page-stabilizer-style';
       style.innerHTML = `
-        /* 完全禁用所有页面过渡效果，但排除带有animation-ready类的元素下的特定动画元素 */
-        *:not(.mobile-menu):not(.mobile-menu *):not(.mobile-menu-content):not(.mobile-menu-content *):not(.mobile-menu li):not(.mobile-menu li *):not(.search-dropdown):not(.search-dropdown *):not(.dropdown-menu):not(.dropdown-menu-content):not(.scroll-progress-bar):not(.category-card):not(.product-card):not(.accordion):not(.accordion *):not([data-accordion]):not([data-accordion] *):not(.full-table):not(.full-table *):not([data-full-table]):not([data-full-table] *):not([class*="table"]):not([class*="table"] *):not(button):not(button *):not([role="button"]):not([role="button"] *):not([class*="collapse"]):not([class*="collapse"] *):not([class*="expand"]):not([class*="expand"] *):not(dialog):not(dialog *):not([role="dialog"]):not([role="dialog"] *):not(.modal):not(.modal *):not(.modal-dialog):not(.modal-dialog *):not(.modal-backdrop):not(.modal-backdrop *) {
-          transition: none !important;
-          animation: none !important;
-        }
-        
         /* 确保背景色始终为白色，避免闪黑 - 提高优先级 */
         html, body {
           background-color: #ffffff !important;
@@ -70,6 +64,14 @@
           display: none !important;
         }
         
+        /* 使用更全面的选择器规则禁用动画效果，但保留指定元素的动画 */
+        body.page-transitioning *:not(html.animation-ready .transition-all):not(html.animation-ready span[class*="transition-transform"]):not(html.animation-ready .category-card):not(html.animation-ready .product-card):not(html.animation-ready .dropdown-menu):not(html.animation-ready .dropdown-menu-content):not(html.animation-ready .scroll-progress-bar):not(html.animation-ready .mobile-menu):not(html.animation-ready .mobile-menu *):not(html.animation-ready .mobile-menu-content):not(html.animation-ready .mobile-menu-content *):not(html.animation-ready .mobile-menu li):not(html.animation-ready .mobile-menu li *):not(html.animation-ready .mobile-menu.open):not(html.animation-ready .mobile-menu.open *):not(html.animation-ready .mobile-menu.open .mobile-menu-content):not(html.animation-ready .mobile-menu.open .mobile-menu-content *):not(html.animation-ready .mobile-menu.open li):not(html.animation-ready .mobile-menu.open li *):not(html.animation-ready .search-dropdown):not(html.animation-ready .search-dropdown *):not(html.animation-ready .accordion):not(html.animation-ready .accordion *):not(html.animation-ready [data-accordion]):not(html.animation-ready [data-accordion] *):not(html.animation-ready .full-table):not(html.animation-ready .full-table *):not(html.animation-ready [data-full-table]):not(html.animation-ready [data-full-table] *):not([class*="table"]):not([class*="table"] *):not(html.animation-ready button):not(html.animation-ready button *):not([role="button"]):not([role="button"] *):not([class*="collapse"]):not([class*="collapse"] *):not([class*="expand"]):not([class*="expand"] *):not(html.animation-ready dialog):not(html.animation-ready dialog *):not(html.animation-ready [role="dialog"]):not(html.animation-ready [role="dialog"] *):not(html.animation-ready .modal):not(html.animation-ready .modal *):not(html.animation-ready .modal-dialog):not(html.animation-ready .modal-dialog *):not(html.animation-ready .modal-backdrop):not(html.animation-ready .modal-backdrop *),
+        body *:not(html.animation-ready .transition-all):not(html.animation-ready span[class*="transition-transform"]):not(html.animation-ready .category-card):not(html.animation-ready .product-card):not(html.animation-ready .dropdown-menu):not(html.animation-ready .dropdown-menu-content):not(html.animation-ready .scroll-progress-bar):not(html.animation-ready .mobile-menu):not(html.animation-ready .mobile-menu *):not(html.animation-ready .mobile-menu-content):not(html.animation-ready .mobile-menu-content *):not(html.animation-ready .mobile-menu li):not(html.animation-ready .mobile-menu li *):not(html.animation-ready .mobile-menu.open):not(html.animation-ready .mobile-menu.open *):not(html.animation-ready .mobile-menu.open .mobile-menu-content):not(html.animation-ready .mobile-menu.open .mobile-menu-content *):not(html.animation-ready .mobile-menu.open li):not(html.animation-ready .mobile-menu.open li *):not(html.animation-ready .search-dropdown):not(html.animation-ready .search-dropdown *):not(html.animation-ready .accordion):not(html.animation-ready .accordion *):not(html.animation-ready [data-accordion]):not(html.animation-ready [data-accordion] *):not(html.animation-ready .full-table):not(html.animation-ready .full-table *):not(html.animation-ready [data-full-table]):not(html.animation-ready [data-full-table] *):not([class*="table"]):not([class*="table"] *):not(html.animation-ready button):not(html.animation-ready button *):not([role="button"]):not([role="button"] *):not([class*="collapse"]):not([class*="collapse"] *):not([class*="expand"]):not([class*="expand"] *):not(html.animation-ready dialog):not(html.animation-ready dialog *):not(html.animation-ready [role="dialog"]):not(html.animation-ready [role="dialog"] *):not(html.animation-ready .modal):not(html.animation-ready .modal *):not(html.animation-ready .modal-dialog):not(html.animation-ready .modal-dialog *):not(html.animation-ready .modal-backdrop):not(html.animation-ready .modal-backdrop *) {
+          transition: none !important;
+          animation: none !important;
+          transform: none !important;
+        }
+        
         /* 禁用所有页面过渡动画，但排除带有animation-ready类的元素 */
         .page-transition-enter:not(html.animation-ready *),
         .page-transition-enter-active:not(html.animation-ready *),
@@ -90,6 +92,33 @@
         /* 防止页面过渡期间闪白 */
         body.page-transitioning {
           background-color: transparent !important;
+        }
+        
+        /* 特别确保手风琴组件的动画效果正常工作 */
+        html.animation-ready .accordion,
+        html.animation-ready .accordion *,
+        html.animation-ready [data-accordion],
+        html.animation-ready [data-accordion] *,
+        html.animation-ready [data-faq],
+        html.animation-ready [data-faq] *,
+        html.animation-ready [data-features],
+        html.animation-ready [data-features] *,
+        html.animation-ready [data-specs],
+        html.animation-ready [data-specs] *,
+        html.animation-ready [class*="accordion"],
+        html.animation-ready [class*="accordion"] *,
+        html.animation-ready [class*="faq"],
+        html.animation-ready [class*="faq"] *,
+        html.animation-ready [class*="details"],
+        html.animation-ready [class*="details"] *,
+        html.animation-ready [class*="features"],
+        html.animation-ready [class*="features"] *,
+        html.animation-ready details,
+        html.animation-ready details *,
+        html.animation-ready summary,
+        html.animation-ready summary * {
+          transition: all 0.3s ease-in-out !important;
+          will-change: max-height, opacity, transform;
         }
       `;
       document.head.appendChild(style);

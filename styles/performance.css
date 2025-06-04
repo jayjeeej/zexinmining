@@ -797,3 +797,52 @@ html.animation-ready .table-animation-container.expanding {
   max-height: none;
   transition: height 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
+
+/* 增强手风琴组件动画效果 */
+/* 详情页手风琴装置的动画过渡效果 */
+[data-faq] .transition-all,
+[data-features] .transition-all,
+[data-specs] .transition-all,
+.accordion .transition-all,
+[class*="accordion"] .transition-all,
+[class*="faq"] .transition-all,
+[class*="details"] .transition-all,
+[class*="features"] .transition-all,
+details .transition-all,
+summary .transition-all {
+  transition-property: max-height, opacity, transform !important;
+  transition-duration: 0.3s !important;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1) !important;
+  will-change: max-height, opacity, transform;
+}
+
+/* 手风琴图标旋转动画 */
+[data-faq] .rotate-180,
+[data-features] .rotate-180,
+[data-specs] .rotate-180,
+.accordion .rotate-180,
+[class*="accordion"] .rotate-180,
+[class*="faq"] .rotate-180,
+[class*="details"] .rotate-180,
+[class*="features"] .rotate-180,
+details .rotate-180,
+summary .rotate-180 {
+  transition: transform 0.3s ease-in-out !important;
+}
+
+/* 确保手风琴组件在页面导航后仍保持动画效果 */
+html.animation-ready [data-faq],
+html.animation-ready [data-features],
+html.animation-ready [data-specs],
+html.animation-ready .accordion,
+html.animation-ready [class*="accordion"],
+html.animation-ready [class*="faq"],
+html.animation-ready [class*="details"],
+html.animation-ready [class*="features"],
+html.animation-ready details,
+html.animation-ready summary {
+  transition-property: all !important;
+  transition-duration: 0.3s !important;
+  transition-timing-function: ease-in-out !important;
+  will-change: max-height, opacity, transform;
+}
