@@ -83,6 +83,27 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({
       if (closeTimer) clearTimeout(closeTimer);
     };
   }, [isOpen, shouldRender]);
+  
+  // 处理html transform导致fixed定位问题
+  useEffect(() => {
+    if (isOpen) {
+      // 保存原始状态
+      const hadBackfaceFix = document.documentElement.classList.contains('backface-fix');
+      const originalTransform = document.documentElement.style.transform;
+      
+      // 临时移除影响fixed定位的属性
+      document.documentElement.classList.remove('backface-fix');
+      document.documentElement.style.transform = '';
+      
+      return () => {
+        // 组件关闭时恢复原状态
+        if (hadBackfaceFix) {
+          document.documentElement.classList.add('backface-fix');
+        }
+        document.documentElement.style.transform = originalTransform;
+      };
+    }
+  }, [isOpen]);
    
   const [formData, setFormData] = useState({
     firstName: '',
