@@ -846,3 +846,60 @@ html.animation-ready summary {
   transition-timing-function: ease-in-out !important;
   will-change: max-height, opacity, transform;
 }
+
+/* 手风琴组件过渡效果 - 确保特点与技术优势和常见问题的内容展开有平滑过渡 */
+.transition-all.duration-300,
+[data-accordion] .transition-all,
+[data-accordion-content],
+[data-accordion-item] .overflow-hidden,
+.max-h-0,
+.max-h-96,
+.max-h-[1000px],
+.max-h-[500px],
+div[class*="transition-all"],
+div[class*="duration-300"],
+.accordion .transition-all,
+.accordion * .transition-all,
+[id^="accordion-content-"],
+[id^="features"] .transition-all,
+[id^="faqs"] .transition-all,
+#features .transition-all,
+#faqs .transition-all {
+  transition-property: max-height, opacity, transform !important;
+  transition-duration: 0.3s !important;
+  transition-timing-function: ease-in-out !important;
+  will-change: max-height, opacity, transform;
+}
+
+/* 确保旋转箭头的过渡效果 */
+.rotate-45,
+.-rotate-45,
+[class*="rotate-"],
+span[class*="transition-transform"],
+button span,
+button svg {
+  transition: transform 0.3s ease-in-out !important;
+  will-change: transform;
+}
+
+/* 特别针对ProductFeaturesAccordion组件 */
+#features button span,
+#features .transition-all,
+#features .duration-300,
+#features .ease-in-out,
+#features .overflow-hidden {
+  transition: all 0.3s ease-in-out !important;
+}
+
+/* 特别针对ProductFAQs组件 */
+#faqs button span,
+#faqs .transition-all,
+#faqs .duration-300,
+#faqs .ease-in-out,
+#faqs .overflow-hidden,
+#faqs .max-h-0,
+#faqs .max-h-[500px],
+#faqs .opacity-0,
+#faqs .opacity-100 {
+  transition: all 0.3s ease-in-out !important;
+}
