@@ -155,73 +155,85 @@ const MobileMenu = React.memo(({
   useEffect(() => {
     const menu = menuRef.current;
     
-    // 确保菜单打开时设置正确的可见性
+    // 添加动画结束事件处理函数
+    const handleAnimationEnd = (event: AnimationEvent) => {
+      // 只处理关闭动画结束事件(mobile-fade-out动画)
+      if (!isOpen && event.animationName === 'mobile-fade-out') {
+        // 动画完成后，确保元素处于正确的终态
+        if (menu) {
+          menu.style.visibility = 'hidden';
+        }
+      }
+    };
+    
     if (menu) {
+      menu.addEventListener('animationend', handleAnimationEnd);
+      
+      // 确保菜单打开时设置正确的可见性
       if (isOpen) {
         menu.style.visibility = 'visible';
       }
     }
     
     return () => {
-      // 清理代码(如果需要)
+      // 清理事件监听器
+      if (menu) {
+        menu.removeEventListener('animationend', handleAnimationEnd);
+      }
     };
   }, [isOpen]);
   
-  // 处理菜单打开逻辑 - 使用状态管理而非DOM重载
+  // 添加菜单状态持久化
+  useEffect(() => {
+    // 当菜单状态改变时，存储到sessionStorage
+    if (typeof window !== 'undefined') {
+      if (isOpen) {
+        sessionStorage.setItem('mobileMenuOpen', 'true');
+        sessionStorage.setItem('mobileMenuStack', JSON.stringify(activeMenuStack));
+      } else {
+        sessionStorage.setItem('mobileMenuOpen', 'false');
+      }
+    }
+  }, [isOpen, activeMenuStack]);
+  
+  // 在页面加载或导航返回时恢复菜单状态
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const savedState = sessionStorage.getItem('mobileMenuOpen');
+      if (savedState === 'true') {
+        // 如果有保存的菜单状态，恢复它
+        try {
+          const savedStack = sessionStorage.getItem('mobileMenuStack');
+          if (savedStack) {
+            setActiveMenuStack(JSON.parse(savedStack));
+          }
+        } catch (e) {
+          console.error('Failed to parse saved menu stack', e);
+        }
+      }
+    }
+  }, []);
+  
+  // 处理菜单打开逻辑
   const openSubMenu = (index: number, url?: string, isCategory: boolean = false) => {
     setActiveMenuStack(prev => [...prev, { itemIndex: index, parentUrl: url, isCategory }]);
   };
   
-  // 返回上一级菜单 - 无需重新加载，只修改状态
+  // 返回上一级菜单
   const goBack = () => {
-    // 添加CSS类以触发过渡动画
-    const menuContent = document.querySelector('.mobile-menu-content');
-    if (menuContent) {
-      menuContent.classList.add('menu-transition-out');
-      
-      // 短暂延迟后更新状态，确保动画有时间执行
-      setTimeout(() => {
-        setActiveMenuStack(prev => prev.slice(0, -1));
-        // 移除过渡类并添加进入动画
-        menuContent.classList.remove('menu-transition-out');
-        menuContent.classList.add('menu-transition-in');
-        
-        // 动画结束后移除类
-        setTimeout(() => {
-          menuContent.classList.remove('menu-transition-in');
-        }, 300);
-      }, 150);
-    } else {
-      // 降级处理：如果DOM元素不存在，直接更新状态
-      setActiveMenuStack(prev => prev.slice(0, -1));
-    }
+    setActiveMenuStack(prev => prev.slice(0, -1));
   };
   
-  // 返回到主菜单 - 同样使用动画过渡
+  // 返回到主菜单
   const backToMainMenu = () => {
-    const menuContent = document.querySelector('.mobile-menu-content');
-    if (menuContent) {
-      menuContent.classList.add('menu-transition-out');
-      
-      setTimeout(() => {
-        setActiveMenuStack([]);
-        menuContent.classList.remove('menu-transition-out');
-        menuContent.classList.add('menu-transition-in');
-        
-        setTimeout(() => {
-          menuContent.classList.remove('menu-transition-in');
-        }, 300);
-      }, 150);
-    } else {
-      setActiveMenuStack([]);
-    }
+    setActiveMenuStack([]);
   };
   
   // 判断当前显示的菜单级别
   const menuLevel = activeMenuStack.length;
   
-  // 获取当前需要显示的项目 - 使用useMemo优化性能
-  const getCurrentItems = useMemo(() => {
+  // 获取当前需要显示的项目
+  const getCurrentItems = () => {
     if (menuLevel === 0) {
       // 主菜单
       return { items: items, title: null, parentUrl: undefined };
@@ -259,34 +271,9 @@ const MobileMenu = React.memo(({
     }
     
     return { items: [], title: null, parentUrl: undefined };
-  }, [items, menuLevel, activeMenuStack]);
+  };
   
-  const { items: currentItems, title: currentTitle, parentUrl: currentParentUrl } = getCurrentItems;
-  
-  // 添加CSS样式到head，确保过渡动画正常工作
-  useEffect(() => {
-    // 确保样式只添加一次
-    if (!document.getElementById('mobile-menu-transitions')) {
-      const style = document.createElement('style');
-      style.id = 'mobile-menu-transitions';
-      style.innerHTML = `
-        .mobile-menu-content {
-          transition: opacity 0.3s ease;
-        }
-        .menu-transition-out {
-          opacity: 0.5;
-          transform: translateX(-10px);
-          transition: opacity 0.15s ease, transform 0.15s ease;
-        }
-        .menu-transition-in {
-          opacity: 1;
-          transform: translateX(0);
-          transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-      `;
-      document.head.appendChild(style);
-    }
-  }, []);
+  const { items: currentItems, title: currentTitle, parentUrl: currentParentUrl } = getCurrentItems();
   
   return (
     <nav 
@@ -366,8 +353,8 @@ const MobileMenu = React.memo(({
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                       </button>
-                  )}
-                </div>
+                                      )}
+                                    </div>
               </li>
             ))}
           </ul>
@@ -423,7 +410,7 @@ const MobileMenu = React.memo(({
                     )}
                     
                     {hasSubItems && (
-                      <button 
+            <button 
                         className="ml-4 text-current p-1"
                         aria-label={locale === 'zh' ? `打开${item.label}子菜单` : `Open ${item.label} submenu`}
                         onClick={() => openSubMenu(index, isCategory ? currentParentUrl : item.url, isCategory)}
@@ -431,15 +418,15 @@ const MobileMenu = React.memo(({
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5" aria-hidden="true">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
-                      </button>
+            </button>
                     )}
-                  </div>
+          </div>
                 </li>
               );
             })}
           </ul>
         )}
-      </div>
+        </div>
     </nav>
   );
 });
@@ -1104,6 +1091,11 @@ export default function Header({ logo, items }: HeaderProps) {
       // 关闭子菜单
       setOpenMenuIndex(null);
     }
+    
+    // 更新会话存储状态
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('mobileMenuOpen', newState ? 'true' : 'false');
+    }
   };
 
   // 关闭移动菜单
@@ -1111,7 +1103,23 @@ export default function Header({ logo, items }: HeaderProps) {
     setMobileMenuOpen(false);
     setOpenMenuIndex(null);
     document.body.classList.remove('overflow-hidden');
+    
+    // 更新会话存储状态
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('mobileMenuOpen', 'false');
+    }
   };
+
+  // 恢复移动菜单状态
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const savedMobileMenuState = sessionStorage.getItem('mobileMenuOpen');
+      if (savedMobileMenuState === 'true') {
+        setMobileMenuOpen(true);
+        document.body.classList.add('overflow-hidden');
+      }
+    }
+  }, []);
 
   return (
     <>
