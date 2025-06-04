@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css'; // Import global styles
 import '../styles/performance.css'; // 引入性能优化全局样式
-import '../styles/menu.css'; // 引入移动菜单样式
 import StructuredData from '../components/StructuredData';
 import { getOrganizationStructuredData } from '../lib/structuredData';
 import BaiduVerificationTag from './components/BaiduVerificationTag';
