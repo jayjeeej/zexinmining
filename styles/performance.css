@@ -670,6 +670,27 @@ html .search-cancel-button {
   animation: mobile-fade-in 350ms cubic-bezier(0.2, 0.6, 0.35, 1) forwards;
 }
 
+/* 禁用动画 - 用于导航返回时直接显示菜单 */
+.mobile-menu.no-animation {
+  animation: none !important;
+  transition: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+.mobile-menu.no-animation .mobile-menu-content {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: none !important;
+}
+
+.mobile-menu.no-animation li {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: none !important;
+}
+
 /* 防止移动菜单产生CLS */
 @media (min-width: 1024px) {
   .mobile-menu {
