@@ -33,7 +33,7 @@
           background-color: #ffffff !important;
         }
         
-        /* 页面加载和过渡期间的背景颜色控制 */
+        /* 页面加载和过渡期间的背景颜色控制 - 移除闪白效果 */
         html::before {
           content: "";
           position: fixed;
@@ -41,18 +41,19 @@
           left: 0;
           width: 100%;
           height: 100%;
-          background-color: #ffffff;
+          background-color: transparent; /* 改为透明背景 */
           z-index: -1;
+          pointer-events: none;
         }
         
-        /* 创建背景控制层 */
+        /* 创建背景控制层 - 修改为透明 */
         #page-stabilizer-bg {
           position: fixed;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
-          background-color: #ffffff;
+          background-color: transparent; /* 改为透明背景 */
           z-index: -2;
           pointer-events: none;
         }
@@ -78,6 +79,17 @@
           animation: none !important;
           transform: none !important;
           opacity: 1 !important;
+        }
+        
+        /* 确保移动菜单在导航返回时不会闪白 */
+        .mobile-menu {
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+        }
+        
+        /* 防止页面过渡期间闪白 */
+        body.page-transitioning {
+          background-color: transparent !important;
         }
       `;
       document.head.appendChild(style);

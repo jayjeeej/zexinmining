@@ -179,6 +179,12 @@ const MobileMenu = React.memo(({
       if (isOpen) {
         sessionStorage.setItem('mobileMenuOpen', 'true');
         sessionStorage.setItem('mobileMenuStack', JSON.stringify(activeMenuStack));
+        // 确保菜单可见
+        if (menuRef.current) {
+          menuRef.current.style.visibility = 'visible';
+          menuRef.current.style.opacity = '1';
+          menuRef.current.style.transform = 'translateY(0)';
+        }
       } else {
         sessionStorage.setItem('mobileMenuOpen', 'false');
       }
@@ -196,11 +202,36 @@ const MobileMenu = React.memo(({
           if (savedStack) {
             setActiveMenuStack(JSON.parse(savedStack));
           }
+          // 确保菜单可见
+          if (menuRef.current) {
+            menuRef.current.style.visibility = 'visible';
+            menuRef.current.style.opacity = '1';
+            menuRef.current.style.transform = 'translateY(0)';
+          }
         } catch (e) {
           console.error('Failed to parse saved menu stack', e);
         }
       }
     }
+    
+    // 添加页面可见性变化监听
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        // 页面从后台恢复时，检查菜单状态
+        const savedState = sessionStorage.getItem('mobileMenuOpen');
+        if (savedState === 'true' && menuRef.current) {
+          menuRef.current.style.visibility = 'visible';
+          menuRef.current.style.opacity = '1';
+          menuRef.current.style.transform = 'translateY(0)';
+        }
+      }
+    };
+    
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
   }, []);
   
   // 处理菜单打开逻辑
