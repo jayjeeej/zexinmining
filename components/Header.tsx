@@ -148,39 +148,28 @@ const MobileMenu = React.memo(({
     isCategory?: boolean
   }>>([]);
   
-  // 添加菜单引用和动画处理
+  // 添加菜单引用
   const menuRef = useRef<HTMLElement>(null);
   
-  // 处理动画结束事件
+  // 直接控制可见性
   useEffect(() => {
     const menu = menuRef.current;
-    
-    // 添加动画结束事件处理函数
-    const handleAnimationEnd = (event: AnimationEvent) => {
-      // 只处理关闭动画结束事件(mobile-fade-out动画)
-      if (!isOpen && event.animationName === 'mobile-fade-out') {
-        // 动画完成后，确保元素处于正确的终态
         if (menu) {
-          menu.style.visibility = 'hidden';
-        }
-      }
-    };
-    
-    if (menu) {
-      menu.addEventListener('animationend', handleAnimationEnd);
-      
-      // 确保菜单打开时设置正确的可见性
       if (isOpen) {
-        menu.style.visibility = 'visible';
+        menu.classList.remove('invisible');
+      } else {
+        // 等待过渡效果完成后再添加invisible类
+        const transitionEndHandler = () => {
+          if (!isOpen) {
+            menu.classList.add('invisible');
+      }
+        };
+        menu.addEventListener('transitionend', transitionEndHandler, { once: true });
+    return () => {
+          menu.removeEventListener('transitionend', transitionEndHandler);
+    };
       }
     }
-    
-    return () => {
-      // 清理事件监听器
-      if (menu) {
-        menu.removeEventListener('animationend', handleAnimationEnd);
-      }
-    };
   }, [isOpen]);
   
   // 添加菜单状态持久化
@@ -885,6 +874,18 @@ export default function Header({ logo, items }: HeaderProps) {
   const locale = useLocale();
   const currentPath = usePathname();
   const router = useRouter();
+  
+  // 添加animation-ready类
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      document.documentElement.classList.add('animation-ready');
+      
+      // 清理函数
+      return () => {
+        document.documentElement.classList.remove('animation-ready');
+      };
+    }
+  }, []);
   
   // 检测滚动条宽度
   useEffect(() => {

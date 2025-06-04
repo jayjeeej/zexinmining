@@ -630,24 +630,24 @@ html .search-cancel-button {
   transform: translateZ(0); /* 强制启用硬件加速 */
 }
 
-/* 移动菜单动画效果 - 增强版 */
-@keyframes mobile-fade-in {
-  0% {
+/* 移动菜单样式 - 添加打开和关闭的过渡效果 */
+@keyframes menuSlideDown {
+  from {
     opacity: 0;
     transform: translateY(-10px);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@keyframes mobile-fade-out {
-  0% {
+@keyframes menuSlideUp {
+  from {
     opacity: 1;
     transform: translateY(0);
   }
-  100% {
+  to {
     opacity: 0;
     transform: translateY(-10px);
   }
@@ -655,19 +655,22 @@ html .search-cancel-button {
 
 .mobile-menu {
   opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  max-height: calc(100vh - 90px);
   transform: translateY(-10px);
-  animation: mobile-fade-out 250ms ease-out forwards;
+  pointer-events: none;
+  visibility: hidden;
+  will-change: transform, opacity;
 }
 
 .mobile-menu.open {
   opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
   transform: translateY(0);
-  animation: mobile-fade-in 350ms cubic-bezier(0.2, 0.6, 0.35, 1) forwards;
+  pointer-events: auto;
+  visibility: visible;
+  animation: menuSlideDown 350ms cubic-bezier(0.2, 0.6, 0.35, 1) forwards;
+}
+
+.mobile-menu:not(.open) {
+  animation: menuSlideUp 350ms cubic-bezier(0.2, 0.6, 0.35, 1) forwards;
 }
 
 /* 防止移动菜单产生CLS */
@@ -677,53 +680,50 @@ html .search-cancel-button {
   }
 }
 
-/* 移动菜单内容动画效果 */
+/* 移动菜单内容样式 */
+@keyframes contentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .mobile-menu-content {
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity 300ms ease-out, transform 300ms ease-out;
-  transition-delay: 0ms;
+  will-change: transform, opacity;
 }
 
 .mobile-menu.open .mobile-menu-content {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 150ms;
+  animation: contentFadeIn 300ms ease-out forwards;
+  animation-delay: 150ms;
 }
 
-/* 页面禁止滚动时的样式 */
-body.overflow-hidden {
-  overflow: hidden !important;
-  /* 以下属性防止滚动条消失时导致的页面位移 */
-  padding-right: var(--scrollbar-width, 0px);
-  width: 100%;
-  box-sizing: border-box;
-  overscroll-behavior: none;
+/* 移动菜单项样式 */
+@keyframes itemFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* 移动菜单项级联动画 */
 .mobile-menu li {
-  opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 250ms ease-out, transform 250ms ease-out;
+  opacity: 1;
+  transform: none;
+  will-change: auto;
 }
 
 .mobile-menu.open li {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* 为每个菜单项设置递增的延迟 */
-.mobile-menu.open li:nth-child(1) { transition-delay: 150ms; }
-.mobile-menu.open li:nth-child(2) { transition-delay: 180ms; }
-.mobile-menu.open li:nth-child(3) { transition-delay: 210ms; }
-.mobile-menu.open li:nth-child(4) { transition-delay: 240ms; }
-.mobile-menu.open li:nth-child(5) { transition-delay: 270ms; }
-.mobile-menu.open li:nth-child(6) { transition-delay: 300ms; }
-.mobile-menu.open li:nth-child(7) { transition-delay: 330ms; }
-.mobile-menu.open li:nth-child(8) { transition-delay: 360ms; }
-.mobile-menu.open li:nth-child(9) { transition-delay: 390ms; }
-.mobile-menu.open li:nth-child(10) { transition-delay: 420ms; }
+  animation: none;
+}   
 
 /* 产品规格表格动画效果 */
 .table-animation-container {
