@@ -306,67 +306,66 @@
       window.addEventListener('pageshow', function(event) {
         // 如果是从缓存中恢复页面（如通过后退按钮）
         if (event.persisted) {
-          console.log('页面从缓存中恢复');
+          console.log('页面从bfcache恢复 - pageStabilizer');
           
           // 恢复移动菜单状态
           const mobileMenuState = sessionStorage.getItem('mobileMenuOpen');
           if (mobileMenuState === 'true') {
-            console.log('恢复移动菜单状态');
-            // 查找移动菜单元素
-            const mobileMenu = document.querySelector('.mobile-menu');
-            if (mobileMenu) {
-              // 设置为可见状态并添加bfcache恢复类
-              mobileMenu.classList.add('open', 'bfcache-restore');
-              mobileMenu.style.visibility = 'visible';
-              mobileMenu.style.opacity = '1';
-              mobileMenu.style.transform = 'translateY(0)';
-              
-              // 添加body滚动限制
-              document.body.classList.add('overflow-hidden');
-              
-              // 添加遮罩层
-              const existingOverlay = document.querySelector('.mobile-menu-overlay');
-              if (!existingOverlay) {
-                const overlay = document.createElement('div');
-                overlay.className = 'fixed left-0 z-10 h-full w-full bg-gray-800 bg-opacity-50 mobile-menu-overlay';
-                overlay.style.top = '90px';
-                document.body.appendChild(overlay);
-                
-                // 为遮罩层添加点击事件，关闭菜单
-                overlay.addEventListener('click', function() {
-                  // 触发自定义事件，通知React组件关闭菜单
-                  const closeEvent = new CustomEvent('closeMobileMenu');
-                  window.dispatchEvent(closeEvent);
-                  
-                  // 移除遮罩层
-                  overlay.remove();
-                });
-              }
-              
-              // 延迟移除bfcache-restore类，以便在恢复后再启用动画
-              setTimeout(function() {
-                mobileMenu.classList.remove('bfcache-restore');
-              }, 1000);
-            }
+            console.log('恢复移动菜单状态 - pageStabilizer');
             
-            // 恢复菜单堆栈状态
+            // 立即触发自定义事件，通知React组件恢复菜单
             try {
               const savedStack = sessionStorage.getItem('mobileMenuStack');
-              if (savedStack) {
-                console.log('恢复菜单堆栈状态:', savedStack);
-                // 标记需要恢复堆栈状态
-                sessionStorage.setItem('needRestoreMobileMenu', 'true');
-                
-                // 触发自定义事件，通知React组件恢复菜单
-                const event = new CustomEvent('restoreMobileMenu', { 
-                  detail: { 
-                    open: true,
-                    stack: JSON.parse(savedStack),
-                    fromBfcache: true
-                  } 
-                });
-                window.dispatchEvent(event);
-              }
+              const parsedStack = savedStack ? JSON.parse(savedStack) : [];
+              
+              // 触发自定义事件，通知React组件恢复菜单
+              const event = new CustomEvent('restoreMobileMenu', { 
+                detail: { 
+                  open: true,
+                  stack: parsedStack,
+                  fromBfcache: true
+                } 
+              });
+              window.dispatchEvent(event);
+              
+              // 查找移动菜单元素
+              setTimeout(function() {
+                const mobileMenu = document.querySelector('.mobile-menu');
+                if (mobileMenu) {
+                  // 设置为可见状态并添加bfcache恢复类
+                  mobileMenu.classList.add('open', 'bfcache-restore');
+                  mobileMenu.style.visibility = 'visible';
+                  mobileMenu.style.opacity = '1';
+                  mobileMenu.style.transform = 'translateY(0)';
+                  
+                  // 添加body滚动限制
+                  document.body.classList.add('overflow-hidden');
+                  
+                  // 添加遮罩层
+                  const existingOverlay = document.querySelector('.mobile-menu-overlay');
+                  if (!existingOverlay) {
+                    const overlay = document.createElement('div');
+                    overlay.className = 'fixed left-0 z-10 h-full w-full bg-gray-800 bg-opacity-50 mobile-menu-overlay';
+                    overlay.style.top = '90px';
+                    document.body.appendChild(overlay);
+                    
+                    // 为遮罩层添加点击事件，关闭菜单
+                    overlay.addEventListener('click', function() {
+                      // 触发自定义事件，通知React组件关闭菜单
+                      const closeEvent = new CustomEvent('closeMobileMenu');
+                      window.dispatchEvent(closeEvent);
+                      
+                      // 移除遮罩层
+                      overlay.remove();
+                    });
+                  }
+                  
+                  // 延迟移除bfcache-restore类，以便在恢复后再启用动画
+                  setTimeout(function() {
+                    mobileMenu.classList.remove('bfcache-restore');
+                  }, 1000);
+                }
+              }, 0);
             } catch (e) {
               console.error('Failed to process saved menu stack', e);
             }
@@ -376,39 +375,15 @@
           const searchOverlayState = sessionStorage.getItem('searchOverlayOpen');
           if (searchOverlayState === 'true') {
             console.log('恢复搜索覆盖层状态');
-            // 查找搜索覆盖层元素
-            const searchOverlay = document.querySelector('.search-dropdown');
-            if (searchOverlay) {
-              // 设置为可见状态并添加bfcache恢复类
-              searchOverlay.classList.add('open', 'bfcache-restore');
-              searchOverlay.style.visibility = 'visible';
-              
-              // 添加背景遮罩
-              const overlayBg = document.querySelector('.search-overlay-bg');
-              if (overlayBg) {
-                overlayBg.classList.add('open', 'bfcache-restore');
-              }
-              
-              // 添加body滚动限制
-              document.body.classList.add('overflow-hidden');
-              
-              // 触发自定义事件，通知React组件恢复搜索覆盖层
-              const event = new CustomEvent('restoreSearchOverlay', { 
-                detail: { 
-                  open: true,
-                  fromBfcache: true
-                } 
-              });
-              window.dispatchEvent(event);
-              
-              // 延迟移除bfcache-restore类，以便在恢复后再启用动画
-              setTimeout(function() {
-                searchOverlay.classList.remove('bfcache-restore');
-                if (overlayBg) {
-                  overlayBg.classList.remove('bfcache-restore');
-                }
-              }, 1000);
-            }
+            
+            // 触发自定义事件，通知React组件恢复搜索覆盖层
+            const event = new CustomEvent('restoreSearchOverlay', { 
+              detail: { 
+                open: true,
+                fromBfcache: true
+              } 
+            });
+            window.dispatchEvent(event);
           }
           
           // 添加页面恢复标记

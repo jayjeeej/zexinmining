@@ -95,31 +95,36 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
   // 在页面加载或导航返回时恢复菜单状态
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const savedState = sessionStorage.getItem('mobileMenuOpen');
-      if (savedState === 'true') {
-        // 如果有保存的菜单状态，恢复它
-        try {
-          const savedStack = sessionStorage.getItem('mobileMenuStack');
-          if (savedStack) {
-            setActiveMenuStack(JSON.parse(savedStack));
+      // 从sessionStorage恢复菜单状态
+      const restoreMenuState = () => {
+        const savedState = sessionStorage.getItem('mobileMenuOpen');
+        if (savedState === 'true') {
+          // 如果有保存的菜单状态，恢复它
+          try {
+            const savedStack = sessionStorage.getItem('mobileMenuStack');
+            if (savedStack) {
+              setActiveMenuStack(JSON.parse(savedStack));
+            }
+            
+            // 通知父组件菜单应该打开
+            if (!isOpen) {
+              // 这里我们通过一个特殊的事件通知父组件
+              const event = new CustomEvent('restoreMobileMenu', { 
+                detail: { 
+                  open: true,
+                  fromBfcache: true
+                } 
+              });
+              window.dispatchEvent(event);
+            }
+          } catch (e) {
+            console.error('Failed to parse saved menu stack', e);
           }
-          
-          // 通知父组件菜单应该打开
-          if (!isOpen) {
-            // 这里我们通过一个特殊的事件通知父组件
-            const event = new CustomEvent('restoreMobileMenu', { detail: { open: true } });
-            window.dispatchEvent(event);
-          }
-          
-          // 重置恢复标记
-          const needRestore = sessionStorage.getItem('needRestoreMobileMenu');
-          if (needRestore === 'true') {
-            sessionStorage.removeItem('needRestoreMobileMenu');
-          }
-        } catch (e) {
-          console.error('Failed to parse saved menu stack', e);
         }
-      }
+      };
+      
+      // 初始加载时恢复状态
+      restoreMenuState();
       
       // 监听菜单恢复事件
       const handleRestoreMenuStack = (event: Event) => {
@@ -137,30 +142,17 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
         }
       };
       
-      window.addEventListener('restoreMobileMenu', handleRestoreMenuStack);
-      window.addEventListener('closeMobileMenu', handleCloseMenu);
-      
-      // 注册pageshow事件处理程序
+      // 注册pageshow事件处理程序 - 关键是这个事件在bfcache恢复时会触发
       const handlePageShow = (event: PageTransitionEvent) => {
         if (event.persisted) {
           console.log('页面从bfcache恢复 - MobileMenu组件');
           // 从sessionStorage恢复菜单状态
-          const savedState = sessionStorage.getItem('mobileMenuOpen');
-          if (savedState === 'true') {
-            const savedStack = sessionStorage.getItem('mobileMenuStack');
-            if (savedStack) {
-              try {
-                const parsedStack = JSON.parse(savedStack);
-                setActiveMenuStack(parsedStack);
-                console.log('从pageshow事件恢复菜单堆栈:', parsedStack);
-              } catch (e) {
-                console.error('解析菜单堆栈失败:', e);
-              }
-            }
-          }
+          restoreMenuState();
         }
       };
       
+      window.addEventListener('restoreMobileMenu', handleRestoreMenuStack);
+      window.addEventListener('closeMobileMenu', handleCloseMenu);
       window.addEventListener('pageshow', handlePageShow);
       
       return () => {
