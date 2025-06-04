@@ -9,10 +9,47 @@ interface CookieConsentProps {
 
 const CookieConsent: React.FC<CookieConsentProps> = ({ locale: propLocale }) => {
   const [showConsent, setShowConsent] = useState(false);
-  const dialogRef = useRef<HTMLDialogElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
   const nextLocale = useLocale();
   const locale = propLocale || nextLocale;
   const isZh = locale === 'zh';
+  
+  // 使用useEffect处理弹窗的位置
+  useEffect(() => {
+    if (showConsent && modalRef.current) {
+      // 获取当前视窗的位置和尺寸
+      const viewportHeight = window.innerHeight;
+      const scrollY = window.scrollY || window.pageYOffset;
+      
+      // 计算弹窗应该显示的位置
+      const modalHeight = modalRef.current.offsetHeight;
+      const topPosition = scrollY + (viewportHeight - modalHeight) / 2;
+      
+      // 设置弹窗位置
+      modalRef.current.style.position = 'absolute';
+      modalRef.current.style.top = `${topPosition}px`;
+      modalRef.current.style.left = '50%';
+      modalRef.current.style.transform = 'translateX(-50%)';
+      modalRef.current.style.zIndex = '10001';
+      
+      // 监听滚动事件，确保弹窗始终在视窗中间
+      const handleScroll = () => {
+        if (modalRef.current) {
+          const newScrollY = window.scrollY || window.pageYOffset;
+          const newTopPosition = newScrollY + (viewportHeight - modalHeight) / 2;
+          modalRef.current.style.top = `${newTopPosition}px`;
+        }
+      };
+      
+      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('resize', handleScroll);
+      
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener('resize', handleScroll);
+      };
+    }
+  }, [showConsent]);
   
   useEffect(() => {
     // 客户端安全检查
@@ -24,9 +61,6 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ locale: propLocale }) => 
       // 延迟显示cookie提示，让页面先加载完成
       const timer = setTimeout(() => {
         setShowConsent(true);
-        if (dialogRef.current && !dialogRef.current.open) {
-          dialogRef.current.showModal();
-        }
       }, 1000);
       
       return () => clearTimeout(timer);
@@ -37,18 +71,12 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ locale: propLocale }) => 
     if (typeof window === 'undefined') return;
     localStorage.setItem('cookieConsent', 'accepted');
     setShowConsent(false);
-    if (dialogRef.current) {
-      dialogRef.current.close();
-    }
   };
   
   const handleDecline = () => {
     if (typeof window === 'undefined') return;
     localStorage.setItem('cookieConsent', 'declined');
     setShowConsent(false);
-    if (dialogRef.current) {
-      dialogRef.current.close();
-    }
   };
   
   const handleManage = () => {
@@ -56,9 +84,6 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ locale: propLocale }) => 
     if (typeof window === 'undefined') return;
     localStorage.setItem('cookieConsent', 'managed');
     setShowConsent(false);
-    if (dialogRef.current) {
-      dialogRef.current.close();
-    }
   };
   
   // 服务器端渲染时不显示
@@ -68,62 +93,142 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ locale: propLocale }) => 
   if (!showConsent) return null;
   
   return (
-    <dialog 
-      ref={dialogRef}
-      className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 max-h-[90vh] w-[90%] max-w-2xl overflow-y-auto rounded-md p-0 backdrop:bg-black backdrop:bg-opacity-50"
-      open={showConsent}
-    >
-      <div className="relative p-6 bg-white">
-        <div className="absolute top-0 right-0 pt-4 pr-4">
+    <>
+      {/* 遮罩层 - 允许点击穿透 */}
+      <div style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'rgba(0,0,0,0.3)',
+        zIndex: 10000,
+        pointerEvents: 'none' // 允许点击穿透
+      }} />
+      
+      {/* 弹窗内容 - 使用ref获取DOM元素 */}
+      <div 
+        ref={modalRef}
+        style={{
+          width: '90%',
+          maxWidth: '600px',
+          backgroundColor: 'white',
+          borderRadius: '8px',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+          padding: '24px',
+          maxHeight: '80vh',
+          overflow: 'auto'
+        }}
+      >
+        {/* 关闭按钮 */}
+        <div style={{
+          position: 'absolute',
+          top: '16px',
+          right: '16px'
+        }}>
           <button 
-            onClick={handleAccept} 
-            className="text-gray-400 hover:text-[#ff6633] transition-colors"
+            onClick={handleAccept}
             aria-label={isZh ? '关闭' : 'Close'}
+            style={{
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              color: '#666'
+            }}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
-      
-        <h2 className="text-2xl font-semibold font-headline text-gray-800 mb-4">
+        
+        {/* 标题 */}
+        <h2 style={{
+          fontSize: '24px',
+          fontWeight: 600,
+          marginBottom: '16px',
+          color: '#333',
+          paddingRight: '24px'
+        }}>
           {isZh ? '我们想获得您的同意' : 'We would like your consent'}
         </h2>
         
-        <div className="mb-6 text-gray-600">
-          <p className="text-sm">
+        {/* 内容 */}
+        <div style={{
+          marginBottom: '24px',
+          color: '#666'
+        }}>
+          <p style={{
+            fontSize: '14px',
+            lineHeight: '1.5'
+          }}>
             {isZh 
               ? 'Zexin Mining和我们的供应商使用Cookie（和类似技术）收集和处理个人数据（如设备标识符、IP地址和网站交互）用于基本网站功能、分析网站性能、个性化内容和投放有针对性的广告。某些Cookie是必要的，无法关闭，而其他Cookie仅在您同意的情况下使用。基于同意的Cookie帮助我们支持Zexin Mining并个性化您的网站体验。您可以通过点击下方相应按钮接受或拒绝所有此类Cookie。' 
               : 'Zexin Mining and our vendors use cookies (and similar technologies) to collect and process personal data (such as device identifiers, IP addresses, and website interactions) for essential site functions, analyzing site performance, personalizing content, and delivering targeted ads. Some cookies are necessary and can\'t be turned off, while others are used only if you consent. The consent-based cookies help us support Zexin Mining and individualize your website experience.'}
           </p>
         </div>
         
-        <hr className="border-gray-200 mb-6" />
+        {/* 分割线 */}
+        <hr style={{
+          border: 'none',
+          borderTop: '1px solid #eee',
+          margin: '0 0 24px 0'
+        }} />
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {/* 按钮组 */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(1, 1fr)',
+          gap: '16px'
+        }}>
           <button 
             onClick={handleDecline}
-            className="text-sm px-5 py-2.5 border border-gray-300 rounded-md hover:bg-gray-100 transition-colors text-gray-700"
+            style={{
+              padding: '10px 20px',
+              border: '1px solid #ddd',
+              borderRadius: '6px',
+              backgroundColor: 'white',
+              color: '#333',
+              fontSize: '14px',
+              cursor: 'pointer'
+            }}
           >
             {isZh ? '拒绝' : 'Reject all'}
           </button>
           
           <button 
             onClick={handleManage}
-            className="text-sm px-5 py-2.5 border border-gray-300 rounded-md hover:bg-gray-100 transition-colors text-gray-700"
+            style={{
+              padding: '10px 20px',
+              border: '1px solid #ddd',
+              borderRadius: '6px',
+              backgroundColor: 'white',
+              color: '#333',
+              fontSize: '14px',
+              cursor: 'pointer'
+            }}
           >
             {isZh ? '管理Cookie' : 'Manage cookies'}
           </button>
           
           <button 
             onClick={handleAccept}
-            className="text-sm px-5 py-2.5 rounded-md bg-white border border-[#ff6633] hover:bg-gray-50 transition-colors text-[#ff6633] font-medium"
+            style={{
+              padding: '10px 20px',
+              border: '1px solid #ff6633',
+              borderRadius: '6px',
+              backgroundColor: 'white',
+              color: '#ff6633',
+              fontSize: '14px',
+              fontWeight: 500,
+              cursor: 'pointer'
+            }}
           >
             {isZh ? '接受所有' : 'Accept all'}
           </button>
         </div>
       </div>
-    </dialog>
+    </>
   );
 };
 
