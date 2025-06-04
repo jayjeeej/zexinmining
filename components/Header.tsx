@@ -136,7 +136,7 @@ const MobileMenu = React.memo(({
   setOpenMenuIndex,
   onChangeLanguage,
   onOpenSearch 
-}: MobileMenuProps): React.ReactElement => {
+}: MobileMenuProps) => {
   // 获取当前路径用于语言切换
   const currentPath = usePathname();
   
@@ -150,10 +150,6 @@ const MobileMenu = React.memo(({
   
   // 添加菜单引用和动画处理
   const menuRef = useRef<HTMLElement>(null);
-  const menuContentRef = useRef<HTMLDivElement>(null);
-  
-  // 添加状态跟踪是否正在执行动画，避免重复触发
-  const [isAnimating, setIsAnimating] = useState(false);
   
   // 处理动画结束事件
   useEffect(() => {
@@ -166,20 +162,8 @@ const MobileMenu = React.memo(({
       }
     }
     
-    // 添加动画结束事件监听器
-    const handleAnimationEnd = () => {
-      setIsAnimating(false);
-    };
-    
-    const menuContent = menuContentRef.current;
-    if (menuContent) {
-      menuContent.addEventListener('transitionend', handleAnimationEnd);
-    }
-    
     return () => {
-      if (menuContent) {
-        menuContent.removeEventListener('transitionend', handleAnimationEnd);
-      }
+      // 清理代码(如果需要)
     };
   }, [isOpen]);
   
