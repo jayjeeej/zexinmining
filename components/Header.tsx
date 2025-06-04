@@ -22,6 +22,15 @@ const styles = {
       backface-visibility: hidden;
       -webkit-backface-visibility: hidden;
       transform-style: preserve-3d;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 90px !important;
+      z-index: 20;
+      width: 100%;
+      max-height: calc(100vh - 90px);
+      overflow-y: auto;
+      background-color: white;
     }
     
     .mobile-menu.open {
@@ -59,6 +68,21 @@ const styles = {
       backface-visibility: hidden;
       transform: translateZ(0);
       perspective: 1000px;
+    }
+    
+    /* 修复前进导航后返回点击菜单的问题 */
+    html[data-menu-reset="true"] .mobile-menu {
+      visibility: hidden !important;
+      opacity: 0 !important;
+      transform: translateY(-10px) !important;
+    }
+    
+    /* 修复移动菜单内容区域 */
+    .mobile-menu-content {
+      max-height: calc(100vh - 90px);
+      overflow-y: auto;
+      width: 100%;
+      position: relative;
     }
   `,
   globalStyles: `
@@ -222,18 +246,48 @@ const MobileMenu = React.memo(({
   
   // 添加菜单引用
   const menuRef = useRef<HTMLElement>(null);
+  const menuContentRef = useRef<HTMLDivElement>(null);
   
   // 使用状态跟踪过渡状态
   const [isTransitioning, setIsTransitioning] = useState(false);
+  
+  // 新增状态记录前进导航来源
+  const [navigationSource, setNavigationSource] = useState<'menu' | 'normal' | null>(null);
+  
+  // 新增菜单状态调试日志
+  const logMenuState = (message: string) => {
+    if (typeof window !== 'undefined' && window.localStorage.getItem('debug-menu') === 'true') {
+      console.log(`[MenuDebug] ${message}`);
+    }
+  };
+  
+  // 添加菜单重置处理
+  useEffect(() => {
+    // 清除任何可能的重置标记
+    if (typeof window !== 'undefined') {
+      const menuResetState = document.documentElement.getAttribute('data-menu-reset');
+      if (menuResetState === 'true') {
+        logMenuState('检测到菜单重置标记');
+        // 短暂延迟后清除重置标记
+        setTimeout(() => {
+          document.documentElement.removeAttribute('data-menu-reset');
+          logMenuState('已清除菜单重置标记');
+        }, 100);
+      }
+    }
+  }, []);
   
   // 直接控制可见性
   useEffect(() => {
     const menu = menuRef.current;
     if (menu) {
       if (isOpen) {
+        logMenuState(`打开菜单: isTransitioning=${isTransitioning}`);
         // 当菜单打开时，立即移除invisible类并设置可见性
         menu.classList.remove('invisible');
         menu.style.visibility = 'visible';
+        menu.style.display = 'block';
+        menu.style.opacity = '1';
         setIsTransitioning(true);
         
         // 使用RAF确保浏览器有时间应用初始状态
@@ -245,11 +299,13 @@ const MobileMenu = React.memo(({
             const transitionDuration = 300; // 匹配CSS中的过渡时间
             setTimeout(() => {
               setIsTransitioning(false);
+              logMenuState('菜单过渡完成');
             }, transitionDuration);
           });
         });
       } else {
         // 开始关闭过渡
+        logMenuState('关闭菜单');
         setIsTransitioning(true);
         menu.classList.remove('open');
         
@@ -258,7 +314,9 @@ const MobileMenu = React.memo(({
           if (!isOpen && menu) {
             menu.classList.add('invisible');
             menu.style.visibility = 'hidden';
+            menu.style.display = 'none'; // 确保菜单隐藏
             setIsTransitioning(false);
+            logMenuState('菜单已隐藏');
           }
         };
         
@@ -284,12 +342,15 @@ const MobileMenu = React.memo(({
         // 确保菜单可见并有正确的样式
         if (menuRef.current) {
           menuRef.current.style.visibility = 'visible';
+          menuRef.current.style.display = 'block';
           menuRef.current.style.opacity = '1';
           menuRef.current.style.transform = 'translateY(0)';
+          logMenuState('已保存菜单打开状态');
         }
       } else {
         sessionStorage.setItem('mobileMenuOpen', 'false');
         document.documentElement.removeAttribute('data-menu-open');
+        logMenuState('已保存菜单关闭状态');
       }
     }
   }, [isOpen, activeMenuStack]);
@@ -297,22 +358,54 @@ const MobileMenu = React.memo(({
   // 在页面加载或导航返回时恢复菜单状态
   useEffect(() => {
     if (typeof window !== 'undefined') {
+      // 检查导航来源
+      const checkNavigationSource = () => {
+        const navSource = sessionStorage.getItem('navigationSource');
+        if (navSource) {
+          setNavigationSource(navSource as 'menu' | 'normal');
+          logMenuState(`导航来源: ${navSource}`);
+        }
+      };
+      
       // 监听页面性能导航事件，用于检测返回导航
       const handleNavigationEvent = (event: any) => {
         // 如果是通过后退按钮返回的
         if (event.type === 'navigate' && event.navigationType === 'back') {
+          logMenuState('检测到后退导航');
           // 为文档添加一个返回导航标记，用于CSS选择器
           document.documentElement.setAttribute('data-navigating-back', 'true');
           
-          // 检查菜单状态
+          // 检查菜单状态和导航来源
           const savedState = sessionStorage.getItem('mobileMenuOpen');
+          const navSource = sessionStorage.getItem('navigationSource');
+          
+          logMenuState(`后退导航 - 保存的菜单状态: ${savedState}, 导航来源: ${navSource}`);
+          
+          // 如果不是从菜单导航，但返回后要打开菜单，需要重置菜单状态
+          if (navSource === 'normal' && savedState === 'true') {
+            // 暂时标记菜单需要重置
+            document.documentElement.setAttribute('data-menu-reset', 'true');
+            sessionStorage.removeItem('mobileMenuOpen');
+            logMenuState('从正常导航返回 - 重置菜单状态');
+            
+            // 延迟一段时间后再恢复正常
+            setTimeout(() => {
+              document.documentElement.removeAttribute('data-menu-reset');
+              document.documentElement.removeAttribute('data-navigating-back');
+              logMenuState('重置恢复完成');
+            }, 200);
+            return;
+          }
+          
           if (savedState === 'true') {
             const menu = menuRef.current;
             if (menu) {
+              logMenuState('从菜单导航返回 - 恢复菜单状态');
               // 在应用任何过渡之前，先添加no-transition类
               menu.classList.add('no-transition');
               menu.classList.add('open');
               menu.style.visibility = 'visible';
+              menu.style.display = 'block';
               menu.style.opacity = '1';
               menu.style.transform = 'translateY(0)';
               
@@ -323,6 +416,7 @@ const MobileMenu = React.memo(({
               setTimeout(() => {
                 menu.classList.remove('no-transition');
                 document.documentElement.removeAttribute('data-navigating-back');
+                logMenuState('菜单状态恢复完成');
               }, 100);
             }
           } else {
@@ -331,55 +425,83 @@ const MobileMenu = React.memo(({
             }, 100);
           }
         }
+        
+        // 清除导航来源信息
+        sessionStorage.removeItem('navigationSource');
       };
       
       // 尝试从sessionStorage恢复菜单状态
       const savedState = sessionStorage.getItem('mobileMenuOpen');
+      logMenuState(`初始化 - 保存的菜单状态: ${savedState}`);
       
       if (savedState === 'true') {
-        // 如果有保存的菜单状态，恢复它
-        try {
-          // 恢复子菜单层级结构
-          const savedStack = sessionStorage.getItem('mobileMenuStack');
-          if (savedStack) {
-            setActiveMenuStack(JSON.parse(savedStack));
-          }
+        // 检查导航来源，如果是从非菜单导航返回的，需要特殊处理
+        const navSource = sessionStorage.getItem('navigationSource');
+        logMenuState(`初始化 - 导航来源: ${navSource}`);
+        
+        if (navSource === 'normal') {
+          // 正常导航返回后不自动打开菜单，需要重置菜单状态
+          document.documentElement.setAttribute('data-menu-reset', 'true');
+          sessionStorage.removeItem('mobileMenuOpen');
+          logMenuState('初始化 - 从正常导航返回，重置菜单状态');
           
-          // 确保菜单可见并有正确的样式
-          if (menuRef.current) {
-            // 在初始渲染时不使用过渡效果
-            menuRef.current.classList.add('no-transition');
-            menuRef.current.classList.add('open', 'backface-fix');
-            menuRef.current.style.visibility = 'visible';
-            menuRef.current.style.opacity = '1';
-            menuRef.current.style.transform = 'translateY(0)';
+          // 延迟一段时间后再恢复正常
+          setTimeout(() => {
+            document.documentElement.removeAttribute('data-menu-reset');
+            logMenuState('初始化 - 重置恢复完成');
+          }, 200);
+        } else {
+          // 如果有保存的菜单状态，恢复它
+          try {
+            logMenuState('初始化 - 从菜单导航返回，恢复菜单状态');
+            // 恢复子菜单层级结构
+            const savedStack = sessionStorage.getItem('mobileMenuStack');
+            if (savedStack) {
+              setActiveMenuStack(JSON.parse(savedStack));
+            }
             
-            // 强制重绘后移除no-transition类
-            void menuRef.current.offsetWidth;
-            setTimeout(() => {
-              if (menuRef.current) {
-                menuRef.current.classList.remove('no-transition');
-              }
-            }, 50);
+            // 确保菜单可见并有正确的样式
+            if (menuRef.current) {
+              // 在初始渲染时不使用过渡效果
+              menuRef.current.classList.add('no-transition');
+              menuRef.current.classList.add('open', 'backface-fix');
+              menuRef.current.style.visibility = 'visible';
+              menuRef.current.style.display = 'block';
+              menuRef.current.style.opacity = '1';
+              menuRef.current.style.transform = 'translateY(0)';
+              
+              // 强制重绘后移除no-transition类
+              void menuRef.current.offsetWidth;
+              setTimeout(() => {
+                if (menuRef.current) {
+                  menuRef.current.classList.remove('no-transition');
+                  logMenuState('初始化 - 菜单状态恢复完成');
+                }
+              }, 50);
+            }
+            
+            // 设置HTML属性用于CSS选择器
+            document.documentElement.setAttribute('data-menu-open', 'true');
+          } catch (e) {
+            console.error('Failed to parse saved menu stack', e);
+            logMenuState(`初始化 - 恢复菜单状态失败: ${e}`);
           }
-          
-          // 设置HTML属性用于CSS选择器
-          document.documentElement.setAttribute('data-menu-open', 'true');
-        } catch (e) {
-          console.error('Failed to parse saved menu stack', e);
         }
       }
       
       // 添加页面可见性变化监听
       const handleVisibilityChange = () => {
         if (document.visibilityState === 'visible') {
+          logMenuState('页面可见性变化 - 页面可见');
           // 页面从后台恢复时，检查菜单状态
           const savedState = sessionStorage.getItem('mobileMenuOpen');
           if (savedState === 'true' && menuRef.current) {
+            logMenuState('页面可见性变化 - 恢复菜单状态');
             // 避免过渡动画
             menuRef.current.classList.add('no-transition');
             menuRef.current.classList.add('open', 'backface-fix');
             menuRef.current.style.visibility = 'visible';
+            menuRef.current.style.display = 'block';
             menuRef.current.style.opacity = '1';
             menuRef.current.style.transform = 'translateY(0)';
             
@@ -388,6 +510,7 @@ const MobileMenu = React.memo(({
             setTimeout(() => {
               if (menuRef.current) {
                 menuRef.current.classList.remove('no-transition');
+                logMenuState('页面可见性变化 - 菜单状态恢复完成');
               }
             }, 50);
             
@@ -413,16 +536,39 @@ const MobileMenu = React.memo(({
       const handlePopState = () => {
         // 添加导航返回标记
         document.documentElement.setAttribute('data-navigating-back', 'true');
+        logMenuState('检测到popstate事件');
         
-        // 检查菜单状态
+        // 检查菜单状态和导航来源
         const savedState = sessionStorage.getItem('mobileMenuOpen');
+        const navSource = sessionStorage.getItem('navigationSource');
+        
+        logMenuState(`popstate事件 - 保存的菜单状态: ${savedState}, 导航来源: ${navSource}`);
+        
+        // 如果不是从菜单导航，但返回后要打开菜单，需要重置菜单状态
+        if (navSource === 'normal' && savedState === 'true') {
+          // 暂时标记菜单需要重置
+          document.documentElement.setAttribute('data-menu-reset', 'true');
+          sessionStorage.removeItem('mobileMenuOpen');
+          logMenuState('popstate事件 - 从正常导航返回，重置菜单状态');
+          
+          // 延迟一段时间后再恢复正常
+          setTimeout(() => {
+            document.documentElement.removeAttribute('data-menu-reset');
+            document.documentElement.removeAttribute('data-navigating-back');
+            logMenuState('popstate事件 - 重置恢复完成');
+          }, 200);
+          return;
+        }
+        
         if (savedState === 'true') {
           // 恢复菜单状态
           setTimeout(() => {
             if (menuRef.current) {
+              logMenuState('popstate事件 - 从菜单导航返回，恢复菜单状态');
               menuRef.current.classList.add('no-transition', 'backface-fix');
               menuRef.current.classList.add('open');
               menuRef.current.style.visibility = 'visible';
+              menuRef.current.style.display = 'block';
               menuRef.current.style.opacity = '1';
               menuRef.current.style.transform = 'translateY(0)';
               
@@ -435,6 +581,7 @@ const MobileMenu = React.memo(({
                   menuRef.current.classList.remove('no-transition');
                 }
                 document.documentElement.removeAttribute('data-navigating-back');
+                logMenuState('popstate事件 - 菜单状态恢复完成');
               }, 100);
             }
           }, 0);
@@ -443,9 +590,15 @@ const MobileMenu = React.memo(({
             document.documentElement.removeAttribute('data-navigating-back');
           }, 100);
         }
+        
+        // 清除导航来源
+        sessionStorage.removeItem('navigationSource');
       };
       
       window.addEventListener('popstate', handlePopState);
+      
+      // 初始检查导航来源
+      checkNavigationSource();
       
       return () => {
         document.removeEventListener('visibilitychange', handleVisibilityChange);
@@ -519,13 +672,15 @@ const MobileMenu = React.memo(({
     <nav 
       ref={menuRef}
       className={`mobile-menu fixed left-0 z-20 w-full bg-white ${isOpen ? 'open' : ''}`}
-      style={{ top: '90px' }}
       role="navigation"
       aria-label={locale === 'zh' ? "移动端导航菜单" : "Mobile navigation menu"}
       itemScope
       itemType="https://schema.org/SiteNavigationElement"
     >
-      <div className="contain pb-8 pt-8 px-4 mobile-menu-content overflow-y-auto max-h-[calc(100dvh_-_90px)]">
+      <div 
+        ref={menuContentRef}
+        className="contain pb-8 pt-8 px-4 mobile-menu-content overflow-y-auto max-h-[calc(100vh_-_90px)]"
+      >
         {/* 返回按钮 */}
         {menuLevel > 0 && (
             <button 
@@ -1166,13 +1321,24 @@ export default function Header({ logo, items }: HeaderProps) {
 
   // 监听全局点击事件
   useEffect(() => {
+    // 开启调试模式
+    if (typeof window !== 'undefined' && window.localStorage.getItem('debug-menu') !== 'true') {
+      window.localStorage.setItem('debug-menu', 'true');
+    }
+    
     // 捕获阶段监听
     const captureListener = (e: MouseEvent) => {
       if (e.target instanceof HTMLAnchorElement) {
-        console.log('捕获阶段检测到链接点击:', e.target.href);
-        
         // 如果链接导航到其他页面，添加导航标记
         if (!e.target.href.includes('#') && !e.defaultPrevented) {
+          // 记录导航来源
+          if (isMobileMenuOpen) {
+            sessionStorage.setItem('navigationSource', 'menu');
+            console.log('[MenuDebug] 从菜单导航: ' + e.target.href);
+          } else {
+            sessionStorage.setItem('navigationSource', 'normal');
+            console.log('[MenuDebug] 从正常链接导航: ' + e.target.href);
+          }
           sessionStorage.setItem('isNavigating', 'true');
         }
       }
@@ -1180,10 +1346,7 @@ export default function Header({ logo, items }: HeaderProps) {
     
     // 冒泡阶段监听
     const bubbleListener = (e: MouseEvent) => {
-      if (e.target instanceof HTMLAnchorElement) {
-        console.log('冒泡阶段检测到链接点击:', e.target.href);
-        console.log('defaultPrevented:', e.defaultPrevented);
-      }
+      // 只记录日志，不做特殊处理
     };
     
     // 添加监听器
@@ -1195,7 +1358,7 @@ export default function Header({ logo, items }: HeaderProps) {
       document.removeEventListener('click', captureListener, true);
       document.removeEventListener('click', bubbleListener, false);
     };
-  }, []);
+  }, [isMobileMenuOpen]); // 添加依赖项，确保捕获当前菜单状态
 
   // 使用useEffect保存搜索框状态到sessionStorage
   useEffect(() => {
@@ -1350,17 +1513,26 @@ export default function Header({ logo, items }: HeaderProps) {
 
   // 打开/关闭移动菜单
   const toggleMobileMenu = () => {
+    console.log('[MenuDebug] 切换菜单状态');
+    // 检查是否有重置标记，如果有则清除
+    if (document.documentElement.getAttribute('data-menu-reset') === 'true') {
+      document.documentElement.removeAttribute('data-menu-reset');
+      console.log('[MenuDebug] 清除重置标记');
+    }
+    
     const newState = !isMobileMenuOpen;
     setMobileMenuOpen(newState);
     
     // 控制body滚动
     if (newState) {
+      console.log('[MenuDebug] 打开菜单');
       // 打开菜单时禁止body滚动
       document.body.classList.add('overflow-hidden');
       document.documentElement.setAttribute('data-menu-open', 'true');
       // 确保搜索框已关闭
       setIsSearchOverlayOpen(false);
     } else {
+      console.log('[MenuDebug] 关闭菜单');
       // 关闭菜单时恢复body滚动
       document.body.classList.remove('overflow-hidden');
       document.documentElement.removeAttribute('data-menu-open');
@@ -1376,6 +1548,7 @@ export default function Header({ logo, items }: HeaderProps) {
 
   // 关闭移动菜单
   const closeMobileMenu = () => {
+    console.log('[MenuDebug] 强制关闭菜单');
     setMobileMenuOpen(false);
     setOpenMenuIndex(null);
     document.body.classList.remove('overflow-hidden');
@@ -1538,7 +1711,7 @@ export default function Header({ logo, items }: HeaderProps) {
         {/* Mobile Menu */}
       <MobileMenu 
         isOpen={isMobileMenuOpen}
-          onClose={closeMobileMenu}
+        onClose={closeMobileMenu}
         logo={logo}
         items={items}
         locale={locale}
