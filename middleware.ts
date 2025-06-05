@@ -83,10 +83,12 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
   
-  // 如果是根路径，重定向到用户首选语言
+  // 如果是根路径，使用rewrite而不是redirect来处理，避免Google Search Console报告重定向问题
+  // 这样搜索引擎会看到内容而不是重定向
   if (pathname === '/') {
     const locale = getPreferredLocale(request);
-    return NextResponse.redirect(new URL(`/${locale}`, request.url));
+    console.log(`Root path accessed, rewriting to /${locale} instead of redirecting`);
+    return NextResponse.rewrite(new URL(`/${locale}`, request.url));
   }
   
   return NextResponse.next();
