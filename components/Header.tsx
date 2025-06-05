@@ -10,73 +10,94 @@ import { languages, HeaderNavItem, HeaderLogo, HeaderSubItem, HeaderColumn } fro
 import OptimizedImage from './layouts/OptimizedImage';
 import CardAnimationProvider from './CardAnimationProvider';
 
-// 添加CSS样式定义，用于控制导航菜单的过渡效果
+// 更新styles对象，与现有的performance.css保持一致
 const styles = {
   mobileMenu: `
     .mobile-menu {
-      transition: opacity 0.3s ease, transform 0.3s ease;
       opacity: 0;
       transform: translateY(-10px);
+      pointer-events: none;
       visibility: hidden;
-      will-change: opacity, transform;
-      backface-visibility: hidden;
+      will-change: transform, opacity;
+      /* 防止闪白 */
       -webkit-backface-visibility: hidden;
-      transform-style: preserve-3d;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
     }
     
     .mobile-menu.open {
       opacity: 1;
       transform: translateY(0);
+      pointer-events: auto;
       visibility: visible;
-    }
-    
-    /* 为了支持刷新和返回导航时的状态恢复 */
-    @media (max-width: 1023px) {
-      html[data-menu-open="true"] body {
-        overflow: hidden;
-      }
-    }
-
-    /* 防止页面过渡期间闪烁 */
-    body.navigation-transition {
-      animation: none !important;
-      transition: none !important;
-    }
-    
-    body.navigation-transition * {
-      animation: none !important;
-      transition: none !important;
-    }
-
-    /* 当组件即将卸载时，使用这个类避免闪烁 */
-    .no-transition {
-      transition: none !important;
-    }
-
-    /* 针对不同浏览器的返回导航优化 */
-    .backface-fix {
+      animation: menuSlideDown 350ms cubic-bezier(0.2, 0.6, 0.35, 1) forwards;
+      /* 防止闪白 */
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
-      perspective: 1000px;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+    }
+    
+    .mobile-menu:not(.open) {
+      animation: menuSlideUp 350ms cubic-bezier(0.2, 0.6, 0.35, 1) forwards;
+    }
+    
+    /* 修复页面导航后header位移的问题 */
+    @keyframes menuSlideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes menuSlideUp {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+    }
+    
+    /* 防止移动菜单产生CLS */
+    @media (min-width: 1024px) {
+      .mobile-menu {
+        display: none;
+      }
     }
   `,
   globalStyles: `
-    /* 通用的防闪烁样式 */
-    .render-blocker {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: transparent;
-      z-index: 9999;
-      pointer-events: none;
-      display: none;
+    /* 防止页面跳动 */
+    html {
+      overflow-x: hidden;
     }
     
-    /* 在导航返回时显示 */
-    html[data-navigating-back="true"] .render-blocker {
-      display: block;
+    /* 菜单打开时固定页面 */
+    body.menu-open {
+      overflow: hidden !important;
+      position: fixed;
+      width: 100%;
+    }
+    
+    /* 确保header在菜单打开关闭时保持正常显示 */
+    [data-header] {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      width: 100%;
+      background-color: #ffffff;
+    }
+    
+    /* 解决菜单打开时header可能的padding-right变化导致的位移 */
+    body.menu-open [data-header] {
+      padding-right: 0 !important;
     }
   `
 };
@@ -222,236 +243,22 @@ const MobileMenu = React.memo(({
   // 添加菜单引用
   const menuRef = useRef<HTMLElement>(null);
   
-  // 使用状态跟踪过渡状态
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  
-  // 直接控制可见性
+  // 菜单切换逻辑 - 修复设置属性的方式
   useEffect(() => {
     const menu = menuRef.current;
-        if (menu) {
-      if (isOpen) {
-        // 当菜单打开时，立即移除invisible类并设置可见性
-        menu.classList.remove('invisible');
-        menu.style.visibility = 'visible';
-        setIsTransitioning(true);
-        
-        // 使用RAF确保浏览器有时间应用初始状态
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            menu.classList.add('open');
-            
-            // 设置一个定时器，确保过渡完成后更新状态
-            const transitionDuration = 300; // 匹配CSS中的过渡时间
-            setTimeout(() => {
-              setIsTransitioning(false);
-            }, transitionDuration);
-          });
-        });
-      } else {
-        // 开始关闭过渡
-        setIsTransitioning(true);
-        menu.classList.remove('open');
-        
-        // 等待过渡效果完成后再添加invisible类
-        const transitionEndHandler = () => {
-          if (!isOpen && menu) {
-            menu.classList.add('invisible');
-            menu.style.visibility = 'hidden';
-            setIsTransitioning(false);
-      }
-        };
-        
-        menu.addEventListener('transitionend', transitionEndHandler, { once: true });
-    return () => {
-          menu.removeEventListener('transitionend', transitionEndHandler);
-    };
-      }
+    if (!menu) return;
+    
+    if (isOpen) {
+      menu.classList.add('open');
+      // 阻止页面滚动
+      document.body.classList.add('menu-open');
+      document.documentElement.setAttribute('data-menu-open', 'true');
+    } else {
+      menu.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      document.documentElement.removeAttribute('data-menu-open');
     }
   }, [isOpen]);
-  
-  // 添加菜单状态持久化
-  useEffect(() => {
-    // 当菜单状态改变时，存储到sessionStorage
-    if (typeof window !== 'undefined') {
-      if (isOpen) {
-        sessionStorage.setItem('mobileMenuOpen', 'true');
-        sessionStorage.setItem('mobileMenuStack', JSON.stringify(activeMenuStack));
-        
-        // 设置HTML属性用于CSS选择器
-        document.documentElement.setAttribute('data-menu-open', 'true');
-        
-        // 确保菜单可见并有正确的样式
-        if (menuRef.current) {
-          menuRef.current.style.visibility = 'visible';
-          menuRef.current.style.opacity = '1';
-          menuRef.current.style.transform = 'translateY(0)';
-        }
-      } else {
-        sessionStorage.setItem('mobileMenuOpen', 'false');
-        document.documentElement.removeAttribute('data-menu-open');
-      }
-    }
-  }, [isOpen, activeMenuStack]);
-  
-  // 在页面加载或导航返回时恢复菜单状态
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // 监听页面性能导航事件，用于检测返回导航
-      const handleNavigationEvent = (event: any) => {
-        // 如果是通过后退按钮返回的
-        if (event.type === 'navigate' && event.navigationType === 'back') {
-          // 为文档添加一个返回导航标记，用于CSS选择器
-          document.documentElement.setAttribute('data-navigating-back', 'true');
-          
-          // 检查菜单状态
-      const savedState = sessionStorage.getItem('mobileMenuOpen');
-          if (savedState === 'true') {
-            const menu = menuRef.current;
-            if (menu) {
-              // 在应用任何过渡之前，先添加no-transition类
-              menu.classList.add('no-transition');
-              menu.classList.add('open');
-              menu.style.visibility = 'visible';
-              menu.style.opacity = '1';
-              menu.style.transform = 'translateY(0)';
-              
-              // 强制重绘
-              void menu.offsetWidth;
-              
-              // 恢复过渡
-              setTimeout(() => {
-                menu.classList.remove('no-transition');
-                document.documentElement.removeAttribute('data-navigating-back');
-              }, 100);
-            }
-          } else {
-            setTimeout(() => {
-              document.documentElement.removeAttribute('data-navigating-back');
-            }, 100);
-          }
-        }
-      };
-      
-      // 尝试从sessionStorage恢复菜单状态
-      const savedState = sessionStorage.getItem('mobileMenuOpen');
-      
-      if (savedState === 'true') {
-        // 如果有保存的菜单状态，恢复它
-        try {
-          // 恢复子菜单层级结构
-          const savedStack = sessionStorage.getItem('mobileMenuStack');
-          if (savedStack) {
-            setActiveMenuStack(JSON.parse(savedStack));
-          }
-          
-          // 确保菜单可见并有正确的样式
-          if (menuRef.current) {
-            // 在初始渲染时不使用过渡效果
-            menuRef.current.classList.add('no-transition');
-            menuRef.current.classList.add('open', 'backface-fix');
-            menuRef.current.style.visibility = 'visible';
-            menuRef.current.style.opacity = '1';
-            menuRef.current.style.transform = 'translateY(0)';
-            
-            // 强制重绘后移除no-transition类
-            void menuRef.current.offsetWidth;
-            setTimeout(() => {
-              if (menuRef.current) {
-                menuRef.current.classList.remove('no-transition');
-              }
-            }, 50);
-          }
-          
-          // 设置HTML属性用于CSS选择器
-          document.documentElement.setAttribute('data-menu-open', 'true');
-        } catch (e) {
-          console.error('Failed to parse saved menu stack', e);
-      }
-    }
-    
-    // 添加页面可见性变化监听
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === 'visible') {
-        // 页面从后台恢复时，检查菜单状态
-        const savedState = sessionStorage.getItem('mobileMenuOpen');
-        if (savedState === 'true' && menuRef.current) {
-            // 避免过渡动画
-            menuRef.current.classList.add('no-transition');
-            menuRef.current.classList.add('open', 'backface-fix');
-          menuRef.current.style.visibility = 'visible';
-          menuRef.current.style.opacity = '1';
-          menuRef.current.style.transform = 'translateY(0)';
-            
-            // 强制重绘后移除no-transition类
-            void menuRef.current.offsetWidth;
-            setTimeout(() => {
-              if (menuRef.current) {
-                menuRef.current.classList.remove('no-transition');
-              }
-            }, 50);
-            
-            document.documentElement.setAttribute('data-menu-open', 'true');
-        }
-      }
-    };
-    
-      // 监听性能导航事件（如果浏览器支持）
-      if ('PerformanceNavigationTiming' in window) {
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach(handleNavigationEvent);
-        });
-        
-        observer.observe({ type: 'navigation', buffered: true });
-      }
-      
-      // 添加可见性事件监听
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-      
-      // 监听popstate事件（后退按钮）
-      const handlePopState = () => {
-        // 添加导航返回标记
-        document.documentElement.setAttribute('data-navigating-back', 'true');
-        
-        // 检查菜单状态
-        const savedState = sessionStorage.getItem('mobileMenuOpen');
-        if (savedState === 'true') {
-          // 恢复菜单状态
-          setTimeout(() => {
-            if (menuRef.current) {
-              menuRef.current.classList.add('no-transition', 'backface-fix');
-              menuRef.current.classList.add('open');
-              menuRef.current.style.visibility = 'visible';
-              menuRef.current.style.opacity = '1';
-              menuRef.current.style.transform = 'translateY(0)';
-              
-              // 强制重绘
-              void menuRef.current.offsetWidth;
-              
-              // 恢复过渡
-              setTimeout(() => {
-                if (menuRef.current) {
-                  menuRef.current.classList.remove('no-transition');
-                }
-                document.documentElement.removeAttribute('data-navigating-back');
-              }, 100);
-            }
-          }, 0);
-        } else {
-          setTimeout(() => {
-            document.documentElement.removeAttribute('data-navigating-back');
-          }, 100);
-        }
-      };
-      
-      window.addEventListener('popstate', handlePopState);
-    
-    return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-        window.removeEventListener('popstate', handlePopState);
-    };
-    }
-  }, []);
   
   // 处理菜单打开逻辑
   const openSubMenu = (index: number, url?: string, isCategory: boolean = false) => {
@@ -592,8 +399,8 @@ const MobileMenu = React.memo(({
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                       </button>
-                                      )}
-                                    </div>
+                  )}
+                </div>
               </li>
             ))}
           </ul>
@@ -1133,104 +940,30 @@ export default function Header({ logo, items }: HeaderProps) {
       styleEl.innerHTML = styles.mobileMenu + styles.globalStyles;
       document.head.appendChild(styleEl);
       
-      // 添加防闪烁遮罩层
-      const blocker = document.createElement('div');
-      blocker.className = 'render-blocker';
-      document.body.appendChild(blocker);
-      
-      // 添加animation-ready类
-      document.documentElement.classList.add('animation-ready');
-      
-      // 条件性添加backface-fix类 - 只在非弹窗状态下添加
-      if (!document.querySelector('.modal-backdrop') && !document.querySelector('.modal-open')) {
-        document.documentElement.classList.add('backface-fix');
-      }
-      
-      // 清理函数
       return () => {
-        document.documentElement.classList.remove('animation-ready');
-        document.documentElement.classList.remove('backface-fix');
-        document.head.removeChild(styleEl);
-        if (document.body.contains(blocker)) {
-          document.body.removeChild(blocker);
+        if (styleEl.parentNode) {
+          document.head.removeChild(styleEl);
         }
       };
     }
   }, []);
   
-  // 检测滚动条宽度
+  // 监听路由变化，确保菜单状态正确
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // 计算滚动条宽度
-      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-      document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
+    // 当路径变化时关闭菜单，但不重置组件状态
+    if (isMobileMenuOpen) {
+      closeMobileMenu();
     }
-  }, []);
-
-  // 监听全局点击事件
-  useEffect(() => {
-    // 捕获阶段监听
-    const captureListener = (e: MouseEvent) => {
-      if (e.target instanceof HTMLAnchorElement) {
-        console.log('捕获阶段检测到链接点击:', e.target.href);
-        
-        // 如果链接导航到其他页面，添加导航标记
-        if (!e.target.href.includes('#') && !e.defaultPrevented) {
-          sessionStorage.setItem('isNavigating', 'true');
-        }
-      }
-    };
-    
-    // 冒泡阶段监听
-    const bubbleListener = (e: MouseEvent) => {
-      if (e.target instanceof HTMLAnchorElement) {
-        console.log('冒泡阶段检测到链接点击:', e.target.href);
-        console.log('defaultPrevented:', e.defaultPrevented);
-      }
-    };
-    
-    // 添加监听器
-    document.addEventListener('click', captureListener, true);
-    document.addEventListener('click', bubbleListener, false);
-    
-    return () => {
-      // 移除监听器
-      document.removeEventListener('click', captureListener, true);
-      document.removeEventListener('click', bubbleListener, false);
-    };
-  }, []);
-
-  // 使用useEffect保存搜索框状态到sessionStorage
-  useEffect(() => {
-    // 当搜索框状态改变时，存储到sessionStorage
-    if (typeof window !== 'undefined') {
-      if (isSearchOverlayOpen) {
-        sessionStorage.setItem('searchOverlayOpen', 'true');
-      } else {
-        sessionStorage.setItem('searchOverlayOpen', 'false');
-      }
-    }
-  }, [isSearchOverlayOpen]);
-
-  // 在页面加载时恢复搜索框状态
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const savedState = sessionStorage.getItem('searchOverlayOpen');
-      if (savedState === 'true') {
-        setIsSearchOverlayOpen(true);
-        document.body.classList.add('overflow-hidden');
-      }
-    }
-  }, []);
-
-  const openSearchOverlay = () => {
-    setIsSearchOverlayOpen(true);
-    document.body.classList.add('overflow-hidden');
+  }, [currentPath]);
+  
+  // 打开/关闭移动菜单
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const closeSearchOverlay = () => {
-    setIsSearchOverlayOpen(false);
-    document.body.classList.remove('overflow-hidden');
+  // 关闭移动菜单
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
   };
 
   // Function to toggle desktop dropdown menu
@@ -1262,144 +995,26 @@ export default function Header({ logo, items }: HeaderProps) {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         if (isSearchOverlayOpen) {
-          closeSearchOverlay();
+          setIsSearchOverlayOpen(false);
         } else if (openMenuIndex !== null) {
           setOpenMenuIndex(null);
         }
       }
     };
-    // Attach listener if any overlay or menu is open
-    if (isSearchOverlayOpen || openMenuIndex !== null) {
+    
        document.addEventListener('keydown', handleKeyDown);
-    } else {
-       document.removeEventListener('keydown', handleKeyDown);
-    }
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isSearchOverlayOpen, openMenuIndex]); // Remove isLangDropdownOpen dependency
+  }, [isSearchOverlayOpen, openMenuIndex]);
 
-  // Get current language on page load (improved: get from path or localStorage)
-  useEffect(() => {
-    // Add null check
-    if (!currentPath) return;
-    
-    // Logic to determine initial language (e.g., from URL path)
-    const pathParts = currentPath.split('/');
-    const pathLang = pathParts.length > 1 ? pathParts[1] : ''; // Assuming URL structure like /en/about
-    
-    // No longer need to set currentLang, as we are using locale
-    // Only store user language preference when needed
-    if (pathLang && languages.find(l => l.code === pathLang)) {
-      localStorage.setItem('zexin-lang', pathLang);
-    }
-  }, [currentPath]); // Re-run when path changes
-
-  // Language switch function (preserving current path)
-  const changeLanguage = (langCode: string) => {
-    if (langCode === locale) {
-      return; // Do nothing if language is the same
-    }
-    
-    // 确保currentPath不为空
-    if (!currentPath) {
-      // 如果currentPath为空，使用根路径
-      router.push(`/${langCode}`);
-      return;
-    }
-    
-    // 路径格式样例: /zh/products 或 /en/products
-    // 将路径分割为数组并过滤掉空字符串
-    const segments = currentPath.split('/').filter(segment => segment.length > 0);
-    
-    // 确保语言代码有效
-    if (!languages.some(lang => lang.code === langCode)) {
-      console.error(`Invalid language code: ${langCode}`);
-      return;
-    }
-    
-    // 检查第一段是否是语言代码
-    const firstSegmentIsLang = segments.length > 0 && languages.some(lang => lang.code === segments[0]);
-    
-    let newPath = '';
-    
-    if (firstSegmentIsLang && segments.length > 0) {
-      // 直接替换语言部分
-      // 例如：/zh/products -> /en/products
-      newPath = `/${langCode}/${segments.slice(1).join('/')}`;
-    } else {
-      // 如果第一段不是语言代码，添加新的语言代码到开头
-      newPath = `/${langCode}/${segments.join('/')}`;
-    }
-    
-    // 搜索页面特殊处理：保留搜索参数
-    if (typeof window !== 'undefined') {
-      // 如果是搜索页面，保留查询参数
-      if (currentPath.includes('/search')) {
-        const searchParams = new URL(window.location.href).searchParams;
-        // 如果有查询参数，添加到新路径
-        if (searchParams.toString()) {
-          newPath += `?${searchParams.toString()}`;
-        } else {
-          // 如果是搜索页面但没有参数，重定向到首页
-          newPath = `/${langCode}`;
-        }
-      }
-    }
-    
-    // 导航到新URL
-    router.push(newPath);
+  const openSearchOverlay = () => {
+    setIsSearchOverlayOpen(true);
   };
 
-  // 打开/关闭移动菜单
-  const toggleMobileMenu = () => {
-    const newState = !isMobileMenuOpen;
-    setMobileMenuOpen(newState);
-    
-    // 控制body滚动
-    if (newState) {
-      // 打开菜单时禁止body滚动
-      document.body.classList.add('overflow-hidden');
-      document.documentElement.setAttribute('data-menu-open', 'true');
-      // 确保搜索框已关闭
+  const closeSearchOverlay = () => {
       setIsSearchOverlayOpen(false);
-    } else {
-      // 关闭菜单时恢复body滚动
-      document.body.classList.remove('overflow-hidden');
-      document.documentElement.removeAttribute('data-menu-open');
-      // 关闭子菜单
-      setOpenMenuIndex(null);
-    }
-    
-    // 更新会话存储状态
-    if (typeof window !== 'undefined') {
-      sessionStorage.setItem('mobileMenuOpen', newState ? 'true' : 'false');
-    }
   };
-
-  // 关闭移动菜单
-  const closeMobileMenu = () => {
-    setMobileMenuOpen(false);
-    setOpenMenuIndex(null);
-    document.body.classList.remove('overflow-hidden');
-    document.documentElement.removeAttribute('data-menu-open');
-    
-    // 更新会话存储状态
-    if (typeof window !== 'undefined') {
-      sessionStorage.setItem('mobileMenuOpen', 'false');
-    }
-  };
-
-  // 恢复移动菜单状态
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const savedMobileMenuState = sessionStorage.getItem('mobileMenuOpen');
-      if (savedMobileMenuState === 'true') {
-        setMobileMenuOpen(true);
-        document.body.classList.add('overflow-hidden');
-      }
-    }
-  }, []);
 
   return (
     <>
@@ -1411,16 +1026,13 @@ export default function Header({ logo, items }: HeaderProps) {
         ${styles.globalStyles}
       `}</style>
       
-      {/* 防闪烁遮罩层 */}
-      <div className="render-blocker" aria-hidden="true" />
-      
       <header
         ref={headerRef}
-        className="w-full bg-[#ffffff] h-[90px] backface-fix"
+        data-header
+        className="w-full bg-[#ffffff] h-[90px]"
         style={{ height: '90px' }}
         role="banner"
         aria-label="Site header"
-        suppressHydrationWarning
       >
         <div className="max-w-[90%] sm:max-w-[92%] lg:max-w-[94%] 2xl:max-w-[95%] mx-auto px-4 sm:px-5 lg:px-6 h-full">
           <div className="flex h-full items-center justify-between border-b border-gray-100 py-3 lg:py-0">
@@ -1490,7 +1102,7 @@ export default function Header({ logo, items }: HeaderProps) {
             {/* Right Side Actions */}
             <div className="flex items-center gap-x-2">
               {/* Language Switcher */}
-              <LanguageSwitcher locale={locale} onChangeLanguage={changeLanguage} />
+              <LanguageSwitcher locale={locale} onChangeLanguage={(code) => router.push(`/${code}`)} />
                 
               {/* Divider */}
               <div className="hidden sm:block h-5 w-[1px] bg-gray-100"></div>
@@ -1547,7 +1159,7 @@ export default function Header({ logo, items }: HeaderProps) {
         locale={locale}
         openMenuIndex={openMenuIndex}
         setOpenMenuIndex={setOpenMenuIndex}
-        onChangeLanguage={changeLanguage}
+        onChangeLanguage={(code) => router.push(`/${code}`)}
         onOpenSearch={openSearchOverlay}
       />
 
