@@ -903,3 +903,14 @@ button svg {
 #faqs .opacity-100 {
   transition: all 0.3s ease-in-out !important;
 }
+
+/* 解决header sticky定位问题 */
+/* 父容器需要移除overflow限制 */
+header[data-header] > .jsx-3596564274 {
+  overflow: visible !important;
+}
+
+/* 或直接在最外层容器添加样式 */
+.jsx-3596564274:has([data-header]) {
+  overflow: visible !important;
+}

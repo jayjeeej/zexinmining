@@ -10,12 +10,12 @@ import { languages, HeaderNavItem, HeaderLogo, HeaderSubItem, HeaderColumn } fro
 import OptimizedImage from './layouts/OptimizedImage';
 import CardAnimationProvider from './CardAnimationProvider';
 
-// 更新styles对象，与现有的performance.css保持一致
+// 更新styles对象，移除动画效果，添加防闪白优化
 const styles = {
   mobileMenu: `
     .mobile-menu {
       opacity: 0;
-      transform: translateY(-10px);
+      transform: translateY(0);
       pointer-events: none;
       visibility: hidden;
       will-change: transform, opacity;
@@ -24,6 +24,12 @@ const styles = {
       backface-visibility: hidden;
       transform: translateZ(0);
       -webkit-transform: translateZ(0);
+      position: fixed;
+      top: 90px;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
+      z-index: 29;
     }
     
     .mobile-menu.open {
@@ -31,39 +37,11 @@ const styles = {
       transform: translateY(0);
       pointer-events: auto;
       visibility: visible;
-      animation: menuSlideDown 350ms cubic-bezier(0.2, 0.6, 0.35, 1) forwards;
       /* 防止闪白 */
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       transform: translateZ(0);
       -webkit-transform: translateZ(0);
-    }
-    
-    .mobile-menu:not(.open) {
-      animation: menuSlideUp 350ms cubic-bezier(0.2, 0.6, 0.35, 1) forwards;
-    }
-    
-    /* 修复页面导航后header位移的问题 */
-    @keyframes menuSlideDown {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    @keyframes menuSlideUp {
-      from {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      to {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
     }
     
     /* 防止移动菜单产生CLS */
@@ -74,9 +52,9 @@ const styles = {
     }
   `,
   globalStyles: `
-    /* 防止页面跳动 */
+    /* 防止页面跳动 - 移除overflow限制 */
     html {
-      overflow-x: hidden;
+      overflow: visible;
     }
     
     /* 菜单打开时固定页面 */
@@ -229,10 +207,7 @@ const MobileMenu = React.memo(({
   onChangeLanguage,
   onOpenSearch 
 }: MobileMenuProps) => {
-  // 获取当前路径用于语言切换
   const currentPath = usePathname();
-  
-  // 状态用于跟踪当前展开的菜单层级结构
   const [activeMenuStack, setActiveMenuStack] = useState<Array<{
     itemIndex: number, 
     parentUrl?: string, 
@@ -240,23 +215,21 @@ const MobileMenu = React.memo(({
     isCategory?: boolean
   }>>([]);
   
-  // 添加菜单引用
   const menuRef = useRef<HTMLElement>(null);
   
-  // 菜单切换逻辑 - 修复设置属性的方式
+  // 优化菜单切换逻辑，移除动画相关代码
   useEffect(() => {
     const menu = menuRef.current;
     if (!menu) return;
     
     if (isOpen) {
       menu.classList.add('open');
-      // 阻止页面滚动
-      document.body.classList.add('menu-open');
       document.documentElement.setAttribute('data-menu-open', 'true');
     } else {
       menu.classList.remove('open');
-      document.body.classList.remove('menu-open');
       document.documentElement.removeAttribute('data-menu-open');
+      // 重置菜单状态
+      setActiveMenuStack([]);
     }
   }, [isOpen]);
   
@@ -324,14 +297,13 @@ const MobileMenu = React.memo(({
   return (
     <nav 
       ref={menuRef}
-      className={`mobile-menu fixed left-0 z-20 w-full bg-white ${isOpen ? 'open' : ''}`}
-      style={{ top: '90px' }}
+      className="mobile-menu"
       role="navigation"
       aria-label={locale === 'zh' ? "移动端导航菜单" : "Mobile navigation menu"}
       itemScope
       itemType="https://schema.org/SiteNavigationElement"
     >
-      <div className="contain pb-8 pt-8 px-4 mobile-menu-content overflow-y-auto max-h-[calc(100dvh_-_90px)]">
+      <div className="contain pb-8 pt-8 px-4 mobile-menu-content">
         {/* 返回按钮 */}
         {menuLevel > 0 && (
             <button 
@@ -932,81 +904,32 @@ export default function Header({ logo, items }: HeaderProps) {
   const currentPath = usePathname();
   const router = useRouter();
   
-  // 添加动画和菜单样式
+  // 优化路由变化监听
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // 添加菜单样式
-      const styleEl = document.createElement('style');
-      styleEl.innerHTML = styles.mobileMenu + styles.globalStyles;
-      document.head.appendChild(styleEl);
-      
-      return () => {
-        if (styleEl.parentNode) {
-          document.head.removeChild(styleEl);
-        }
-      };
-    }
-  }, []);
-  
-  // 监听路由变化，确保菜单状态正确
-  useEffect(() => {
-    // 当路径变化时关闭菜单，但不重置组件状态
     if (isMobileMenuOpen) {
       closeMobileMenu();
     }
+    if (openMenuIndex !== null) {
+      setOpenMenuIndex(null);
+    }
   }, [currentPath]);
   
-  // 打开/关闭移动菜单
-  const toggleMobileMenu = () => {
+  // 优化移动菜单切换，移除不必要的状态更新
+  const toggleMobileMenu = useCallback(() => {
     setMobileMenuOpen(!isMobileMenuOpen);
-  };
+    document.body.classList.toggle('menu-open');
+  }, [isMobileMenuOpen]);
 
-  // 关闭移动菜单
-  const closeMobileMenu = () => {
+  // 优化移动菜单关闭
+  const closeMobileMenu = useCallback(() => {
     setMobileMenuOpen(false);
-  };
+    document.body.classList.remove('menu-open');
+  }, []);
 
-  // Function to toggle desktop dropdown menu
-  const toggleDesktopMenu = (index: number) => {
+  // 优化桌面菜单切换
+  const toggleDesktopMenu = useCallback((index: number) => {
     setOpenMenuIndex(prevIndex => (prevIndex === index ? null : index));
-  };
-
-  // Effect to close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
-        setOpenMenuIndex(null); // Close the dropdown
-      }
-    };
-
-    if (openMenuIndex !== null) {
-      document.addEventListener('mousedown', handleClickOutside);
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [openMenuIndex]);
-
-  // Effect for Escape key (close search or dropdown)
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        if (isSearchOverlayOpen) {
-          setIsSearchOverlayOpen(false);
-        } else if (openMenuIndex !== null) {
-          setOpenMenuIndex(null);
-        }
-      }
-    };
-    
-       document.addEventListener('keydown', handleKeyDown);
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [isSearchOverlayOpen, openMenuIndex]);
+  }, []);
 
   const openSearchOverlay = () => {
     setIsSearchOverlayOpen(true);
@@ -1029,7 +952,7 @@ export default function Header({ logo, items }: HeaderProps) {
       <header
         ref={headerRef}
         data-header
-        className="w-full bg-[#ffffff] h-[90px]"
+        className="w-full bg-[#ffffff] h-[90px] sticky top-0 z-30"
         style={{ height: '90px' }}
         role="banner"
         aria-label="Site header"
@@ -1141,12 +1064,13 @@ export default function Header({ logo, items }: HeaderProps) {
         </div>
       </header>
 
-      {/* 移动菜单遮罩层 - 添加遮罩防止滚动条出现 */}
+      {/* 遮罩层 - 确保在菜单(z-29)下方但仍然可见 */}
       {isMobileMenuOpen && (
         <div 
-          className="fixed left-0 z-10 h-full w-full bg-gray-800 bg-opacity-50" 
-          style={{ top: '90px' }}
+          className="fixed left-0 z-[28] w-full bg-gray-800 bg-opacity-50" 
+          style={{ top: '90px', height: 'calc(100vh - 90px)' }}
           onClick={closeMobileMenu}
+          aria-hidden="true"
         />
       )}
 

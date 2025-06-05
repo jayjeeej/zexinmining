@@ -181,7 +181,7 @@ export default function RootLayout({
         </style>
         </noscript>
       </head>
-      <body className="overflow-x-hidden font-text flex flex-col min-h-screen bg-white">
+      <body className="overflow-visible font-text flex flex-col min-h-screen bg-white">
         {/* 页面跳转到主内容的链接 */}
         <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:p-4 focus:bg-white z-50">
           跳到主要内容
