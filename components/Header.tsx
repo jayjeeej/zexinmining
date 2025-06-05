@@ -777,7 +777,6 @@ interface DropdownMenuProps {
   index: number;
   isOpen: boolean;
   setOpenMenuIndex: React.Dispatch<React.SetStateAction<number | null>>;
-  menuFromMenuKey: string;
 }
 
 // Memoize the dropdown menu components
@@ -785,18 +784,9 @@ const DropdownMenu = React.memo(({
   item, 
   index,
   isOpen,
-  setOpenMenuIndex,
-  menuFromMenuKey
+  setOpenMenuIndex 
 }: DropdownMenuProps) => {
   const router = useRouter();
-
-  // 添加menuFromMenu标记函数，使用传入的键名
-  const markMenuNavigation = useCallback(() => {
-    if (typeof window !== 'undefined') {
-      sessionStorage.setItem(menuFromMenuKey, 'true'); // 使用传入的键名
-      console.log('桌面菜单标记跳转');
-    }
-  }, [menuFromMenuKey]); // 添加依赖
 
   return (
     <div
@@ -818,7 +808,6 @@ const DropdownMenu = React.memo(({
               href={item.url} 
               className="flex items-center gap-x-2 underline decoration-gray-200 underline-offset-8" 
               aria-current="page"
-              onClick={markMenuNavigation}
             >
               {item.label}
               <span className="text-[#ff6633]">
@@ -885,7 +874,6 @@ const DropdownMenu = React.memo(({
                             className="no-underline"
                             onClick={() => {
                               setOpenMenuIndex(null);
-                              markMenuNavigation();
                             }}
                           >
                             <h3 className="font-bold text-[20px]">
@@ -912,7 +900,6 @@ const DropdownMenu = React.memo(({
                                     className="block py-1 text-sm font-normal text-gray-700 hover:text-[#ff6633]"
                                     onClick={() => {
                                       setOpenMenuIndex(null);
-                                      markMenuNavigation();
                                     }}
                                   >
                                     <span className="mr-2 text-lg align-middle">·</span>{nestedItem.label}
@@ -1385,27 +1372,25 @@ export default function Header({ logo, items }: HeaderProps) {
                           item={item} 
                           index={index} 
                           isOpen={openMenuIndex === index} 
-                          setOpenMenuIndex={setOpenMenuIndex}
-                          menuFromMenuKey={MENU_FROM_MENU_KEY}
+                          setOpenMenuIndex={setOpenMenuIndex} 
                         />
                         </>
                       ) : (
-                        <Link
+                        <a
                           href={item.url}
                           className={`flex whitespace-nowrap underline-offset-8 focus:underline focus:decoration-[#ff6633] py-2 sm:py-0 ${
                             currentPath && (currentPath === item.url || currentPath.startsWith(item.url + '/')) ? 'underline decoration-[#ff6633]' : ''
                           }`}
-                          aria-current={currentPath && (currentPath === item.url || currentPath.startsWith(item.url + '/')) ? 'page' : undefined}
-                          onClick={markMenuNavigation}
+                        aria-current={currentPath && (currentPath === item.url || currentPath.startsWith(item.url + '/')) ? 'page' : undefined}
                         >
                           {item.label}
-                        </Link>
+                        </a>
                       )}
-                  </li>
-                ))}
-              </ul>
-            </nav>
-            
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+              
             {/* Right Side Actions */}
             <div className="flex items-center gap-x-2">
               {/* Language Switcher */}

@@ -654,33 +654,20 @@ html .search-cancel-button {
 }
 
 .mobile-menu {
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
+  /* 使用invisible类控制可见性 */
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 29;
+  /* 初始状态：不可见 */
   visibility: hidden;
-  will-change: transform, opacity;
-  /* 防止闪白 */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
 }
 
-.mobile-menu.open {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+.mobile-menu.visible {
+  /* 可见状态 */
   visibility: visible;
-  animation: menuSlideDown 350ms cubic-bezier(0.2, 0.6, 0.35, 1) forwards;
-  /* 防止闪白 */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-}
-
-.mobile-menu:not(.open) {
-  animation: menuSlideUp 350ms cubic-bezier(0.2, 0.6, 0.35, 1) forwards;
 }
 
 /* 防止移动菜单产生CLS */
@@ -691,53 +678,15 @@ html .search-cancel-button {
 }
 
 /* 移动菜单内容样式 */
-@keyframes contentFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .mobile-menu-content {
-  opacity: 0;
-  transform: translateY(10px);
-  will-change: transform, opacity;
-  /* 防止闪白 */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-}
-
-.mobile-menu.open .mobile-menu-content {
-  animation: contentFadeIn 300ms ease-out forwards;
-  animation-delay: 150ms;
+    opacity: 1;
+  transform: none;
 }
 
 /* 移动菜单项样式 */
-@keyframes itemFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .mobile-menu li {
   opacity: 1;
   transform: none;
-  will-change: auto;
-}
-
-.mobile-menu.open li {
-  animation: none;
 }   
 
 /* 产品规格表格动画效果 */
