@@ -14,34 +14,17 @@ import CardAnimationProvider from './CardAnimationProvider';
 const styles = {
   mobileMenu: `
     .mobile-menu {
-      opacity: 0;
-      transform: translateY(0);
-      pointer-events: none;
-      visibility: hidden;
-      will-change: transform, opacity;
-      /* 防止闪白 */
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      transform: translateZ(0);
-      -webkit-transform: translateZ(0);
-      position: fixed;
+      position: absolute;
       top: 90px;
       left: 0;
       width: 100%;
       background-color: #ffffff;
       z-index: 29;
+      visibility: hidden;
     }
     
-    .mobile-menu.open {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
+    .mobile-menu.visible {
       visibility: visible;
-      /* 防止闪白 */
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      transform: translateZ(0);
-      -webkit-transform: translateZ(0);
     }
     
     /* 防止移动菜单产生CLS */
@@ -50,18 +33,17 @@ const styles = {
         display: none;
       }
     }
+
+    /* 确保菜单容器不影响正文内容布局 */
+    .mobile-menu-container {
+      height: 0;
+      overflow: visible;
+    }
   `,
   globalStyles: `
     /* 防止页面跳动 - 移除overflow限制 */
     html {
       overflow: visible;
-    }
-    
-    /* 菜单打开时固定页面 */
-    body.menu-open {
-      overflow: hidden !important;
-      position: fixed;
-      width: 100%;
     }
     
     /* 确保header在菜单打开关闭时保持正常显示 */
@@ -72,10 +54,10 @@ const styles = {
       width: 100%;
       background-color: #ffffff;
     }
-    
-    /* 解决菜单打开时header可能的padding-right变化导致的位移 */
-    body.menu-open [data-header] {
-      padding-right: 0 !important;
+
+    /* 避免页面跳转时的闪烁 */
+    .page-content {
+      margin-top: 0 !important;
     }
   `
 };
@@ -194,6 +176,7 @@ interface MobileMenuProps {
   setOpenMenuIndex: React.Dispatch<React.SetStateAction<number | null>>;
   onChangeLanguage: (langCode: string) => void;
   onOpenSearch: () => void;
+  menuFromMenuKey: string;
 }
 
 const MobileMenu = React.memo(({ 
@@ -205,7 +188,8 @@ const MobileMenu = React.memo(({
   openMenuIndex, 
   setOpenMenuIndex,
   onChangeLanguage,
-  onOpenSearch 
+  onOpenSearch,
+  menuFromMenuKey
 }: MobileMenuProps) => {
   const currentPath = usePathname();
   const [activeMenuStack, setActiveMenuStack] = useState<Array<{
@@ -217,36 +201,73 @@ const MobileMenu = React.memo(({
   
   const menuRef = useRef<HTMLElement>(null);
   
-  // 优化菜单切换逻辑，移除动画相关代码
+  // 简化菜单切换逻辑，只需添加/移除visible类
   useEffect(() => {
     const menu = menuRef.current;
     if (!menu) return;
     
     if (isOpen) {
-      menu.classList.add('open');
+      menu.classList.add('visible');
+      menu.classList.remove('invisible');
       document.documentElement.setAttribute('data-menu-open', 'true');
     } else {
-      menu.classList.remove('open');
+      menu.classList.remove('visible');
+      menu.classList.add('invisible');
       document.documentElement.removeAttribute('data-menu-open');
-      // 重置菜单状态
-      setActiveMenuStack([]);
     }
   }, [isOpen]);
   
   // 处理菜单打开逻辑
   const openSubMenu = (index: number, url?: string, isCategory: boolean = false) => {
-    setActiveMenuStack(prev => [...prev, { itemIndex: index, parentUrl: url, isCategory }]);
+    setActiveMenuStack(prev => {
+      const newStack = [...prev, { itemIndex: index, parentUrl: url, isCategory }];
+      // 保存菜单堆栈到sessionStorage
+      if (typeof window !== 'undefined') {
+        sessionStorage.setItem('mobileMenuStack', JSON.stringify(newStack));
+      }
+      return newStack;
+    });
   };
   
   // 返回上一级菜单
   const goBack = () => {
-    setActiveMenuStack(prev => prev.slice(0, -1));
+    setActiveMenuStack(prev => {
+      const newStack = prev.slice(0, -1);
+      // 保存菜单堆栈到sessionStorage
+      if (typeof window !== 'undefined') {
+        sessionStorage.setItem('mobileMenuStack', JSON.stringify(newStack));
+      }
+      return newStack;
+    });
   };
   
   // 返回到主菜单
   const backToMainMenu = () => {
     setActiveMenuStack([]);
+    // 清除菜单堆栈
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('mobileMenuStack', JSON.stringify([]));
+    }
   };
+  
+  // 在组件挂载时恢复菜单状态
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
+    // 恢复子菜单状态
+    try {
+      const storedStack = sessionStorage.getItem('mobileMenuStack');
+      if (storedStack) {
+        const parsedStack = JSON.parse(storedStack);
+        if (Array.isArray(parsedStack)) {
+          setActiveMenuStack(parsedStack);
+        }
+      }
+    } catch (e) {
+      console.error('Error restoring menu stack:', e);
+      sessionStorage.removeItem('mobileMenuStack');
+    }
+  }, []);
   
   // 判断当前显示的菜单级别
   const menuLevel = activeMenuStack.length;
@@ -294,6 +315,14 @@ const MobileMenu = React.memo(({
   
   const { items: currentItems, title: currentTitle, parentUrl: currentParentUrl } = getCurrentItems();
   
+  // 在菜单中所有链接点击时记录fromMenu标记
+  const handleLinkClick = useCallback(() => {
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem(menuFromMenuKey, 'true');
+      console.log('标记从菜单跳转');
+    }
+  }, [menuFromMenuKey]);
+
   return (
     <nav 
       ref={menuRef}
@@ -323,7 +352,7 @@ const MobileMenu = React.memo(({
         {/* 当前菜单标题和链接 - 添加面包屑结构 */}
         {currentTitle && (
           <div className="mb-6" role="navigation" aria-label={locale === 'zh' ? "当前位置" : "Current location"}>
-            <a
+            <Link
               href={currentParentUrl || '#'}
               className="text-[20px] mb-8 font-bold block no-underline"
               onClick={(e) => {
@@ -332,10 +361,9 @@ const MobileMenu = React.memo(({
                 }
               }}
               title={currentTitle}
-              itemProp="name"
             >
               {currentTitle}
-            </a>
+            </Link>
           </div>
         )}
         
@@ -345,24 +373,26 @@ const MobileMenu = React.memo(({
             {(currentItems as HeaderNavItem[]).map((item, index) => (
               <li key={index} className="mb-6" role="menuitem" itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
                 <div className="flex w-full justify-between">
-                  <a 
+                  <Link 
                     href={item.url}
                     className="text-[20px] flex-grow no-underline"
                     onClick={(e) => {
                       if (item.columns && item.columns.length > 0) {
                         e.preventDefault();
                         openSubMenu(index, item.url);
+                      } else {
+                        // 记录是从菜单跳转的
+                        handleLinkClick();
                       }
                     }}
                     title={item.label}
-                    itemProp="url"
                     aria-label={`${item.label}${item.columns && item.columns.length > 0 ? (locale === 'zh' ? ' - 展开子菜单' : ' - Expand submenu') : ''}`}
                   >
                     <span itemProp="name">{item.label}</span>
                     <meta itemProp="position" content={`${index + 1}`} />
-                  </a>
+                  </Link>
                   {item.columns && item.columns.length > 0 && (
-                      <button
+                    <button
                       className="ml-4 text-current p-1"
                       aria-label={locale === 'zh' ? `打开${item.label}子菜单` : `Open ${item.label} submenu`}
                       onClick={() => openSubMenu(index, item.url)}
@@ -370,7 +400,7 @@ const MobileMenu = React.memo(({
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
-                      </button>
+                    </button>
                   )}
                 </div>
               </li>
@@ -390,41 +420,45 @@ const MobileMenu = React.memo(({
                 <li key={index} className="mb-6" role="menuitem" itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
                   <div className="flex w-full justify-between">
                     {isCategory ? (
-                      // 分类标题也使用<a>标签以便于SEO，但链接到父级页面
-                      <a 
+                      // 分类标题
+                      <Link 
                         href={currentParentUrl || '#'}
                         className="text-[20px] font-medium flex-grow no-underline"
                         onClick={(e) => {
                           if (hasSubItems) {
                             e.preventDefault();
                             openSubMenu(index, currentParentUrl, true);
+                          } else if (currentParentUrl && currentParentUrl !== '#') {
+                            // 记录是从菜单跳转的
+                            handleLinkClick();
                           }
                         }}
                         title={item.label}
-                        itemProp="url"
                         aria-label={`${item.label}${hasSubItems ? (locale === 'zh' ? ' - 展开子菜单' : ' - Expand submenu') : ''}`}
                       >
                         <span itemProp="name">{item.label}</span>
                         <meta itemProp="position" content={`${index + 1}`} />
-                      </a>
-                  ) : (
+                      </Link>
+                    ) : (
                       // 常规链接处理
-                      <a 
-                      href={item.url}
+                      <Link 
+                        href={item.url}
                         className="text-[20px] flex-grow no-underline"
                         onClick={(e) => {
                           if (hasSubItems) {
                             e.preventDefault();
                             openSubMenu(index, item.url);
+                          } else {
+                            // 记录是从菜单跳转的
+                            handleLinkClick();
                           }
                         }}
                         title={item.label}
-                        itemProp="url"
                         aria-label={`${item.label}${hasSubItems ? (locale === 'zh' ? ' - 展开子菜单' : ' - Expand submenu') : ''}`}
                       >
                         <span itemProp="name">{item.label}</span>
                         <meta itemProp="position" content={`${index + 1}`} />
-                      </a>
+                      </Link>
                     )}
                     
                     {hasSubItems && (
@@ -521,7 +555,10 @@ SearchForm.displayName = 'SearchForm';
 // Logo组件分离，避免搜索输入时重新渲染
 const LogoComponent = React.memo(({ logo }: { logo: HeaderLogo }) => (
   <div className="flex items-center shrink-0" data-header-logo="">
-    <a href={logo.url} className="shrink-0">
+    <Link 
+      href={logo.url} 
+      className="shrink-0"
+    >
       <img 
         src={logo.src}
         alt={logo.alt}
@@ -530,7 +567,7 @@ const LogoComponent = React.memo(({ logo }: { logo: HeaderLogo }) => (
         className="h-10 sm:h-12 lg:h-[48px] w-auto shrink-0"
         style={{ objectFit: 'contain' }}
       />
-    </a>
+    </Link>
   </div>
 ));
 
@@ -740,6 +777,7 @@ interface DropdownMenuProps {
   index: number;
   isOpen: boolean;
   setOpenMenuIndex: React.Dispatch<React.SetStateAction<number | null>>;
+  menuFromMenuKey: string;
 }
 
 // Memoize the dropdown menu components
@@ -747,9 +785,18 @@ const DropdownMenu = React.memo(({
   item, 
   index,
   isOpen,
-  setOpenMenuIndex 
+  setOpenMenuIndex,
+  menuFromMenuKey
 }: DropdownMenuProps) => {
   const router = useRouter();
+
+  // 添加menuFromMenu标记函数，使用传入的键名
+  const markMenuNavigation = useCallback(() => {
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem(menuFromMenuKey, 'true'); // 使用传入的键名
+      console.log('桌面菜单标记跳转');
+    }
+  }, [menuFromMenuKey]); // 添加依赖
 
   return (
     <div
@@ -767,16 +814,17 @@ const DropdownMenu = React.memo(({
       >
         <div className="mb-4 sm:mb-6 flex justify-between">
           <h2 className="text-base sm:text-lg flex items-center">
-            <a 
+            <Link 
               href={item.url} 
               className="flex items-center gap-x-2 underline decoration-gray-200 underline-offset-8" 
               aria-current="page"
+              onClick={markMenuNavigation}
             >
               {item.label}
               <span className="text-[#ff6633]">
                 <ArrowIcon />
               </span>
-            </a>
+            </Link>
           </h2>
           <button 
             tabIndex={-1}
@@ -832,11 +880,12 @@ const DropdownMenu = React.memo(({
                               )}
                             </div>
                           ) : (
-                          <a
+                          <Link
                             href={subItem.url}
                             className="no-underline"
                             onClick={() => {
                               setOpenMenuIndex(null);
+                              markMenuNavigation();
                             }}
                           >
                             <h3 className="font-bold text-[20px]">
@@ -847,7 +896,7 @@ const DropdownMenu = React.memo(({
                                 <p>{subItem.text}</p>
                               </div>
                             )}
-                          </a>
+                          </Link>
                           )}
                         </div>
                         
@@ -857,16 +906,17 @@ const DropdownMenu = React.memo(({
                             {subItem.columns.map((subColumn, subColIndex) => (
                               <div key={subColIndex} className="pt-2">
                                 {subColumn.items.map((nestedItem: HeaderSubItem, nestedIndex: number) => (
-                                  <a
+                                  <Link
                                     key={nestedIndex}
                                     href={nestedItem.url}
                                     className="block py-1 text-sm font-normal text-gray-700 hover:text-[#ff6633]"
                                     onClick={() => {
                                       setOpenMenuIndex(null);
+                                      markMenuNavigation();
                                     }}
                                   >
                                     <span className="mr-2 text-lg align-middle">·</span>{nestedItem.label}
-                                  </a>
+                                  </Link>
                                 ))}
                               </div>
                             ))}
@@ -899,33 +949,240 @@ export default function Header({ logo, items }: HeaderProps) {
   const [isSearchOverlayOpen, setIsSearchOverlayOpen] = useState(false);
   const [openMenuIndex, setOpenMenuIndex] = useState<number | null>(null);
   const headerRef = useRef<HTMLElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  
+  // 添加子菜单状态管理
+  const [activeMenuStack, setActiveMenuStack] = useState<Array<{
+    itemIndex: number, 
+    parentUrl?: string, 
+    title?: string,
+    isCategory?: boolean
+  }>>([]);
   
   const locale = useLocale();
   const currentPath = usePathname();
   const router = useRouter();
   
-  // 优化路由变化监听
+  // 定义常量 - 保持简单清晰的状态键名
+  const MENU_FROM_MENU_KEY = 'mobileMenuFromMenu';
+  
+  // 记录是否是后退导航
+  const isBackNavigation = useRef(false);
+  
+  // 添加导航事件监听
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      closeMobileMenu();
-    }
-    if (openMenuIndex !== null) {
-      setOpenMenuIndex(null);
+    // 监听导航事件，只处理后退导航
+    const handlePopState: (e: PopStateEvent) => void = (e) => {
+      console.log('导航事件触发');
+      
+      // 设置为后退导航
+      isBackNavigation.current = true;
+      
+      // 检查是否是从菜单跳转的页面返回
+      if (typeof window !== 'undefined') {
+        const fromMenu = sessionStorage.getItem(MENU_FROM_MENU_KEY) === 'true';
+        console.log('从菜单跳转?', fromMenu);
+        
+        // 只有是从菜单跳转的页面并且是后退操作才恢复菜单
+        if (fromMenu && isBackNavigation.current) {
+          if (mobileMenuRef.current) {
+            mobileMenuRef.current.classList.add('visible');
+            mobileMenuRef.current.classList.remove('invisible');
+            setMobileMenuOpen(true);
+            console.log('恢复菜单状态 - 后退导航');
+          }
+          
+          // 恢复子菜单状态
+          try {
+            const storedStack = sessionStorage.getItem('mobileMenuStack');
+            if (storedStack) {
+              const parsedStack = JSON.parse(storedStack);
+              if (Array.isArray(parsedStack)) {
+                setActiveMenuStack(parsedStack);
+              }
+            }
+          } catch (e) {
+            console.error('恢复菜单堆栈错误:', e);
+            sessionStorage.removeItem('mobileMenuStack');
+          }
+        }
+      }
+      
+      // 重置导航状态，下次触发时重新判断
+      setTimeout(() => {
+        isBackNavigation.current = false;
+      }, 100);
+    };
+    
+    window.addEventListener('popstate', handlePopState);
+    
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, []);
+  
+  // 在路径变化时重置导航状态
+  const prevPath = useRef(currentPath);
+  useEffect(() => {
+    if (prevPath.current !== currentPath) {
+      isBackNavigation.current = false;
+      prevPath.current = currentPath;
     }
   }, [currentPath]);
   
-  // 优化移动菜单切换，移除不必要的状态更新
+  // 在初始加载时，检查是否是前进导航，如果是则确保菜单关闭
+  useEffect(() => {
+    const checkForwardNavigation = () => {
+      if (!isBackNavigation.current && mobileMenuRef.current) {
+        mobileMenuRef.current.classList.remove('visible');
+        mobileMenuRef.current.classList.add('invisible');
+        setMobileMenuOpen(false);
+        console.log('确保菜单关闭 - 前进导航或直接访问');
+      }
+    };
+    
+    checkForwardNavigation();
+  }, [currentPath]);
+  
+  // 汉堡菜单开关函数
   const toggleMobileMenu = useCallback(() => {
-    setMobileMenuOpen(!isMobileMenuOpen);
-    document.body.classList.toggle('menu-open');
-  }, [isMobileMenuOpen]);
-
-  // 优化移动菜单关闭
-  const closeMobileMenu = useCallback(() => {
-    setMobileMenuOpen(false);
-    document.body.classList.remove('menu-open');
+    if (mobileMenuRef.current) {
+      const isVisible = mobileMenuRef.current.classList.contains('visible');
+      if (isVisible) {
+        // 关闭菜单
+        mobileMenuRef.current.classList.remove('visible');
+        mobileMenuRef.current.classList.add('invisible');
+        setMobileMenuOpen(false);
+        console.log('关闭菜单');
+      } else {
+        // 打开菜单
+        mobileMenuRef.current.classList.add('visible');
+        mobileMenuRef.current.classList.remove('invisible');
+        setMobileMenuOpen(true);
+        console.log('打开菜单');
+      }
+    }
   }, []);
-
+  
+  // 关闭菜单函数
+  const closeMobileMenu = useCallback(() => {
+    if (mobileMenuRef.current) {
+      mobileMenuRef.current.classList.remove('visible');
+      mobileMenuRef.current.classList.add('invisible');
+      setMobileMenuOpen(false);
+      console.log('关闭菜单');
+    }
+  }, []);
+  
+  // 标记菜单链接点击
+  const markMenuNavigation = useCallback(() => {
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem(MENU_FROM_MENU_KEY, 'true');
+      console.log('标记从菜单跳转');
+    }
+  }, []);
+  
+  // 子菜单导航
+  const openSubMenu = useCallback((index: number, url?: string, isCategory: boolean = false) => {
+    setActiveMenuStack(prev => {
+      const newStack = [...prev, { itemIndex: index, parentUrl: url, isCategory }];
+      // 保存菜单堆栈到sessionStorage
+      if (typeof window !== 'undefined') {
+        sessionStorage.setItem('mobileMenuStack', JSON.stringify(newStack));
+      }
+      return newStack;
+    });
+  }, []);
+  
+  // 返回上一级菜单
+  const goBack = useCallback(() => {
+    setActiveMenuStack(prev => {
+      const newStack = prev.slice(0, -1);
+      // 保存菜单堆栈到sessionStorage
+      if (typeof window !== 'undefined') {
+        sessionStorage.setItem('mobileMenuStack', JSON.stringify(newStack));
+      }
+      return newStack;
+    });
+  }, []);
+  
+  // 返回主菜单
+  const backToMainMenu = useCallback(() => {
+    setActiveMenuStack([]);
+    // 清除菜单堆栈
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('mobileMenuStack', JSON.stringify([]));
+    }
+  }, []);
+  
+  // 主菜单链接点击处理
+  const handleMenuItemClick = useCallback((e: React.MouseEvent, item: HeaderNavItem, index: number) => {
+    if (item.columns && item.columns.length > 0) {
+      e.preventDefault();
+      openSubMenu(index, item.url);
+    } else {
+      // 标记这是从菜单跳转的
+      markMenuNavigation();
+    }
+  }, [openSubMenu, markMenuNavigation]);
+  
+  // 子菜单链接点击处理
+  const handleSubMenuItemClick = useCallback((e: React.MouseEvent, item: HeaderSubItem, index: number, isCategory: boolean, parentUrl?: string) => {
+    const hasSubItems = item.columns && item.columns.length > 0;
+    
+    if (hasSubItems) {
+      e.preventDefault();
+      openSubMenu(index, isCategory ? parentUrl : item.url, isCategory);
+    } else {
+      // 标记这是从菜单跳转的
+      markMenuNavigation();
+    }
+  }, [openSubMenu, markMenuNavigation]);
+  
+  // 获取当前菜单级别
+  const menuLevel = activeMenuStack.length;
+  
+  // 获取当前需要显示的菜单项
+  const getCurrentItems = useCallback(() => {
+    if (menuLevel === 0) {
+      // 主菜单
+      return { items: items, title: null, parentUrl: undefined };
+    } else if (menuLevel === 1) {
+      // 二级菜单
+      const { itemIndex } = activeMenuStack[0];
+      const menuItem = items[itemIndex];
+      const columns = menuItem?.columns || [];
+      // 合并所有列中的项目
+      const allItems = columns.reduce((acc, col) => [...acc, ...col.items], [] as HeaderSubItem[]);
+      return { items: allItems, title: menuItem.label, parentUrl: menuItem.url };
+    } else if (menuLevel === 2) {
+      // 三级菜单
+      const { itemIndex: parentIndex } = activeMenuStack[0];
+      const { itemIndex: childIndex, parentUrl } = activeMenuStack[1];
+      
+      const parentItem = items[parentIndex];
+      const columns = parentItem?.columns || [];
+      const allSecondLevelItems = columns.reduce((acc, col) => [...acc, ...col.items], [] as HeaderSubItem[]);
+      const currentItem = allSecondLevelItems[childIndex];
+      
+      if (!currentItem?.columns) return { items: [], title: currentItem?.label, parentUrl };
+      
+      // 合并所有列中的项目
+      const allThirdLevelItems = currentItem.columns.reduce(
+        (acc, col) => [...acc, ...col.items], 
+        [] as HeaderSubItem[]
+      );
+      
+      return { 
+        items: allThirdLevelItems, 
+        title: currentItem.label, 
+        parentUrl: currentItem.url === parentUrl ? parentUrl : currentItem.url 
+      };
+    }
+    
+    return { items: [], title: null, parentUrl: undefined };
+  }, [items, activeMenuStack, menuLevel]);
+  
   // 优化桌面菜单切换
   const toggleDesktopMenu = useCallback((index: number) => {
     setOpenMenuIndex(prevIndex => (prevIndex === index ? null : index));
@@ -936,8 +1193,133 @@ export default function Header({ logo, items }: HeaderProps) {
   };
 
   const closeSearchOverlay = () => {
-      setIsSearchOverlayOpen(false);
+    setIsSearchOverlayOpen(false);
   };
+
+  // 获取当前菜单内容
+  const mobileMenuContent = useMemo(() => {
+    const { items: currentItems, title: currentTitle, parentUrl: currentParentUrl } = getCurrentItems();
+    
+    return (
+      <div className="contain pb-8 pt-8 px-4 mobile-menu-content">
+        {/* 返回按钮 */}
+        {menuLevel > 0 && (
+          <button 
+            className="mb-8 flex items-center font-bold no-underline"
+            onClick={menuLevel === 1 ? backToMainMenu : goBack}
+            aria-label={menuLevel === 1 ? (locale === 'zh' ? '返回主菜单' : 'Back to main menu') : (locale === 'zh' ? '返回上级菜单' : 'Back')}
+          >
+            <span className="mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </span>
+            {menuLevel === 1 ? (locale === 'zh' ? '主菜单' : 'Main menu') : (locale === 'zh' ? '返回' : 'Back')}
+          </button>
+        )}
+        
+        {/* 当前菜单标题和链接 - 添加面包屑结构 */}
+        {currentTitle && (
+          <div className="mb-6" role="navigation" aria-label={locale === 'zh' ? "当前位置" : "Current location"}>
+            <Link
+              href={currentParentUrl || '#'}
+              className="text-[20px] mb-8 font-bold block no-underline"
+              onClick={(e) => {
+                if (!currentParentUrl || currentParentUrl === '#') {
+                  e.preventDefault();
+                }
+              }}
+              title={currentTitle}
+            >
+              {currentTitle}
+            </Link>
+          </div>
+        )}
+        
+        {/* 菜单项列表 */}
+        <ul className="list-none p-0 m-0" role="menu">
+          {menuLevel === 0 
+            ? (currentItems as HeaderNavItem[]).map((item, index) => (
+              <li key={index} className="mb-6" role="menuitem" itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
+                <div className="flex w-full justify-between">
+                  <Link 
+                    href={item.url}
+                    className="text-[20px] flex-grow no-underline"
+                    onClick={(e) => handleMenuItemClick(e, item, index)}
+                    title={item.label}
+                    aria-label={`${item.label}${item.columns && item.columns.length > 0 ? (locale === 'zh' ? ' - 展开子菜单' : ' - Expand submenu') : ''}`}
+                  >
+                    <span itemProp="name">{item.label}</span>
+                    <meta itemProp="position" content={`${index + 1}`} />
+                  </Link>
+                  {item.columns && item.columns.length > 0 && (
+                    <button
+                      className="ml-4 text-current p-1"
+                      aria-label={locale === 'zh' ? `打开${item.label}子菜单` : `Open ${item.label} submenu`}
+                      onClick={() => openSubMenu(index, item.url)}
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                  )}
+                </div>
+              </li>
+            ))
+            : (currentItems as HeaderSubItem[]).map((item, index) => {
+              // 检查是否为分类标题 (没有URL或URL与父级相同)
+              const isCategory = !item.url || item.url === '#' || item.url === currentParentUrl || item.noLink;
+              const hasSubItems = item.columns && item.columns.length > 0;
+              
+              return (
+                <li key={index} className="mb-6" role="menuitem" itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
+                  <div className="flex w-full justify-between">
+                    {isCategory ? (
+                      // 分类标题
+                      <Link 
+                        href={currentParentUrl || '#'}
+                        className="text-[20px] font-medium flex-grow no-underline"
+                        onClick={(e) => handleSubMenuItemClick(e, item, index, true, currentParentUrl)}
+                        title={item.label}
+                        aria-label={`${item.label}${hasSubItems ? (locale === 'zh' ? ' - 展开子菜单' : ' - Expand submenu') : ''}`}
+                      >
+                        <span itemProp="name">{item.label}</span>
+                        <meta itemProp="position" content={`${index + 1}`} />
+                      </Link>
+                    ) : (
+                      // 常规链接处理
+                      <Link 
+                        href={item.url}
+                        className="text-[20px] flex-grow no-underline"
+                        onClick={(e) => handleSubMenuItemClick(e, item, index, false)}
+                        title={item.label}
+                        aria-label={`${item.label}${hasSubItems ? (locale === 'zh' ? ' - 展开子菜单' : ' - Expand submenu') : ''}`}
+                      >
+                        <span itemProp="name">{item.label}</span>
+                        <meta itemProp="position" content={`${index + 1}`} />
+                      </Link>
+                    )}
+                    
+                    {hasSubItems && (
+                      <button 
+                        className="ml-4 text-current p-1"
+                        aria-label={locale === 'zh' ? `打开${item.label}子菜单` : `Open ${item.label} submenu`}
+                        onClick={() => openSubMenu(index, isCategory ? currentParentUrl : item.url, isCategory)}
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
+                    )}
+                  </div>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
+    );
+  }, [items, menuLevel, activeMenuStack, locale, getCurrentItems, openSubMenu, goBack, backToMainMenu, MENU_FROM_MENU_KEY]);
 
   return (
     <>
@@ -961,7 +1343,7 @@ export default function Header({ logo, items }: HeaderProps) {
           <div className="flex h-full items-center justify-between border-b border-gray-100 py-3 lg:py-0">
             {/* Logo */}
             <div className="flex items-center shrink-0" data-header-logo="">
-              <a 
+              <Link 
                 href={logo.url} 
                 className="shrink-0"
               >
@@ -973,7 +1355,7 @@ export default function Header({ logo, items }: HeaderProps) {
                   className="h-10 sm:h-12 lg:h-[48px] w-auto shrink-0"
                   style={{ objectFit: 'contain' }}
                 />
-              </a>
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
@@ -1003,25 +1385,27 @@ export default function Header({ logo, items }: HeaderProps) {
                           item={item} 
                           index={index} 
                           isOpen={openMenuIndex === index} 
-                          setOpenMenuIndex={setOpenMenuIndex} 
+                          setOpenMenuIndex={setOpenMenuIndex}
+                          menuFromMenuKey={MENU_FROM_MENU_KEY}
                         />
                         </>
                       ) : (
-                        <a
+                        <Link
                           href={item.url}
                           className={`flex whitespace-nowrap underline-offset-8 focus:underline focus:decoration-[#ff6633] py-2 sm:py-0 ${
                             currentPath && (currentPath === item.url || currentPath.startsWith(item.url + '/')) ? 'underline decoration-[#ff6633]' : ''
                           }`}
-                        aria-current={currentPath && (currentPath === item.url || currentPath.startsWith(item.url + '/')) ? 'page' : undefined}
+                          aria-current={currentPath && (currentPath === item.url || currentPath.startsWith(item.url + '/')) ? 'page' : undefined}
+                          onClick={markMenuNavigation}
                         >
                           {item.label}
-                        </a>
+                        </Link>
                       )}
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-              
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            
             {/* Right Side Actions */}
             <div className="flex items-center gap-x-2">
               {/* Language Switcher */}
@@ -1062,6 +1446,20 @@ export default function Header({ logo, items }: HeaderProps) {
             </div>
           </div>
         </div>
+
+        {/* 移动菜单 - 直接放在header内部，使用CSS类控制可见性 */}
+        <div 
+          id="mobile-menu"
+          ref={mobileMenuRef}
+          className="mobile-menu invisible" 
+          role="navigation"
+          aria-label={locale === 'zh' ? "移动端导航菜单" : "Mobile navigation menu"}
+          itemScope
+          itemType="https://schema.org/SiteNavigationElement"
+          style={{ top: '90px' }}
+        >
+          {mobileMenuContent}
+        </div>
       </header>
 
       {/* 遮罩层 - 确保在菜单(z-29)下方但仍然可见 */}
@@ -1073,19 +1471,6 @@ export default function Header({ logo, items }: HeaderProps) {
           aria-hidden="true"
         />
       )}
-
-        {/* Mobile Menu */}
-      <MobileMenu 
-        isOpen={isMobileMenuOpen}
-          onClose={closeMobileMenu}
-        logo={logo}
-        items={items}
-        locale={locale}
-        openMenuIndex={openMenuIndex}
-        setOpenMenuIndex={setOpenMenuIndex}
-        onChangeLanguage={(code) => router.push(`/${code}`)}
-        onOpenSearch={openSearchOverlay}
-      />
 
       {/* Search Overlay */}
       <SearchOverlay 
