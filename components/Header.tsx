@@ -994,39 +994,50 @@ export default function Header({ logo, items }: HeaderProps) {
         
         // 只有是从菜单跳转的页面并且是后退操作才恢复菜单
         if ((fromMenu || menuShouldBeOpen) && isBackNavigation.current) {
-          if (mobileMenuRef.current) {
-            mobileMenuRef.current.classList.add('visible');
-            mobileMenuRef.current.classList.remove('invisible');
-            setMobileMenuOpen(true);
-            console.log('恢复菜单状态 - 后退导航');
-    }
-          
-          // 恢复子菜单状态
-          try {
-            const storedStack = sessionStorage.getItem('mobileMenuStack');
-            if (storedStack) {
-              const parsedStack = JSON.parse(storedStack);
-              if (Array.isArray(parsedStack)) {
-                setActiveMenuStack(parsedStack);
+          // 为防止移动端环境页面重载和内存限制问题，使用setTimeout确保DOM已准备好
+          setTimeout(() => {
+            if (mobileMenuRef.current) {
+              mobileMenuRef.current.classList.add('visible');
+              mobileMenuRef.current.classList.remove('invisible');
+              setMobileMenuOpen(true);
+              console.log('恢复菜单状态 - 后退导航');
+              
+              // 恢复子菜单状态
+              try {
+                const storedStack = sessionStorage.getItem('mobileMenuStack');
+                if (storedStack) {
+                  const parsedStack = JSON.parse(storedStack);
+                  if (Array.isArray(parsedStack)) {
+                    setActiveMenuStack(parsedStack);
+                  }
+                }
+              } catch (e) {
+                console.error('恢复菜单堆栈错误:', e);
+                sessionStorage.removeItem('mobileMenuStack');
               }
             }
-          } catch (e) {
-            console.error('恢复菜单堆栈错误:', e);
-            sessionStorage.removeItem('mobileMenuStack');
-          }
-          
-          // 清除菜单打开状态标记，避免影响后续导航
-          sessionStorage.removeItem('menuShouldBeOpen');
+            
+            // 保留菜单状态标记，直到确认菜单已经正确打开
+            // 移动设备可能需要更长时间处理DOM操作
+            setTimeout(() => {
+              sessionStorage.removeItem('menuShouldBeOpen');
+            }, 300);
+          }, 100); // 给浏览器一些时间完成DOM操作
         }
       }
       
       // 重置导航状态，下次触发时重新判断
+      // 为兼容移动设备上可能的多次触发，增加延迟
       setTimeout(() => {
         isBackNavigation.current = false;
-      }, 100);
+      }, 300);
     };
     
-    window.addEventListener('popstate', handlePopState);
+    // 在页面加载后延迟添加事件监听
+    // 确保在移动设备上有足够时间完成初始化
+    setTimeout(() => {
+      window.addEventListener('popstate', handlePopState);
+    }, 50);
     
     return () => {
       window.removeEventListener('popstate', handlePopState);
@@ -1089,9 +1100,16 @@ export default function Header({ logo, items }: HeaderProps) {
   // 标记菜单链接点击，也保存菜单打开状态
   const markMenuNavigation = useCallback(() => {
     if (typeof window !== 'undefined') {
+      // 使用本地存储确保数据在移动设备上的可靠性
       sessionStorage.setItem(MENU_FROM_MENU_KEY, 'true');
       // 添加菜单打开状态标记
       sessionStorage.setItem('menuShouldBeOpen', 'true');
+      // 在移动端，再添加一个备份存储方式
+      try {
+        localStorage.setItem('mobileMenuLastActive', Date.now().toString());
+      } catch (e) {
+        console.error('localStorage写入失败', e);
+      }
       console.log('标记从菜单跳转和菜单打开状态');
     }
   }, []);
