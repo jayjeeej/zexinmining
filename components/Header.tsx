@@ -325,7 +325,7 @@ const MobileMenu = React.memo(({
       console.log('标记从菜单跳转和菜单打开状态');
     }
   }, [menuFromMenuKey]);
-
+  
   return (
     <nav 
       ref={menuRef}
@@ -402,7 +402,7 @@ const MobileMenu = React.memo(({
                     <meta itemProp="position" content={`${index + 1}`} />
                   </Link>
                   {item.columns && item.columns.length > 0 && (
-                    <button
+                      <button
                       className="ml-4 text-current p-1"
                       aria-label={locale === 'zh' ? `打开${item.label}子菜单` : `Open ${item.label} submenu`}
                       onClick={() => openSubMenu(index, item.url)}
@@ -410,7 +410,7 @@ const MobileMenu = React.memo(({
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
-                    </button>
+                      </button>
                   )}
                 </div>
               </li>
@@ -449,10 +449,10 @@ const MobileMenu = React.memo(({
                         <span itemProp="name">{item.label}</span>
                         <meta itemProp="position" content={`${index + 1}`} />
                       </Link>
-                    ) : (
+                  ) : (
                       // 常规链接处理
                       <Link 
-                        href={item.url}
+                      href={item.url}
                         className="text-[20px] flex-grow no-underline"
                         onClick={(e) => {
                           if (hasSubItems) {
@@ -472,7 +472,7 @@ const MobileMenu = React.memo(({
                     )}
                     
                     {hasSubItems && (
-                      <button 
+            <button 
                         className="ml-4 text-current p-1"
                         aria-label={locale === 'zh' ? `打开${item.label}子菜单` : `Open ${item.label} submenu`}
                         onClick={() => openSubMenu(index, isCategory ? currentParentUrl : item.url, isCategory)}
@@ -480,15 +480,15 @@ const MobileMenu = React.memo(({
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5" aria-hidden="true">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
-                      </button>
+            </button>
                     )}
-                  </div>
+          </div>
                 </li>
               );
             })}
           </ul>
         )}
-      </div>
+        </div>
     </nav>
   );
 });
@@ -999,7 +999,7 @@ export default function Header({ logo, items }: HeaderProps) {
             mobileMenuRef.current.classList.remove('invisible');
             setMobileMenuOpen(true);
             console.log('恢复菜单状态 - 后退导航');
-          }
+    }
           
           // 恢复子菜单状态
           try {
@@ -1075,13 +1075,13 @@ export default function Header({ logo, items }: HeaderProps) {
       }
     }
   }, []);
-  
+
   // 关闭菜单函数
   const closeMobileMenu = useCallback(() => {
     if (mobileMenuRef.current) {
       mobileMenuRef.current.classList.remove('visible');
       mobileMenuRef.current.classList.add('invisible');
-      setMobileMenuOpen(false);
+    setMobileMenuOpen(false);
       console.log('关闭菜单');
     }
   }, []);
@@ -1196,7 +1196,7 @@ export default function Header({ logo, items }: HeaderProps) {
     
     return { items: [], title: null, parentUrl: undefined };
   }, [items, activeMenuStack, menuLevel]);
-  
+
   // 优化桌面菜单切换
   const toggleDesktopMenu = useCallback((index: number) => {
     setOpenMenuIndex(prevIndex => (prevIndex === index ? null : index));
@@ -1207,7 +1207,7 @@ export default function Header({ logo, items }: HeaderProps) {
   };
 
   const closeSearchOverlay = () => {
-    setIsSearchOverlayOpen(false);
+      setIsSearchOverlayOpen(false);
   };
 
   // 获取当前菜单内容
@@ -1415,17 +1415,17 @@ export default function Header({ logo, items }: HeaderProps) {
                           className={`flex whitespace-nowrap underline-offset-8 focus:underline focus:decoration-[#ff6633] py-2 sm:py-0 ${
                             currentPath && (currentPath === item.url || currentPath.startsWith(item.url + '/')) ? 'underline decoration-[#ff6633]' : ''
                           }`}
-                          aria-current={currentPath && (currentPath === item.url || currentPath.startsWith(item.url + '/')) ? 'page' : undefined}
+                        aria-current={currentPath && (currentPath === item.url || currentPath.startsWith(item.url + '/')) ? 'page' : undefined}
                           onClick={markMenuNavigation}
                         >
                           {item.label}
                         </Link>
                       )}
-                  </li>
-                ))}
-              </ul>
-            </nav>
-            
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+              
             {/* Right Side Actions */}
             <div className="flex items-center gap-x-2">
               {/* Language Switcher */}

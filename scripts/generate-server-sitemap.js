@@ -14,6 +14,7 @@ const locales = ['en', 'zh'];
 
 // 站点URL
 const siteUrl = 'https://www.zexinmining.com';
+const currentDate = new Date().toISOString();
 
 /**
  * 获取指定目录下的所有JSON文件
@@ -52,7 +53,7 @@ function generateServerSitemap() {
         
         urls.push({
           loc: `${siteUrl}/${locale}/news/${newsSlug}`,
-          lastmod: new Date().toISOString(),
+          lastmod: currentDate,
           changefreq: 'weekly',
           priority: '0.6'
         });
@@ -74,7 +75,7 @@ function generateServerSitemap() {
         
         urls.push({
           loc: `${siteUrl}/${locale}/cases/${caseSlug}`,
-          lastmod: new Date().toISOString(),
+          lastmod: currentDate,
           changefreq: 'monthly',
           priority: '0.7'
         });
@@ -99,12 +100,71 @@ ${urls.map(url => `  <url>
   try {
     fs.writeFileSync(path.join(process.cwd(), 'public', 'server-sitemap.xml'), xml);
     console.log(`成功生成服务器端站点地图，包含 ${urls.length} 个URL`);
+    return true;
   } catch (error) {
     console.error('写入站点地图文件时出错:', error);
+    return false;
+  }
+}
+
+/**
+ * 更新站点地图索引
+ */
+function updateSitemapIndex() {
+  const indexPath = path.join(process.cwd(), 'public', 'sitemap.xml');
+  
+  // 如果主索引不存在，尝试执行产品站点地图脚本生成
+  if (!fs.existsSync(indexPath)) {
+    console.log('站点地图索引不存在，尝试生成...');
+    try {
+      // 尝试运行产品脚本生成主索引
+      const generateSitemaps = require('./generate-sitemaps');
+      return;
+    } catch (error) {
+      console.error('无法自动生成站点地图索引:', error);
+      // 继续手动创建索引
+    }
+  }
+  
+  // 如果主索引存在，确保包含server-sitemap.xml
+  try {
+    const sitemapFiles = [
+      {
+        name: 'sitemap-0.xml',
+        lastmod: currentDate
+      },
+      {
+        name: 'product-sitemap.xml',
+        lastmod: currentDate
+      },
+      {
+        name: 'server-sitemap.xml',
+        lastmod: currentDate
+      }
+    ];
+    
+    // 生成XML
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapFiles.map(file => `  <sitemap>
+    <loc>${siteUrl}/${file.name}</loc>
+    <lastmod>${file.lastmod}</lastmod>
+  </sitemap>`).join('\n')}
+</sitemapindex>`;
+
+    fs.writeFileSync(indexPath, xml);
+    console.log('站点地图索引已更新');
+  } catch (error) {
+    console.error('更新站点地图索引时出错:', error);
   }
 }
 
 // 执行生成
-generateServerSitemap();
+const serverSitemapGenerated = generateServerSitemap();
+
+// 如果生成成功，更新索引
+if (serverSitemapGenerated) {
+  updateSitemapIndex();
+}
 
 console.log('服务器端站点地图生成完成'); 

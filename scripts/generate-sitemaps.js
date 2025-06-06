@@ -1,7 +1,7 @@
 /**
  * 产品站点地图生成脚本
  * 
- * 此脚本自动为产品页面生成站点地图
+ * 此脚本自动为产品页面生成站点地图，并创建主索引文件
  */
 
 const fs = require('fs');
@@ -27,6 +27,7 @@ const locales = ['en', 'zh'];
 
 // 站点URL
 const siteUrl = 'https://www.zexinmining.com';
+const currentDate = new Date().toISOString();
 
 /**
  * 获取指定目录下的所有JSON文件
@@ -77,7 +78,7 @@ function generateProductSitemap() {
           // 添加产品URL
           urls.push({
             loc: generateProductUrl(locale, category, productId),
-            lastmod: new Date().toISOString(),
+            lastmod: currentDate,
             changefreq: 'monthly',
             priority: '0.7'
           });
@@ -103,12 +104,67 @@ ${urls.map(url => `  <url>
   try {
     fs.writeFileSync(path.join(process.cwd(), 'public', 'product-sitemap.xml'), xml);
     console.log(`成功生成产品站点地图，包含 ${urls.length} 个URL`);
+    return true;
   } catch (error) {
     console.error('写入站点地图文件时出错:', error);
+    return false;
   }
 }
 
-// 执行生成
-generateProductSitemap();
+/**
+ * 生成站点地图索引XML
+ */
+function generateSitemapIndex() {
+  // 检查server-sitemap.xml是否存在
+  const serverSitemapPath = path.join(process.cwd(), 'public', 'server-sitemap.xml');
+  const serverSitemapExists = fs.existsSync(serverSitemapPath);
+  
+  // 站点地图文件列表
+  const sitemapFiles = [
+    {
+      name: 'sitemap-0.xml',
+      lastmod: currentDate
+    },
+    {
+      name: 'product-sitemap.xml',
+      lastmod: currentDate
+    }
+  ];
+  
+  // 如果server-sitemap.xml存在，添加到索引
+  if (serverSitemapExists) {
+    sitemapFiles.push({
+      name: 'server-sitemap.xml',
+      lastmod: currentDate
+    });
+  }
+  
+  // 生成XML
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapFiles.map(file => `  <sitemap>
+    <loc>${siteUrl}/${file.name}</loc>
+    <lastmod>${file.lastmod}</lastmod>
+  </sitemap>`).join('\n')}
+</sitemapindex>`;
+
+  // 写入文件
+  try {
+    fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), xml);
+    console.log(`成功生成站点地图索引，包含 ${sitemapFiles.length} 个子站点地图`);
+    return true;
+  } catch (error) {
+    console.error('写入站点地图索引文件时出错:', error);
+    return false;
+  }
+}
+
+// 执行生成产品站点地图
+const productSitemapGenerated = generateProductSitemap();
+
+// 如果产品站点地图生成成功，则生成站点地图索引
+if (productSitemapGenerated) {
+  generateSitemapIndex();
+}
 
 console.log('产品站点地图生成完成'); 
