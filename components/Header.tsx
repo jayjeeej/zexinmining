@@ -315,11 +315,14 @@ const MobileMenu = React.memo(({
   
   const { items: currentItems, title: currentTitle, parentUrl: currentParentUrl } = getCurrentItems();
   
-  // 在菜单中所有链接点击时记录fromMenu标记
+  // 在菜单中所有链接点击时记录fromMenu标记和菜单打开状态
   const handleLinkClick = useCallback(() => {
     if (typeof window !== 'undefined') {
+      // 标记这是从菜单跳转，用于返回时恢复菜单
       sessionStorage.setItem(menuFromMenuKey, 'true');
-      console.log('标记从菜单跳转');
+      // 额外保存菜单打开状态，特别是针对没有子菜单的顶级菜单项
+      sessionStorage.setItem('menuShouldBeOpen', 'true');
+      console.log('标记从菜单跳转和菜单打开状态');
     }
   }, [menuFromMenuKey]);
 
@@ -349,7 +352,7 @@ const MobileMenu = React.memo(({
             </button>
         )}
         
-        {/* 当前菜单标题和链接 - 添加面包屑结构 */}
+        {/* 当前菜单标题和链接 - 修复面包屑导航点击处理 */}
         {currentTitle && (
           <div className="mb-6" role="navigation" aria-label={locale === 'zh' ? "当前位置" : "Current location"}>
             <Link
@@ -358,6 +361,13 @@ const MobileMenu = React.memo(({
               onClick={(e) => {
                 if (!currentParentUrl || currentParentUrl === '#') {
                   e.preventDefault();
+                } else {
+                  // 记录是从菜单跳转的，使用当前组件内的handleLinkClick函数
+                  if (typeof window !== 'undefined') {
+                    sessionStorage.setItem(menuFromMenuKey, 'true');
+                    sessionStorage.setItem('menuShouldBeOpen', 'true');
+                    console.log('标记从面包屑导航跳转');
+                  }
                 }
               }}
               title={currentTitle}
@@ -381,7 +391,7 @@ const MobileMenu = React.memo(({
                         e.preventDefault();
                         openSubMenu(index, item.url);
                       } else {
-                        // 记录是从菜单跳转的
+                        // 无论是否有子菜单，都需要记录菜单状态
                         handleLinkClick();
                       }
                     }}
@@ -462,7 +472,7 @@ const MobileMenu = React.memo(({
                     )}
                     
                     {hasSubItems && (
-            <button 
+                      <button 
                         className="ml-4 text-current p-1"
                         aria-label={locale === 'zh' ? `打开${item.label}子菜单` : `Open ${item.label} submenu`}
                         onClick={() => openSubMenu(index, isCategory ? currentParentUrl : item.url, isCategory)}
@@ -470,15 +480,15 @@ const MobileMenu = React.memo(({
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5" aria-hidden="true">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
-            </button>
+                      </button>
                     )}
-          </div>
+                  </div>
                 </li>
               );
             })}
           </ul>
         )}
-        </div>
+      </div>
     </nav>
   );
 });
@@ -788,6 +798,16 @@ const DropdownMenu = React.memo(({
 }: DropdownMenuProps) => {
   const router = useRouter();
 
+  // 添加menuFromMenu标记函数，确保顶级链接点击也设置正确的菜单状态
+  const markMenuNavigation = useCallback(() => {
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('mobileMenuFromMenu', 'true');
+      // 额外设置菜单打开状态标记
+      sessionStorage.setItem('menuShouldBeOpen', 'true');
+      console.log('桌面菜单标记跳转和菜单打开状态');
+    }
+  }, []);
+
   return (
     <div
       id={`menu_id-${index}`}
@@ -808,6 +828,7 @@ const DropdownMenu = React.memo(({
               href={item.url} 
               className="flex items-center gap-x-2 underline decoration-gray-200 underline-offset-8" 
               aria-current="page"
+              onClick={markMenuNavigation}
             >
               {item.label}
               <span className="text-[#ff6633]">
@@ -965,13 +986,14 @@ export default function Header({ logo, items }: HeaderProps) {
       // 设置为后退导航
       isBackNavigation.current = true;
       
-      // 检查是否是从菜单跳转的页面返回
+      // 检查是否是从菜单跳转的页面返回和菜单是否应该打开
       if (typeof window !== 'undefined') {
         const fromMenu = sessionStorage.getItem(MENU_FROM_MENU_KEY) === 'true';
-        console.log('从菜单跳转?', fromMenu);
+        const menuShouldBeOpen = sessionStorage.getItem('menuShouldBeOpen') === 'true';
+        console.log('从菜单跳转?', fromMenu, '菜单应该打开?', menuShouldBeOpen);
         
         // 只有是从菜单跳转的页面并且是后退操作才恢复菜单
-        if (fromMenu && isBackNavigation.current) {
+        if ((fromMenu || menuShouldBeOpen) && isBackNavigation.current) {
           if (mobileMenuRef.current) {
             mobileMenuRef.current.classList.add('visible');
             mobileMenuRef.current.classList.remove('invisible');
@@ -992,6 +1014,9 @@ export default function Header({ logo, items }: HeaderProps) {
             console.error('恢复菜单堆栈错误:', e);
             sessionStorage.removeItem('mobileMenuStack');
           }
+          
+          // 清除菜单打开状态标记，避免影响后续导航
+          sessionStorage.removeItem('menuShouldBeOpen');
         }
       }
       
@@ -1061,11 +1086,13 @@ export default function Header({ logo, items }: HeaderProps) {
     }
   }, []);
   
-  // 标记菜单链接点击
+  // 标记菜单链接点击，也保存菜单打开状态
   const markMenuNavigation = useCallback(() => {
     if (typeof window !== 'undefined') {
       sessionStorage.setItem(MENU_FROM_MENU_KEY, 'true');
-      console.log('标记从菜单跳转');
+      // 添加菜单打开状态标记
+      sessionStorage.setItem('menuShouldBeOpen', 'true');
+      console.log('标记从菜单跳转和菜单打开状态');
     }
   }, []);
   
@@ -1205,7 +1232,7 @@ export default function Header({ logo, items }: HeaderProps) {
           </button>
         )}
         
-        {/* 当前菜单标题和链接 - 添加面包屑结构 */}
+        {/* 当前菜单标题和链接 - 修复面包屑导航点击处理 */}
         {currentTitle && (
           <div className="mb-6" role="navigation" aria-label={locale === 'zh' ? "当前位置" : "Current location"}>
             <Link
@@ -1214,6 +1241,13 @@ export default function Header({ logo, items }: HeaderProps) {
               onClick={(e) => {
                 if (!currentParentUrl || currentParentUrl === '#') {
                   e.preventDefault();
+                } else {
+                  // 记录是从菜单跳转的，使用当前组件内的handleLinkClick函数
+                  if (typeof window !== 'undefined') {
+                    sessionStorage.setItem(MENU_FROM_MENU_KEY, 'true');
+                    sessionStorage.setItem('menuShouldBeOpen', 'true');
+                    console.log('标记从面包屑导航跳转');
+                  }
                 }
               }}
               title={currentTitle}
@@ -1376,21 +1410,22 @@ export default function Header({ logo, items }: HeaderProps) {
                         />
                         </>
                       ) : (
-                        <a
+                        <Link
                           href={item.url}
                           className={`flex whitespace-nowrap underline-offset-8 focus:underline focus:decoration-[#ff6633] py-2 sm:py-0 ${
                             currentPath && (currentPath === item.url || currentPath.startsWith(item.url + '/')) ? 'underline decoration-[#ff6633]' : ''
                           }`}
-                        aria-current={currentPath && (currentPath === item.url || currentPath.startsWith(item.url + '/')) ? 'page' : undefined}
+                          aria-current={currentPath && (currentPath === item.url || currentPath.startsWith(item.url + '/')) ? 'page' : undefined}
+                          onClick={markMenuNavigation}
                         >
                           {item.label}
-                        </a>
+                        </Link>
                       )}
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-              
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            
             {/* Right Side Actions */}
             <div className="flex items-center gap-x-2">
               {/* Language Switcher */}
