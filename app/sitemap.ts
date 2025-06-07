@@ -38,6 +38,15 @@ async function getAllProductIds(): Promise<{ id: string, locale: string, lastMod
             const filePath = path.join(dataDir, file);
             const stats = await fs.stat(filePath);
             
+            // 验证产品数据的合法性
+            const productData = JSON.parse(await fs.readFile(filePath, 'utf8'));
+            
+            // 跳过任何不符合要求的产品数据
+            if (!productData.title || !productData.productCategory) {
+              console.warn(`Warning: Product data missing critical fields: ${file}`);
+              continue;
+            }
+            
             results.push({
               id: file.replace('.json', ''),
               locale,
@@ -124,126 +133,13 @@ async function getProductWithCategory(id: string, locale: string): Promise<any> 
   }
 }
 
+// 禁用Next.js内置的sitemap生成器
+// 我们使用自定义脚本生成sitemap：
+// - generate-sitemaps.js
+// - generate-server-sitemap.js
+// - generate-main-sitemap.js
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.zexinmining.com';
-  const sitemapEntries: MetadataRoute.Sitemap = [];
-  
-  // 添加首页
-  sitemapEntries.push({
-    url: `${baseUrl}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: 1.0,
-  });
-  
-  // 添加语言首页
-  sitemapEntries.push(
-    {
-      url: `${baseUrl}/en`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/zh`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1.0,
-    }
-  );
-  
-  // 添加核心页面
-  const corePages = [
-    'products',
-    'about',
-    'contact',
-    'services',
-    'news', // 添加新闻列表页
-  ];
-  
-  for (const page of corePages) {
-    sitemapEntries.push(
-      {
-        url: `${baseUrl}/en/${page}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: 0.9,
-      },
-      {
-        url: `${baseUrl}/zh/${page}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: 0.9,
-      }
-    );
-  }
-  
-  // 添加产品类别页面
-  for (const category of productCategories) {
-    sitemapEntries.push(
-      {
-        url: `${baseUrl}/en/products/${category.id}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: 0.8,
-      },
-      {
-        url: `${baseUrl}/zh/products/${category.id}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: 0.8,
-      }
-    );
-  }
-  
-  // 添加产品详情页面
-  const productEntries = await getAllProductIds();
-  const productsByCategory: Record<string, { id: string, locale: string, lastModified: Date }[]> = {};
-  
-  // 按类别分组产品
-  for (const entry of productEntries) {
-    const productData = await getProductWithCategory(entry.id, entry.locale);
-    
-    if (productData && productData.subcategory) {
-      const category = productData.subcategory;
-      
-      if (!productsByCategory[category]) {
-        productsByCategory[category] = [];
-      }
-      
-      productsByCategory[category].push(entry);
-    } else {
-      // 如果没有类别信息，添加到未分类组
-      if (!productsByCategory['uncategorized']) {
-        productsByCategory['uncategorized'] = [];
-      }
-      
-      productsByCategory['uncategorized'].push(entry);
-    }
-  }
-  
-  // 遍历类别添加产品页面
-  for (const [category, products] of Object.entries(productsByCategory)) {
-    for (const product of products) {
-      sitemapEntries.push({
-        url: `${baseUrl}/${product.locale}/products/${category}/${product.id}`,
-        lastModified: product.lastModified,
-        changeFrequency: 'monthly',
-        priority: 0.7,
-      });
-    }
-  }
-  
-  // 添加新闻详情页面
-  const newsEntries = await getAllNewsIds();
-  for (const news of newsEntries) {
-    sitemapEntries.push({
-      url: `${baseUrl}/${news.locale}/news/${news.slug}`,
-      lastModified: news.lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    });
-  }
-  
-  return sitemapEntries;
+  // 返回空数组，实际上禁用这个生成器
+  return [];
 } 
