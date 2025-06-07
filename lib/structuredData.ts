@@ -117,15 +117,36 @@ export function getProductStructuredData({
       "priceCurrency": "USD",
       "url": productUrl,
       "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
-      "itemCondition": "https://schema.org/NewCondition"
-    },
-    // 添加aggregateRating属性以满足Google Search Console要求
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "1",
-      "bestRating": "5",
-      "worstRating": "1"
+      "itemCondition": "https://schema.org/NewCondition",
+      // 添加退货政策信息
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 30,
+        "returnMethod": "https://schema.org/ReturnByMail"
+      },
+      // 添加运输详情
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "USD"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "businessDays": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": 5,
+            "unitCode": "DAY"
+          }
+        }
+      }
     }
   };
   
@@ -136,7 +157,8 @@ export function getProductStructuredData({
       "@type": SCHEMA_TYPES.PRODUCT_GROUP,
       "name": product.series || product.productCategory,
       "productGroupID": product.subcategory,
-      "variesBy": "model"
+      "variesBy": "model",
+      "description": product.overview || `${product.title} ${isZh ? '产品系列' : 'product series'} - ${isZh ? '泽鑫矿山设备' : 'Zexin Mining Equipment'}`
     };
   }
   
