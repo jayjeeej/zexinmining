@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Container from '@/components/Container';
@@ -21,6 +22,33 @@ export default function AboutPageClient() {
   const navigationItems = getNavigationItems(locale);
   const logo = getLogo(locale);
   const breadcrumbConfig = getBreadcrumbConfig(locale);
+  
+  // 轮播图状态
+  const [activeSlide, setActiveSlide] = useState(0);
+  const carouselImages = [
+    {
+      src: '/images/about/about-company.jpg',
+      alt: 'Mining Processing Equipment Manufacturer'
+    },
+    {
+      src: '/images/about/about-company-2.jpg',
+      alt: 'Mining Processing Equipment Manufacturing Plant'
+    }
+  ];
+
+  // 自动轮播
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSlide((prevSlide) => (prevSlide + 1) % carouselImages.length);
+    }, 5000); // 每5秒切换一次
+
+    return () => clearInterval(interval);
+  }, [carouselImages.length]);
+
+  // 手动切换轮播图
+  const goToSlide = (index: number) => {
+    setActiveSlide(index);
+  };
   
   // 页面内容配置
   const content = {
@@ -153,15 +181,73 @@ export default function AboutPageClient() {
 
         {/* 公司简介部分 - 极简设计 */}
         <section id="company-introduction" className="py-10">
-          {/* 顶部图片 - 铺满屏幕 */}
+          {/* 顶部图片轮播 - 铺满屏幕 */}
           <div className="w-full mb-10 relative">
-            <LazyImage
-              src="/images/about/about-company.jpg"
-              alt="About Company"
-              width={1920}
-              height={800}
-              className="w-full h-auto"
-            />
+            {/* 轮播图片 */}
+            <div className="relative">
+              {carouselImages.map((image, index: number) => (
+                <div
+                  key={index}
+                  className={`absolute w-full transition-opacity duration-500 ${
+                    activeSlide === index ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                  }`}
+                >
+                  <LazyImage
+                    src={image.src}
+                    alt={image.alt}
+                    width={1920}
+                    height={800}
+                    className="w-full h-auto"
+                  />
+                </div>
+              ))}
+              {/* 确保占位正确 */}
+              <div className="relative opacity-0 z-0">
+                <LazyImage
+                  src={carouselImages[0].src}
+                  alt="placeholder"
+                  width={1920}
+                  height={800}
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+            
+            {/* 轮播控制按钮 */}
+            <div className="absolute inset-0 flex items-center justify-between px-4 z-20">
+              <button 
+                onClick={() => setActiveSlide((activeSlide - 1 + carouselImages.length) % carouselImages.length)}
+                className="bg-white/50 hover:bg-white/80 rounded-full p-2 text-gray-800 transition-all"
+                aria-label="Previous"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button 
+                onClick={() => setActiveSlide((activeSlide + 1) % carouselImages.length)}
+                className="bg-white/50 hover:bg-white/80 rounded-full p-2 text-gray-800 transition-all"
+                aria-label="Next"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+            
+            {/* 指示点 */}
+            <div className="absolute bottom-5 left-0 right-0 flex justify-center space-x-2 z-20">
+              {carouselImages.map((_, index: number) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`h-3 w-3 rounded-full transition-all ${
+                    activeSlide === index ? 'bg-white scale-125' : 'bg-white/50'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
           
           <Container>
