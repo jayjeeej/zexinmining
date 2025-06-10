@@ -5,15 +5,15 @@
   "imageSrc": "/images/products/gravity-separation/sawtooth-wave-jig.jpg",
   "productCategory": "Gravity Separation Equipment",
   "subcategory": "gravity-separation",
-  "model": "STWJ-5",
+  "model": "JT-2",
   "meta": [
     {
       "key": "Capacity",
-      "displayValue": "10-30 mtph (11-33 stph)"
+      "displayValue": "10-25 mtph (11-28 stph)"
     },
     {
       "key": "Max. feed size",
-      "displayValue": "0-60 mm (0-2.4 in.)"
+      "displayValue": "0-50 mm (0-2 in.)"
     },
     {
       "key": "Motor power",
@@ -133,14 +133,14 @@
     ],
     "tableData": [
       [
-        "STWJ-5",
+        "JT-2",
         "15-47",
         "1",
         "Sawtooth",
-        "5",
+        "3.2",
         "60-156",
         "0-60",
-        "10-30",
+        "10-25",
         "11",
         "100-150",
         "2.5"
@@ -148,14 +148,14 @@
     ],
     "tableDataImperial": [
       [
-        "STWJ-5",
+        "JT-2",
         "0.6-1.9",
         "1",
         "Sawtooth",
-        "53.8",
+        "34.4",
         "60-156",
         "0-2.4",
-        "11-33",
+        "11-28",
         "14.7",
         "100-150",
         "2.8"
@@ -190,7 +190,7 @@
     },
     {
       "title": "Fine Particle Recovery Optimization",
-      "description": "Specifically engineered for materials with small density differences, the STWJ-5 excels at separating minerals in the critical 0.1-2mm range where traditional gravity separators fail. This mineral jig separator is ideal for processing complex ores containing fine gold and other valuable minerals that are typically difficult to recover."
+      "description": "Specifically engineered for materials with small density differences, the JT-2 excels at separating minerals in the critical 0.1-2mm range where traditional gravity separators fail. This mineral jig separator is ideal for processing complex ores containing fine gold and other valuable minerals that are typically difficult to recover."
     },
     {
       "title": "Smart Maintenance Design for Field Operations",
@@ -255,7 +255,7 @@
     },
     {
       "question": "How effective is the Sawtooth Wave Jig for small scale gold mining operations?",
-      "answer": "The STWJ-5 is exceptionally effective for small scale gold mining operations, with customers reporting recovery increases of 25-40% compared to their previous equipment. Its compact design, low water and power requirements, and ability to recover fine gold particles down to 0.1mm make it perfectly suited for artisanal and small-scale mining. The equipment can be easily transported to remote locations and requires minimal infrastructure, while still delivering professional-grade separation performance that maximizes gold recovery and operation profitability."
+      "answer": "The JT-2 is exceptionally effective for small scale gold mining operations, with customers reporting recovery increases of 25-40% compared to their previous equipment. Its compact design, low water and power requirements, and ability to recover fine gold particles down to 0.1mm make it perfectly suited for artisanal and small-scale mining. The equipment can be easily transported to remote locations and requires minimal infrastructure, while still delivering professional-grade separation performance that maximizes gold recovery and operation profitability."
     },
     {
       "question": "What advantages does this mineral jig separator offer for tin ore processing?",
@@ -263,7 +263,7 @@
     },
     {
       "question": "What particle size range is optimal for this high-recovery gravity separator?",
-      "answer": "The STWJ-5 high-recovery gravity separator is designed to efficiently process particles from 0.1mm to 60mm, with particularly outstanding performance in the challenging fine particle range (0.1-2mm) where many conventional separation technologies struggle. This wide operating range eliminates the need for extensive pre-classification of feed material, though optimal recovery is achieved when processing narrower size fractions. The equipment's adjustable stroke and frequency parameters allow precise tuning to maximize recovery for specific particle size distributions in your ore."
+      "answer": "The JT-2 high-recovery gravity separator is designed to efficiently process particles from 0.1mm to 60mm, with particularly outstanding performance in the challenging fine particle range (0.1-2mm) where many conventional separation technologies struggle. This wide operating range eliminates the need for extensive pre-classification of feed material, though optimal recovery is achieved when processing narrower size fractions. The equipment's adjustable stroke and frequency parameters allow precise tuning to maximize recovery for specific particle size distributions in your ore."
     },
     {
       "question": "How energy efficient is the Sawtooth Wave Jig compared to other mineral separators?",
@@ -275,11 +275,11 @@
     },
     {
       "question": "Can the Sawtooth Wave Jig be integrated into existing mineral processing circuits?",
-      "answer": "Yes, the compact design of the STWJ-5 makes it suitable for integration into existing mineral processing circuits. With a footprint of approximately 2.5m x 1.5m, it can be incorporated into most operations without major modifications to existing infrastructure. The system can function as a primary concentrator, scavenger for tailings streams, or cleaner for improving concentrate grades. Our engineering team provides comprehensive integration planning including flowsheet optimization, space utilization, water circuit integration, and control system compatibility to ensure maximum performance improvement with minimal disruption to ongoing operations."
+      "answer": "Yes, the compact design of the JT-2 makes it suitable for integration into existing mineral processing circuits. With a footprint of approximately 2.5m x 1.5m, it can be incorporated into most operations without major modifications to existing infrastructure. The system can function as a primary concentrator, scavenger for tailings streams, or cleaner for improving concentrate grades. Our engineering team provides comprehensive integration planning including flowsheet optimization, space utilization, water circuit integration, and control system compatibility to ensure maximum performance improvement with minimal disruption to ongoing operations."
     },
     {
       "question": "How does the maintenance requirement compare to other gravity separation equipment?",
-      "answer": "The STWJ-5 features significantly reduced maintenance requirements compared to other gravity separation equipment. The robust construction and simplified drive mechanism minimize wear points, while specialized materials in high-wear areas extend component life by up to 300%. Routine maintenance primarily involves periodic inspection of drive components, checking and adjusting the motion mechanism, and cleaning of the water distribution system, typically requiring only 2-4 hours per month. Most parts are standardized and readily available, minimizing downtime for repairs and ensuring consistent performance throughout the equipment's service life."
+      "answer": "The JT-2 features significantly reduced maintenance requirements compared to other gravity separation equipment. The robust construction and simplified drive mechanism minimize wear points, while specialized materials in high-wear areas extend component life by up to 300%. Routine maintenance primarily involves periodic inspection of drive components, checking and adjusting the motion mechanism, and cleaning of the water distribution system, typically requiring only 2-4 hours per month. Most parts are standardized and readily available, minimizing downtime for repairs and ensuring consistent performance throughout the equipment's service life."
     },
     {
       "question": "What technical support is provided with the Sawtooth Wave Jig?",
