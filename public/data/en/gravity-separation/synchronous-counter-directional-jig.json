@@ -5,11 +5,11 @@
   "imageSrc": "/images/products/gravity-separation/synchronous-counter-directional-jig.jpg",
   "productCategory": "Gravity Separation Equipment",
   "subcategory": "gravity-separation",
-  "model": "SCDJM-4",
+  "model": "TT1400",
   "meta": [
     {
       "key": "Capacity",
-      "displayValue": "40-80 mtph (44-88 stph)"
+      "displayValue": "60-120 mtph (66-132 stph)"
     },
     {
       "key": "Max. feed size",
@@ -100,10 +100,10 @@
     "en": "/en/products/ore-processing/gravity-separation/synchronous-counter-directional-jig",
     "zh": "/zh/products/ore-processing/gravity-separation/synchronous-counter-directional-jig"
   },
-  "overview": "The SCDJM Series Industrial Composite Jig Separator is a high-efficiency density-based mineral separator utilizing patented dual-pulse technology to create powerful vertical water pulsations for optimal particle stratification. This commercial-grade 4-chamber gravity concentrator features advanced counter-directional motion mechanics with primary concentration, secondary cleaning, and recovery stages for precise mineral beneficiation. Designed specifically for heavy mineral recovery, the system achieves superior separation efficiency for iron ore, gold, tin, tungsten, and non-ferrous metals with remarkable recovery rates while maintaining energy efficiency and high throughput capacity of 40-80 tons per hour. The innovative hindered settling technology makes this equipment essential for mining operations seeking to maximize valuable mineral recovery with minimal environmental impact and operational costs.",
+  "overview": "The SCDJM Series Industrial Composite Jig Separator is a high-efficiency density-based mineral separator utilizing patented dual-pulse technology to create powerful vertical water pulsations for optimal particle stratification. This commercial-grade 4-chamber gravity concentrator features advanced counter-directional motion mechanics with primary concentration, secondary cleaning, and recovery stages for precise mineral beneficiation. Designed specifically for heavy mineral recovery, the system achieves superior separation efficiency for iron ore, gold, tin, tungsten, and non-ferrous metals with remarkable recovery rates while maintaining energy efficiency and high throughput capacity of 60-120 tons per hour. The innovative hindered settling technology makes this equipment essential for mining operations seeking to maximize valuable mineral recovery with minimal environmental impact and operational costs.",
   "detailedDescription": "The SCDJM Series industrial composite jig separator introduces innovative dual-pulse technology that transforms gravity separation in mineral processing. This high-recovery mineral concentrator creates optimized stratification patterns through its unique hydraulic mechanics, addressing common challenges with wide particle size ranges while enhancing recovery precision. Its four-chamber progressive separation approach delivers consistent results across diverse ore types, making it valuable equipment for operations processing gold, tin, tungsten, and iron ore without compromising throughput efficiency. The energy-saving design reduces power consumption by 30% compared to conventional equipment while maintaining exceptional separation performance even with complex ores.",
   "specifications": {
-    "title": "The SCDJM-4 Composite Jig Separator Specifications",
+    "title": "The TT1400 Composite Jig Separator Specifications",
     "note": "Can be customized according to customer requirements",
     "tableHeaders": [
       "Model",
@@ -133,32 +133,32 @@
     ],
     "tableData": [
       [
-        "SCDJM-4",
+        "TT1400",
         "0-150",
         "4",
         "Rectangular",
         "8",
         "60-150",
         "0-50",
-        "40-80",
+        "60-120",
         "30",
         "200-500",
-        "8.5"
+        "25"
       ]
     ],
     "tableDataImperial": [
       [
-        "SCDJM-4",
+        "TT1400",
         "0-5.9",
         "4",
         "Rectangular",
         "86.1",
         "60-150",
         "0-2",
-        "44-88",
+        "66-132",
         "40",
         "200-500",
-        "9.4"
+        "27.6"
       ]
     ],
     "unitTypes": [
@@ -259,21 +259,21 @@
       "answer": "The patented synchronous counter-directional motion system creates precisely controlled water pulsations that generate powerful vertical alternating currents. This optimized hindered settling mechanism penetrates deeply through the mineral bed, creating ideal conditions for density-based particle stratification. Unlike conventional jigs that use single-direction pulsation, this system achieves superior separation efficiency by enhancing the differential movement of particles with different specific gravities, substantially improving recovery rates even for materials with subtle density variations."
     },
     {
-      "question": "What maintenance requirements should be expected for the SCDJM-4 Composite Jig Separator?",
-      "answer": "The SCDJM-4 Composite Jig Separator is designed for minimal maintenance with industrial-grade construction and enhanced wear protection on all critical components. Regular maintenance includes weekly inspection of jigging screens and hydraulic systems, monthly lubrication of moving parts, quarterly inspection of drive components, and annual comprehensive servicing. The advanced sealing technology in the hydraulic drive mechanism significantly reduces wear and extends component life, while the modular design allows for quick replacement of wear parts without extended downtime."
+      "question": "What maintenance requirements should be expected for the TT1400 Composite Jig Separator?",
+      "answer": "The TT1400 Composite Jig Separator is designed for minimal maintenance with industrial-grade construction and enhanced wear protection on all critical components. Regular maintenance includes weekly inspection of jigging screens and hydraulic systems, monthly lubrication of moving parts, quarterly inspection of drive components, and annual comprehensive servicing. The advanced sealing technology in the hydraulic drive mechanism significantly reduces wear and extends component life, while the modular design allows for quick replacement of wear parts without extended downtime."
     },
     {
-      "question": "Can the SCDJM-4 Composite Jig Separator be integrated with existing mineral processing plants?",
-      "answer": "Yes, the SCDJM-4 Composite Jig Separator is designed for seamless integration into both new and existing mineral processing operations. The system features standardized inlet/outlet configurations and compact footprint that minimize installation complexity. Our engineering team provides comprehensive integration planning including flow sheet design, space optimization, water circuit integration, and control system compatibility. The jig can function as either a primary concentration device or as a scavenging unit to recover valuable minerals from existing process streams."
+      "question": "Can the TT1400 Composite Jig Separator be integrated with existing mineral processing plants?",
+      "answer": "Yes, the TT1400 Composite Jig Separator is designed for seamless integration into both new and existing mineral processing operations. The system features standardized inlet/outlet configurations and compact footprint that minimize installation complexity. Our engineering team provides comprehensive integration planning including flow sheet design, space optimization, water circuit integration, and control system compatibility. The jig can function as either a primary concentration device or as a scavenging unit to recover valuable minerals from existing process streams."
     },
     {
-      "question": "What particle size range is optimal for the SCDJM-4 Composite Jig Separator?",
-      "answer": "The SCDJM-4 Composite Jig Separator effectively processes material from 0-50mm in size, with optimal performance in the 0.5-30mm range. The multi-chamber progressive separation design handles both coarse and fine particles simultaneously through its dual-layer processing capability. For ultrafine particles below 0.5mm, the system incorporates specially designed screen configurations and pulsation parameters to enhance recovery. The adjustable stroke length and frequency allow optimization for specific size distributions to maximize separation efficiency across varying feed characteristics."
+      "question": "What particle size range is optimal for the TT1400 Composite Jig Separator?",
+      "answer": "The TT1400 Composite Jig Separator effectively processes material from 0-50mm in size, with optimal performance in the 0.5-30mm range. The multi-chamber progressive separation design handles both coarse and fine particles simultaneously through its dual-layer processing capability. For ultrafine particles below 0.5mm, the system incorporates specially designed screen configurations and pulsation parameters to enhance recovery. The adjustable stroke length and frequency allow optimization for specific size distributions to maximize separation efficiency across varying feed characteristics."
     }
   ],
   "seo": {
-    "keywords": "gravity jig separator,mineral jig machine,high recovery jig concentrator,composite jig separator,hydraulic jig separator,diaphragm jig concentrator,air pulsating jig separator,jig separator for gold recovery,jig machine for tin ore processing,jig concentrator for tungsten ore,jig separator for manganese,jig separator for hematite,gravity separation jigging machine,industrial jig separator,SCDJM-4",
-    "description": "Zexin Mining's SCDJM-4 Industrial Jig Separator delivers 30% higher mineral recovery with significantly reduced energy consumption. Our advanced hydraulic jig machine provides superior separation for gold, tin, tungsten, iron and manganese ores with minimal water requirements.",
+    "keywords": "gravity jig separator,mineral jig machine,high recovery jig concentrator,composite jig separator,hydraulic jig separator,diaphragm jig concentrator,air pulsating jig separator,jig separator for gold recovery,jig machine for tin ore processing,jig concentrator for tungsten ore,jig separator for manganese,jig separator for hematite,gravity separation jigging machine,industrial jig separator,TT1400",
+    "description": "Zexin Mining's TT1400 Industrial Jig Separator delivers 30% higher mineral recovery with significantly reduced energy consumption. Our advanced hydraulic jig machine provides superior separation for gold, tin, tungsten, iron and manganese ores with minimal water requirements.",
     "title": "mineral jig machine | High-Efficiency Gravity Concentrator for Minerals"
   },
   "searchKeywords": [
@@ -288,7 +288,7 @@
     "Small-Scale Mining Equipment",
     "Mineral Jig Concentrator",
     "Industrial Jig Machine",
-    "SCDJM-4",
+    "TT1400",
     "Multi-Chamber Jig"
   ],
   "relatedProducts": [
