@@ -175,13 +175,6 @@ const nextConfig = {
         permanent: true,
       },
       
-      // 旧版产品URL重定向到新版URL格式 - 处理不带ore-processing的产品URL
-      {
-        source: '/:locale(en|zh)/products/:category/:product',
-        destination: '/:locale/products/ore-processing/:category/:product',
-        permanent: true,
-      },
-      
       // 修复产品页面重定向错误 - 确保这些URL不会被其他重定向规则影响
       {
         source: '/zh/products/ore-processing/classification-equipment/',
